@@ -1,5 +1,5 @@
 [title]: # (Procedure)
 [tags]: # (XXX)
-[priority]: # (1525)
+[priority]: # (1325)
 # Procedure
 Something here.

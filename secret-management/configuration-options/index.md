@@ -1,5 +1,5 @@
 [title]: # (Configuration Options)
 [tags]: # (XXX)
-[priority]: # (4779)
+[priority]: # (4579)
 # Configuration Options
 Something here.

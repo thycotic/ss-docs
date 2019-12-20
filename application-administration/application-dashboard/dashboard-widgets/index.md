@@ -1,5 +1,5 @@
 [title]: # (Dashboard Widgets)
 [tags]: # (XXX)
-[priority]: # (1796)
+[priority]: # (1596)
 # Dashboard Widgets
 Something here.

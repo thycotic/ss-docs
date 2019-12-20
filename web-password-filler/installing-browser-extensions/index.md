@@ -1,5 +1,5 @@
 [title]: # (Installing Browser Extensions)
 [tags]: # (XXX)
-[priority]: # (6645)
+[priority]: # (6445)
 # Installing Browser Extensions
 Something here.

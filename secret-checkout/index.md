@@ -1,5 +1,5 @@
 [title]: # (Secret Checkout)
 [tags]: # (XXX)
-[priority]: # (3435)
+[priority]: # (3235)
 # Secret Checkout
 Something here.

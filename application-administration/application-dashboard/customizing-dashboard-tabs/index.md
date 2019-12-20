@@ -1,5 +1,5 @@
 [title]: # (Customizing Dashboard Tabs)
 [tags]: # (XXX)
-[priority]: # (1808)
+[priority]: # (1608)
 # Customizing Dashboard Tabs
 Something here.

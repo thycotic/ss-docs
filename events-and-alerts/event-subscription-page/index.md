@@ -1,5 +1,5 @@
 [title]: # (Event Subscription Page)
 [tags]: # (XXX)
-[priority]: # (2548)
+[priority]: # (2348)
 # Event Subscription Page
 Something here.
