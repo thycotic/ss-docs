@@ -1,5 +1,5 @@
 [title]: # (Deleting Workflow Templates)
 [tags]: # (XXX)
-[priority]: # (5875)
+[priority]: # (5673)
 # Deleting Workflow Templates
 Something here.

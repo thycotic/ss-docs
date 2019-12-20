@@ -1,5 +1,5 @@
 [title]: # (Deactivating Teams)
 [tags]: # (XXX)
-[priority]: # (6682)
+[priority]: # (6480)
 # Deactivating Teams
 Something here.

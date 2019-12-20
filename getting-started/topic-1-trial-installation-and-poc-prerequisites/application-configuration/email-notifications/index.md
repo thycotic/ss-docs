@@ -1,5 +1,5 @@
 [title]: # (Email Notifications)
 [tags]: # (XXX)
-[priority]: # (840)
+[priority]: # (638)
 # Email Notifications
 Something here.

@@ -1,5 +1,5 @@
 [title]: # (SQL Server)
 [tags]: # (XXX)
-[priority]: # (829)
+[priority]: # (627)
 # SQL Server
 Something here.

@@ -1,5 +1,5 @@
 [title]: # (Activating Licenses)
 [tags]: # (XXX)
-[priority]: # (1179)
+[priority]: # (977)
 # Activating Licenses
 Something here.

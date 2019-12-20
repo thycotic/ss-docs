@@ -1,5 +1,5 @@
 [title]: # (SSH Authentication Templates)
 [tags]: # (XXX)
-[priority]: # (5446)
+[priority]: # (5244)
 # SSH Authentication Templates
 Something here.

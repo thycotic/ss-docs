@@ -1,5 +1,5 @@
 [title]: # (Enabling Webservices)
 [tags]: # (XXX)
-[priority]: # (7022)
+[priority]: # (6820)
 # Enabling Webservices
 Something here.

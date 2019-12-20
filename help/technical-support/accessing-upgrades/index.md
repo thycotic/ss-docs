@@ -1,5 +1,5 @@
 [title]: # (Accessing Upgrades)
 [tags]: # (XXX)
-[priority]: # (627)
+[priority]: # (7267)
 # Accessing Upgrades
 Something here.

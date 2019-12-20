@@ -1,5 +1,5 @@
 [title]: # (Installation)
 [tags]: # (XXX)
-[priority]: # (1204)
+[priority]: # (1002)
 # Installation
 Something here.

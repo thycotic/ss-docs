@@ -1,5 +1,5 @@
 [title]: # (Ticket Number Format Pattern (Regex))
 [tags]: # (XXX)
-[priority]: # (6141)
+[priority]: # (5939)
 # Ticket Number Format Pattern (Regex)
 Something here.

@@ -1,5 +1,5 @@
 [title]: # (Hardware Requirements)
 [tags]: # (XXX)
-[priority]: # (822)
+[priority]: # (620)
 # Hardware Requirements
 Something here.

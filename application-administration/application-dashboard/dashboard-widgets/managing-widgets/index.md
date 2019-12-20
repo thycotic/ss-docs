@@ -1,5 +1,5 @@
 [title]: # (Managing Widgets)
 [tags]: # (XXX)
-[priority]: # (2000)
+[priority]: # (1798)
 # Managing Widgets
 Something here.

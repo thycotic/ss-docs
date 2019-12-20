@@ -1,5 +1,5 @@
 [title]: # (Common RPC Error Codes)
 [tags]: # (XXX)
-[priority]: # (974)
+[priority]: # (772)
 # Common RPC Error Codes
 Something here.
