@@ -1,5 +1,5 @@
 [title]: # (Secret Templates)
 [tags]: # (XXX)
-[priority]: # (5262)
+[priority]: # (2300)
 # Secret Templates
 Something here.

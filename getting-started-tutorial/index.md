@@ -1,5 +1,5 @@
 [title]: # (Getting Started Tutorial)
 [tags]: # (XXX)
-[priority]: # (912)
+[priority]: # (300)
 # Getting Started Tutorial
 Something here.

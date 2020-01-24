@@ -1,5 +1,5 @@
 [title]: # (Secret Discovery)
 [tags]: # (XXX)
-[priority]: # (3738)
+[priority]: # (1500)
 # Secret Discovery
 Something here.

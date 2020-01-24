@@ -1,5 +1,5 @@
 [title]: # (Events and Alerts)
 [tags]: # (XXX)
-[priority]: # (2737)
+[priority]: # (1000)
 # Events and Alerts
 Something here.
