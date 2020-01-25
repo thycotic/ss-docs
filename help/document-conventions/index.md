@@ -1,6 +1,6 @@
 [title]: # (Document Conventions)
-[tags]: # (XXX)
-[priority]: # (2)
+[tags]: # (Document Conventions)
+[priority]: # (40)
 ### Code and Command Line Text
 
 Variable text in literal typed-in text and command-line parameters follow these industry-wide standards:

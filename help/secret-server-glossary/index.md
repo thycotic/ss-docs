@@ -1,7 +1,7 @@
 [title]: # (Secret Server Glossary)
 [tags]: # (XXX)
-[priority]: # (2)
-### Glossary
+[priority]: # (30)
+# Glossary
 
 **Table: Terms and Definitions**
 

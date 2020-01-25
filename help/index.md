@@ -1,6 +1,8 @@
 [title]: # (Help)
-[tags]: # (Help)
+[tags]: # (Technical Support)
 [priority]: # (200)
+# Help
+
 ## Technical Support
 
 To have access to Thycotic Technical Support, you must have an equal number of unexpired user and support licenses. All support licenses expire 365 days after they are issued.

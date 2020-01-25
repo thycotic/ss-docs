@@ -1,5 +1,20 @@
 [title]: # (Self-Help Resources)
-[tags]: # (XXX)
-[priority]: # (752)
+[tags]: # (Forums)
+[priority]: # (20)
 # Self-Help Resources
-Something here.
+
+### Forums
+
+[Forums](https://my.thycotic.com/forums/)
+
+### My Account Page
+
+[My Account Page](https://my.thycotic.com/myaccount.html)
+
+### Secret Society
+
+==Add Link==
+
+### Thycotic Blog
+
+[Thycotic Blog](https://thycotic.com/company/blog/)
