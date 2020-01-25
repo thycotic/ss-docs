@@ -1,5 +1,6 @@
-[title]: # (10) Heartbeats)
+[title]: # (Heartbeats)
 [tags]: # (XXX)
-[priority]: # (1076)
+[priority]: # (100)
+
 # 10) Heartbeats
 Something here.

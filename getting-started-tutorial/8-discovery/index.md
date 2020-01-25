@@ -1,5 +1,6 @@
-[title]: # (8) Discovery)
+[title]: # (Discovery)
 [tags]: # (XXX)
-[priority]: # (1041)
+[priority]: # (80)
+
 # 8) Discovery
 Something here.

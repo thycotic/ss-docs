@@ -1,5 +1,6 @@
-[title]: # (3) Secret Server Dashboard)
+[title]: # (Secret Server Dashboard)
 [tags]: # (XXX)
-[priority]: # (966)
+[priority]: # (30)
+
 # 3) Secret Server Dashboard
 Something here.

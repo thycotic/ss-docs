@@ -1,6 +1,7 @@
-[title]: # (1) Trial Installation Prerequisites)
+[title]: # (Trial Installation Prerequisites)
 [tags]: # (XXX)
 [priority]: # (10)
+
 # 1\) Trial Installation Prerequisites
 
 Below are our suggested guidelines for preparing to run a trial or proof-of-concept (POC) of SS. 

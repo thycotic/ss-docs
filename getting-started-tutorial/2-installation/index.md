@@ -1,6 +1,7 @@
-[title]: # (2) Installation)
+[title]: # (Installation)
 [tags]: # (XXX)
 [priority]: # (20)
+
 ## 2\) Installation
 
 ### Process
