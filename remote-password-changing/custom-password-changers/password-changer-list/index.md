@@ -1,5 +1,7 @@
 [title]: # (Password Changer List)
 [tags]: # (XXX)
-[priority]: # (3071)
+[priority]: # (110)
+
 # Password Changer List
-Something here.
+
+==For the most up-to-date list of account types supported by RPC, see [List of Built-In Password Changers](https://updates.thycotic.net/links.ashx?PasswordChangers) (KB).==
