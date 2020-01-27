@@ -1,5 +1,5 @@
 [title]: # (Active Directory)
 [tags]: # (XXX)
-[priority]: # (600)
+[priority]: # (500)
 # Active Directory
 Something here.
