@@ -1,5 +1,5 @@
 [title]: # (Application Administration)
-[tags]: # (XXX)
+[tags]: # (Application Administration)
 [priority]: # (600)
 
 # Application Administration
