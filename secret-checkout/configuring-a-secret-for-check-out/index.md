@@ -1,5 +1,9 @@
 [title]: # (Configuring a Secret for Check Out)
 [tags]: # (XXX)
-[priority]: # (3618)
+[priority]: # (30)
+
 # Configuring a Secret for Check Out
-Something here.
+
+After Require Check Out is enabled, users are prompted for check out when attempting to view that secret.
+
+![1557778362870](assets/1557778362870.png)

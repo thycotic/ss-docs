@@ -1,4 +1,4 @@
-[title]: # (Additional Resources for Secret Server)
+[title]: # (16. Additional Resources for Secret Server)
 [tags]: # (XXX)
 [priority]: # (160)
 

@@ -1,4 +1,4 @@
-[title]: # (Trial Installation Prerequisites)
+[title]: # (1. Trial Installation Prerequisites)
 [tags]: # (XXX)
 [priority]: # (10)
 

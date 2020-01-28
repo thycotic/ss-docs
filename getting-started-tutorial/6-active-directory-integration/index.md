@@ -1,4 +1,4 @@
-[title]: # (Active Directory Integration)
+[title]: # (6. Active Directory Integration)
 [tags]: # (XXX)
 [priority]: # (60)
 

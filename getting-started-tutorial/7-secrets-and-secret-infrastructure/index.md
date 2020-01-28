@@ -1,4 +1,4 @@
-[title]: # (Secrets and Secret Infrastructure)
+[title]: # (7. Secrets and Secret Infrastructure)
 [tags]: # (XXX)
 [priority]: # (70)
 

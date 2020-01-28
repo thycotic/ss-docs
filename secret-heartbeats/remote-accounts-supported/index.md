@@ -1,5 +1,8 @@
 [title]: # (Remote Accounts Supported)
 [tags]: # (XXX)
-[priority]: # (4352)
+[priority]: # (50)
+
 # Remote Accounts Supported
-Something here.
+
+For the most up-to-date list of account types supported by RPC, ==see [this KB article](https://updates.thycotic.net/links.ashx?PasswordChangers).==
+
