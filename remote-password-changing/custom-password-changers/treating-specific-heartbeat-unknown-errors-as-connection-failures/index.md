@@ -49,5 +49,3 @@ To configure the unknown errors to trigger connection failures:
 1. Type the desired regex in the **Value** text box.
 
 1. Click the **Save** icon next to the text box
-
->
