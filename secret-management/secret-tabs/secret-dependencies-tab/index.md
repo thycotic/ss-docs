@@ -1,5 +1,9 @@
 [title]: # (Secret Dependencies Tab)
 [tags]: # (XXX)
-[priority]: # (4902)
+[priority]: # (10)
+
 # Secret Dependencies Tab
-Something here.
+
+The settings inside the Dependencies tab are used for secrets that have RPC enabled.
+
+See [Manually Adding Dependencies](#manually-adding-dependencies) for details.

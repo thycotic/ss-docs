@@ -1,5 +1,11 @@
 [title]: # (Forcing Expirations)
 [tags]: # (XXX)
-[priority]: # (5057)
+[priority]: # (10)
+
 # Forcing Expirations
-Something here.
+
+To force expiration:
+
+1. Navigate to the **Secret View** page. 
+
+1. Click the **Expire Now** button. This forces the secret to expire immediately regardless of the interval setting. The expiration date displays "Expiration Forced."
