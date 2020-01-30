@@ -6,17 +6,17 @@
 
 1. Click **Admin > Folders**. The Folders page appears:
 
-   <img src="assets/1567715914715.png" alt="1567715914715" style="zoom: 67%;" />
+   <img src="images/1567715914715.png" alt="1567715914715" style="zoom: 67%;" />
 
 1. Navigate to or search for the desired folder.
 
 1. Click the folder's name. The folder is bolded, which indicates it is selected, as does the appearance of several new buttons:
 
-   <img src="assets/1556811837398.png" alt="1556811837398" style="zoom:100%;" />
+   <img src="images/1556811837398.png" alt="1556811837398" style="zoom:100%;" />
 
 1. Click the **Edit** button. The Edit Existing Folder page appears:
 
-   ![1556811948619](assets/1556811948619.png)
+   ![1556811948619](images/1556811948619.png)
 
 1. Edit the following  folder-specific settings as desired:
 
@@ -31,7 +31,7 @@
 
 1. Add users or groups to the folder by typing their name in the **Add Group/User** search text box and clicking the result in the dropdown. A new user or group appears in the Permissions table:
 
-   ![1556819983941](assets/1556819983941.png)
+   ![1556819983941](images/1556819983941.png)
 
 1. Click the **Folder Permissions** dropdown list for the user to select folder permission level for the user or groups: View (folder), Add Secret (to folder), Edit (folder), or Owner (of folder).
 

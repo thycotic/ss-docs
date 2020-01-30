@@ -8,13 +8,13 @@
 
 1. Click the Thycotic icon in the password text box. A popup appears:
 
-   <img src="assets/image-20191205162836870.png" alt="image-20191205162836870" style="zoom:67%;" />
+   <img src="images/image-20191205162836870.png" alt="image-20191205162836870" style="zoom:67%;" />
 
    > **Note:** You can also select the username or password text boxes and right-click and go to Password Filler \> Add Secret.
 
 1. Click the **Add Secret** button. The Add Account to Secret Server popup appears:
 
-   <img src="assets/image-20191205162946063.png" alt="image-20191205162946063" style="zoom:67%;" />
+   <img src="images/image-20191205162946063.png" alt="image-20191205162946063" style="zoom:67%;" />
 
 1. Begin typing “web” in the **Choose a Secret Template** search box. The word Web Password will appear in a dropdown list. By default, WPF tries to add the standard Web Password template for you. You can instead search for a different template.
 
@@ -24,7 +24,7 @@
 
 1. Click the **OK** button. Another Add Account to Secret Server popup appears:
 
-   <img src="assets/image-20191205163452160.png" alt="image-20191205163452160" style="zoom:67%;" />
+   <img src="images/image-20191205163452160.png" alt="image-20191205163452160" style="zoom:67%;" />
 
    SS fills in some of the text boxes for you based on the current website.
 

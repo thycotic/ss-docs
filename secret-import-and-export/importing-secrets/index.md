@@ -10,15 +10,15 @@ SS's importation feature simplifies integration with legacy systems and allows u
 
 ### Configuring Data for Importation
 
-1. Click the ![1557174423911](assets/1557174423911.png) button on the Dashboard and select **Import Secrets**. The Choose Secret Template page appears:
+1. Click the ![1557174423911](images/1557174423911.png) button on the Dashboard and select **Import Secrets**. The Choose Secret Template page appears:
 
-   ![1557174549399](assets/1557174549399.png)
+   ![1557174549399](images/1557174549399.png)
 
 1. Click the **What type of Secret…** list box to select the type of secrets you intend to import.
 
 1. Click the **Continue** button. The Import Secrets page appears:
 
-   ![1557174816852](assets/1557174816852.png)
+   ![1557174816852](images/1557174816852.png)
 
 1. Paste the secrets for importation from MS Excel or a CSV file directly into the text box in the **Import Secrets**  page. The order of the imported fields is based on the template selected. Consider the following:
 
@@ -34,7 +34,7 @@ SS's importation feature simplifies integration with legacy systems and allows u
 
 1. Click the **Next** button. SS displays a preview:
 
-   ![1557176230259](assets/1557176230259.png)
+   ![1557176230259](images/1557176230259.png)
 
 1. If you are happy with what you see, click the **Yes, Import these Secrets** button.
 

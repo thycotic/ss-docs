@@ -6,7 +6,7 @@
 
 Some password changers may be customized to use SSH key authentication. SS needs to know which text-entry fields contain the key and the passphrase. These text-entry fields can be specified after clicking **Edit** from the password changer page.
 
-![1558036208687](assets/1558036208687.png)
+![1558036208687](images/1558036208687.png)
 
 The key and passphrase must be identified by a `$` sign and the secret text-entry field name, which can be obtained from the secret template.
 

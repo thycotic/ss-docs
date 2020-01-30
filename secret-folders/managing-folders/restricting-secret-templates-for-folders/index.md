@@ -6,7 +6,7 @@
 
 1. On the **Edit Existing Folder** page, click to select the **Restrict Secret Templates** check box. The Allowed and Available Secret Template lists appear:
 
-   ![1556825080644](assets/1556825080644.png)
+   ![1556825080644](images/1556825080644.png)
 
 1. Select one or more of the secret templates in the **Available Secret Templates** list and use the arrow buttons to move the template to the **Allowed Secret Templates** list. 
 
@@ -30,16 +30,16 @@
 
    1. Click to select the check box. A command row of icons appears:
 
-      ![1556825659307](assets/1556825659307.png)
+      ![1556825659307](images/1556825659307.png)
 
-     1. Click the Move to Folder ![1556826052250](assets/1556826052250.png)  icon. The move Secrets pop-up page appears:
+     1. Click the Move to Folder ![1556826052250](images/1556826052250.png)  icon. The move Secrets pop-up page appears:
 
-      ![1556826422629](assets/1556826422629.png)
+      ![1556826422629](images/1556826422629.png)
 
 1. Navigate to and select the target folder for the secret or secrets.
 
 1. Click the **Move Secrets** button. The Bulk Progress popup appears:
 
-   <img src="assets/1568052002030.png" alt="1568052002030" style="zoom:67%;" />
+   <img src="images/1568052002030.png" alt="1568052002030" style="zoom:67%;" />
 
 1. The secret moves to the selected folder.

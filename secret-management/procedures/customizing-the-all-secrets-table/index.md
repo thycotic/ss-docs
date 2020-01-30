@@ -8,7 +8,7 @@ On the main menu, there is a **Secrets** folder tree. When you click on the root
 
 #### Customizing Visible Columns
 
-You can display additional columns on the grid by clicking the ![1567717023376](assets/1567717023376.png)icon. This data can be either secret metadata or template text-entry fields that have been set to be available for viewing. To select additional columns to display, click the **Advanced** link and then the **Column Selection** link. You can display the following metadata fields:
+You can display additional columns on the grid by clicking the ![1567717023376](images/1567717023376.png)icon. This data can be either secret metadata or template text-entry fields that have been set to be available for viewing. To select additional columns to display, click the **Advanced** link and then the **Column Selection** link. You can display the following metadata fields:
 
 - Auto Change Enabled
 - Checked out
@@ -38,6 +38,6 @@ You can filter secret search results by selecting a folder on the left, either b
 
 You can resize any of the columns by hovering the cursor over the border between them till it turns into a double arrow:
 
-<img src="assets/1567716341386.png" alt="1567716341386" style="zoom:67%;" />
+<img src="images/1567716341386.png" alt="1567716341386" style="zoom:67%;" />
 
 Click and drag to resize the column.

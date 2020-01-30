@@ -13,4 +13,4 @@ The doublelock system is a group of interrelated objects (see the following diag
 
 **Figure:** DoubleLock Object Relationships 
 
-![1557427607161](assets/1557427607161.png)
+![1557427607161](images/1557427607161.png)

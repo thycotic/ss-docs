@@ -14,9 +14,9 @@ To run a manual RPC:
 
 1. From **Dashboard**, click its check box to select secret you want to test.
 
-1. Click the ![1564434637809](assets/1564434637809.png)Change Password Remotely button. The Change Password popup page appears:
+1. Click the ![1564434637809](images/1564434637809.png)Change Password Remotely button. The Change Password popup page appears:
 
-   ![1564434752428](assets/1564434752428.png)
+   ![1564434752428](images/1564434752428.png)
 
 1. Click to select the **Next Password** dropdown list and select **Manual** or **Randomly Generated**. If you chose manual:
 

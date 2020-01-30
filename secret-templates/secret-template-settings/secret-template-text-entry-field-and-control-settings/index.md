@@ -28,4 +28,4 @@ The settings available for text-entry fields are:
 
 The order of the text-entry fields in the Template Designer grid is the same as those that appear when the user views or edits a secret created from the template. The order can be modified through the up and down arrows on the grid.
 
-Default values can be specified on each text-entry field by clicking the edit defaults ![1553806481985](assets/1553806481985.png) button . These added values appear as a list on any secret created from this template.
+Default values can be specified on each text-entry field by clicking the edit defaults ![1553806481985](images/1553806481985.png) button . These added values appear as a list on any secret created from this template.

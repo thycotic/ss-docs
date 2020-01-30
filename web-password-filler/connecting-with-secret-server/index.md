@@ -10,13 +10,13 @@ To connect WPF with SS:
 
 1. Open Google Chrome or other supported browser. 
 
-1. On the upper-right of the browser, click the **Password Filler** ![image-20191205103957493](assets/image-20191205103957493.png) icon. The WPF login window appears:
+1. On the upper-right of the browser, click the **Password Filler** ![image-20191205103957493](images/image-20191205103957493.png) icon. The WPF login window appears:
 
-   <img src="assets/image-20191205101713805.png" alt="image-20191205101713805" style="zoom:67%;" />
+   <img src="images/image-20191205101713805.png" alt="image-20191205101713805" style="zoom:67%;" />
 
 1.   Click the **Configuration** tab:
 
-     <img src="assets/image-20191205101911389.png" alt="image-20191205101911389" style="zoom:67%;" />
+     <img src="images/image-20191205101911389.png" alt="image-20191205101911389" style="zoom:67%;" />
 
 1.   In the **Secret Server URL** text box, type your SS URL. For example: `https://myserver/secretserver/` 
 

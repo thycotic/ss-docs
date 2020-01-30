@@ -4,13 +4,13 @@
 
 # Assigning a User a DoubleLock Password
 
-1. Click the ![1557775606267](assets/1557775606267.png)icon at the top right of SS. Your My Profile page appears:
+1. Click the ![1557775606267](images/1557775606267.png)icon at the top right of SS. Your My Profile page appears:
 
-   ![1557775851226](assets/1557775851226.png)
+   ![1557775851226](images/1557775851226.png)
 
 1. Click the **Change DoubleLock Password** button. The Change DoubleLock Password page appears:
 
-   <img src="assets/image-20191115152124707.png" alt="image-20191115152124707" style="zoom:67%;" />
+   <img src="images/image-20191115152124707.png" alt="image-20191115152124707" style="zoom:67%;" />
 
 1. Type your current doublelock password in the **Current Password** text box.
 

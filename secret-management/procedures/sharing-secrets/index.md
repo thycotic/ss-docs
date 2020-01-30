@@ -30,11 +30,11 @@ To add or remove secret sharing:
 
 1. Click the **Sharing** tab.
 
-   ![1556740541839](assets/1556740541839.png)
+   ![1556740541839](images/1556740541839.png)
 
 1. Click the **Edit** link. The page becomes editable:
 
-   ![1556740706807](assets/1556740706807.png)
+   ![1556740706807](images/1556740706807.png)
 
 1. Click the **Remove** link next to any share you want to delete.
 

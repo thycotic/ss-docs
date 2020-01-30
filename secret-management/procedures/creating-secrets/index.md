@@ -8,11 +8,11 @@ To create a secret:
 
 1. Click the **+** on the Secrets item on the main menu:
 
-   ![1556734227869](assets/1556734227869.png)
+   ![1556734227869](images/1556734227869.png)
 
-   or click the ![1556810718437](assets/1556810718437.png)icon and select **New Secret**. The Create New Secret page appears:
+   or click the ![1556810718437](images/1556810718437.png)icon and select **New Secret**. The Create New Secret page appears:
 
-   ![1556734338407](assets/1556734338407.png)
+   ![1556734338407](images/1556734338407.png)
 
 1. Click the **Chose a Secret Template** list to choose a template from which to create the secret .
 
@@ -22,7 +22,7 @@ To create a secret:
 
    > **Note:** These pages differ significantly, based on the secret template you chose. For this instruction, we chose the frequently used Web Password template.
 
-   ![1567709977376](assets/1567709977376.png)
+   ![1567709977376](images/1567709977376.png)
 
 1. Complete the text boxes and selection controls on the page.
 
@@ -34,14 +34,14 @@ To create a secret:
 
    The bar below the text box indicates the strength of the password you enter:
 
-   ![1568056881783](assets/1568056881783.png)
+   ![1568056881783](images/1568056881783.png)
    When you type one that qualifies, the box and bar turn green:
 
-   ![1568057227490](assets/1568057227490.png)
+   ![1568057227490](images/1568057227490.png)
 
    If you want to see what requirements are governing the password, hover the mouse over the password strength bar:
 
-   ![1568057661711](assets/1568057661711.png)
+   ![1568057661711](images/1568057661711.png)
 
 1. Click the **Sites** list to select a site the secret belongs to.
 

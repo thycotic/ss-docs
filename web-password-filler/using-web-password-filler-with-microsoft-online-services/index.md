@@ -16,11 +16,11 @@ This section guides users through using the Web browser extension to use SS WPF 
 
 When you try to open a Microsoft Online secret with WPF, you might see
 
-<img src="assets/image-20191212113343891.png" alt="image-20191212113343891" style="zoom:67%;"   />
+<img src="images/image-20191212113343891.png" alt="image-20191212113343891" style="zoom:67%;"   />
 
 or
 
-<img src="assets/image-20191212113913589.png" alt="image-20191212113913589" style="zoom:67%;" />
+<img src="images/image-20191212113913589.png" alt="image-20191212113913589" style="zoom:67%;" />
 
 Neither of these errors provide a useful explanation. The real issue is simple with a very easy solution that you can implement yourself.
 
@@ -55,7 +55,7 @@ If you have not yet created the secret, follow this method:
 
 1. When you get to the *second* “Add Account to Secret Server” popup, which looks like this:
 
-   <img src="assets/image-20191212114103031.png" alt="image-20191212114103031" style="zoom:67%;" />
+   <img src="images/image-20191212114103031.png" alt="image-20191212114103031" style="zoom:67%;" />
 
    You now see the website URL that WPF inferred, which is incorrect. The secret name was inferred too—leave it as is or change it to whatever you like.
 
@@ -73,7 +73,7 @@ If you have not yet created the secret, follow this method:
 
 1. On the **General** tab for the secret, click the **Edit** link next to the **URL** text box:
 
-   <img src="assets/image-20191213160815751.png" alt="image-20191213160815751" style="zoom:67%;" />
+   <img src="images/image-20191213160815751.png" alt="image-20191213160815751" style="zoom:67%;" />
 
 1. Delete all the text after .com in the **URL** text box. Your URL should look like this:
 

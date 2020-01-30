@@ -10,11 +10,11 @@ To use personal folders, you must first enable them:
 
 1. Click the **Folders** tab:
 
-   ![1557159394797](assets/1557159394797.png)
+   ![1557159394797](images/1557159394797.png)
 
 1. Click the **Edit** button:
 
-   ![1557159497977](assets/1557159497977.png)
+   ![1557159497977](images/1557159497977.png)
 
 1. Click to select the **Enable Personal Folders** check box.
 

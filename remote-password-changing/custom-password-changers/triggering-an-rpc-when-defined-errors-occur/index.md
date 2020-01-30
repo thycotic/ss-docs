@@ -12,7 +12,7 @@ When the “Attempt Password Change with new password when error contains (regex
 
 **Figure:** Attempt Password Change with new password when error contains (regex) setting
 
-![image-20191105140733364](assets/image-20191105140733364.png)
+![image-20191105140733364](images/image-20191105140733364.png)
 
 Logic:
 
@@ -36,15 +36,15 @@ To configure RPC in response to specific unknown errors:
 
 1. Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears:
 
-   <img src="assets/image-20191203153013109.png" alt="image-20191203153013109" style="zoom:67%;" />
+   <img src="images/image-20191203153013109.png" alt="image-20191203153013109" style="zoom:67%;" />
 
 1. Click the **Configure Password Changers** button. The Password Changers Configuration page appears:
 
-   <img src="assets/image-20191105140347335.png" alt="" style="zoom:67%;" />
+   <img src="images/image-20191105140347335.png" alt="" style="zoom:67%;" />
 
 1. Click the link for the desired password type. Its Account page appears:
 
-   ![](assets/image-20191105140733364.png)
+   ![](images/image-20191105140733364.png)
 
 1. If necessary, click the **Advanced Settings** link.
 

@@ -14,9 +14,9 @@
 
 1. If you are not already redirected there, click the **Specific OUs** tab.
 
-1. Type an OU name in the **Include** box to add an OU to the list. If the OU is found, it auto-populates below the box. Click the name to add it to the list. An included OU appears with an ![1556311512443](assets/1556311512443.png) icon.
+1. Type an OU name in the **Include** box to add an OU to the list. If the OU is found, it auto-populates below the box. Click the name to add it to the list. An included OU appears with an ![1556311512443](images/1556311512443.png) icon.
 
-1. Type an OU name in the **Exclude** box to exclude it from Discovery. An OU is only available for exclusion if it is contained within an OU that has already been included. An excluded OU appears with an ![1556311527400](assets/1556311527400.png) icon.
+1. Type an OU name in the **Exclude** box to exclude it from Discovery. An OU is only available for exclusion if it is contained within an OU that has already been included. An excluded OU appears with an ![1556311527400](images/1556311527400.png) icon.
 
 1. To remove an OU from the list, click the to the right of the OU.
 

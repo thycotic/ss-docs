@@ -32,7 +32,7 @@ The following diagram is the entire process summarized:
 
 **Figure:** The Approval Process Workflow
 
-<img src="assets/1556292117245.png" alt="1556292117245" style="zoom: 80%;" />
+<img src="images/1556292117245.png" alt="1556292117245" style="zoom: 80%;" />
 
 ### Workflow Versus Basic Access Requests
 

@@ -10,9 +10,9 @@ To create a folder:
 
 1. Click the parent folder for the new folder in the folder tree in the main menu. If you do not select one, the root is assumed.
 
-1. Click the ![1556810718437](assets/1556810718437.png)icon and select **New Folder**. The Create New Folder pop-up page appears:
+1. Click the ![1556810718437](images/1556810718437.png)icon and select **New Folder**. The Create New Folder pop-up page appears:
 
-   ![1556810830015](assets/1556810830015.png)
+   ![1556810830015](images/1556810830015.png)
 
 1. Type the folder name in the **New Folder Name** text box.
 

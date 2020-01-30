@@ -6,15 +6,15 @@
 
 1. Navigate to **Admin \> See All**. The Administration page appears:
 
-   <img src="assets/image-20191114142009435.png" alt="image-20191114142009435" style="zoom: 67%;" />
+   <img src="images/image-20191114142009435.png" alt="image-20191114142009435" style="zoom: 67%;" />
 
 1. Type and then click **DoubleLock** in the search text box. The DoubleLock Management page appears:
 
-   ![image-20191115143042406](assets/image-20191115143042406.png)
+   ![image-20191115143042406](images/image-20191115143042406.png)
 
 1. Click the **Create New DoubleLock** button. If you have never created a doublelock before, you will have to create a doublelock password first:
 
-   <img src="assets/image-20191115144339969.png" alt="image-20191115144339969" style="zoom:67%;" />
+   <img src="images/image-20191115144339969.png" alt="image-20191115144339969" style="zoom:67%;" />
 
    > **Important:** It is critical that you remember or securely store this password. It cannot be recovered.
 
@@ -22,7 +22,7 @@
 
    Otherwise, you go directly to the Create New DoubleLock popup page because you already have a doublelock password in the system:
 
-   <img src="assets/image-20191115143238695.png" alt="image-20191115143238695" style="zoom:67%;" />
+   <img src="images/image-20191115143238695.png" alt="image-20191115143238695" style="zoom:67%;" />
 
    > **Note:** Because it is a secondary password, your doublelock password does not have to (but can) meet the same strong requirements as regular SS passwords (as defined by your admin). Think of it as more of a PIN than a password.
 
@@ -32,7 +32,7 @@
 
 1. Click the **OK** button. The new doublelock’s page appears:
 
-   ![image-20191115150253270](assets/image-20191115150253270.png)
+   ![image-20191115150253270](images/image-20191115150253270.png)
 
    > **Important:** It is critical that you remember or securely store this password. It cannot be recovered.
 

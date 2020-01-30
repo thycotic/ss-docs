@@ -12,11 +12,11 @@ To create an IP address range:
 
 1. Go to **Admin > IP Addresses** under Administration. The IP Address Management page appears:
 
-   <img src="assets/image-20191115104938922.png" alt="image-20191115104938922" style="zoom:67%;" />
+   <img src="images/image-20191115104938922.png" alt="image-20191115104938922" style="zoom:67%;" />
 
 2. Click the **New IP Address** button. The Add New IP Address Range popup page appears:
 
-   <img src="assets/image-20191115105135800.png" alt="image-20191115105135800" style="zoom:67%;" />
+   <img src="images/image-20191115105135800.png" alt="image-20191115105135800" style="zoom:67%;" />
 
 3. In the **IP Address User/Network Name** text box, type a descriptive name for your range.
 
@@ -24,9 +24,9 @@ To create an IP address range:
 
 5. Click the **Save** button. The new address or range appears in the IP Address Management table:
 
-   <img src="assets/image-20191115105415863.png" alt="image-20191115105415863" style="zoom:67%;" />
+   <img src="images/image-20191115105415863.png" alt="image-20191115105415863" style="zoom:67%;" />
 
-> **Note:** You can show or hide columns in the table by clicking the ![image-20191115105740992](assets/image-20191115105740992.png) button.
+> **Note:** You can show or hide columns in the table by clicking the ![image-20191115105740992](images/image-20191115105740992.png) button.
 
 ### Editing and Deleting IP Address Ranges
 
@@ -38,11 +38,11 @@ To edit an IP address range, go to the **IP Address Management** page, click on 
 
 2. Go to **Admin \> Users** page. The View User page appears:
 
-   <img src="assets/image-20191115110201765.png" alt="image-20191115110201765" style="zoom:67%;" />
+   <img src="images/image-20191115110201765.png" alt="image-20191115110201765" style="zoom:67%;" />
 
 3. Scroll to the bottom of the page and click the **Change IP Restrictions** button. The Edit IP Address Restrictions Page appears:
 
-   <img src="assets/image-20191115110512161.png" alt="image-20191115110512161" style="zoom:67%;" />
+   <img src="images/image-20191115110512161.png" alt="image-20191115110512161" style="zoom:67%;" />
 
 4. Click to select or deselect check boxes next to the ranges to choose which IP Addresses a user can use to access SS. If no boxes are checked, the user can access SS through any IP Address.
 

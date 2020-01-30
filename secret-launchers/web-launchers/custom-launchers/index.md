@@ -20,13 +20,13 @@ To create a new custom launcher:
 
 1. Select **Secret Templates** from the **Admin** main menu item. The Manage Secret Templates page appears:
 
-   ![1566850351170](assets/1566850351170.png)
+   ![1566850351170](images/1566850351170.png)
 
 1. Click the **Configure Launchers** button.
 
 1. Click the **New** button.  The Launcher page appears:
 
-   ![1557236094477](assets/1557236094477.png)
+   ![1557236094477](images/1557236094477.png)
 
 The following settings are available in the General Settings section:
 

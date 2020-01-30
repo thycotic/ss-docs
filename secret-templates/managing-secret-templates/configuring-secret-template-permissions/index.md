@@ -8,21 +8,21 @@ As of SS 10.3 it is possible to assign users and groups to specific secret templ
 
 1. Select **Admin \> Secret Templates**. The Manage Secret Templates page appears:
 
-   ![1557163777240](assets/1557163777240.png)
+   ![1557163777240](images/1557163777240.png)
 
 1. Click the **Configure Secret Template Permissions** button. The Secret Template Permissions page appears:
 
-   ![1557168530328](assets/1557168530328.png)
+   ![1557168530328](images/1557168530328.png)
 
 1. Select a group or user by typing in the **Group/User** text box. The page changes:
 
-   ![1557168670645](assets/1557168670645.png)
+   ![1557168670645](images/1557168670645.png)
 
 1. Click the desired user or group in the **Group/User** dropdown list that appeared.
 
 1. Click the **Edit** button. A drop-down list appears:
 
-   ![1557168904669](assets/1557168904669.png)
+   ![1557168904669](images/1557168904669.png)
 
 1. Click to select a secret template you wish to assign them to. You may either assign "Template Create secret" or "Template Owner" to a user or group. 
 

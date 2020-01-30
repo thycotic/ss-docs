@@ -16,7 +16,7 @@ Admins can search through active and ended sessions. To review and search throug
 
 Searching across sessions can search the following data. To select what data is searched across check the options on the search filters on the left-hand side.
 
-![1558036412135](assets/1558036412135.png)
+![1558036412135](images/1558036412135.png)
 
 Some search filters require additional components to be installed or configured:
 
@@ -26,7 +26,7 @@ Some search filters require additional components to be installed or configured:
 
 To view a recording, click the camera icon on the session. The Watch Session Recording page appears:
 
-![1556312976290](assets/1556312976290.png)
+![1556312976290](images/1556312976290.png)
 
 If there is logged session activity, such as keystroke or application data from the RDP agent or SSH proxy then you can search through session activity and jump to points within the video playback. The playback also displays an activity map to show points of high activity, such as screen changes, keystrokes, and processes started and stopped.
 

@@ -8,11 +8,11 @@ When users forget their doublelock passwords, there are multiple steps and consi
 
 1. When you forget your doublelock password, you typically come to that realization when attempting to access a secret protected by that doublelock:
 
-   ![1557345036694](assets/1557345036694.png)
+   ![1557345036694](images/1557345036694.png)
 
 1. Click the **Forgot DoubleLock Password?** link. The Reset DoubleLock Password page appears:
 
-   ![1557345196279](assets/1557345196279.png)
+   ![1557345196279](images/1557345196279.png)
 
 1. At this stage, there are two possibilities:
 

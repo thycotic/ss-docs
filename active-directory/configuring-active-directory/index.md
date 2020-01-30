@@ -67,19 +67,19 @@ Choose the security groups from AD you want to sync with SS:
 
 1. Go to **Admin \> Active Directory**.
 
-   <img src="assets/image-20191203150447650.png" alt="image-20191203150447650" style="zoom:67%;" />
+   <img src="images/image-20191203150447650.png" alt="image-20191203150447650" style="zoom:67%;" />
 
 1. Click the **Edit Synchronization** button. The Synchronization Edit page appears:
 
-   <img src="assets/image-20191115111837932.png" alt="image-20191115111837932" style="zoom:67%;" />
+   <img src="images/image-20191115111837932.png" alt="image-20191115111837932" style="zoom:67%;" />
 
 1. Click the Select Domain dropdown list to choose your domain. More options appear:
 
-   ![image-20191115111929782](assets/image-20191115111929782.png)
+   ![image-20191115111929782](images/image-20191115111929782.png)
 
 1. Click the **Search** button.
 
-   ![image-20191115112109905](assets/image-20191115112109905.png)
+   ![image-20191115112109905](images/image-20191115112109905.png)
 
 1. Select the group(s) you would like to sync from the **Available Groups** list, then click the single left arrow **<** to add them to **Synchronized Groups**.
 

@@ -18,11 +18,11 @@ The ConnectWise API is the recommended way to sync folders from ConnectWise. To 
 
 1. Select a ConnectWise Integrator Secret for API Access.
 
-   ![1558126393202](assets/1558126393202.png)
+   ![1558126393202](images/1558126393202.png)
 
 > **Note:** The Integrator account must have access to the Company API in ConnectWise and access to all records
 
-![1558126755888](assets/1558126755888.png)
+![1558126755888](images/1558126755888.png)
 
 Folder structure defines how folders are named under the client's folder. By default, `$TYPE\$STATUS` creates sub-folders based on the customer type in ConnectWise, then further sorted by the active status in ConnectWise. For example, the active prospect "Acme Inc" in ConnectWise would get the following folder created: Clients\Prospects\Active\Acme Inc
 
@@ -44,6 +44,6 @@ The database synchronization method queries an on-premises database for a custom
 
 Enter the SQL Server location, SQL database name, and the credential information for accessing the reference database, for example, to your ConnectWise instance. The SQL view defaults to a standard ConnectWise customer layout but can be customized to meet the desired folder Layout.
 
-<img src="assets/image-20191203160414962.png" alt="image-20191203160414962" style="zoom:67%;" />
+<img src="images/image-20191203160414962.png" alt="image-20191203160414962" style="zoom:67%;" />
 
 “Days to Keep Operational Logs” sets the period to keep folder-synchronization-related logs that might contain PII. SS automatically deletes logs older than that (in days).

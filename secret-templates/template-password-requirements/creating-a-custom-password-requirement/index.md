@@ -8,15 +8,15 @@ To create a new password requirement:
 
 1. Go to **Admin \> Secret Templates**. The Manage Secret Templates page appears:
 
-   ![1567710946389](assets/1567710946389.png)
+   ![1567710946389](images/1567710946389.png)
 
 1. Click the **Password Requirements** button. The Password Requirements page appears:
 
-   ![1567712171025](assets/1567712171025.png)
+   ![1567712171025](images/1567712171025.png)
 
 1. Click the **Create New** button.
 
-   <img src="assets/1567712261212.png" alt="1567712261212" style="zoom:67%;" />
+   <img src="images/1567712261212.png" alt="1567712261212" style="zoom:67%;" />
 
 1. Type the name and description.
 

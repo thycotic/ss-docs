@@ -10,11 +10,11 @@ To configure this:
 
 1. Select **Admin \> SSH Proxy**:
 
-   <img src="assets/image-20191203155530167.png" alt="image-20191203155530167" style="zoom:67%;" />
+   <img src="images/image-20191203155530167.png" alt="image-20191203155530167" style="zoom:67%;" />
 
 1. Scroll down and click the **Edit** button to enter your SSH proxy configuration settings. The SSH Proxy Configuration page appears:
 
-   ![1567783258199](assets/1567783258199.png)
+   ![1567783258199](images/1567783258199.png)
 
    The **SSH Proxy Settings** are:
 

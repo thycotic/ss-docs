@@ -3,7 +3,7 @@
 [priority]: # (20)
 # Dashboard Tools and Help Menu
 
-The Dashboard Tools Menus is available via the ![1557174423911](assets/1557174423911.png) button on the Dashboard. It includes links to:
+The Dashboard Tools Menus is available via the ![1557174423911](images/1557174423911.png) button on the Dashboard. It includes links to:
 
 #### Tool Section
 

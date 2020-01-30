@@ -8,8 +8,8 @@ By default, the launcher is enabled by the **Enable Launcher** setting under **A
 
 The launcher can be deployed in two ways—with the ClickOnce or Protocol Handler applications. This can also be set in the configuration settings. 
 
-The Protocol Handler application allows the launcher to be used in virtualized environments or any environment in which the user does not have access to a Windows Temp directory. The Protocol Handler can be downloaded by clicking the ![1557174423911](assets/1557174423911.png) button on the Dashboard and selecting **Launcher Tools**:
+The Protocol Handler application allows the launcher to be used in virtualized environments or any environment in which the user does not have access to a Windows Temp directory. The Protocol Handler can be downloaded by clicking the ![1557174423911](images/1557174423911.png) button on the Dashboard and selecting **Launcher Tools**:
 
-<img src="assets/1557176888609.png" alt="1557176888609" style="zoom:67%;" />
+<img src="images/1557176888609.png" alt="1557176888609" style="zoom:67%;" />
 
 For details, see the [Protocol Handler Launcher](https://updates.thycotic.net/links.ashx?ProtocolHandler).

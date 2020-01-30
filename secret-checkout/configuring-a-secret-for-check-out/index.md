@@ -6,4 +6,4 @@
 
 After Require Check Out is enabled, users are prompted for check out when attempting to view that secret.
 
-![1557778362870](assets/1557778362870.png)
+![1557778362870](images/1557778362870.png)

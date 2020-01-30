@@ -8,11 +8,11 @@ To delete a workflow template:
 
 1. Access the Workflow Designer:
 
-   ![1556292541864](assets/1556292541864.png)
+   ![1556292541864](images/1556292541864.png)
 
 1. Click the workflow template you want to copy in the **Workflow Templates** table. That template appears:
 
-   ![1556292665126](assets/1556292665126.png)
+   ![1556292665126](images/1556292665126.png)
 
 1. Click the **Delete** button. A confirmation popup page appears.
 

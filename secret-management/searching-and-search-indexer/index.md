@@ -10,11 +10,11 @@ To search for secrets:
 
 1. Click the **Secrets** menu item in the main menu. The All Secrets page appears:
 
-   ![1557170622697](assets/1557170622697.png)
+   ![1557170622697](images/1557170622697.png)
 
 1. Type the secret name or other text in the unlabeled search text box at the top of the page. 
 
-1. Click the ![1557171130201](assets/1557171130201.png) button. The All Secrets table only displays matching secrets. Searches search for all text-entry fields that are configured as searchable on the secret's template if the extended search indexer is enabled. 
+1. Click the ![1557171130201](images/1557171130201.png) button. The All Secrets table only displays matching secrets. Searches search for all text-entry fields that are configured as searchable on the secret's template if the extended search indexer is enabled. 
 
    > **Important:** If the search indexer is not enabled, searches are only performed on the **Secret Name** text field.
 
@@ -24,15 +24,15 @@ The _search indexer_ allows searching on all text-entry fields set to searchable
 
 1. Click the **Admin** button on the main menu and select **See All**. The Administration page appears:
 
-   <img src="assets/image-20191114142009435.png" alt="image-20191114142009435" style="zoom: 67%;" />
+   <img src="images/image-20191114142009435.png" alt="image-20191114142009435" style="zoom: 67%;" />
 
 1. Type and then click Search Indexer in the Search text box. The Indexing Service page appears:
 
-   ![image-20191203145755643](assets/image-20191203145755643.png)
+   ![image-20191203145755643](images/image-20191203145755643.png)
 
 1. Click the **Edit** button. The page becomes editable:
 
-   <img src="assets/image-20191203150216372.png" alt="image-20191203150216372" style="zoom:67%;" />	
+   <img src="images/image-20191203150216372.png" alt="image-20191203150216372" style="zoom:67%;" />	
 
 1. Ensure the **Enabled** check box is selected.
 

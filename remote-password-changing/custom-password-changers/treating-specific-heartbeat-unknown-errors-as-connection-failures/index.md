@@ -12,7 +12,7 @@ The SS “Heartbeat Unknown Error to Unable to Connect Translation (regex)” se
 
 **Figure:** Heartbeat Unknown Error to Unable to Connect Translation (regex) Setting 
 
-![image-20191105131917774](assets/image-20191105131917774.png)
+![image-20191105131917774](images/image-20191105131917774.png)
 
 > **Note:** The UnknownError error is very common when running scripts and commands, making the regex discrimination desirable.
 
@@ -30,15 +30,15 @@ To configure the unknown errors to trigger connection failures:
 
 1. Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears:
 
-   <img src="assets/image-20191203153013109.png" alt="image-20191203153013109" style="zoom:67%;" />
+   <img src="images/image-20191203153013109.png" alt="image-20191203153013109" style="zoom:67%;" />
 
 1. Click the **Configure Password Changers** button. The Password Changers Configuration page appears:
 
-   <img src="assets/image-20191105140347335.png" alt="" style="zoom:67%;" />
+   <img src="images/image-20191105140347335.png" alt="" style="zoom:67%;" />
 
 1. Click the link for the desired password type. Its Account page appears:
 
-   ![image-20191105131917774](assets/image-20191105131917774.png)
+   ![image-20191105131917774](images/image-20191105131917774.png)
 
 1. If necessary, click the **Advanced Settings** link.
 

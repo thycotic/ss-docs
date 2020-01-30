@@ -38,10 +38,10 @@ By default, these two audit-data retention roles are not assigned to users. An a
 
 1. Go to **Admin \> Data Retention Management**:
 
-   ![image-20191204143632549](assets/image-20191204143632549.png)
+   ![image-20191204143632549](images/image-20191204143632549.png)
    The PII policy is displayed on the Data Retention tab. If you scroll down, you will see the Database Size policy:
 
-   ![image-20191204144003575](assets/image-20191204144003575.png)
+   ![image-20191204144003575](images/image-20191204144003575.png)
 
 2. Notice that each policy lists:
 
@@ -53,13 +53,13 @@ By default, these two audit-data retention roles are not assigned to users. An a
 
 3. To view a list of previous "runs,” click the **Audit** tab. You can also hover the mouse pointer over individual records to view details:
 
-   ![image-20191204152313970](assets/image-20191204152313970.png)
+   ![image-20191204152313970](images/image-20191204152313970.png)
 
 ##### Editing Audit Data Policies
 
 4. Go to **Admin \> Data Retention Management**:
 
-   ![image-20191204143632549](assets/image-20191204143632549.png) 
+   ![image-20191204143632549](images/image-20191204143632549.png) 
 
 5. Click the **Edit** link on the **Enabled** row on the policy that you wish to edit. A popup appears (not shown).
 
@@ -77,7 +77,7 @@ By default, these two audit-data retention roles are not assigned to users. An a
 
 1. Go to **Admin \> Data Retention Management**:
 
-   ![image-20191204143632549](assets/image-20191204143632549.png) 
+   ![image-20191204143632549](images/image-20191204143632549.png) 
 
 2. Click the **Run Now** link on the **Enabled** row on the policy that you wish to edit. A popup appears (not shown).
 

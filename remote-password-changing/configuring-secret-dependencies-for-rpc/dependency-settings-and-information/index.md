@@ -58,14 +58,14 @@ Example values for a Windows service dependency on a remote computer might be: `
 
 The following operations can be performed in the Dependency grid:
 
-- **Delete:** Click the ![1556294394197](assets/1556294394197.png) icon to delete the dependency.
+- **Delete:** Click the ![1556294394197](images/1556294394197.png) icon to delete the dependency.
 
-- **Edit:** Click the ![1556294408164](assets/1556294408164.png) icon to edit dependency text boxes. Cancel changes by pressing the Cancel button.
+- **Edit:** Click the ![1556294408164](images/1556294408164.png) icon to edit dependency text boxes. Cancel changes by pressing the Cancel button.
 
 - **Run Dependency:** Click the second arrow icon to run the script on the selected dependency and set the password on the selected dependency to the current password for the secret
 
 - **Test Connection:** Click the return arrow icon to test the dependency connection, the tests results are displayed afterward.
 
-- **View Dependency History:** Click the ![1556294428031](assets/1556294428031.png) icon to view the activity logs for the dependency.
+- **View Dependency History:** Click the ![1556294428031](images/1556294428031.png) icon to view the activity logs for the dependency.
 
 > **Note:** Due to security constraints, scheduled tasks require an Active Directory domain user as the privileged account.

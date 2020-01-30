@@ -8,7 +8,7 @@
 
 The SS Dashboard is the main page for searching and viewing secrets: 
 
-![1567714700766](assets/1567714700766.png)
+![1567714700766](images/1567714700766.png)
 
 By default, it contains the Favorite Secrets, Recent Secrets, and + Add Widget widgets (function boxes). You can add these widgets:
 
@@ -37,7 +37,7 @@ By default, it contains the Favorite Secrets, Recent Secrets, and + Add Widget w
 
 #### Managing Widgets
 
-The following operations are available (by clicking the ![1556732823517](assets/1556732823517.png) icon) for managing widgets:
+The following operations are available (by clicking the ![1556732823517](images/1556732823517.png) icon) for managing widgets:
 
 - **Delete:** Hide the widget.
 

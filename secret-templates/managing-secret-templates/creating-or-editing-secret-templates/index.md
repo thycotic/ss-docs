@@ -6,7 +6,7 @@
 
 Select **Admin \> Secret Templates**. The Manage Secret Templates page appears:
 
-![1557163777240](assets/1557163777240.png)
+![1557163777240](images/1557163777240.png)
 
 If editing an existing template:
 
@@ -17,13 +17,13 @@ If creating a new template:
 
 1. Click the **Create New** button. The Create New Secret Template pop-up page appears:
 
-   <img src="assets/1557164311259.png" alt="1557164311259" style="zoom:67%;" />
+   <img src="images/1557164311259.png" alt="1557164311259" style="zoom:67%;" />
 
 1. Type the name of the new template in the text box. 
 
 1. Click the **Create** button. The Secret Template Designer page appears: 
 
-   ![1557166134737](assets/1557166134737.png)
+   ![1557166134737](images/1557166134737.png)
 
    The Secret Template Designer page provides all the options for configuring a secret template, as well as which text-entry fields appear on any secret created from that template.
 
@@ -31,7 +31,7 @@ Add template fields as desired. See [Secret Template Settings](#Secret-Template-
 
 Click the **Edit** button to customize the template general settings. The Secret Template Designer appears:
 
-![1557165217700](assets/1557165217700.png)
+![1557165217700](images/1557165217700.png)
 
 These settings are available:
 

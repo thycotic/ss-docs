@@ -8,15 +8,15 @@
 
 1. Either drill down to the desired secret in the folders on the main menu, or click the secret in the **All Secrets** table to arrive at the secret's page:
 
-   ![1557329052453](assets/1557329052453.png)
+   ![1557329052453](images/1557329052453.png)
 
 1. Click the **Security** tab.
 
-   ![1557329113197](assets/1557329113197.png)
+   ![1557329113197](images/1557329113197.png)
 
 1. Click the **Edit** link for the **Other Security** section. The section becomes editable:
 
-   ![1557329250587](assets/1557329250587.png)
+   ![1557329250587](images/1557329250587.png)
 
 1. Click to select the **Enable DoubleLock** check box. The DoubleLock dropdown list appears.
 
