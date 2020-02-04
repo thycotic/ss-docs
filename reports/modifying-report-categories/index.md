@@ -1,5 +1,5 @@
 [title]: # (Modifying Report Categories)
-[tags]: # (XXX)
+[tags]: # (Modifying Report Categories)
 [priority]: # (40)
 
 # Modifying Report Categories

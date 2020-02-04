@@ -1,5 +1,5 @@
 [title]: # (Saving Reports to File)
-[tags]: # (XXX)
+[tags]: # (Saving Reports to File)
 [priority]: # (50)
 
 # Saving Reports to File
@@ -14,7 +14,7 @@
 
 1. Click the ![1566844967296](images/1566844967296.png) button in the top right of the page and select Export. The Export page appears:
 
-   <img src="images/1566845094165.png" alt="1566845094165" style="zoom:67%;" />
+   ![1566845094165](images/1566845094165.png)
 
 1. Click the **No Selected Folder** link to choose a folder.
 

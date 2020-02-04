@@ -1,5 +1,5 @@
 [title]: # (Viewing Auditing for a Report)
-[tags]: # (XXX)
+[tags]: # (Viewing Auditing for a Report)
 [priority]: # (60)
 
 # Viewing Auditing for a Report

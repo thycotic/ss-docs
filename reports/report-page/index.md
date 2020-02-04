@@ -1,5 +1,5 @@
 [title]: # (Report Page)
-[tags]: # (XXX)
+[tags]: # (Report Page)
 [priority]: # (10)
 
 # Report Page
@@ -34,7 +34,7 @@ The Security Hardening Tab configures aspects of SS to ensure security best prac
   *.7z, *.bmp, *.ca-bundle, *.cer, *.config, *.crt, *.csr, *.csv, *.dat, *.doc, *.docx, *.gif, *.gz, *.id-rsa, *.jpeg, *.jpg, *.json, *.key, *.lic, *.p7b, *.pcf, *.pdf, *.pem, *.pfx, *.pkey, *.png, *.ppk, *.pub, *.tar, *.tif, *.tiff, *.tpm, *.txt, *.vdx, *.vsd, *.vsdx, *.xls, *.xlsx, *.xml, *.zip
   ```
 
-  This security check will fail if the file attachment restrictions is not enabled. This check will return warnings if a potentially dangerous file extension is allowed, maximum file size is not specified, or maximum file size is greater than 30 MB. 
+  This security check will fail if the file attachment restrictions is not enabled. This check will return warnings if a potentially dangerous file extension is allowed, maximum file size is not specified, or maximum file size is greater than 30 MB.
 
 - **Force Password Masking:** Password masking prevents over-the-shoulder viewing of your passwords by a casual observer (when masked, passwords show as **_*_**). To activate this option, click to select the **Force Password Masking** option on the **Configuration** page.
 
@@ -46,31 +46,31 @@ The Security Hardening Tab configures aspects of SS to ensure security best prac
 
 - **Remember Me:** Remember Me is a convenience option that allows users to remain logged in for up to a specific period. This setting can be a security concern as it does not require re-entry of credentials to gain access to SS. Turn Remember Me off on the Configuration page to get a pass result. It must be set to be valid for 1 day or less to not get a fail result.
 
-- **Secure Session and Forms Auth Cookies:** Cookies contain potentially sensitive information that can allow users to log onto application. By default, cookies are not marked with the secure attribute. That is, **they are transmitted unencrypted when a user accesses SS through HTTP instead of HTTPS**. 
+- **Secure Session and Forms Auth Cookies:** Cookies contain potentially sensitive information that can allow users to log onto application. By default, cookies are not marked with the secure attribute. That is, **they are transmitted unencrypted when a user accesses SS through HTTP instead of HTTPS**.
 
   For more information about how to secure your cookies, see [Secure ASP Session and Forms Authentication Cookies](http://updates.thycotic.net/link.ashx?SecureCookieSessions) (KBA).
 
-- **Web Service HTTP Gets Allowed:** Web service HTTP get requests are allowed. Allowing HTTP GET requests allows REST-style calls to many SS Web service methods. This can be a security concern because simply clicking a link to the Web service, created by a malicious user, would cause it to be executed. 
+- **Web Service HTTP Gets Allowed:** Web service HTTP get requests are allowed. Allowing HTTP GET requests allows REST-style calls to many SS Web service methods. This can be a security concern because simply clicking a link to the Web service, created by a malicious user, would cause it to be executed.
 
-- **Zero Information Disclosure Error Message:** Replace all error messages with a custom “contact your admin” message. Error messages can be very helpful when diagnosing installation and configuration issues. However, having errors displayed to a potential attacker can provide him or her with the critical information they need to perform a successful attack. 
+- **Zero Information Disclosure Error Message:** Replace all error messages with a custom “contact your admin” message. Error messages can be very helpful when diagnosing installation and configuration issues. However, having errors displayed to a potential attacker can provide him or her with the critical information they need to perform a successful attack.
 
 ### Database Section
 
 - **SQL Account Using Least Permissions:** Use the fewest SS permissions as possible in the SQL Account used to access the database. We recommend using a least permission approach where the account only has dbOwner. See [Installing and Configuring SQL Server](https://updates.thycotic.net/link.ashx?SqlAccountPermissionsSecurityCheck).
-- **SQL Server Authentication Password Strength:** SQL Server authentication requires a username and password. The password must be a strong password to get a pass result. Strong passwords are 8 characters or longer and contain lowercase and uppercase letters, numbers and symbols. The SQL Server authentication credentials in use can be changed by going to the installer (installer.aspx) and changing them on Step 3\. A pass result is also given if Windows authentication is used to authenticate to SQL Server.
+- **SQL Server Authentication Password Strength:** SQL Server authentication requires a username and password. The password must be a strong password to get a pass result. Strong passwords are 8 characters or longer and contain lowercase and uppercase letters, numbers and symbols. The SQL Server authentication credentials in use can be changed by going to the installer (installer.aspx) and changing them on Step 3. A pass result is also given if Windows authentication is used to authenticate to SQL Server.
 - **SQL Server Authentication Username:** The SQL Server authentication username should not be obvious. The use of "sa", "ss" or "secretserver" triggers a fail result. The SQL Server authentication credentials in use can be changed by going to the installer (installer.aspx) and changing them on Step 3\. A pass result is also given if Windows authentication is used to authenticate to SQL Server.
 - **Windows Authentication to Database:** Windows authentication takes advantage of Windows security to provide secure authentication to SQL Server. The SQL Server authentication options can be changed by going to the installer (installer.aspx) and changing them on Step 3\. Please see the [Installation Guide](https://thycotic.com/products/secret-server/support-2/) for instructions on configuring Windows authentication to SQL Server.
 
 ### Environment Section
 
 - **Application Pool Identity:** The Application Pool identity `GAMMA\ss_iis_svc` appears to be a member of the administrators group on the system. This puts the system at risk by giving more access than necessary.
-- **DPAPI or HSM Encryption of Encryption Key:** Encrypt your SS encryption key, and limit decryption to that same server. Data Protection API (DPAPI) is an encryption library that is built into Windows operating systems. It allows encryption of data and configuration files based on the machine key. Enabling DPAPI Encryption in SS protects the SS encryption key by using DPAPI, so even getting access to the SS encryption key is not enough to be useful—the machine key is required. If you enable this option, back up your encryption key first, as a DPAPI encrypted file can only be used by the machine it was encrypted on. 
+- **DPAPI or HSM Encryption of Encryption Key:** Encrypt your SS encryption key, and limit decryption to that same server. Data Protection API (DPAPI) is an encryption library that is built into Windows operating systems. It allows encryption of data and configuration files based on the machine key. Enabling DPAPI Encryption in SS protects the SS encryption key by using DPAPI, so even getting access to the SS encryption key is not enough to be useful—the machine key is required. If you enable this option, back up your encryption key first, as a DPAPI encrypted file can only be used by the machine it was encrypted on.
 
 ### SSL Section
 
 > **Note:** SSL needs to be running with at least a 128-bit key size to get a pass result. A warning result indicates your key size is less than 128 bits. A fail result indicates you are not using SSL.
 
-- **Require SMTP SSL:** SMTP SSL is required to ensure that all communication between SS and the email server is encrypted. Enable the "Use SSL" option in Secret Server to get a pass result. 
+- **Require SMTP SSL:** SMTP SSL is required to ensure that all communication between SS and the email server is encrypted. Enable the "Use SSL" option in Secret Server to get a pass result.
 - **Require SSL:** Secure Sockets Layer (SSL) is required to ensure that all communication between the Web browser and SS is encrypted and secure. Once the SSL certificate is installed, Force HTTPS/SSL in Configuration to get a pass result. Please see the [Installing a Self-Signed SSL/HTTPS Certificate](https://updates.thycotic.net/links.ashx?SSSelfSignedCertificate) Knowledge Base article for instructions.
 - **SSL/TLS Hash:** Check the digest algorithm of the certificate. If the algorithm is SHA1, this check returns a warning because SHA1 is being phased out. If the digest algorithm is MD2, MD4, or MD5, the check will fail because they are not secure. SHA256, SHA384, and SHA512 will pass. This check fails if SS cannot be loaded over HTTPS.
 - **SSL/TLS Key:** Check the key size of the HTTPS certificate used. If it is RSA or DSA, the key must be at least 2048-bit to pass. If the signature algorithm of the certificate is ECDSA, the key size must be at least 256-bit to pass. If the algorithm of the certificate is unknown, the result shows “unknown. This check fails if SS cannot be loaded over HTTPS.

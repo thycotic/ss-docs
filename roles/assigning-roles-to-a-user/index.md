@@ -1,5 +1,5 @@
 [title]: # (Assigning Roles to a User)
-[tags]: # (XXX)
+[tags]: # (Assigning Roles to a User)
 [priority]: # (20)
 
 # Assigning Roles to a User

@@ -1,5 +1,5 @@
 [title]: # (Reports)
-[tags]: # (XXX)
+[tags]: # (Reports)
 [priority]: # (1200)
 
 # Reports
@@ -13,4 +13,3 @@ The reporting interface comes with a set of standard reports. These reports incl
 The _Security Hardening Report_ checks aspects of SS to ensure security best practices are being implemented. While SS runs with all the items failing, administrators should be aware of possible security issues within an installation. For details on this, see [Reports Security Hardening Tab](#Reports-Security-Hardening-Tab).
 
 The User Audit Report shows all secrets accessed by a user during a specified period. For a detailed explanation of this, see [User Audit Report](#User-Audit-Report).
-

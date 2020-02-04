@@ -1,5 +1,5 @@
 [title]: # (Setting Up Synchronization Groups)
-[tags]: # (XXX)
+[tags]: # (Setting Up Synchronization Groups)
 [priority]: # (70)
 
 # Setting Up Synchronization Groups

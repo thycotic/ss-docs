@@ -1,16 +1,16 @@
 [title]: # (Scheduled Reports)
-[tags]: # (XXX)
+[tags]: # (Scheduled Reports)
 [priority]: # (80)
 
 # Scheduled Reports
 
-### Creating New Schedules for Reports
+## Creating New Schedules for Reports
 
 1. To create a schedule for a report, click **Schedule** on the **Report View** page. The Custom Report Schedules page appears.
 
 1. Click the **Create New** button.
 
-### Viewing Existing Report Schedules
+## Viewing Existing Report Schedules
 
 1. To view existing schedules for a report, click **Schedule** on the Report View screen. A list of existing schedules for the report appear in the grid.
 
@@ -20,7 +20,7 @@
 
 1. Click the **View** link in the History column of the grid to view the history of all generated reports for that schedule.
 
-### Editing Schedule Settings
+## Editing Schedule Settings
 
 When viewing a report, click Schedule and then the name of the report schedule to modify it. The following configuration options are available:
 

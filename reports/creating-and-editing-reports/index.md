@@ -1,5 +1,5 @@
 [title]: # (Creating and Editing Reports)
-[tags]: # (XXX)
+[tags]: # (Creating and Editing Reports)
 [priority]: # (20)
 
 # Creating and Editing Reports

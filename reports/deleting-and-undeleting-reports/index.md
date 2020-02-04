@@ -1,5 +1,5 @@
 [title]: # (Deleting or Undeleting Reports)
-[tags]: # (XXX)
+[tags]: # (Deleting or Undeleting Reports)
 [priority]: # (30)
 
 # Deleting or Undeleting Reports

@@ -1,5 +1,5 @@
 [title]: # (Creating Synchronization Secrets)
-[tags]: # (XXX)
+[tags]: # (Creating Synchronization Secrets)
 [priority]: # (40)
 
 # Creating Synchronization Secrets

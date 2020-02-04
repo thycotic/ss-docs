@@ -1,5 +1,5 @@
 [title]: # (Local Sites Versus Distributed Engine Sites)
-[tags]: # (XXX)
+[tags]: # (Local Sites Versus Distributed Engine Sites)
 [priority]: # (60)
 
 # Local Sites Versus Distributed Engine Sites

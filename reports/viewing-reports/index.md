@@ -1,5 +1,5 @@
 [title]: # (Viewing Reports)
-[tags]: # (XXX)
+[tags]: # (Viewing Reports)
 [priority]: # (70)
 
 # Viewing Reports

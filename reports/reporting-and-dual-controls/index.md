@@ -1,10 +1,8 @@
 [title]: # (Reporting and Dual Controls)
-[tags]: # (XXX)
+[tags]: # (Reporting and Dual Controls)
 [priority]: # (90)
 
 # Reporting and Dual Controls
-
-## Reporting and Dual Controls
 
 If there are requirements around protecting potentially personally identifying information when running reports or viewing recorded sessions, you can enforce that another user has authorized you by enabling dual control for a secret or Report. You can configure Dual Controls by clicking **Admin** and then **Dual Controls**.
 
