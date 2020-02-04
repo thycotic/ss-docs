@@ -1,10 +1,8 @@
 [title]: # (Active Directory)
-[tags]: # (XXX)
+[tags]: # (Active Directory)
 [priority]: # (500)
 
 # Active Directory
-
-## Overview
 
 When Active Directory (AD) Sync is run with the "User status mirrors Active Directory (Automatic)" option, it creates groups and users in SS to mirror the organization's configured AD groups and users. A Secret Server user is created or enabled for every enabled AD user in the selected groups.
 
@@ -16,7 +14,7 @@ You can configure the setting on the Edit Active Directory Configuration page. S
 
 Newly-added users remain enabled until the first synchronization after the configured number of months have passed. When a user whose account has been disabled by this feature attempts to log in they automatically have their account enabled, provided there are licenses available.
 
-### Examples
+## Examples
 
 Example One:
 
@@ -32,7 +30,7 @@ Example Two:
 1. The defined number of months later, Automatic User Management disables his account, freeing his license.
 1. Joe gets promoted to a job that requires SS.
 1. Joe logs into SS.
-1. His account is automatically re-enabled, and he now takes up a license. 
+1. His account is automatically re-enabled, and he now takes up a license.
 1. Joe gets demoted to his old job, which does not require SS.
 1. A defined number of months later, Automatic User Management disables his account, and the license is freed up once again.
 1. Joe has no idea any of this has happened—the automated process is hidden from him.

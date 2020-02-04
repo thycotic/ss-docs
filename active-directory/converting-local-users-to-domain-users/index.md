@@ -1,5 +1,5 @@
 [title]: # (Converting Local Users to Domain Users)
-[tags]: # (XXX)
+[tags]: # (Converting Users)
 [priority]: # (30)
 
 # Converting Local Users to Domain Users

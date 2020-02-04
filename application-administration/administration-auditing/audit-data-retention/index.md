@@ -4,8 +4,7 @@
 
 # Audit Data Retention
 
-
-#### Overview
+## Overview
 
 Secret Server can automatically delete older audit and audit-like information (both are called "audit data” here). By default, Secret Server does not delete any audit data. 
 

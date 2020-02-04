@@ -1,5 +1,5 @@
 [title]: # (Syncing and Authenticating AD Users via a Distributed Engine)
-[tags]: # (XXX)
+[tags]: # (Syncing AD Users)
 [priority]: # (60)
 
 # Syncing and Authenticating AD Users via a Distributed Engine
@@ -10,11 +10,11 @@ In addition to syncing AD with SS via your local site, SS can also synchronize a
 
 1. Specify the domain to authenticate against:
 
-   1. Before synchronizing or creating users, you must first specify which domains SS can authenticate against. SS can synchronize with any number of domains. 
+   1. Before synchronizing or creating users, you must first specify which domains SS can authenticate against. SS can synchronize with any number of domains.
 
    1. Go to **Admin \> Active Directory**. The Active Directory Configuration page appears.
 
-   1. Click the **Edit Domains** button. 
+   1. Click the **Edit Domains** button.
 
    1. Click the **Create New** button. The Active Directory Domain page appears.
 

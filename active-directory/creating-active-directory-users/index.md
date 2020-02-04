@@ -1,5 +1,5 @@
 [title]: # (Creating Active Directory Users)
-[tags]: # (XXX)
+[tags]: # (Creating AD Users)
 [priority]: # (40)
 
 # Creating Active Directory Users
