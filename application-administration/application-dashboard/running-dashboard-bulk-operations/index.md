@@ -1,5 +1,5 @@
 [title]: # (Running Dashboard Bulk Operations)
-[tags]: # (XXX)
+[tags]: # (Bulk Operations)
 [priority]: # (40)
 
 # Running Dashboard Bulk Operations
@@ -31,6 +31,6 @@ You can perform bulk operations from the Dashboard on multiple secrets:
    - Run heartbeat
    - Set privileged account
    - Undelete
-   - Unhide launcher password 
+   - Unhide launcher password
 
 > **Note:** Bulk operations differ by SS version.

@@ -1,12 +1,10 @@
 [title]: # (Application Dashboard)
-[tags]: # (XXX)
+[tags]: # (Dashboard)
 [priority]: # (40)
 
 # Application Dashboard
 
-### Overview
-
-The SS Dashboard is the main page for searching and viewing secrets: 
+The SS Dashboard is the main page for searching and viewing secrets:
 
 ![1567714700766](images/1567714700766.png)
 
@@ -17,9 +15,9 @@ By default, it contains the Favorite Secrets, Recent Secrets, and + Add Widget w
 - Reports
 - Request Management
 
-### Dashboard Widgets
+## Dashboard Widgets
 
-#### Widget Types
+### Widget Types
 
 **Table: Dashboard Widgets**
 
@@ -35,7 +33,7 @@ By default, it contains the Favorite Secrets, Recent Secrets, and + Add Widget w
 
 > **Note:** The Search and Browse widgets cannot be rearranged. They always remain in the top left region of the tab.
 
-#### Managing Widgets
+### Managing Widgets
 
 The following operations are available (by clicking the ![1556732823517](images/1556732823517.png) icon) for managing widgets:
 

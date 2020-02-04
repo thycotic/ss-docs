@@ -1,12 +1,12 @@
 [title]: # (Administration Tabs)
-[tags]: # (XXX)
+[tags]: # (Administration Tabs)
 [priority]: # (30)
 
 # Administration Tabs
 
 SS is highly customizable. Administrators can increase site security through various configuration settings such as force inactivity timeouts and specifying a SMTP server. This level of configuration allows SS to be altered to meet the needed requirements for the instance. The settings are explained below.
 
-### General Tab
+## General Tab
 
 The following configuration settings are available in the General tab:
 
@@ -60,11 +60,11 @@ The following configuration settings are available in the General tab:
 - **Secret Password History:** Enforces whether a recent password can be set on a secret's password text-entry field based on the history. Defaults to 1, which means the same password cannot be immediately re-used on a secret.
 - **Change Administration Mode:** This button takes you to a page where you can enable or disable Unlimited Administration mode.
 
-### HSM Tab
+## HSM Tab
 
 From the Hardware Security Module (HSM) tab, you can enable or disable HSM for encryption. For more details about HSM configuration, ==see our [HSM Integration Guide](https://updates.thycotic.net/links.ashx?hsmintegrationguide) (PDF)==.
 
-### Email Tab
+## Email Tab
 
 The Email tab contains the following configuration options:
 
@@ -80,7 +80,7 @@ The Email tab contains the following configuration options:
 
 - **Use SSL:** Whether to use SSL when sending emails.
 
-### Folders Tab
+## Folders Tab
 
 The Folders tab contains the following configuration options:
 
@@ -94,7 +94,7 @@ The Folders tab contains the following configuration options:
 
 - **Warning Message Text:** Warning message to display to the users, instructing them to store only work-related data in SS.
 
-### Login Tab
+## Login Tab
 
 The Login tab contains the following options:
 
@@ -120,7 +120,7 @@ The Login tab contains the following options:
 
 - **Visual Encrypted Keyboard Required:** Require the visual keyboard for logins.
 
-### Local User Passwords Tab
+## Local User Passwords Tab
 
 This tab contains the following configuration options:
 
@@ -144,7 +144,7 @@ This tab contains the following configuration options:
 
 - **Uppercase Letters Required for Passwords:** Force all local users to include uppercase letters within their login passwords.
 
-### Security Tab
+## Security Tab
 
 The Security tab contains the following configuration options:
 
@@ -160,10 +160,10 @@ The Security tab contains the following configuration options:
 
 - **Frame Blocking:** Prevents users from accessing the SS site if it is embedded in an iFrame.
 
-### Session Recording Tab
+## Session Recording Tab
 
 See [Session Recording](#SessionRecording).
 
-### Ticket System Tab
+## Ticket System Tab
 
 See [Ticketing System Integration](#TicketingSystemIntegration).

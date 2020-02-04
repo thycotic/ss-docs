@@ -4,7 +4,7 @@
 
 # Viewing a User Audit Report
 
-1. From the **Reports** page, click the **User Audit** tab. 
+1. From the **Reports** page, click the **User Audit** tab.
 2. From the dialog on the tab, select a user and a date range to view.
 3. Click **Search History** to view the user's audit trail.
 

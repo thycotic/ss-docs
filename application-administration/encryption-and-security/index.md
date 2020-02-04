@@ -1,6 +1,7 @@
 [title]: # (Encryption and Security)
-[tags]: # (XXX)
+[tags]: # (Encryption and Security)
 [priority]: # (60)
 
 # Encryption and Security
-Something here.
+
+Intro here.

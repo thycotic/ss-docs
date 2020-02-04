@@ -1,14 +1,14 @@
 [title]: # (Security Compliance Standards)
-[tags]: # (XXX)
+[tags]: # (Compliance)
 [priority]: # (30)
 
 # Security Compliance Standards
 
-#### FIPS Compliance
+## FIPS Compliance
 
 The Federal Information Processing Standard 140-1 (FIPS 140-1) and its successor (FIPS 140-2) are United States Government standards that provide a benchmark for implementing cryptographic software. SS has been tested within environments that are FIPS compliant. For instructions to enabling FIPS in SS, see the [Enabling FIPS Compliance in Secret Server](https://updates.thycotic.net/link.ashx?SSUserGuide_SecretServerFipsCompliance) KB article.
 
-#### PCI Datacenter Compliance
+## PCI Datacenter Compliance
 
 SS can make it easier to comply with PCI-DSS requirements:
 

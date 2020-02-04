@@ -1,5 +1,5 @@
 [title]: # (Advanced Encryption Standard)
-[tags]: # (XXX)
+[tags]: # (Advanced Encryption)
 [priority]: # (10)
 
 # Advanced Encryption Standard

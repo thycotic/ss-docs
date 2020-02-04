@@ -1,11 +1,12 @@
 [title]: # (Dashboard Tools and Help Menu)
 [tags]: # (XXX)
 [priority]: # (20)
+
 # Dashboard Tools and Help Menu
 
 The Dashboard Tools Menus is available via the ![1557174423911](images/1557174423911.png) button on the Dashboard. It includes links to:
 
-#### Tool Section
+## Tool Section
 
 - Connection Manager
 - Importing Secrets
@@ -15,7 +16,7 @@ The Dashboard Tools Menus is available via the ![1557174423911](images/155717442
 - Privilege Manager
 - Privilege Behavior Analytics
 
-#### Help Section
+## Help Section
 
 - About
 - Help
