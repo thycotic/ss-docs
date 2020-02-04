@@ -1,5 +1,5 @@
 [title]: # (Administration Page)
-[tags]: # (XXX)
+[tags]: # (Administration Page)
 [priority]: # (20)
 
 # Administration Page
@@ -10,19 +10,19 @@ The Admin Page is a control panel for administering SS. You access it by clickin
 
 **Figure:** Admin Page (Simplified View)
 
-<img src="images/image-20191114142009435.png" alt="image-20191114142009435" style="zoom: 67%;" />
+![image-20191114142009435](images/image-20191114142009435.png)
 
 With it, you can quickly and easily find administration controls in several ways:
 
 - **Text Search:** You can search for a concept, configuration, or component by typing a search term in the search text box. The text box automatically suggests items as you type:
 
-  <img src="images/image-20191115093820499.png" alt="image-20191115093820499" style="zoom:67%;" />
+  ![image-20191115093820499](images/image-20191115093820499.png)
 
   Once you see the item you desire, you simply click and you are brought to that page.
 
 - **Topic button:** You can click one of the large buttons to see a list of related items:
 
-  <img src="images/image-20191115094054886.png" alt="image-20191115094054886" style="zoom:67%;" />
+  ![image-20191115094054886](images/image-20191115094054886.png)
 
   Once you see the item you desire, you simply click it, and you are brought to that page.
 
@@ -32,7 +32,7 @@ With it, you can quickly and easily find administration controls in several ways
 
   - Alphabetized List: A text list of the available items:
 
-    <img src="images/image-20191115095040341.png" alt="image-20191115095040341" style="zoom:67%;" />
+    ![image-20191115095040341](images/image-20191115095040341.png)
 
   - Category: A text list of the available items bunched by category:
 
