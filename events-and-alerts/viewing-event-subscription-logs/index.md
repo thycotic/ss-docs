@@ -1,5 +1,5 @@
 [title]: # (Viewing Event Subscription Logs)
-[tags]: # (XXX)
+[tags]: # (Viewing Event Subscription Logs)
 [priority]: # (50)
 
 # Viewing Event Subscription Logs

@@ -1,5 +1,5 @@
 [title]: # (Minimum Requirements for Windows Local Accounts)
-[tags]: # (XXX)
+[tags]: # (Minimum Requirements for Windows Local Accounts)
 [priority]: # (90)
 
 # Minimum Requirements for Windows Local Accounts
@@ -8,6 +8,6 @@ Due to a security issue ([MS KB3178465](https://support.microsoft.com/en-us/help
 
 - Must be a domain user
 
-- Must be a member of the local administrator group on all target end points 
+- Must be a member of the local administrator group on all target end points
 
 > **Note:** The discovery account for SS can also be used for RPC.

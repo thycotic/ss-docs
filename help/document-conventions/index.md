@@ -1,7 +1,10 @@
 [title]: # (Document Conventions)
 [tags]: # (Document Conventions)
 [priority]: # (40)
-### Code and Command Line Text
+
+# Document Conventions
+
+## Code and Command Line Text
 
 Variable text in literal typed-in text and command-line parameters follow these industry-wide standards:
 
@@ -11,7 +14,7 @@ Variable text in literal typed-in text and command-line parameters follow these 
 - Repeated parameters are followed by ellipses: `cp <source1> [source2...] <dest>`
 - Multiple choice items are separated by vertical bars and grouped by curly brackets: `netstat {-t|-u}`
 
-### Keyboard Shortcuts
+## Keyboard Shortcuts
 
 - Keyboard keys are bolded and surrounded with square brackets: **[Enter]**
 
@@ -19,7 +22,7 @@ Variable text in literal typed-in text and command-line parameters follow these 
 
 - Sequential key presses are denoted by commas: **[Page Down]**, **[Enter]**
 
-### Notes
+## Notes
 
 There are three types of notes: _regular_,  _important_ and _warning_.
 
@@ -29,7 +32,7 @@ There are three types of notes: _regular_,  _important_ and _warning_.
 
 > <span style="color:red">**Warning:**</span> Warning notes contain substantive information that should be heeded, or negative consequences can occur, involving injury, major data loss, or equipment damage.
 
-### Other Special Text
+## Other Special Text
 
 - Email addresses and URLs are usually denoted by a colored underline: <support@thycotic.com>. 
 - When URLs are part of the instruction, as opposed to clickable link, they appear in monospaced text: Type `https://www.somewhere.com` or click https://www.somewhere.com.
@@ -40,7 +43,7 @@ There are three types of notes: _regular_,  _important_ and _warning_.
 
 > **Note:** Ending punctuation may be omitted for clarity when following typed-in text, including URLs.
 
-### Screen Components and Attentional Targets
+## Screen Components and Attentional Targets
 
 - Mouse-click, keyboard, and other attentional targets (anything a looks for) are denoted by bold type: **OK** button or **Login** link.
 

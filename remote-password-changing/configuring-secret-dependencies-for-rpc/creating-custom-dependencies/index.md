@@ -1,5 +1,5 @@
 [title]: # (Creating Custom Dependencies)
-[tags]: # (XXX)
+[tags]: # (Creating Custom Dependencies)
 [priority]: # (30)
 
 # Creating Custom Dependencies

@@ -1,5 +1,5 @@
 [title]: # (Running a Manual RPC)
-[tags]: # (XXX)
+[tags]: # (Running a Manual RPC)
 [priority]: # (170)
 
 # Running a Manual RPC

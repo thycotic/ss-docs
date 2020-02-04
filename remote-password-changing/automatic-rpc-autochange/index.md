@@ -1,8 +1,8 @@
-[title]: # (Automatic RPC (AutoChange))
-[tags]: # (XXX)
+[title]: # (Automatic Remote Password Changing)
+[tags]: # (Automatic Remote Password Changing)
 [priority]: # (10)
 
-# Automatic RPC (AutoChange)
+# Automatic Remote Passowrd Changing (AutoChange)
 
 ## Introduction
 

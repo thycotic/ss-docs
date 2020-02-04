@@ -1,5 +1,5 @@
 [title]: # (Mapping an SSH Key or Private Key Passphrase for Authentication)
-[tags]: # (XXX)
+[tags]: # (Mapping an SSH Key or Private Key Passphrase for Authentication)
 [priority]: # (70)
 
 # Mapping an SSH Key or Private Key Passphrase for Authentication

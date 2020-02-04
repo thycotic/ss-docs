@@ -1,12 +1,12 @@
 [title]: # (CEF and SIEM Integration)
-[tags]: # (XXX)
+[tags]: # (CEF and SIEM)
 [priority]: # (20)
 
 # CEF and SIEM Integration
 
 SS can log to a Comment Event Format (CEF) or Syslog listener. When this is configured, all event engine events and important system log entries are sent to the CEF or Syslog server that is entered in the configuration. The written events contain data such as user information, time, IP address, and any other important details about the event.
 
-### Configuring CEF
+## Configuring CEF
 
 1. To configure CEF:
 
@@ -26,6 +26,6 @@ SS can log to a Comment Event Format (CEF) or Syslog listener. When this is conf
 
 1. Click **Save**.
 
-### Testing CEF
+## Testing CEF
 
 After enabling CEF, your server should start to receive messages right away if you entered the data correctly. In order to force an event to happen, perform a log out and then log back in. If the event does not appear on your CEF server soon after, there is something wrong with your configuration.

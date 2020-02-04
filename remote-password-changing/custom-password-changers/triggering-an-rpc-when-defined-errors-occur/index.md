@@ -1,10 +1,8 @@
 [title]: # (Triggering an RPC When Defined Errors Occur)
-[tags]: # (XXX)
+[tags]: # (Defined Errors)
 [priority]: # (190)
 
 # Triggering an RPC When Defined Errors Occur
-
-## Overview
 
 When the “Attempt Password Change with new password when error contains (regex)” setting is enabled, SS generates a new password to use during the next RPC attempt when the defined error is returned. Using a regular expression, which you define, SS scans the error message for specific text strings. When there is a match, SS generates and sets a new next password for the secret that will be used in the next RPC attempt, which will occur based on the templates RPC interval. To keep this process from generating too many next passwords, it is restricted to five attempts while failing RPC. 
 
@@ -30,21 +28,21 @@ Examples:
 
 `.*0x80072035.*|.*minimum.*`  (server rejects password or password length error)
 
-#### Procedure
+## Procedure
 
 To configure RPC in response to specific unknown errors:
 
 1. Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears:
 
-   <img src="images/image-20191203153013109.png" alt="image-20191203153013109" style="zoom:67%;" />
+![image-20191203153013109](images/image-20191203153013109.png)
 
 1. Click the **Configure Password Changers** button. The Password Changers Configuration page appears:
 
-   <img src="images/image-20191105140347335.png" alt="" style="zoom:67%;" />
+![image-20191105140347335](images/image-20191105140347335.png)
 
 1. Click the link for the desired password type. Its Account page appears:
 
-   ![](images/image-20191105140733364.png)
+![image-20191105140733364](images/image-20191105140733364.png)
 
 1. If necessary, click the **Advanced Settings** link.
 

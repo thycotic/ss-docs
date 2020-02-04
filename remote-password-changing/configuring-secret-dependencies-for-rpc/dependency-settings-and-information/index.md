@@ -1,5 +1,5 @@
 [title]: # (Dependency Settings and Information)
-[tags]: # (XXX)
+[tags]: # (Dependency Settings)
 [priority]: # (10)
 
 # Dependency Settings and Information

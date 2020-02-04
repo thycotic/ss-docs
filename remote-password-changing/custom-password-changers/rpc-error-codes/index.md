@@ -1,5 +1,5 @@
 [title]: # (RPC Error Codes)
-[tags]: # (XXX)
+[tags]: # (RPC Error Codes)
 [priority]: # (140)
 
 # RPC Error Codes
@@ -12,4 +12,4 @@ The most common RPC errors are:
 
 - **ERROR_INVALID_PASSWORD**: Either the user does not exist (ensure the usernames match) or the password is not correct.
 
-For more information about common error messages for Remote Password Changing, see ==[Remote Password Changing Errors](https://updates.thycotic.net/links.ashx?PasswordChangingErrors) (KB).==
+For more information about common error messages for Remote Password Changing, see [Remote Password Changing Errors](https://updates.thycotic.net/links.ashx?PasswordChangingErrors) (KB).

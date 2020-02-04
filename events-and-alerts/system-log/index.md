@@ -1,5 +1,5 @@
 [title]: # (System Log)
-[tags]: # (XXX)
+[tags]: # (System Log)
 [priority]: # (40)
 
 # System Log

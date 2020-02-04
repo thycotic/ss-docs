@@ -1,10 +1,8 @@
 [title]: # (Remote Password Changing)
-[tags]: # (XXX)
+[tags]: # (Remote Password Changing)
 [priority]: # (1100)
 
 # Remote Password Changing
-
-## Introduction
 
 _Remote Password Changing_ (RPC) allows properly configured secrets to automatically update a corresponding remote account. Secrets can be set for automatic expiry so SS automatically generates a new strong password and change the remote password to keep all the account synchronized with SS.
 

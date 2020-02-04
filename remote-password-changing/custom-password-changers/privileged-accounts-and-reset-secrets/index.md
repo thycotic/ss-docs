@@ -1,5 +1,5 @@
 [title]: # (Privileged Accounts and Reset Secrets)
-[tags]: # (XXX)
+[tags]: # (Privileged Accounts and Reset Secrets)
 [priority]: # (130)
 
 # Privileged Accounts and Reset Secrets

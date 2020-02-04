@@ -1,5 +1,5 @@
 [title]: # (Editing Custom Commands)
-[tags]: # (XXX)
+[tags]: # (Editing Custom Commands)
 [priority]: # (50)
 
 # Editing Custom Commands
@@ -12,7 +12,7 @@ To edit the custom commands, click on the **Edit** Commands button. This sets th
 
 Any secret text-entry field value can be substituted by prefacing the text-entry field name with a `$`. For example, to echo the notes value for a secret, the user would enter: `echo $Notes` as a command. Along with these secret field values, the following variables are available in custom commands:
 
-##### RPC-Mapped Text-Entry Fields
+## RPC-Mapped Text-Entry Fields
 
 - `$USERNAME` The username text-entry field mapped in RPC on the secret template.
 
@@ -32,7 +32,7 @@ Any secret text-entry field value can be substituted by prefacing the text-entry
 
 - `$NEWPASSPHRASE` The next passphrase (filled in Next Private Key Passphrase text box or auto-generated).
 
-##### Associated Reset Secrets
+## Associated Reset Secrets
 
 - `$[1]` Adding this prefix to any text-entry field targets the associated reset secret with order 1.
 
@@ -51,7 +51,7 @@ Any secret text-entry field value can be substituted by prefacing the text-entry
 
 > **Note:** Both the mapped text-entry fields and secret text-entry field names can be used.
 
-##### Check-Result Commands
+## Check-Result Commands
 
 - `$$CHECKCONTAINS <text>` Checks that the response from last command contains `<text>`.
 

@@ -1,5 +1,5 @@
 [title]: # (Deactivating Password Changers)
-[tags]: # (XXX)
+[tags]: # (Deactivating Password Changers)
 [priority]: # (30)
 
 # Deactivating Password Changers

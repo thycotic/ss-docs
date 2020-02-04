@@ -1,5 +1,5 @@
 [title]: # (Creating a Custom Password Changer)
-[tags]: # (XXX)
+[tags]: # (Creating a Custom Password Changer)
 [priority]: # (20)
 
 # Creating a Custom Password Changer

@@ -1,5 +1,5 @@
 [title]: # (Configuration and Sizing)
-[tags]: # (XXX)
+[tags]: # (Distributed Engine Configuration and Sizing)
 [priority]: # (20)
 
 # Configuration and Sizing

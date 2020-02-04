@@ -1,5 +1,5 @@
 [title]: # (Editing a Subscription)
-[tags]: # (XXX)
+[tags]: # (Editing a Subscription)
 [priority]: # (20)
 
 # Editing a Subscription

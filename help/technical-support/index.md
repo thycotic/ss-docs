@@ -1,17 +1,18 @@
 [title]: # (Technical Support)
 [tags]: # (Technical Support)
 [priority]: # (10)
+
 # Technical Support
 
 To have access to Thycotic Technical Support, you must have an equal number of unexpired user and support licenses. All support licenses expire 365 days after they are issued.
 
-### Technical Support Coverage
+## Technical Support Coverage
 
-#### Software Support
+### Software Support
 
 We provide technical assistance for all issues, bugs, and questions related to SS. We do not support software from other vendors except where SS functionality is specifically affected. For instance, we would provide support if Windows Authentication to Microsoft SQL Server is working for other applications but not SS. We would not provide support if Windows Authentication for Microsoft SQL Server is not functioning.
 
-#### Response Time
+### Response Time
 
 We make our best effort to answer phone calls immediately; however, some calls may go to voicemail if there is a high call volume. Voicemails and support requests through email receive a response during EST business hours within 24 hours.
 
