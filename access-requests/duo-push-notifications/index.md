@@ -1,4 +1,4 @@
-[title]: # (Duo Push Notifications!)
+[title]: # (Duo Push Notifications)
 [tags]: # (Duo)
 [priority]: # (20)
 
@@ -47,8 +47,14 @@ To associate the permission with users:
 12. Click the **Edit** button. The Role Assignment page appears.
 
 13. Assign the **Approve via DUO Push** role to the **Assigned** list box.
-
 14. Click the **Save Changes** button. Setup is now complete.
 
 > **Note:** In addition to having the role you created, the user must be properly set up to receive Duo push notifications. See [Setting up Duo (User)](#setting-up-duo-(user)).
+
 > **Note:**  Any notifications will all be sent out at the same time, and the first response (approve or deny) will be the determinant response. A non-response will not result in either an approve or deny response.
+
+### test3
+
+#### test4
+
+##### test5
