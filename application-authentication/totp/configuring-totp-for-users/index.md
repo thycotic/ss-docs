@@ -1,5 +1,5 @@
 [title]: # (Configuring TOTP for Users)
-[tags]: # (XXX)
+[tags]: # (Configuring TOTP)
 [priority]: # (10)
 
 # Configuring TOTP for Users

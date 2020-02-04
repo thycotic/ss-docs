@@ -1,5 +1,5 @@
 [title]: # (Backup Settings)
-[tags]: # (XXX)
+[tags]: # (Backup Settings)
 [priority]: # (10)
 
 # Backup Settings

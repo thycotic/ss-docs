@@ -1,5 +1,5 @@
 [title]: # (Disabling TOTP for Users)
-[tags]: # (XXX)
+[tags]: # (Disabling TOTP)
 [priority]: # (30)
 
 # Disabling TOTP for Users

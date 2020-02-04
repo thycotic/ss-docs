@@ -1,5 +1,5 @@
 [title]: # (SAML)
-[tags]: # (XXX)
+[tags]: # (SAML)
 [priority]: # (20)
 
 # SAML

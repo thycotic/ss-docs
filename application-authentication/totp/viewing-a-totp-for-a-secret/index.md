@@ -1,5 +1,5 @@
 [title]: # (Viewing a TOTP for a Secret)
-[tags]: # (XXX)
+[tags]: # (Viewing TOTP)
 [priority]: # (60)
 
 # Viewing a TOTP for a Secret
@@ -16,7 +16,7 @@ To view or copy the TOTP generated for an account:
 
 1. A dialog box appears with an OTP:
 
-   <img src="images/image-20191114095353491.png" alt="image-20191114095353491" style="zoom:80%;" />
+![image-20191114095353491](images/image-20191114095353491.png)
 
 1. Click the OTP to copy it to the clipboard.
 

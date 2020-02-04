@@ -1,5 +1,5 @@
 [title]: # (Backup and Disaster Recovery)
-[tags]: # (XXX)
+[tags]: # (Backup and Disaster Recovery)
 [priority]: # (800)
 
 # Backup and Disaster Recovery

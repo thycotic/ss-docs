@@ -1,5 +1,5 @@
 [title]: # (Application Authentication)
-[tags]: # (XXX)
+[tags]: # (Authentication)
 [priority]: # (700)
 
 # Application Authentication

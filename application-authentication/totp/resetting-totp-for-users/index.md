@@ -1,5 +1,5 @@
 [title]: # (Resetting TOTP for Users)
-[tags]: # (XXX)
+[tags]: # (Resetting TOTP)
 [priority]: # (50)
 
 # Resetting TOTP for Users
