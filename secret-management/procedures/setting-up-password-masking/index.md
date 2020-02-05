@@ -1,5 +1,5 @@
 [title]: # (Setting Up Password Masking)
-[tags]: # (XXX)
+[tags]: # (Password Masking)
 [priority]: # (70)
 
 # Setting Up Password Masking

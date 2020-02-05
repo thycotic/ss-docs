@@ -1,5 +1,5 @@
 [title]: # (Secret Dependencies Tab)
-[tags]: # (XXX)
+[tags]: # (Dependencies)
 [priority]: # (10)
 
 # Secret Dependencies Tab

@@ -1,12 +1,12 @@
 [title]: # (Sharing Secrets)
-[tags]: # (XXX)
+[tags]: # (Share Secret)
 [priority]: # (80)
 
 # Sharing Secrets
 
 Sharing passwords is crucial for information technology teams. Due to the sensitive nature of sharing secure information, SS ensures shared passwords are tracked and guarded.
 
-#### Permissions
+## Permissions
 
 There are three permission levels to choose from when sharing secrets with another user or group:
 
@@ -22,7 +22,7 @@ There are three permission levels to choose from when sharing secrets with anoth
 
 Secrets can be shared with either groups or individual users. The Secret Sharing section allows secrets to be configured for access.
 
-#### Procedure
+## Procedure
 
 To add or remove secret sharing:
 
@@ -40,7 +40,7 @@ To add or remove secret sharing:
 
 1. Type any user or group you want to share with in the **Add Groups / Users** search text box.
 
-1. When the user or group appears in the dropdown list, click to select it. The user or group appears in the **Shared with** table. 
+1. When the user or group appears in the dropdown list, click to select it. The user or group appears in the **Shared with** table.
 
 1. Click the unlabeled permission dropdown list box to select the desired permission.
 

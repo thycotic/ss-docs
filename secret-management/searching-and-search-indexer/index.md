@@ -1,5 +1,5 @@
 [title]: # (Searching and Search Indexer)
-[tags]: # (XXX)
+[tags]: # (Search)
 [priority]: # (30)
 
 # Searching and Search Indexer
@@ -12,9 +12,9 @@ To search for secrets:
 
    ![1557170622697](images/1557170622697.png)
 
-1. Type the secret name or other text in the unlabeled search text box at the top of the page. 
+1. Type the secret name or other text in the unlabeled search text box at the top of the page.
 
-1. Click the ![1557171130201](images/1557171130201.png) button. The All Secrets table only displays matching secrets. Searches search for all text-entry fields that are configured as searchable on the secret's template if the extended search indexer is enabled. 
+1. Click the ![1557171130201](images/1557171130201.png) button. The All Secrets table only displays matching secrets. Searches search for all text-entry fields that are configured as searchable on the secret's template if the extended search indexer is enabled.
 
    > **Important:** If the search indexer is not enabled, searches are only performed on the **Secret Name** text field.
 
@@ -24,7 +24,7 @@ The _search indexer_ allows searching on all text-entry fields set to searchable
 
 1. Click the **Admin** button on the main menu and select **See All**. The Administration page appears:
 
-   <img src="images/image-20191114142009435.png" alt="image-20191114142009435" style="zoom: 67%;" />
+   ![image-20191114142009435](images/image-20191114142009435.png)
 
 1. Type and then click Search Indexer in the Search text box. The Indexing Service page appears:
 
@@ -32,11 +32,11 @@ The _search indexer_ allows searching on all text-entry fields set to searchable
 
 1. Click the **Edit** button. The page becomes editable:
 
-   <img src="images/image-20191203150216372.png" alt="image-20191203150216372" style="zoom:67%;" />	
+   ![image-20191203150216372](images/image-20191203150216372.png)
 
 1. Ensure the **Enabled** check box is selected.
 
-1. Click either the **Standard** or **Extended** selection button. 
+1. Click either the **Standard** or **Extended** selection button.
 
    - *Standard search mode* is the default and searches on whole words in a field value. For example, a field value of "My AWS Secret" would match when you search for *My AWS Secret*, *My*, or *Secret*.
 

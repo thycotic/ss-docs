@@ -1,5 +1,5 @@
 [title]: # (Secret Launcher Tab)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (50)
 
 # Secret Launcher Tab

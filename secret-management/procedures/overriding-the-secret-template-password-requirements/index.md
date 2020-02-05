@@ -1,5 +1,5 @@
 [title]: # (Overriding the Secret Template's Password Requirements)
-[tags]: # (XXX)
+[tags]: # (Secret Template)
 [priority]: # (60)
 
 # Overriding the Secret Template's Password Requirements

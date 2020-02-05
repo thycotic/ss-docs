@@ -1,5 +1,5 @@
 [title]: # (Secret Tabs)
-[tags]: # (XXX)
+[tags]: # (Secret)
 [priority]: # (10)
 
 # Secret Tabs

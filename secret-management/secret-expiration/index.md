@@ -1,10 +1,8 @@
 [title]: # (Secret Expiration)
-[tags]: # (XXX)
+[tags]: # (Expiration)
 [priority]: # (50)
 
 # Secret Expiration
-
-## Introduction
 
 Secret expiration is a core SS feature. Any template can be set to expire within a fixed time interval. For a secret to expire, a text field must be selected as the target of the expiration. For example, a secret template for Active Directory accounts might require a change on the password text field every 90 days. If the password remains unchanged past the length of time specified, that secret has expired and appears in the Expired Secrets panel on either the Dashboard's Expired secrets widget or the Home page.
 

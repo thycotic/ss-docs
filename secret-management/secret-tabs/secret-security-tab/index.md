@@ -1,5 +1,5 @@
 [title]: # (Secret Security Tab)
-[tags]: # (XXX)
+[tags]: # (Security)
 [priority]: # (40)
 
 # Secret Security Tab

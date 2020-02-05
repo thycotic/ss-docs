@@ -1,5 +1,5 @@
 [title]: # (Creating Secrets)
-[tags]: # (XXX)
+[tags]: # (Secret)
 [priority]: # (10)
 
 # Creating Secrets
@@ -28,7 +28,7 @@ To create a secret:
 
    > **Note:** The password generator is governed by a [password requirement](#template-password-requirements), which is usually set via the secret template. However, you can override the template for this secret and set the requirement to something different in the Password Requirements section of the Security tab, after you create the secret.
 
-1. Click the **Generate** button to create a strong password that meets the requirements for that type of secret. You can also add your own. If you do, the password box will remain red until you enter a password that meets the requirements. 
+1. Click the **Generate** button to create a strong password that meets the requirements for that type of secret. You can also add your own. If you do, the password box will remain red until you enter a password that meets the requirements.
 
    > **Note:** The maximum password length is 1024.
 

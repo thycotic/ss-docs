@@ -1,5 +1,5 @@
 [title]: # (Secret RPC Tab)
-[tags]: # (XXX)
+[tags]: # (Remote Passowrd Changing,RPC)
 [priority]: # (60)
 
 # Secret RPC Tab

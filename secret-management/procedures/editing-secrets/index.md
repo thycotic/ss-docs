@@ -1,5 +1,5 @@
 [title]: # (Editing Secrets)
-[tags]: # (XXX)
+[tags]: # (Secret)
 [priority]: # (30)
 
 # Editing Secrets

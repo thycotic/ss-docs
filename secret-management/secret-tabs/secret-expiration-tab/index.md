@@ -1,5 +1,5 @@
 [title]: # (Secret Expiration Tab)
-[tags]: # (XXX)
+[tags]: # (Expiration)
 [priority]: # (30)
 
 # Secret Expiration Tab

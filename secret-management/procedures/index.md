@@ -1,5 +1,5 @@
 [title]: # (Procedures)
-[tags]: # (XXX)
+[tags]: # (Secret)
 [priority]: # (40)
 
 # Procedures

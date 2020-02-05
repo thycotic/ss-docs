@@ -1,5 +1,5 @@
 [title]: # (Secret Configuration Options)
-[tags]: # (XXX)
+[tags]: # (Secret)
 [priority]: # (20)
 
 # Secret Configuration Options

@@ -1,5 +1,5 @@
 [title]: # (Duplicating Secrets)
-[tags]: # (XXX)
+[tags]: # (Secret)
 [priority]: # (50)
 
 # Duplicating Secrets
