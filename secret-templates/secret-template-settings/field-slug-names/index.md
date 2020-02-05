@@ -4,7 +4,7 @@
 
 # Field Slug Names
 
-A *field slug name* in SS is a unique human-readable identifier for a data field in a SS template. The field slug name is available for integrating third-party applications via API calls. Slug names are programmatically available for API calls but are not visible to users of the template (those creating secrets).
+A *field slug name* in SS is a unique human-readable identifier for a data field in a SS template. The field slug name is available for integrating with third-party applications via API calls. Slug names are programmatically available for API calls but are not visible to users of the template (those creating secrets) but are display in the secret templates for references.
 
 >**Note:** If you are not planning to access SS with an API, slug field names are not for you—leave the suggested name as is.
 

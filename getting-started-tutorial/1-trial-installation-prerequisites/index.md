@@ -1,5 +1,5 @@
 [title]: # (1. Trial Installation Prerequisites)
-[tags]: # (Installation Prerequisites)
+[tags]: # (Install,Prerequisites)
 [priority]: # (10)
 
 # 1. Trial Installation Prerequisites
@@ -33,7 +33,7 @@ You can create the SQL database in an existing SQL instance, or a new installati
 
 Detailed instructions for installation and configuration of SQL Server are included in one of the installation guides below (choose the guide matching the OS that SQL server will be installed on).
 
-###  Application Server
+### Application Server
 
 We recommend installing SS on Windows Server 2012 or greater. Include IIS, ASP.NET and .NET Framework. Refer to the System Requirements KB above to view prerequisite details.
 
@@ -47,13 +47,13 @@ Set up a service account:
 1. Modify permissions to the SS application directory (typically `C:\inetpub\wwwroot`) and `C:\Windows\temp`.
 1. Provide access to your SQL Server instance by adding the db_owner permission to the SS database.
 
-For detailed instructions on how to configure the permissions for the service account, see [Running Secret Server IIS Application Pool with a Service Account ](https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB)(KB). The installation guides iinclude instructions for assigning db_owner permission to the service account in SQL Server. 
+For detailed instructions on how to configure the permissions for the service account, see [Running Secret Server IIS Application Pool with a Service Account ](https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB)(KB). The installation guides iinclude instructions for assigning db_owner permission to the service account in SQL Server.
 
 If you would like to test features that rely on Active Directory, such as AD group sync or discovery, you should also have accounts available with the appropriate permissions (described below). One option is to use the same account for both features.
 
 ### Active Directory Group Sync
 
-Active Directory group synchronization means that SS can automatically add users and enable or disable them to log into SS based off of their Active Directory group membership. You can choose which groups to sync. When configuring AD group sync in SS, you are required to specify an account that can read the properties of users and groups. See [AD Synchronization Rights for Synchronization Account](https://thycotic.force.com/support/s/article/Active-Directory-Rights-for-Synchronization-Account) (KB) for a detailed list of required permissions. 
+Active Directory group synchronization means that SS can automatically add users and enable or disable them to log into SS based off of their Active Directory group membership. You can choose which groups to sync. When configuring AD group sync in SS, you are required to specify an account that can read the properties of users and groups. See [AD Synchronization Rights for Synchronization Account](https://thycotic.force.com/support/s/article/Active-Directory-Rights-for-Synchronization-Account) (KB) for a detailed list of required permissions.
 
 ### Discovery
 
