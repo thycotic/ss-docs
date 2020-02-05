@@ -1,5 +1,5 @@
 [title]: # (BMC Remedy Integration)
-[tags]: # (XXX)
+[tags]: # (BMC Remedy)
 [priority]: # (30)
 
 # BMC Remedy Integration

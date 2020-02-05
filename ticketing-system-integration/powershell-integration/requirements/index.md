@@ -1,5 +1,5 @@
 [title]: # (Requirements)
-[tags]: # (XXX)
+[tags]: # (PowrShell,Ticket System)
 [priority]: # (30)
 
 # Requirements
@@ -8,7 +8,7 @@
 
 - Access to your ticket system via some API that can be accessed in PowerShell. This could be a REST API, SOAP API, or native calls.
 
-### Configurable Settings
+## Configurable Settings
 
 - **Run as Credentials:** In SS a domain credential is required to execute the PowerShell script. This is a required text-entry field.
 

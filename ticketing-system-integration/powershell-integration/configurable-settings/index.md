@@ -1,5 +1,5 @@
 [title]: # (Configurable Settings)
-[tags]: # (XXX)
+[tags]: # (PowerShell,Ticket System)
 [priority]: # (40)
 
 # Configurable Settings

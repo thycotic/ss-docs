@@ -1,5 +1,5 @@
 [title]: # (Troubleshooting Secret Server)
-[tags]: # (XXX)
+[tags]: # (Trobleshooting)
 [priority]: # (2800)
 
 # Troubleshooting Secret Server

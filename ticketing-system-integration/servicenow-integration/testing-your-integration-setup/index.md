@@ -1,5 +1,5 @@
 [title]: # (Testing your Integration Setup)
-[tags]: # (XXX)
+[tags]: # (ServiceNow)
 [priority]: # (20)
 
 # Testing your Integration Setup

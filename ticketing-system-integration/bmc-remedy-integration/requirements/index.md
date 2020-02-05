@@ -1,5 +1,5 @@
 [title]: # (Requirements)
-[tags]: # (XXX)
+[tags]: # (BMC Remedy)
 [priority]: # (10)
 
 # Requirements

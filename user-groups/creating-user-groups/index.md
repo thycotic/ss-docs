@@ -1,10 +1,10 @@
 [title]: # (Creating User Groups)
-[tags]: # (XXX)
+[tags]: # (Groups)
 [priority]: # (30)
 
 # Creating User Groups
 
-You can create and edit groups from the Groups page. You can get to the Groups page by navigating to **Admin \> Groups** 
+You can create and edit groups from the Groups page. You can get to the Groups page by navigating to **Admin \> Groups**
 
 ![image-20191209092814385](images/image-20191209092814385.png)
 

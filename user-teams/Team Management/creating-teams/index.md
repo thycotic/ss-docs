@@ -6,7 +6,7 @@
 
 1. Navigate to **Admin \> See All**. The Administration page appears:
 
-   ![20191114142009435](images/20191114142009435.png)
+   ![image-20191114142009435](images/image-20191114142009435.png)
 
 1. Type and then click **Teams** in the list. The Teams page appears:
 

@@ -1,5 +1,5 @@
 [title]: # (Assigning Users to Groups)
-[tags]: # (XXX)
+[tags]: # (Groups)
 [priority]: # (10)
 
 # Assigning Users to Groups

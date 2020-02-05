@@ -1,5 +1,5 @@
 [title]: # (User Groups)
-[tags]: # (XXX)
+[tags]: # (Groups)
 [priority]: # (3000)
 
 # User Groups

@@ -1,5 +1,5 @@
 [title]: # (PowerShell Integration)
-[tags]: # (XXX)
+[tags]: # (PowerShell)
 [priority]: # (50)
 
 # PowerShell Integration

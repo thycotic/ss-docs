@@ -1,5 +1,5 @@
 [title]: # (Assigning Group Owners)
-[tags]: # (XXX)
+[tags]: # (Group Owner)
 [priority]: # (20)
 
 # Assigning Group Owners
@@ -12,11 +12,11 @@ Group Administrators can also set another group or user as the group owners for 
 
 1. Click the desired group in the list. The Group’s page appears:
 
-   <img src="images/image-20191209095712928.png" alt="image-20191209095712928" style="zoom:67%;" />
+   ![image-20191209095712928](images/image-20191209095712928.png)
 
 1. Click the **Edit** button. The Group Edit page appears:
 
-   <img src="images/image-20191209101031574.png" alt="image-20191209101031574" style="zoom:67%;" />
+   ![image-20191209101031574](images/image-20191209101031574.png)
 
 1. Click the **Managed B**y dropdown list to select the owner.
 
@@ -24,4 +24,4 @@ Group Administrators can also set another group or user as the group owners for 
 
 > **Note:** Very commonly, the group owner is managed by Active Directory, not SS:
 
-![](images/image-20191209092219128.png)
+![image](images/image-20191209092219128.png)

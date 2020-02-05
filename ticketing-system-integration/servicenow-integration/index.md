@@ -1,5 +1,5 @@
 [title]: # (ServiceNow Integration)
-[tags]: # (XXX)
+[tags]: # (ServiceNow)
 [priority]: # (40)
 
 # ServiceNow Integration

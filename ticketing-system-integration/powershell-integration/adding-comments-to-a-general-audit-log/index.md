@@ -1,5 +1,5 @@
 [title]: # (Adding Comments to a General Audit Log)
-[tags]: # (XXX)
+[tags]: # (PowerShell,Ticket System)
 [priority]: # (20)
 
 # Adding Comments to a General Audit Log

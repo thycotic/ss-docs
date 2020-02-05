@@ -1,5 +1,5 @@
 [title]: # (Testing Your Integration Setup)
-[tags]: # (XXX)
+[tags]: # (BMC Remedy)
 [priority]: # (20)
 
 # Testing Your Integration Setup

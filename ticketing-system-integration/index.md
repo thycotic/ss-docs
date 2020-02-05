@@ -1,5 +1,5 @@
 [title]: # (Ticketing System Integration)
-[tags]: # (XXX)
+[tags]: # (Ticketing System)
 [priority]: # (2700)
 
 # Ticketing System Integration

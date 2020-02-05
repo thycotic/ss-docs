@@ -1,5 +1,5 @@
 [title]: # (Adding Comments to Tickets)
-[tags]: # (XXX)
+[tags]: # (PowerShell,Ticket System)
 [priority]: # (10)
 
 # Adding Comments to Tickets

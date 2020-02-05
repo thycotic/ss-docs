@@ -1,5 +1,5 @@
 [title]: # (Ticket Number Validation)
-[tags]: # (XXX)
+[tags]: # (Ticket System)
 [priority]: # (20)
 
 # Ticket Number Validation
