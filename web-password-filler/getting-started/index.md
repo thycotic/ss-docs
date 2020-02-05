@@ -1,5 +1,5 @@
 [title]: # (Getting Started)
-[tags]: # (XXX)
+[tags]: # (WPF)
 [priority]: # (10)
 
 # Getting Started

@@ -1,5 +1,5 @@
 [title]: # (Creating Users)
-[tags]: # (XXX)
+[tags]: # (Users)
 [priority]: # (30)
 
 # Creating Users

@@ -1,5 +1,5 @@
 [title]: # (Password Settings)
-[tags]: # (XXX)
+[tags]: # (Users)
 [priority]: # (40)
 
 # Password Settings

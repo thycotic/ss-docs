@@ -1,5 +1,5 @@
 [title]: # (Webservices)
-[tags]: # (XXX)
+[tags]: # (Webservices)
 [priority]: # (3300)
 
 # Webservices

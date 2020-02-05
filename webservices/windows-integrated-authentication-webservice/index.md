@@ -1,8 +1,8 @@
-[title]: # (Windows Integrated Authentication Webservice)
-[tags]: # (XXX)
+[title]: # (Integrated Windows Authentication Webservice)
+[tags]: # (Integrated Windows Authentication Webservice)
 [priority]: # (30)
 
-# Windows Integrated Authentication Webservice
+# Integrated Windows Authentication Webservice
 
 SS also provides a webservice that uses integrated Windows authentication instead of a username and password. This webservice can be used in an application or script to access SS and retrieve secrets with storing the login credentials in the application or configuration file.
 

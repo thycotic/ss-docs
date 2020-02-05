@@ -1,12 +1,12 @@
 [title]: # (User Preferences)
-[tags]: # (XXX)
+[tags]: # (User Preferences)
 [priority]: # (70)
 
 # User Preferences
 
 > **Note:** Users can set their preferences by hovering on their profile icon in the top right and selecting preferences.
 
-### General Tab
+## General Tab
 
 The following configuration settings are available for users under the General tab:
 
@@ -28,7 +28,7 @@ The following configuration settings are available for users under the General t
 
 - **Use the TreeView control for search on the home screen:** Enables the TreeView control for the Search tab on the Legacy Home screen. This option does not apply to the Dashboard.
 
-### Launcher Tab
+## Launcher Tab
 
 The following configuration settings are available to users on the Launcher tab:
 

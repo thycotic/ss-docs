@@ -1,5 +1,5 @@
 [title]: # (User Restriction Settings)
-[tags]: # (XXX)
+[tags]: # (User Restriction)
 [priority]: # (80)
 
 # User Restriction Settings

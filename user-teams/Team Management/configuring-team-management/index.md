@@ -1,5 +1,5 @@
 [title]: # (Configuring Teams Management)
-[tags]: # (XXX)
+[tags]: # (Teams)
 [priority]: # (10)
 
 # Configuring Teams Management

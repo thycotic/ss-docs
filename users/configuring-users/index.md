@@ -1,5 +1,5 @@
 [title]: # (Configuring Users)
-[tags]: # (XXX)
+[tags]: # (Users)
 [priority]: # (20)
 
 # Configuring Users

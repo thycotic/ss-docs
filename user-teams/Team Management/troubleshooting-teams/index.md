@@ -1,5 +1,5 @@
 [title]: # (Troubleshooting Teams)
-[tags]: # (XXX)
+[tags]: # (Teams)
 [priority]: # (50)
 
 # Troubleshooting Teams

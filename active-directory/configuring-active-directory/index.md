@@ -1,5 +1,5 @@
 [title]: # (Configuring Active Directory)
-[tags]: # (Configuring Active Directory)
+[tags]: # (AD,Active Directory)
 [priority]: # (20)
 
 # Configuring Active Directory

@@ -1,5 +1,5 @@
 [title]: # (Editing Teams)
-[tags]: # (XXX)
+[tags]: # (Teams)
 [priority]: # (40)
 
 # Editing Teams

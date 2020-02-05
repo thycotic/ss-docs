@@ -1,5 +1,5 @@
 [title]: # (Using the Java Console API to Access Secret Values)
-[tags]: # (XXX)
+[tags]: # (Java Console API)
 [priority]: # (20)
 
 # Using the Java Console API to Access Secret Values

@@ -1,5 +1,5 @@
 [title]: # (Bulk Operations on Users)
-[tags]: # (XXX)
+[tags]: # (Bulk Operations,Users)
 [priority]: # (10)
 
 # Bulk Operations on Users

@@ -1,5 +1,5 @@
 [title]: # (User Login Settings)
-[tags]: # (XXX)
+[tags]: # (User)
 [priority]: # (50)
 
 # User Login Settings
