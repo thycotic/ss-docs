@@ -1,5 +1,5 @@
 [title]: # (Restricting Secret Templates for Folders)
-[tags]: # (XXX)
+[tags]: # (Folder)
 [priority]: # (80)
 
 # Restricting Secret Templates for Folders
@@ -8,11 +8,11 @@
 
    ![1556825080644](images/1556825080644.png)
 
-1. Select one or more of the secret templates in the **Available Secret Templates** list and use the arrow buttons to move the template to the **Allowed Secret Templates** list. 
+1. Select one or more of the secret templates in the **Available Secret Templates** list and use the arrow buttons to move the template to the **Allowed Secret Templates** list.
 
 1. Click the **Save** button.
 
-### Adding and Moving Secrets Between Folders
+## Adding and Moving Secrets Between Folders
 
 1. Consider the following before moving a secret between folders:
 
@@ -40,6 +40,6 @@
 
 1. Click the **Move Secrets** button. The Bulk Progress popup appears:
 
-   <img src="images/1568052002030.png" alt="1568052002030" style="zoom:67%;" />
+   ![1568052002030](images/1568052002030.png)
 
 1. The secret moves to the selected folder.

@@ -1,5 +1,5 @@
 [title]: # (Browser Configuration)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (20)
 
 # Browser Configuration

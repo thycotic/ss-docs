@@ -1,5 +1,5 @@
 [title]: # (Import and Export File Format)
-[tags]: # (XXX)
+[tags]: # (Import,Export)
 [priority]: # (20)
 
 # Import and Export File Format

@@ -1,18 +1,18 @@
 [title]: # (Editing Folder Permissions)
-[tags]: # (XXX)
+[tags]: # (Folder)
 [priority]: # (40)
 
 # Editing Folder Permissions
 
 1. Click **Admin > Folders**. The Folders page appears:
 
-   <img src="images/1567715914715.png" alt="1567715914715" style="zoom: 67%;" />
+   ![1567715914715](images/1567715914715.png)
 
 1. Navigate to or search for the desired folder.
 
 1. Click the folder's name. The folder is bolded, which indicates it is selected, as does the appearance of several new buttons:
 
-   <img src="images/1556811837398.png" alt="1556811837398" style="zoom:100%;" />
+   ![1556811837398](images/1556811837398.png)
 
 1. Click the **Edit** button. The Edit Existing Folder page appears:
 
@@ -26,7 +26,7 @@
    - **Folder Name text box:** The folder's name
    - **Folder Icon list:** The icon for the folder. "Customer" creates a user icon, and "Computer" creates a monitor icon, representing a computer.
    - **Inherit Secret Policy check box:** Any added or created secrets inherit their policy from the folder's parent (or higher) folder, thus having the same policy as the folder. Secret policies are sets of configurations for secrets. When this control is selected, the Secret Policy list is disabled.
-   - **Secret Policy list:** Specifies the secret policy for the folder, if any, which is applied if the Inherit Secret Policy check box is disabled. 
+   - **Secret Policy list:** Specifies the secret policy for the folder, if any, which is applied if the Inherit Secret Policy check box is disabled.
    - **Inherit Permissions from Parent check box:** Added or created secrets get their permissions from the folder's parent folders. Permissions are rules on what users and roles can and cannot do. When this check box is enabled, the Permissions table becomes disabled because the folder no longer enforces its own permissions.
 
 1. Add users or groups to the folder by typing their name in the **Add Group/User** search text box and clicking the result in the dropdown. A new user or group appears in the Permissions table:

@@ -1,10 +1,10 @@
 [title]: # (Modifying Folders with Secret Policies)
-[tags]: # (XXX)
+[tags]: # (Folder)
 [priority]: # (60)
 
 # Modifying Folders with Secret Policies
 
-You can configure secret policies to apply RPC and security settings to an entire folder of secrets. 
+You can configure secret policies to apply RPC and security settings to an entire folder of secrets.
 
 To create a new secret policy:
 
@@ -28,6 +28,6 @@ To create a new secret policy:
 
    ![1557158990439](images/1557158990439.png)
 
-1. Click the **Save** button to make the policy available for assignment to folders. 
+1. Click the **Save** button to make the policy available for assignment to folders.
 
    > **Note:** To deactivate a policy that you no longer want, edit the policy and deselect the **Active** check box. For information about applying a secret policy to a folder, see [Editing Folder Permissions](#editing-folder-permissions).

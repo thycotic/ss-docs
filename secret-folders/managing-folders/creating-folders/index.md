@@ -1,5 +1,5 @@
 [title]: # (Creating Folders)
-[tags]: # (XXX)
+[tags]: # (Folder)
 [priority]: # (30)
 
 # Creating Folders

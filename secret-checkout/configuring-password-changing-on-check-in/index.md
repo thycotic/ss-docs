@@ -1,5 +1,5 @@
 [title]: # (Configuring Password Changing on Check in)
-[tags]: # (XXX)
+[tags]: # (Check In)
 [priority]: # (40)
 
 # Configuring Password Changing on Check in

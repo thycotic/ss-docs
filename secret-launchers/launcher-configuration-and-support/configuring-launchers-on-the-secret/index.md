@@ -1,5 +1,5 @@
 [title]: # (Configuring Launchers on the Secret)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (30)
 
 # Configuring Launchers on the Secret

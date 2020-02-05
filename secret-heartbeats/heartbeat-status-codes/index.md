@@ -1,5 +1,5 @@
 [title]: # (Heartbeat Status Codes)
-[tags]: # (XXX)
+[tags]: # (Heartbeat)
 [priority]: # (40)
 
 # Heartbeat Status Codes

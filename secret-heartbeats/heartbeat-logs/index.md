@@ -1,5 +1,5 @@
 [title]: # (Heartbeat Logs)
-[tags]: # (XXX)
+[tags]: # (Heartbeat)
 [priority]: # (40)
 
 # Heartbeat Logs

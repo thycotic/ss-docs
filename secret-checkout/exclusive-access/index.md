@@ -1,5 +1,5 @@
 [title]: # (Exclusive Access)
-[tags]: # (XXX)
+[tags]: # (Checkout)
 [priority]: # (50)
 
 # Exclusive Access

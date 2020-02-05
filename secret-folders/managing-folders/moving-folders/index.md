@@ -1,5 +1,5 @@
 [title]: # (Moving Folders)
-[tags]: # (XXX)
+[tags]: # (Folder)
 [priority]: # (70)
 
 # Moving Folders

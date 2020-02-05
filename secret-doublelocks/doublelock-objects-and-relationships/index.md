@@ -1,5 +1,5 @@
 [title]: # (DoubleLock Objects and Relationships)
-[tags]: # (XXX)
+[tags]: # (DoubleLock)
 [priority]: # (10)
 
 # DoubleLock Objects and Relationships

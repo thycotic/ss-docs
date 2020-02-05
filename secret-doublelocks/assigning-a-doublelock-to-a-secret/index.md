@@ -1,10 +1,10 @@
 [title]: # (Assigning a DoubleLock to a Secret)
-[tags]: # (XXX)
+[tags]: # (DoubleLock)
 [priority]: # (20)
 
 # Assigning a DoubleLock to a Secret
 
-1. Navigate to the secret you wish to doublelock by clicking **Secrets** on the main menu. 
+1. Navigate to the secret you wish to doublelock by clicking **Secrets** on the main menu.
 
 1. Either drill down to the desired secret in the folders on the main menu, or click the secret in the **All Secrets** table to arrive at the secret's page:
 

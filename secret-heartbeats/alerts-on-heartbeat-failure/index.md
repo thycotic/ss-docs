@@ -1,5 +1,5 @@
 [title]: # (Alerts on Heartbeat Failure)
-[tags]: # (XXX)
+[tags]: # (Heartbeat)
 [priority]: # (10)
 
 # Alerts on Heartbeat Failure

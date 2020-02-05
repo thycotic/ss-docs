@@ -1,5 +1,5 @@
 [title]: # (Running Heartbeat for a Secret)
-[tags]: # (XXX)
+[tags]: # (Heartbeat)
 [priority]: # (60)
 
 # Running Heartbeat for a Secret

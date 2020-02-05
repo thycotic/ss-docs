@@ -1,8 +1,8 @@
 [title]: # (Built-In Launcher Types)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (10)
 
-#  Built-In Launcher Types
+# Built-In Launcher Types
 
 SS launchers, also called protocol handlers, come in three primary types:
 

@@ -1,5 +1,5 @@
 [title]: # (Common Launcher Errors)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (20)
 
 # Common Launcher Errors

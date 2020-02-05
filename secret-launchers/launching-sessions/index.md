@@ -1,14 +1,14 @@
 [title]: # (Launching Sessions)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (40)
 
 # Launching Sessions
 
-On the Secret View page, clicking the Launcher icon launches the Remote Desktop, PuTTy, or custom session directly from the browser or log into the website. The mapped text fields are passed to the launcher for automatic authentication. 
+On the Secret View page, clicking the Launcher icon launches the Remote Desktop, PuTTy, or custom session directly from the browser or log into the website. The mapped text fields are passed to the launcher for automatic authentication.
 
-If the machine is set for Remote Desktop, the console launches and allows the machine to be specified from the RDP dialog. 
+If the machine is set for Remote Desktop, the console launches and allows the machine to be specified from the RDP dialog.
 
-If the Host is set to `<user>`, a prompt asks for the specific machine before launching the PuTTy session. 
+If the Host is set to `<user>`, a prompt asks for the specific machine before launching the PuTTy session.
 
 For some browser security levels, you might need to click **Allow** for the launcher application to open.
 

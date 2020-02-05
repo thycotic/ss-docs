@@ -1,12 +1,10 @@
-[title]: # (Checkout Hooks)
-[tags]: # (XXX)
+[title]: # (Check Out Hooks)
+[tags]: # (Hook)
 [priority]: # (20)
 
 # Checkout Hooks
 
-## Overview
-
-In addition to changing the password on check in, secret owners can also specify administrator-created PowerShell scripts, called _hooks_, to run before or after checkout and check in. These are accessed from the **Hooks** tab of the secret, which only shows if checkout is enabled and PowerShell scripts have been created by an admin. 
+In addition to changing the password on check in, secret owners can also specify administrator-created PowerShell scripts, called _hooks_, to run before or after checkout and check in. These are accessed from the **Hooks** tab of the secret, which only shows if checkout is enabled and PowerShell scripts have been created by an admin.
 
 To specify a before- or after-checkout hook, click **Create New Hook** and specify the following settings:
 
@@ -19,7 +17,7 @@ To specify a before- or after-checkout hook, click **Create New Hook** and speci
 - **Stop on Failure:** If enabled, SS prevents the event action if the script returns an error. For example, if "Stop on Failure" is selected for a checkout action, then SS prevents the user from checking out the secret if the script fails.
 - **Privileged Account:** If needed, the script can run as another secret's identity.
 
-### Checkout User Variables for Scripts
+## Checkout User Variables for Scripts
 
 Checkout user variables for scripts are special code variables that return information about the user or automated task making the checkout request, rather than system or secret information. For example, the `$USERNAME` variable returns one or more user IDs related to a specific secret, whereas the `$SECRETSERVERUSERID` checkout user variable returns the user ID of the logged-on user or automated task.
 

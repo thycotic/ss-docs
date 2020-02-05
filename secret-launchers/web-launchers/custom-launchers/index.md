@@ -1,5 +1,5 @@
 [title]: # (Custom Launchers)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (30)
 
 # Custom Launchers

@@ -1,5 +1,5 @@
 [title]: # (Password Loss and Assignment)
-[tags]: # (XXX)
+[tags]: # (DoubleLock)
 [priority]: # (60)
 
 # Password Loss and Assignment

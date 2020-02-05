@@ -1,12 +1,12 @@
 [title]: # (Enabling Personal Folders)
-[tags]: # (XXX)
+[tags]: # (Folder)
 [priority]: # (50)
 
 # Enabling Personal Folders
 
 To use personal folders, you must first enable them:
 
-1. Click **Admin \> Configuration**. 
+1. Click **Admin \> Configuration**.
 
 1. Click the **Folders** tab:
 

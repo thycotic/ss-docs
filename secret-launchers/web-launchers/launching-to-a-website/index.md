@@ -1,5 +1,5 @@
 [title]: # (Launching to a Website)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (40)
 
 # Launching to a Website

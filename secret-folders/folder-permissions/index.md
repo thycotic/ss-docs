@@ -1,5 +1,5 @@
 [title]: # (Folder Permissions)
-[tags]: # (XXX)
+[tags]: # (Folder)
 [priority]: # (10)
 
 # Folder Permissions
@@ -18,11 +18,11 @@ Folders can apply one the following permissions to users or groups in the folder
 
 Depending on your configuration, these settings could affect the permissions of subfolders and secrets contained in this folder. Folders are not visible to users that do not have at least View permission. This allows users to create and manage their own folders without making them visible to all users.
 
-### Personal Folders
+## Personal Folders
 
 In SS, a _personal folder_ is a folder that one (and only one) individual has owner access to. No user can modify sharing permissions on these folders. A user cannot add subfolders to their personal folder. The purpose of this folder is to allow a user to securely store work-related secrets that other users do not require access to. Note that when in break-the-glass mode, an unlimited admin can access a user's personal folder in order to recover secrets if needed.
 
-### Required Role Permissions for Managing Folders
+## Required Role Permissions for Managing Folders
 
 Folder management is subject to these role permissions:
 

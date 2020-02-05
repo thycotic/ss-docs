@@ -1,12 +1,12 @@
 [title]: # (Assigning Users to Existing DoubleLocks)
-[tags]: # (XXX)
+[tags]: # (DoubleLock)
 [priority]: # (40)
 
 # Assigning Users to Existing DoubleLocks
 
 1. Navigate to **Admin \> See All**. The Administration page appears:
 
-   <img src="images/image-20191114142009435.png" alt="image-20191114142009435" style="zoom: 67%;" />
+   ![image-20191114142009435](images/image-20191114142009435.png)
 
 1. Type and then click **DoubleLock** in the search text box. The DoubleLock Management page appears:
 

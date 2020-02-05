@@ -1,5 +1,5 @@
 [title]: # (Import and Export Secret Template Settings)
-[tags]: # (XXX)
+[tags]: # (Import,Export)
 [priority]: # (10)
 
 # Import and Export Secret Template Settings

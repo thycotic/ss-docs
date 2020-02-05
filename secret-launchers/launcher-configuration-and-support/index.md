@@ -1,5 +1,5 @@
 [title]: # (Launcher Configuration and Support)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (30)
 
 # Launcher Configuration and Support

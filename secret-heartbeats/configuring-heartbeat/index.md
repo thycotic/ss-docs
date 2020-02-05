@@ -1,5 +1,5 @@
 [title]: # (Configuring Heartbeat)
-[tags]: # (XXX)
+[tags]: # (Heartbeat)
 [priority]: # (20)
 
 # Configuring Heartbeat

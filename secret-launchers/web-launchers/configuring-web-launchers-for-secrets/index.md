@@ -1,5 +1,5 @@
 [title]: # (Configuring Web Launchers for Secrets)
-[tags]: # (XXX)
+[tags]: # (Launcher)
 [priority]: # (10)
 
 # Configuring Web Launchers for Secrets

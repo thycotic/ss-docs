@@ -1,5 +1,5 @@
 [title]: # (Resetting a DoubleLock Password)
-[tags]: # (XXX)
+[tags]: # (DoubleLock)
 [priority]: # (70)
 
 # Resetting a DoubleLock Password
