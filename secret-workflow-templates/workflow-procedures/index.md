@@ -1,5 +1,5 @@
 [title]: # (Workflow Procedures)
-[tags]: # (XXX)
+[tags]: # (Workflow)
 [priority]: # (10)
 
 # Workflow Procedures

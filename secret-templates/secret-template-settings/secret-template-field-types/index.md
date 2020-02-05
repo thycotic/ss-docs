@@ -1,5 +1,5 @@
 [title]: # (Secret Template Field Types)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (20)
 
 # Secret Template Field Types

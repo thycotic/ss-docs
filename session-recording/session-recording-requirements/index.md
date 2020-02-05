@@ -1,5 +1,5 @@
 [title]: # (Session Recording Requirements)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (20)
 
 # Session Recording Requirements

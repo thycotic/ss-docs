@@ -1,5 +1,5 @@
 [title]: # (Template Naming Patterns)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (40)
 
 # Template Naming Patterns

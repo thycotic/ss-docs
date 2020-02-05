@@ -1,5 +1,5 @@
 [title]: # (Enabling On-Demand Video Processing)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (20)
 
 # Enabling On-Demand Video Processing

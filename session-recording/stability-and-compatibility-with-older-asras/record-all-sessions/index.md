@@ -1,5 +1,5 @@
 [title]: # (Record All Sessions)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (30)
 
 # Record All Sessions

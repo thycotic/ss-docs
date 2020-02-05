@@ -1,5 +1,7 @@
-[title]: # (Basic Installation (Automatic))
-[tags]: # (XXX)
-[priority]: # (1289)
+[title]: # (Basic Installation)
+[tags]: # (Install)
+[priority]: # (10)
+
 # Basic Installation (Automatic)
+
 Something here.

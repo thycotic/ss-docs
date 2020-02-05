@@ -1,5 +1,5 @@
 [title]: # (Enabling AWS Discovery)
-[tags]: # (XXX)
+[tags]: # (Discovery)
 [priority]: # (10)
 
 # Enabling AWS Discovery

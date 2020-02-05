@@ -1,5 +1,5 @@
 [title]: # (Enabling Specific OU Domain Discovery)
-[tags]: # (XXX)
+[tags]: # (Discovery)
 [priority]: # (30)
 
 # Enabling Specific OU Domain Discovery

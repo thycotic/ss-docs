@@ -1,5 +1,5 @@
 [title]: # (Assigning Workflows to Secrets)
-[tags]: # (XXX)
+[tags]: # (Workflow)
 [priority]: # (30)
 
 # Assigning Workflows to Secrets

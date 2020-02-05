@@ -1,5 +1,5 @@
 [title]: # (Enabling Secret Server Discovery)
-[tags]: # (XXX)
+[tags]: # (Discovery)
 [priority]: # (20)
 
 # Enabling Secret Server Discovery

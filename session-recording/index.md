@@ -1,12 +1,12 @@
 [title]: # (Session Recording)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (2400)
 
 # Session Recording
 
-## Overview
+==Intro==
 
-### Basic Session Recording
+## Basic Session Recording
 
 Basic Session Recording is a licensed feature in SS. It relies on the protocol handler configured on client machines through SS's launcher. Using the launcher, SS captures second-by-second screenshots on the client machine during a user's recorded session. These images of the user's screen are compiled into a video that can be downloaded and played back for auditing and security purposes. Activity recorded in the session is based on screen changes only.
 
@@ -39,7 +39,7 @@ For active sessions, there are two actions that can be taken:
 - **Watch Live:** When session recording is turned on for the secret and admin can view and replay the user's activity.
 - **Terminate:** Sends a message to the end user or terminates their session. The end user sees an alert dialog pop up on their machine with the message. Session recording does not need to be enabled for this to work. For ended sessions admins can watch the recorded video and view the SSH log if session recording was turned on for the secret.
 
-### Advanced Session Recording
+## Advanced Session Recording
 
 Advanced Session Recording (ASR) is a licensed feature of SS that adds capabilities to those offered by basic session recording. You install the Advanced Session Recording Agent (ASRA), which uses the Remote Desktop Protocol, on any client machine where you want more information from the sessions recorded.
 
@@ -54,7 +54,6 @@ ASR enhances the launcher sessions, which typically only include screenshots, ke
 - Logged Processes: The ASRA logs all processes started and stopped during a user's session.
 
 - Recorded Key Strokes: The ASRA records all user keystrokes during the session, which can be disabled.
-
 
 In addition to those, ASR includes these enhanced video playback features:
 
@@ -72,7 +71,7 @@ In addition to those, ASR includes these enhanced video playback features:
 >
 >**Note:** See [Secret Server Advanced Session-Recording Agent Installation](https://thycotic.force.com/support/s/article/SS-INST-EXT-Adv-Session-Rec-Agent) for details.
 
-### Session Recording Tab
+## Session Recording Tab
 
 The Session Recording tab contains the following configuration options:
 

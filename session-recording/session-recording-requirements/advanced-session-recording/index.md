@@ -1,5 +1,5 @@
 [title]: # (Advanced Session Recording)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (20)
 
 # Advanced Session Recording

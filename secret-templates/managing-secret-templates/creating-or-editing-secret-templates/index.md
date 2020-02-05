@@ -1,5 +1,5 @@
 [title]: # (Creating or Editing Secret Templates)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (10)
 
 # Creating or Editing Secret Templates
@@ -17,11 +17,11 @@ If creating a new template:
 
 1. Click the **Create New** button. The Create New Secret Template pop-up page appears:
 
-   <img src="images/1557164311259.png" alt="1557164311259" style="zoom:67%;" />
+   ![1557164311259](images/1557164311259.png)
 
-1. Type the name of the new template in the text box. 
+1. Type the name of the new template in the text box.
 
-1. Click the **Create** button. The Secret Template Designer page appears: 
+1. Click the **Create** button. The Secret Template Designer page appears:
 
    ![1557166134737](images/1557166134737.png)
 

@@ -1,5 +1,5 @@
 [title]: # (System Capacity Specifications)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (30)
 
 # System Capacity Specifications

@@ -1,5 +1,5 @@
 [title]: # (Managing Secret Templates)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (10)
 
 # Managing Secret Templates

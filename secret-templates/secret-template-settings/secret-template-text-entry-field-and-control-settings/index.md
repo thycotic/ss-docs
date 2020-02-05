@@ -1,5 +1,5 @@
 [title]: # (Secret Template Text-Entry Field and Control Settings)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (10)
 
 # Secret Template Text-Entry Field and Control Settings

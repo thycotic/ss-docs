@@ -1,5 +1,5 @@
 [title]: # (Creating New Workflow Templates)
-[tags]: # (XXX)
+[tags]: # (Workflow)
 [priority]: # (40)
 
 # Creating New Workflow Templates
@@ -16,7 +16,7 @@
 
 ![1556292429746](images/1556292429746.png)
 
-​	A new workflow template has only one empty step by default.
+​A new workflow template has only one empty step by default.
 
 **Task 2:** Set up the first step:
 

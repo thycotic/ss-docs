@@ -1,5 +1,5 @@
 [title]: # (Activating and Deactivating Templates)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (20)
 
 # Activating and Deactivating Templates

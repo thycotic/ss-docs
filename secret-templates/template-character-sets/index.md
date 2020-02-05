@@ -1,5 +1,5 @@
 [title]: # (Template Character Sets)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (30)
 
 # Template Character Sets

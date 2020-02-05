@@ -1,5 +1,5 @@
 [title]: # (Stability and Compatibility with Older ASRAs)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (10)
 
 # Stability and Compatibility with Older ASRAs

@@ -1,5 +1,7 @@
-[title]: # (Advanced Installation (Manual))
-[tags]: # (XXX)
-[priority]: # (1294)
+[title]: # (Advanced Installation)
+[tags]: # (Install)
+[priority]: # (20)
+
 # Advanced Installation (Manual)
+
 Something here.

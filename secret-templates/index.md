@@ -1,9 +1,7 @@
 [title]: # (Secret Templates)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (2300)
 
 # Secret Templates
-
-## Introduction
 
 ==Need intro text.==

@@ -1,5 +1,5 @@
 [title]: # (Setting the Password Requirement for a Secret Template)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (20)
 
 # Setting the Password Requirement for a Secret Template
@@ -18,7 +18,7 @@ To set the password requirement for a text-entry field for a secret template:
 
 1. Click the **Assign Password Requirement** button. The Secret Template Passwords page for that template appears:
 
-   <img src="images/1567711556910.png" alt="1567711556910" style="zoom:67%;" />
+    ![1567711556910](images/1567711556910.png)
 
 1. Click the pencil edit icon for the field you desire. The password requirement turns into a dropdown list.
 

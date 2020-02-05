@@ -1,5 +1,5 @@
 [title]: # (Changing a Secret's Template)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (40)
 
 # Changing a Secret's Template
@@ -10,7 +10,7 @@ To convert secrets from one secret template to another:
 
 1. Click to select the target template from the **Secret Template** list.
 
-1. Map each text-entry field to a new field: 
+1. Map each text-entry field to a new field:
 
    1. Go through each list and select the target text-entry field for each source text-entry field on your secret.
 

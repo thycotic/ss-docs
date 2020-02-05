@@ -1,5 +1,5 @@
 [title]: # (Caveats and Recommendations)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (40)
 
 # Caveats and Recommendations
@@ -24,7 +24,7 @@ System requirements apply to both physical and virtual machines.
 
 - If .NET and IIS features are not already installed on the Web server, the Thycotic Installer adds and configure them automatically.
 
-### Database
+## Database
 
 - Database disk storage depends directly on how many recorded videos are stored to disk. For active users, we recommend you **use a 1 TB shared or local drive for archival or storage space**. For light users, we recommend beginning with 300 GB. Monitor your disk space usage closely, and tailor it for best results.
 
@@ -34,7 +34,7 @@ System requirements apply to both physical and virtual machines.
 
 > **Note:** Please see Microsoft documentation on SQL Express at: <https://docs.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2017>
 
-### Network Bandwidth and Video
+## Network Bandwidth and Video
 
 - For SS 10.6 ASR requires around 300 Kbps. Older versions of Session Recording require 1-3 Mbps.
 
@@ -52,7 +52,7 @@ System requirements apply to both physical and virtual machines.
 
 - Sessions are recorded using the H.264 MPEG-4 codec.
 
-### Session Recording
+## Session Recording
 
 - Server hosting session recording requires fixed RAM and disk space. We strongly recommend that you **do not apply dynamic settings**.
 - **Do not record more sessions than you can encode**. If more concurrent sessions are recorded than the system can process, the sessions wait in a queue and are processed when enough server resources become available, which could be in a very long time or perhaps never if your storage is overwhelmed.

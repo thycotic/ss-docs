@@ -1,10 +1,8 @@
 [title]: # (Template Password Requirements)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (50)
 
 # Template Password Requirements
-
-## Overview
 
 Set requirements on a password text-entry field to validate user-entered passwords or make auto-generated passwords conform to set specifications.
 

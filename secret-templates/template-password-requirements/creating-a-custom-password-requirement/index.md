@@ -1,5 +1,5 @@
 [title]: # (Creating a Custom Password Requirement)
-[tags]: # (XXX)
+[tags]: # (Template)
 [priority]: # (10)
 
 # Creating a Custom Password Requirement
@@ -16,7 +16,7 @@ To create a new password requirement:
 
 1. Click the **Create New** button.
 
-   <img src="images/1567712261212.png" alt="1567712261212" style="zoom:67%;" />
+   ![1567712261212](images/1567712261212.png)
 
 1. Type the name and description.
 

@@ -1,5 +1,5 @@
 [title]: # (Enabling Inactivity Timeout)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (10)
 
 # Enabling Inactivity Timeout

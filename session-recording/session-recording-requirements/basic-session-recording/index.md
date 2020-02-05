@@ -1,5 +1,5 @@
 [title]: # (Basic Session Recording)
-[tags]: # (XXX)
+[tags]: # (Session Recording)
 [priority]: # (10)
 
 # Basic Session Recording
