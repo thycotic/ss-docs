@@ -1,5 +1,5 @@
 [title]: # (Application Dashboard)
-[tags]: # (Dashboard)
+[tags]: # (Dashboard, Widget)
 [priority]: # (40)
 
 # Application Dashboard
