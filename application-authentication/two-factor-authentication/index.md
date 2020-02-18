@@ -1,5 +1,5 @@
 [title]: # (Two-Factor Authentication)
-[tags]: # (XXX)
+[tags]: # (2FA)
 [priority]: # (40)
 
 # Two-Factor Authentication

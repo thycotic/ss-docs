@@ -1,5 +1,5 @@
 [title]: # (Duo Security Authentication)
-[tags]: # (XXX)
+[tags]: # (2FA)
 [priority]: # (10)
 
 # Duo Security Authentication
@@ -8,7 +8,7 @@
 
 > **Note:** SS supports using Duo Security as a second factor of authentication. See below for setup instructions:
 
-#### Enabling Duo (Admin)
+## Enabling Duo (Admin)
 
 1. From the **Admin** menu, select **Configuration**.
 
@@ -22,7 +22,7 @@
 
 1. See **User Setup of Duo Two-Factor Authentication** for further details on the procedure that the user follows.
 
-#### Setting up Duo (User)
+## Setting up Duo (User)
 
 1. Log into SS.
 

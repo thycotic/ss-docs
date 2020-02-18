@@ -1,5 +1,5 @@
 [title]: # (Email Two-Factor Authentication)
-[tags]: # (XXX)
+[tags]: # (2FA)
 [priority]: # (20)
 
 # Email Two-Factor Authentication
