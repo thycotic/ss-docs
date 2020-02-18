@@ -4,4 +4,4 @@
 
 # Secret Server Cloud Release Notes
 
-List
+[December 2019](ssc-12-21-19.md)

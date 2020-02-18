@@ -4,9 +4,6 @@
 
 # Release Notes
 
-Secrt Server
+[Secrt Server On-Premises Release Notes](ss/index.md)
 
-
-
-
-Secret Server Cloud
+[Secret Server Cloud Release Notes](ssc/imdex.md)

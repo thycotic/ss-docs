@@ -4,4 +4,4 @@
 
 # Secret Server On-Premises Release Notes
 
-List
+[10.7.000059](ss-10-7-000059.md)
