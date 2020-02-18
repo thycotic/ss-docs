@@ -4,6 +4,6 @@
 
 # Product Overview
 
-==Intro==
+Thycotic Secret Server is an enterprise-grade, Privileged Access Management solution designed to be fast to deploy, easy to manage, and quick to deliver value. With Secret Server, customers can automatically discover and onboard privileged accounts, manage those credentials (Secrets) through an intuitive interface, and protect against malicious activity. enterprise-wide
 
-==Diagram==
+![Secret Server Overview](images/ss-overview.png)
