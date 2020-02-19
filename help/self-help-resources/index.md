@@ -12,10 +12,6 @@
 
 [My Account Page](https://my.thycotic.com/myaccount.html)
 
-## Secret Society
-
-==Add Link==
-
 ## Thycotic Blog
 
 [Thycotic Blog](https://thycotic.com/company/blog/)
