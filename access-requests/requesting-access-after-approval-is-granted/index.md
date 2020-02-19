@@ -1,5 +1,5 @@
 [title]: # (Requesting Access After Approval Is Granted)
-[tags]: # (Requesting Access Approval)
+[tags]: # (Access Requests)
 [priority]: # (30)
 
 # Requesting Access After Approval Is Granted
