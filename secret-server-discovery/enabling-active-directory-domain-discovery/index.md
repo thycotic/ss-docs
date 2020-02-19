@@ -1,6 +1,6 @@
 [title]: # (Enabling Active Directory Domain Discovery)
 [tags]: # (Discovery)
-[priority]: # (10)
+[priority]: # (20)
 
 # Enabling Active Directory Domain Discovery
 

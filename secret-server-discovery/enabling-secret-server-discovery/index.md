@@ -1,6 +1,6 @@
 [title]: # (Enabling Secret Server Discovery)
 [tags]: # (Discovery)
-[priority]: # (20)
+[priority]: # (10)
 
 # Enabling Secret Server Discovery
 

@@ -12,6 +12,6 @@ To run discovery on a domain, IP address range, or a custom source, you need to 
 
 See one of the following to set up discovery:
 
-- [Enabling Discovery for Secret Server](#Enabling-Discovery-for-Secret-Server)
-- [Enabling Discovery for an Active Directory Domain](#Enabling-Discovery-for-an-Active-Directory-Domain)
-- [Enabling Discovery for Specific OUs of a Domain](#Enabling-Discovery-for-Specific-Organizational-Units-of-a-Domain)
+- [Enabling Discovery for Secret Server](../../secret-server-discovery/enabling-secret-server-discovery/index.md)
+- [Enabling Discovery for an Active Directory Domain](../../secret-server-discovery/enabling-active-directory-domain-discovery/index.md)
+- [Enabling Discovery for Specific OUs of a Domain](../../secret-server-discovery/enabling-specific-ou-domain-discovery/index.md)
