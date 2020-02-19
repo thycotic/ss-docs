@@ -10,7 +10,7 @@ SS has a discovery feature that can automatically find local Windows accounts, A
 
 To run discovery on a domain, IP address range, or a custom source, you need to first enable the discovery feature for SS. Second, you must enable discovery for each discovery source you would like to be scanned.
 
-See one of the following to set up discovery:
+See the followings to set up Active Directory discovery:
 
 - [Enabling Discovery for Secret Server](../../secret-server-discovery/enabling-secret-server-discovery/index.md)
 - [Enabling Discovery for an Active Directory Domain](../../secret-server-discovery/enabling-active-directory-domain-discovery/index.md)
