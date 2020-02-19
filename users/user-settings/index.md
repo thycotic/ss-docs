@@ -1,6 +1,6 @@
 [title]: # (User Settings)
-[tags]: # (XXX)
-[priority]: # (90)
+[tags]: # (Users)
+[priority]: # (100)
 
 # User Settings
 

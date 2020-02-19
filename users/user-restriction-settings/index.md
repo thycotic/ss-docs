@@ -1,6 +1,6 @@
 [title]: # (User Restriction Settings)
 [tags]: # (User Restriction)
-[priority]: # (80)
+[priority]: # (90)
 
 # User Restriction Settings
 
