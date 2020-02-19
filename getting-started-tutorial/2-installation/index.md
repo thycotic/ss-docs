@@ -10,4 +10,4 @@ Run the Installer: SS comes with an installer that walks you through the entire 
 
 ## Licenses
 
-See the [Licensing](#Licensing) section.
+See the [Licensing](secret-server-setup/licensing/index.md) section.
