@@ -18,9 +18,9 @@ This generates enough audit logs to provide meaningful outputs in your reports:
 - Failed login attempts
 - Secret activity
 
-See [Built-In Reports](https://updates.thycotic.net/links.ashx?BuiltInReports) (KB) for the most up-to-date list of reports included.
+See [List of Built-In Reports](https://thycotic.force.com/support/s/article/List-of-built-in-Reports) (KB) for the most up-to-date list of reports included.
 
 For details on using reports, see:
 
-- [Creating and Editing Reports](#Creating-and-Editing-Reports)
-- [Viewing Reports](#Viewing-Reports)
+- [Creating and Editing Reports](../../reports/creating-and-editing-reports/index.md)
+- [Viewing Reports](../../reports/viewing-reports/index.md)

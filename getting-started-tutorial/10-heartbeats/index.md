@@ -6,10 +6,10 @@
 
 Heartbeat allows you to determine from SS whether the credentials in a secret authenticate successfully with their target system. By default, heartbeat is turned off in SS. See [Heartbeats: Automatically Testing Secret Credentials](#Heartbeats:-Automatically-Testing-Secret-Credentials) for general information.
 
-### Enabling Heartbeat
+## Enabling Heartbeat
 
-See [Enabling Heartbeat in RPC](#Enabling-Heartbeat-in-RPC).
+See [Enabling Heartbeat in RPC](../../secret-heartbeats/enabling-heartbeat-in-rpc/index.md).
 
-### Running Heartbeat
+## Running Heartbeat
 
-See [Running Heartbeat for a Secret](#Running-Heartbeat-for-a-Secret).
+See [Running Heartbeat for a Secret](../../secret-heartbeats/running-heartbeat-for-a-secret/index.md).

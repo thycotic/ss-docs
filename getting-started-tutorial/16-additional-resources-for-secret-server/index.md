@@ -6,4 +6,4 @@
 
 You have finished this "Getting Started" introduction to SS. There is much more to explore within SS, such as scripting, third-party Integrations (SIEM, CRM, HSM, and more), and connecting to Privilege Manager to monitor and protect endpoints. We look forward to working with you!
 
-See [Additional Resources](#Additional-Resources) to learn more about SS and other Thycotic products.
+See [Additional Resources](../../help/index.md) to learn more about SS and other Thycotic products.
