@@ -1,8 +1,8 @@
-[title]: # (Enabling TOTP for Users)
-[tags]: # (Enabling TOTP)
-[priority]: # (40)
+[title]: # (Enabling TOTP for Secret Server Users)
+[tags]: # (TOTP)
+[priority]: # (10)
 
-# Enabling TOTP for Users
+# Enabling TOTP for Secret Server Users
 
 1. From the **Admin** menu, select **Users**.
 
