@@ -1,6 +1,6 @@
 [title]: # (TOTP)
 [tags]: # (2FA)
-[priority]: # (50)
+[priority]: # (60)
 
 # TOTP
 
