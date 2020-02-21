@@ -54,3 +54,12 @@ The Overview tab provides several widgets for getting a quick understanding of y
 - **Password Rotation:** The state of your current password rotations. When you click the **Today** link you are brought to the **Reports \> RPC by Day** report page. See [Remote Password Changing](#remote-password-changing-(rpc)).
 
 > **Note:** To see an overview of incoming system and subscription alerts, see the [Inbox](#alert-notification-center-(Inbox)).
+
+## Customized Tabs
+
+The following operations are available for creating custom tabs:
+
+- **Create:** Click the **+** to the right of the tabs to create a new empty tab.
+- **Delete:** Click the ![1556733151372](images/1556733151372.png)icon on a tab and select **Delete** to delete a tab. You can cancel changes by clicking the `Cancel` button. A confirmation pop up page appears.
+- **Rename:** Click the ![1556733151372](images/1556733151372.png)icon on a tab and select **Rename** to change the tab name. You can cancel changes by clicking the `Cancel` button.
+- **Reorder:** Click and drag a tab to the left or right of an existing tab.

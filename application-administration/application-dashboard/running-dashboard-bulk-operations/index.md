@@ -1,6 +1,6 @@
 [title]: # (Running Dashboard Bulk Operations)
-[tags]: # (Bulk Operations)
-[priority]: # (30)
+[tags]: # (Bulk Operations, Dashboard)
+[priority]: # (20)
 
 # Running Dashboard Bulk Operations
 

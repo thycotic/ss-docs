@@ -1,6 +1,6 @@
 [title]: # (Dashboard Tools and Help Menu)
 [tags]: # (XXX)
-[priority]: # (20)
+[priority]: # (10)
 
 # Dashboard Tools and Help Menu
 
