@@ -6,7 +6,7 @@
 
 ## Reports General Tab
 
-See [Built-In Reports](https://updates.thycotic.net/links.ashx?BuiltInReports) (KB) for the most up-to-date list of reports included.
+See [Built-In Reports](https://thycotic.force.com/support/s/article/List-of-built-in-Reports) (KB) for the most up-to-date list of reports included.
 
 The reports are listed under the report categories. To view a report, click on its name. This takes you to the **Report View** page.
 
