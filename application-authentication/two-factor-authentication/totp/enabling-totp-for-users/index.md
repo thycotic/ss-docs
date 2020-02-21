@@ -8,7 +8,7 @@
 
 1. Select the check box beside each user to enable two-factor authentication for.
 
-1. From the **< Select Bulk Operation >** drop-down menu, select Enable Google Auth Two Factor.
+1. From the **< Select Bulk Operation >** drop-down menu, select Enable TOTP Auth Two Factor.
 
 1. Click **OK** in the dialog that appears, confirming the operation.
 

@@ -1,8 +1,8 @@
-[title]: # (Viewing a TOTP for a Secret)
-[tags]: # (Viewing TOTP)
+[title]: # (Viewing a TOTP for a Web Secret)
+[tags]: # (TOTP)
 [priority]: # (60)
 
-# Viewing a TOTP for a Secret
+# Viewing a TOTP for a Web Secret
 
 To view or copy the TOTP generated for an account:
 

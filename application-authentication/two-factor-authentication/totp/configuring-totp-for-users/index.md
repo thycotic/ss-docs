@@ -1,7 +1,7 @@
-[title]: # (Configuring TOTP for Users)
-[tags]: # (Configuring TOTP)
-[priority]: # (10)
+[title]: # (Configuring TOTP for Secret Server Users)
+[tags]: # (TOTP)
+[priority]: # (20)
 
 # Configuring TOTP for Users
 
-Something here.
+Content here.

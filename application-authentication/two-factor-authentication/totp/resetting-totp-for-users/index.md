@@ -1,14 +1,14 @@
 [title]: # (Resetting TOTP for Users)
-[tags]: # (Resetting TOTP)
-[priority]: # (50)
+[tags]: # (TOTP)
+[priority]: # (30)
 
-# Resetting TOTP for Users
+# Resetting TOTP for Secret Servere Users
 
 1. From the **Admin** menu, select **Users**.
 
 1. Select the check box beside the user to reset two-factor authentication for.
 
-1. Click select **Reset Google Auth Two FactorFrom** on the **< Select Bulk Operation >** drop-down menu.
+1. Click select **Reset TOTP Auth Two FactorFrom** on the **< Select Bulk Operation >** drop-down menu.
 
 1. Click **OK** in the dialog that appears, confirming the operation.
 

@@ -16,4 +16,4 @@ Once enabled, the **Test RADIUS Login** button appears on the **Login** tab for 
 
 ## Enabling RADIUS for a User
 
-After enabling RADIUS on your SS, you must enable RADIUS two-factor authentication for each user on a per-user basis. On the **User Edit** page, type the **RADIUS User Name** for this user to match the RADIUS server. RADIUS can be enabled for new users by domain, see [Adding Domains](../../roles/adding-domains/index.md).
+After enabling RADIUS on your SS, you must enable RADIUS two-factor authentication for each user on a per-user basis. On the **User Edit** page, type the **RADIUS User Name** for this user to match the RADIUS server. RADIUS can be enabled for new users by domain, see [Adding Domains](../../../roles/adding-domains/index.md).
