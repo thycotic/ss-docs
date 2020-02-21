@@ -1,4 +1,4 @@
-[title]: # (Disabling TOTP for Users)
+[title]: # (Disabling TOTP for Secret Server Users)
 [tags]: # (TOTP)
 [priority]: # (40)
 

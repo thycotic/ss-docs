@@ -1,4 +1,4 @@
-[title]: # (Resetting TOTP for Users)
+[title]: # (Resetting TOTP for Secret Server Users)
 [tags]: # (TOTP)
 [priority]: # (30)
 
