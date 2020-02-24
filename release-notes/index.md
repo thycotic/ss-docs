@@ -6,7 +6,7 @@
 
 ## Secret Server On-Premises Release Notes
 
-[Secret Server 10.7.000059](ss/ss-10-7-000059.md)
+[Secret Server 10.7.000059](secret-server-on-premises/ss-10-7-000059.md)
 
  > **Note:** For Secret Server release notes for versions prior to 10.7.000059, please see the legacy release notes for that major version:
 
@@ -20,5 +20,5 @@
 
 ## Secret Server Cloud Release Notes
 
-[Cloud Release December 21, 2019](ssc-12-21-19.md)
+[Cloud Release December 21, 2019](secret-server-cloud/ssc-12-21-19.md)
 Cloud Release September 21, 2019
