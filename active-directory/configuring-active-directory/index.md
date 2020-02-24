@@ -6,40 +6,37 @@
 
 To allow users to log in with their Active Directory (AD) credentials, you can configure your AD domain settings in SS and then add users either individually or by group.
 
-## 1. Adding a Domain
+## 1. Enabling Active Directory Integration
 
 1. Select **Admin \> Active Directory**. The Active Directory Integration page appears.
-1. Click the **Edit Domains** button. The Active Directory Domains page appears.
-1. Click the **Create New** button. The Credentials tab appears.
-1. Fill in the domain information and the username and password that will be used for connecting to the domain and synchronizing users and groups.
-1. Click the **Save and Validate** button.
 
-## 2. Enabling Active Directory Integration
-
-1. Select **Admin \> Active Directory**. The Active Directory Integration page appears.
 1. Click the **Edit** button. The Edit Active Directory Configuration page appears.
+
 1. Click to select the **Enable Active Directory Integration** check box.
+
 1. Click the **Save** button.
+
+## 2. Adding a Domain
+
+1. Select **Admin \> Active Directory**. The Active Directory Integration page appears.
+
+1. Click the **Edit Domains** button. The Active Directory Domains page appears.
+
+1. Click the **Create New** button. The Credentials tab appears.
+
+1. Fill in the domain information and the username and password that will be used for connecting to the domain and synchronizing users and groups.
+
+1. If you wish to use Secure LDAP, enable the **Use LDAPS** checkbox under the **Advanced** section. For more information on Secure LDAP, please see the Using Secure LDAP KB Article.
+
+1. It is possible to set **Automatically enable Two Factor Authentication** for users synchronized from this domain. This option is also available under the **Advanced** section.
+
+1. Click the **Save and Validate** button.
 
 Now you are ready to add individual users or groups of users for access to SS with AD credentials. See the relevant section below for instructions.
 
-## 3. Adding Users and Groups
+## 3. Setting Up Synchronization Groups
 
-### Adding Users
-
-To add an individual AD user:
-
-1. Click **Admin \> Users**. The Users page appears.
-
-1. Click the **Create New** button. The Edit User Page appears.
-
-1. Select the desired domain from the **Domain** dropdown list.
-
-1. Type the user’s Active Directory username in the **User Name** text box.
-
-1. Type the user's display name in the **Display Name** text box.
-
-   > **Note:** The user’s email address is synced from AD, if available, so it is not necessary to type that in.
+Once a domain has been added, the **Synchronization Groups** needs to be set by clicking the **Edit Synchronization** button on the **Active Directory Configuration** page. The Available groups represent all accessible groups on the specified Active Directory domain. The user membership can be previewed with the **Group Preview** control. Select the desired group from the available groups that contains the Active Directory accounts for users you would like to create in SS. If the specific group does not exist, one can be created by your Active Directory administrator. If you create domain users manually or converting local users to domain users, then see the corresponding sections below before setting the synchronization group.
 
 1. Click the **Save** button.
 
