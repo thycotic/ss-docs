@@ -10,7 +10,7 @@ SS connects to the domain: from the Web server _or_ routed through a distributed
 
 > **Note:** The Active Directory secret is used to synchronize users and groups, it requires permission to search and view the attributes of the users and groups. If you plan on using discovery, the account also needs permissions to scan computers on the network for accounts.
 
-In addition to syncing AD with SS via your local site, SS can also synchronize and authenticate users from distributed engine (DE). You can install a DE in a remote site, allowing all users to use the same SS with their AD credentials. This feature allows organizations with users in different locations to easily get access to SS, and now organizations with Secret Server Cloud can use local AD credentials for authentication. To setup AD to sync from a DE:
+To setup AD to sync from a DE:
 
 1. Create a synced secret. Before synchronizing or creating users, create a secret for use as the sync secret. This secret should contain Domain Admin credentials (or an account with appropriate permissions for read access to all your organization’s AD objects).
 
