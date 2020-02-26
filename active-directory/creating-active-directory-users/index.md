@@ -1,0 +1,7 @@
+[title]: # (Creating Active Directory Users)
+[tags]: # (Creating AD Users)
+[priority]: # (50)
+
+# <span style="color:red">Creating Active Directory Users
+
+Active Directory users can be created manually by a user that has the Administer Users role. You can do this by going to **Administration > Users**, then clicking the **Create New** button. See [Creating a User](#Creating-a-User).
