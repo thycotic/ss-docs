@@ -1,7 +1,7 @@
-[title]: # (Administration Auditing)
-[tags]: # (Auditing)
-[priority]: # (10)
+[title]: # "Administration Auditing"
+[tags]: # "Auditing"
+[priority]: # "10"
 
 # Administration Auditing
 
-Something here.
+Secret Server stores information about what users did what activites within the application. This section discusses how to administer these audits.

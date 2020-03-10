@@ -1,12 +1,22 @@
-[title]: # (Audit Data Retention)
-[tags]: # (Audit Data Retention)
-[priority]: # (40)
+[title]: # "Audit Data Retention"
+[tags]: # "Audit Data Retention"
+[priority]: # "40"
 
 # Audit Data Retention
 
+## In This Section
+
+- [Overview](#overview)
+- [Data Retention Policies](#data-retention-policies)
+- [Permissions](#permissions)
+- [Procedures](#procedures)
+  - [Viewing the Status and History of Audit-Data Retention Policies](#Viewing-the-Status-and-History-of-Audit-Data-Retention-Policies)
+  - [Editing Audit Data Policies](#editing-audit-data-policies)
+  - [Running an Old Audit-Data Purge Right Now](#running-an-old-audit-data-purge-right-now)
+
 ## Overview
 
-Secret Server can automatically delete older audit and audit-like information (both are called "audit data” here). By default, Secret Server does not delete any audit data.
+Secret Server can automatically delete older audit and audit-like information (both are called "audit data” here). By default, SS does not delete any audit data.
 
 > **Important:** Do not configure automatic record deletion for compliance or other important data.
 
@@ -38,7 +48,7 @@ By default, these two audit-data retention roles are not assigned to users. An a
 1. Go to **Admin \> Data Retention Management**:
 
    ![image-20191204143632549](images/image-20191204143632549.png)
-   The PII policy is displayed on the Data Retention tab. If you scroll down, you will see the Database Size policy:
+   The Personally Identifiable Information (PII) policy is displayed on the Data Retention tab. If you scroll down, you will see the Database Size policy:
 
    ![image-20191204144003575](images/image-20191204144003575.png)
 

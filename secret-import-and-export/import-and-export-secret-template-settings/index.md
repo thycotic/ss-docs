@@ -1,6 +1,6 @@
-[title]: # (Import and Export Secret Template Settings)
-[tags]: # (Import,Export)
-[priority]: # (10)
+[title]: # "Import and Export Secret Template Settings"
+[tags]: # "Import,Export"
+[priority]: # "10"
 
 # Import and Export Secret Template Settings
 
@@ -34,4 +34,4 @@ Secret template settings for importation and exportation include:
 
 - Associated secrets
 
-See the [Can I import/export data between Secret Servers?](https://thycotic.force.com/support/s/article/Can-I-import-export-data-between-Secret-Servers) KBA for more information.
+See the [Can I import/export data between Secret Servers?](https://thycotic.force.com/support/s/article/Can-I-import-export-data-between-Secret-Servers) (KB) for more information.

@@ -1,6 +1,6 @@
-[title]: # (Secret Expiration Tab)
-[tags]: # (Expiration)
-[priority]: # (30)
+[title]: # "Secret Expiration Tab"
+[tags]: # "Expiration"
+[priority]: # "30"
 
 # Secret Expiration Tab
 
@@ -12,4 +12,4 @@ Inside the Expiration tab, the expiration period can be modified. The following 
 
 - **Custom Date:** A custom expiration date in month/day/year format.
 
-> **Note:** See [Secret Expiration](#secret-expiration) for details.
+> **Note:** See [Secret Expiration](../../secret-expiration/index.md) for details.

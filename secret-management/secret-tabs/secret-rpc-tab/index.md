@@ -1,6 +1,6 @@
-[title]: # (Secret RPC Tab)
-[tags]: # (Remote Passowrd Changing,RPC)
-[priority]: # (60)
+[title]: # "Secret RPC Tab"
+[tags]: # "Remote Passowrd Changing,RPC"
+[priority]: # "60"
 
 # Secret RPC Tab
 
@@ -10,4 +10,4 @@ The settings inside the Remote Password Changing tab are used for secrets that a
 
 - **Next Password:** Specify the next password
 
-> **Note:** See [Remote Password Changing)](#remote-password-changing) for details.
+> **Note:** See [Remote Password Changing)](../../../remote-password-changing/index.md) for details.

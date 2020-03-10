@@ -1,12 +1,12 @@
-[title]: # (Configuring Active Directory)
-[tags]: # (AD,Active Directory)
-[priority]: # (20)
+[title]: # "Configuring Active Directory"
+[tags]: # "AD,Active Directory"
+[priority]: # "20"
 
 # Configuring Active Directory
 
 To allow users to log in with their Active Directory (AD) credentials, you can configure your AD domain settings in SS and then add users either individually or by group.
 
-## 1. Enabling Active Directory Integration
+## Step 1: Enabling Active Directory Integration
 
 1. Select **Admin \> Active Directory**. The Active Directory Integration page appears.
 
@@ -16,7 +16,7 @@ To allow users to log in with their Active Directory (AD) credentials, you can c
 
 1. Click the **Save** button.
 
-## 2. Adding a Domain
+## Step 2: Adding a Domain
 
 1. Select **Admin \> Active Directory**. The Active Directory Integration page appears.
 
@@ -34,19 +34,19 @@ To allow users to log in with their Active Directory (AD) credentials, you can c
 
 Now you are ready to add individual users or groups of users for access to SS with AD credentials. See the relevant section below for instructions.
 
-## 3. Setting Up Synchronization Groups
+## Step 3: Setting Up Synchronization Groups
 
 Once a domain has been added, the **Synchronization Groups** needs to be set by clicking the **Edit Synchronization** button on the **Active Directory Configuration** page. The Available groups represent all accessible groups on the specified Active Directory domain. The user membership can be previewed with the **Group Preview** control. Select the desired group from the available groups that contains the Active Directory accounts for users you would like to create in SS. If the specific group does not exist, one can be created by your Active Directory administrator. If you create domain users manually or converting local users to domain users, then see the corresponding sections below before setting the synchronization group.
 
 1. Click the **Save** button.
 
-### Adding Groups
+## Step 4: Adding Groups
 
 SS can sync with security groups from AD to automatically add, enable, and disable users. This can streamline the process of managing which users are enabled.
 
 > **Note:** Enabled users count towards your SS user licensing.
 
-## 4. Enabling Active Directory Synchronization
+## Step 5: Enabling Active Directory Synchronization
 
 1. From the **Active Directory** page, click the **Edit** button. The Edit Active Directory Configuration page appears.
 1. Click to select the **Enable Synchronization of Active Directory** check box. Additional settings appear.
@@ -58,7 +58,7 @@ SS can sync with security groups from AD to automatically add, enable, and disab
 1. Change the **Days to Keep Operational Logs** text box to set the period to keep AD-related logs that might contain PII. SS automatically deletes logs older than that (in days).
 1. Click the **Save** button.
 
-## 5. Choosing Synchronization Groups
+## Step 6: Choosing Synchronization Groups
 
 Choose the security groups from AD you want to sync with SS:
 
@@ -82,6 +82,6 @@ Choose the security groups from AD you want to sync with SS:
 
 1. Click the **Save** button.
 
-## 6. Running Active Directory Synchronization
+## Step 7: Running Active Directory Synchronization
 
 From the **Active Directory** page, click the **Synchronize Now** button to run a sync. As the sync progresses, you can click the **Refresh** button to monitor the logs until you see the message **Completed Domain synchronization for all domains**.

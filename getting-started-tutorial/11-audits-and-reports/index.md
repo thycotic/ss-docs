@@ -1,8 +1,8 @@
-[title]: # (11. Audits and Reports)
-[tags]: # (Audit,Report)
-[priority]: # (110)
+[title]: # "11. Audits and Reports"
+[tags]: # "Audit,Report"
+[priority]: # "110"
 
-# 11. Audits and Reports
+# Step 11: Audits and Reports
 
 Before running reports and audits, you must create something to report on—to that end:
 
@@ -18,7 +18,7 @@ This generates enough audit logs to provide meaningful outputs in your reports:
 - Failed login attempts
 - Secret activity
 
-See [List of Built-In Reports](https://thycotic.force.com/support/s/article/List-of-built-in-Reports) (KB) for the most up-to-date list of reports included.
+See [List of Built-In Reports](../../reports/built-in-reports/index.md) for the most up-to-date list of reports included.
 
 For details on using reports, see:
 

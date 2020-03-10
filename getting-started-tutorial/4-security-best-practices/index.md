@@ -1,14 +1,14 @@
-[title]: # (4. Security Best Practices)
-[tags]: # (Security)
-[priority]: # (40)
+[title]: # "4. Security Best Practices"
+[tags]: # "Security"
+[priority]: # "40"
 
-# 4. Security Best Practices
+# Step 4: Security Best Practices
 
 As you start using SS, we strongly recommend configuring the following security settings. While these are optional, setting them is a a best practice.
 
 ## Local Admin Account Best Practices
 
-Even if you plan to [integrate with Active Directory](#Active-Directory-Integration) to log into Secret Server, chances are you will need to use this account again. This is the first account you created during the installation process. Keep this account secure and avoid being locked out of SS by following these suggestions:
+Even if you plan to [integrate with Active Directory](../../active-directory/index.md) to log into Secret Server, chances are you will need to use this account again. This is the first account you created during the installation process. Keep this account secure and avoid being locked out of SS by following these suggestions:
 
 - Store the credentials in a secure location that you can access if you lose all access to SS.
 
@@ -22,7 +22,7 @@ Even if you plan to [integrate with Active Directory](#Active-Directory-Integrat
 
   1. Click the **Save** button when finished.
 
-> **Note:** This requires having an [SMTP server configured.](https://updates.thycotic.net/links.ashx?VerifySMTPConnection) (KB).
+> **Note:** This requires having an [SMTP server configured](https://updates.thycotic.net/links.ashx?VerifySMTPConnection) (KB).
 
 - Configure the other **Local User Passwords** settings to enforce your password requirements, expiration, password history, and other password policies.
 

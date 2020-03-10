@@ -1,8 +1,8 @@
-[title]: # (8. Discovery)
-[tags]: # (Discovery)
-[priority]: # (80)
+[title]: # "8. Discovery"
+[tags]: # "Discovery"
+[priority]: # "80"
 
-# 8. Discovery
+# Step 8: Discovery
 
 SS has a discovery feature that can automatically find local Windows accounts, Active Directory service, Unix, VMware ESX/ESXi, and Active Directory domain accounts. Account and dependency types not supported out-of-the-box in SS can still be discovered by writing PowerShell scripts that can be run as custom scanners. This allows administrators to quickly import accounts found by SS on specified domains or IP addresses.
 

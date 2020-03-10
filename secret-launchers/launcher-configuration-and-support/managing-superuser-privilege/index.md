@@ -1,12 +1,12 @@
-[title]: # (Managing Superuser Privilege)
-[tags]: # (Launcher)
-[priority]: # (60)
+[title]: # "Managing Superuser Privilege"
+[tags]: # "Launcher"
+[priority]: # "60"
 
 # Managing Superuser Privilege
 
 Administrators can create command menus for use with a proxied SSH connection to restrict what commands can be run by users or groups on the connected server. This feature requires an additional license. To add a command menu:
 
-> **Note:** For details, see [SSH Command Menus](https://thycotic.force.com/support/s/article/SSH-Command-Menus).
+> **Note:** For details, see [SSH Command Menus](https://thycotic.force.com/support/s/article/SSH-Command-Menus) (KB).
 
 1. Navigate to **Admin \> All**.
 

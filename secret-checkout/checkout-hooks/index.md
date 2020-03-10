@@ -1,8 +1,10 @@
-[title]: # (Check Out Hooks)
-[tags]: # (Hook)
-[priority]: # (20)
+[title]: # "Check Out Hooks"
+[tags]: # "Hook"
+[priority]: # "20"
 
 # Checkout Hooks
+
+## Overview
 
 In addition to changing the password on check in, secret owners can also specify administrator-created PowerShell scripts, called _hooks_, to run before or after checkout and check in. These are accessed from the **Hooks** tab of the secret, which only shows if checkout is enabled and PowerShell scripts have been created by an admin.
 
@@ -34,4 +36,4 @@ The variables are:
 | `$SECRETSERVERDISPLAYNAME`  | Logged-on user’s display name  | “System”               |
 | `$SECRETSERVEREMAILADDRESS` | Logged-on user’s email address | Empty string           |
 
-> **Note:** You can find the regular “system” variables in the [Editing Custom Commands](#editing-custom-commands) subsection of the Custom Password Changers section.
+> **Note:** You can find the regular “system” variables in the [Editing Custom Commands](../../remote-password-changing/custom-password-changers/editing-custom-commands/index.md) subsection of the Custom Password Changers section.

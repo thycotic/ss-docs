@@ -1,6 +1,6 @@
-[title]: # (Sharing Secrets)
-[tags]: # (Share Secret)
-[priority]: # (80)
+[title]: # "Sharing Secrets"
+[tags]: # "Share Secret"
+[priority]: # "80"
 
 # Sharing Secrets
 
@@ -26,7 +26,7 @@ Secrets can be shared with either groups or individual users. The Secret Sharing
 
 To add or remove secret sharing:
 
-1. [View the secret](#Viewing-Secrets) you want to share.
+1. [View the secret](../viewing-secrets/index.md) you want to share.
 
 1. Click the **Sharing** tab.
 
@@ -50,4 +50,4 @@ To add or remove secret sharing:
 
 You can also modify sharing settings for users or groups that already have sharing enabled for the secret. If a user or group is not displayed, they do not have access to the secret.
 
-To further simplify the sharing process, secrets can automatically inherit the settings from the folder they are stored in. By enabling the **Inherit Permissions from Folder** option on the **Sharing Edit** page, a secret inherits all the parent folder's sharing settings. For more on folder security, see the [Folders](#folders) section.
+To further simplify the sharing process, secrets can automatically inherit the settings from the folder they are stored in. By enabling the **Inherit Permissions from Folder** option on the **Sharing Edit** page, a secret inherits all the parent folder's sharing settings. For more on folder security, see the [Folders](../../../secret-folders/index.md) section.

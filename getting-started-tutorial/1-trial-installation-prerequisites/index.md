@@ -1,8 +1,8 @@
-[title]: # (1. Trial Installation Prerequisites)
-[tags]: # (Install,Prerequisites)
-[priority]: # (10)
+[title]: # "1. Trial Installation Prerequisites"
+[tags]: # "Install,Prerequisites"
+[priority]: # "10"
 
-# 1. Trial Installation Prerequisites
+# Step 1: Trial Installation Prerequisites
 
 Below are our suggested guidelines for preparing to run a trial or proof-of-concept (POC) of SS.
 
@@ -82,4 +82,4 @@ We recommend setting up SSL (or https) for access to SS. To do so, you will need
 
 SS must connect directly to a target system to change its password. For devices that are firewalled off from SS, remote agent can provide connectivity to them, but they also require connectivity from them to the target systems for password changing.
 
-Please see [Ports used by Secret Server](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server) (KB) for a list of ports needed by SS for password changing, discovery, and other features.
+Please see [Ports Used by Secret Server](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server) (KB) for a list of ports needed by SS for password changing, discovery, and other features.

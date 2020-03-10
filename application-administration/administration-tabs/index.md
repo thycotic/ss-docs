@@ -1,10 +1,8 @@
-[title]: # (Administration Tabs)
-[tags]: # (Administration Tabs)
-[priority]: # (30)
+[title]: # "Administration Tabs"
+[tags]: # "Administration Tabs"
+[priority]: # "30"
 
 # Administration Tabs
-
-SS is highly customizable. Administrators can increase site security through various configuration settings such as force inactivity timeouts and specifying a SMTP server. This level of configuration allows SS to be altered to meet the needed requirements for the instance. The settings are explained below.
 
 ## General Tab
 
@@ -32,9 +30,9 @@ The following configuration settings are available in the General tab:
 
 - **Enable Webservices:** Enable other applications to interact with SS (still requires them to login as a SS user).
 
-- **Force Inactivity Timeout: U**sed to time out a user's login after inactivity for the specified time interval. See [Configuring Users](#Configuring-Users).
+- **Force Inactivity Timeout: Used** to time out a user's login after inactivity for the specified time interval. See [Configuring Users](../../users/Configuring-Users/index.md).
 
-- **Force Password Masking:** For more information, see [Setting Up Password Masking](#Setting-Up-Password-Masking).
+- **Force Password Masking:** For more information, see [Setting Up Password Masking](../../secret-management/procedures/Setting-Up-Password-Masking/index.md).
 
 - **Launcher Deployment Type:** Select either Protocol Handler (default) or ClickOnce.
 
@@ -54,15 +52,15 @@ The following configuration settings are available in the General tab:
 
 > **Note:** No secret data is uploaded to Thycotic.com—only the website URL and control names are sent.
 
-- **Default Secret Permissions:** See [Secret Folders](#Secret-Folders) for more information.
+- **Default Secret Permissions:** See [Secret Folders](../../secret-folders/index.md) for more information.
 - **Time Zone:** Time zone that all dates are displayed in.
-- **Default Date, Time Format:** Default date and time format used for all users. This setting can be overridden by each user. See [User Preferences](­User-Preferences) for details.
+- **Default Date, Time Format:** Default date and time format used for all users. This setting can be overridden by each user. See [User Preferences](­../../../../users/user-preferences/index.md) for details.
 - **Secret Password History:** Enforces whether a recent password can be set on a secret's password text-entry field based on the history. Defaults to 1, which means the same password cannot be immediately re-used on a secret.
 - **Change Administration Mode:** This button takes you to a page where you can enable or disable Unlimited Administration mode.
 
 ## HSM Tab
 
-From the Hardware Security Module (HSM) tab, you can enable or disable HSM for encryption. For more details about HSM configuration, ==see our [HSM Integration Guide](https://updates.thycotic.net/links.ashx?hsmintegrationguide) (PDF)==.
+From the Hardware Security Module (HSM) tab, you can enable or disable HSM for encryption. For more details about HSM configuration, see our [HSM Integration Guide](https://updates.thycotic.net/links.ashx?hsmintegrationguide) (PDF).
 
 ## Email Tab
 
@@ -162,8 +160,8 @@ The Security tab contains the following configuration options:
 
 ## Session Recording Tab
 
-See [Session Recording](#SessionRecording).
+See [Session Recording](../../session-recording/index.md).
 
 ## Ticket System Tab
 
-See [Ticketing System Integration](#TicketingSystemIntegration).
+See [Ticketing System Integration](../../ticketing-system-integration/index.md).

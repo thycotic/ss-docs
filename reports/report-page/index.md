@@ -1,18 +1,18 @@
-[title]: # (Report Page)
-[tags]: # (Report Page)
-[priority]: # (10)
+[title]: # "Report Page"
+[tags]: # "Report Page"
+[priority]: # "10"
 
 # Report Page
 
 ## Reports General Tab
 
-See [Built-In Reports](https://thycotic.force.com/support/s/article/List-of-built-in-Reports) (KB) for the most up-to-date list of reports included.
+See [Built-In Reports](../built-in-reports/index.md) for the most up-to-date list of reports included.
 
 The reports are listed under the report categories. To view a report, click on its name. This takes you to the **Report View** page.
 
-You can view a record of all the actions performed on reports by clicking on the **View Audit** button. For more information on this, see [Administration Auditing](#Administration-Auditing).
+You can view a record of all the actions performed on reports by clicking on the **View Audit** button. For more information on this, see [Administration Auditing](../../application-administration/administration-auditing/index.md).
 
-For details on the **Edit** button, see [Creating and Editing Reports](#Creating-and-Editing-Reports).
+For details on the **Edit** button, see [Creating and Editing Reports](../creating-and-editing-reports/index.md).
 
 The **Create it** link is a shortcut for creating a new report.
 
@@ -48,7 +48,7 @@ The Security Hardening Tab configures aspects of SS to ensure security best prac
 
 - **Secure Session and Forms Auth Cookies:** Cookies contain potentially sensitive information that can allow users to log onto application. By default, cookies are not marked with the secure attribute. That is, **they are transmitted unencrypted when a user accesses SS through HTTP instead of HTTPS**.
 
-  For more information about how to secure your cookies, see [Secure ASP Session and Forms Authentication Cookies](http://updates.thycotic.net/link.ashx?SecureCookieSessions) (KBA).
+  For more information about how to secure your cookies, see [Secure ASP Session and Forms Authentication Cookies](http://updates.thycotic.net/link.ashx?SecureCookieSessions) (KB).
 
 - **Web Service HTTP Gets Allowed:** Web service HTTP get requests are allowed. Allowing HTTP GET requests allows REST-style calls to many SS Web service methods. This can be a security concern because simply clicking a link to the Web service, created by a malicious user, would cause it to be executed.
 
@@ -59,7 +59,7 @@ The Security Hardening Tab configures aspects of SS to ensure security best prac
 - **SQL Account Using Least Permissions:** Use the fewest SS permissions as possible in the SQL Account used to access the database. We recommend using a least permission approach where the account only has dbOwner. See [Installing and Configuring SQL Server](https://updates.thycotic.net/link.ashx?SqlAccountPermissionsSecurityCheck).
 - **SQL Server Authentication Password Strength:** SQL Server authentication requires a username and password. The password must be a strong password to get a pass result. Strong passwords are 8 characters or longer and contain lowercase and uppercase letters, numbers and symbols. The SQL Server authentication credentials in use can be changed by going to the installer (installer.aspx) and changing them on Step 3. A pass result is also given if Windows authentication is used to authenticate to SQL Server.
 - **SQL Server Authentication Username:** The SQL Server authentication username should not be obvious. The use of "sa", "ss" or "secretserver" triggers a fail result. The SQL Server authentication credentials in use can be changed by going to the installer (installer.aspx) and changing them on Step 3\. A pass result is also given if Windows authentication is used to authenticate to SQL Server.
-- **Windows Authentication to Database:** Windows authentication takes advantage of Windows security to provide secure authentication to SQL Server. The SQL Server authentication options can be changed by going to the installer (installer.aspx) and changing them on Step 3\. Please see the [Installation Guide](https://thycotic.com/products/secret-server/support-2/) for instructions on configuring Windows authentication to SQL Server.
+- **Windows Authentication to Database:** Windows authentication takes advantage of Windows security to provide secure authentication to SQL Server. The SQL Server authentication options can be changed by going to the installer (installer.aspx) and changing them on Step 3\. Please see the [Installation Guide](https://thycotic.force.com/support/s/article/Installation-Guides-Secret-Server) for instructions on configuring Windows authentication to SQL Server.
 
 ### Environment Section
 
@@ -79,4 +79,4 @@ The Security Hardening Tab configures aspects of SS to ensure security best prac
 
 ## Reports User Audit Tab
 
-User Audit Reports show all secrets accessed by a user during a specified period. For a more detailed explanation, see [User Audit Report](#User-Audit-Report).
+User Audit Reports show all secrets accessed by a user during a specified period. For a more detailed explanation, see [User Audit Report](../../application-administration/administration-auditing/index.md).

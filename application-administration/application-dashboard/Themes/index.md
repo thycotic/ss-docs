@@ -1,8 +1,10 @@
-[title]: # (Default Themes)
-[tags]: # (Dashboard, Themes)
-[priority]: # (40)
+[title]: # "Default Themes"
+[tags]: # "Dashboard, Themes"
+[priority]: # "40"
 
-# <span style="color:red">Default Themes
+# Themes
+
+## Overview
 
 By default, SS is set to a default theme unless specified within the Configuration settings. SS comes with three other bundled themes: Blue, Dark, and Green. The default theme can be set at **Administration > Configuration** on the general tab. Theming differences can be allowed by individual users with the **Allow User to Select Themes** permission.
 

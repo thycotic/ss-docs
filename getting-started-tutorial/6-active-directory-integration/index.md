@@ -1,8 +1,8 @@
-[title]: # (6. Active Directory Integration)
-[tags]: # (Active Directory,AD)
-[priority]: # (60)
+[title]: # "6. Active Directory Integration"
+[tags]: # "Active Directory,AD"
+[priority]: # "60"
 
-# 6. Active Directory Integration
+# Step 6: Active Directory Integration
 
 To allow users to log in with their Active Directory (AD) credentials, you can configure your AD domain settings in SS and then add users either individually or by group.
 
