@@ -1,8 +1,8 @@
-[title]: # (12. Secret Access and Workflow)
-[tags]: # (Workflow)
-[priority]: # (120)
+[title]: # "12. Secret Access and Workflow"
+[tags]: # "Workflow"
+[priority]: # "120"
 
-# 12. Secret Access and Workflow
+# Step 12: Secret Access and Workflow
 
 Sometimes, depending on your scenario, you want to add extra protections to highly sensitive secrets. SS has a access request and workflow features:
 

@@ -1,6 +1,6 @@
-[title]: # (Secret Audit Log)
-[tags]: # (Secret Audit Log)
-[priority]: # (20)
+[title]: # "Secret Audit Log"
+[tags]: # "Secret Audit Log"
+[priority]: # "20"
 
 # Secret Audit Log
 
@@ -28,4 +28,4 @@ Secret audits are taken for the following user actions:
 
 For certain audit items, action notes are added providing additional details. For example, if permissions are edited, an audit record is generated detailing which users or groups gained or lost permissions. Detailed audit records add accountability to sensitive secrets where auditors or administrators need to know exactly what was modified.
 
-Below the audit records is a checkbox for Display Password Change Log. Clicking to select this check box displays logs for Heartbeat and Remote Password Changing amongst the audit items
+Below the audit records is a **Display Password Change Log** check box. Clicking to select this check box displays logs for Heartbeat and Remote Password Changing amongst the audit items

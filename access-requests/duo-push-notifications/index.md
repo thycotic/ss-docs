@@ -1,6 +1,6 @@
-[title]: # (Duo Push Notifications)
-[tags]: # (Duo)
-[priority]: # (20)
+[title]: # "Duo Push Notifications"
+[tags]: # "Duo"
+[priority]: # "20"
 
 # Duo Push Notifications
 
@@ -50,6 +50,6 @@ To associate the permission with users:
 
 1. Click the **Save Changes** button. Setup is now complete.
 
-> **Note:** In addition to having the role you created, the user must be properly set up to receive Duo push notifications. See [Setting up Duo (User)](#setting-up-duo-(user)).
+> **Note:** In addition to having the role you created, the user must be properly set up to receive Duo push notifications. See [Setting up Duo (User)](../../application-authentication/two-factor-authentication/duo-security-authentication/index.md).
 
 > **Note:**  Any notifications will all be sent out at the same time, and the first response (approve or deny) will be the determinant response. A non-response will not result in either an approve or deny response.

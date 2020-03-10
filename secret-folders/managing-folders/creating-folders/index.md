@@ -1,6 +1,6 @@
-[title]: # (Creating Folders)
-[tags]: # (Folder)
-[priority]: # (30)
+[title]: # "Creating Folders"
+[tags]: # "Folder"
+[priority]: # "30"
 
 # Creating Folders
 
@@ -18,4 +18,4 @@ To create a folder:
 
 1. Click the **Create New Folder** button. The new folder appears in the folder tree under its parent folder.
 
-1. Proceed to [Editing Folder Permissions](#Editing-Folder-Permissions) to customize permissions for the new folder.
+1. Proceed to [Editing Folder Permissions](../editing-folder-permissions/index.md) to customize permissions for the new folder.

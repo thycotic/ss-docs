@@ -1,10 +1,10 @@
-[title]: # (Event Subscription Page)
-[tags]: # (Event Subscription)
-[priority]: # (30)
+[title]: # "Event Subscription Page"
+[tags]: # "Event Subscription"
+[priority]: # "30"
 
 # Event Subscription Page
 
-Page components:
+The Event Supscription Page includes:
 
 - **Additional Email Recipients:** List of additional email addresses to send the email to.
 

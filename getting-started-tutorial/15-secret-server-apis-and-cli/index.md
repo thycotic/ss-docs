@@ -1,8 +1,8 @@
-[title]: # (15. Secret Server APIs and CLI)
-[tags]: # (API)
-[priority]: # (150)
+[title]: # "15. Secret Server APIs and CLI"
+[tags]: # "API"
+[priority]: # "150"
 
-# 15. Secret Server APIs and CLI
+# Step 15: Secret Server APIs and CLI
 
 You can access SS without using the user interface for automation and integration purposes. Currently, there are two APIs:
 

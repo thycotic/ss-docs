@@ -1,10 +1,10 @@
-[title]: # (10. Heartbeats)
-[tags]: # (Heartbeat)
-[priority]: # (100)
+[title]: # "10. Heartbeats"
+[tags]: # "Heartbeat"
+[priority]: # "100"
 
-# 10. Heartbeats
+# Step 10: Heartbeats
 
-Heartbeat allows you to determine from SS whether the credentials in a secret authenticate successfully with their target system. By default, heartbeat is turned off in SS. See [Heartbeats: Automatically Testing Secret Credentials](#Heartbeats:-Automatically-Testing-Secret-Credentials) for general information.
+Heartbeat allows you to determine from SS whether the credentials in a secret authenticate successfully with their target system. By default, heartbeat is turned off in SS. See [Heartbeats: Automatically Testing Secret Credentials](../../secret-heartbeats/index.md) for general information.
 
 ## Enabling Heartbeat
 

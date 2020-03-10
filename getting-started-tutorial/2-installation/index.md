@@ -1,8 +1,8 @@
-[title]: # (2. Installation)
-[tags]: # (Install)
-[priority]: # (20)
+[title]: # "2. Installation"
+[tags]: # "Install"
+[priority]: # "20"
 
-# 2. Installation
+# Step 2: Installation
 
 ## Process
 

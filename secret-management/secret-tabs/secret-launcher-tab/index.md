@@ -1,6 +1,6 @@
-[title]: # (Secret Launcher Tab)
-[tags]: # (Launcher)
-[priority]: # (50)
+[title]: # "Secret Launcher Tab"
+[tags]: # "Launcher"
+[priority]: # "50"
 
 # Secret Launcher Tab
 
@@ -18,4 +18,4 @@ If a Web launcher is associated with a secret template, the launcher tab display
 
 - **Use Web Password Filler:** Use the Web password filler rather than the Web launcher.
 
-> **Note:** See [Web Launcher](#web-launcher) for details.
+> **Note:** See [Web Launcher](../../../secret-launchers/web-launchers/index.md) for details.

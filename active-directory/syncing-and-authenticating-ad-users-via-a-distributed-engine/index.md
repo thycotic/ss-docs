@@ -1,10 +1,10 @@
-[title]: # (Syncing and Authenticating AD Users via a Distributed Engine)
-[tags]: # (Syncing AD Users)
-[priority]: # (70)
+[title]: # "Syncing and Authenticating AD Users via a Distributed Engine"
+[tags]: # "Syncing AD Users"
+[priority]: # "70"
 
 # Syncing and Authenticating AD Users via a Distributed Engine
 
-## Local Sites Versus Distributed Engine Sites
+## Local Versus Distributed Engine Sites
 
 SS connects to the domain: from the Web server _or_ routed through a distributed engine. If your Web server can reach your domain without issue, then using the local site option is recommended. When a user authenticates or AD synchronization is run, the connection to the domain is from the Web server. If your Web server cannot connect to the target domain, if it is a VM in a cloud environment for example, you can setup an engine on-premises and assign it to the domain. When a user authenticates, SS routes the domain calls through the on-premises engine, eliminating the need for site to site connections or persistent VPNs. Review the Distributed Engine guide for steps on setting up sites and engines.
 
@@ -29,10 +29,11 @@ To setup AD to sync from a DE:
    1. Click the **Link a Secret** selection button.
 
    1. Click the **Sync Secret** list to select the AD secret you created earlier.  
-
+   
       > **Note:** If you do not have a secret setup yet, click the **Create New Secret** link to create your AD secret.
+   
       > **Note:** The AD sync secret is used to synchronize users and groups. It requires permission to search and view the attributes of the users and groups.  If you plan on using SS discovery, the account will also need permissions to scan computers on the network for accounts.
-
+   
    1. Click the **Save and Validate** button.  
 
 1. Set up the synchronization groups:
@@ -45,7 +46,7 @@ To setup AD to sync from a DE:
 
 1. Configure AD:
 
-   > **Note:** See [Active Directory Configuration Parameters](#Active-Directory-Configuration-Parameters) for more information.
+   > **Note:** See [Active Directory Configuration Parameters](../configuration-parameters/index.md) for more information.
 
    1. Go to **Admin \> Active Directory**. The Active Directory Configuration page appears.
 
