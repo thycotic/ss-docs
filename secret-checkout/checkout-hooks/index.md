@@ -1,6 +1,6 @@
-[title]: # "Check Out Hooks"
-[tags]: # "Hook"
-[priority]: # "20"
+[title]: # (Check Out Hooks)
+[tags]: # (Hook)
+[priority]: # (20)
 
 # Checkout Hooks
 

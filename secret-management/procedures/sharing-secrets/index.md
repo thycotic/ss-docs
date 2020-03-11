@@ -1,6 +1,6 @@
-[title]: # "Sharing Secrets"
-[tags]: # "Share Secret"
-[priority]: # "80"
+[title]: # (Sharing Secrets)
+[tags]: # (Share Secret)
+[priority]: # (80)
 
 # Sharing Secrets
 

@@ -1,7 +1,7 @@
 [title]: # (Welcome)
-[tags]: # (welcome,filler)
+[tags]: # ()
 [priority]: # (1)
 
-# Welcome to the Secret Server Documentation
+# Welcome to Secret Server's Documentation
 
-Visit the [docs](https://dev.homer.thycotic.net/homer) for walkthroughs and guidance.
+Navigate using the tree on the left or by entering a search term above.

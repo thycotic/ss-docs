@@ -1,6 +1,6 @@
-[title]: # "7. Secret Server Framework"
-[tags]: # "Secrets"
-[priority]: # "70"
+[title]: # (7. Secret Server Framework)
+[tags]: # (Secrets)
+[priority]: # (70)
 
 # Step 7: Secret Server Framework
 

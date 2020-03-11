@@ -4,7 +4,7 @@
 
 # Glossary
 
-**Table: Terms and Definitions**
+**Table:** Terms and Definitions
 
 | Term                          | Definition                                                   |
 | ----------------------------- | ------------------------------------------------------------ |

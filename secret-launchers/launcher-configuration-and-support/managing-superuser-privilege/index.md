@@ -1,6 +1,6 @@
-[title]: # "Managing Superuser Privilege"
-[tags]: # "Launcher"
-[priority]: # "60"
+[title]: # (Managing Superuser Privilege)
+[tags]: # (Launcher)
+[priority]: # (60)
 
 # Managing Superuser Privilege
 

@@ -1,6 +1,6 @@
-[title]: # "Editing Secrets"
-[tags]: # "Secret"
-[priority]: # "30"
+[title]: # (Editing Secrets)
+[tags]: # (Secret)
+[priority]: # (30)
 
 # Editing Secrets
 

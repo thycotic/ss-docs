@@ -1,6 +1,6 @@
-[title]: # "Unix Account Discovery"
-[tags]: # "Discovery"
-[priority]: # "50"
+[title]: # (Unix Account Discovery)
+[tags]: # (Account Discovery)
+[priority]: # (50)
 
 # Unix Account Discovery
 

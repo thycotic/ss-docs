@@ -1,6 +1,6 @@
-[title]: # "14. Recording Sessions"
-[tags]: # "Session Recording"
-[priority]: # "140"
+[title]: # (14. Recording Sessions)
+[tags]: # (Session Recording)
+[priority]: # (140)
 
 # Step 14: Recording Sessions
 

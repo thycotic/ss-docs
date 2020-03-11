@@ -1,6 +1,6 @@
-[title]: # "Configuring Launchers on the Secret"
-[tags]: # "Launcher"
-[priority]: # "30"
+[title]: # (Configuring Launchers on the Secret)
+[tags]: # (Launcher)
+[priority]: # (30)
 
 # Configuring Launchers on the Secret
 

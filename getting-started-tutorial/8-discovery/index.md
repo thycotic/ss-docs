@@ -1,6 +1,6 @@
-[title]: # "8. Discovery"
-[tags]: # "Discovery"
-[priority]: # "80"
+[title]: # (8. Discovery)
+[tags]: # (Discovery)
+[priority]: # (80)
 
 # Step 8: Discovery
 

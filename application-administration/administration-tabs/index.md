@@ -1,6 +1,6 @@
-[title]: # "Administration Tabs"
-[tags]: # "Administration Tabs"
-[priority]: # "30"
+[title]: # (Administration Tabs)
+[tags]: # (Administration Tabs)
+[priority]: # (30)
 
 # Administration Tabs
 

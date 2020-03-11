@@ -1,6 +1,6 @@
-[title]: # "10. Heartbeats"
-[tags]: # "Heartbeat"
-[priority]: # "100"
+[title]: # (10. Heartbeats)
+[tags]: # (Heartbeat)
+[priority]: # (100)
 
 # Step 10: Heartbeats
 

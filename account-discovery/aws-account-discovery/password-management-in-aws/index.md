@@ -1,6 +1,6 @@
-[title]: # "Password Management in AWS"
-[tags]: # "AMAZON,AWS,IAM,RPC"
-[priority]: # "20"
+[title]: # (Password Management in AWS)
+[tags]: # (AWS, Account Discovery)
+[priority]: # (20)
 
 # Password Management in AWS
 

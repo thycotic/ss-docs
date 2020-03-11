@@ -1,6 +1,6 @@
-[title]: # "13. Secret Launchers"
-[tags]: # "Launchers"
-[priority]: # "130"
+[title]: # (13. Secret Launchers)
+[tags]: # (Launchers)
+[priority]: # (130)
 
 # Step 13: Secret Launchers
 

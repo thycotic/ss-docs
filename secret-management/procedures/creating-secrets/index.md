@@ -1,6 +1,6 @@
-[title]: # "Creating Secrets"
-[tags]: # "Secret"
-[priority]: # "10"
+[title]: # (Creating Secrets)
+[tags]: # (Secret)
+[priority]: # (10)
 
 # Creating Secrets
 

@@ -1,5 +1,5 @@
 [title]: # (AWS Account Discovery)
-[tags]: # (AWS,Discovery)
+[tags]: # (AWS, Account Discovery)
 [priority]: # (40)
 
 # AWS Account Discovery
