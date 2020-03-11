@@ -43,6 +43,7 @@ Using one of the below methods, contact Thycotic Support.
 ### Phone Support
 
 Thycotic delivers support by phone worldwide. Select the applicable number from this list:
+
 | Region | Country | Support Number |
 | ----- | ----- | ----- |
 | AMERICAS | all | \+1 202 991 0540 |
