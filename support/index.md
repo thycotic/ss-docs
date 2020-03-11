@@ -1,6 +1,6 @@
-[title]: # "Support"
-[tags]: # "thycotic"
-[priority]: # "40000"
+[title]: # (Support)
+[tags]: # (thycotic)
+[priority]: # (40000)
 # Thycotic Support
 
 ## Step One: Gather Information You May Need
