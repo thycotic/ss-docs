@@ -1,6 +1,6 @@
-[title]: # "Modifying Folders with Secret Policies"
-[tags]: # "Folder"
-[priority]: # "60"
+[title]: # (Modifying Folders with Secret Policies)
+[tags]: # (Folder)
+[priority]: # (60)
 
 # Modifying Folders with Secret Policies
 

@@ -1,5 +1,5 @@
 [title]: # (Enabling AWS Discovery)
-[tags]: # (Discovery)
+[tags]: # (AWS, AccountDiscovery)
 [priority]: # (10)
 
 # Enabling AWS Discovery

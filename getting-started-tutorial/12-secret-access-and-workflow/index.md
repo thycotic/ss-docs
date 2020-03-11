@@ -1,6 +1,6 @@
-[title]: # "12. Secret Access and Workflow"
-[tags]: # "Workflow"
-[priority]: # "120"
+[title]: # (12. Secret Access and Workflow)
+[tags]: # (Workflow)
+[priority]: # (120)
 
 # Step 12: Secret Access and Workflow
 

@@ -1,6 +1,6 @@
-[title]: # "Configuring a Secret for Check Out"
-[tags]: # "Check Out"
-[priority]: # "30"
+[title]: # (Configuring a Secret for Check Out)
+[tags]: # (Check Out)
+[priority]: # (30)
 
 # Configuring a Secret for Check Out
 

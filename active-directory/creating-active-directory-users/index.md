@@ -1,6 +1,6 @@
-[title]: # "Creating Active Directory Users"
-[tags]: # "Creating AD Users"
-[priority]: # "50"
+[title]: # (Creating Active Directory Users)
+[tags]: # (Active Directory)
+[priority]: # (50)
 
 # Creating Active Directory Users
 

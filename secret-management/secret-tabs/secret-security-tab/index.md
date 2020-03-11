@@ -1,6 +1,6 @@
-[title]: # "Secret Security Tab"
-[tags]: # "Security"
-[priority]: # "40"
+[title]: # (Secret Security Tab)
+[tags]: # (Security)
+[priority]: # (40)
 
 # Secret Security Tab
 

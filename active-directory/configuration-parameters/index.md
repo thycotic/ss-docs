@@ -1,5 +1,5 @@
 [title]: # (Configuration Parameters)
-[tags]: # (AD, Active Directory)
+[tags]: # (Active Directory)
 [priority]: # (10)
 
 # Configuration Parameters

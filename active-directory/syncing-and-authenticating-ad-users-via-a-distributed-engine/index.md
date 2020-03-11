@@ -1,6 +1,6 @@
-[title]: # "Syncing and Authenticating AD Users via a Distributed Engine"
-[tags]: # "Syncing AD Users"
-[priority]: # "70"
+[title]: # (Syncing and Authenticating AD Users via a Distributed Engine)
+[tags]: # (Syncing AD Users)
+[priority]: # (70)
 
 # Syncing and Authenticating AD Users via a Distributed Engine
 

@@ -1,6 +1,6 @@
-[title]: # "5. Backups"
-[tags]: # "Backup"
-[priority]: # "50"
+[title]: # (5. Backups)
+[tags]: # (Backup)
+[priority]: # (50)
 
 # Step 5: Backups
 

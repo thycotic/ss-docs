@@ -1,6 +1,6 @@
-[title]: # "Restricting IP Addresses"
-[tags]: # "Restricting IP Addresses"
-[priority]: # "11"
+[title]: # (Restricting IP Addresses)
+[tags]: # (Restricting IP Addresses)
+[priority]: # (11)
 
 # Restricting IP Addresses
 

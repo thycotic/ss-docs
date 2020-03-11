@@ -1,6 +1,6 @@
-[title]: # "Release Notes"
-[tags]: # "Release Notes"
-[priority]: # "5000"
+[title]: # (Release Notes)
+[tags]: # (Release Notes)
+[priority]: # (5000)
 
 # Release Notes
 

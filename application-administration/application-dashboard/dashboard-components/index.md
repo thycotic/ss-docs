@@ -1,6 +1,6 @@
-[title]: # "Dashboard Components"
-[tags]: # "Dashboard, Widget"
-[priority]: # "10"
+[title]: # (Dashboard Components)
+[tags]: # (Dashboard, Widget)
+[priority]: # (10)
 
 # Dashboard Components
 

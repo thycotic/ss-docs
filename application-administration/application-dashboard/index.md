@@ -1,6 +1,6 @@
-[title]: # "Application Dashboard"
-[tags]: # "Dashboard, Widget"
-[priority]: # "40"
+[title]: # (Application Dashboard)
+[tags]: # (Dashboard, Widget)
+[priority]: # (40)
 
 # Application Dashboard
 

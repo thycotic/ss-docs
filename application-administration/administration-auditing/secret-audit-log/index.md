@@ -1,6 +1,6 @@
-[title]: # "Secret Audit Log"
-[tags]: # "Secret Audit Log"
-[priority]: # "20"
+[title]: # (Secret Audit Log)
+[tags]: # (Secret Audit Log)
+[priority]: # (20)
 
 # Secret Audit Log
 

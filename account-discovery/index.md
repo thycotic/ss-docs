@@ -1,6 +1,6 @@
-[title]: # "Secret Server Discovery"
-[tags]: # "Discovery"
-[priority]: # "1500"
+[title]: # (Account Discovery)
+[tags]: # (Account Discovery)
+[priority]: # (1500)
 
 # Account Discovery
 

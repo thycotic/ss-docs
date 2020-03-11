@@ -1,6 +1,6 @@
-[title]: # "Understanding Active Directory Automatic User Management"
-[tags]: # "AD, Active Directory"
-[priority]: # "30"
+[title]: # (Understanding Active Directory Automatic User Management)
+[tags]: # (Active Directory)
+[priority]: # (30)
 
 # Understanding Active Directory Automatic User Management
 
@@ -41,4 +41,4 @@ Newly-added users remain enabled until the first synchronization after the confi
 
 1. Rupert logs in to SS several times per month.
 1. The defined number of months for Automatic User Management to disable his account is never reached.
-1. Rupert’s account stays current and his license remains his. The entire process is invisible to Rupert.
+1. Rupert's account stays current and his license remains his. The entire process is invisible to Rupert.
