@@ -67,7 +67,7 @@ In addition to those, ASR includes these enhanced video playback features:
 >**Note:** The Mac protocol handler does not yet support this feature, so any recordings created with it are converted to the chosen legacy video codec format. We recommend H.264/MP4.
 >You can set the advanced session recording agent to “Record All Sessions.” If someone logs into a server directly without launching from SS, or even logs in at the console, the full session is recorded, including metadata.
 >
->**Note:** See [Secret Server Advanced Session-Recording Agent Installation](https://thycotic.force.com/support/s/article/SS-INST-EXT-Adv-Session-Rec-Agent) for details.
+>**Note:** See [Secret Server Advanced Session-Recording Agent Installation](https://thycotic.force.com/support/s/article/SS-INST-EXT-Adv-Session-Rec-Agent) (KBA) for details.
 
 ## Session Recording Tab
 
@@ -85,4 +85,4 @@ The Session Recording tab contains the following configuration options:
 
 > **Note:** The Microsoft Video 1 codec is for testing only and does not support in browser playback. Sessions encoded with Microsoft Video 1 can still be downloaded for review.
 
-For details on the settings in the Login and "Local User Passwords" tab, see [Configuring Users](#Configuring-Users).
+For details on the settings in the Login and "Local User Passwords" tab, see [Configuring Users](../users/Configuring-Users/index.md).

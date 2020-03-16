@@ -18,4 +18,4 @@ To delete a workflow template:
 
 1. Click the **Yes, Delete** button.
 
-> **Note:** Because workflows based on the template may still be in play, the template is not completely deleted. Instead, it is inactivated. You can reactivate the template later. See [Accessing the Workflow Designer](#accessing-the-workflow-designer)."
+> **Note:** Because workflows based on the template may still be in play, the template is not completely deleted. Instead, it is inactivated. You can reactivate the template later. See [Accessing the Workflow Designer](../accessing-the-workflow-designer/index.md)."

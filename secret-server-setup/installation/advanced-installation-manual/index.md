@@ -32,7 +32,7 @@ Open Internet Information Services (IIS) Manager* and create a new application p
    > **Note:** The SS installer sets the application pool to default to the system Network Service account.  Follow [these instructions](https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB) if you selected Windows Authentication Mode during the SQL Installation process. To use Windows Authentication you must use an Active Directory service account to run the application pool in IIS. We recommend this as a security best practice.
    
 1. Follow [these instructions](https://thycotic.force.com/support/s/article/Changing-IIS-to-not-stop-worker-process-in-IIS-7-and-8) to set the Idle Timeout and Regular Timeout settings to 0 for the application pool in IIS.
-1. Install SS as either a virtual directory or as a website:
+1. Install SS as either a virtual directory (4a) or as a website (4b):
 
 ### Step 4a: Installing Secret Server as a Virtual Directory
 

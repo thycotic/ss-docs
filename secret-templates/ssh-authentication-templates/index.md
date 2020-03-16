@@ -12,4 +12,4 @@ The SSH Key template is included by default and can be used to store SSH keys th
 
 The **Unix Account (SSH Key Rotation)** and **Unix Privileged Account (SSH Key Rotation)** secret templates use password changers that change the public key in the account's `authorized_keys` file as well as change the password on the account. SS ships with a password changer and custom command sets that allow an account to change its own public key and password, and a password changer and custom command sets that changes a user's public key and password using a privileged account. These scripts can be customized for different Unix environments.
 
-For more information about SSH Key Rotation, see the [SSH Key Rotation](https://thycotic.force.com/support/s/article/SSH-Key-Rotation) and [SSH Key Rotation Quick Start](https://thycotic.force.com/support/s/article/SSH-Key-Rotation-Quick-Start).
+For more information about SSH Key Rotation, see the [SSH Key Rotation](https://thycotic.force.com/support/s/article/SSH-Key-Rotation) (KBA) and [SSH Key Rotation Quick Start](https://thycotic.force.com/support/s/article/SSH-Key-Rotation-Quick-Start) (KBA).

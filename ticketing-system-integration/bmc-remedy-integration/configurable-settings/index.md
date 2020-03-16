@@ -12,7 +12,7 @@ Incident Management: Service Incident request cannot be closed or canceled. Chan
 
 ## View Ticket URL Template
 
-The format of the URL to be used for viewing the ticket. This is placed in the audit log so you can easily view the corresponding ticket from SS. For details on this format, see [View Ticket URL Template Format](https://updates.thycotic.net/links.ashx?ViewTicketUrlExplanation) (KB). Depending on your version of BMC Remedy, the URL to link directly to a request may be slightly different.
+The format of the URL to be used for viewing the ticket. This is placed in the audit log so you can easily view the corresponding ticket from SS. For details on this format, see [View Ticket URL Template Format](https://updates.thycotic.net/links.ashx?ViewTicketUrlExplanation) (KBA). Depending on your version of BMC Remedy, the URL to link directly to a request may be slightly different.
 
 Incident management:
 

@@ -8,7 +8,7 @@
 
 - **System Credentials:** The system credentials are specific to your ticketing system. Any secret using the username and password extended mapping can be used as your system credential. Additional arguments can be populated from this text-entry field on this secret and referenced in your script.
 
-- **Ticket Number Format Pattern (Regex):** Before making a call to the PowerShell script you can have SS validate the number matches a pattern. For example, your incident numbers might all be prefixed with "INC" and you want to ensure they enter this prefix. See [Setting a Ticket Pattern Regex](https://updates.thycotic.net/links.ashx?TicketPatternExplanation) (KB).
+- **Ticket Number Format Pattern (Regex):** Before making a call to the PowerShell script you can have SS validate the number matches a pattern. For example, your incident numbers might all be prefixed with "INC" and you want to ensure they enter this prefix. See [Setting a Ticket Pattern Regex](https://updates.thycotic.net/links.ashx?TicketPatternExplanation) (KBA).
 
 - **Ticket Number Validation Error Message:** The error message to display to the user when their entered ticket number fails the validation pattern regex.
 

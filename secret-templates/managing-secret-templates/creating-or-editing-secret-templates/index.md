@@ -37,10 +37,10 @@ These settings are available:
 
 - **Secret Template Name** check box.
 - **Secret Template Icon** link: Click to change the icon displayed for the template.
-- **Name Pattern** text box. See [Template Naming Patterns](#Template-Naming-Patterns).
-- **Name Pattern Error Message** text box. See [Template Naming Patterns](#Template-Naming-Patterns).
+- **Name Pattern** text box. See [Template Naming Patterns](../../Template-Naming-Patterns/index.md).
+- **Name Pattern Error Message** text box. See [Template Naming Patterns](../../Template-Naming-Patterns/index.md).
 - **Keep Secret Name History?** check box: If Keep Secret Name History is enabled, SS keeps the specified number of entries for viewing. This feature creates a record of every name used when a new secret is created.
-- **Expiration Enabled?** check box: Secret templates allow expiration on certain text-entry fields. When the check box is selected, an expiration time interval can be specified for a selected text-entry field using the dropdown menu. With this option enabled and a time duration specified, SS begins providing alerts if the secret text-entry field is not changed within the specified expiration requirements. See [Secret Expiration](#secret-expiration).
+- **Expiration Enabled?** check box: Secret templates allow expiration on certain text-entry fields. When the check box is selected, an expiration time interval can be specified for a selected text-entry field using the dropdown menu. With this option enabled and a time duration specified, SS begins providing alerts if the secret text-entry field is not changed within the specified expiration requirements.
 - **Validate Password Requirements on Create?** check box: Ensure requirements are met on secret creation.
 - **Validate Password Requirements on Edit?** check box: Ensure requirements are met when editing secret.
 - **Field Displayed on Basic Home** dropdown list box: Choose the field that appears on the Basic Home view.
@@ -49,9 +49,9 @@ Click the **Save** button. The Secret Template Designer page reappears.
 
 Select the following buttons to further configure the secret template:
 
-- **Edit Passwords Button:** Only visible for templates that contain a text-entry field that is of the password type. It is used to alter the minimum password length, as well as the character set used, for the auto-generation of the secret's password. See [Editing or Deleting Secrets](#editing-or-deleting-secrets) for further details on password auto-generation.
-- **Configure Password Changing Button:** Used to enable RPC on these secrets. For details, see [Remote Password Changing](#remote-password-changing).
-- **Configure Launcher Button:** Used to enable Remote Desktop or PuTTy Launcher or custom launchers on these secrets. For details, see [Secret Launchers](#secret-launchers).
+- **Edit Passwords Button:** Only visible for templates that contain a text-entry field that is of the password type. It is used to alter the minimum password length, as well as the character set used, for the auto-generation of the secret's password. See [Creating Secrets](../../../secret-management/procedures/creating-secrets/index.md) for further details on password auto-generation.
+- **Configure Password Changing Button:** Used to enable RPC on these secrets. For details, see [Remote Password Changing](../../../remote-password-changing/index.md).
+- **Configure Launcher Button:** Used to enable Remote Desktop or PuTTy Launcher or custom launchers on these secrets. For details, see [Secret Launchers](../../../secret-launchers/index.md).
 - **Configure Extended Mappings Button:** Extended Mappings allows you to tie a text-entry field value to a SS defined system type for additional functionality. For example, you may have a generic password secret template that has a username and password text-entry field. For purposes of looking up credentials, such as a ticket system authentication secret, SS needs to know that actual type of the text-entry fields since the text-entry field name can be custom. Extended mappings available are:
 - **SSH Private Key:** Defines which text-entry fields make up the SSH Key components of Private Key, Private Key Passphrase, and Public Key.
 - **Username and Password:** Defines which text-entry fields contain the username and password.

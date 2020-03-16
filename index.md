@@ -1,5 +1,5 @@
 [title]: # (Welcome)
-[tags]: # ()
+[tags]: #
 [priority]: # (1)
 
 # Welcome to Secret Server's Documentation

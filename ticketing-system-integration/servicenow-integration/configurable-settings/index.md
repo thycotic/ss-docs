@@ -6,7 +6,7 @@
 
 ## View Ticket URL Template
 
-The format of the URL to be used for viewing the ticket. This appears in the audit log so you can easily view the corresponding ticket from SS. For details on this format, see [View Ticket URL Template Format](https://updates.thycotic.net/links.ashx?ViewTicketUrlExplanation) (KB).
+The format of the URL to be used for viewing the ticket. This appears in the audit log so you can easily view the corresponding ticket from SS. For details on this format, see [View Ticket URL Template Format](https://updates.thycotic.net/links.ashx?ViewTicketUrlExplanation) (KBA).
 
 Incident management: `https://<instance name>.service-now.com/nav_to.do?uri=incident.do?sysparm_query=number=$TICKETID`
 
