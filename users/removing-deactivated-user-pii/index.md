@@ -19,25 +19,25 @@ To address this, SS has a button that automatically removes most PII for any dea
 1. Click the user name link for the desired user. The View User Page appears.
 
 1. Click the **Remove Personally Identifiable Information** button. A confirmation dialog box appears.
-  
-   > **Important:** Once you confirm, the user cannot log on SS. Click the Cancel button if you are not positive this is what you want to do.
-   
-   Clicking the OK button will change these to random values:
-   
-   - Username 
-   - Display name
-   - Password
-   - Personal folder name
-   - Personal group name
-   - RADIUS username
-   
-   In addition:
-   
-   - The user’s AD GUID is cleared
-   - The user’s email address is removed from their record
-   - The user’s name is replaced with “\<redacted\>" in event audits
-   - The PII removal is recorded in the user's audit
-   
+    
+    > **Important:** Once you confirm, the user cannot log on SS. Click the Cancel button if you are not positive this is what you want to do.
+    
+    Clicking the OK button will change these to random values:
+    
+    - Username 
+    - Display name
+    - Password
+    - Personal folder name
+    - Personal group name
+    - RADIUS username
+    
+    In addition:
+    
+    - The user's AD GUID is cleared
+    - The user's email address is removed from their record
+    - The user's name is replaced with "\<redacted\>" in event audits
+    - The PII removal is recorded in the user's audit
+    
 1. Click the **OK** button. The removal begins. Once complete, the Remove PII button disappears for that user.
 
 1. (Optional) Run a query that scans the entire SS database for the removed strings. You may want to do this because the process cannot find *all* potential instances of USER PII throughout SS, such as that in secret names or notes.

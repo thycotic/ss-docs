@@ -16,6 +16,7 @@
 | ASCII                         | _American Standard Code for Information Interchange_         |
 | ASP                           | _Advanced Server Pages_                                      |
 | AWS                           | _Amazon Web Services_                                        |
+| CAC                           | _Common Access Card_                                        |
 | CEF                           | _Common Event Format_                                        |
 | CHG                           | _Change_                                                     |
 | CIDR                          | _Classless Inter-Domain Routing_                             |
@@ -52,6 +53,7 @@
 | PCI                           | _Payment Card Industry_                                      |
 | PDF                           | _Portable Document Format_                                   |
 | PII                           | *Personally Identifiable Information*                        |
+| PIV                           | _Personal Identity Verification_                                |
 | PuTTy                         | _Popular SSH and Telnet Client_                              |
 | QR                            | _Quick Response_ (code)                                      |
 | RADIUS                        | _Remote Authentication Dial-In User Service_                 |
