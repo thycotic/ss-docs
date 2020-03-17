@@ -1,6 +1,6 @@
 [title]: # (User Preferences)
 [tags]: # (User Preferences)
-[priority]: # (80)
+[priority]: #
 
 # User Preferences
 

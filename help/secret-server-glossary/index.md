@@ -30,6 +30,7 @@
 | ESX                           | _Elastic Sky X_                                              |
 | FIPS                          | _Federal Information Processing Standard_                    |
 | FQDN                          | _Fully Qualified Domain Name_                                |
+| GDPR                          | *General Data Protection Regulation*                         |
 | HSM                           | _Hardware Security Module_                                   |
 | HSTS                          | _HTTP Strict Transport Security_                             |
 | IAM                           | *Identity and Access Management*                             |
