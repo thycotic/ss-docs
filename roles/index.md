@@ -1,10 +1,10 @@
-[title]: # (Roles)
-[tags]: # (Roles)
-[priority]: # (1300)
+[title]: # "Roles"
+[tags]: # "Roles"
+[priority]: #
 
 # Roles
 
-Modeled after the role-based access control (RBAC) mechanism, role-based security (RBS) is SS's method of regulating permission to system access. Each user and group must be assigned to a role. SS ships with three roles: Administrator, User, and Read-Only User. Each role contains various permissions to match the job function of the user. With RBS, strict granular access to SS is ensured. A list of role permissions and their descriptions can be found in [this KB article](https://thycotic.force.com/support/s/article/List-of-Permissions-for-a-Role).
+Modeled after the role-based access control (RBAC) mechanism, role-based security (RBS) is SS's method of regulating permission to system access. Each user and group must be assigned to a role. SS ships with three roles: Administrator, User, and Read-Only User. Each role contains various permissions to match the job function of the user. With RBS, strict granular access to SS is ensured. A list of role permissions and their descriptions can be found in the [Secret Server Role List](role-list/index.md).
 
 You can assign multiple permissions to a role. For example, you could assign Administer Users, Edit Secret, Own Secret, and View Active Directory permissions to a role. That role can then be assigned to a user or group.
 
