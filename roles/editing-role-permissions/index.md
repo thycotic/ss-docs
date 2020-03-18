@@ -1,5 +1,5 @@
-[title]: # "Editing Role Permissions"
-[tags]: # "Roles"
+[title]: # (Editing Role Permissions)
+[tags]: # (Roles)
 [priority]: #
 
 # Editing Role Permissions

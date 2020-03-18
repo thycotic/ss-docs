@@ -1,7 +1,7 @@
 
-[title]: # "Built-In Launcher Types"
-[tags]: # "Launcher"
-[priority]: # "11"
+[title]: # (Built-In Launcher Types)
+[tags]: # (Launcher)
+[priority]: # (11)
 
 # Enabling CAC/PIV Smart Cards for Secret Launchers
 

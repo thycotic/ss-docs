@@ -1,5 +1,5 @@
-[title]: # "Secret Server Role List"
-[tags]: # "Roles"
+[title]: # (Secret Server Role List)
+[tags]: # (Roles)
 [priority]: #
 
 # Secret Server Role List
