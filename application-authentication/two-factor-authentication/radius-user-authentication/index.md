@@ -1,6 +1,6 @@
 [title]: # (RADIUS User Authentication)
-[tags]: # (2FA)
-[priority]: # (40)
+[tags]: # (Authentication, Credentials, RADIUS, 2FA)
+[priority]: #
 
 # RADIUS User Authentication
 

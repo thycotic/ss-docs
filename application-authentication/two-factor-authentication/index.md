@@ -1,6 +1,6 @@
 [title]: # (Two-Factor Authentication)
-[tags]: # (2FA)
-[priority]: # (40)
+[tags]: # (Authentication, Credentials, 2FA)
+[priority]: #
 
 # Two-Factor Authentication
 

@@ -1,6 +1,6 @@
 [title]: # (Enabling TOTPs for Launchers)
-[tags]: # (TOTP)
-[priority]: # (50)
+[tags]: # (Authentication, Credentials, TOTP)
+[priority]: #
 
 # Enabling TOTPs for Launchers
 

@@ -1,6 +1,6 @@
 [title]: # (SAML)
-[tags]: # (SAML)
-[priority]: # (20)
+[tags]: # (SAML, Authentication, Credentials)
+[priority]: #
 
 # SAML
 

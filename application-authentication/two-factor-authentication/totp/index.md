@@ -1,6 +1,6 @@
 [title]: # (TOTP)
-[tags]: # (2FA)
-[priority]: # (60)
+[tags]: # (Authentication, Credentials, 2FA)
+[priority]: #
 
 # TOTP
 

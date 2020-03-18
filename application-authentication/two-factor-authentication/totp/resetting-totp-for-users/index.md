@@ -1,6 +1,6 @@
 [title]: # (Resetting TOTP for Secret Server Users)
-[tags]: # (TOTP)
-[priority]: # (30)
+[tags]: # (Authentication, Credentials, TOTP)
+[priority]: #
 
 # Resetting TOTP for Secret Servere Users
 

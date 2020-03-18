@@ -1,6 +1,6 @@
 [title]: # (Viewing a TOTP for a Web Secret)
-[tags]: # (TOTP)
-[priority]: # (60)
+[tags]: # (Authentication, Credentials, TOTP)
+[priority]: #
 
 # Viewing a TOTP for a Web Secret
 

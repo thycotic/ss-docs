@@ -1,6 +1,6 @@
 [title]: # (Enabling TOTP for Secret Server Users)
-[tags]: # (TOTP)
-[priority]: # (10)
+[tags]: # (Authentication, Credentials, TOTP)
+[priority]: #
 
 # Enabling TOTP for Secret Server Users
 

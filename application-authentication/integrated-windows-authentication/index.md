@@ -1,6 +1,6 @@
 [title]: # (Integrated Windows Authentication)
-[tags]: # (Integrated Windows Authentication)
-[priority]: # (10)
+[tags]: # (Integrated Windows Authentication, IWA, Authentication, Credentials)
+[priority]: #
 
 # Integrated Windows Authentication
 

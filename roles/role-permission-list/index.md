@@ -22,7 +22,7 @@ Allows a user to make a custom audit entry when accessing a Secret using the web
 **Administer Active Directory**
 Allows a user to view domains, edit existing domains, delete domains, and add  new domains. Also allows a user to force synchronization or set the  synchronization interval.
 
-**Administer Backup**
+**Administer Back"p**""
 Allows a  user to view and configure automated backups for Secret Server. Users  with this role permission can change the backup path, disable backups,  and set the backup schedule.
 
 **Administer Configuration**
