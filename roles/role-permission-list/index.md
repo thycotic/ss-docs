@@ -1,12 +1,12 @@
-[title]: # (Secret Server Role List)
-[tags]: # (Roles)
+[title]: # (Secret Server Role Permission List)
+[tags]: # (Roles,Permissions)
 [priority]: #
 
-# Secret Server Role List
+# Secret Server Role Permissions List
 
 ## Overview  
 
-Secret Server uses role-based access control (RBAC) to regulate permissions. The roles are assigned to users or groups. A complete list appears below:
+Secret Server uses role-based access control (RBAC) to regulate permissions. The roles are assigned to users or groups. A complete list of the permissions available to roles appears below:
 
 ## Complete List
 
