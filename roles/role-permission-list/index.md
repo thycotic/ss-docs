@@ -291,11 +291,11 @@ Allows a user to view and edit all secrets in the system, regardless of  permiss
 Users can view all users, groups, and sites, regardless of team affiliation.  Essentially, teams do not exist for the users with this permission, and  the Teams page is not available to them. The default user role has this  permission.
 
 **User Audit Expire Secrets**
-''
+
 Allows a user to  view the "User Audit" report, which shows all secrets that have been  accessed by a particular user in a specified date range. Also allows the user to force expiration on all these secrets, which would make Secret  Server automatically change the password.
 
 **View About**
-''
+
 Allows a user to view the "About" page from the Help menu, which links to  external resources such as Technical Support and the Thycotic blog.
 
 **View Active Directory**
@@ -492,4 +492,4 @@ Allows a user to view which users exist in the system.
 
 **Web Services Impersonate**
 
-Allows a user to send an approval request to act as another user within their  organization when accessing Secret Server programmatically.  
+Allows a user to send an approval request to act as another user within their  organization when accessing Secret Server programmatically.
