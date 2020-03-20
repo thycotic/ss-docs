@@ -1,6 +1,6 @@
 [title]: # (Alert Notification Center)
-[tags]: # (Alert)
-[priority]: # (10)
+[tags]: # (Alert, Inbox)
+[priority]: #
 
 # Alert Notification Center (Inbox)
 

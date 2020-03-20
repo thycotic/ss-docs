@@ -1,6 +1,6 @@
 [title]: # (System Log)
 [tags]: # (System Log)
-[priority]: # (40)
+[priority]: #
 
 # System Log
 

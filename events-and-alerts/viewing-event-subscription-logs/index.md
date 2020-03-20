@@ -1,6 +1,6 @@
 [title]: # (Viewing Event Subscription Logs)
 [tags]: # (Viewing Event Subscription Logs)
-[priority]: # (50)
+[priority]: #
 
 # Viewing Event Subscription Logs
 

@@ -1,6 +1,6 @@
 [title]: # (Event Subscription Page)
 [tags]: # (Event Subscription)
-[priority]: # (30)
+[priority]: #
 
 # Event Subscription Page
 
