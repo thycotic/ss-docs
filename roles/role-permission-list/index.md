@@ -134,6 +134,10 @@ Allows a user to view and edit server nodes and clustering settings.
 
 Allows a user to view and edit character sets and password requirements.
 
+**Administer Pipelines**
+
+Allows a user to create, edit, and remove event pipelines and event pipeline policies.
+
 **Administer Remote Password Changing**
 
 Allows a user to turn Heartbeat and Remote Password Changing on and off  globally. Also allows users to create new password changers and install  password changing agents on remote machines.
@@ -206,6 +210,10 @@ Allows a user to import Secrets from an XML file. Users with the this  permissio
 
 Allows a user be challenged by Privileged Behavior Analytics if their behavior deviates from their normal behavior and meets certain requirements set  by Privileged Behavior Analytics.
 
+**Assign Pipelines**
+
+Allows the user to assign an event pipeline policy to secret policies, or folders.
+
 **Assign Secret Policy**
 
 Allows a user to assign Secret Policies to folders and Secrets.
@@ -213,7 +221,6 @@ Allows a user to assign Secret Policies to folders and Secrets.
 **Bypass SAML Login**
 
 Allows a user to login with local account without using SAML.
-''
 **Copy Secret**
 
 Allows a user to copy secrets when that user also has Own Secret role permission.
@@ -413,6 +420,10 @@ Allows a user to view, but not edit, the Secret Server web server nodes.
 **View Password Requirements**
 
 Allows a user to view character sets and password requirements.
+
+**View Pipelines**
+
+Allows a user to view event pipeline policies and policy activities.
 
 **View Remote Password Changing**
 

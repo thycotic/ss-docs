@@ -8,6 +8,8 @@
 
 ## Secret Server Release Notes
 
+
+
 - [Secret Server 10.7.000059](secret-server/ss-rn-10-7-000059.md)
 - [Secret Server 10.7.000002](https://thycotic.force.com/support/s/article/Secret-Server-10-7-000002-Legacy-Release-Notes)
 - [Secret Server 10.7.000000](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-10-7-000000-Legacy-Release-Notes)

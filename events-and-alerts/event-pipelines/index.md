@@ -16,7 +16,7 @@ An EP is a single named group of triggers, filters, and tasks. The same EP can b
 
 ### Event Pipeline Policies
 
-A EP *policy* is a named grouping of EPs. EP policies can target secret policies or folders. EP policies have no effect if the EP policy has no target. Similarly, an EP policy with no assigned EPs does nothing.
+An EP *policy* is a named grouping of EPs. EP policies can target secret policies or folders. EP policies have no effect if the EP policy has no target. Similarly, an EP policy with no assigned EPs does nothing.
 
 ### Event Pipeline Filters
 
@@ -36,21 +36,19 @@ EP *Filters* are parameters that limit when an EP runs. All Filters have setting
 - Secret Template
 - Site
 
-Most filters will prompt you for additional information when you select them.
+All filters prompt you for additional information when you select them.
 
 ### Event Pipeline Policy Targets
 
 EP policy *targets* are SS folders or secret policies that are the *subject* and EP policy is applied to. The secrets inside the folders or secrets under the secret policies trigger the EPs in an EP policy. As targets, folders are not recursive—only the secrets directly in the folder can trigger an EP. 
 
-==This terminology confused me at first. Generally, targets are the receiver of an action, so one might assume in this case that a target is, well, the target of a task, which it is not. An EP policy *applies* to a target and may well “target” other things the EPs act on. As your description itself suggests, perhaps *subject* is a better term for this?==
-
-> **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy.
+> **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy—the policy targets the secret in the policy or folder to trigger the EPs to process.
 
 ### Event Pipeline Tasks
 
 EP *tasks* are actions, which are triggered in an EP, assuming any filtering conditions are met. 
 
-> **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy.
+> **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy—the policy targets the secret in the policy or folder to trigger the EPs to process.
 
 The tasks are:
 
@@ -152,8 +150,6 @@ There are three permissions:
 - **Assign Pipelines:** Allows the user to assign an EP policy to secret policies, or folders.
 - **View Pipelines:** Allows the user to view EP policies and policy activities.
 
-==Do I need to add these to the list of SS permissions?==
-
 ## Procedures
 
 ### Event Pipelines
@@ -188,7 +184,6 @@ To create a new EP:
 
    - Currently triggers are centralized around events that are linked to a secret.
    - You can add multiple triggers.
-   - The view and “copy as” triggers occur whenever the target secret policy or folder is viewed or copied.
    - You can limit when the EP runs by adding filters.
    - Multiple triggers are logically ORed (not XORed) together. Each trigger is considered individually, and only one needs to apply for the EP to run—if concurrent triggers do not apply, it does not matter. If multiple triggers do apply, the EP will only run once per EP policy.
 1. Click the **Next** button. The Choose Filters page of the wizard appears.
@@ -199,7 +194,6 @@ To create a new EP:
 
    - Whereas triggers focused on secrets, filters can access secret and user information.
    - Because the same filter can differ by its settings, you can add the same filter multiple times to an EP.
-   - If an EP has a view trigger, you can configure it to only run the task when a user with a specific role views the secret. Similarly, you can create a filter to only run a task if the secret is on a specific site.
    - Filters are logically ANDed together—all filters apply at once and all matter.
 1. Click the **Next** button. The Choose Tasks page of the wizard appears.
 

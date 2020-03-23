@@ -86,7 +86,7 @@
 | UNC                           | _Universal Naming Convention_                                |
 | Unlimited Administration Mode | An emergency, break-the-glass mode that gives administrators access to all content within the system, regardless of explicit permissions. Access to Unlimited Administration Mode is controlled using role permissions. |
 | URL                           | _Uniform Resource Locator_                                   |
-| VM                            | Virtual Machine                                              |
-| VPN                           | Virtual Private Network                                      |
+| VM                            | _Virtual Machine_                                              |
+| VPN                           | _Virtual Private Network_                                      |
 | WS                            | _Web Services_                                               |
-| XML                           | eXtensible Markup Language                                   |
+| XML                           | _eXtensible Markup Language_                                   |
