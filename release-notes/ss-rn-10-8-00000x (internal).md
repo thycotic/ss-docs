@@ -1,6 +1,6 @@
 [title]: # (Secret Server Release Notes 10.8.00000x)
 [tags]: # (Release Notes)
-[priority]: # (30)
+[priority]: # ()
 [display]: # ()
 
 # Secret Server: 10.8.00000x Release Notes
