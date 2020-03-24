@@ -1,6 +1,6 @@
 [title]: # (Basic Installation)
 [tags]: # (Install)
-[priority]: # (10)
+[priority]: #
 
 # Basic (Automatic) Installation
 

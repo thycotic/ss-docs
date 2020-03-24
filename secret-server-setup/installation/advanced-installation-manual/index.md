@@ -1,6 +1,6 @@
 [title]: # (Advanced Installation)
 [tags]: # (Install)
-[priority]: # (20)
+[priority]: #
 
 # Advanced (Manual) Installation
 

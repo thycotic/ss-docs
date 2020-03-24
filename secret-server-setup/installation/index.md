@@ -1,6 +1,6 @@
 [title]: # (Installation)
 [tags]: # (Setup,Install)
-[priority]: # (40)
+[priority]: #
 
 # Installation
 

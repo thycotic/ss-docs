@@ -1,6 +1,6 @@
 [title]: # (Licensing)
 [tags]: # (License)
-[priority]: # (20)
+[priority]: #
 
 # Licensing
 

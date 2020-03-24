@@ -1,3 +1,7 @@
+[title]: # (Configuring Session Recording)
+[tags]: # (Session Recording)
+[priority]: # (15)
+
 # Configuring Session Recording
 
 ## Overview
@@ -52,7 +56,47 @@ To view a session, click the camera icon to the right of it. This takes you to t
 
 As noted above, if using the "On-Demand Video Processing" option, Chrome and Firefox can play the video. If you try to view an on-demand video using Internet Explorer or Edge, a warning message appears.
 
-If you click the Request Video Processing button, the recording is converted from WEBM to H.264 as soon as possible, allowing IE/Edge to play it back.
+If you click the **Request Video Processing** button, the recording is converted from WebM to H.264 as soon as possible, allowing IE/Edge to play it back.
+
+### Extending Session Recording with Custom Launchers
+
+You can configure SS with custom launchers to run arbitrary programs, which can then be recorded by session recording. To do so:
+
+1. Define a custom launcher by going to **Admin \> Secret Templates \> Configure Launchers**. See [Web Launchers](../../secret-launchers/web-launchers/index.md) for more information.
+1. Associate the launcher with a secret template:
+   1. Go to **Admin \> Secret Templates**. The Manage Secret Templates page appears.
+   1. Click the template dropdown list and select the desired template.
+   1. Click the **Configure Launchers** button. The Launcher Types page appears.
+   1. Click the desired launcher's name. Its General Settings page appears.
+   1. Click the **Edit** button. 
+   1. Click to select the **Active** check box.
+   1. Click the **Save** button. 
+
+Secret Server 10.8 added two new options to custom launchers:
+
+#### Record Multiple Windows Option 
+
+If this option is not checked, only the main window of the main launcher process will be recorded (this was always the behavior prior to Secret Server 10.8). If it is checked, multiple windows as well as child processes, are recorded.
+
+Without this enabled, the main window of the main process sometimes does not show anything useful, depending on the application, resulting in a blank recording. With this enabled, recordings are generally more accurate. This applies to applications that can open or undock separate windows or those that launch additional processes, such as an application launching PowerShell and then launching other applications from the command prompt.
+
+#### Record Additional Processes Option
+
+Here you can type an optional comma-separated list of processes to record if found, running under your same user account, that are not started or terminated by the custom launcher. "Record Multiple Windows" must be enabled for this option to be available. 
+
+In the example above of launching PowerShell and then opening Notepad, if "Record Multiple Windows" is enabled, both PowerShell and Notepad would be recorded automatically, because the OS can tell that Notepad is a child process of PowerShell. This even works multiple levels deep—for example, launching PowerShell, then the command prompt, and then launching in PowerShell again, finally followed by Notepad.
+
+In some cases, though, you may wish to record an additional process that was already running before the custom launcher was launched or may want to start running one later. To this end, any process names specified in this option are checked for periodically, and recording is attempted on them as well.
+
+#### Example
+
+If you were to run an X11 server such as Xming and then PuTTY with X11 forwarding:
+
+Process Name: `C:\Program Files\PuTTY\putty.exe`
+Process Arguments: `-X -ssh $MACHINE -l $USERNAME -pw $PASSWORD`
+Record Additional Processes: `Xming.exe`
+
+In this case, Xming would already be running before the launcher was used, and it would have no parent/child relationship with PuTTY at all. However, any windows it spawns would still be recorded, allowing the X11-forwarded applications to be recorded, not only the PuTTY window.
 
 ### Advanced Session Recording
 

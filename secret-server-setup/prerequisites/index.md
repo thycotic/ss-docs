@@ -1,6 +1,6 @@
 [title]: # (Prerequisites)
 [tags]: # (Prerequisites)
-[priority]: # (10)
+[priority]: #
 
 # Prerequisites
 
