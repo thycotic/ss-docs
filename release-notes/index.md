@@ -10,11 +10,11 @@
 
 ### Current
 
-[Secret Server 10.8.00000x](secret-server/ss-rn-10-8-00000x.md)
+[Secret Server 10.8.00000x](ss-rn-10-8-00000x.md)
 
 ### Legacy
 
-- [Secret Server 10.7.000059](secret-server/ss-rn-10-7-000059.md)
+- [Secret Server 10.7.000059](ss-rn-10-7-000059.md)
 - [Secret Server 10.7.000002](https://thycotic.force.com/support/s/article/Secret-Server-10-7-000002-Legacy-Release-Notes)
 - [Secret Server 10.7.000000](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-10-7-000000-Legacy-Release-Notes)
 - [Secret Server 10.6.000026 and 10.6.000027](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-10-6-000027-Legacy-Release-Notes)
