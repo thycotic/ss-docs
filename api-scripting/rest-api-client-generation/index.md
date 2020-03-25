@@ -10,7 +10,7 @@ This page describes how to generate several clients that can be used to access t
 
 1. Download and install nswagstudio ( https://github.com/RicoSuter/NSwag/wiki/NSwagStudio )
 
-1. Copy and paste the `swagger.json` file for “Documentation for token authentication.” This is located at:
+1. Copy and paste the `swagger.json` file for "Documentation for token authentication." This is located at:
    `{Your SecretServer Base Url}/Documents/restapi/OAuth/swagger.json`
 
 1. Suggested settings:
@@ -22,7 +22,7 @@ This page describes how to generate several clients that can be used to access t
 
 1. Copy output into a c# file in solution
 
-1. Copy and paste the swagger.json for “Documentation for REST API using bearer token authentication”
+1. Copy and paste the swagger.json for "Documentation for REST API using bearer token authentication"
 
 1. Located at {Your SecretServer Base Url}/Documents/restapi/TokenAuth/swagger.json
 
@@ -35,7 +35,7 @@ This page describes how to generate several clients that can be used to access t
 
 1.   Copy output into a C# file in solution
 
-``` c#
+``` csharp
 // Authenticate:
 var httpClient = new HttpClient();
 var tokenClient = new SecretServerAuthentication.Client("https://secretserver.url.local/ss", httpClient);
@@ -114,7 +114,7 @@ tokenauth-csharp/src/SecretServerTokenAuth/bin/Release/netstandard2.0/publish/*.
 
 10. Test the API. For example:
 
-```c#
+```csharp
 // set to the root of the Secret Server instance with no trailing slash
 const string basePath = "https://thycotic.com/SecretServer";
 
@@ -186,7 +186,7 @@ tokenauth-java/target/lib/*.jar
 
 6.   Test the JAR files:
 
-```c#
+```csharp
 /*
 need to import:
 import secretserver.oauth.api.AuthenticationApi;
@@ -343,7 +343,7 @@ wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/4.2.3
 
 ### Self-Signed or Other Invalid Certificates
 
-If you use an SSL certificate that is self-signed or otherwise not technically valid, OpenAPI Generator throws an error if you try to use a URL to `swagger.json` instead of a local file (or when using the Java client). To fix this, you need to import the certificate into Java’s certificate store. The following example commands are  for Windows, but the same concept applies to Mac and Linux as well.
+If you use an SSL certificate that is self-signed or otherwise not technically valid, OpenAPI Generator throws an error if you try to use a URL to `swagger.json` instead of a local file (or when using the Java client). To fix this, you need to import the certificate into Java's certificate store. The following example commands are  for Windows, but the same concept applies to Mac and Linux as well.
 
 > **Note:** The default password for the cacerts keystore is `changeit`.
 
