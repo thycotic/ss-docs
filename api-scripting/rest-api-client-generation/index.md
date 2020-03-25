@@ -8,9 +8,7 @@ Secret Server (SS) contains an OpenAPI Swagger specification file that describes
 
 > **Note:** Please use the article quick links on the right to jump to the section you are interested in.
 
-## Generating Clients
-
->**Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments. 
+## Generating Clients 
 
 ### C# Client Using NSwagStudio
 
@@ -47,8 +45,10 @@ var httpClient = new HttpClient();
 var tokenClient = new SecretServerAuthentication.Client("https://secretserver.url.local/ss", httpClient);
 var token = tokenClient.TokenAsync("username", "password", Grant_type.Password);
 var tokenResult = token.Result;
+
 // Set credentials (token):
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenResult.Access_token);
+
 // Call REST API:
 var client = new SecretServerRestClient.SecretsServiceClient("https://secretserver.url.local/ss/api/v1", httpClient);
 var search = client.SearchAsync(sortBy0_name: "lastHeartBeatStatus", sortBy0_direction:"asc");
@@ -56,6 +56,8 @@ var results = search.Result;
 ```
 
 ### C# or .NET Core Client Using OpenAPI Generator
+
+>**Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments.
 
 > **Note:** These instructions assume that you have Java and .NET Core installed on your machine. They should work on all systems, but the syntax will need to be tweaked for other shells.
 
@@ -118,25 +120,35 @@ tokenauth-csharp/src/SecretServerTokenAuth/bin/Release/netstandard2.0/publish/*.
 ```csharp
 // set to the root of the Secret Server instance with no trailing slash
 const string basePath = "https://thycotic.com/SecretServer";
+
 // DO NOT USE THIS IN PRODUCTION! this is an example for simplicity
 const string ssUsername = "myUsername";
 const string ssPassword = "myPassword";
+
 var oauthConfig = new SecretServerOAuth.Client.Configuration();
 var tokenAuthConfig = new SecretServerTokenAuth.Client.Configuration();
+
 oauthConfig.BasePath = basePath;
 tokenAuthConfig.BasePath = $"{basePath}/api/v1";
+
 var authApi = new AuthenticationApi(oauthConfig);
 var token = await authApi.AuthorizeAsync(ssUsername, ssPassword, "password");
+
 Console.WriteLine($"Token: {token.AccessToken}");
+
 // Do not use tokenAuthConfig.AccessToken
 // This method can be called repeatedly as the access token expires, old values will be overwritten
 tokenAuthConfig.AddApiKey("Authorization", $"{token.TokenType} {token.AccessToken}");
+
 var foldersApi = new FoldersApi(tokenAuthConfig);
 var folder = await foldersApi.GetAsync(11);
+
 Console.WriteLine(folder);
 ```
 
 ### Java Client Using OpenAPI Generator
+
+>**Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments.
 
 > **Note:** These instructions assume that you have Java configured on your machine. JDK 8 or greater is required. These instructions should work on all systems, but the syntax will need to be tweaked for other shells.
 
@@ -184,19 +196,26 @@ import secretserver.oauth.model.TokenResponse;
 import secretserver.tokenauth.api.FoldersApi;
 import secretserver.tokenauth.model.FolderModel;
 */
+
 // set to the root of the Secret Server instance with no trailing slash
 String basePath = "https://thycotic.com/SecretServer";
+
 // DO NOT USE THIS IN PRODUCTION! this is an example for simplicity
 String ssUsername = "myUsername";
 String ssPassword = "myPassword";
+
 secretserver.oauth.client.ApiClient oauthClient = secretserver.oauth.client.Configuration.getDefaultApiClient();
 secretserver.tokenauth.client.ApiClient tokenAuthClient = secretserver.tokenauth.client.Configuration.getDefaultApiClient();
+
 oauthClient.setBasePath(basePath);
 tokenAuthClient.setBasePath(basePath + "/api/v1");
+
 AuthenticationApi authApi = new AuthenticationApi(oauthClient);
 TokenResponse tokenResponse = authApi.authorize(ssUsername, ssPassword, "password"); // async methods are also available
 String token = tokenResponse.getAccessToken();
+
 System.out.println(token);
+
 tokenAuthClient.setApiKey(tokenResponse.getTokenType() + " " + token);
 FoldersApi foldersApi = new FoldersApi(tokenAuthClient);
 FolderModel folderModel = foldersApi.get(11, false, false);
@@ -204,6 +223,8 @@ System.out.println(folderModel);
 ```
 
 ### PowerShell Using OpenAPI Generator
+
+>**Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments.
 
 > **Note:** These instructions assume that you have Java configured on your machine. JDK 8 or greater is required. Only Windows is supported at this time, though PowerShell Core does work.
 
