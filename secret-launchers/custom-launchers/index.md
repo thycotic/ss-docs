@@ -22,7 +22,9 @@ To create a new custom launcher:
 
    ![1566850351170](images/1566850351170.png)
 
-1. Click the **Configure Launchers** button.
+1. Click the **Configure Launchers** button. The Launcher Types page appears:
+
+   ![image-20200324143210583](images/image-20200324143210583.png)
 
 1. Click the **New** button.  The Launcher page appears:
 

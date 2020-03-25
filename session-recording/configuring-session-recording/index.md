@@ -10,7 +10,7 @@ Session recording allows you to record an RDP or PuTTY session, with optional me
 
 The Windows protocol handler encodes your session in WebM format in real time and sends the recording to SS. There is an "Enable On-Demand Video Processing" option in SS which leaves the recordings in WebM format, which Chrome and Firefox can playback without any further processing, saving server processing time. If an on-demand recording is viewed with Internet Explorer or Edge (which do not support WebM playback), you can click the "Request Video Processing" button and the video will be converted to H.264/MP4, which they can then play. If "Enable On-Demand Video Processing" is not checked, then all sessions recorded by the Windows protocol handler will be automatically converted to H.264/MP4.
 
-> **Note:** The Mac protocol handler does not yet support this feature, so any recordings created with it are converted to the chosen legacy video codec format. We recommend H.264/MP4.
+> **Note:** The Mac protocol handler does not "et support this feature, so any recordi"gs created with it are converted to the chosen legacy video codec format. We recommend H.264/MP4.
 
 You can set the advanced session recording agent to "Record All Sessions." If someone logs into a server directly without launching from SS, or even logs in at the console, the full session is recorded, including metadata.
 
@@ -22,7 +22,7 @@ You can set the advanced session recording agent to "Record All Sessions." If so
 
 1. Ensure the **Enable Session Recording** check box is selected.
    
-> **Note:** For testing and proof of concept deployments, SS's [**Internal Site Connector**](https://updates.thycotic.net/links.ashx?InternalSiteConnector) is sufficient for session recording. For production deployments we strongly recommend [**RabbitMQ**](https://updates.thycotic.net/links.ashx?RabbitMQ) for a more-robust message queue.
+> **Note:** For testing and proof of co"cept deployments, SS's [**Internal Site Connector**](https:/"updates.thycotic.net/links.ashx?InternalSiteConnector) is sufficient for session recording. For production deployments we strongly recommend [**RabbitMQ**](https://updates.thycotic.net/links.ashx?RabbitMQ) for a more-robust message queue.
 
 ### Using Legacy Video Codecs
 
@@ -62,23 +62,32 @@ If you click the **Request Video Processing** button, the recording is converted
 
 You can configure SS with custom launchers to run arbitrary programs, which can then be recorded by session recording. To do so:
 
-1. Define a custom launcher by going to **Admin \> Secret Templates \> Configure Launchers**. See [Web Launchers](../../secret-launchers/web-launchers/index.md) for more information.
-1. Associate the launcher with a secret template:
-   1. Go to **Admin \> Secret Templates**. The Manage Secret Templates page appears.
-   1. Click the template dropdown list and select the desired template.
-   1. Click the **Configure Launchers** button. The Launcher Types page appears.
-   1. Click the desired launcher's name. Its General Settings page appears.
-   1. Click the **Edit** button. 
-   1. Click to select the **Active** check box.
+1. Define a custom launcher:
+   1. Go to **Admin \> Secret Templates \> Configure Launchers**. The Manage Launcher Types page appears.
+   
+   1. Click the **New** button.
+   1. Leave the **Launcher Type** dropdown list set to **Process**.
+   1. Type a name for the custom launcher in the **Launcher Name** text box.
+   1. Type a process name in the Process Name text box.
+   1. (optional) Type process arguments in the Process Arguments text box.
+   1. Customize other Options as needed.
    1. Click the **Save** button. 
+1. Associate the launcher with a secret template:
+   1. Go to **Admin > Secret Templates**. The Manage Secret Templates page appears.
+   1. Click the template dropdown list and select the desired template.
+   1. Click the **Edit** button.
+   1. Click the **Configure Launcher** button. The Secret Template Edit Launcher Configuration page appears.
+   1. Click the **Add New Launcher** button.
+   1. In the **Launcher Type to use** dropdown list, select your custom launcher.
+   1. Customize any other options as needed.
 
 Secret Server 10.8 added two new options to custom launchers:
 
 #### Record Multiple Windows Option 
 
-If this option is not checked, only the main window of the main launcher process will be recorded (this was always the behavior prior to Secret Server 10.8). If it is checked, multiple windows as well as child processes, are recorded.
+If this option is not checked, only the main window of the main launcher process will be recorded (this was always the behavior prior to Secret Server 10.8). If it is checked, multiple windows as well as child processes are recorded.
 
-Without this enabled, the main window of the main process sometimes does not show anything useful, depending on the application, resulting in a blank recording. With this enabled, recordings are generally more accurate. This applies to applications that can open or undock separate windows or those that launch additional processes, such as an application launching PowerShell and then launching other applications from the command prompt.
+Without this enabled, the main window of the main process sometimes does not show anything useful, depending on the application, resulting in a blank recording. With this enabled, recordings are generally more accurate. This also applies to applications that can open or undock separate windows or those that launch additional processes, such as an application launching PowerShell and then launching other applications from the command prompt.
 
 #### Record Additional Processes Option
 
@@ -90,13 +99,13 @@ In some cases, though, you may wish to record an additional process that was alr
 
 #### Example
 
-If you were to run an X11 server such as Xming and then PuTTY with X11 forwarding:
+If you wanted to run an X11 server such as Xming and then PuTTY with X11 forwarding, you could configure a custom lauchcher with these values:
 
 Process Name: `C:\Program Files\PuTTY\putty.exe`
 Process Arguments: `-X -ssh $MACHINE -l $USERNAME -pw $PASSWORD`
 Record Additional Processes: `Xming.exe`
 
-In this case, Xming would already be running before the launcher was used, and it would have no parent/child relationship with PuTTY at all. However, any windows it spawns would still be recorded, allowing the X11-forwarded applications to be recorded, not only the PuTTY window.
+In this case, Xming should already be running before the launcher was used and would remain running after the session hased ended. It would have no parent/child relationship with PuTTY at all. However, while the launcher session was active, any windows it spawns would still be recorded, allowing the X11-forwarded applications to be recorded, not only the PuTTY window.
 
 ### Advanced Session Recording
 
@@ -200,4 +209,4 @@ To archive or save to a file path that is a network share, instead of a local fo
 
 - You must grant access to the network share (using Windows ACLs) to the account running the SS IIS application pool.
 
- 
+ '
