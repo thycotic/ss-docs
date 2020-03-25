@@ -24,11 +24,9 @@ Secret Server (SS) contains an OpenAPI Swagger specification file that describes
 
 1. Generate output.
 
-1. Copy output into a c# file in solution
+1. Copy output into a c# file in solution.
 
-1. Copy and paste the swagger.json for "Documentation for REST API using bearer token authentication"
-
-1. Located at {Your SecretServer Base Url}/Documents/restapi/TokenAuth/swagger.json
+1. Copy and paste the swagger.json for "Documentation for REST API using bearer token authentication." It is located at `{Your SecretServer Base Url}/Documents/restapi/TokenAuth/swagger.json`.
 
 1. Suggested Settings:
    - Namespace: SecretServerRestClient
