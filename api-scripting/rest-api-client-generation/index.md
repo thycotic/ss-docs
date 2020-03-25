@@ -1,12 +1,16 @@
 [title]: # (REST API Client Generation)
-[tags]: # (REST API,API,Scripting,PowerShell)
+[tags]: # (REST API,API,Scripting,PowerShell,Swagger,OpenAPI)
 [priority]: # ()
 
-# REST API Client Generation
+# REST API Client Generation with OpenAPI Swagger 
 
-This page describes how to generate several clients that can be used to access the REST API.
+Secret Server (SS) contains an OpenAPI Swagger specification file that describes the REST API endpoints. There are several Swagger-based tools available to generate clients. This document describes using some popular ones to generate clients for different languages including C#, Java, and PowerShell. The generated client facilitates calling the SS REST API and indicates API changes with new SS versions.
 
-## Generating a C# Client using NSwagStudio
+> **Note:** Please use the article quick links on the right to jump to the section you are interested in.
+
+## Generating Clients
+
+### C# Client Using NSwagStudio
 
 1. Download and install nswagstudio ( https://github.com/RicoSuter/NSwag/wiki/NSwagStudio )
 
@@ -51,7 +55,7 @@ var search = client.SearchAsync(sortBy0_name: "lastHeartBeatStatus", sortBy0_dir
 var results = search.Result;
 ```
 
-## Generating a C# or .NET Core Client using OpenAPI Generator
+### C# or .NET Core Client Using OpenAPI Generator
 
 > **Note:** These instructions assume that you have Java and .NET Core installed on your machine. They should work on all systems, but the syntax will need to be tweaked for other shells.
 
@@ -144,7 +148,7 @@ var folder = await foldersApi.GetAsync(11);
 Console.WriteLine(folder);
 ```
 
-## Generating a Java Client Using OpenAPI Generator
+### Java Client Using OpenAPI Generator
 
 > **Note:** These instructions assume that you have Java configured on your machine. JDK 8 or greater is required. These instructions should work on all systems, but the syntax will need to be tweaked for other shells.
 
@@ -222,9 +226,7 @@ FolderModel folderModel = foldersApi.get(11, false, false);
 System.out.println(folderModel);
 ```
 
-## Generating a PowerShell Module
-
-### Procedure
+### PowerShell Using OpenAPI Generator
 
 > **Note:** These instructions assume that you have Java configured on your machine. JDK 8 or greater is required. Only Windows is supported at this time, though PowerShell Core does work.
 
@@ -309,17 +311,15 @@ $token = Invoke-AuthenticationApiAuthorize $cred.UserName $cred.GetNetworkCreden
 Invoke-FoldersApiGet -id 11
 ```
 
-### Notes
+> **Note:** The `$token` variable contains a property called `ExpiresIn` that gives the number of seconds in which the token will expire. The endpoint must be called again to generate a new token.
 
-- The `$token` variable contains a property called `ExpiresIn` that gives the number of seconds in which the token will expire. The endpoint must be called again to generate a new token.
+> **Note:** Steps 11 and 12 can be called repeatedly to generate a new token and set it on the auth module.
 
-- Steps 11 and 12 can be called repeatedly to generate a new token and set it on the auth module.
-
-## Generating a Workspace with Postman
+### Postman Workspace
 
 [Postman](https://www.postman.com/) is a REST client with a GUI to easily test API requests. To automatically generate a workspace with SS API calls, click the **Import** button and choose whether to use a local file or a URL. Ensure the **Generate a Postman Collection** check box is selected. The program appears to be doing nothing while importing, but will inform you of success shortly.
 
-## Generating a Workspace with Insomnia
+### Insomnia Workspace
 
 [Insomnia](https://insomnia.rest) is a REST client similar to Postman. To automatically generate a workspace with SS API calls, first click the arrow to open the dropdown, then click **Import/Export**. Click **Import Data**, then **From File** or **From URL** as desired.
 
@@ -341,7 +341,7 @@ Mac or Linux:
 wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/4.2.3/openapi-generator-cli-4.2.3.jar -O openapi-generator-cli.jar
 ```
 
-### Self-Signed or Other Invalid Certificates
+## Self-Signed or Other Invalid Certificates
 
 If you use an SSL certificate that is self-signed or otherwise not technically valid, OpenAPI Generator throws an error if you try to use a URL to `swagger.json` instead of a local file (or when using the Java client). To fix this, you need to import the certificate into Java's certificate store. The following example commands are  for Windows, but the same concept applies to Mac and Linux as well.
 
@@ -359,6 +359,6 @@ Java 11 provides a flag on `keytool` to find the cacerts keystore automatically.
 keytool -import -cacerts -file "path\to\cert.pem"
 ```
 
-## Swagger 2.0 Support Issue
+## Swagger 2.0 Notes
 
 Some features in our REST API are not currently supported in Swagger 2.0. For example, the sort is an array of a complex objects. The actual API will accept multiple sort levels by passing this query string, `paging.sortBy[0].name=secretname&paging.sortBy[1].name=folderid`. The auto-generated client only allows you to specify the first sort by default. To specify multiple sorts, the serialization needs to be customized. We assumed that multiple sorting levels is probably an advanced feature and or choice will work for most.
