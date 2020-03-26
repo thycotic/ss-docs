@@ -1,6 +1,6 @@
 [title]: # (RDP Proxy)
 [tags]: # (Networking, RDP Proxy)
 [priority]: # ()
-[display]: # (TOC)
+[display]: # (toc,content,print)
 
 # RDP Proxy
