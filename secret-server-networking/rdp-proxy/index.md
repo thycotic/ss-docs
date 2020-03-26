@@ -1,5 +1,6 @@
-[title]: # (Secret Server Networking)
-[tags]: # (Networking)
-[priority]: # (1000)
+[title]: # (RDP Proxy)
+[tags]: # (Networking, RDP Proxy)
+[priority]: # ()
+[display]: # (TOC)
 
-# Secret Server Networking
+# RDP Proxy

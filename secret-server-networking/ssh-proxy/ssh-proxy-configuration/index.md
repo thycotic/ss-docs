@@ -1,6 +1,6 @@
 [title]: # (SSH Proxy Configuration)
 [tags]: # (SSH Proxy,Networking)
-[priority]: #
+[priority]: # ()
 
 # SSH Proxy Configuration
 
@@ -63,4 +63,4 @@ C:\Users\Administrator>netstat -ano | find ":22"
 TCP  0.0.0.0:22  0.0.0.0:0  LISTENING  3600
 ```
 
-Now, when a user connects to the SS Web page, if the node they are hitting is setup to be a SSH proxy, they will connect to that node’s SSH public host IP. If the node they are connected to is not setup to be a SSH proxy, then users will round robin between the other nodes that are SSH proxies and connect to their SSH public host IP.
+Now, when a user connects to the SS Web page, if the node they are hitting is setup to be a SSH proxy, they will connect to that node's SSH public host IP. If the node they are connected to is not setup to be a SSH proxy, then users will round robin between the other nodes that are SSH proxies and connect to their SSH public host IP.
