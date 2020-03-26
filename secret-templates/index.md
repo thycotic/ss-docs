@@ -1,6 +1,6 @@
-[title]: # (Secret Templates)
-[tags]: # (Template)
-[priority]: # (2300)
+[title]: # "Secret Templates"
+[tags]: # "Template"
+[priority]: # "1000"
 
 # Secret Templates
 

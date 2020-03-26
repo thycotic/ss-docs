@@ -1,6 +1,6 @@
-[title]: # (Session Recording)
-[tags]: # (Session Recording)
-[priority]: # (2400)
+[title]: # "Session Recording"
+[tags]: # "Session Recording"
+[priority]: # "1000"
 
 # Session Recording
 

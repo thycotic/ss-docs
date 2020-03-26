@@ -1,6 +1,6 @@
-[title]: # (Secret Workflow Templates)
-[tags]: # (Workflow)
-[priority]: # (2500)
+[title]: # "Secret Workflow Templates"
+[tags]: # "Workflow"
+[priority]: # "1000"
 
 # Secret Workflow Templates
 

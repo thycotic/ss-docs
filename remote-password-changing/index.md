@@ -1,6 +1,6 @@
-[title]: # (Remote Password Changing)
-[tags]: # (Remote Password Changing)
-[priority]: # (1100)
+[title]: # "Remote Password Changing"
+[tags]: # "Remote Password Changing"
+[priority]: # "1000"
 
 # Remote Password Changing
 

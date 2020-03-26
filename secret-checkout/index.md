@@ -1,6 +1,6 @@
-[title]: # (Secret Check Out)
-[tags]: # (Check Out)
-[priority]: # (1400)
+[title]: # "Secret Check Out"
+[tags]: # "Check Out"
+[priority]: # "1000"
 
 # Secret Check Out
 

@@ -1,6 +1,6 @@
-[title]: # (Account Discovery)
-[tags]: # (Account Discovery)
-[priority]: # (500)
+[title]: # "Account Discovery"
+[tags]: # "Account Discovery"
+[priority]: # "1000"
 
 # Account Discovery
 

@@ -1,6 +1,6 @@
-[title]: # (Secret Launchers)
-[tags]: # (Launcher)
-[priority]: # (2000)
+[title]: # "Secret Launchers"
+[tags]: # "Launcher"
+[priority]: # "1000"
 
 # Secret Launchers
 

@@ -1,6 +1,6 @@
-[title]: # (Support)
-[tags]: # (thycotic)
-[priority]: # (40000)
+[title]: # "Support"
+[tags]: # "thycotic"
+[priority]: # "3000"
 
 # Thycotic Support
 

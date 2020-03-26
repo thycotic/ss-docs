@@ -1,6 +1,6 @@
-[title]: # (Ticketing System Integration)
-[tags]: # (Ticketing System)
-[priority]: # (2700)
+[title]: # "Ticketing System Integration"
+[tags]: # "Ticketing System"
+[priority]: # "1000"
 
 # Ticketing System Integration
 
