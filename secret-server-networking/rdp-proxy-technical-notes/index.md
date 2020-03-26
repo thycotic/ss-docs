@@ -34,13 +34,13 @@ Because of the way in which the RDP proxy expects to retrieve the temporary cred
 
 The RDP Proxy has undergone performance testing with the following results:
 
-**Infrastructure**: We ran the proxy on one SS Web node with 4 vCPUs, 16 GB RAM, Azure D4s_v3 VMs with CPU Intel Xeon 8171M at 2.1GHz. 
+- **Infrastructure**: We ran the proxy on one SS Web node with 4 vCPUs, 16 GB RAM, Azure D4s_v3 VMs with CPU Intel Xeon 8171M at 2.1GHz. 
 
-**Concurrent sessions**: 50 sessions. There was no degradation of performance as the session count rose.
+- **Concurrent sessions**: 50 sessions. There was no degradation of performance as the session count rose.
 
-**Session activity**: Medium to high. Simulation watched videos and windows screensavers, both of which are graphically intensive and require large amounts of data transfer.
+- **Session activity**: Medium to high. Simulation watched videos and windows screensavers, both of which are graphically intensive and require large amounts of data transfer.
 
-**CPU results**: 15-25% CPU usage fluctuation during the 50 concurrent sessions with no observed large spikes.
+- **CPU results**: 15-25% CPU usage fluctuation during the 50 concurrent sessions with no observed large spikes.
 
-**Bandwidth results**: All sessions collectively used 100-125 Mbps. This will vary wildly based on the type of connecting client and in-session activity.
+- **Bandwidth results**: All sessions collectively used 100-125 Mbps. This will vary wildly based on the type of connecting client and in-session activity.
 
