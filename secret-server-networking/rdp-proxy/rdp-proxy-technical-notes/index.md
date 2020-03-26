@@ -1,5 +1,5 @@
-[title]: # "RDP Proxy Technical Notes"
-[tags]: # "RDP Proxy,Networking"
+[title]: # (RDP Proxy Technical Notes)
+[tags]: # (RDP Proxy,Networking)
 [priority]: #
 
 # RDP Proxy Technical Notes

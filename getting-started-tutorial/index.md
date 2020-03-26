@@ -1,6 +1,6 @@
-[title]: # "Getting Started Tutorial"
-[tags]: # "Getting Started Tutorial"
-[priority]: # "200"
+[title]: # (Getting Started Tutorial)
+[tags]: # (Getting Started Tutorial)
+[priority]: # (200)
 
 # Getting Started Tutorial
 

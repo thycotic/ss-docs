@@ -1,6 +1,6 @@
-[title]: # "Secret DoubleLocks"
-[tags]: # "DoubleLock"
-[priority]: # "1000"
+[title]: # (Secret DoubleLocks)
+[tags]: # (DoubleLock)
+[priority]: # (1000)
 
 # Secret DoubleLocks
 

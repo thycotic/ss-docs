@@ -1,5 +1,5 @@
-[title]: # "RDP Proxy Configuration"
-[tags]: # "RDP Proxy,Networking"
+[title]: # (RDP Proxy Configuration)
+[tags]: # (RDP Proxy,Networking)
 [priority]: #
 
 # RDP Proxy Configuration

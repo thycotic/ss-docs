@@ -1,5 +1,5 @@
-[title]: # "Secret Server Clustering"
-[tags]: # "Clustering, Networking"
+[title]: # (Secret Server Clustering)
+[tags]: # (Clustering, Networking)
 [priority]: #
 
 # Secret Server Clustering

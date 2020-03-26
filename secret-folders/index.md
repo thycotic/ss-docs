@@ -1,6 +1,6 @@
-[title]: # "Secret Folders"
-[tags]: # "Folder"
-[priority]: # "1000"
+[title]: # (Secret Folders)
+[tags]: # (Folder)
+[priority]: # (1000)
 
 # Secret Folders
 

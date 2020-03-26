@@ -1,6 +1,6 @@
-[title]: # "Secret Server Setup"
-[tags]: # "Setup"
-[priority]: # "1000"
+[title]: # (Secret Server Setup)
+[tags]: # (Setup)
+[priority]: # (1000)
 
 # Secret Server Setup
 

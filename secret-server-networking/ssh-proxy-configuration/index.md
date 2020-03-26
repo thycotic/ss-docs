@@ -1,5 +1,5 @@
-[title]: # "SSH Proxy Configuration"
-[tags]: # "SSH Proxy,Networking"
+[title]: # (SSH Proxy Configuration)
+[tags]: # (SSH Proxy,Networking)
 [priority]: #
 
 # SSH Proxy Configuration

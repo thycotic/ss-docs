@@ -1,6 +1,6 @@
-[title]: # "User Teams"
-[tags]: # "Teams"
-[priority]: # "1000"
+[title]: # (User Teams)
+[tags]: # (Teams)
+[priority]: # (1000)
 
 # User Teams
 
