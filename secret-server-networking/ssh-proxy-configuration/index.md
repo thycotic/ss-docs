@@ -9,7 +9,7 @@ The Secret Server proxy routes SSH and RDP sessions and helps protect the endpoi
 - Proxy through the SS Web application
 - Proxy through a distributed engine
 
-> **Note:** To learn more about RDP Proxying, please see [RDP Proxy Configuration](../rdp-proxy-configuration/index.md).
+> **Note:** To learn more about RDP Proxying, please see [RDP Proxy Configuration](../../rdp-proxy/rdp-proxy-configuration/index.md).
 
 ##  Enabling Proxy
 
