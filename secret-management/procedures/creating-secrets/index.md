@@ -45,7 +45,7 @@ To create a secret:
 
 1. Click the **Sites** list to select a site the secret belongs to.
 
-1. (Optional) Click to select the **Auto Change Enabled** check box to enable automatic remote password change (RPC) for the secret.
+1. (Optional) Click to select the **Auto Change Enabled** check box to enable automatic remote password changing (RPC) for the secret.
 
 1. Click the **Create Secret** button.
 

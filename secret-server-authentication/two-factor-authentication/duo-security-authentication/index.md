@@ -24,7 +24,7 @@
 
 ## Setting up Duo (User)
 
-1. Log into SS.
+1. Log on to SS.
 
 1. After successful authentication, a new screen appears with the option to select a method to authenticate with.
 

@@ -2,7 +2,7 @@
 [tags]: # (Automatic Remote Password Changing)
 [priority]: # (10)
 
-# Automatic Remote Passowrd Changing
+# Automatic Remote Password Changing
 
 The Remote Password Changing tab contains the settings for configuring RPC on an individual secret. Enabling RPC _autochange_ on a secret allows SS to remotely change the password when it expires. The user must have Owner permission on the secret to enable autochange. When editing on the RPC tab, the Next Password text-entry field can be set or if left blank an auto-generated password is used.
 
