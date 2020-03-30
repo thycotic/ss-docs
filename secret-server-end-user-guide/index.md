@@ -9,7 +9,7 @@ This guide is for regular, non-administrative, users of Secret Server (SS). It i
 
 Secret Server is a privileged access management (PAM) system. Essentially that means it manages who can access what, when, and under whose authority—all without introducing weak points, such as weak passwords or stale user accounts, and discovering those that potentially exist. For large organizations, this is a huge undertaking. It only takes one security breach to cause huge problems, and there are seemingly countless ways for those breaches to occur. PAM systems, such as SS, are invaluable in getting this situation under control. Better still, SS can make your day-to-day work environment safer and easier to manage too.
 
-## Why Is the Purpose of This End User Guide?
+## What Is the Purpose of the End User Guide?
 
 Secret Server is a powerful, complex product with a wide range of capabilities. Even so, it is very easy to use for regular day-to-day operations for non-technical people. This key to this is knowing what to ignore and understanding the bits you do need to know. This guide is designed to help you do just that. It provides links to only what you need to know. You can add other topics later as needed.
 
