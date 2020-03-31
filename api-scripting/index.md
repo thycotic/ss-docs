@@ -2,4 +2,4 @@
 [tags]: # (API,Scripting)
 [priority]: # (1000)
 
-# Secret Server APIs and Scripting
+# APIs and Scripting
