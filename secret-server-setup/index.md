@@ -4,7 +4,7 @@
 
 # Secret Server Setup
 
-This sections contains information about installation and upgrading Secret Server and its components.
+This sections contains information about installation and upgrading SS and its components.
 
 * [Prerequisites](prerequisites/index.md)
 
@@ -14,13 +14,13 @@ This sections contains information about installation and upgrading Secret Serve
 
 * [Installation - Basic installation](installation/basic-installation-automatic/index.md)
 
-* [Installation - Manual/Advanced Installation](installation/advanced-installation-manual/index.md)
+* [Installation - Advanced (Manual) Installation](installation/advanced-installation-manual/index.md)
 
-* Components Installation
+<!-- * Components Installation
 
   * Protocol Handler
   * ASRA
   * Launcher plugins
   * Distributed Engines
   * RabbitMQ
-  * SDK Client
+  * SDK Client -->
