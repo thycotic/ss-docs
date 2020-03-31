@@ -1,6 +1,7 @@
 [title]: # (Secret Server End User Guide)
 [tags]: # (Getting Started, Help)
 [priority]: # (1000)
+
 # Secret Server End User Guide
 
 This guide is for regular, non-administrative, users of Secret Server (SS). It is a set of links to a subset of the greater corpus of SS documentation.
