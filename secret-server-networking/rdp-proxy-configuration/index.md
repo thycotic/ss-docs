@@ -1,6 +1,6 @@
 [title]: # (RDP Proxy Configuration)
 [tags]: # (RDP Proxy,Networking)
-[priority]: # ()
+[priority]: # (1000)
 
 # RDP Proxy Configuration
 
