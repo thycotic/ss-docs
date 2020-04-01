@@ -4,15 +4,15 @@
 
 # Secret Server End User Guide
 
-This guide is for regular, non-administrative, users of Secret Server (SS). It is a set of links to a subset of the greater corpus of SS documentation.
+This guide is for regular, non-administrative, users of Secret Server (SS). It is mostly a set of links to a subset of the greater corpus of SS documentation.
 
-## What Is Secret Server and Why Do I Need It?
+## What Is Secret Server?
 
 Secret Server is a privileged access management (PAM) system. Essentially that means it manages who can access what, when, and under whose authority—all without introducing weak points, such as weak passwords or stale user accounts, and discovering those that potentially exist. For large organizations, this is a huge undertaking. It only takes one security breach to cause huge problems, and there are seemingly countless ways for those breaches to occur. PAM systems, such as SS, are invaluable in getting this situation under control. Better still, SS can make your day-to-day work environment safer and easier to manage too.
 
 ## What Is the Purpose of the End User Guide?
 
-Secret Server is a powerful, complex product with a wide range of capabilities. Even so, it is very easy to use for regular day-to-day operations for non-technical people. This key to this is knowing what to ignore and understanding the bits you do need to know. This guide is designed to help you do just that. It provides links to only what you need to know. You can add other topics later as needed.
+Secret Server is a powerful, complex product with a wide range of capabilities. Even so, it is very easy to use for regular day-to-day operations for non-technical people. The key to this is knowing what to ignore and understanding the bits you do need to know. This guide is designed to help you do just that. It provides links to only what you need to know. You can add other topics later as needed.
 
 ## Getting Help
 
@@ -51,22 +51,27 @@ Depending on how your administrators configured SS, you can log on with either y
 
    > **Note:** SS also supports other two-factor authentication methods (depending on what your organization configured), such as text or email codes that SS prompts you for.
    
-   > **Note:** After you log in with your local account for the first time, you are immediately prompted to change your password .
+   > **Note:** After you log on with your local account for the first time, you are immediately prompted to change your password .
 
 6. Click the **Login** button. The SS Dashboard appears.
 
 ## Secrets
 
-_Secrets_ are individually named sets of sensitive information, such as passwords. Secrets address a broad spectrum of secure data, each type represented and created by a _secret template_ that defines the parameters of all secrets based on it. Secrets are very powerful and provide many ways of controlling and protecting their data, such as:
+_Secrets_ are individually named packets of sensitive information, such as passwords. Secrets address a broad spectrum of secure data, each type represented and created by a _secret template_ that defines the parameters of all secrets based on it. Secrets are very powerful and provide many ways of controlling and protecting their data, such as:
 
 - Ensuring passwords are long, complex, and frequently changed. 
+
 - Relieving users of having to remember numerous complex passwords or when to change them. You only need to remember your password to access SS. All of your secret passwords are managed for you.
-- Automatically changing passwords with no user intervention.
+
+- Automatically changing passwords at set intervals with no user intervention.
+
 - Defining who has access to the secret.
+
 - Ensuring the person accessing SS or a secret is indeed you.
+
 - Recording who actually accessed a secret.
 
-Additionally, using folder structure, you can allow one or more secrets to inherit permissions from their parent folder. All secret text-entry field information is securely encrypted before being stored in the database, including a detailed audit trail for access and history.
+All secret text-entry field information is securely encrypted before being stored in the database, including a detailed audit trail for access and history.
 
 Some important basic information about secrets:
 
@@ -95,17 +100,17 @@ Please set up WPF in the following order:
 1. Ensure you can log in to SS the conventional way.
 1. If necessary, create a folder in SS where the WPF secrets will reside.
 1. [Install the WPF browser extension](https://docs.thycotic.com/wpf/2.0.0/getting-started/install.md).
-1. [Configure WPF to point to Secret Server](https://docs.thycotic.com/wpf/2.0.0/getting-started/connect.md).
-1. [Login to Secret Server via WPF](https://docs.thycotic.com/wpf/2.0.0/getting-started/login-ss.md).
+1. [Configure WPF to point to SS](https://docs.thycotic.com/wpf/2.0.0/getting-started/connect.md).
+1. [Login to SS via WPF](https://docs.thycotic.com/wpf/2.0.0/getting-started/login-ss.md).
 
 ## Checking out Secrets
 
 The SS _check-out_ feature forces grants exclusive access to a single user. If a secret is configured for check out, a user can then access it. No other user can access a secret while it is checked out, except unlimited administrators. This guarantees that if the remote machine is accessed using the secret, the user who had it checked out was the only one with proper credentials at that time. See [Secret Checkout](../secret-checkout/index.md) for details.
 
-## Getting Notified of Secret Events (includes expired secrets)
+## Getting Notified of Secret Events
 
-Secret Server records specific events and optionally sends you alerts when they happen. See the [Alert Notification Center](../events-and-alerts/alert-notification-center-inbox/index.md) and [Creating Event Subscriptions](../events-and-alerts/event-subscription-page/creating-event-subscriptions/index.md) for details.
+Secret Server records specific events, including expired secrets, and optionally sends you alerts when they happen. See the [Alert Notification Center](../events-and-alerts/alert-notification-center-inbox/index.md) and [Creating Event Subscriptions](../events-and-alerts/event-subscription-page/creating-event-subscriptions/index.md) for details.
 
-## Learning More About Secret Server—Getting Started Tutorial
+## Learning More About Secret Server—the Getting Started Tutorial
 
 We created a [Getting Started Tutorial](../getting-started-tutorial/index.md) for technical users. While it covers many things you do *not* need to know right now, you may later find it helpful if you want to get a deeper understanding of SS.

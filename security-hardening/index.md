@@ -8,7 +8,7 @@
 
 This document outlines security hardening for securing your Secret Server (SS) instance, whether it be installed on a single server or in a multi-clustered environment. 
 
-> **Note:** Throughout this guide, many references are made to “configuration” settings. Unless otherwise specified, this refers to the settings found by selecting **Configuration** from the **Admin** menu in SS.
+> **Note:** Throughout this guide, many references are made to "configuration" settings. Unless otherwise specified, this refers to the settings found by selecting **Configuration** from the **Admin** menu in SS.
 
 ## Overview
 
@@ -22,18 +22,18 @@ It is critical to secure your SS implementation. That needs to include a layered
 - **Backup at least daily:** Consider your disaster recovery plan. Review the [Business Continuity and Disaster Recovery Planning](http://updates.thycotic.net/link.ashx?SSBusinessContinuity) KBA for more information.
 - **Review system log for errors:** Periodically check the system log (Admin > System Log) for recurring errors. Also do so after any upgrades.
 - **Whole-disk encryption:** Use whole disk encryption, such as [BitLocker](https://technet.microsoft.com/en-us/library/hh831507(v=ws.11).aspx?f=255&MSPPError=-2147217396), with a trusted platform module (TPM) to prevent those with physical access from removing disks to gain access to your SS application by circumventing OS and application authentication.
-- **Security Hardening Standards:** Consider security hardening standards that apply to either the operating system or applications, such as IIS or Microsoft SQL. Our application does not currently have full compatibility with third party standards such as CIS Level 1 hardening or the Microsoft Security Compliance Toolkit. We are compatible with CIS Level 2 hardening and have STIG compatibility.
+- **Security Hardening Standards:** Consider security hardening standards that apply to either the operating system or applications, such as IIS or Microsoft SQL. Our application does not currently have full compatibility with third party standards such as CIS Level 1 hardening or the Microsoft Published Security Baselines. We are compatible with CIS Level 2 hardening and have STIG compatibility.
 
    > **Note:** Attaining full security-hardening standards compatibility is a Thycotic priority.
 
 ### Database
 
-- **Limit access to your Secret Server database:** When you create your SS database, limit access to as few users as possible. We recommend you disable the “sa” account in the SQL instance that contains SS.
+- **Limit access to your Secret Server database:** When you create your SS database, limit access to as few users as possible. We recommend you disable the "sa" account in the SQL instance that contains SS.
 - **Limit access to other databases:** When you create a database account for SS, you should ensure it only has access to the SS database. 
 - **Use Windows Authentication for database access:** Windows authentication is much more secure than SQL authentication. See [Choose an Authentication Mode](http://updates.thycotic.net/link.ashx?UsingWindowsAuthenticationInSQLServer) (TechNet article) for details. To use Windows authentication in SS, you need to create a service account. See the [Using Windows Authentication to access SQL Server](http://updates.thycotic.net/link.ashx?SSWindowsAuthentication) KBA for details.
 - **Limit access to your database backups:** Database backups are critical for disaster recovery, but they also carry a risk if someone gains access. The SS database is encrypted, but you should still limit access to ensure maximum security. Limit access to database backups to as few users as possible.
 - **Don't share a SQL instance with less secure databases:** Putting the database on a server with less-secure database instances can expose vulnerabilities. For example, an attacker could use SQL injection on another application to access your private SS database. If you intend to put SS on a shared SQL instance, ensure that the other databases are classified internally as sensitive as SS and have similar security controls in place.
-- **Review Microsoft’s recommendations for SQL security:** See the [Securing SQL Server](https://updates.thycotic.net/links.ashx?SecuringSqlServer) article in Microsoft’s documentation.
+- **Review Microsoft's recommendations for SQL security:** See the [Securing SQL Server](https://updates.thycotic.net/links.ashx?SecuringSqlServer) article in Microsoft's documentation.
 
 > **Note:** SS also supports SQL Server Transparent Data Encryption ([TDE](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?redirectedfrom=MSDN&view=sql-server-ver15)) for further protection of the database files. This can have a slight performance impact on the environment and can increase the complexity of the database configuration. Please review this page for more information: [Transparent Data Encryption (TDE)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15).
 
@@ -41,13 +41,13 @@ It is critical to secure your SS implementation. That needs to include a layered
 
 - **Use SSL (HTTPS):** We require using Secure Sockets Layer (SSL) encryption to ensure that all communication between the Web browser and SS is secure. We recommend you install a third-party certificate, domain certificate, or self-signed certificate on your website. For information on creating and installing a self-signed certificate, please see the [Installing a Self-Signed SSL/HTTPS Certificate](http://updates.thycotic.net/link.ashx?SSSelfSignedCertificate) KBA.
 
-- **Force SSL (HTTPS):** Even after you install an SSL certificate, users may still be able to access SS through regular HTTP. To that, enable the “Force HTTPS/SSL” option in SS at Admin \> Configuration on the **Security** tab.
+- **Force SSL (HTTPS):** Even after you install an SSL certificate, users may still be able to access SS through regular HTTP. To that, enable the "Force HTTPS/SSL" option in SS at Admin \> Configuration on the **Security** tab.
 
-- **Limit access to your Secret Server directory**. This contains the SS encryption key, as well as the database connection information (these values are encrypted but remember “defense in depth.” Try to grant access to as few users as possible).
+- **Limit access to your Secret Server directory**. This contains the SS encryption key, as well as the database connection information (these values are encrypted but remember "defense in depth." Try to grant access to as few users as possible).
 
 - **Limit logon rights to the application server**. Administrators accessing the Application Server directly could attempt to monitor memory in use on the server. SS does several things to protect application memory but the best safeguard is to limit access to the Application Server to as few users as possible.
 
-- **Protect your encryption key**. The encryption key for SS is contained in the encryption.config file, which resides in your SS directory. This file is obfuscated and encrypted, but “defense in depth” would require limiting access to the file. [Using DPAPI to encrypt your encryption.config file](#_DPAPI_Encryption) is one option. This will use machine-specific encryption to encrypt the file. Make sure you back up the original file before enabling this option. To further protect the file, you can enable EFS encryption. EFS (Encrypting File System) is a Microsoft technology that allows a user or service account to encrypt files with login passwords. For more details, read [Protecting Your Encryption Key Using EFS](http://updates.thycotic.net/link.ashx?SSProtectKeyEFS) (KB). The most secure option is to use a Hardware Security Module (HSM) to protect the SS encryption key. For more information see the [HSM Integration Guide](https://updates.thycotic.net/links.ashx?HSMIntegrationGuide).
+- **Protect your encryption key**. The encryption key for SS is contained in the encryption.config file, which resides in your SS directory. This file is obfuscated and encrypted, but "defense in depth" would require limiting access to the file. [Using DPAPI to encrypt your encryption.config file](#_DPAPI_Encryption) is one option. This will use machine-specific encryption to encrypt the file. Make sure you back up the original file before enabling this option. To further protect the file, you can enable EFS encryption. EFS (Encrypting File System) is a Microsoft technology that allows a user or service account to encrypt files with login passwords. For more details, read [Protecting Your Encryption Key Using EFS](http://updates.thycotic.net/link.ashx?SSProtectKeyEFS) (KB). The most secure option is to use a Hardware Security Module (HSM) to protect the SS encryption key. For more information see the [HSM Integration Guide](https://updates.thycotic.net/links.ashx?HSMIntegrationGuide).
 
 ###  Application Settings
 
@@ -129,7 +129,7 @@ As an administrator, you can force all the secret password fields in the system 
 
 This **Mask passwords when viewing Secrets** setting is found in the **Tools** \> **Preferences** section for each user. 
 
-> **Note:** If the “Force Password Masking” configuration setting discussed above is enabled, this user preference setting will be overridden and cannot be disabled.
+> **Note:** If the "Force Password Masking" configuration setting discussed above is enabled, this user preference setting will be overridden and cannot be disabled.
 
 #### Login Password Requirements
 
@@ -151,7 +151,7 @@ Recommendation: Off
 
 > **Note**: Labeled **Allow Remember Me** in the UI.
 
-“Remember Me” is a convenience option that allows users to remain logged onto SS for up for a specific period. This setting can be a security concern because it does not require re-entry of credentials to gain access to SS. 
+"Remember Me" is a convenience option that allows users to remain logged onto SS for up for a specific period. This setting can be a security concern because it does not require re-entry of credentials to gain access to SS. 
 
 Disable **Allow Remember Me** on the **Login** tab of the **Configuration** page to get a pass result. It must be set to be valid for 1 day or less to not get a fail result.
 
@@ -181,7 +181,7 @@ Disable **Allow HTTP Get** under the **Security** tab of the **Configuration** s
 
 Recommendation: On
 
-Replace all error messages with a custom “contact your admin” message. Error messages can be very helpful when diagnosing installation and configuration issues. However, having errors displayed to a potential attacker can provide him or her with the critical information they need to perform a successful attack. 
+Replace all error messages with a custom "contact your admin" message. Error messages can be very helpful when diagnosing installation and configuration issues. However, having errors displayed to a potential attacker can provide him or her with the critical information they need to perform a successful attack. 
 
 To hide error messages from the end user, add the `ZeroInformationDisclosureMessage` application setting to the `web-appSettings.config` file. This file is located in directory containing the SS application files. Add the key below to this file in between the `<appSettings>` tags. The contents of that tag is displayed as a message that appears to the user whenever an error occurs in the system. For example:
 
@@ -198,7 +198,7 @@ Use the fewest SS permissions as possible in the SQL Account used to access the 
 
 #### SQL Server Authentication Password Strength and Username
 
-> **Note:** This section addresses two separate but closely related settings: “SQL Server Authentication Password Strength” and “SQL Server Authentication Username.“”
+> **Note:** This section addresses two separate but closely related settings: "SQL Server Authentication Password Strength" and "SQL Server Authentication Username."
 
 Recommendation: Change settings as needed
 
@@ -272,17 +272,17 @@ Check the digest algorithm of the certificate. If the algorithm is SHA1, this ch
 
 Example warning:
 
-“The digest algorithm is sha1RSA, which is considered weak. The algorithm is being phased out and should be replaced with a better algorithm when it comes time to renew the SSL certificate.”  
+"The digest algorithm is sha1RSA, which is considered weak. The algorithm is being phased out and should be replaced with a better algorithm when it comes time to renew the SSL certificate."  
 
-Go to the browser’s certificate information when logged onto SS. This is usually a button next to the URL text box.
+Go to the browser's certificate information when logged onto SS. This is usually a button next to the URL text box.
 
 #### SSL/TLS Key
 
 Recommendation: Confirm or remediate
 
-Check the key size of the HTTPS certificate used. If it is RSA or DSA, the key must be at least 2048-bit to pass. If the signature algorithm of the certificate is ECDSA, the key size must be at least 256-bit to pass. If the algorithm of the certificate is unknown, the result shows “unknown. This check fails if SS cannot be loaded over HTTPS.
+Check the key size of the HTTPS certificate used. If it is RSA or DSA, the key must be at least 2048-bit to pass. If the signature algorithm of the certificate is ECDSA, the key size must be at least 256-bit to pass. If the algorithm of the certificate is unknown, the result shows "unknown. This check fails if SS cannot be loaded over HTTPS.
 
-Go to the browser’s certificate information when logged onto SS. This is usually a button next to the URL text box.
+Go to the browser's certificate information when logged onto SS. This is usually a button next to the URL text box.
 
 #### SSL/TLS Protocols
 
@@ -290,11 +290,11 @@ Recommendation: Confirm or remediate
 
 Check for legacy SSL or TLS protocols, which should not be used in a secure environment. If the server accepts SSLv2 or SSLv3 connections, this check will fail. SSLv2 is not considered secure for data transport, and SSLv3 is vulnerable to the POODLE attack. If this server does not support TLSv1.1 or TLSv1.2, this check will give a warning because they are recommended. The SSL certificate used may affect what protocols can be used, even if they are enabled. This check will fail if SS cannot be loaded over HTTPS.
 
-> **Note:** You can check and modify these settings in the Window registry. See [Transport Layer Security (TLS) Registry Settings](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings) in Microsoft’s documentation.
+> **Note:** You can check and modify these settings in the Window registry. See [Transport Layer Security (TLS) Registry Settings](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings) in Microsoft's documentation.
 
 Example warning:
 
-“The server supports the accepts SSLv2 or SSLv3 connections protocol, which are weak. Consider disabling these protocols.”
+"The server supports the accepts SSLv2 or SSLv3 connections protocol, which are weak. Consider disabling these protocols."
 
 #### Using HTTP Strict Transport Security
 
@@ -390,7 +390,7 @@ Exporting secrets from your SS as text is very helpful for meeting regulations i
 
 #### Unlimited Administration Mode
 
-Unlimited administration mode allows any role with the “unlimited administrator permission” to see all secrets in the SS. This mode is very helpful for recovering passwords in emergencies or when staff are terminated. You can tightly control access to this feature by splitting out the role permissions for “administer configuration unlimited admin” and “unlimited administrator” into two different roles. This allows you to create the “two-key effect” for access to the mode. See [Using Two Roles for Access to Unlimited Administration Mode](#Using_Two_Roles_for_Access_to Unlimited_Administration_Mode), below, for details.
+Unlimited administration mode allows any role with the "unlimited administrator permission" to see all secrets in the SS. This mode is very helpful for recovering passwords in emergencies or when staff are terminated. You can tightly control access to this feature by splitting out the role permissions for "administer configuration unlimited admin" and "unlimited administrator" into two different roles. This allows you to create the "two-key effect" for access to the mode. See [Using Two Roles for Access to Unlimited Administration Mode](#Using_Two_Roles_for_Access_to Unlimited_Administration_Mode), below, for details.
 
 #### Limiting Role Access to Secret Templates 
 
@@ -398,32 +398,32 @@ Anyone with access to modify your secret templates can change the definitions of
 
 #### Monitoring Roles with Event Subscriptions
 
-Another option when protecting roles is to configure event subscriptions to notify appropriate staff in the event that Roles are changed or assigned. Event subscriptions are email alerts that can be sent to users, groups or specific email addresses, based on different events in SS. There are also events available around the “unlimited administrator” role to further protect it from misuse.
+Another option when protecting roles is to configure event subscriptions to notify appropriate staff in the event that Roles are changed or assigned. Event subscriptions are email alerts that can be sent to users, groups or specific email addresses, based on different events in SS. There are also events available around the "unlimited administrator" role to further protect it from misuse.
 
 ### Using Two Roles for Access to Unlimited Administration Mode
 
-We recommend determining which role permissions should or should not be combined for users before assigning roles and allowing users access to the application. Part of that is planning access to the “unlimited administration” mode. Users with the “administer configuration unlimited admin” role permission can enable that mode. Once the system is in the mode, users with the “unlimited administrator” role permission can view all secrets in SS and access all configuration settings. So a user with both permissions can enable the “unlimited administration” mode and then view all the secrets or make any configuration change.
+We recommend determining which role permissions should or should not be combined for users before assigning roles and allowing users access to the application. Part of that is planning access to the "unlimited administration" mode. Users with the "administer configuration unlimited admin" role permission can enable that mode. Once the system is in the mode, users with the "unlimited administrator" role permission can view all secrets in SS and access all configuration settings. So a user with both permissions can enable the "unlimited administration" mode and then view all the secrets or make any configuration change.
 
-To prevent a single person from having that much access, the two role permissions should be given to two different roles and only those roles, and nobody should have access to both of the roles. That enforces accountability and requires the cooperation of two people to enter “unlimited administration” mode.
+To prevent a single person from having that much access, the two role permissions should be given to two different roles and only those roles, and nobody should have access to both of the roles. That enforces accountability and requires the cooperation of two people to enter "unlimited administration" mode.
 
 A solution is to create the two roles, each containing one of the permissions, and then take those two permissions out of the day-to-day administrator role and any other roles besides the two. You can then assign either one of those roles to trusted people with no single person having both roles. 
 
 Thus, the access procedure is:
 
-1. User A with the role with the “administer configuration unlimited admin” permission puts the system into “unlimited administration” mode. Not having the correct role, user A cannot make any changes requiring the “unlimited administrator” permission.
-1. User B with the role with the “unlimited administrator” permission performs any configuration or accesses secrets only available to that role.
-1. When User B is finished, user A takes the system out of “unlimited administration” mode. 
-1. User B can no longer make any changes requiring the “unlimited administrator” permission because roles with that permission can only be accessed in “unlimited administration” mode. User A cannot make any changes either because User A does not a the role with the “unlimited administrator” permission.
+1. User A with the role with the "administer configuration unlimited admin" permission puts the system into "unlimited administration" mode. Not having the correct role, user A cannot make any changes requiring the "unlimited administrator" permission.
+1. User B with the role with the "unlimited administrator" permission performs any configuration or accesses secrets only available to that role.
+1. When User B is finished, user A takes the system out of "unlimited administration" mode. 
+1. User B can no longer make any changes requiring the "unlimited administrator" permission because roles with that permission can only be accessed in "unlimited administration" mode. User A cannot make any changes either because User A does not a the role with the "unlimited administrator" permission.
 
 Additional safeguards included:
 
-- Enabling or disabling “unlimited administration” mode is audited, and a comment should be provided each time it is enabled.
+- Enabling or disabling "unlimited administration" mode is audited, and a comment should be provided each time it is enabled.
 
-- When “unlimited administration” mode is enabled, a banner appears at the top of every SS page notifying users that their secrets can currently be viewed by an unlimited administrator.
+- When "unlimited administration" mode is enabled, a banner appears at the top of every SS page notifying users that their secrets can currently be viewed by an unlimited administrator.
 
-- Event subscription notifications should be set up to send an email to a specified user, group of users, or other email address whenever “unlimited administration” mode is enabled or disabled.
+- Event subscription notifications should be set up to send an email to a specified user, group of users, or other email address whenever "unlimited administration" mode is enabled or disabled.
 
-- All actions that are normally audited, such as secret views, edits, or permissions changes, are still audited while “unlimited administration” mode is enabled.
+- All actions that are normally audited, such as secret views, edits, or permissions changes, are still audited while "unlimited administration" mode is enabled.
 
 ## Encryption
 
@@ -479,7 +479,7 @@ To validate SHA1 server digests for Unix account discovery, create a file named 
 apollo,7A:25:AB:38:3C:DD:32:D1:EA:86:6E:1C:A8:C8:37:8C:A6:48:F9:7B
 ```
 
-When the file exists and has data, all scanned machines must match one of the SHA1 hashes in the file before scanning. Any computers that do not match will still show up on the “Discovery Network View” page, but authenticated scanning will not take place. That is, no credentials will be passed to the machine, and accounts will not be retrieved from the machine.
+When the file exists and has data, all scanned machines must match one of the SHA1 hashes in the file before scanning. Any computers that do not match will still show up on the "Discovery Network View" page, but authenticated scanning will not take place. That is, no credentials will be passed to the machine, and accounts will not be retrieved from the machine.
 
 ## Disabling IIS HTTP Headers
 
