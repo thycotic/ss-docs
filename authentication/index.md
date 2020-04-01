@@ -1,4 +1,4 @@
-[title]: # (Secret Server Authentication)
+[title]: # (Authentication)
 [tags]: # (Authentication)
 [priority]: # (1000)
 

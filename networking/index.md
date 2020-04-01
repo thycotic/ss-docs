@@ -1,4 +1,4 @@
-[title]: # (Secret Server Networking)
+[title]: # (Networking)
 [tags]: # (Networking)
 [priority]: # (1000)
 

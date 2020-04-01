@@ -1,4 +1,4 @@
-[title]: # (Secret Server Administration)
+[title]: # (Administration)
 [tags]: # (Administration)
 [priority]: # (1000)
 
