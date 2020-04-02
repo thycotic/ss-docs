@@ -3,7 +3,7 @@
 [priority]: # (1000)
 [display]: # (content,print)
 
->**Note:** This page URL should only be provided by SEs to customers on an as-needed basis. The page will *not* appear in searches.
+>**Note:** This page URL should only be provided to customers on an as-needed basis. The page will *not* appear in searches.
 
 # RDP Proxy Technical Notes
 
