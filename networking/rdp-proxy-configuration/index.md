@@ -11,7 +11,7 @@ The RDP Proxying feature allows RDP connections, established using a launcher, t
 - Recommended method: The launcher connects to the newer RDP proxy with temporary credentials, and the RDP proxy connects to the remote server using the protected credentials from the secret. This method is preferred because it prevents the secret credentials from reaching the client machine. For this method, you simply configure the RDP proxy.
 - Alternative method: The launcher uses an SSH proxy to tunnel a local RDP connection to a remote server. This method does not protect the credential from reaching the client machine. For this method you configure the SSH proxy and enable SSH tunneling. 
 
-===IF WE DON'T RECOMMEND THIS METHOD, WHY DO WE MENTION IT AT ALL? WHAT'S THE UTILITY? 
+>**Note:** We provide the alternate method to support legacy installations and troubleshooting (it can potentially be more stable when the RDP proxy does not work).
 
 These two approaches to RDP proxying are not compatible—you may use one or the other but not both. We performance tested both methods. Either can support 100 concurrent connections.
 
