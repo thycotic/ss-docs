@@ -1,6 +1,6 @@
 [title]: # (Bulk Operations on Users)
 [tags]: # (Bulk Operations,Users)
-[priority]: # (10)
+[priority]: #
 
 # Bulk Operations on Users
 

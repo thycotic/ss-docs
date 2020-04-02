@@ -1,6 +1,6 @@
 [title]: # (Configuring Users)
 [tags]: # (Users)
-[priority]: # (20)
+[priority]: #
 
 # Configuring Users
 

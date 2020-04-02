@@ -1,6 +1,6 @@
 [title]: # (Secret DoubleLocks)
 [tags]: # (DoubleLock)
-[priority]: # (1600)
+[priority]: # (1000)
 
 # Secret DoubleLocks
 

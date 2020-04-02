@@ -20,4 +20,4 @@ On the Group Assignment page, users can be added and removed from the group.
 
    ![image-20191209094641637](images/image-20191209094641637.png)
 
-> **Note:** If the group was created using Active Directory synchronization, this group is not be editable. See [Active Directory Synchronization](#Active-Directory-Synchronization).
+> **Note:** If the group was created using Active Directory synchronization, this group is not be editable. See [Active Directory Synchronization](../../active-directory/index.md).

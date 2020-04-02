@@ -1,6 +1,6 @@
 [title]: # (CEF and SIEM Integration)
 [tags]: # (CEF and SIEM)
-[priority]: # (20)
+[priority]: #
 
 # CEF and SIEM Integration
 

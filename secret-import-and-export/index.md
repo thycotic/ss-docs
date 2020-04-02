@@ -1,5 +1,5 @@
 [title]: # (Secret Import and Export)
 [tags]: # (Import,Export)
-[priority]: # (1900)
+[priority]: # (1000)
 
 # Secret Import and Export

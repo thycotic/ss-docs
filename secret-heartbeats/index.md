@@ -1,6 +1,6 @@
 [title]: # (Secret Heartbeats)
 [tags]: # (Heartbeat)
-[priority]: # (1800)
+[priority]: # (1000)
 
 # Secret Heartbeats
 

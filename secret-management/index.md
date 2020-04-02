@@ -1,6 +1,6 @@
 [title]: # (Secret Management)
 [tags]: # (Secret)
-[priority]: # (2100)
+[priority]: # (1000)
 
 # Secret Management
 

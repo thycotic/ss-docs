@@ -1,6 +1,6 @@
 [title]: # (User Preferences)
 [tags]: # (User Preferences)
-[priority]: # (80)
+[priority]: #
 
 # User Preferences
 
@@ -12,9 +12,9 @@ The following configuration settings are available for users under the General t
 
 - **Date Format and Time Format:** Date and time format displayed for a user in SS.
 
-- **Language and My Theme:** Customize the look of SS on a per user basis. For details, see [Customizing Secret Server's Appearance](#Customizing-Secret-Server's-Appearance).
+- **Language and My Theme:** Customize the look of SS on a per user basis. For details, see [Themes](../../application-administration\application-dashboard\themes\index.md).
 
-- **Mask passwords when viewing Secrets:** When enabled, this masks the Password text box for a secret. There is a configuration setting that forces this to be enabled for all users. For details on password masking, see [Setting Up Password Masking](#Setting-Up-Password-Masking).
+- **Mask passwords when viewing Secrets:** When enabled, this masks the Password text box for a secret. There is a configuration setting that forces this to be enabled for all users. For details on password masking, see [Setting Up Password Masking](../../secret-management/procedures/setting-up-password-masking/index.md).
 
 - **Send email alerts when dependencies fail to update:** Enables emails to be sent when dependencies fail to update.
 

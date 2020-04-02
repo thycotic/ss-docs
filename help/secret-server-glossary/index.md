@@ -16,6 +16,7 @@
 | ASCII                         | _American Standard Code for Information Interchange_         |
 | ASP                           | _Advanced Server Pages_                                      |
 | AWS                           | _Amazon Web Services_                                        |
+| CAC                           | _Common Access Card_                                        |
 | CEF                           | _Common Event Format_                                        |
 | CHG                           | _Change_                                                     |
 | CIDR                          | _Classless Inter-Domain Routing_                             |
@@ -30,6 +31,7 @@
 | ESX                           | _Elastic Sky X_                                              |
 | FIPS                          | _Federal Information Processing Standard_                    |
 | FQDN                          | _Fully Qualified Domain Name_                                |
+| GDPR                          | *General Data Protection Regulation*                         |
 | HSM                           | _Hardware Security Module_                                   |
 | HSTS                          | _HTTP Strict Transport Security_                             |
 | IAM                           | *Identity and Access Management*                             |
@@ -51,6 +53,7 @@
 | PCI                           | _Payment Card Industry_                                      |
 | PDF                           | _Portable Document Format_                                   |
 | PII                           | *Personally Identifiable Information*                        |
+| PIV                           | _Personal Identity Verification_                                |
 | PuTTy                         | _Popular SSH and Telnet Client_                              |
 | QR                            | _Quick Response_ (code)                                      |
 | RADIUS                        | _Remote Authentication Dial-In User Service_                 |
@@ -83,7 +86,7 @@
 | UNC                           | _Universal Naming Convention_                                |
 | Unlimited Administration Mode | An emergency, break-the-glass mode that gives administrators access to all content within the system, regardless of explicit permissions. Access to Unlimited Administration Mode is controlled using role permissions. |
 | URL                           | _Uniform Resource Locator_                                   |
-| VM                            | Virtual Machine                                              |
-| VPN                           | Virtual Private Network                                      |
+| VM                            | _Virtual Machine_                                              |
+| VPN                           | _Virtual Private Network_                                      |
 | WS                            | _Web Services_                                               |
-| XML                           | eXtensible Markup Language                                   |
+| XML                           | _eXtensible Markup Language_                                   |

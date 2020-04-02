@@ -4,7 +4,7 @@
 
 # Template Character Sets
 
-Character sets are a collection of distinct characters that are used in password requirements and password rules. Custom sets can be created, and both ASCII and Unicode are supported. For more information on setting up compliance checks and password generation standards, see [Password Requirements](#template-password-requirements). The five standard character sets are:
+Character sets are a collection of distinct characters that are used in password requirements and password rules. Custom sets can be created, and both ASCII and Unicode are supported. For more information on setting up compliance checks and password generation standards, see [Password Requirements](../template-password-requirements/index.md). The five standard character sets are:
 
 - Lower Case (a-z)
 - Upper Case (A-Z)
