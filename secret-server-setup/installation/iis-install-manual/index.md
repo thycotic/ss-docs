@@ -134,40 +134,62 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
 > **Note:** We recommend you run [Windows Update](http://update.microsoft.com/) to install the latest security patches for IIS once you have IIS installed.
 
-### Step Two: Configure an IIS Website
+## Step Two: Configure the IIS Website
 
  Follow these steps to configure a website in IIS for SS:
 
 1. Extract the SS files into `C:\inetpub\wwwroot\SecretServer` or your location of choice.
+
 1. Open Internet Information Server (IIS) Manager:
    - If you are using Windows Server 2012 or Windows Server 2012 R2: On the taskbar, click **Server Manager \> Tools \> Internet Information Services (IIS) Manager**.
    - If you are using Windows Server 2008 or Windows Server 2008 R2: On the taskbar, click **Start \> Administrative Tools \> Internet Information Services (IIS) Manager**.
+
 1. In the Connections pane, expand the server name.
+
 1. Click on the **Application Pools** node. The Application Pools window appears.
+
 1. Click the **Add Application Pool** link. The Add Application Pool dialog box appears.
+
 1. Type `SecretServer` in the **Name** text box. 
+
 1. Click to select **4.x** in the **.NET Framework Version** dropdown list.
+
 1. Click to select **Integrated** in the **Managed Pipeline Mode** dropdown list.
+
 1. Click the **OK** button to save the new application pool. The dialog box closes.
+
 1. (option) Customize the Windows account SS runs as:
+   
    1. Right click the new application pool and select **Advance Settings…**
+
    1. Click the **Identity** setting in the **Process Model** section to select the desired account. Using this, you can, for example, set SS to use IWA to connect to SQL.
+
 1. Expand the **Sites** node on the **Connections** tree.
+
 1. Click on the Default Web Site node.
+
 1. In the **Actions** pane, click **Bindings** to set your desired website. The Edit Bindings dialog box appears.
+
 1. Edit or add bindings as desired. We recommend using HTTPS with a real SSL certificate.
+
 1. Click the **Close** button.
+
 1. In the **Connections** tree, expand the **Default Website** node. 
+
 1. **Either**, If you see the default folder, **SecretServer**, which you created earlier:
    
    1. Right click the **SecretServer** folder and select **Convert to Application**. The Add Application dialog box appears.
+
    1. Click the **Select…** button to choose the pool you created earlier for SS.
    
    **Or**, If you used a custom location instead:
    
    1. right click the Default Website. The Add Application dialog box appears.
-   1.  Type `SecretServer` in the **Alias** text box.
+
+   1. Type `SecretServer` in the **Alias** text box.
+
    1. Click **Select…** and pick the app pool created for SS.
+
    1. Type the path where you extracted the SS files in the **Physical Path** text box.
 
 1. Click the **OK** button.
@@ -183,8 +205,11 @@ Procedure:
    - If you are using Windows Server 2012 or Windows Server 2012 R2: On the taskbar, click **Server Manager \> Tools \> Internet Information Services (IIS) Manager**.
 
    - If you are using Windows Server 2008 or Windows Server 2008 R2: On the taskbar, click **Start \> Administrative Tools \> Internet Information Services (IIS) Manager**.
+
 1. In the **Connections** pane, expand the server name.
+
 1. Click **Application Pools**.
+
 1. Determine which application pool SS is running as:
 
    1. Expand **Sites** at the left.
@@ -194,11 +219,17 @@ Procedure:
    1. Click on the SS website or virtual directory (if it is running on one).
    
    1. Click **Basic Settings** on the right panel. This indicates SS's application pool.
+
 1. Right-click the application pool and select **Advanced Settings…** The Advance Settings dialog appears.
+
 1. In the **General** section, set **Start Mode** to **AlwaysRunning**.
+
 1. In the **Process Model** section, set **Idle Time-out (minutes)** to **0**.
+
 1. In the **Recycling** section, set **Regular Time Interval (minutes)** to **0**.
+
 1. In the **Recycling** section, click the **\>** next to **Specific Times** to ensure there are no times set. If there are, click the **…** to clear them.
+
 1. Leave IIS Manager open—we will return to it below.
 
 ## Step Four: Ensure the User Profile Always Loads
