@@ -78,7 +78,7 @@ Thycotic products recommend the following roles and features to be installed on 
 
   - Windows PowerShell 5.1
 
-## Step One: Windows Server 2016 IIS Installation
+## Step One: Windows Server 2012–2019 IIS Installation
 
 To install Internet Information Services (IIS) Manager on Windows Server 2016, you will need to give your server the Web Server (IIS) role using the following procedure:
 
@@ -140,9 +140,7 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
 1. Extract the SS files into `C:\inetpub\wwwroot\SecretServer` or your location of choice.
 
-1. Open Internet Information Server (IIS) Manager:
-   - If you are using Windows Server 2012 or Windows Server 2012 R2: On the taskbar, click **Server Manager \> Tools \> Internet Information Services (IIS) Manager**.
-   - If you are using Windows Server 2008 or Windows Server 2008 R2: On the taskbar, click **Start \> Administrative Tools \> Internet Information Services (IIS) Manager**.
+1. Open Internet Information Server (IIS) Manager: On the taskbar, click **Server Manager \> Tools \> Internet Information Services (IIS) Manager**.
 
 1. In the Connections pane, expand the server name.
 
