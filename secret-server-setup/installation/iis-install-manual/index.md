@@ -158,7 +158,7 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
 1. Click the **OK** button to save the new application pool. The dialog box closes.
 
-1. (option) Customize the Windows account SS runs as:
+1. (optional) Customize the Windows account SS runs as:
    
    1. Right click the new application pool and select **Advance Settings…**
 
