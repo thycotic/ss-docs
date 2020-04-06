@@ -10,7 +10,7 @@
 
 ### Current
 
-[Secret Server 10.8.00000x](ss-rn-10-8-00000x.md)
+[Secret Server 10.8.000000](ss-rn-10-8-000000.md)
 
 ### Legacy
 

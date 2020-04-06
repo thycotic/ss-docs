@@ -8,7 +8,7 @@ IIS is an internal part of the Windows operating system, and only needs to be en
 
 ## Roles and Features
 
-Thycotic products recommend the following roles and features to be installed on the IIS Server for maximum security and functionality options:
+Thycotic products recommend the following roles and features to be installed on the SS IIS Server for maximum security and functionality options:
 
 ### Roles
 
@@ -60,11 +60,11 @@ Thycotic products recommend the following roles and features to be installed on 
 
 ### Features
 
-- .NET Framework 4.6 Features
+- .NET Framework 4.x Features
 
-  - .Net Framework 4.6
+  - .Net Framework 4.x
 
-  - ASP.NET 4.6
+  - ASP.NET 4.x
 
 - WCF Services
 
@@ -78,9 +78,11 @@ Thycotic products recommend the following roles and features to be installed on 
 
   - Windows PowerShell 5.1
 
-## Step One: Windows Server 2016 IIS Installation
+## Step One: Windows Server 2012–2019 IIS Installation
 
 To install Internet Information Services (IIS) Manager on Windows Server 2016, you will need to give your server the Web Server (IIS) role using the following procedure:
+
+> **Note:** If this is *not* the first time you have run the wizard (that is, when first installing IIS), the Web Server Role (IIS) and Role Services windows will not appear, and the wizard order changes a bit. Instead, role services are selectable in the Server Roles window.
 
 1. Click the **Server Manager** button on your server. The Server Manager Dashboard appears.
 
@@ -98,6 +100,20 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
 1. Click the **Next** button. The Select Server Roles window appears.
 
+1. Click to select the **Web Server (IIS)** check box.
+
+1. Click the **Next** button. The Select Features window appears.
+
+1. In the **Features** list, Click to select the following checkboxes (If necessary, click the **Add Features** button when prompted):
+
+   - .NET Framework 4.x Features \> WCF Services \> **HTTP Activation**
+
+   - .NET Framework 4.x Features \> WCF Services \> **TCP Activation** 
+
+1. Click the **Next** button. The Web Server Role (IIS)  window appears.
+
+1. Click the **Next** button. The Select Role Services Window appears.
+
 1. In the **Roles** list, click to select the following check boxes:
 
    >**Note:** Leave all the auto-selected check boxes as is.
@@ -108,19 +124,8 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
    - Web Server (IIS) \> Web Server \> Security \> **Windows Authentication**
 
-1. Click the **Next** button. The Select Features window appears.
+1. Click the **Next** button. The Confirmation window appears 
 
-1. In the **Features** list, Click to select the following checkboxes (If necessary, click the **Add Features** button when prompted):
-
-   - .NET Framework 4.6 Features \> WCF Services \> **HTTP Activation**
-
-   - .NET Framework 4.6 Features \> WCF Services \> **TCP Activation**
-
-
-1. Click the **Next** button. The Confirm Installation Selections window appears. 
-   
-   == THIS WIZARD MAY NOW HAVE A "Web Server Roll (IIS)" WINDOW THAT IS NOT IN OUR INSTRUCTIONS. PLEASE CHECK.==
-   
 1. Confirm your installation details.
 
 1. Click the **Install** button. Wait for the installation to complete. The Results window appears.
@@ -129,7 +134,65 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
 > **Note:** We recommend you run [Windows Update](http://update.microsoft.com/) to install the latest security patches for IIS once you have IIS installed.
 
-## Step Two: Ensure IIS Does Not Stop the Worker Process
+## Step Two: Configure the IIS Website
+
+ Follow these steps to configure a website in IIS for SS:
+
+1. Extract the SS files into `C:\inetpub\wwwroot\SecretServer` or your location of choice.
+
+1. Open Internet Information Server (IIS) Manager: On the taskbar, click **Server Manager \> Tools \> Internet Information Services (IIS) Manager**.
+
+1. In the Connections pane, expand the server name.
+
+1. Click on the **Application Pools** node. The Application Pools window appears.
+
+1. Click the **Add Application Pool** link. The Add Application Pool dialog box appears.
+
+1. Type `SecretServer` in the **Name** text box. 
+
+1. Click to select **4.x** in the **.NET Framework Version** dropdown list.
+
+1. Click to select **Integrated** in the **Managed Pipeline Mode** dropdown list.
+
+1. Click the **OK** button to save the new application pool. The dialog box closes.
+
+1. (optional) Customize the Windows account SS runs as:
+   
+   1. Right click the new application pool and select **Advance Settings…**
+
+   1. Click the **Identity** setting in the **Process Model** section to select the desired account. Using this, you can, for example, set SS to use IWA to connect to SQL.
+
+1. Expand the **Sites** node on the **Connections** tree.
+
+1. Click on the Default Web Site node.
+
+1. In the **Actions** pane, click **Bindings** to set your desired website. The Edit Bindings dialog box appears.
+
+1. Edit or add bindings as desired. We recommend using HTTPS with a real SSL certificate.
+
+1. Click the **Close** button.
+
+1. In the **Connections** tree, expand the **Default Website** node. 
+
+1. **Either**, If you see the default folder, **SecretServer**, which you created earlier:
+   
+   1. Right click the **SecretServer** folder and select **Convert to Application**. The Add Application dialog box appears.
+
+   1. Click the **Select…** button to choose the pool you created earlier for SS.
+   
+   **Or**, If you used a custom location instead:
+   
+   1. right click the Default Website. The Add Application dialog box appears.
+
+   1. Type `SecretServer` in the **Alias** text box.
+
+   1. Click **Select…** and pick the app pool created for SS.
+
+   1. Type the path where you extracted the SS files in the **Physical Path** text box.
+
+1. Click the **OK** button.
+
+## Step Three: Ensure IIS Does Not Stop the Worker Process
 
 When using IIS version 7.0 and above, by default, the worker process terminates after an inactive period. If SS is in its own application pool, that application pool will stop after a period of no requests. To ensure this does not happen, perform the following procedure. Additionally, by default, IIS launches a worker process when the first request for the Web application is received, so if the SS application takes a long time to start, issues can result. Thus, we recommend launching the SS application pool worker process as soon as IIS starts by setting the start mode to "AlwaysRunning." 
 
@@ -140,8 +203,11 @@ Procedure:
    - If you are using Windows Server 2012 or Windows Server 2012 R2: On the taskbar, click **Server Manager \> Tools \> Internet Information Services (IIS) Manager**.
 
    - If you are using Windows Server 2008 or Windows Server 2008 R2: On the taskbar, click **Start \> Administrative Tools \> Internet Information Services (IIS) Manager**.
+
 1. In the **Connections** pane, expand the server name.
+
 1. Click **Application Pools**.
+
 1. Determine which application pool SS is running as:
 
    1. Expand **Sites** at the left.
@@ -151,14 +217,20 @@ Procedure:
    1. Click on the SS website or virtual directory (if it is running on one).
    
    1. Click **Basic Settings** on the right panel. This indicates SS's application pool.
+
 1. Right-click the application pool and select **Advanced Settings…** The Advance Settings dialog appears.
+
 1. In the **General** section, set **Start Mode** to **AlwaysRunning**.
+
 1. In the **Process Model** section, set **Idle Time-out (minutes)** to **0**.
+
 1. In the **Recycling** section, set **Regular Time Interval (minutes)** to **0**.
+
 1. In the **Recycling** section, click the **\>** next to **Specific Times** to ensure there are no times set. If there are, click the **…** to clear them.
+
 1. Leave IIS Manager open—we will return to it below.
 
-## Step Three: Ensure the User Profile Always Loads
+## Step Four: Ensure the User Profile Always Loads
 
 As of version 10.2, SS requires its application pool "Load User Profile" setting enabled. Otherwise, SS reports a critical alert to system admins. 
 

@@ -14,7 +14,7 @@ The following email notification settings are available:
 
 - **Send Email When Heartbeat Fails:** Email the user when a heartbeat function fails for the secret. The email contains the secret name, error code and details.
 
-- **Send Email When Viewed:** Email the user when the secret is viewed by any user**.**
+- **Send Email When Viewed:** Email the user when the secret is viewed by any user.
 
 The Personalize tab also contains settings that pertain to the type of launcher configured for a secret. If the launcher type is Remote Desktop Protocol (RDP), the following settings are available:
 

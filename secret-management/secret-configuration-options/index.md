@@ -16,7 +16,7 @@ These are the configuration options that are common to every secret:
 
 - **Edit:** Edit the secret parameters.
 
-- **Favorite:** Click the star from the Dashboard or check this box on the Secret View page to mark the Secret as a favorite. It then be displays in the Favorite Secrets widget.
+- **Favorite:** Click the star from the Dashboard or check this box on the Secret View page to mark the Secret as a favorite. It then displays in the Favorite Secrets widget.
 
 - **Folder:** Folder location of the secret. The secret inherits permissions of this folder, depending on the Default Secret Permissions setting in the SS Configuration options.
 

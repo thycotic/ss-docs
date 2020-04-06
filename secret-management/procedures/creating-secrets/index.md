@@ -14,7 +14,7 @@ To create a secret:
 
    ![1556734338407](images/1556734338407.png)
 
-1. Click the **Chose a Secret Template** list to choose a template from which to create the secret .
+1. Click the **Choose a Secret Template** list to choose a template from which to create the secret .
 
    > **Note:** If you do not find a suitable template available, you can create a custom template.
 

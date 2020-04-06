@@ -6,11 +6,7 @@
 
 ## Forums
 
-[Forums](https://my.thycotic.com/forums/)
-
-## My Account Page
-
-[My Account Page](https://my.thycotic.com/myaccount.html)
+[Forums](https://my.thycotic.com/forums/). Forums are oriented toward admins and other technical users.
 
 ## Thycotic Blog
 

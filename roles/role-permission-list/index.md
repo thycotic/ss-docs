@@ -42,7 +42,7 @@ Allows a user to view and edit SSH Proxy settings.
 
 Allows a user to view and edit SAML integration settings on the Login tab of Configuration settings.
 
-**Administer Configuration Security**""""
+**Administer Configuration Security**
 
 Formerly "Administer Security Configuration," allows a user to view and edit  security configuration options in Secret Server. Currently, these  include enabling FIPS compliance mode and protecting the encryption key.
 
@@ -178,7 +178,7 @@ Allows a user to view and edit the settings for Privilege Behavior Analytics.
 
 Allows a user to view and terminate active launcher sessions.
 
-**Administer Ssh Menus**
+**Administer SSH Menus**
 
 Allows a user to edit and create SSH Menus, used in whitelisting commands that can be used on a SSH session.
 
@@ -192,7 +192,7 @@ Allows a user to enable the "Expose for Display" setting of a Secret template  f
 
 **Administer Teams**
 
-Users can create, "dit, an" view all teams.
+Users can create, delete, and view all teams.
 
 **Administer Thycotic One**
 
