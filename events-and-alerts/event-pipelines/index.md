@@ -1,6 +1,6 @@
 [title]: # (Event Pipelines)
 [tags]: # (Event Pipelines)
-[priority]: #
+[priority]: # 
 
 # Event Pipelines
 
@@ -91,6 +91,86 @@ The tasks are:
 - Update Secret with a script
 - Update Secrets to automatically change the password
 
+### Event Variables
+
+Event variables are used in EP tasks. They are:
+
+#### Secret Field Tokens
+
+These can be any secret field name in the tbSecretField table that is not a Password (IsPassword=0) or File (IsFile=0) type. For example, for an Active Directory Account (SecretTypeID=6001), these token are available: $Username, $Domain, or $Notes.
+
+#### Event Setting Tokens
+
+**Table:** Event Setting Tokens with Filter Values
+
+| Token Name          | Purpose                                                      | Values |
+| ------------------- | ------------------------------------------------------------ | ------ |
+| $ByUser             | User name that initiated the event                           | Text   |
+| $ByUserDisplayName  | Display name of user that initiated event                    | Text   |
+| $ContainerName      | Folder name for the event                                    | Text   |
+| $EventAction        | Action that occurred on the event entity type. See list of triggers. | Text   |
+| $EventDetails       | Event notes. For heartbeats and RPC, this contains the status and any error message. | Text   |
+| $EventUserKnownAs   | Username for user that caused the event. If a domain account exists, then this appears as domain\username. | Text   |
+| $ItemId             | Secret ID for the event                                      | Text   |
+| $ItemNameForDisplay | Event secret name                                            | Text   |
+
+#### Secret Setting Tokens
+
+**Table:** Secret Setting Tokens with Filter Values
+
+| Token Name                                            | Purpose                                              | Values                                                       |
+| ----------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| $Secret.Active                                        | Active                                               | Boolean                                                      |
+| $Secret.AutoChangeOnExpiration                        | Auto change on expiration                            | Boolean                                                      |
+| $Secret.ChangePasswordNow                             | Change password now                                  | Boolean                                                      |
+| $Secret.CheckOutChangePassword                        | Checkout change password                             | Boolean                                                      |
+| $Secret.CheckOutEnabled                               | Checkout enabled                                     | Boolean                                                      |
+| $Secret.EnableInheritPermissions                      | Enable inherit permissions                           | Boolean                                                      |
+| $Secret.EnableInheritSecretPolicy                     | Enable inherit secret policy                         | Boolean                                                      |
+| $Secret.Expired                                       | Expired                                              | Boolean                                                      |
+| $Secret.HideLauncherPassword                          | Hide launcher password                               | Boolean                                                      |
+| $Secret.IsDoubleLock                                  | Double lock                                          | Boolean                                                      |
+| $Secret.IsSessionRecordingEnabled                     | Session recording enabled                            | Boolean                                                      |
+| $Secret.IsSSHProxyEnabled                             | SSH proxy enabled                                    | Boolean                                                      |
+| $Secret.LastHeartBeatStatus                           | Status of last heartbeat                             | AccessDenied; AccountLockedOut; ArgumentError; Disabled; DnsMismatch; Failed; IncompatibleHost; Pending; Processing; Success; UnableToConnect;    UnableToValidateServerPublicKey; UnknownError |
+| $Secret.PasswordChangeFailed                          | Password change failed                               | Bolean                                                       |
+| $Secret.PasswordChangeOutOfSync                       | Password change out of sync                          | Boolean                                                      |
+| $Secret.PasswordChangeStatus                          | Password change status                               | None; Pending; Processing                                    |
+| $Secret.PasswordComplianceCode                        | Password compliance code                             | Pending; Pass; Fail                                          |
+| $Secret.RequireApprovalForAccess                      | Require approval for access                          | Boolean                                                      |
+| $Secret.RequireApprovalForAccessForEditors            | Require approval for access for editors              | Boolean                                                      |
+| $Secret.RequireApprovalForAccessForOwnersAndApprovers | Require approval for access for owners and approvers | Boolean                                                      |
+| $Secret.RequireViewComment                            | Require view comment                                 | Boolean                                                      |
+| $Secret.RestrictSshCommands                           | Restrict SSH commands                                | Boolean                                                      |
+| $Secret.RPCAttemptCount                               | RPC attempt count                                    | Boolean                                                      |
+| $Secret.SecretId                                      | Secret ID                                            | Text                                                         |
+| $Secret.SecretPolicyId                                | Secret policy ID                                     | Text                                                         |
+| $Secret.SecretTemplateName                            | Secret template name                                 | Text                                                         |
+
+#### Additional Tokens
+
+##### Secret
+
+- $SecretName
+- $SecretId
+
+##### Folder
+
+- $FolderId
+- $FolderName
+- $FolderPath
+
+##### Event User
+
+- $EventUserKnownAs
+- $EventUserName
+- $EventUserLastLogin
+- $EventUserId
+
+##### Custom Task Variables
+
+These are variables that are created with the Event Pipeline Task. These can be referenced in the same way in this format:  $CustomVariableName.
+
 ### Triggers
 
 EP *triggers* are events in SS that cause the EP to begin processing. All triggers have no settings and can only be added to an EP once. The triggers are:
@@ -156,17 +236,17 @@ There are three permissions:
 
 #### Activating or Deactivating Event Pipelines
 
-To control if an EP is available to all EP policies, you can toggle the EP’s active status:
+To control if an EP is available to all EP policies, you can toggle the EP's active status:
 
 1. Go to the **Event Pipelines** page.
 1. Click the **Pipelines** tab.
 1. Locate the card for the EP you want to activate or deactivate.
 1. Click the **Active/Inactive** toggle button. A confirmation popup appears.
-1. Click the **OK** button. The EP’s status is changed for all EP policies it belongs to.
+1. Click the **OK** button. The EP's status is changed for all EP policies it belongs to.
 
 #### Creating New Event Pipelines
 
-> **Note:** You can create EPs from the Event Pipelines list (shown below) or an EP policy’s details view. With the former method, you will have to add the EP to an EP policy separately. With the latter method, the EP is automatically added to the EP policy you are viewing. You can later manually add additional EPs to the policy as desired.
+> **Note:** You can create EPs from the Event Pipelines list (shown below) or an EP policy's details view. With the former method, you will have to add the EP to an EP policy separately. With the latter method, the EP is automatically added to the EP policy you are viewing. You can later manually add additional EPs to the policy as desired.
 
 To create a new EP:
 
@@ -207,7 +287,7 @@ To create a new EP:
 
 1. Click the **Next** button. The Name Pipeline page of the wizard appears.
 
-1. Type the EP’s name in the **Pipeline** text box.
+1. Type the EP's name in the **Pipeline** text box.
 
 1. Type a description of the EP in the **Pipeline Description** text box.
 
@@ -230,13 +310,13 @@ Because EPs are not directly tied to a single EP policy, they can be viewed thro
 
 #### Activating or Deactivating Event Pipeline Policies
 
-To control if an EP policies is available, you can toggle the EP policy’s active status:
+To control if an EP policies is available, you can toggle the EP policy's active status:
 
 1. Go to the **Event Pipelines** page.
 1. If necessary, click the **Policies** tab.
 1. Locate the card for the EP policy you want to activate or deactivate.
 1. Click the **Active/Inactive** toggle button. A confirmation popup appears.
-1. Click the **OK** button. The EP policy’s status is changed.
+1. Click the **OK** button. The EP policy's status is changed.
 
 > **Note:** The EPs belonging to the EP policy remain available to other EP policies. 
 
@@ -254,7 +334,7 @@ To control if an EP policies is available, you can toggle the EP policy’s acti
 ##### Secret Policies
 
 1. Click **Admin > Secret Policies**. The Secret Policy page appears.
-1. Click the desired secret policy’s name in the list. The Secret Policy page for that policy appears.
+1. Click the desired secret policy's name in the list. The Secret Policy page for that policy appears.
 1. Click the **Edit** button. The list becomes editable.
 1. Click the **Event Pipeline Policy** dropdown list in the **Security Setting** section and select **Enforced**.
 1. Click the **Save** button. All secrets under that secret policy are now affected by the EP policy.
@@ -285,18 +365,18 @@ There are two ways to monitor your EP policy:
 Event Pipelines run in order they appear in the EP policy. Since EPs can be in multiple EP policies, the order is unique to each policy. To change the EP order in the EP policy:
 
 1. Go to the **Event Pipeline Policies** page.
-1. Click the name on the card for the EP policy you want to edit. The policy’s page appears on the Details tab.
+1. Click the name on the card for the EP policy you want to edit. The policy's page appears on the Details tab.
 1. Hover the mouse pointer over the EP you want to reorder. An anchor appears on the left of the card.
 1. Drag that anchor to the desired position. 
 
-> **Note:** If an error occurs in a policy’s EP, then the following EP  still runs.
+> **Note:** If an error occurs in a policy's EP, then the following EP  still runs.
 
 #### Removing Event Pipelines from Event Pipeline Policies
 
 To remove an EP from an EP:
 
 1. Go to the **Event Pipeline Policies** page.
-1. Click the name on the card for the EP policy you want to edit. The policy’s page appears on the Details tab.
+1. Click the name on the card for the EP policy you want to edit. The policy's page appears on the Details tab.
 1. Click on an EP in the details of an EP policy. A panel appears on the right of the page.
 1. Click the **Remove Pipeline** button.
 
@@ -312,4 +392,4 @@ It is possible for EPs to trigger each other over and over in an endless loop. F
 
 Fortunately, SS detects these loops and automatically deactivates the involved EPs. So, if you have EPs that seem to be deactivating themselves, look for circular logic paths involving the EPs.
 
-> **Note:** By default, pipelines are configured to consider any event that executes five tasks within five minutes from the same trigger as an infinite loop. For example, "secret edit" is selected as a pipeline trigger, and "remote password change" is selected as the task. After the first edit is made on a secret, an RPC is triggered. Every time the RPC completes, a new edit is triggered, which, in turn, triggers another RPC. If this happens five times within five minutes, then an infinite loop is declared. If the RPC is slow, taking more than five minutes for five password changes to occur, then an infinite loop is **not** declared. In this case, use the “configuration advanced” page to change "event pipelines infinite loop time (minutes)" to a longer time.
+> **Note:** By default, pipelines are configured to consider any event that executes five tasks within five minutes from the same trigger as an infinite loop. For example, "secret edit" is selected as a pipeline trigger, and "remote password change" is selected as the task. After the first edit is made on a secret, an RPC is triggered. Every time the RPC completes, a new edit is triggered, which, in turn, triggers another RPC. If this happens five times within five minutes, then an infinite loop is declared. If the RPC is slow, taking more than five minutes for five password changes to occur, then an infinite loop is **not** declared. In this case, use the "configuration advanced" page to change "event pipelines infinite loop time (minutes)" to a longer time.
