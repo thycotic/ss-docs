@@ -12,11 +12,11 @@ Secret Server is a privileged access management (PAM) system. Essentially that m
 
 ## What Is the Purpose of the End User Guide?
 
-Secret Server is a powerful, complex product with a wide range of capabilities. Even so, it is very easy to use for regular day-to-day operations for non-technical people. The key to this is knowing what to ignore and understanding the bits you do need to know. This guide is designed to help you do just that. It provides links to only what you need to know. You can add other topics later as needed.
+Secret Server is a powerful, advanced product with a wide range of capabilities. Even so, it is very easy to use for regular day-to-day operations for non-technical people. The key to this is knowing what to ignore and understanding the bits you do need to know. This guide is designed to help you do just that. It provides links to only what you need to know. You can add other topics later as needed.
 
 ## Getting Help
 
-* [Technical Support](../help/technical-support/index.md)
+* Technical Support: Please contact your organization's help desk.
 
 * [Self-Help Resources](../help/self-help-resources/index.md)
 
@@ -96,17 +96,21 @@ Some important basic information about secrets:
 
 ## Using Secrets on Websites (Web Password Filler)
 
-Please set up WPF in the following order:
+Please set up Web Password Filler (WPF) in the following order:
 
 1. Ensure you can log in to SS the conventional way.
+
 1. If necessary, create a folder in SS where the WPF secrets will reside.
+
 1. [Install the WPF browser extension](https://docs.thycotic.com/wpf/2.0.0/getting-started/install.md).
+
 1. [Configure WPF to point to SS](https://docs.thycotic.com/wpf/2.0.0/getting-started/connect.md).
+
 1. [Login to SS via WPF](https://docs.thycotic.com/wpf/2.0.0/getting-started/login-ss.md).
 
 ## Checking out Secrets
 
-The SS _check-out_ feature forces grants exclusive access to a single user. If a secret is configured for check out, a user can then access it. No other user can access a secret while it is checked out, except unlimited administrators. This guarantees that if the remote machine is accessed using the secret, the user who had it checked out was the only one with proper credentials at that time. See [Secret Checkout](../secret-checkout/index.md) for details.
+The SS _check-out_ feature grants exclusive access to a single user. If a secret is configured for check out, a user can then access it. No other user can access a secret while it is checked out, except unlimited administrators. This guarantees that if the remote machine is accessed using the secret, the user who had it checked out was the only one with proper credentials at that time. See [Secret Checkout](../secret-checkout/index.md) for details.
 
 ## Getting Notified of Secret Events
 

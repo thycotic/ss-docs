@@ -33,9 +33,9 @@ Open Internet Information Services (IIS) Manager* and create a new application p
    
 1. Follow [these instructions](https://thycotic.force.com/support/s/article/Changing-IIS-to-not-stop-worker-process-in-IIS-7-and-8) to set the Idle Timeout and Regular Timeout settings to 0 for the application pool in IIS.
 1. Install SS as either a virtual directory (4a) or as a website (4b):
-''
-### Step 4a: 'nstalling Secret Server as a Virtual Directory
-"'"'
+
+### Step 4a: Installing Secret Server as a Virtual Directory
+
 1. Right-click **Default Web Site** and select **Add Virtual Directory...**
 
 1. Select an alias for your Secret Server. The alias is appended to the website, and it is best to name it the name of your earlier unzipped folder. For example, SecretServer becomes `https://myserver/SecretServer`.
@@ -69,7 +69,7 @@ Your SS advanced installation is now ready to complete:
 
 1. If you are using Windows authentication mode to access SQL (recommended), ensure the correct service account is listed.
 
-    -   If you selected mixed mode during the SQL install, select **SQL Server Authentication** and enter the SQL username and password you created for the SQL account. For information about adding a SQL Server user, see the [Adding a SQL Server User](https://thycotic.force.com/support/s/article/Adv-Install-SQL-2016) (KB). 
+1. If you selected mixed mode during the SQL install, select **SQL Server Authentication** and enter the SQL username and password you created for the SQL account. For information about adding a SQL Server user, see the [Adding a SQL Server User](https://thycotic.force.com/support/s/article/Adv-Install-SQL-2016) (KB). 
 
 1. Click the **Install Secret Server** button. Secret Server verifies it is able to successfully create the SS database. If an error occurs no database changes will be made.
 
