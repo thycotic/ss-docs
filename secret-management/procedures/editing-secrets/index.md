@@ -8,7 +8,7 @@
 
 To edit a secret:
 
-1. Navigate to its secret **View** page by searching or drilling down the folder tree.
+1. Navigate to the secret's **View** page by searching or drilling down the folder tree.
 
 1. Click the desired tab for the secret configuration.
 

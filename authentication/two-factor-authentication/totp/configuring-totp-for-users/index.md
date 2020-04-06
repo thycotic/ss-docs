@@ -3,5 +3,3 @@
 [priority]: # (20)
 
 # Configuring TOTP for Users
-
-Content here.

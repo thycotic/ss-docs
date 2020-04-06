@@ -3,5 +3,3 @@
 [priority]: # (40)
 
 # Procedures
-
-Something here.

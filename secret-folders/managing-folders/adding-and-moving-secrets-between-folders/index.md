@@ -22,7 +22,7 @@
 
       ![1556825659307](images/1556825659307.png)
 
-     1. Click the Move to Folder ![1556826052250](../../../../../../Thycotic Files/Documents/Working/Admin Guide/assets/1556826052250.png)  icon. The move Secrets pop-up page appears:
+     1. Click the Move to Folder icon. The move Secrets pop-up page appears:
 
       ![1556826422629](images/1556826422629.png)
 
@@ -30,6 +30,6 @@
 
 1. Click the **Move Secrets** button. The Bulk Progress popup appears:
 
-   <img src="images/1568052002030.png" alt="1568052002030" style="zoom:67%;" />
+![1568052002030](images/1568052002030.png)
 
 1. The secret moves to the selected folder.
