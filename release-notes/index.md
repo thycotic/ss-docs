@@ -6,7 +6,9 @@
 
 ## Secret Server Release Notes
 
-> **Note:** Scroll down for Secret Server Cloud.
+> **Note:** As of Secret Server 10.8, Secret Server Cloud release notes are included in the main release notes.
+
+> **Note:** Scroll down for legacy Secret Server Cloud.
 
 ### Current
 
@@ -36,15 +38,10 @@
 - [Secret Server 5.x](ss-rn-5-x.md)
 - [Secret Server 4.x](ss-rn-4-x.md)
 
+### Secret Server Cloud Legacy
 
-## Secret Server Cloud Release Notes
+- [Cloud Release December 21, 2019](ssc-rn-2019-12-21.md)
 
-### Current
-
-[Cloud Release December 21, 2019](ssc-rn-2019-12-21.md)
-
-## Legacy
-
-[Cloud Release September 21, 2019](ssc-rn-2019-09-21.md)
+- [Cloud Release September 21, 2019](ssc-rn-2019-09-21.md)
 
 > **Note:** For earlier Secret Server Cloud release notes, please see the [legacy release note KBA](https://thycotic.force.com/support/s/article/SSC-RN-EXT-Legacy-Release-Notes) for that version.
