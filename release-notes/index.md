@@ -15,13 +15,27 @@
 ### Legacy
 
 - [Secret Server 10.7.000059](ss-rn-10-7-000059.md)
-- [Secret Server 10.7.000002](https://thycotic.force.com/support/s/article/Secret-Server-10-7-000002-Legacy-Release-Notes)
-- [Secret Server 10.7.000000](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-10-7-000000-Legacy-Release-Notes)
-- [Secret Server 10.6.000026 and 10.6.000027](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-10-6-000027-Legacy-Release-Notes)
-- [Secret Server 10.000000 to 10.6.000001](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-10-6-000001-Legacy-Release-Notes)
-- [Secret Server 9.x](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-9-Legacy-Release-Notes)
-- [Secret Server 8.x](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-8-Legacy-Release-Notes)
-- [Secret Server 4.x to 7.x](https://thycotic.force.com/support/s/article/SS-RN-EXT-Secret-Server-4-to-7-Release-Notes)
+- [Secret Server 10.7.000002](ss-rn-10-7-000002.md)
+- [Secret Server 10.7.000000](ss-rn-10-7-000000.md)
+- [Secret Server 10.6.000027](ss-rn-10-6-000027.md)
+- [Secret Server 10.6.000026](ss-rn-10-6-000026.md)
+- [Secret Server 10.6.000001](ss-rn-10-6-000001.md)
+- [Secret Server 10.6.000000](ss-rn-10-6-000000.md)
+- [Secret Server 10.5.000003](ss-rn-10-5-000003.md)
+- [Secret Server 10.5.000001](ss-rn-10-5-000001.md)
+- [Secret Server 10.5.000000](ss-rn-10-5-000000.md)
+- [Secret Server 10.4.000000](ss-rn-10-4-000000.md)
+- [Secret Server 10.3.x](ss-rn-10-3-x.md)
+- [Secret Server 10.2.x](ss-rn-10-2-x.md)
+- [Secret Server 10.1.x](ss-rn-10-1-x.md)
+- [Secret Server 10.0.x](ss-rn-10-0-x.md)
+- [Secret Server 9.x](ss-rn-9-x.md)
+- [Secret Server 8.x](ss-rn-8-x.md)
+- [Secret Server 7.x](ss-rn-7-x.md)
+- [Secret Server 6.x](ss-rn-6-x.md)
+- [Secret Server 5.x](ss-rn-5-x.md)
+- [Secret Server 4.x](ss-rn-4-x.md)
+
 
 ## Secret Server Cloud Release Notes
 
@@ -29,7 +43,7 @@
 
 [Cloud Release December 21, 2019](ssc-rn-2019-12-21.md)
 
-### Legacy
+## Legacy
 
 [Cloud Release September 21, 2019](ssc-rn-2019-09-21.md)
 
