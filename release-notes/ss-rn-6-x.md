@@ -1,7 +1,7 @@
-[display]: # "search,content,print"
+[display]: # (search,content,print)
 [priority]: #
-[tags]: # "Release Notes"
-[title]: # "Secret Server Release Notes 6.x"
+[tags]: # (Release Notes)
+[title]: # (Secret Server Release Notes 6.x)
 
 # Secret Server Release Notes 6.x
 

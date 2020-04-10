@@ -1,7 +1,7 @@
-[title]: # "Secret Server Release Notes 10.3.x"
-[tags]: # "Release Notes"
+[title]: # (Secret Server Release Notes 10.3.x)
+[tags]: # (Release Notes)
 [priority]: #
-[display]: # "search,content,print"
+[display]: # (search,content,print)
 
 # Secret Server Release Notes 10.3.x
 

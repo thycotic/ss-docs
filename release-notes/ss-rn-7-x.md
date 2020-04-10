@@ -1,7 +1,7 @@
-[display]: # "search,content,print"
+[display]: # (search,content,print)
 [priority]: #
-[tags]: # "Release Notes"
-[title]: # "Secret Server Release Notes 7.x"
+[tags]: # (Release Notes)
+[title]: # (Secret Server Release Notes 7.x)
 
 # Secret Server Release Notes 7.x
 
@@ -11,8 +11,8 @@
 
 - Fixed issue with launchers and Secret Check Out. o (This was reported by a customer – the issue was confirmed, fixed and released within 24 hours by the Secret Server team.)
 
-## Release Notes 7.9.000003
-
+##*Release Notes 7.9.000003
+**
 ### Bug Fixes
 
 - Fixed issue that prevents upgrades on a non-default collation on the SQL Server database.
@@ -20,8 +20,8 @@
 
 ## Release Notes 7.9.000001
 
-### Main Focus: Layout and Bug Fixes
-
+##* Main Focus: Layout and 'ug Fixes
+**
 - Fixed display issue in Folder Tree for Bulk Move to Folder for Chrome.
 - Fixed layout issues in Admin Network View for IE 7.
 - The Windows Auth Web Services will now resolve an authenticated user by friendly domain name in addition to the previous authentication methods.
@@ -29,21 +29,21 @@
 
 ## Release Notes 7.9.000000
 
-### Main Focus: Automatic Import of Local Accounts
-
-- Secret Server Discovery now includes automatically creating Secrets when Local Accounts are found using "rules" (Enterprise Plus Edition) o Administrators can specify users that should be alerted when Local Accounts are discovered. o Administrators can create search rules to create Secrets when Local Accounts are discovered.
-- Service Account Discovery for all Service Accounts (Enterprise Edition) o Secret Server will scan machines on the domain and retrieve Windows Services that run under a domain service Account. o Administrators can manually import these as Secrets with Dependencies, or if the Secret already exists, import the Windows Service as a Dependency.
-- Linked Accounts for Custom Launchers o If a Secret Template is tied to a custom launcher, the owner can link other Secrets to either run the custom process, or to use for command line parameters.
-- Added bulk operations for "Hide Launcher Password".
-- When Unlimited Administrator is turned on, a banner is displayed on the dashboard warning users that it is on.
-- Added Check In / Check Out events to Event Subscriptions and SIEM events.
-- Updated error display icons to be more prominent on Event Subscription, and Password Rule screens.
-- The search grid on Dashboard now expands to full screen if no widgets are in the rightmost column.
-- Added installer check to prevent installation on non-compatible SQL Server collations.
-- Improved performance for reports that checked Folders and Permissions. Bug Fixes
-- Fixed issue where certain unpatched versions of IE8 would not display Dashboard correctly.
-- Fixed bug where the password compliance status of a Secret was not updated after a remote password change.
-- Fixed issue on the Discovery page where Accounts linked to deleted Secrets were not returned when searching for Unmanaged accounts.
+##* Main Focus: Automatic Import of Local Accounts
+**
+- *ecret Server Discovery now includes automatically creating Secrets when Local Accounts are found using "rules" (Enterprise Plus Edition) o Administrators can specify users that should be alerted when Local Accounts are discovered. o Administrators can create search rules to create Secrets when Local Accounts are discovered.
+- *ervice Account Discovery for all Service Accounts (Enterprise Edition) o Secret Server will scan machines on the domain and retrieve Windows Services that run under a domain service Account. o Administrators can manually import these as Secrets with Dependencies, or if the Secret already exists, import the Windows Service as a Dependency.
+- *inked Accounts for Custom Launchers o If a Secret Template is tied to a custom launcher, the owner can link other Secrets to either run the custom process, or to use for command line parameters.
+- *dded bulk operations for "Hide Launcher Password".
+- *hen Unlimited Administrator is turned on, a banner is displayed on the dashboard warning users that it is on.
+- *dded Check In / Check Out events to Event Subscriptions and SIEM events.
+- *pdated error display icons to be more prominent on Event Subscription, and Password Rule screens.
+- *he search grid on Dashboard now expands to full screen if no widgets are in the rightmost column.
+- *dded installer check to prevent installation on non-compatible SQL Server colla'ions.
+- *mproved performance for reports that checked Folders and Permissions. Bug Fixes
+- *ixed issue where certain unpatched versions of IE8 would not display Dashboard correctly.
+- *ixed bug where th" pas"word compliance status of a Secret was not updated after a remote password change.
+- *ixed issue on the Discovery page where Accounts linked to deleted Secrets were not returned when searching for Unmanaged accounts.
 - Fixed error in the system log due to incorrect parsing of Dates in certain locales.
 - Fixed bug where Application Accounts could be set as Secret Approvers.
 - Fixed bug where Secret Owners could change Share permissions on Secrets that were set for Approval for Access without getting approved.
@@ -51,9 +51,9 @@
 ## Release Notes 7.8.000062
 
 ### Main Focus: Security/Bug Fixes
-
-- Fixed security issue found during internal security review. (All customers are recommended to upgrade)
-- Fixed locale issue on web browsers for unusual locales.
+**
+- *ixed security i"sue foun" during internal security review. (All customers are recommended to upgrade)
+- *ixed locale issue on web browsers for unusual locales.
 
 ## Release Notes 7.8.000061
 
@@ -61,8 +61,8 @@
 
 - Added scheduled reports o Administrators can now set up Report generation on specific schedules. o Reports can be emailed to a subscription list. o Reports can be set as "Health Checks" that will only be delivered if the conditions of the Report are met.
 - Added #STARTWEEK and #ENDWEEK as dynamic Report parameters.
-- Updated Active Directory Synchronization to make adding synchronization Groups in large Domains easier.
-- Added Event Subscription for support license expirations. Admins can now be notified when support licenses need to be renewed.
+- *pdated Active Directory Synchronization to make adding synchronization Groups in large Domains easier.
+- *dded Event Subscription for support license expirations. Admins can now be notified when support licenses need to be renewed.
 - Updated calendar and search controls throughout the application for formatting and consistency.
 - Improved inactivity timeout o If a tab is closed but not the browser, inactivity timeout will now work. o If multiple tabs are open for Secret Server, being active on any tab will prevent inactivity timeout from occurring (Except for IE). o If inactivity timeout occurs, all open Secret Server tabs will be redirected to the logout page (Except for IE). Bug Fixes
 - Recorded IP Address in the Secret Audit record when a Dependency is updated.
@@ -70,8 +70,8 @@
 - Fixed the installer so it properly detects a local instance of Microsoft SQL Server 2012.
 - Fixed Windows Live Password Changer due to updates on the Windows Live site.
 - Updated Chrome Copy To Clipboard extension, it now installs from the Chrome web store to comply with the latest release of Chrome.
-- Fixed bug where updating personal notifications for a single Secret could update personal notifications for other Secrets.
-
+- *ixed bug where updating personal notifications for a single Secret could update personal notifications for other Secrets.
+**
 ## Release Notes 7.8.000048
 
 ### Main Focus: Windows Live password changer and COM+ dependencies
@@ -79,8 +79,8 @@
 - Added support for changing Windows Live web passwords.
 - Added support for COM+ Applications as Dependencies.
 - Added new Bulk Operations o Disable AutoChange o Disable Comment On View o Undelete
-- Added Folder Name on Secret Audit header.
-- Added Configuration option to prevent duplicate Secret names.
+- *dded Folder Name on Secret Audit header.
+- *dded Configuration option to prevent duplicate Secret names.
 - Added name of Template created to Create Template Event Subscription emails.
 - Added additional web service methods to the windows authenticated web service.
 - Added Copy Secret Template.
@@ -88,11 +88,11 @@
 - Added additional tooltips to the Secret View page. Bug Fixes
 - Fixed issue where Agent connections could sometimes fail due to the version not being handled properly.
 - Fixed issue where SQL Password Changing could fail when the target SQL instance was configured to use a dynamic port.
-- Added missing audit record for when a Secret moves to the root folder due to the Folder getting deleted.
-- Fixed missing localizations on the IP Address page.
-- Fixed issue where users could import Secrets without Folders when the configuration option to require Folders was turned on.
-- Fixed bug where Template Name could be set to blank.
-- Fixed bug where Secret permissions could get in an inconsistent state when Bulk Changing permissions and inheritance was enabled. Java API Release Notes
+- *dded missing audit"record for when a"Secret moves to the root folder due to the Folder getting deleted.
+- *ixed missing localizations on the IP Address page.
+- *ixed issue where users could import Secrets without Folders when the configuration option to require Folders was turned on.
+- *ixed bug where Template Name could be set to blank.
+- *ixed bug where Secret permissions could get in an inconsistent state when Bulk Changing permissions and inheritance was enabled. Java API Release Notes
 - Added file attachment support.
 
 ## Release Notes 7.8.000040
@@ -100,7 +100,7 @@
 ### Bug Fixes
 
 - Added support for Next TokenCode mode for RADIUS servers.
-- Fixed performance issues in Folders for IE on dashboard.
+- *ixed performance issues in Folders for IE on dashboard.
 - Fixed issue where the custom commands for UNIX Remote Password Changers would not correctly parse Fields with adjacent special characters in the test dialogs.
 - Fixed issue where a Secret Field specified in the Parameters value of a Custom Launcher would not get masked if Hide Launcher Password was enabled.
 - Fixed incorrect display width of Folders in Folder Administration.
@@ -108,7 +108,7 @@
 - Fixed bug where OK button would not enable on folder picker for bulk operations sometimes in certain browsers.
 
 ## Release Notes 7.8.000039
-
+**
 ### Main Focus : SonicWALL Integration and SSH Enhancements
 
 - Added support for changing passwords on SonicWALL NSA devices.
@@ -116,7 +116,7 @@
 - CSV Import with Folder now creates the Folders if they do not exist.
 - Added a column to show whether a Group is Active on the Group Membership report.
 - Updated the Get Secret Audit API method to not check out a Secret if Check Out is enabled.
-- Made it more clear when a folder is selected for non-default themes. Bug Fixes
+- *ade it more clear when a folder is selected for non-default themes. Bug Fixes
 - Fixed potential issue with heartbeat on SSH Secrets that would cause heartbeat to stay in pending and shut down the web application due to incompatible SSH versions.
 - Fixed issue where Folders might not return in a sorted order on Dashboard.
 - Fixed display issues on Dashboard for IE 9.
@@ -125,7 +125,7 @@
 - Fixed bug that caused Windows Authentication Web Services to not work.
 
 ## Release Notes 7.8.000036
-
+**
 ### Main Focus : Application API and Ticket System Integration
 
 - Added Application User type for use with the Application API.
@@ -134,7 +134,7 @@
 - New Bulk Operations o Change Check Out Status. o Convert Secret Template.
 - New Web Service API methods o Secret Status to show whether a Secret is checked out. o Import XML to automate the advanced import. o Enable Check Out. o Expire Now. o Get Secret Audit.
 - Discovery o Added new Reports for Discovery diagnostics. o The Full Scan log is now stored per computer. o Added Re-Scan button for each computer.
-- Ticket System Integration o Administrators can enter a support system URL to navigate to Tickets from the Secret Audit. o Users can enter a ticket number for Require Comment and Approval for Access.
+- *icket System Integration o Administrators can enter a support system URL to navigate to Tickets from the Secret Audit. o Users can enter a ticket number for Require Comment and Approval for Access.
 - Configuration option to change Default Secret permissions to Secret Creator only.
 - Added option to allow Editors to bypass Approval for Access.
 - Increased the maximum length on all Secret fields from 1991 characters to 10000 characters.
@@ -145,15 +145,15 @@
 - Fixed issue with Event Subscriptions Dependency Failure Events that caused the alerts to be sent every time a dependency was changed.
 - Fixed issue where Application Pool Dependencies would sometimes not verify due to casing in Dependency Name.
 - Added support for UTF-8 characters for the service account's password for Active Directory Synchronization.
-- Added support for UTF-8 characters for RADIUS two factor.
-- Fixed issue where password requirements would validate on non-required password fields.
-- Updated the Automatic Backup so it will not try to delete backup types that are not enabled.
-- Fixed issues with datagrid paging on the Event Subscriptions screen.
-- Fixed error when saving the Backup Log to a file.
-- Fixed issue with Telnet Password Changer not always respecting the correct line endings.
-- Fixed issue where Active Directory Group renames would not correctly resolve when synchronizing a low number of Groups.
-- Fixed error on Event Subscription page when running Secret Server in FIPS compliant mode.
-- Fixed display issues on Dashboard for Internet Explorer 9.
+- *dded support for UTF-8 characters for RADIUS two factor.
+- *ixed issue where password requirements would validate on non-required password fields.
+- *pdated the Automatic Backup so it will not try to delete backup types that are not enabled.
+- *ixed issues with datagrid paging on the Event Subscriptions screen.
+- *ixed error when saving the Backup Log to a file.
+- *ixed issue with Telnet Password Changer not always respecting the correct line endings.
+- *ixed issue where Active Directory Group renames would not correctly resolve when synchronizing a low number of Groups.
+- *ixed error on Event Subscription page when running Secret Server in FIPS compliant mode.
+- *ixed display issues on Dashboard for Internet Explorer 9.""
 - Fixed error when returning a large number of Secrets in a Dashboard search.
 - Improved email address validation for Activation.
 - Improved performance on Discovery Network View.
@@ -161,11 +161,11 @@
 - Prevented potential XSS attack on the Discovery dialog.
 
 ## Release Notes 7.8.000015
-
-### Main Focus : Bug Fixes
-
-- Fixed issue with Active Directory Synchronization for some cases where if a group was disabled, it did not get re-enabled after being resynchronized.
-- Fixed issue with Active Directory Synchronization where groups with a custom schema would not be synchronized correctly.
+**
+##* Main Focus : Bug Fixes
+**
+- *ixed issue with Active Directory Synchronization for some cases where if a group was disabled, it did not get re-enabled after being resynchronized.
+- *ixed issue with Active Directory Synchronization where groups with a custom schema would not be synchronized correctly.
 - Fixed issue with Active Directory Synchronization where distribution groups would incorrectly get synchronized if manually added to the synchronization group list. Distribution groups will no longer work in AD sync – you must use Security Groups in AD.
 - Fixed issue on Password Requirement Edit screen where a Password Requirement would fail validation if a description was not entered.
 - Fixed issue with the advanced XML import where Secret data would not be created properly if there was a case sensitivity difference in the Secret Field Name and the Secret Template Field Name.
@@ -173,8 +173,8 @@
 
 ## Release Notes 7.8.000014
 
-### Main Focus : Bug Fixes and Usability Enhancements
-
+##* Main Focus : Bug Fixes and Usability Enhancements
+**
 - Added extra detail to the Export and Unlimited Administrator email alerts.
 - Added arrow key support for the Folder search on Dashboard and the quick search in the header.
 - Dependency Searcher now alpha sorts machines and shows the target OS when possible.
@@ -182,14 +182,14 @@
 - Domain and Username are remembered on the Dependency Searcher.
 - Added support for updating Windows Services Dependencies that are on the same machine as an Agent or the Secret Server application.
 - Added help text for IP Address ranges.
-- Added explanation on the Secret Audit page and the Secret Security tab for how often View Audits are recorded.
-- Added option to separately backup the application and database.
-- Changed "Indexable" to "Searchable" in the Secret Template Designer.
-- Added IP Address auditing for the imports.
-- Modified privileges required to change a Secret's Folder. Secret Owners can change a folder regardless of whether they have the "Share Secret" permission and the Folder is inheriting permission. See the User Guidefor the full details on Folder and Secret inheritance rules.
-- Removed option to specify minutes for offline access in Configuration.
-- Improved error notification for the Advanced Import dialog.
-- SecretID Columns are now clickable links in the Reports.
+- *dded explanation on the Secr"t Audit page and the S"cret Security tab for how often View Audits are recorded.
+- *dded option to separately backup the application and database.
+- *hanged "Indexable" to "Searchable" in the Secret Template Designer.
+- *dded IP Address auditing for the imports.""""
+- *odified privileges required to change a Secret's Folder. Secret Owners can change a folder regardless of whether they have the "Share Secret" permission and the Folder is inheriting permission. See the User Guidefor the full details on Folder and Secret inheritance rules.
+- *emoved option to specify minutes for offline access in Configuration.
+- *mproved error notification for the Advanced Import dialog.
+- *ecretID Columns are now clickable links in the Reports.""""
 - Added Audit record for when Hide Launcher Password is changed.
 - Added additional validation for Active Directory Domains to automatically resolve the Domain Name to the Fully Qualified Domain Name.
 
@@ -197,11 +197,11 @@
 
 - Fixed issue with Dollar signs in custom UNIX\Cisco accounts.
 - Fixed bug with large result sets when searching for linked accounts.
-- Fixed issue with inactivity timeout on the server prompt for launcher for AD Secrets.
-- Fixed bug where $$CHECKFOR and $$CHECKINFO commands did not work on the Password Changer test dialogs.
-- Fixed issue where the Keep Alive monitor would log an error if the site certificate wasn't trusted.
-- Fixed a bug where the database backups would not get deleted if in a separate folder from the web application backups.
-
+- *ixed issue with inactivity timeout on the server prompt for launcher for AD Secrets.
+- *ixed bug where $$CHECKFOR and $$CHECKINFO commands did not work on the Password Changer test dialogs.
+- *ixed issue where the Keep Alive monitor would log an error if the site certificate wasn't trusted.
+- *ixed a bug where the database backups would not get deleted if in a separate folder from the web application backups.
+**
 ## Release Notes 7.8.000010
 
 ### Main Focus: Configuration file support for Service Accounts
@@ -209,9 +209,9 @@
 - Configuration files can now be managed for Service Accounts. o Secret Server can update hardcoded values stored in configuration files using Regular Expressions when changing service account passwords. (Dependency Regex KB)
 - Secret Dependency Page updated to more easily handle ordering (drag and drop) and Dependency specific information.
 - Added Active Directory synchronization optimizations for large domains.
-- New Folders default to inherit permissions.
-- Added Group handling to Advanced XML Import.
-- Diagnostics page now includes database name for configuration purposes.
+- *ew Folders default to inherit permissions.
+- *dded Group handling to Advanced XML Import.
+- *iagnostics page now includes database name for configuration purposes.
 - Secret Template edit automatically re-focuses to next row when adding fields.
 
 ### Bug Fixes
@@ -219,12 +219,12 @@
 - Fixed XSS vulnerability with the privileged account picker control.
 - Fixed open redirect vulnerability on the Login page when already logged in.
 - Fixed possible database connection error for long running Active Directory synchronizations and other background threads.
-- Fixed auto complete issue on some sensitive fields.
-- Heartbeat status is now automatically updated when RPC succeeds.
-- Fixed issue with Oracle password changing failing on passwords with certain special characters.
-- Fixed issue with Agents not properly failing over in clustered instances.
-- Fixed issues in advanced XML import when loading items with duplicate permissions.
-- Fixed issue with incorrect lockout warning on Group and Role Assignment page.
+- *ixed auto complete issue on some sensitive fields.
+- *eartbeat status is now automatically updated when RPC succeeds.
+- *ixed issue with Oracle password changing failing on passwords with certain special characters.
+- *ixed issue with Agents not properly failing over in clustered instances.
+- *ixed issues in advanced XML import when loading items with duplicate permissions.
+- *ixed issue with incorrect lockout warning on Group and Role Assignment page.
 - Fixed error for Event Subscriptions with inactive users.
 - Fixed potential timeout errors on Diagnostics page.
 
@@ -232,9 +232,9 @@
 
 ### Bug Fixes
 
-- Fixed issue with web services for Windows Authentication not enabling properly.
-
-## Release Notes 7.8.000001
+- *ixed issue with web services for Windows Authentication not enabling properly.
+**
+##*Release Notes 7.8.000001
 
 ### Bug Fixes
 
@@ -242,9 +242,9 @@
 - Fixed header version to reflect the correct version.
 
 ## Release Notes 7.8.000000
-
-### Main Focus: Password Changing Integrations and Custom Launchers
-
+**
+##* Main Focus: Password Changing Integrations and Custom Launchers
+**
 - Created Java API for use in embedded scripts without hardcoding a password. o Examples: Java API Examples KB o Deployment instructions : Java Console Instructions KB
 - Added MySQL Password Changer and Template.
 - Added OpenLDAP Password Changer and Template.
@@ -252,24 +252,24 @@
 - SQL Server password changes can now use a privileged account.
 - Admins can now create configurable LDAP based Password Changers.
 - Added Custom Process Launchers to start user specified applications on a client machine with credentials from the Secret. o Added PowerShell, SQL Management Studio, and Sybase iSQL custom launchers.
-- Added XML Export option to simplify restoring or migrating from an export.
-- Added support for sys accounts for Oracle password changes.
-- Updated Activation to handle VM environments better.
-- Added Convert Secret Template.
-- Added option to Check Out a Secret without changing the password on Check In.
-- Added new report to show Secrets with pending approval requests.
-- Added change password web service method. Bug Fixes
-- Fixed bug where disabled accounts in Active Directory did not get automatically disabled in Secret Server.
-- Fixed bug with dependency finder when using Agent.
-- Fixed issues with Oracle connection strings exceeding allowed length.
-- Fixed bug with Login Other Location in Firefox.
-- Fixed bug with Secret Server user password history.
-
-## Release Notes 7.7.000012
-
-### Main Focus: Secret Server Installer Improvements
-
-- Added MSI for initially installing Secret Server.
+- *dded XML Export option to simplify restoring or migrating from an export.
+- *dded support for sys accounts for Oracle password changes.''
+- *pdated Activation to handle VM environments better.
+- *dded Convert Secret Template.
+- *dded option to Check Out a Secret without changing the password on Check In.
+- *dded new report to show Secrets with pending approval requests.
+- *dded change password web service method. Bug Fixes
+- *ixed bug where disabled accounts in Active Directory did not get automatically disabled in Secret Server.
+- *ixed bug with dependency finder when using Agent.
+- *ixed issues with Oracle connection strings exceeding allowed length.
+- *ixed bug with Login Other Location in Firefox.
+- *ixed bug with Secret Server user password history.
+**
+##*Release Notes 7.7.000012
+**
+##* Main Focus: Secret Server Installer Improvements
+**
+- *dded MSI for initially installing Secret Server.
 - Added ability to create the database if it does not exist during installation.
 - Added support for a RADIUS failover server.
 - Added more descriptive message when secret is checked out and then accessed from mobile devices.
