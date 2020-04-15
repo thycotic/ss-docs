@@ -4,6 +4,8 @@
 
 # Reports
 
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+
 The reporting interface comes with a set of standard reports. These reports include a variety of 2D and 3D charting and graphing components and a full grid of data. Some of the reports are purely data detailed and have no charts. You can also create your own reports based on any SS data, such as user, audit, permissions, and folders. You can create report categories to aid in the organization of your reports. Reports can be arranged to provide access to auditors and meet compliance requirements. These reports can be accessed in the **General** tab on the **Reports** page.
 
 **Figure:** Reports Page

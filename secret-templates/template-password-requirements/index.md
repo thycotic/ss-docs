@@ -4,6 +4,8 @@
 
 # Template Password Requirements
 
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+
 Set requirements on a password text-entry field to validate user-entered passwords or make auto-generated passwords conform to set specifications.
 
 A password requirement is made up of a minimum and maximum length, a set of characters, and optional rules such as "At least three upper-case characters" or "The first character must be lower-case". The default password requirement is 12 characters from the default character set, with at least one upper-case, lower-case, numeric, and symbol character.
