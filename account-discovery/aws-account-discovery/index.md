@@ -4,6 +4,8 @@
 
 # AWS Account Discovery
 
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+
 > **Note:** Discovery must be enabled in SS to discover AWS accounts.
 
 SS can scan Amazon Web Services (AWS) for accounts that can access the cloud resource. Two types of secrets can be discovered and managed through SS:

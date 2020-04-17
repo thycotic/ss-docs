@@ -4,10 +4,4 @@
 
 # Help
 
-* [Technical Support](technical-support/index.md)
-
-* [Self-Help Resources](self-help-resources/index.md)
-
-* [Secret Server Glossary](secret-server-glossary/index.md)
-
-* [Document Conventions](document-conventions/index.md)
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
