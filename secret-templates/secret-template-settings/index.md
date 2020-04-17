@@ -4,6 +4,8 @@
 
 # Secret Template Settings
 
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+
 The secret template designer provides several settings to customize secret template text-entry fields:
 
 - To add a secret text-entry field, fill out the values and click the **+** button. 

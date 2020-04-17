@@ -4,4 +4,6 @@
 
 # Installation
 
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+
 Please [review our prerequisites](../prerequisites/index.md) and then select either our [basic (automatic)](../installation/basic-installation-automatic/index.md) or [advanced (manual)](../installation/advanced-installation-manual/index.md) installation.
