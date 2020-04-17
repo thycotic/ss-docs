@@ -4,6 +4,8 @@
 
 # Secret Workflow Templates
 
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+
 Starting in 10.6, SS introduced _access-request_ _workflow templates_. These allow users to build more complex interactions based on events within SS than currently possible. The first release of workflows offers access requests. Workflow templates define the series of steps and reviewers required for an access request. You can assign workflow templates to secrets or secret policies.
 
 With Access-Request Workflow Templates, you can:

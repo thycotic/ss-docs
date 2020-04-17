@@ -8,7 +8,7 @@ Below are our suggested guidelines for preparing to run a trial or proof-of-conc
 
 ## System Requirements
 
-Please review the detailed [System and Memory Requirements for Secret Server](https://thycotic.force.com/support/s/article/System-Requirements-for-Secret-Server) (KB). The *Minimum Requirements* are for trial, sandbox, and POC environments. The *Recommended Requirements* are for production deployments.
+Please review the detailed [System Requirements for Secret Server](../../secret-server-setup/system-requirements/index.md). The *Minimum Requirements* are for trial, sandbox, and POC environments. The *Recommended Requirements* are for production deployments.
 
 ## Hardware Requirements
 

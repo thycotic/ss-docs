@@ -4,6 +4,8 @@
 
 # Approving a Request
 
+
+
 Once a request for access to a secret has been made, approvers receive an email.
 
 The email contains one link to the secret **Access Request Approval** page for that request in SS, and five additional links to approve or deny the request if the **Allow Approval for Access from Email** configuration setting is enabled.

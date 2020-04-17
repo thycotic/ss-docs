@@ -4,6 +4,8 @@
 
 # Session Recording
 
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+
 ## Basic Session Recording
 
 Basic Session Recording is a licensed feature in SS. It relies on the protocol handler configured on client machines through SS's launcher. Using the launcher, SS captures second-by-second screenshots on the client machine during a user's recorded session. These images of the user's screen are compiled into a video that can be downloaded and played back for auditing and security purposes. Activity recorded in the session is based on screen changes only.
@@ -62,10 +64,10 @@ In addition to those, ASR includes these enhanced video playback features:
 - Inactivity timeout
 - Maximum session-length protection
 
-> **Note:** The Windows protocol handler encodes your session in WEBM format in real time and sends the recording to SS. There is now an “Enable On-Demand Video Processing” option in SS which leaves the recordings in WEBM format, which Chrome and Firefox can playback without any further processing, saving server processing time. If an on-demand recording is viewed with Internet Explorer or Edge (which do not support WEBM playback), you can click a “Request Video Processing” button and the video will be converted to H.264/MP4, which they can then play. If “Enable On-Demand Video Processing” is not checked, then all sessions recorded by the Windows protocol handler will be automatically converted to H.264/MP4.
+> **Note:** The Windows protocol handler encodes your session in WEBM format in real time and sends the recording to SS. There is now an "Enable On-Demand Video Processing" option in SS which leaves the recordings in WEBM format, which Chrome and Firefox can playback without any further processing, saving server processing time. If an on-demand recording is viewed with Internet Explorer or Edge (which do not support WEBM playback), you can click a "Request Video Processing" button and the video will be converted to H.264/MP4, which they can then play. If "Enable On-Demand Video Processing" is not checked, then all sessions recorded by the Windows protocol handler will be automatically converted to H.264/MP4.
 
 >**Note:** The Mac protocol handler does not yet support this feature, so any recordings created with it are converted to the chosen legacy video codec format. We recommend H.264/MP4.
->You can set the advanced session recording agent to “Record All Sessions.” If someone logs into a server directly without launching from SS, or even logs in at the console, the full session is recorded, including metadata.
+>You can set the advanced session recording agent to "Record All Sessions." If someone logs into a server directly without launching from SS, or even logs in at the console, the full session is recorded, including metadata.
 >
 >**Note:** See [Secret Server Advanced Session-Recording Agent Installation](https://thycotic.force.com/support/s/article/SS-INST-EXT-Adv-Session-Rec-Agent) (KBA) for details.
 
