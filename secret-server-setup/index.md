@@ -4,8 +4,10 @@
 
 # Secret Server Setup
 
-This sections contains information about installation and upgrading SS and its components.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
 
+This section contains information about installation and upgrading SS and its components.
+<!-- 
 * [Prerequisites](prerequisites/index.md)
 
 * [Licensing](licensing/index.md)
@@ -14,7 +16,7 @@ This sections contains information about installation and upgrading SS and its c
 
 * [Installation - Basic installation](installation/basic-installation-automatic/index.md)
 
-* [Installation - Advanced (Manual) Installation](installation/advanced-installation-manual/index.md)
+* [Installation - Advanced (Manual) Installation](installation/advanced-installation-manual/index.md) -->
 
 <!-- * Components Installation
 

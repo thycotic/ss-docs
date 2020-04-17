@@ -8,11 +8,13 @@
 
 Secret Server uses role-based access control (RBAC) to regulate permissions. The roles are assigned to users or groups. A complete list of the permissions available to roles appears below:
 
+> **Note:** to see the built-in roles and what permissions they possess, click the desired role link on the Admin \> Roles page. 
+
 ## Complete List
 
 **Access Offline Secrets on Mobile**
 
-Allows a user to cache their Secrets in the Secret Server mobile application for offline use.
+Allows a user to cache their Secrets in the Secret Server mobile application for offline use. This permission does not automatically come with the Administrator role.
 
 **Add Secret**
 
@@ -26,7 +28,7 @@ Allows a user to make a custom audit entry when accessing a Secret using the web
 
 Allows a user to view domains, edit existing domains, delete domains, and add  new domains. Also allows a user to force synchronization or set the  synchronization interval.
 
-**Administer Backups**
+**Administer Backup**
 
 Allows a  user to view and configure automated backups for Secret Server. Users  with this role permission can change the backup path, disable backups,  and set the backup schedule.
 
@@ -62,7 +64,7 @@ Formerly "Administer Unlimited Admin Configuration," allows a user to turn on  U
 
 Allows a user to view and edit configuration options for synchronizing with  ConnectWise. This can be accessed through the "Folder Synchronization"  link on the Administration page. Note that you need at least view access on the sync folder in order to set up or edit the ConnectWise integration.
 
-**Administer Create Application Users**
+**Administer Create Application Accounts**
 
 Formerly "Create Application Account", allows a user to create application user  accounts to be used exclusively for accessing Secret Server via the API.
 
@@ -73,6 +75,9 @@ Allows a user to create new local users in Secret Server, but not edit them once
 **Administer Custom Password Requirements**
 
 Allows a user to view and edit custom password requirements that can be  configured under the Security tab for individual Secrets.
+
+**Administer Data Retention**
+Can manage audit data retention, such as editing and running now. This permission does not automatically come with the Administrator role.
 
 **Administer Discovery**
 
@@ -130,6 +135,10 @@ Allows a user to view, edit, install, and delete licenses.
 
 Allows a user to view and edit server nodes and clustering settings.
 
+**Adminster OpenID Connect**
+
+Allows a user to manage OpenID connections.
+
 **Administer Password Requirements**
 
 Allows a user to view and edit character sets and password requirements.
@@ -170,11 +179,11 @@ Allows a user to create and edit Secret Policies.''
 
 Allows a user to view, edit, disable, and create Secret Templates.
 
-**Administer Security Analytics**''
+**Administer Security Analytics**
 
 Allows a user to view and edit the settings for Privilege Behavior Analytics.
 
-**Administer Session Monitoring**''
+**Administer Session Monitoring**
 
 Allows a user to view and terminate active launcher sessions.
 
@@ -186,21 +195,25 @@ Allows a user to edit and create SSH Menus, used in whitelisting commands that c
 
 Allows users to view and clear the System Log, which shows general diagnostics information for Secret Server.
 
-**Administer Template Custom Columns**
-
-Allows a user to enable the "Expose for Display" setting of a Secret template  field to make it available for use in Dashboard custom columns.
-
 **Administer Teams**
 
 Users can create, delete, and view all teams.
 
-**Administer Thycotic One**
+**Administer Template Custom Columns**
 
-Allows a user to administer Thycotic One login settings on the Configuration window's Login tab.
+Allows a user to enable the "Expose for Display" setting of a Secret template  field to make it available for use in Dashboard custom columns.
+
+<!-- **Administer Thycotic One**
+
+Allows a user to administer Thycotic One login settings on the Configuration window's Login tab. -->
 
 **Administer Users**
 
 Allows a user to create, disable, and edit users in the system.
+
+**Administer Workflows**
+
+Allows users to manage workflows (advanced access management).
 
 **Advanced Import**
 
@@ -208,7 +221,11 @@ Allows a user to import Secrets from an XML file. Users with the this  permissio
 
 **Allow Access Challenge**
 
-Allows a user be challenged by Privileged Behavior Analytics if their behavior deviates from their normal behavior and meets certain requirements set  by Privileged Behavior Analytics.
+Allows a user be challenged by Privileged Behavior Analytics if their behavior deviates from their normal behavior and meets certain requirements set  by Privileged Behavior Analytics. Administrators do not have this permission by default.
+
+**Approve Via Duo Push**
+
+Allow a user to approve access requests via Duo push notifications. Administrators do not have this permission by default.
 
 **Assign Pipelines**
 
@@ -221,6 +238,7 @@ Allows a user to assign Secret Policies to folders and Secrets.
 **Bypass SAML Login**
 
 Allows a user to login with local account without using SAML.
+
 **Copy Secret**
 
 Allows a user to copy secrets when that user also has Own Secret role permission.
@@ -249,9 +267,9 @@ Allows a user to expire Secrets listed in a report.''
 
 Allows a user to force a Secret that is checked out by another user to be checked in.
 
-**No Teams-related Permissions**''
+<!-- **No Teams-related Permissions**
 
-Users can only view other users within their team.
+Users can only view other users within their team. -->
 
 **Own Group**
 
@@ -267,7 +285,7 @@ Allows the user to become a user owner, used to configure specific users without
 
 **Personal Folders**
 
-Allows a user to have personal fol'er when the global personal folders configuration options is enabled.
+Allows a user to have personal folder when the global personal folders configuration options is enabled.
 
 **Privilege Manager Administrator**
 
@@ -277,9 +295,17 @@ Allows the user to have the "Administrator" role for Privilege Manager, giving f
 
 Allows the user to have the "Help Desk" role for Privilege Manager, giving full access to approve or deny escalation requests.
 
+**Privilege Manager MacOS Admin**
+
+Allows the user to have the MacOS "Administrator" role for Privilege Manager, giving full access to the system.
+
+**Privilege Manager Windows Administrator**
+
+Allows the user to have the Windows "Administrator" role for Privilege Manager, giving full access to the system.
+
 **Privilege Manager User**
 
-Allows the user to have the "User" role for Privilege Manager, giving read and write permissions to most items, but not rights to modify security  permissions.
+Allows the user to have the "User" role for Privilege Manager, giving read and write permissions to most items, but not rights to modify security  permissions. Administrators do not have this permission by default.
 
 **Rotate Encryption Keys**
 
@@ -287,7 +313,7 @@ Allows a user to start a process that rotates the Secret encryption keys.
 
 **Session Recording Auditor**
 
-Grants access to the session recording of a secret to a user with at least "List Access" permission on the secret.
+Grants access to the session recording of a secret to a user with at least "List Access" permission on the secret. Administrators do not have this permission by default.
 
 **Unlimited Administrator**
 
@@ -309,7 +335,7 @@ Allows a user to view the "About" page from the Help menu, which links to  exter
 
 Allows a user to view, but not edit, the Active Directory settings in the system.
 
-**View Advanced Dashboard**''
+**View Advanced Dashboard**
 
 Allows a user to view advanced dashboard. Without this permission, users will only be able to view basic dashboard.
 
@@ -352,6 +378,10 @@ Formerly "View Unlimited Admin Configuration," allows a user to view the  Unlimi
 **View ConnectWise Integration**
 
 Allows a user to view, but not edit, the ConnectWise integration settings.
+
+**View Data Retention**
+
+Can view retained audit data. This permission does not automatically come with the Administrator role.
 
 **View Deleted Secrets**
 
@@ -453,6 +483,10 @@ Allows a user to only view which Secrets exist in the system.
 
 Allows a user to view Secret Audit.
 
+**View Secret Password History**
+
+Allows a user to view previous passwords for a secret.
+
 **View Secret Policy**
 
 Allows a user to view, but not edit, Secret Policies.
@@ -489,9 +523,9 @@ Allows a user to only view the System Log, which shows general diagnostics infor
 
 Users can view all teams. This is essentially a read-only Administer Teams.
 
-**View Thycotic One**
+<!-- **View Thycotic One**
 
-Allows a user to view Thycotic One settings on the Configuration window's Login tab.
+Allows a user to view Thycotic One settings on the Configuration window's Login tab. -->
 
 **View User Audit Report**
 
@@ -503,4 +537,4 @@ Allows a user to view which users exist in the system.
 
 **Web Services Impersonate**
 
-Allows a user to send an approval request to act as another user within their  organization when accessing Secret Server programmatically.
+Allows a user to send an approval request to act as another user within their  organization when accessing Secret Server programmatically. Administrators do not have this permission by default.

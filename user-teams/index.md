@@ -4,6 +4,8 @@
 
 # User Teams
 
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+
 ## What Are Secret Server Teams for?
 
 With SS teams, administrators can create special groups called _teams_ to restrict what users can see. A team bundles users and groups to assign them the same rules as to what other users and sites are visible to them. For example, a managed service provider could isolate their customers from seeing other customer's user accounts or a large company could "firewall" their users by department. Site visibility can also be restricted by teams.
