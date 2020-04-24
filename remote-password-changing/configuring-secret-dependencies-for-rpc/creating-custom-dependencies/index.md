@@ -10,4 +10,4 @@ If there are different dependency types that you want to manage that are not sup
 
 - **Dependency Changer**: A dependency changer is a script and the associated parameters to be passed into the script. Dependency changers can be created and modified by going to **Admin > Remote Password Changing > Configure Dependency Changers**.
 
-> **Note:** Please see the [Secret Server Account Discovery Guide](https://thycotic.force.com/support/s/article/Account-Discovery) for a comprehensive guide to configuring and using dependency changers and dependency templates.
+> **Note:** Please see the [Secret Server Discovery Guide](https://thycotic.force.com/support/s/article/Account-Discovery) for a comprehensive guide to configuring and using dependency changers and dependency templates.
