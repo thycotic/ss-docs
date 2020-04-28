@@ -37,7 +37,6 @@ The following is a high-level overview of how the most common type of automated 
 First, discovery has several terms that need defining:
 
 - **Discovery source**: A named collective, ordered system that conducts discovery. There are four broad types: 
-
   - Active Directory
   - Amazon Web Services
   - Unix
@@ -46,7 +45,6 @@ First, discovery has several terms that need defining:
   Configuring discovery is defining the parameters of the discovery source, once the general type is chosen.
 
 - **Discovery scanner**: A discovery component that collects information during a discovery. There are four general types, called *scan templates* (in their sequential running order):
-
   - Find host ranges
   - Find machine
   - Find local accounts
@@ -55,14 +53,12 @@ First, discovery has several terms that need defining:
   A discovery source consists of a ordered sequence of discovery scanners. Each scanner has a defined input and output. A discovery source can have more than one scanner of a given type.
 
 - **Discovery input template**: The defined input type for a discovery scanner. An instance of the template contains the data needed to conduct the scan. The input template is often, but not always, an output template of the preceding scanner in the sequence. Some examples include: 
-
   - Active Directory Domain
   - AWS Discovery Source
   - Organizational Unit
   - Windows Computer
 
 - **Discovery output template**: The defined output type for a discovery scanner. An instance of the template contains the data produced by the scan. The output template is often, but not always, an input template of the next scanner in the chain. Other times, the output may be used by another non-adjacent scanner in the discovery source. Some examples include:
-  
   - Account (Basic)
   - Active Directory Account
   - AWS Access Key
@@ -94,7 +90,6 @@ A typical automated discovery process for Active Directory domains, running on a
 1. The Find Local Accounts scanner (using the File Load Discovery base scanner) examines OUs from its Organizational Unit input template via LDAP and creates a list of all AD admin accounts with which it populates its Active Directory Account output template. This is the list of discovered admin accounts.
 
 1. The Find Dependencies scanner (using the Windows Discovery base scanner) examines a list of machines from its Windows Computer input template using various technologies. For example, applications pools use Microsoft Web Administration (WMA) or, failing that, Windows Management Instrumentation (WMI). Services use WMI, and scheduled tasks use Windows’ task scheduler interfaces. The Find Dependencies scanner can return any number of output templates as desired. These include:
-
     - Com+ Application
     - Computer Dependency (Basic)
     - PS Dependency
