@@ -32,6 +32,8 @@ Some typical dependencies discovery can scan for include:
 
 The following is a high-level overview of how the most common type of automated discovery works without customization. Discovery is organized into an ordered set of discovery scans that pass information based on input and output templates. This is all configured by default. You cannot alter the out-of-the-box discovery scanners, but you can copy them and then modify the copy. 
 
+#### Automated Discovery Terms
+
 First, discovery has several terms that need defining:
 
 - **Discovery source**: A named collective, ordered system that conducts discovery. There are four broad types: 
@@ -72,6 +74,8 @@ First, discovery has several terms that need defining:
   - SQL Local Account
   - SSH Local Account
   - Windows Local Account
+
+#### Example Automated Discovery Process
 
 A typical automated discovery process for Active Directory domains, running on an interval, looks like this:
 
