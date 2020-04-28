@@ -36,40 +36,52 @@ The following is a high-level overview of how the most common type of automated 
 
 First, discovery has several terms that need defining:
 
-- **Discovery source**: A named collective, ordered system that conducts discovery. There are four broad types: 
-  - Active Directory
-  - Amazon Web Services
-  - Unix
-  - VMware ESX\ESXi
+##### Discovery Source
 
-  Configuring discovery is defining the parameters of the discovery source, once the general type is chosen.
+A named collective, ordered system that conducts discovery. There are four broad types:
 
-- **Discovery scanner**: A discovery component that collects information during a discovery. There are four general types, called *scan templates* (in their sequential running order):
-  - Find host ranges
-  - Find machine
-  - Find local accounts
-  - Find dependencies
+- Active Directory
+- Amazon Web Services
+- Unix
+- VMware ESX\ESXi
 
-  A discovery source consists of a ordered sequence of discovery scanners. Each scanner has a defined input and output. A discovery source can have more than one scanner of a given type.
+Configuring discovery is defining the parameters of the discovery source, once the general type is chosen.
 
-- **Discovery input template**: The defined input type for a discovery scanner. An instance of the template contains the data needed to conduct the scan. The input template is often, but not always, an output template of the preceding scanner in the sequence. Some examples include: 
-  - Active Directory Domain
-  - AWS Discovery Source
-  - Organizational Unit
-  - Windows Computer
+##### Discovery Scanner
 
-- **Discovery output template**: The defined output type for a discovery scanner. An instance of the template contains the data produced by the scan. The output template is often, but not always, an input template of the next scanner in the chain. Other times, the output may be used by another non-adjacent scanner in the discovery source. Some examples include:
-  - Account (Basic)
-  - Active Directory Account
-  - AWS Access Key
-  - AWS Account
-  - ESXi Local Account
-  - Host Range
-  - Organizational Unit
-  - PS Account
-  - SQL Local Account
-  - SSH Local Account
-  - Windows Local Account
+A discovery component that collects information during a discovery. There are four general types, called *scan templates* (in their sequential running order):
+
+- Find host ranges
+- Find machine
+- Find local accounts
+- Find dependencies
+
+A discovery source consists of a ordered sequence of discovery scanners. Each scanner has a defined input and output. A discovery source can have more than one scanner of a given type.
+
+##### Discovery Input Template
+
+The defined input type for a discovery scanner. An instance of the template contains the data needed to conduct the scan. The input template is often, but not always, an output template of the preceding scanner in the sequence. Some examples include: 
+
+- Active Directory Domain
+- AWS Discovery Source
+- Organizational Unit
+- Windows Computer
+
+##### Discovery Output Template
+
+The defined output type for a discovery scanner. An instance of the template contains the data produced by the scan. The output template is often, but not always, an input template of the next scanner in the chain. Other times, the output may be used by another non-adjacent scanner in the discovery source. Some examples include:
+
+- Account (Basic)
+- Active Directory Account
+- AWS Access Key
+- AWS Account
+- ESXi Local Account
+- Host Range
+- Organizational Unit
+- PS Account
+- SQL Local Account
+- SSH Local Account
+- Windows Local Account
 
 #### Example Automated Discovery Process
 
@@ -101,7 +113,7 @@ A typical automated discovery process for Active Directory domains, running on a
     - Windows Scheduled Task
     - Windows Service
 
-    The discovered dependencies for local accounts are displayed at Admin \> Discovery \> Discovery Network View \> Local Accounts Tab. Returned accounts for AD users are displayed at  Admin \> Discovery \> Discovery Network View \> Domain \> Cloud Accounts. 
+The discovered dependencies for local accounts are displayed at Admin \> Discovery \> Discovery Network View \> Local Accounts Tab. Returned accounts for AD users are displayed at  Admin \> Discovery \> Discovery Network View \> Domain \> Cloud Accounts. 
 
 > **Note:** Any dependencies that were discovered in prior discovery runs that are no longer present are removed from the discovery results, and their secret dependencies are deactivated.
 
