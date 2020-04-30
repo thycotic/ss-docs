@@ -1,5 +1,5 @@
-[title]: # "System Requirements for Secret Server"
-[tags]: # "System Requirements"
+[title]: # (System Requirements for Secret Server)
+[tags]: # (System Requirements)
 [priority]: #
 
 # System Requirements for Secret Server
