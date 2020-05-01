@@ -8,4 +8,4 @@ HTTP/2 is supported in IIS 10. HTTP/2 is handled within IIS, so this is primaril
 
 Secret Server does support Windows Integrated Authentication where a user’s windows session is passed through for authentication to SS. That is, there is no log on page for SS. The majority of our customers are (and the default  configuration for SS is) using forms-based authentication with a log on page. Only the latter is HTTP/2 compliant.
 
-HTTP/2 is only  compatible with HTTPS protocol. SS can also be configured to  operate only on HTTPS (Admin \> Configuration \> Security \> Force HTTPS/SSL), which we strongly recommend. 
+HTTP/2 is only  compatible with HTTPS protocol. SS can also be configured to  operate only on HTTPS (Admin \> Configuration \> Security \> Force HTTPS/SSL), which we strongly recommend.
