@@ -99,7 +99,7 @@ Enhancements:
 
 ### Discovery
 
-- 162832 - Added an extensible discovery "run as" privilege credential. Users can now specify a secret for the default credentials for running all PowerShell scripts on a site. This allows sites in different data centers to have different default credentials. This applies to remote password changing, checkout hooks, and discovery PowerShell scripts. If you want a specific secret checkout hook, secret password changer, or discovery scanner to use different credentials, you can still provide credentials in those areas, which take precedence over the secret set for the site. See [Account Discovery](../account-discovery/index.md).
+- 162832 - Added an extensible discovery "run as" privilege credential. Users can now specify a secret for the default credentials for running all PowerShell scripts on a site. This allows sites in different data centers to have different default credentials. This applies to remote password changing, checkout hooks, and discovery PowerShell scripts. If you want a specific secret checkout hook, secret password changer, or discovery scanner to use different credentials, you can still provide credentials in those areas, which take precedence over the secret set for the site. See [Discovery](../discovery/index.md).
 
 ### Performance Improvements
 
