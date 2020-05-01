@@ -14,7 +14,7 @@ The following settings are available under the **Administration > Configuration*
 
 > **Note:** "Remember me" is only visible if the "Allow Remember Me" setting is enabled. This is the period that the remember me cookie mentioned above is valid. For example: if set to one day, then users taking advantage of "remember me" have to log in at least once a day. To set a time value (minutes, hours, or days), uncheck the Unlimited checkbox.
 
-- **Enable RADIUS Integration:** Allow for RADIUS server integration with your user login authentication. Other RADIUS settings appear upon enabling this option. These settings are discussed in [RADIUS Authentication](../../application-authentication/two-factor-authentication/radius-user-authentication/index.md#Radius-Authentication).
+- **Enable RADIUS Integration:** Allow for RADIUS server integration with your user login authentication. Other RADIUS settings appear upon enabling this option. These settings are discussed in [RADIUS Authentication](../../authentication/two-factor-authentication/radius-user-authentication/index.md#Radius-Authentication).
 
 - **Maximum Concurrent Logins Per User:** This setting allows a user to log into SS from multiple locations at once without logging out their sessions at other locations.
 
