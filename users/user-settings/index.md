@@ -12,7 +12,7 @@ Below is a brief explanation of each text-entry field or control:
 
 - **Email Address:** Email address used for Request Access, email two-factor authentication, and the like.
 
-- **Email Two-Factor Authentication:** On a login attempt, the user has an email sent to the email address entered above. This email contains a pin code that the user needs to log into the account. See [Email Two-Factor Authentication](../../application-authentication/two-factor-authentication/email-two-factor-authentication/index.md) for details.
+- **Email Two-Factor Authentication:** On a login attempt, the user has an email sent to the email address entered above. This email contains a pin code that the user needs to log into the account. See [Email Two-Factor Authentication](../../authentication/two-factor-authentication/email-two-factor-authentication/index.md) for details.
 
 - **Enabled:** Disabling this control removes the user from the system. Effectively, this is the way to delete a user. SS does not allow complete deletion of users due to auditing requirements. To re-enable a user, navigate to the **Administration > Users page**, check the **Show Inactive Users** checkbox just under the **Users** grid, and edit the user to mark them enabled (see [Configuring Users](../configuring-users/index.md)).
 
@@ -20,9 +20,9 @@ Below is a brief explanation of each text-entry field or control:
 
 - **Password:** Login password for the user. For the various login settings, see Login Settings section.
 
-- **RADIUS Two-Factor Authentication:** This text-entry field only appears if RADIUS authentication is enabled in the configuration. On a login attempt, the user must enter the RADIUS token sent from the RADIUS server. See [RADIUS Authentication](../../application-authentication/two-factor-authentication/radius-user-authentication/index.md#Radius-Authentication).
+- **RADIUS Two-Factor Authentication:** This text-entry field only appears if RADIUS authentication is enabled in the configuration. On a login attempt, the user must enter the RADIUS token sent from the RADIUS server. See [RADIUS Authentication](../../authentication/two-factor-authentication/radius-user-authentication/index.md#Radius-Authentication).
 
-- **RADIUS User Name:** This text-entry field only appears if the above RADIUS Two Factor Authentication setting is enabled. This is the username the RADIUS server is expecting. See [RADIUS Authentication](../../application-authentication/two-factor-authentication/radius-user-authentication/index.md#Radius-Authentication).
+- **RADIUS User Name:** This text-entry field only appears if the above RADIUS Two Factor Authentication setting is enabled. This is the username the RADIUS server is expecting. See [RADIUS Authentication](../../authentication/two-factor-authentication/radius-user-authentication/index.md#Radius-Authentication).
 
 - **User Name:** Login name for the user.
 
