@@ -10,9 +10,9 @@ Users can now approve secret access requests and workflows using Duo push notifi
 
 To use Duo push notifications:
 
-- Duo must set up for SS. See [Duo Security Authentication](../../application-authentication/two-factor-authentication/duo-security-authentication/index.md).
+- Duo must set up for SS. See [Duo Security Authentication](../../authentication/two-factor-authentication/duo-security-authentication/index.md).
 
-- Duo user must be set up for Duo two-factor authentication. See [Setting up Duo (User)](../../application-authentication/two-factor-authentication/duo-security-authentication/index.md).
+- Duo user must be set up for Duo two-factor authentication. See [Setting up Duo (User)](../../authentication/two-factor-authentication/duo-security-authentication/index.md).
 
 - The permission "Approve via DUO" must be granted to a role that is assigned to a group that includes all who will be approving requests via Duo. This allows enough flexibility so that those not wanting Duo push approvals can be configured to not receive them.
 
@@ -50,6 +50,6 @@ To associate the permission with users:
 
 1. Click the **Save Changes** button. Setup is now complete.
 
-> **Note:** In addition to having the role you created, the user must be properly set up to receive Duo push notifications. See [Setting up Duo (User)](../../application-authentication/two-factor-authentication/duo-security-authentication/index.md).
+> **Note:** In addition to having the role you created, the user must be properly set up to receive Duo push notifications. See [Setting up Duo (User)](../../authentication/two-factor-authentication/duo-security-authentication/index.md).
 
 > **Note:**  Any notifications will all be sent out at the same time, and the first response (approve or deny) will be the determinant response. A non-response will not result in either an approve or deny response.
