@@ -1,6 +1,6 @@
 [title]: # (Dependency Token List)
 [tags]: # (API,Scripting,Dependency token)
-[priority]: # (1000)
+[priority]: # ()
 
 # Dependency Token List
 
@@ -53,7 +53,7 @@ Token                              | Available In | Translates To
 `$PASSPHRASE`                        | 10.2         | The passphrase used to encrypt the private key in a public/private key pair on this secret.
 `$PRIORPASSPHRASE`                   | 10.2         | The passphrase that was set on the secret before the current passphrase rotation.
 `$PUBLICKEY`                         | 10.2         | The public key on the secret.
-$CURRENTPUBLICKEY                  | 10.2         | The public key currently on the secret (context-sensitive to whether script is run before or after key rotation).
+`$CURRENTPUBLICKEY`                  | 10.2         | The public key currently on the secret (context-sensitive to whether script is run before or after key rotation).
 `$NEWPUBLICKEY`                      | 10.2         | The new public key that is being set on the secret.
 `$PRIORPUBLICKEY`                    | 10.2         | The public key that was set on the secret before the current key rotation.
 `$DEPENDENCYPRIVILEGEDUSERNAME`      | 10.3         | The user name on the privileged account assigned to the dependency.

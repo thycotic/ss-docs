@@ -1,6 +1,6 @@
 [title]: # (Password Changer List)
 [tags]: # (Password Changer List)
-[priority]: # (1000)
+[priority]: # (40)
 
 # Password Changer List
 
