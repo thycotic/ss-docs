@@ -1,6 +1,6 @@
 [title]: # (Release Notes)
 [tags]: # (Release Notes)
-[priority]: # (1000)
+[priority]: # (2000)
 
 # Secret Server Release Notes
 
