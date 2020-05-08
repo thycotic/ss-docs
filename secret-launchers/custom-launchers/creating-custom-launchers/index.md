@@ -1,6 +1,6 @@
 [title]: # (Creating Custom Launchers)
 [tags]: # (Launcher)
-[priority]: #
+[priority]: # ()
 
 # Creating Custom Launchers
 

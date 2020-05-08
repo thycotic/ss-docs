@@ -1,6 +1,6 @@
 [title]: # (Custom Launchers)
 [tags]: # (Launcher)
-[priority]: # (30)
+[priority]: # ()
 
 # Custom Launchers
 
@@ -12,7 +12,7 @@ There are three types of custom launchers to choose from:
 
 - **Proxied SSH Process:** Launch a process on the client machine that proxies its connection to the target system through SS.
 
-> **Note:** See [Configuring SSH Proxies for Launchers](../..//launcher-configuration-and-support/configuring-ssh-proxies-for-launchers/index.md).
+> **Note:** See [Configuring SSH Proxies for Launchers](../launcher-configuration-and-support/configuring-ssh-proxies-for-launchers/index.md).
 
 - **Batch File:** Launch a batch file from the client machine.
 
