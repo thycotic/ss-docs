@@ -1,6 +1,6 @@
 [title]: # (Sharing Secrets)
 [tags]: # (Share Secret)
-[priority]: # (80)
+[priority]: # (1000)
 
 # Sharing Secrets
 

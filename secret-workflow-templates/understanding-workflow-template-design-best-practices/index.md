@@ -1,6 +1,6 @@
 [title]: # (Understanding Workflow Template Design Best Practices)
 [tags]: # (Workflow)
-[priority]: # (80)
+[priority]: # (1000)
 
 # Understanding Workflow Template Design Best Practices
 

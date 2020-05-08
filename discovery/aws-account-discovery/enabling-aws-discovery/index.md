@@ -1,6 +1,6 @@
 [title]: # (Enabling AWS Discovery)
 [tags]: # (AWS, AccountDiscovery)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Enabling AWS Discovery
 

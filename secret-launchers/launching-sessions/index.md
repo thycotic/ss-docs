@@ -1,6 +1,6 @@
 [title]: # (Launching Sessions)
 [tags]: # (Launcher)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Launching Sessions
 

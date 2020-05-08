@@ -1,6 +1,6 @@
 [title]: # (Creating a Custom Password Requirement)
 [tags]: # (Template)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Creating a Custom Password Requirement
 

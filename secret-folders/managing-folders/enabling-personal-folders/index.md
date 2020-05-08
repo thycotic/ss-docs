@@ -1,6 +1,6 @@
 [title]: # (Enabling Personal Folders)
 [tags]: # (Folder)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Enabling Personal Folders
 

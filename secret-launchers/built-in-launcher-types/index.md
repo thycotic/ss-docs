@@ -1,6 +1,6 @@
 [title]: # (Built-In Launcher Types)
 [tags]: # (Launcher)
-[priority]: # ()
+[priority]: # (1000)
 
 # Built-In Launcher Types
 

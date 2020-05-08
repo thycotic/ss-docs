@@ -1,6 +1,6 @@
 [title]: # (Getting Started Tutorial)
 [tags]: # (Getting Started, Help)
-[priority]: # (200)
+[priority]: # (1000)
 
 # Getting Started Tutorial
 

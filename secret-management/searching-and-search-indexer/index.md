@@ -1,6 +1,6 @@
 [title]: # (Searching and Search Indexer)
 [tags]: # (Search)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Searching and Search Indexer
 

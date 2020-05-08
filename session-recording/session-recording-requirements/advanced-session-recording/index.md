@@ -1,6 +1,6 @@
 [title]: # (Advanced Session Recording)
 [tags]: # (Session Recording)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Advanced Session Recording
 

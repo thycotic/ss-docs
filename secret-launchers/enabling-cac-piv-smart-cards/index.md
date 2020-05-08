@@ -1,7 +1,7 @@
 
 [title]: # (Enabling CAC/PIV Smart Cards for Secret Launchers)
 [tags]: # (CAC/PIV Smart Cards, Launcher)
-[priority]: # ()
+[priority]: # (1000)
 
 # Enabling CAC/PIV Smart Cards for Secret Launchers
 

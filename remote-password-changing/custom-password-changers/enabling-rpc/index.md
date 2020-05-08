@@ -1,6 +1,6 @@
 [title]: # (Enabling RPC)
 [tags]: # (Enabling RPC)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Enabling RPC
 

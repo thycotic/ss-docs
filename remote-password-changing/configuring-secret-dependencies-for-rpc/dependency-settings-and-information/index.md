@@ -1,6 +1,6 @@
 [title]: # (Dependency Settings and Information)
 [tags]: # (Dependency Settings)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Dependency Settings and Information
 

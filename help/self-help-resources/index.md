@@ -1,6 +1,6 @@
 [title]: # (Self-Help Resources)
 [tags]: # (Resources)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Self-Help Resources
 

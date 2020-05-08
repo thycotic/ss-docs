@@ -1,6 +1,6 @@
 [title]: # (Common Launcher Errors)
 [tags]: # (Launcher)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Common Launcher Errors
 

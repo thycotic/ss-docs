@@ -1,6 +1,6 @@
 [title]: # (Testing Your Integration Setup)
 [tags]: # (BMC Remedy)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Testing Your Integration Setup
 

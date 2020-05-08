@@ -1,6 +1,6 @@
 [title]: # (Dependency Token List)
 [tags]: # (API,Scripting,Dependency token)
-[priority]: # ()
+[priority]: # (1000)
 
 # Dependency Token List
 

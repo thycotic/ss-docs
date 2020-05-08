@@ -1,6 +1,6 @@
 [title]: # (Help)
 [tags]: # (Help)
-[priority]: # (100)
+[priority]: # (1000)
 
 # Help
 

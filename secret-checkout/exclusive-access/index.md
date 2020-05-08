@@ -1,6 +1,6 @@
 [title]: # (Exclusive Access)
 [tags]: # (Checkout)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Exclusive Access
 

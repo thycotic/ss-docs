@@ -1,6 +1,6 @@
 [title]: # (Adding and Moving Secrets Between Folders)
 [tags]: # (Folder)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Adding and Moving Secrets Between Folders
 

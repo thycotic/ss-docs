@@ -1,6 +1,6 @@
 [title]: # (Assigning Users to Groups)
 [tags]: # (Groups)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Assigning Users to Groups
 

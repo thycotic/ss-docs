@@ -1,6 +1,6 @@
 [title]: # (Enabling Secret Server Discovery)
 [tags]: # (Account Discovery)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Enabling Secret Server Discovery
 

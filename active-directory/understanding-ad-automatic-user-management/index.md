@@ -1,6 +1,6 @@
 [title]: # (Understanding Active Directory Automatic User Management)
 [tags]: # (Active Directory)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Understanding Active Directory Automatic User Management
 

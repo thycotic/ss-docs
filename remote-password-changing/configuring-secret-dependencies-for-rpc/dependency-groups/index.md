@@ -1,6 +1,6 @@
 [title]: # (Dependency Groups)
 [tags]: # (Creating Custom Dependencies)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Dependency Groups
 

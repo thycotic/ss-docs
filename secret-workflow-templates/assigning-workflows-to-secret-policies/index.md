@@ -1,6 +1,6 @@
 [title]: # (Assigning Workflows to Secret Policies)
 [tags]: # (Workflow)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Assigning Workflows to Secret Policies
 

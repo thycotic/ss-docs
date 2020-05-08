@@ -1,6 +1,6 @@
 [title]: # (Check Out Hooks)
 [tags]: # (Hook)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Checkout Hooks
 

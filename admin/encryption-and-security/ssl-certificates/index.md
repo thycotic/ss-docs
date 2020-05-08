@@ -1,6 +1,6 @@
 [title]: # (SSL Certificates)
 [tags]: # (SSL Certificates)
-[priority]: # (20)
+[priority]: # (1000)
 
 # SSL Certificates
 

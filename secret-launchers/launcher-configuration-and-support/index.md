@@ -1,6 +1,6 @@
 [title]: # (Launcher Configuration and Support)
 [tags]: # (Launcher)
-[priority]: # ()
+[priority]: # (1000)
 
 # Launcher Configuration and Support
 

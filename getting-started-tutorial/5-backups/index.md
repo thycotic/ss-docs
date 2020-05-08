@@ -1,6 +1,6 @@
 [title]: # (5. Backups)
 [tags]: # (Backup)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Step 5: Backups
 

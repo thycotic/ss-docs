@@ -1,6 +1,6 @@
 [title]: # (Creating Event Subscriptions)
 [tags]: # (Creating Event Subscription)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Creating Event Subscriptions
 

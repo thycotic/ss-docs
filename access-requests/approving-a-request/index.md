@@ -1,6 +1,6 @@
 [title]: # (Approving a Request)
 [tags]: # (Access Requests)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Approving a Request
 

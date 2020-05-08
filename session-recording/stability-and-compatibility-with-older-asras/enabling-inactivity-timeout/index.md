@@ -1,6 +1,6 @@
 [title]: # (Enabling Inactivity Timeout)
 [tags]: # (Session Recording)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Enabling Inactivity Timeout
 
