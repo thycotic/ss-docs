@@ -1,6 +1,6 @@
 [title]: # (Deactivating Password Changers)
 [tags]: # (Deactivating Password Changers)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Deactivating Password Changers
 

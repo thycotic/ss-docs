@@ -1,6 +1,6 @@
 [title]: # (Security Compliance Standards)
 [tags]: # (Compliance)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Security Compliance Standards
 

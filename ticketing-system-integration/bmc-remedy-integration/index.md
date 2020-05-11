@@ -1,6 +1,6 @@
 [title]: # (BMC Remedy Integration)
 [tags]: # (BMC Remedy)
-[priority]: # (30)
+[priority]: # (1000)
 
 # BMC Remedy Integration
 

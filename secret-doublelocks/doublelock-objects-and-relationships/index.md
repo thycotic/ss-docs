@@ -1,6 +1,6 @@
 [title]: # (DoubleLock Objects and Relationships)
 [tags]: # (DoubleLock)
-[priority]: # (10)
+[priority]: # (1000)
 
 # DoubleLock Objects and Relationships
 

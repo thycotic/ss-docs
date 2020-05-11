@@ -1,6 +1,6 @@
 [title]: # (Password Loss and Assignment)
 [tags]: # (DoubleLock)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Password Loss and Assignment
 

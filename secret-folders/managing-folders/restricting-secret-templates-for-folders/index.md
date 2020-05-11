@@ -1,6 +1,6 @@
 [title]: # (Restricting Secret Templates for Folders)
 [tags]: # (Folder)
-[priority]: # (80)
+[priority]: # (1000)
 
 # Restricting Secret Templates for Folders
 

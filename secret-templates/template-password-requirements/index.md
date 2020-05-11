@@ -1,6 +1,6 @@
 [title]: # (Template Password Requirements)
 [tags]: # (Template)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Template Password Requirements
 

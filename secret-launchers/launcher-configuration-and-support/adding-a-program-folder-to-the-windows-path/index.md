@@ -1,6 +1,6 @@
 [title]: # (Adding a Program Folder to the Windows PATH)
 [tags]: # (Launcher)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Adding a Program Folder to the Windows PATH
 

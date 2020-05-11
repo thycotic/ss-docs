@@ -1,6 +1,6 @@
 [title]: # (Running a Manual RPC)
 [tags]: # (Running a Manual RPC)
-[priority]: # (170)
+[priority]: # (1000)
 
 # Running a Manual RPC
 

@@ -1,6 +1,6 @@
 [title]: # (Folder Synchronization)
 [tags]: # (Folder)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Folder Synchronization
 

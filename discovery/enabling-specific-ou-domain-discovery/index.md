@@ -1,6 +1,6 @@
 [title]: # (Enabling Specific OU Domain Discovery)
 [tags]: # (Account Discovery)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Enabling Specific OU Domain Discovery
 

@@ -1,6 +1,6 @@
 [title]: # (Overriding the Secret Template's Password Requirements)
 [tags]: # (Secret Template)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Overriding the Secret Template's Password Requirements
 

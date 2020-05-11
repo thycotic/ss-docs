@@ -1,6 +1,6 @@
 [title]: # (Basic Session Recording)
 [tags]: # (Session Recording)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Basic Session Recording
 

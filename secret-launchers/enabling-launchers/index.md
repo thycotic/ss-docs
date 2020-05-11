@@ -1,6 +1,6 @@
 [title]: # (Enabling Launchers)
 [tags]: # (Launcher)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Enabling Launchers
 

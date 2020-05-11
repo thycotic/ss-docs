@@ -1,6 +1,6 @@
 [title]: # (Resetting Expired Secrets)
 [tags]: # (Expiration)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Resetting Expired Secrets
 

@@ -1,6 +1,6 @@
 [title]: # (Editing Teams)
 [tags]: # (Teams)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Editing Teams
 

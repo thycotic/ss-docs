@@ -1,6 +1,6 @@
 [title]: # (Scheduled Reports)
 [tags]: # (Scheduled Reports)
-[priority]: # (80)
+[priority]: # (1000)
 
 # Scheduled Reports
 

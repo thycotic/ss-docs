@@ -1,6 +1,6 @@
 [title]: # (Alerts on Heartbeat Failure)
 [tags]: # (Heartbeat)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Alerts on Heartbeat Failure
 

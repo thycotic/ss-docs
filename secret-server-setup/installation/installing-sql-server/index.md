@@ -1,3 +1,7 @@
+[title]: # (Installing and Configuring SQL Server)
+[tags]: # (Installation, SQL Server)
+[priority]: #
+
 # Installing and Configuring SQL Server
 
 For step-by-step instructions on how to install SQL 2016, see our example [SQL 2016 Installation guide here](https://thycotic.force.com/support/s/article/Adv-Install-SQL-2016).

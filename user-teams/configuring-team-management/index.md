@@ -1,6 +1,6 @@
 [title]: # (Configuring Teams Management)
 [tags]: # (Teams)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Configuring Teams Management
 

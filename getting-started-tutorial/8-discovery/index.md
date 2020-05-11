@@ -1,6 +1,6 @@
 [title]: # (8. Discovery)
 [tags]: # (Discovery)
-[priority]: # (80)
+[priority]: # (1000)
 
 # Step 8: Discovery
 

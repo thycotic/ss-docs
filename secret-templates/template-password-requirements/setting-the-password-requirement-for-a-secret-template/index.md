@@ -1,6 +1,6 @@
 [title]: # (Setting the Password Requirement for a Secret Template)
 [tags]: # (Template)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Setting the Password Requirement for a Secret Template
 

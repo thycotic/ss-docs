@@ -1,6 +1,6 @@
 [title]: # (4. Security Best Practices)
 [tags]: # (Security)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Step 4: Security Best Practices
 

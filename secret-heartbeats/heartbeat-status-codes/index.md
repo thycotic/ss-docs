@@ -1,6 +1,6 @@
 [title]: # (Heartbeat Status Codes)
 [tags]: # (Heartbeat)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Heartbeat Status Codes
 

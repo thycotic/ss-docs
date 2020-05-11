@@ -1,6 +1,6 @@
 [title]: # (Password Changing Scripts)
 [tags]: # (Password Changing Scripts)
-[priority]: # (120)
+[priority]: # (1000)
 
 # Password Changing Scripts
 

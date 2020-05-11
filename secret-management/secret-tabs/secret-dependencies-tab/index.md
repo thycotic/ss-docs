@@ -1,6 +1,6 @@
 [title]: # (Secret Dependencies Tab)
 [tags]: # (Dependencies)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Secret Dependencies Tab
 

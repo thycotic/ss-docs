@@ -1,6 +1,6 @@
 [title]: # (Configurable Settings)
 [tags]: # (BMC Remedy)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Configurable Settings
 

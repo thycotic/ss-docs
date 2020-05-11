@@ -1,6 +1,6 @@
 [title]: # (Ports Used by Secret Server)
 [tags]: # (Ports, Networking)
-[priority]: # ()
+[priority]: #
 
 # Ports Used by Secret Server
 
@@ -18,23 +18,88 @@ This article lists ports typically used in Secret Server. Please note the follow
 
 ## Port Listing
 
-**Table:** Secret Server Ports
+**Table:** Active Directory Sync Ports
 
-| **Component**                         | **Type of Traffic**                                                                                                                                                                   | **Port Number**                                                                                                                                                           |
-|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Active Directory Sync**             | LDAPS LDAP Kerberos SMB/Microsoft-DS                                                                                                                                                  | TCP/636, UDP/636 TCP/389, UDP/389 TCP/88, UDP/88 TCP445, UDP/445                                                                                                          |
-| **Discovery**                         | RPC Dynamic Port Range* SMB/Microsoft-DS RPC Endpoint Mapper SSH                                                                                                                      | TCP/49152-65535, UDP/49152-65535 TCP/445, UDP/445 TCP/135 TCP/22                                                                                                          |
-| **Remote Password Changing**          | RPC Dynamic Port Range* SSH Telnet Microsoft SQL SMB/Microsoft-DS LDAP LDAPS Sybase Oracle Listener Kerberos Password Change Windows Privileged Account (WinNT ADSI Service Provider) | TCP/49152-65535, UDP/49152-65535 TCP/22 TCP/23 TCP/1433, UDP/1434 TCP/445, UDP/445 TCP/389, UDP/389 TCP/636, UDP/636 TCP/2638, TCP/5000 TCP/1521 TCP/464, UDP/464 TCP/139 |
-| **Ports Incoming to Webserver**       | HTTP HTTPS                                                                                                                                                                            | TCP/80 TCP/443                                                                                                                                                            |
-| **Ports Incoming to Database Server** | SQL Connection                                                                                                                                                                        | TCP/1433, UDP/1434                                                                                                                                                        |
-| **Email**                             | SMTP                                                                                                                                                                                  | TCP/25                                                                                                                                                                    |
-| **RADIUS Server**                     | RADIUS Authentication                                                                                                                                                                 | TCP/1812                                                                                                                                                                  |
-| **Syslog**                            | Syslog                                                                                                                                                                                | TCP/514, UDP/514                                                                                                                                                          |
-| **Secure Syslog**                     | Secure Syslog                                                                                                                                                                         | TCP/6514                                                                                                                                                                  |
-| **Internal Site Connector**           | RabbitMQ MemoryMQ                                                                                                                                                                     | TCP/5672 (non-SSL), TCP/5671 (SSL) TCP/8672 (non-SSL), TCP/8671 (SSL)                                                                                                     |
-| **RabbitMQ Clustering**               | EPMD Inter-node Communication Inter-node Communication                                                                                                                                | TCP/4369 TCP/25672 TCP/44002                                                                                                                                              |
+| Type of Traffic  | Port Number      |
+| ---------------- | ---------------- |
+| LDAPS            | TCP/636, UDP/636 |
+| LDAP             | TCP/389, UDP/389 |
+| Kerberos         | TCP/88, UDP/88   |
+| SMB/Microsoft-DS | TCP445, UDP/445  |
+ 
+**Table:** Discovery Ports
 
-##  Related Articles and Resources
+| Type of Traffic        | Port Number                      |
+| ---------------------- | -------------------------------- |
+| RPC Dynamic Port Range | TCP/49152-65535, UDP/49152-65535 |
+| SMB/Microsoft-DS       | TCP/445, UDP/445                 |
+| RPC Endpoint Mapper    | TCP/135                          |
+| SSH                    | TCP/22                           |
+ 
+**Table:** Remote Password Changing Ports
+
+| Type of Traffic                                          | Port Number                      |
+| -------------------------------------------------------- | -------------------------------- |
+| RPC Dynamic Port Range                                   | TCP/49152-65535, UDP/49152-65535 |
+| SSH                                                      | TCP/22                           |
+| Telnet                                                   | TCP/23                           |
+| Microsoft SQL                                            | TCP/1433, UDP/1434               |
+| SMB/Microsoft-DS                                         | TCP/445, UDP/445                 |
+| LDAP                                                     | TCP/389, UDP/389                 |
+| LDAPS                                                    | TCP/636, UDP/636                 |
+| Sybase                                                   | TCP/2638, TCP/5000               |
+| Oracle Listener                                          | TCP/1521                         |
+| Kerberos Password Change                                 | TCP/464, UDP/464                 |
+| Windows Privileged Account (WinNT ADSI Service Provider) | TCP/139                          |
+ 
+**Table:** Web Server Incoming Ports
+
+| Type of Traffic | Port Number |
+| --------------- | ----------- |
+| HTTP            | TCP/80      |
+| HTTPS           | TCP/443     |
+ 
+**Table:** Database Server Incoming Ports
+
+| Type of Traffic | Port Number        |
+| --------------- | ------------------ |
+| SQL Connection  | TCP/1433, UDP/1434 |
+ 
+**Table:** Email Ports
+
+| Type of Traffic | Port Number |
+| --------------- | ----------- |
+| SMTP            | TCP/25      |
+|                 |             |
+ 
+**Table:** RADIUS Server Ports
+
+| Type of Traffic       | Port Number |
+| --------------------- | ----------- |
+| RADIUS Authentication | TCP/1812    |
+ 
+**Table:** Syslog Ports
+
+| Type of Traffic | Port Number      |
+| --------------- | ---------------- |
+| Syslog          | TCP/514, UDP/514 |
+ 
+**Table:** Internal Site Connector Ports
+
+| Type of Traffic | Port Number                        |
+| --------------- | ---------------------------------- |
+| RabbitMQ        | TCP/5672 (non-SSL), TCP/5671 (SSL) |
+| MemoryMQ        | TCP/8672 (non-SSL), TCP/8671 (SSL) |
+ 
+**Table:** RabbitMQ Clustering Ports
+
+| Type of Traffic                                          | Port Number                    |
+| -------------------------------------------------------- | ------------------------------ |
+| EPMD                                                     | TCP/4369                       |
+| Inter-node Communication                                 | TCP/25672                      |
+| Inter-node Communication                                 | TCP/44002                      |
+
+## Related Articles and Resources
 
 - [Enabling WMI port on Windows client machines](https://thycotic.force.com/support/s/article/Enabling-WMI-ports-on-Windows-client-machines) (KBA)
 - [How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/en-us/help/154596/how-to-configure-rpc-dynamic-port-allocation-to-work-with-firewalls) (KBA)

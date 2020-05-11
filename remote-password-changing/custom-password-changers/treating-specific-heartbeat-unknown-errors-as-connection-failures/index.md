@@ -1,6 +1,6 @@
 [title]: # (Treating Specific Heartbeat “Unknown Errors” as Connection Failures)
 [tags]: # (Unknown Errors)
-[priority]: # (180)
+[priority]: # (1000)
 
 # Treating Specific Heartbeat “Unknown Errors” as Connection Failures
 

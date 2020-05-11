@@ -1,6 +1,6 @@
 [title]: # (Assigning Users to Existing DoubleLocks)
 [tags]: # (DoubleLock)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Assigning Users to Existing DoubleLocks
 

@@ -1,6 +1,6 @@
 [title]: # (Web Launchers)
 [tags]: # (Launcher)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Web Launchers
 

@@ -1,6 +1,6 @@
 [title]: # (Running Heartbeat for a Secret)
 [tags]: # (Heartbeat)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Running Heartbeat for a Secret
 

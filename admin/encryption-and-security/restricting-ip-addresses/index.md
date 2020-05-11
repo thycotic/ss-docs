@@ -1,6 +1,6 @@
 [title]: # (Restricting IP Addresses)
 [tags]: # (Restricting IP Addresses)
-[priority]: # (11)
+[priority]: # (1000)
 
 # Restricting IP Addresses
 

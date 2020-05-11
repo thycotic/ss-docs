@@ -1,6 +1,6 @@
 [title]: # (Custom Password Changers)
 [tags]: # (Custom Password Changers)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Custom Password Changers
 

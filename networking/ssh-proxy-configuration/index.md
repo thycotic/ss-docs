@@ -1,6 +1,6 @@
 [title]: # (SSH Proxy Configuration)
 [tags]: # (SSH Proxy,Networking)
-[priority]: # ()
+[priority]: # (1000)
 
 # SSH Proxy Configuration
 

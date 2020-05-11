@@ -1,6 +1,6 @@
 [title]: # (Secret Tabs)
 [tags]: # (Secret)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Secret Tabs
 

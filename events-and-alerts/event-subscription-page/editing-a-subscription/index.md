@@ -1,6 +1,6 @@
 [title]: # (Editing a Subscription)
 [tags]: # (Editing a Subscription)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Editing a Subscription
 
