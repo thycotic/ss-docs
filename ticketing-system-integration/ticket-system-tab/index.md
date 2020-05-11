@@ -1,6 +1,6 @@
 [title]: # (Ticket System Tab)
 [tags]: # (XXX)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Ticket System Tab
 

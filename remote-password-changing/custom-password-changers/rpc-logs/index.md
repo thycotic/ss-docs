@@ -1,6 +1,6 @@
 [title]: # (RPC Logs)
 [tags]: # (RPC Logs)
-[priority]: # (160)
+[priority]: # (1000)
 
 # RPC Logs
 

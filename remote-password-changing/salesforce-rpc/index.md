@@ -1,6 +1,6 @@
 [title]: # (Salesforce.com Password Changer)
 [tags]: # (RPC, Remote Password Changing, Salesforce)
-[priority]: # ()
+[priority]: # (1000)
 
 # Salesforce.com Password Changer
 

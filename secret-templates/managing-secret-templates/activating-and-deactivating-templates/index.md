@@ -1,6 +1,6 @@
 [title]: # (Activating and Deactivating Templates)
 [tags]: # (Template)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Activating and Deactivating Templates
 

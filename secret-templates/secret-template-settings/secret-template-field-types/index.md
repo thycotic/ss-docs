@@ -1,6 +1,6 @@
 [title]: # (Secret Template Field Types)
 [tags]: # (Template)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Secret Template Field Types
 

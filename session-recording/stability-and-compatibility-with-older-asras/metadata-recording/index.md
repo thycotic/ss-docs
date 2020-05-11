@@ -1,6 +1,6 @@
 [title]: # (Recording Metadata)
 [tags]: # (Session Recording)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Recording Metadata
 

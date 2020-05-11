@@ -1,6 +1,6 @@
 [title]: # (Using a DoubleLock )
 [tags]: # (DoubleLock)
-[priority]: # (80)
+[priority]: # (1000)
 
 # Using a DoubleLock
 

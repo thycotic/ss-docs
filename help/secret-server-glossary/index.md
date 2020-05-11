@@ -1,6 +1,6 @@
 [title]: # (Secret Server Glossary)
 [tags]: # (Glossary)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Glossary
 

@@ -1,6 +1,6 @@
 [title]: # (Configuring Secret Template Permissions)
 [tags]: # (Template)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Configuring Secret Template Permissions
 

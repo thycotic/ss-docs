@@ -1,6 +1,6 @@
 [title]: # (Configuring a Secret for Check Out)
 [tags]: # (Check Out)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Configuring a Secret for Check Out
 

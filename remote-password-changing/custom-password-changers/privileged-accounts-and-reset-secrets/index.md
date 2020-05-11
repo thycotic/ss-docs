@@ -1,6 +1,6 @@
 [title]: # (Privileged Accounts and Reset Secrets)
 [tags]: # (Privileged Accounts and Reset Secrets)
-[priority]: # (130)
+[priority]: # (1000)
 
 # Privileged Accounts and Reset Secrets
 

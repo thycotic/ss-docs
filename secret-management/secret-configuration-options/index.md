@@ -1,6 +1,6 @@
 [title]: # (Secret Configuration Options)
 [tags]: # (Secret)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Secret Configuration Options
 

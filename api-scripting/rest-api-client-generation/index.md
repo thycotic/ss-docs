@@ -1,6 +1,6 @@
 [title]: # (REST API Client Generation)
 [tags]: # (REST API,API,Scripting,PowerShell,Swagger,OpenAPI)
-[priority]: # ()
+[priority]: # (1000)
 
 # REST API Client Generation with OpenAPI Swagger
 

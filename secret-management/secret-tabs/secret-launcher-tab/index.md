@@ -1,6 +1,6 @@
 [title]: # (Secret Launcher Tab)
 [tags]: # (Launcher)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Secret Launcher Tab
 

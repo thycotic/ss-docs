@@ -1,6 +1,6 @@
 [title]: # (Assigning a User a DoubleLock Password)
 [tags]: # (DoubleLock)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Assigning a User a DoubleLock Password
 

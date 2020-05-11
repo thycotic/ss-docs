@@ -1,6 +1,6 @@
 [title]: # (Browser Configuration)
 [tags]: # (Launcher)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Browser Configuration
 

@@ -1,6 +1,6 @@
 [title]: # (Secret Personalize Tab)
 [tags]: # (Secret,Personalize)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Secret Personalize Tab
 

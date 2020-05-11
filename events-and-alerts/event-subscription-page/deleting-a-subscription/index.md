@@ -1,6 +1,6 @@
 [title]: # (Deleting a Subscription)
 [tags]: # (Deleting a Subscription)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Deleting a Subscription
 

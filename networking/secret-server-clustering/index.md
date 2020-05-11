@@ -1,6 +1,6 @@
 [title]: # (Secret Server Clustering)
 [tags]: # (Clustering, Networking)
-[priority]: # ()
+[priority]: # (1000)
 
 # Secret Server Clustering
 

@@ -1,6 +1,6 @@
 [title]: # (Creating a DoubleLock and a DoubleLock Password)
 [tags]: # (DoubleLock)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Creating a DoubleLock and a DoubleLock Password
 

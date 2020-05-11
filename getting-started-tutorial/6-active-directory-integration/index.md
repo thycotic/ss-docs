@@ -1,6 +1,6 @@
 [title]: # (6. Active Directory Integration)
 [tags]: # (Active Directory,AD)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Step 6: Active Directory Integration
 

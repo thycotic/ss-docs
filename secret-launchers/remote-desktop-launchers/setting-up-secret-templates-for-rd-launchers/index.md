@@ -1,6 +1,6 @@
 [title]: # (Setting Up Secret Templates for RD Launchers)
 [tags]: # (Launcher)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Setting Up Secret Templates for RD Launchers
 

@@ -1,6 +1,6 @@
 [title]: # (Triggering an RPC When Defined Errors Occur)
 [tags]: # (Defined Errors)
-[priority]: # (190)
+[priority]: # (1000)
 
 # Triggering an RPC When Defined Errors Occur
 

@@ -1,6 +1,6 @@
 [title]: # (Modifying Folders with Secret Policies)
 [tags]: # (Folder)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Modifying Folders with Secret Policies
 

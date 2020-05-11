@@ -1,6 +1,6 @@
 [title]: # (Secret Template Settings)
 [tags]: # (Template)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Secret Template Settings
 

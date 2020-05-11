@@ -1,6 +1,6 @@
 [title]: # (Support)
 [tags]: # (thycotic)
-[priority]: # (3000)
+[priority]: # (1000)
 
 # Thycotic Support
 

@@ -1,6 +1,6 @@
 [title]: # (Editing Folder Permissions)
 [tags]: # (Folder)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Editing Folder Permissions
 

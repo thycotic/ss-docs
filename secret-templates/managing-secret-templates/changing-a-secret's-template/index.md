@@ -1,6 +1,6 @@
 [title]: # (Changing a Secret's Template)
 [tags]: # (Template)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Changing a Secret's Template
 

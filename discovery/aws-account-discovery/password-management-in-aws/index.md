@@ -1,6 +1,6 @@
 [title]: # (Password Management in AWS)
 [tags]: # (AWS, Account Discovery)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Password Management in AWS
 

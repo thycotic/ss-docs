@@ -1,6 +1,6 @@
 [title]: # (Editing RD Launchers)
 [tags]: # (Launcher)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Editing RD Launchers
 

@@ -1,6 +1,6 @@
 [title]: # (Testing your Integration Setup)
 [tags]: # (ServiceNow)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Testing your Integration Setup
 

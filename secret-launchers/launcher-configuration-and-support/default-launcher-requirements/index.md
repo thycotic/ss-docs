@@ -1,6 +1,6 @@
 [title]: # (Default Launcher Requirements)
 [tags]: # (Launcher)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Default Launcher Requirements
 
