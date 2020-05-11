@@ -13,7 +13,7 @@
 | 2 CPU Cores                               | 2 CPU Cores                            |
 | 4 GB RAM                                  | 4 GB RAM                               |
 | 25 GB Disk Space                          | 50 GB Disk Space                       |
-| Windows Server 2008 R2 SP1-2019           | Windows Server 2008 R2 SP1-2019        |
+| Windows Server 2012                       | Windows Server 2012                    |
 | IIS 7 or newer (64-bit applications only) | SQL Server 2012-2019                   |
 | .NET 4.5.1 or newer                       | Collation SQL_Latin1_General_CP1_CI_AS |
 
