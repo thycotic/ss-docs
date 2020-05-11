@@ -1,6 +1,6 @@
 [title]: # (Deleting and Undeleting Secrets)
 [tags]: # (Secret)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Deleting and Undeleting Secrets
 

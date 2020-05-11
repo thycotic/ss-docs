@@ -1,6 +1,6 @@
 [title]: # (Configuring SSH Proxies for Launchers)
 [tags]: # (Launcher)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Configuring SSH Proxies for Launchers
 

@@ -1,6 +1,6 @@
 [title]: # (Remote Desktop Launchers)
 [tags]: # (Launcher)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Remote Desktop Launchers
 

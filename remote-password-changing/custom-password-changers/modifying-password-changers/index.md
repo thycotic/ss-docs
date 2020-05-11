@@ -1,6 +1,6 @@
 [title]: # (Modifying Password Changers)
 [tags]: # (Modifying Password Changers)
-[priority]: # (100)
+[priority]: # (1000)
 
 # Modifying Password Changers
 

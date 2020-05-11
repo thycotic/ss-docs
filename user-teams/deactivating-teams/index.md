@@ -1,6 +1,6 @@
 [title]: # (Deactivating Teams)
 [tags]: # (Teams)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Deactivating Teams
 

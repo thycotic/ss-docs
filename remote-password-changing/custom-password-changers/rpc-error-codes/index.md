@@ -1,6 +1,6 @@
 [title]: # (RPC Error Codes)
 [tags]: # (RPC Error Codes)
-[priority]: # (140)
+[priority]: # (1000)
 
 # RPC Error Codes
 

@@ -1,6 +1,6 @@
 [title]: # (Default Themes)
 [tags]: # (Dashboard, Themes)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Themes
 

@@ -1,6 +1,6 @@
 [title]: # (13. Secret Launchers)
 [tags]: # (Launchers)
-[priority]: # (130)
+[priority]: # (1000)
 
 # Step 13: Secret Launchers
 

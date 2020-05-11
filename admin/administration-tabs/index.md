@@ -1,6 +1,6 @@
 [title]: # (Administration Tabs)
 [tags]: # (Administration Tabs)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Administration Tabs
 

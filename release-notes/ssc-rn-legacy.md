@@ -1,6 +1,6 @@
 [title]: # (Secret Server Cloud: Legacy Release Notes)
 [tags]: # (Release Notes)
-[priority]: # ()
+[priority]: # (1000)
 [display]: # (search,content,print)
 
 # Secret Server Cloud: Legacy Release Notes

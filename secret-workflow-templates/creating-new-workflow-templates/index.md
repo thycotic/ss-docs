@@ -1,6 +1,6 @@
 [title]: # (Creating New Workflow Templates)
 [tags]: # (Workflow)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Creating New Workflow Templates
 

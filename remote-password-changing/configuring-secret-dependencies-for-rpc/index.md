@@ -1,6 +1,6 @@
 [title]: # (Configuring Secret Dependencies for RPC)
 [tags]: # (Configuring Secret Dependencies for RPC)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Configuring Secret Dependencies for RPC
 

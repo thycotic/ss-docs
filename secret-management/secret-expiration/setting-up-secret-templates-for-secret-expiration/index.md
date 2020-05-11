@@ -1,6 +1,6 @@
 [title]: # (Setting up Secret Templates for Secret Expiration)
 [tags]: # (Expiration,Secret Templates)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Setting up Secret Templates for Secret Expiration
 

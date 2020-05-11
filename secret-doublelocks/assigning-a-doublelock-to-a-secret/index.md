@@ -1,6 +1,6 @@
 [title]: # (Assigning a DoubleLock to a Secret)
 [tags]: # (DoubleLock)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Assigning a DoubleLock to a Secret
 

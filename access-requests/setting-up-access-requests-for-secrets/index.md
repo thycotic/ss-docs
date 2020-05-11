@@ -1,6 +1,6 @@
 [title]: # (Setting up Access Requests for Secrets)
 [tags]: # (Access Requests)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Setting up Access Requests for Secrets
 

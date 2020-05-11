@@ -1,6 +1,6 @@
 [title]: # (Configuring Session Recording)
 [tags]: # (Session Recording)
-[priority]: # (15)
+[priority]: # (1000)
 
 # Configuring Session Recording
 

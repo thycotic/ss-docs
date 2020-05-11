@@ -1,6 +1,6 @@
 [title]: # (Modifying Report Categories)
 [tags]: # (Modifying Report Categories)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Modifying Report Categories
 

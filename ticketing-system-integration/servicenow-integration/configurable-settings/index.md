@@ -1,6 +1,6 @@
 [title]: # (Configurable Settings)
 [tags]: # (ServiceNow)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Configurable Settings
 

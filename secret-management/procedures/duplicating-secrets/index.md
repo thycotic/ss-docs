@@ -1,6 +1,6 @@
 [title]: # (Duplicating Secrets)
 [tags]: # (Secret)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Duplicating Secrets
 

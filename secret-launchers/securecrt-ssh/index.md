@@ -1,6 +1,6 @@
 [title]: # (Custom Launcher for SecureCRT)
 [tags]: # (Launcher, custom launcher, SecureCRT)
-[priority]: # (0)
+[priority]: # (1000)
 
 # Custom Launcher for SecureCRT (SSH)
 

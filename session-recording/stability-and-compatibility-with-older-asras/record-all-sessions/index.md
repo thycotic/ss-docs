@@ -1,6 +1,6 @@
 [title]: # (Record All Sessions)
 [tags]: # (Session Recording)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Record All Sessions
 

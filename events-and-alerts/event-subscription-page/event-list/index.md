@@ -1,6 +1,6 @@
 [title]: # (Event List)
 [tags]: # (Event List, Event Subscription List)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Event List
 

@@ -1,6 +1,6 @@
 [title]: # (Setting Up Password Masking)
 [tags]: # (Password Masking)
-[priority]: # (70)
+[priority]: # (1000)
 
 # Setting Up Password Masking
 

@@ -1,6 +1,6 @@
 [title]: # (Viewing a User's Teams)
 [tags]: # (Teams)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Viewing a User's Teams
 

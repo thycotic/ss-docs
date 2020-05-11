@@ -1,6 +1,6 @@
 [title]: # (Adding Remote Desktop Launchers)
 [tags]: # (Launcher)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Adding Remote Desktop Launchers
 
