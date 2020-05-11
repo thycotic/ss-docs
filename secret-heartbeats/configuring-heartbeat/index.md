@@ -1,6 +1,6 @@
 [title]: # (Configuring Heartbeat)
 [tags]: # (Heartbeat)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Configuring Heartbeat
 

@@ -1,6 +1,6 @@
 [title]: # (Creating Custom Dependencies)
 [tags]: # (Creating Custom Dependencies)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Creating Custom Dependencies
 

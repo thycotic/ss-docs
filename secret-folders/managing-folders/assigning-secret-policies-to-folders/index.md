@@ -1,6 +1,6 @@
 [title]: # (Assigning Secret Policies to Folders)
 [tags]: # (Folder)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Assigning Secret Policies to Folders
 

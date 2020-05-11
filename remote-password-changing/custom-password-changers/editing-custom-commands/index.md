@@ -1,6 +1,6 @@
 [title]: # (Editing Custom Commands)
 [tags]: # (Editing Custom Commands)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Editing Custom Commands
 

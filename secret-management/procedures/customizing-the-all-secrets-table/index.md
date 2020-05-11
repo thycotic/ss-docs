@@ -1,6 +1,6 @@
 [title]: # (Customizing the All-Secrets Page)
 [tags]: # (Secret)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Customizing the All-Secrets Page
 

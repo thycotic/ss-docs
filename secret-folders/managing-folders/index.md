@@ -1,6 +1,6 @@
 [title]: # (Managing Folders)
 [tags]: # (Folder)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Managing Folders
 

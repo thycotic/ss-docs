@@ -1,6 +1,6 @@
 [title]: # (readme)
 [tags]: # (readme)
-[priority]: # (1)
+[priority]: # (1000)
 [display]: # (none)
 
 # Secret Server - ReadMe

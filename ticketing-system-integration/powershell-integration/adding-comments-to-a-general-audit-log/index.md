@@ -1,6 +1,6 @@
 [title]: # (Adding Comments to a General Audit Log)
 [tags]: # (PowerShell,Ticket System)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Adding Comments to a General Audit Log
 

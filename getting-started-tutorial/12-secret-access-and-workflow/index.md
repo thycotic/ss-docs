@@ -1,6 +1,6 @@
 [title]: # (12. Secret Access and Workflow)
 [tags]: # (Workflow)
-[priority]: # (120)
+[priority]: # (1000)
 
 # Step 12: Secret Access and Workflow
 

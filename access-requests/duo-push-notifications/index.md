@@ -1,6 +1,6 @@
 [title]: # (Duo Push Notifications)
 [tags]: # (Duo, 2FA, MFA)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Duo Push Notifications
 

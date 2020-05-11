@@ -1,6 +1,6 @@
 [title]: # (System Capacity Specifications)
 [tags]: # (Session Recording)
-[priority]: # (30)
+[priority]: # (1000)
 
 # System Capacity Specifications
 

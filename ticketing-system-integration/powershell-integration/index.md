@@ -1,6 +1,6 @@
 [title]: # (PowerShell Integration)
 [tags]: # (PowerShell)
-[priority]: # (50)
+[priority]: # (1000)
 
 # PowerShell Integration
 

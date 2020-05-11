@@ -1,6 +1,6 @@
 [title]: # (Secret Expiration)
 [tags]: # (Expiration)
-[priority]: # (50)
+[priority]: # (1000)
 
 # Secret Expiration
 

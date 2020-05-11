@@ -1,6 +1,6 @@
 [title]: # (Welcome)
 [tags]: #
-[priority]: # (1)
+[priority]: # (1000)
 
 # Welcome to Secret Server's Documentation
 

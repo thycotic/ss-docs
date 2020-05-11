@@ -1,6 +1,6 @@
 [title]: # (Enabling Heartbeat in RPC)
 [tags]: # (Heartbeat)
-[priority]: # (30)
+[priority]: # (1000)
 
 # Enabling Heartbeat in RPC
 

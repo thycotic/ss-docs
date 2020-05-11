@@ -1,6 +1,6 @@
 [title]: # (Template Naming Patterns)
 [tags]: # (Template)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Template Naming Patterns
 

@@ -1,6 +1,6 @@
 [title]: # (Session Recording and Launchers)
 [tags]: # (Launcher)
-[priority]: # (70)
+[priority]: # (1000)
 
 # Session Recording and Launchers
 

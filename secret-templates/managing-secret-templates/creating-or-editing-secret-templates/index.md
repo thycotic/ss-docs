@@ -1,6 +1,6 @@
 [title]: # (Creating or Editing Secret Templates)
 [tags]: # (Template)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Creating or Editing Secret Templates
 

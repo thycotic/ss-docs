@@ -1,6 +1,6 @@
 [title]: # (Creating a Custom Password Changer)
 [tags]: # (Creating a Custom Password Changer)
-[priority]: # (20)
+[priority]: # (1000)
 
 # Creating a Custom Password Changer
 

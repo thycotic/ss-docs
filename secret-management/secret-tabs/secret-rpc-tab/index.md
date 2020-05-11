@@ -1,6 +1,6 @@
 [title]: # (Secret RPC Tab)
 [tags]: # (Remote Passowrd Changing,RPC)
-[priority]: # (60)
+[priority]: # (1000)
 
 # Secret RPC Tab
 

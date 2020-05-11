@@ -1,6 +1,6 @@
 [title]: # (Document Conventions)
 [tags]: # (Document Conventions)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Document Conventions
 

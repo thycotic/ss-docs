@@ -1,6 +1,6 @@
 [title]: # (Heartbeat Logs)
 [tags]: # (Heartbeat)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Heartbeat Logs
 

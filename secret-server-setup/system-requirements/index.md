@@ -13,7 +13,7 @@
 | 2 CPU Cores                               | 2 CPU Cores                            |
 | 4 GB RAM                                  | 4 GB RAM                               |
 | 25 GB Disk Space                          | 50 GB Disk Space                       |
-| Windows Server 2008 R2 SP1-2019           | Windows Server 2008 R2 SP1-2019        |
+| Windows Server 2012                       | Windows Server 2012                    |
 | IIS 7 or newer (64-bit applications only) | SQL Server 2012-2019                   |
 | .NET 4.5.1 or newer                       | Collation SQL_Latin1_General_CP1_CI_AS |
 
@@ -55,9 +55,9 @@ Recommended for organizations deploying discovery, session recording,or increase
 
 ## Recommended Requirements for Specific Features
 
-[Session Recording Requirements: Basic and Advanced](https://thycotic.force.com/support/s/article/SS-REF-EX-Session-Recording-Requirements)
+[Session Recording Requirements: Basic and Advanced](../../session-recording/session-recording-requirements/index.md)
 
-[Ports Used By Secret Server](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server)
+[Ports Used By Secret Server](../../networking/secret-server-ports/index.md)
 
 ## Notes
 

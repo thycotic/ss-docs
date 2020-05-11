@@ -1,6 +1,6 @@
 [title]: # (Setting up Secrets)
 [tags]: # (Secret)
-[priority]: # (40)
+[priority]: # (1000)
 
 # Setting up Secrets
 

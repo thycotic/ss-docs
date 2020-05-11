@@ -1,6 +1,6 @@
 [title]: # (Advanced Encryption Standard)
 [tags]: # (Advanced Encryption)
-[priority]: # (10)
+[priority]: # (1000)
 
 # Advanced Encryption Standard
 
