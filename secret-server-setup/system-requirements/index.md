@@ -55,9 +55,9 @@ Recommended for organizations deploying discovery, session recording,or increase
 
 ## Recommended Requirements for Specific Features
 
-[Session Recording Requirements: Basic and Advanced](https://thycotic.force.com/support/s/article/SS-REF-EX-Session-Recording-Requirements)
+[Session Recording Requirements: Basic and Advanced](../../session-recording/session-recording-requirements/index.md)
 
-[Ports Used By Secret Server](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server)
+[Ports Used By Secret Server](../../networking/secret-server-ports/index.md)
 
 ## Notes
 
