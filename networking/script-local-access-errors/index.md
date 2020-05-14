@@ -1,6 +1,6 @@
-[title]: # (Windows Local-Account Access-Denied Error Workaround PowerShell Script)
-[tags]: # (Networking, Access-Denied Error, PowerShell)
-[priority]: # (1000)
+[title]: # "Windows Local-Account Access-Denied Error Workaround PowerShell Script"
+[tags]: # "Networking, Access-Denied Error, PowerShell"
+[priority]: # "1000"
 
 # Windows Local-Account Access-Denied Error Workaround PowerShell Script
 
@@ -27,45 +27,51 @@ For heartbeat to work correctly, make sure that the local or authenticated users
 
 **Option 2:** Adding a user individually to the security setting to allow the user to heartbeat successfully.
 
-**Option 3:** Adding allowing authenticated or local users to the security setting. This allows all local users or all users who are authenticated to the machine to bypass this setting. This does not require the PowerShell Script below. The drawback is that this allows all users to remotely access SAM, so long as they are authenticated.
+**Option 3:** Adding “allow authenticated or local users” to the security setting. This allows all local users or all users who are authenticated to the machine to bypass this setting. This does not require the PowerShell Script below. The drawback is that this allows all users to remotely access SAM, so long as they are authenticated.
 
-## PowerShell Script Description
+**Option 4:** Modify the default local group policy remote SAM access security descriptor to allow all local users on a specified machine remote SAM access after authentication. This script requires elevated PowerShell permissions. The following section is about this option.
+
+**Option 5:** Create a heartbeat workaround for GPO “Network Access: Restrict Clients Allowed to Make Remote Calls to SAM.” This is addressed in the last section.
+
+## Modifying the Default GPO
+
+### PowerShell Script Description
 
 This script adds a local non-privileged user group to the machine (a custom group name can be specified with the -GroupName parameter), adds all local users to the group, and then adds this group to the "Network Access: Restrict clients allowed to make remote calls to SAM" local group policy. This allows all local users within the group remote access to SAM after authentication, which is required for SS heartbeat and password changing.
 
-## Download
+### Download
 
 Extract the .ps1 script found here:
 https://updates.thycotic.net/secretserver/support/PowerShell_Win10-HB-RPC-Fix/Win10-HbFix.zip
 Run in an elevated PowerShell ISE session.
 
-## Script Argument Help
+### Script Argument Help
 
-### Command Prompt Help
+#### Command Prompt Help
 
 For full help text, run:
 
  `> Get-Help C:\Script\Win10-HbFix.ps1 -Examples` 
 
-### Parameters
+#### Parameters
 
-#### -ComputerNames (string[])
+##### -ComputerNames (string[])
 
 Specifies the computers on which the script runs (comma separated). If unspecified, the default is the local computer. 
 
-#### -Username (string)
+##### -Username (string)
 
 Specifies a username of an account that has administrative permissions on the computer to add a local user group and modify the local group policy. You will be prompted for a password. Examples: `Administrator` or `TestDomain\AdminUser`.
 
-#### -GroupName (string)
+##### -GroupName (string)
 
 Specifies a name for the SAM access local user group. If unspecified, the default group name is "Secret Server Remote SAM Access"
 
-#### -ForceGPUpdate
+##### -ForceGPUpdate
 
 Specifies whether a group policy update should be forced for immediate effect following the script. (Otherwise Group Policy changes may take up to 120 minutes to take effect by default).
 
-## Examples
+#### Examples
 
 `> C:\Script\Win10-HbFix.ps1` 
 This example gives remote SAM access to all local users on the current machine. The current PowerShell credentials would be used for authentication. 
@@ -87,7 +93,7 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
  `> C:\Script\Win10-HbFix.ps1 -ComputerNames "WINSERVER" -ForceGPUpdate -Verbose` 
 This example gives remote SAM access to all local users on the WINSERVER remote computer, with verbose output. The current PowerShell credentials will be used for authentication. Group policy update will be forced on WINSERVER for immediate effect. 
 
-## Related Articles and Resources
+### Related Articles and Resources
 
  [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls)
 
@@ -177,7 +183,7 @@ Invoke-Command -Session $Session -Command $ScriptBlockoate args
 13. Click the **Edit** button.
 13. Click the **Password Type to Use** dropdown list to select the password change you created earlier.
 13. Create your windows secret using the custom template. 
-13. Once it is created, add your privileged and associated Secret to the RPC tab as seen below. In that example we use the same  one for the privileged and associated secret. 
+13. Once it is created, add your privileged and associated Secret to the RPC tab as seen below. In that example we use the same one for the privileged and associated secret. 
 
 ![img](images/clip_image006.jpg)
 
