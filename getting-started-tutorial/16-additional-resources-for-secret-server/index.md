@@ -1,6 +1,6 @@
 [title]: # (16. Additional Resources for Secret Server)
 [tags]: # (Resources)
-[priority]: # (1000)
+[priority]: # (1016)
 
 # Step 16: Additional Resources for Secret Server
 

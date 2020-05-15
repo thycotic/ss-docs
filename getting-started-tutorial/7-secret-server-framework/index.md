@@ -1,6 +1,6 @@
 [title]: # (7. Secret Server Framework)
 [tags]: # (Secrets)
-[priority]: # (1000)
+[priority]: # (1007)
 
 # Step 7: Secret Server Framework
 

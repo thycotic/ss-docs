@@ -1,5 +1,5 @@
-[title]: # (Check Out Hooks)
-[tags]: # (Hook)
+[title]: # (Checkout Hooks)
+[tags]: # (Checkout Hooks)
 [priority]: # (1000)
 
 # Checkout Hooks

@@ -1,6 +1,6 @@
 [title]: # (15. Secret Server APIs and CLI)
 [tags]: # (API)
-[priority]: # (1000)
+[priority]: # (1015)
 
 # Step 15: Secret Server APIs and CLI
 
