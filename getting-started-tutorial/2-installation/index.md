@@ -1,6 +1,6 @@
-[title]: # "2. Installation"
-[tags]: # "Install"
-[priority]: # "1002"
+[title]: # (2. Installation)
+[tags]: # (Install)
+[priority]: # (1002)
 
 # Step 2: Installation
 
