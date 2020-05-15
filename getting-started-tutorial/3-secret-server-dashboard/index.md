@@ -1,6 +1,6 @@
 [title]: # (3. Secret Server Dashboard)
 [tags]: # (Dashboard)
-[priority]: # (1000)
+[priority]: # (1003)
 
 # Step 3: Secret Server Dashboard
 
