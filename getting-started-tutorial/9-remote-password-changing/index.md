@@ -1,6 +1,6 @@
 [title]: # (9. Remote Password Changing)
 [tags]: # (Remote Password Changing,RPC)
-[priority]: # (1000)
+[priority]: # (1009)
 
 # Step 9: Remote Password Changing
 
