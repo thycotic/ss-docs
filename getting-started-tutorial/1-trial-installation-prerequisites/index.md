@@ -1,6 +1,6 @@
 [title]: # (1. Trial Installation Prerequisites)
 [tags]: # (Install,Prerequisites)
-[priority]: # (1000)
+[priority]: # (1001)
 
 # Step 1: Trial Installation Prerequisites
 

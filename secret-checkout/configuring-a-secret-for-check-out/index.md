@@ -2,7 +2,7 @@
 [tags]: # (Check Out)
 [priority]: # (1000)
 
-# Configuring a Secret for Check Out
+# Configuring a Secret for Checkout
 
 Enable “Require Check Out” for the secret—users are then prompted for check out when attempting to view that secret.
 

@@ -1,6 +1,6 @@
 [title]: # (14. Recording Sessions)
 [tags]: # (Session Recording)
-[priority]: # (1000)
+[priority]: # (1014)
 
 # Step 14: Recording Sessions
 

@@ -1,6 +1,6 @@
 [title]: # (10. Heartbeats)
 [tags]: # (Heartbeat)
-[priority]: # (1000)
+[priority]: # (1010)
 
 # Step 10: Heartbeats
 
