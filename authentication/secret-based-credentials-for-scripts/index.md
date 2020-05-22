@@ -71,4 +71,3 @@ To use the site PowerShell credentials on a discovery scanner:
 1. Click **Save**. 
 
    > **Note:** If no RunAs secret is set on the site, you will get an error message when you try to save.
-''''''''''''''''''''

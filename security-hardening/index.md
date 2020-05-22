@@ -1,5 +1,5 @@
 [title]: # (Security Hardening Guide)
-[tags]: # (Best Practice, Security Hardening)
+[tags]: # (Best Practice, Security Hardening, encryption, efs encryption)
 [priority]: # (1000)
 
 # Security Hardening Guide
@@ -26,6 +26,10 @@ It is critical to secure your SS implementation. That needs to include a layered
 
    > **Note:** Attaining full security-hardening standards compatibility is a Thycotic priority.
 
+### Active Directory
+
+On Active Directory domain controllers, there is a set of unsafe default configurations for LDAP channel binding that allow LDAP clients to communicate with them without ensuring LDAP channel binding and LDAP signing. This can open the controllers to privilege vulnerabilities. See [2020 LDAP channel binding and LDAP signing requirements for Windows](https://support.microsoft.com/en-gb/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows) for details.
+
 ### Database
 
 - **Limit access to your Secret Server database:** When you create your SS database, limit access to as few users as possible. We recommend you disable the "sa" account in the SQL instance that contains SS.
@@ -47,7 +51,7 @@ It is critical to secure your SS implementation. That needs to include a layered
 
 - **Limit logon rights to the application server**. Administrators accessing the Application Server directly could attempt to monitor memory in use on the server. SS does several things to protect application memory but the best safeguard is to limit access to the Application Server to as few users as possible.
 
-- **Protect your encryption key**. The encryption key for SS is contained in the encryption.config file, which resides in your SS directory. This file is obfuscated and encrypted, but "defense in depth" would require limiting access to the file. [Using DPAPI to encrypt your encryption.config file](#_DPAPI_Encryption) is one option. This will use machine-specific encryption to encrypt the file. Make sure you back up the original file before enabling this option. To further protect the file, you can enable EFS encryption. EFS (Encrypting File System) is a Microsoft technology that allows a user or service account to encrypt files with login passwords. For more details, read [Protecting Your Encryption Key Using EFS](http://updates.thycotic.net/link.ashx?SSProtectKeyEFS) (KB). The most secure option is to use a Hardware Security Module (HSM) to protect the SS encryption key. For more information see the [HSM Integration Guide](https://updates.thycotic.net/links.ashx?HSMIntegrationGuide).
+- **Protect your encryption key**. The encryption key for SS is contained in the encryption.config file, which resides in your SS directory. This file is obfuscated and encrypted, but "defense in depth" would require limiting access to the file. [Using DPAPI to encrypt your encryption.config file](#_DPAPI_Encryption) is one option. This will use machine-specific encryption to encrypt the file. Make sure you back up the original file before enabling this option. To further protect the file, you can enable EFS encryption. EFS (Encrypting File System) is a Microsoft technology that allows a user or service account to encrypt files with login passwords. For more details, read [Protecting Your Encryption Key Using EFS](#protecting-your-encryption-key-using-efs) in this same article. The most secure option is to use a Hardware Security Module (HSM) to protect the SS encryption key. For more information see the [HSM Integration Guide](https://updates.thycotic.net/links.ashx?HSMIntegrationGuide).
 
 ###  Application Settings
 
@@ -449,6 +453,44 @@ You can use DPAPI while clustering is enabled for SS, however there are a few th
 - During upgrades, to avoid turning off DPAPI, you can copy all files over to secondary nodes *except* for  `database.config` and `encryption.config`.
 
 For more information about clustering SS, see [Setting up Clustering](http://support.thycotic.com/kb/a159/setting-up-clustering.aspx) (KBA). 
+
+### Protecting Your Encryption Key Using EFS
+
+Encrypting File System (EFS) is a Microsoft technology that allows a user to encrypt files with their password. This means that only the user who encrypted the file will be able to access it, even if it is assigned to other users. If an administrator resets the password on this account and the account does not change its own password, then the file is not recoverable.
+
+You can use EFS to protect your SS encryption key. This allows only a single service account to access the file, and no other user can read the key unless they know the service account password. Below are the steps for encrypting your `encryption.config` and `database.config` files with EFS:
+
+1. Backup your `encryption.config` and `database.config` files to a secure location.  This is very important for DR recovery purposes. 
+
+   > **Important:** This step is critical—If you lose access to your service account or the server fails,  you will be unable to recover your secrets without these backup files.
+
+1. Create a new service account or select an existing one. The service account should initially have privileges to log on a computer.
+
+1. If you have already installed SS and are using Windows authentication for database access, make sure the service account has access to the database.
+
+1. Run the SS application pool as this service account. See [Running the IIS Application Pool As a Service Account](../networking/running-ss-iis-app-pool-service-account/index.md) .
+
+1. Give the service account full access to your SS directory through Windows Explorer if it does not have it already.
+
+1. Log on your server as the service account.
+
+1. For both the `encryption.config` and `database.config files` (this instruction uses the former):
+
+   1. Locate the `encryption.config` file in your SS directory (usually `C:\inetpub\wwwroot\SecretServer`).
+   1. Right-click the file and select **Properties**.
+   1. Click the **General** tab.
+   1. Click the **Advanced** button.
+   1. Click to select the **Encrypt contents to secure data** check box.
+   1. Click the **OK** button.
+   1. Click the **Apply** button.
+   1. If prompted, select the **Encrypt the file only** option.
+   1. Click the **OK** button.
+
+1. Log out of Windows and log back in as an administrator. 
+
+1. Confirm that the application still works by performing an IIS Reset (`IISReset` command at the command prompt) or recycling the application pool. 
+
+1. Ensure you you can still log in and view your secrets.
 
 ### SSL (TLS) and HSTS
 
