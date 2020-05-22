@@ -2,7 +2,7 @@
 
 
 
-# Windows Local-Account Access-Denied Error Workaround PowerShell Script
+# Windows Local-Account Access-Denied Error Workaround PowerShell Scripts
 
 ## Overview 
 
