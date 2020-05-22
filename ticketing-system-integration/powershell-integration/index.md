@@ -1,8 +1,8 @@
-[title]: # (PowerShell Integration)
-[tags]: # (PowerShell)
+[title]: # (PowerShell Ticketing Integration)
+[tags]: # (PowerShell,ticketing)
 [priority]: # (1000)
 
-# PowerShell Integration
+# PowerShell Ticketing Integration
 
 > **Note:** Please click the table of contents on the left to see any sub-pages to this one.
 
