@@ -1,9 +1,8 @@
-[title]: # (Windows Local-Account Access-Denied Error Workaround PowerShell Script)
-[tags]: # (Networking, Access-Denied Error, PowerShell)
+[title]: # (Windows Local-Account Access-Denied Error Workaround PowerShell Scripts)
+[tags]: # (troubleshooting, workaround, Access-Denied Error)
 [priority]: # (1000)
-[display]: # (none)
 
-# Windows Local-Account Access-Denied Error Workaround PowerShell Script
+# Windows Local-Account Access-Denied Error Workaround PowerShell Scripts
 
 ## Overview 
 
@@ -28,17 +27,15 @@ For heartbeat to work correctly, make sure that the local or authenticated users
 
 **Option 2:** Adding a user individually to the security setting to allow the user to heartbeat successfully.
 
-**Option 3:** Adding “allow authenticated or local users” to the security setting. This allows all local users or all users who are authenticated to the machine to bypass this setting. This does not require the PowerShell Script below. The drawback is that this allows all users to remotely access SAM, so long as they are authenticated.
+**Option 3:** Modifying the Default GPO: Adding “allow authenticated or local users” to the security setting. This allows all local users or all users who are authenticated to the machine to bypass this setting. This does requires the PowerShell Script below. The drawback is that this allows all users to remotely access SAM, so long as they are authenticated.
 
-**Option 4:** Modify the default local group policy remote SAM access security descriptor to allow all local users on a specified machine remote SAM access after authentication. This script requires elevated PowerShell permissions. The following section is about this option.
+**Option 4:** Create a heartbeat workaround for GPO “Network Access: Restrict Clients Allowed to Make Remote Calls to SAM.” This is addressed in the last section. This is for situations where the GPO needs to be completely bypassed.
 
-**Option 5:** Create a heartbeat workaround for GPO “Network Access: Restrict Clients Allowed to Make Remote Calls to SAM.” This is addressed in the last section.
-
-## Modifying the Default GPO
+## Option 3: Modifying the Default GPO
 
 ### PowerShell Script Description
 
-This script adds a local non-privileged user group to the machine (a custom group name can be specified with the -GroupName parameter), adds all local users to the group, and then adds this group to the "Network Access: Restrict clients allowed to make remote calls to SAM" local group policy. This allows all local users within the group remote access to SAM after authentication, which is required for SS heartbeat and password changing.
+This script adds a local non-privileged user group to the machine (a custom group name can be specified with the `-GroupName` parameter), adds all local users to the group, and then adds this group to the "Network Access: Restrict clients allowed to make remote calls to SAM" local group policy. This allows all local users within the group remote access to SAM after authentication, which is required for SS heartbeat and password changing.
 
 ### Download
 
@@ -98,52 +95,9 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
  [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls)
 
-## Heartbeat Workaround for GPO “Network Access: Restrict Clients Allowed to Make Remote Calls to SAM”
+## Option 4: Creating a Heartbeat GPO Workaround
 
-1. Make sure that **Admin \> Scripts** is functional. Once you have it working, run this script: 
-
-``` powershell
-# args[0] = $[1]$USERNAME - priv account username
-
-# args[1] = $[1]$PASSWORD - priv account password
-
-# args[2] = $COMPUTERNAME - target computer
-
-#
-
-#
-
-$serviceacct = $args[0]
-
-$serviceacctpwd = $args[1] | ConvertTo-SecureString -asPlainText -Force
-
-$computer = $args[2]
-
-$Cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $serviceacct, $serviceacctpwd
-
-$Session = New-PSSession -Credential $Cred -ComputerName $computer
-
-$ScriptBlock = { 
-
-  $localuser = $args[3]
-
-  $localuserpwd = $args[4]
-
-  $computer = $env:COMPUTERNAME
-
-  Add-Type -AssemblyName System.DirectoryServices.AccountManagement
-
-  $obj = New-Object System.DirectoryServices.AccountManagement.PrincipalContext('machine',
-
-  $computer)
-
-  $obj.ValidateCredentials($localuser, $localuserpwd) 
-
-}
-
-Invoke-Command -Session $Session -Command $ScriptBlockoate args
-```
-
+1. Make sure that **Admin \> Scripts** is functional. Once you have it working, download and run this script [HBWorkAroundScript.ps1](./HBWorkAroundScript.ps1).
 2. Please run the script in **Admin \> Scripts**. 
 2. Add the appropriate `args[]` as needed. Add arguments 0-4 with no quotes or commas. Spaces are required. 
 

@@ -1,6 +1,6 @@
 [title]: # (Secret Server Support for HTTP/2)
 [tags]: # (HTTP/2, Networking)
-[priority]: #
+[priority]: # (1000)
 
 # Secret Server Support for HTTP/2
 
