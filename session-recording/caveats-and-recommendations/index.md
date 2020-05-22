@@ -60,3 +60,16 @@ System requirements apply to both physical and virtual machines.
 - Typically, you can record **up to one hundred sessions at a time per web node**, load balanced, which should handle large use cases.
 - CPU usage during video processing varies depending on concurrent users and recording length. We recommend that you **closely monitor CPU percentages on your web server** during video processing, as well on your client machines during recording, to increase CPU count for machines, if needed.
 - We recommend that you **set up RabbitMQ as the backbone service bus** in session recording environments. To setup RabbitMQ. See: [Secret Server: How to install RabbitMQ](https://thycotic.force.com/support/s/article/How-to-install-RabbitMq) (KBA).
+
+## macOS Catalina Security
+
+macOS Catalina enforces security policy around screen recording. To use the session recording feature of the Thycotic launcher on MacOS Catalina, you must first:
+
+1. Go to **System Preferences \> Security & Privacy \> Screen Recording** on your Mac.
+
+1. Allow recording for the SecretServerLauncher.app:
+
+   ![image-20200519101823315](images/image-20200519101823315.png)
+
+
+
