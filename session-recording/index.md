@@ -8,7 +8,9 @@
 
 ## Basic Session Recording
 
-Basic Session Recording is a licensed feature in SS. It relies on the protocol handler configured on client machines through SS's launcher. Using the launcher, SS captures second-by-second screenshots on the client machine during a user's recorded session. These images of the user's screen are compiled into a video that can be downloaded and played back for auditing and security purposes. Activity recorded in the session is based on screen changes only.
+> **Note:** macOS Catalina requires additional configuration to use basic session recording. See [macOS Catalina Security](./caveats-and-recommendations/index.md#macos-catalina-security).
+
+Basic session recording is a licensed feature in SS. It relies on the protocol handler configured on client machines through SS's launcher. Using the launcher, SS captures second-by-second screenshots on the client machine during a user's recorded session. These images of the user's screen are compiled into a video that can be downloaded and played back for auditing and security purposes. Activity recorded in the session is based on screen changes only.
 
 Session monitoring allows administrators with the Session Monitoring permission to view all active launched sessions within SS. If session recording is enabled on the secret, an administrator can watch the user's session in real time.
 
