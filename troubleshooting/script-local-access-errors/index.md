@@ -29,7 +29,7 @@ For heartbeat to work correctly, make sure that the local or authenticated users
 
 **Option 3:** Modifying the Default GPO: Adding “allow authenticated or local users” to the security setting. This allows all local users or all users who are authenticated to the machine to bypass this setting. This does requires the PowerShell Script below. The drawback is that this allows all users to remotely access SAM, so long as they are authenticated.
 
-**Option 4:** Create a heartbeat workaround for GPO “Network Access: Restrict Clients Allowed to Make Remote Calls to SAM.” This is addressed in the last section. This is for situations where the GPO is completely bypassed.
+**Option 4:** Create a heartbeat workaround for GPO “Network Access: Restrict Clients Allowed to Make Remote Calls to SAM.” This is addressed in the last section. This is for situations where the GPO needs to be completely bypassed.
 
 ## Option 3: Modifying the Default GPO
 
