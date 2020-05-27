@@ -1,6 +1,6 @@
-[title]: # "REST API PowerShell Script Examples"
-[tags]: # "REST API,API,Scripting,PowerShell,PowerShell examples"
-[priority]: # "1000"
+[title]: # (REST API PowerShell Script Examples)
+[tags]: # (REST API,API,Scripting,PowerShell,PowerShell examples)
+[priority]: # (1000)
 
 # REST API PowerShell Script Examples
 

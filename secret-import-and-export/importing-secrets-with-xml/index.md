@@ -1,6 +1,6 @@
-[title]: # "Importing Secrets with XML"
-[tags]: # "Import,XML,Secrets"
-[priority]: # "1000"
+[title]: # (Importing Secrets with XML)
+[tags]: # (Import,XML,Secrets)
+[priority]: # (1000)
 
 # Importing Secrets with XML
 

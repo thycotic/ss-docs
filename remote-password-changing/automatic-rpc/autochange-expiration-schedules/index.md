@@ -1,6 +1,6 @@
-[title]: # "Understanding Expiration, Auto Change and Auto Change Schedules"
-[tags]: # "Automatic Remote Password Changing, secret expiration, auto change, auto change schedules"
-[priority]: # "1000"
+[title]: # (Understanding Expiration, Auto Change and Auto Change Schedules)
+[tags]: # (Automatic Remote Password Changing, secret expiration, auto change, auto change schedules)
+[priority]: # (1000)
 
 # Understanding Expiration, Auto Change and Auto Change Schedules
 

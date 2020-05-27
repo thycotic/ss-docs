@@ -1,5 +1,5 @@
-[title]: # "Enabling RADIUS Two-Factor Authentication"
-[tags]: # "Authentication, Credentials, RADIUS, 2FA"
+[title]: # (Enabling RADIUS Two-Factor Authentication)
+[tags]: # (Authentication, Credentials, RADIUS, 2FA)
 [priority]: #
 
 # Enabling RADIUS Two-Factor Authentication

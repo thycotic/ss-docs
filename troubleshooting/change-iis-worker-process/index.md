@@ -1,6 +1,6 @@
-[title]: # "Changing IIS to Not Stop Worker Process in IIS 7.0 and Later"
-[tags]: # "troubleshooting, workaround, IIS, worker process"
-[priority]: # "1000"
+[title]: # (Changing IIS to Not Stop Worker Process in IIS 7.0 and Later)
+[tags]: # (troubleshooting, workaround, IIS, worker process)
+[priority]: # (1000)
 
 # Changing IIS to Not Stop Worker Process in IIS 7.0 and Later
 
