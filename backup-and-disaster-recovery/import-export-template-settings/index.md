@@ -37,4 +37,4 @@ Secrets are exported in the exact structure as a secret Import. If exports are m
 
 Recovery requires using the application and database backups. To restore Web application directory, extract the root directory to the Web server. The `encryption.config` file is most important for being able to read the contents of the database. The SQL database can be restored using the standard process in SQL Server Management Studio from the `.bak` file.
 
-> **Note:** For detailed instructions, see the [Restoring Secret Server from a Backup](https://updates.thycotic.net/link.ashx?SSUserGuide_restoreSecretServerBackup) KB article.
+> **Note:** For detailed instructions, see [Restoring Secret Server from a Backup](../../backup-and-disaster-recovery/restoring-secret-server-from-backup/index.md).

@@ -22,7 +22,7 @@ SS's importation feature simplifies integration with legacy systems and allows u
 
    - Do not include a header line. The field names are determined by the order, not a header line.
    - The fields **must** be in this order: `Secret Name`, `AccessKey`, `SecretKey`, `Username`, `SecretId`, and `Trigger`.
-   - Secret names must be included,but other text-entry fields can be blank unless the secret template indicates that the text-entry field is required
+   - Secret names must be included, but other text-entry fields can be blank unless the secret template indicates that the text-entry field is required
    - Fields containing commas or tabs must be surrounded with double quotation marks
    - If you have to include double quotation marks inside your data, escape all of  them with a `\` character so the importer does not get confused.
 
