@@ -10,10 +10,18 @@ The Remote Password Changing tab contains the settings for configuring RPC on an
 
 ## Auto Change Schedule
 
-The AutoChange Schedule button is visible on the secret View RPC tab when RPC and autochange is enabled on a secret. The AutoChange Schedule page allows you to specify an interval, start date, start time, and time frame for when the password can be changed. This setting is useful for having the RPC occur during off-hours in order to prevent disruptions. By default, this setting is None, which allows the secret to be changed immediately. 
+The Auto Change Schedule button is visible on the secret View RPC tab when RPC and autochange is enabled on a secret.
+
+![image-20200527095304651](images/image-20200527095304651.png)
+
+The Auto Change Schedule section, which appears when you set the Auto Change Schedule list box to other than “When password expires,” allows you to specify an interval, start date, start time, and time frame for when the password can be changed:
+
+![image-20200527095610715](images/image-20200527095610715.png)
+
+This setting is useful for having the RPC occur during off-hours in order to prevent disruptions. By default, this setting is "When password expires,” which allows the secret to be changed immediately upon expiration. 
 
 > **Note:** There is a check box in the auto change schedule settings labeled "Only change password if the Secret is expired.” When it is enabled, auto change will not change the password until after the secret expires. The auto change occurs on the first scheduled time after the secret expires. If the box is unchecked, auto change occurs on the defined schedule, whether or not the secret has expired.
 
-> **Note:** While the password change is waiting for this next scheduled time, the RPC Log (visible by navigating to **Configuration > Remote Password Changing**) reports the secret could not be changed because of time schedule. The secret also remains expired until this autochange schedule is reached, even if the Secret was forced to expire.
+> **Note:** While the password change is waiting for this next scheduled time, the RPC Log (visible by navigating to **Configuration > Remote Password Changing**) reports the secret could not be changed because of a time schedule. The secret also remains expired until this auto change schedule is reached, even if the secret was forced to expire.
 
 

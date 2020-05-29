@@ -27,7 +27,7 @@ If creating a new template:
 
    The Secret Template Designer page provides all the options for configuring a secret template, as well as which text-entry fields appear on any secret created from that template.
 
-Add template fields as desired. See [Secret Template Settings](#Secret-Template-Settings).
+Add template fields as desired. See [Secret Template Settings](../../secret-template-settings/index.md).
 
 Click the **Edit** button to customize the template general settings. The Secret Template Designer appears:
 
