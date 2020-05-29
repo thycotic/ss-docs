@@ -1,5 +1,5 @@
-[title]: # (Mobile Computing)
-[tags]: # (mobile computing,tablets, smart phones)
+[title]: # (Setting Maximum Time for Offline Caching)
+[tags]: # (mobile computing,tablets, smart phones, caching)
 [priority]: # (1000)
 
 # Setting Maximum Time for Offline Caching
