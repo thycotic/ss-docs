@@ -2,8 +2,6 @@
 [tags]: # (RabbitMQ,Setup,Install)
 [priority]: #
 
-
-
 # Installing RabbitMQ
 
 ## Overview 

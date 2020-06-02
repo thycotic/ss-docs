@@ -1,4 +1,4 @@
-[title]: # (Secure Syslog (CEF) Logging)
+[title]: # (Secure Syslog \(CEF\) Logging)
 [tags]: # (Events, Alerts, syslog, CEF)
 [priority]: # (1000)
 
@@ -8,7 +8,7 @@
 
 Secret Server can send a copy of important log messages to an external syslog server for added security using the following protocols:
 
-> **Note:** Common Event Format (CEF) is an industry-standard format on top of syslog messages that ensures event  interoperability between different platforms. 
+> **Note:** Common Event Format (CEF) is an industry-standard format on top of syslog messages that ensures event  interoperability between different platforms.
 
 **Table:** Syslog Transportation Protocols
 
