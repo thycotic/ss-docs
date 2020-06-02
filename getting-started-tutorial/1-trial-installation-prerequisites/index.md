@@ -53,7 +53,7 @@ If you would like to test features that rely on Active Directory, such as AD gro
 
 ### Active Directory Group Sync
 
-Active Directory group synchronization means that SS can automatically add users and enable or disable them to log into SS based off of their Active Directory group membership. You can choose which groups to sync. When configuring AD group sync in SS, you are required to specify an account that can read the properties of users and groups. See [AD Synchronization Rights for Synchronization Account](https://thycotic.force.com/support/s/article/Active-Directory-Rights-for-Synchronization-Account) (KB) for a detailed list of required permissions.
+Active Directory group synchronization means that SS can automatically add users and enable or disable them to log into SS based off of their Active Directory group membership. You can choose which groups to sync. When configuring AD group sync in SS, you are required to specify an account that can read the properties of users and groups. See [AD Synchronization Rights for Synchronization Account](../../active-directory/ad-rights-sync-account/index.md) for a detailed list of required permissions.
 
 ### Discovery
 
