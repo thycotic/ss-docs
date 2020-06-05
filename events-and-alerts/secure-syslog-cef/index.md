@@ -90,9 +90,7 @@ To track problems with TLS connections (including whenever the connection fails)
 1. Copy and paste a list of SHA1 SSL certificate thumbprints into the **Client Certificate Thumbprints(s)** text box. Separate each thumbprint (40 characters each) with a semicolon. Up to ten are allowed.
 
 > **Note:** SS's IIS application pool must be granted permission to use the client certificates, using the 
->  Windows HTTP Services Certificate Configuration Tool (WinHttpCertCfg.exe). For example: 
->  `winhttpcertcfg.exe -g -c LOCAL_MACHINE\MY -s "Certificate Subject" -a "HOSTNAME\IIS APPPOOL\SecretServer"` You can view the tool’s at 
->  [Windows HTTP Services Certificate Configuration Tool (WinHttpCertCfg.exe)](https://www.microsoft.com/en-us/download/details.aspx?id=19801) and the documentation at [WinHttpCertCfg.exe, a Certificate Configuration Tool](https://msdn.microsoft.com/en-us/library/windows/desktop/aa384088(v=vs.85).aspx).                                        
+>  Windows HTTP Services Certificate Configuration Tool (WinHttpCertCfg.exe). See [Compatibility Notes for Client Certificates](#compatibility-notes-for-client-certificates).                                        
 
 ## Determining the Status of a Remote Audit Server
 
