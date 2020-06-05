@@ -2,8 +2,6 @@
 [tags]: # (RabbitMQ,Setup,Install)
 [priority]: #
 
-
-
 # Installing RabbitMQ
 
 ## Overview 
@@ -14,11 +12,11 @@ RabbitMQ is a robust message queuing software package that Secret Server uses to
 
 ### Why do you need to install it?
 
-RabbitMQ is an enterprise-ready alternative to MemoryMq. While MemoryMq is sufficient for basic and prototyping installations, RabbitMQ is the preferred messaging framework when the need for greater reliability and clustering arises. 
+RabbitMQ is an enterprise-ready alternative to MemoryMQ. While MemoryMQ is sufficient for basic and prototyping installations, RabbitMQ is the preferred messaging framework when the need for greater reliability and clustering arises. 
 
 ### RabbitMQ and Encryption
 
-All data sent from or read by Secret Server from RabbitMQ is encrypted. If you would like to add SSL despite the data already being encrypted, please follow the "Advanced installation of RabbitMq with TLS" use case. Please note that Thycotic Support can help with non-SSL installations. For SSL installation, configuration, troubleshooting, and RabbitMQ clustering, please contact **[Thycotic Professional Services](mailto:psengagements@thycotic.com)** to learn more about our Professional Services rates.
+All data sent from or read by Secret Server from RabbitMQ is encrypted. If you would like to add SSL despite the data already being encrypted, please follow the "Advanced installation of RabbitMQwith TLS" use case. Please note that Thycotic Support can help with non-SSL installations. For SSL installation, configuration, troubleshooting, and RabbitMQ clustering, please contact **[Thycotic Professional Services](mailto:psengagements@thycotic.com)** to learn more about our Professional Services rates.
 
 ## Prerequisites
 
@@ -113,5 +111,3 @@ In Secret Server UI
 ## Troubleshooting
 
 Please refer to [RabbitMQ Helper](https://thycotic.github.io/rabbitmq-helper/#troubleshooting-and-maintenance).
-
- 
