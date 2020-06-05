@@ -41,7 +41,7 @@ SDK Documentation:
 
 REST API Documentation:
 
-- [REST Web Services API - Secret Server](https://thycotic.force.com/support/s/article/REST-Web-Services-API): Links to online reference guides (by SS release)
+- [REST Web Services API - Secret Server](../rest-api-reference-download/index.md): Links to online reference guides (by SS release)
 - [REST API PowerShell Scripts - Getting Started](https://thycotic.force.com/support/s/article/REST-API-PowerShell-Scripts-Getting-Started)
 - [REST API Perl Examples](https://thycotic.force.com/support/s/article/REST-API-Perl-Scripts)
 - [REST API Java Examples](https://updates.thycotic.net/links.ashx?RESTJavaExamples): Downloadable Zip file
