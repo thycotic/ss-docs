@@ -6,7 +6,7 @@
 
 > **Note:** The REST API is available as of SS 9.1.
 
->**Note:** For a full reference of the REST endpoints and parameters, see the [REST API Guide](https://thycotic.force.com/support/s/article/REST-Web-Services-API).
+>**Note:** For a full reference of the REST endpoints and parameters, see the [REST API Guide](../rest-api-reference-download/index.md).
 
 > **Note:** When using the API to search secrets, the account used must have at least “view” permissions on the full folder path to find the secret.
 
