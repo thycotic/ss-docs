@@ -1,8 +1,8 @@
-[title]: # (Secure Syslog \(CEF\) Logging)
+[title]: # (Secure Syslog/CEF Logging)
 [tags]: # (Events, Alerts, syslog, CEF)
 [priority]: # (1000)
 
-# Secure Syslog (CEF) Logging
+# Secure Syslog/CEF Logging
 
 ## Overview
 
@@ -22,7 +22,7 @@ Secret Server can send a copy of important log messages to an external syslog se
 
 Due to the sensitive nature of SS logs, we strongly recommend using Secure TCP.
 
-## Configuring a Secure TCP Syslog (CEF) External Audit Server in Secret Server
+## Configuring a Secure TCP Syslog/CEF External Audit Server in Secret Server
 
 ### Compatible Audit Servers 
 
@@ -39,13 +39,13 @@ Due to the sensitive nature of SS logs, we strongly recommend using Secure TCP.
 
 1. Go to the **Application Settings** section.
 
-1. Click to select the **Enable Syslog/CEF Logging** check box. A syslog (CEF) section appears:
+1. Click to select the **Enable Syslog/CEF Logging** check box. A syslog/CEF section appears:
    
    ![image-20200602120849610](images/image-20200602120849610.png)
    
-   > **Note**: Syslog (CEF) may require an additional license key. To install licenses, navigate to **Admin** > **Licenses** > **Install New License**. Once installed, the license requires activation. Contact your Thycotic Sales Representative with any questions. 
+   > **Note**: syslog/CEF may require an additional license key. To install licenses, navigate to **Admin** > **Licenses** > **Install New License**. Once installed, the license requires activation. Contact your Thycotic Sales Representative with any questions. 
    
-1. Type IP address or name for the IIS server hosting the syslog (CEF) server in  the **Syslog/CEF Server** text box.
+1. Type IP address or name for the IIS server hosting the syslog/CEF server in  the **Syslog/CEF Server** text box.
 
 1. Type the port number where the logging information will be passed (6514 is the default port for secure TCP syslog) in the **Syslog/CEF Port** text box.
    
@@ -71,7 +71,7 @@ To track problems with TLS connections (including whenever the connection fails)
 1. Scroll to the **TLS Auditing** section.
 1. Ensure the **Apply TLS Certificate Chain Policy and Error Auditing** check box is enabled. If not, you cannot use client certificates.
 
-> **Note:** If secure TCP is used for the Syslog (CEF) protocol and there are one or more client certificate thumbprints entered, SS checks the local computer’s Web hosting and personal certificate store and uses the first one it finds. 
+> **Note:** If secure TCP is used for the syslog/CEF protocol and there are one or more client certificate thumbprints entered, SS checks the local computer’s Web hosting and personal certificate store and uses the first one it finds. 
 
 ## Adding Client Certificate Thumbprints
 

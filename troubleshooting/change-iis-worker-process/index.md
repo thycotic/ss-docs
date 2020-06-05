@@ -6,7 +6,7 @@
 
 ## Overview 
 
- When using IIS version 7.0 and above, by default, the worker process terminates after a period of inactivity. If SS is in its own application pool, the application pool will stop after a period of no requests. To make sure that the application pool associated with SS does not stop when idle:
+When using IIS version 7.0 and above, by default, the worker process terminates after a period of inactivity. If SS is in its own application pool, the application pool will stop after a period of no requests. To make sure that the application pool associated with SS does not stop when idle:
 
 - Set the idle time-out to 0 minutes.
 - Set the regular time interval to 0.
