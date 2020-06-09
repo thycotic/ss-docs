@@ -8,7 +8,7 @@
 
 The following steps walk you through setup and configuration for SQL Server 2016 Standard Edition as an example. For the most up to date resources on installing SQL see [Microsoft SQL Technical Documentation](https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15) for more information.
 
- At the completion of this article you will have: 
+At the completion of this article you will have: 
 
 - Installed a basic stand-alone instance of SQL Server 2016 Standard with the minimum features necessary for SQL Server.
 - Installed SQL Server Management Studio for managing the local database.
