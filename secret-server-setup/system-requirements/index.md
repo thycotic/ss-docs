@@ -73,5 +73,6 @@ Recommended for organizations deploying discovery, session recording,or increase
 - SQL launchers do not support SSMS 18.0 or higher.
 - Discovery scanning for Windows Server 2016 scheduled tasks requires that either the SS node or the distributed engine that is executing the scan must run on Windows Server 2016 or later. This is due to changes in Windows Server 2016 API used for scheduled task dependency scans.
 - AWS RDS: Currently, we do not recommend using SS with AWS Relational Database Service when the Web host and the SQL instance are in different datacenters. Applications, such as SS, that use frequent, high-volume, ad hoc queries depend on fast network communication response time between the application and SQL database. Thus, network latency with many data access operations across datacenters can become an issue.
+- Secret Server (SS) requires the application pool to have the “load user profile” setting enabled. Secret Server will report a critical alert to notify admins if this setting is not enabled. 
 
  
