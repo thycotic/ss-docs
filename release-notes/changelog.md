@@ -48,6 +48,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Password Changer List
 - Ports Used by Secret Server
 - PowerShell Ticketing Integration
+- RabbitMQ Naming Conventions for Queues
 - Remote Password Changing with PowerShell
 - REST API PowerShell Script Examples
 - REST Web Services API Reference and Download
@@ -71,6 +72,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Using Regex with Dependencies
 - Using Secret Fields in Scripts
 - Using Webservices with IWA via PowerShell
+- VMware ESX/ESXi Account Discovery
 - Web Password Filler
 - Windows Local-Account Access-Denied Error Workaround PowerShell Scripts
 - X.509 Certificate Security Chain Options
