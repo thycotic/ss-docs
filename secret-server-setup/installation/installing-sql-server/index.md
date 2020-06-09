@@ -4,7 +4,7 @@
 
 # Installing and Configuring SQL Server
 
-For step-by-step instructions on how to install SQL 2016, see our example [SQL 2016 Installation guide here](https://thycotic.force.com/support/s/article/Adv-Install-SQL-2016).
+For step-by-step instructions on how to install SQL 2016, see our example [SQL 2016 Installation guide here](../installing-sql-server-2016/index.md).
 
 Secret Server requires Microsoft SQL Server as the back-end database. All editions including the Express version of 2012–2017 are supported.
 

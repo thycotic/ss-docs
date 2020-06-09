@@ -42,6 +42,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Installing and Configuring SQL Server
 - Installing RabbitMQ
 - Internal Site Connector
+- Load User Profile Setting Must Be Enabled for Application Pool
 - Manual IIS Installation
 - Manually Backing up Secret Server
 - Password Changer List
