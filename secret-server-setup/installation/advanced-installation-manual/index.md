@@ -23,6 +23,8 @@ Go to the [download page](https://thycotic.force.com/support/s/download-onprem) 
 
 Open Internet Information Services (IIS) Manager* and create a new application pool:
 
+> **Note:** Our IIS installation sets the .NET trust level to “Full (internal), which may affect other applications on the server.
+
 1. Right-click **Application Pools** and select **Add Application Pool\...**
 1. Type a name (for example, SecretServerAppPool). 
 1. Ensure that the highest .NET CLR version is selected.
@@ -90,5 +92,4 @@ SS is now installed. See our [Getting Started Tutorial](../../../getting-started
 ## Troubleshooting Notes
 
 -   If the database name you provide does not yet exist in the specified instance of SQL Server, SS attempts to create the database using the SQL or Windows account you have specified. For that account to create a database, it needs to have the dbcreator server role in SQL Server.
-
 -   If using Windows authentication mode (recommended) you need to use a service account to run SS's application pools with appropriate permissions. See [this article](https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB) if you have not already done so.
