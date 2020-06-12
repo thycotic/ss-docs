@@ -4,7 +4,7 @@
 
 # Secret Template Settings
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 The secret template designer provides several settings to customize secret template text-entry fields:
 

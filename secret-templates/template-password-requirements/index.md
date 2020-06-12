@@ -4,7 +4,7 @@
 
 # Template Password Requirements
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 Set requirements on a password text-entry field to validate user-entered passwords or make auto-generated passwords conform to set specifications.
 

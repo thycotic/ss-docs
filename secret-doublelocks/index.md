@@ -4,7 +4,7 @@
 
 # Secret DoubleLocks
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 SS's _doublelock_ is a feature that provides an additional security layer by encrypting secret data with a supplemental custom encryption key that is only accessible with an additional password, regardless of regular permissions, SS login access, or physical access to the machine running SS. Doublelock uses private and public key encryption technology to securely share access to doublelock.
 

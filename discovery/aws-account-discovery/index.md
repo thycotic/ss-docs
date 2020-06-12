@@ -4,7 +4,7 @@
 
 # AWS Account Discovery
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 > **Note:** Discovery must be enabled in SS to discover AWS accounts.
 
