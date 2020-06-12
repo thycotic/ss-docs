@@ -80,8 +80,8 @@ Like many operations in SS, you can configure discovery to run locally on IIS ma
 
 ## Discovery Performance
 
-Please see our [Discovery Best Practices Guide](https://thycotic.force.com/support/s/article/Secret-Server-Discovery-Best-Practices) to learn about optimizing discovery performance.
+Please see our [Discovery Best Practices Guide](./discovery-best-practices/index.md) to learn about optimizing discovery performance.
 
 ## Extensible Discovery
 
-You can customize discovery by changing parts of it to use PowerShell. The information a discovery scanner outputs is defined by its scanner template. For standard templates, the input and output information types are fixed. Extensible discovery allows you to customize or replace the unmanaged account, IP address and OU, account, and dependency discovery steps above. Extensible discovery does still have limitations on what information is passed between discovery scanners. For more information, see the [Extensible Discovery Overview](https://thycotic.force.com/support/s/article/Scriptable-Discovery-Overview).
+You can customize discovery by changing parts of it to use PowerShell. The information a discovery scanner outputs is defined by its scanner template. For standard templates, the input and output information types are fixed. Extensible discovery allows you to customize or replace the unmanaged account, IP address and OU, account, and dependency discovery steps above. Extensible discovery does still have limitations on what information is passed between discovery scanners. For more information, see the [Extensible Discovery Overview](https://thycotic.force.com/support/s/article/Scriptable-Discovery-Overview) (KBA).

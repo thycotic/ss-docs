@@ -24,11 +24,15 @@ Created the following topics from Salesforce articles (often including substanti
 - Configuration and Sizing
 - Configuring CredSSP for WinRM with PowerShell
 - Configuring Integrated Windows Authentication
+- Configuring SAML Single Sign-on
 - Configuring Session Recording
 - Configuring WinRM for PowerShell
+- Creating and Editing Reports
 - Creating and Using PowerShell Scripts
 - Custom Launcher Process Arguments
 - Dependency Token List
+- Developer Resources
+- Discovery Best Practices
 - Distributed Engines
 - DoubleLocks
 - Downloads for Secret Server Software Development Kit for DevOps
@@ -63,6 +67,8 @@ Created the following topics from Salesforce articles (often including substanti
 - Setting Maximum Time for Offline Caching
 - Setting up Clustering
 - SOAP API PowerShell Script Examples
+- SQL Server 2014 Express Edition Installation
+- SQL Server 2016 Standard Edition Installation
 - System Requirements for Secret Server
 - Understanding Expiration, Auto Change and Auto Change Schedules
 - Upgrading Secret Server with Web Clustering
