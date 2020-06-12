@@ -83,3 +83,6 @@ Created the following topics from Salesforce articles (often including substanti
 - Windows Local-Account Access-Denied Error Workaround PowerShell Scripts
 - X.509 Certificate Security Chain Options
 
+Made significant changes to:
+- Document Conventions: Added Capitalization section.
+- Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.

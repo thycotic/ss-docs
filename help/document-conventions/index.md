@@ -4,18 +4,18 @@
 
 # Document Conventions
 
-# Capitalization
+## Capitalization
 
 Technical writing is typically so awash in capitalization that it often denotes nothing and harms legibility. To counter that, in general, this document follows the IBM Style Guide rule:
 
-*"Do not capitalize the names of features and components unless they are sold separately or are trademarked."*
+*\"Do not capitalize the names of features and components unless they are sold separately or are trademarked.\"*
 
 More specifically, the only things capitalized in this document are:
 
 - Company, person, country, geographic place, or organization names
 - Official or trademarked products or services, unless they officially have atypical capitalization, for instance *iPod*. 
 - Acronyms and initializations
-- When referring to any UI labels that are themselves capitalized
+- When referring to any UI labels that are capitalized
 - When the word begins a sentence or phrase
 
 ## Code and Command Line Text
@@ -31,9 +31,7 @@ Variable text in literal typed-in text and command-line parameters follow these 
 ## Keyboard Shortcuts
 
 - Keyboard keys are bolded and surrounded with square brackets: **[Enter]**
-
 - Concurrent key presses are denoted with plus signs: **[Ctrl]**+**[Alt]**+**[Del]**
-
 - Sequential key presses are denoted by commas: **[Page Down]**, **[Enter]**
 
 ## Notes
