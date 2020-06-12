@@ -4,7 +4,7 @@
 
 # Roles
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 Modeled after the role-based access control (RBAC) mechanism, role-based security (RBS) is SS's method of regulating permission to system access. Each user and group must be assigned to a role. SS ships with three roles: Administrator, User, and Read-Only User. Each role contains various permissions to match the job function of the user. With RBS, strict granular access to SS is ensured. A list of role permissions and their descriptions can be found in the [Secret Server Role Permissions List](role-permission-list/index.md).
 

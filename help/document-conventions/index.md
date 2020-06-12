@@ -4,6 +4,20 @@
 
 # Document Conventions
 
+## Capitalization
+
+Technical writing is typically so awash in capitalization that it often denotes nothing and harms legibility. To counter that, in general, this document follows the IBM Style Guide rule:
+
+*\"Do not capitalize the names of features and components unless they are sold separately or are trademarked.\"*
+
+More specifically, the only things capitalized in this document are:
+
+- Company, person, country, geographic place, or organization names
+- Official or trademarked products or services, unless they officially have atypical capitalization, for instance *iPod*. 
+- Acronyms and initializations
+- When referring to any UI labels that are capitalized
+- When the word begins a sentence or phrase
+
 ## Code and Command Line Text
 
 Variable text in literal typed-in text and command-line parameters follow these industry-wide standards:
@@ -17,9 +31,7 @@ Variable text in literal typed-in text and command-line parameters follow these 
 ## Keyboard Shortcuts
 
 - Keyboard keys are bolded and surrounded with square brackets: **[Enter]**
-
 - Concurrent key presses are denoted with plus signs: **[Ctrl]**+**[Alt]**+**[Del]**
-
 - Sequential key presses are denoted by commas: **[Page Down]**, **[Enter]**
 
 ## Notes
@@ -49,4 +61,4 @@ There are three types of notes: _regular_,  _important_ and _warning_.
 
 - Attentional Targets and screen component names in system _responses_ are not bolded: "The OK button appears" verses "Click the **OK** button."
 
-- Names of screen components, such as tabs, buttons, and text boxes, are corrected for spelling and capitalization. The component type appears in lowercase. Example: **Searver configuration** window becomes **Server Configuration** window.
+- Names of screen components, such as tabs, buttons, and text boxes, are corrected for spelling and capitalization. The component type appears in lowercase. Example: **SEARVER CONFIGURATION** window becomes **Server Configuration** window.

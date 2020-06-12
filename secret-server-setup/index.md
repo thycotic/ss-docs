@@ -4,7 +4,7 @@
 
 # Secret Server Setup
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 This section contains information about installation and upgrading SS and its components.
   * Components Installation
