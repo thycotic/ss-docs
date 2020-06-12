@@ -6,7 +6,7 @@
 
 ## Introduction
 
->**Note:** Navigate using the dynamic table of contents on the left or by entering a search term above.
+>**Note:** Navigate using the dynamic table of contents on the left, the page contents on the right, or by entering a search term above.
 
 > **Note:** Many pages in this documentation have sub-pages. The container (parent) pages can have introductory text or simply a heading with no text. Please click the table of contents on the left to see any sub-pages it might have.
 
@@ -21,6 +21,13 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 ### Developer Resources
 
 [Developer Resources](./developer-resources/index.md)
+
+### Help
+
+- [Document Conventions](./help/document-conventions/index.md)
+- [Secret Server Glossary](./help/secret-server-glossary/index.md)
+- [Self-Help Resources](./help/self-help-resources/index.md)
+- [Technical Support](./help/technical-support/index.md)
 
 ### Documentation
 
@@ -62,7 +69,22 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 
 ### Integration Guides
 
+#### Current
+
 [Integration Guides](https://docs.thycotic.com/ssi)
+
+#### Legacy
+
+- [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration) 
+- [Devolutions](https://docs.thycotic.com/ssi/1.0.0/devolutions) 
+- [F5 BIG-IP](https://thycotic.force.com/support/s/article/F5-BIG-IP-Integration) 
+- [HP ArcSight](https://thycotic.force.com/support/s/article/HP-ArcSight-Integration) 
+- [HSM](https://thycotic.force.com/support/s/article/HSM-Integration) 
+- [IBM Verify](https://thycotic.force.com/support/s/article/IBM-Verify-Gateway-Integration) 
+- [OpenID Connect](https://thycotic.force.com/support/s/article/OpenID-Connect-Integration) 
+- [SCIM Connector](https://thycotic.force.com/support/s/article/SS-INST-EXT-SCIM-Connector) 
+- [SecureLink](https://www.securelink.com/thycotic-integration/) 
+- [Syslog](https://thycotic.force.com/support/s/article/Syslog-Events-Secret-Server) 
 
 ### Release Notes
 

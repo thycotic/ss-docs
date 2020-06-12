@@ -2,7 +2,7 @@
 [tags]: # (Glossary)
 [priority]: # (1000)
 
-# Glossary
+# Secret Server Glossary
 
 **Table:** Terms and Definitions
 
@@ -10,13 +10,13 @@
 | ----------------------------- | ------------------------------------------------------------ |
 | 2FA                           | _Two-Factor Authentication_                                  |
 | AD                            | _Active Directory_                                           |
-| Administrator                 | Administrator (uppercase) is a default role that comes preconfigured with SS. Roles control access to features within SS. This role can be customized to have different permissions. In this guide, administrator (lowercase) is used when referring to users who manage the system and have control over global security and configuration settings. Note that administrators in SS do not automatically have access to all data stored in the system--access to data is still controlled by explicit permissions on that data. |
+| Administrator                 | *Administrator* is a default role that comes preconfigured with SS. Roles control access to features within SS. This role can be customized to have different permissions. In this guide, administrator (lowercase) is used when referring to users who manage the system and have control over global security and configuration settings. Note that administrators in SS do not automatically have access to all data stored in the system—access to data is still controlled by explicit permissions on that data. |
 | AES                           | _Advanced Encryption Standard_                               |
 | API                           | _Application Programming Interface_                          |
 | ASCII                         | _American Standard Code for Information Interchange_         |
 | ASP                           | _Advanced Server Pages_                                      |
 | AWS                           | _Amazon Web Services_                                        |
-| CAC                           | _Common Access Card_                                        |
+| CAC                           | _Common Access Card_                                         |
 | CEF                           | _Common Event Format_                                        |
 | CHG                           | _Change_                                                     |
 | CIDR                          | _Classless Inter-Domain Routing_                             |
@@ -53,7 +53,7 @@
 | PCI                           | _Payment Card Industry_                                      |
 | PDF                           | _Portable Document Format_                                   |
 | PII                           | *Personally Identifiable Information*                        |
-| PIV                           | _Personal Identity Verification_                                |
+| PIV                           | _Personal Identity Verification_                             |
 | PuTTy                         | _Popular SSH and Telnet Client_                              |
 | QR                            | _Quick Response_ (code)                                      |
 | RADIUS                        | _Remote Authentication Dial-In User Service_                 |
@@ -67,8 +67,8 @@
 | RPC                           | See _Remote Password Changing_                               |
 | SAML                          | _Security Assertions Markup Language_                        |
 | SEC                           | _Security and Exchange Commission_                           |
-| Secret                        | A piece of information that is stored and managed within SS is referred to as a secret. Secrets are derived from Secret templates. Typical secrets include, but are not limited to, privileged passwords on routers, servers, applications, and devices. Files can also be stored in secrets, allowing for storage of private key files, SSL certificates, license keys, network documentation, Microsoft Word or Excel documents and more. |
-| Secret Template               | Secret templates are used to create secrets and allow customization of the format and content of secrets to meet company needs and standards. Examples include: Local Administrator Account, SQL Server Account, Oracle Account, Credit Card and Web Password. Templates can contain passwords, usernames, notes, uploaded files, and drop-down list values. New Secret templates can be created, and all existing templates can be modified. |
+| Secret                        | A piece of information that is stored and managed within SS is referred to as a secret. Secrets are derived from secret templates. Typical secrets include, but are not limited to, privileged passwords on routers, servers, applications, and devices. Files can also be stored in secrets, allowing for storage of private key files, SSL certificates, license keys, network documentation, Microsoft Word or Excel documents and more. |
+| Secret Template               | Secret templates are used to create secrets and allow customization of the format and content of secrets to meet company needs and standards. Examples include: local administrator account, SQL Server account, Oracle account, credit card and Web password. Templates can contain passwords, usernames, notes, uploaded files, and drop-down list values. New secret templates can be created, and all existing templates can be modified. |
 | SHA1                          | _Secure Hashing Algorithm 1_                                 |
 | SIEM                          | _Security Information Event Management_                      |
 | SMS                           | _Short Message Service_                                      |
@@ -84,9 +84,9 @@
 | UDP                           | _User Datagram Protocol_                                     |
 | UI                            | _User Interface_                                             |
 | UNC                           | _Universal Naming Convention_                                |
-| Unlimited Administration Mode | An emergency, break-the-glass mode that gives administrators access to all content within the system, regardless of explicit permissions. Access to Unlimited Administration Mode is controlled using role permissions. |
+| Unlimited Administration Mode | An emergency, break-the-glass mode that gives administrators access to all content within the system, regardless of explicit permissions. Access to unlimited administration mode is controlled using role permissions. |
 | URL                           | _Uniform Resource Locator_                                   |
-| VM                            | _Virtual Machine_                                              |
-| VPN                           | _Virtual Private Network_                                      |
+| VM                            | _Virtual Machine_                                            |
+| VPN                           | _Virtual Private Network_                                    |
 | WS                            | _Web Services_                                               |
-| XML                           | _eXtensible Markup Language_                                   |
+| XML                           | _eXtensible Markup Language_                                 |
