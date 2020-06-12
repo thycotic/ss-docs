@@ -24,11 +24,15 @@ Created the following topics from Salesforce articles (often including substanti
 - Configuration and Sizing
 - Configuring CredSSP for WinRM with PowerShell
 - Configuring Integrated Windows Authentication
+- Configuring SAML Single Sign-on
 - Configuring Session Recording
 - Configuring WinRM for PowerShell
+- Creating and Editing Reports
 - Creating and Using PowerShell Scripts
 - Custom Launcher Process Arguments
 - Dependency Token List
+- Developer Resources
+- Discovery Best Practices
 - Distributed Engines
 - DoubleLocks
 - Downloads for Secret Server Software Development Kit for DevOps
@@ -48,6 +52,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Password Changer List
 - Ports Used by Secret Server
 - PowerShell Ticketing Integration
+- RabbitMQ Naming Conventions for Queues
 - Remote Password Changing with PowerShell
 - REST API PowerShell Script Examples
 - REST Web Services API Reference and Download
@@ -62,6 +67,8 @@ Created the following topics from Salesforce articles (often including substanti
 - Setting Maximum Time for Offline Caching
 - Setting up Clustering
 - SOAP API PowerShell Script Examples
+- SQL Server 2014 Express Edition Installation
+- SQL Server 2016 Standard Edition Installation
 - System Requirements for Secret Server
 - Understanding Expiration, Auto Change and Auto Change Schedules
 - Upgrading Secret Server with Web Clustering
@@ -71,7 +78,11 @@ Created the following topics from Salesforce articles (often including substanti
 - Using Regex with Dependencies
 - Using Secret Fields in Scripts
 - Using Webservices with IWA via PowerShell
+- VMware ESX/ESXi Account Discovery
 - Web Password Filler
 - Windows Local-Account Access-Denied Error Workaround PowerShell Scripts
 - X.509 Certificate Security Chain Options
 
+Made significant changes to:
+- Document Conventions: Added Capitalization section.
+- Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.

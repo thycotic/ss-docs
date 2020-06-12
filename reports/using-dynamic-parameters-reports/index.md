@@ -63,7 +63,7 @@ SELECT
   tau.DatabaseName,
   tu.UserId,
   tu.UserName 
-FROM tbAuditUser tau INNER JOIN tbUser tu ON tau.UserId=tu.UserId WHERE   tu.UserId=#USER
+FROM tbAuditUser tau INNER JOIN tbUser tu ON tau.UserId=tu.UserId WHERE tu.UserId=#USER
 ```
 
 ### #ORGANIZATION

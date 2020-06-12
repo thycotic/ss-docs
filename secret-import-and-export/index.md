@@ -6,7 +6,7 @@
 
 
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 You can export your data as XML by going to **Admin > All** and typing `export` in the search text box. Once on the Export page, click to select **XML** on the **Export Format** selection button.
 

@@ -4,7 +4,7 @@
 
 # Stability and Compatibility with Older ASRAs
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 The latest ASRAs use more-reliable durable message exchanges, which are not compatible with earlier (already deployed) ASRAs. Version 7.7+ of the ASRA only requires HTTP connectivity to SS—the distributed engine response-bus site connector is no longer required. 
 
