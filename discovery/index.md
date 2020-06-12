@@ -4,13 +4,11 @@
 
 # Discovery
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 ## Overview
 
 Discovery is the process where SS scans an environment to find accounts and associated resources called *dependencies*. Once accounts are found, they can be used to create new secrets in SS. Users with the “administer discovery” role permission can either manually import accounts or can create an automated process, called a *discovery rule*, to do so. Using discovery does not stop users from manually creating their own secrets.
-
-> **Note:** Please see our [Discovery Guide](https://updates.thycotic.net/secretserver/documents/SS_DiscoveryGuide.pdf) for details.
 
 Some typical accounts that discovery can find include Windows local admin, Windows domain, and Unix non-daemon. Some typical dependencies discovery can scan for include scheduled tasks running as a domain user, application pools running as a domain user, and services running as a domain user.
 
@@ -80,8 +78,8 @@ Like many operations in SS, you can configure discovery to run locally on IIS ma
 
 ## Discovery Performance
 
-Please see our [Discovery Best Practices Guide](https://thycotic.force.com/support/s/article/Secret-Server-Discovery-Best-Practices) to learn about optimizing discovery performance.
+Please see our [Discovery Best Practices Guide](./discovery-best-practices/index.md) to learn about optimizing discovery performance.
 
 ## Extensible Discovery
 
-You can customize discovery by changing parts of it to use PowerShell. The information a discovery scanner outputs is defined by its scanner template. For standard templates, the input and output information types are fixed. Extensible discovery allows you to customize or replace the unmanaged account, IP address and OU, account, and dependency discovery steps above. Extensible discovery does still have limitations on what information is passed between discovery scanners. For more information, see the [Extensible Discovery Overview](https://thycotic.force.com/support/s/article/Scriptable-Discovery-Overview).
+You can customize discovery by changing parts of it to use PowerShell. The information a discovery scanner outputs is defined by its scanner template. For standard templates, the input and output information types are fixed. Extensible discovery allows you to customize or replace the unmanaged account, IP address and OU, account, and dependency discovery steps above. Extensible discovery does still have limitations on what information is passed between discovery scanners. For more information, see the [Extensible Discovery Overview](https://thycotic.force.com/support/s/article/Scriptable-Discovery-Overview) (KBA).

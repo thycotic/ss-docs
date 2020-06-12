@@ -14,7 +14,7 @@ Please see our [Technical Support](../../support/index.md) section.
 
 ### Accessing Upgrades
 
-Supported customers have access to all new releases (both minor and major). For installation, see <https://thycotic.force.com/support/s/article/Installation-Guides-Secret-Server>.
+Supported customers have access to all new releases (both minor and major). See [Secret Server Installation and Upgrade Guides](../../secret-server-setup/index.md).
 
 ### Requesting New Features
 

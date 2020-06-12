@@ -4,7 +4,7 @@
 
 # Getting Started Tutorial
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one.
+> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 Secret Server (SS) is a powerful application with many facets. As such, approaching it for the first time can be daunting. To counter that, we created this section, which is an introductory guided tutorial, for new users. The tutorial suggest an order to learn topics and points to specific sections of documentation for details.
 
