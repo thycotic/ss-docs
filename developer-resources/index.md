@@ -1,3 +1,7 @@
+[title]: # (Developer Resources)
+[tags]: # (scripts,cli,api,powershell,rest,soap)
+[priority]: # (1000)
+
 # Developer Resources
 
 This topic is a one-stop resource for Secret Server developers. It points to TDP topics, as well as legacy knowledgebase articles. See the main TDP [API and Scripting](../api-scripting/index.md) section too.
@@ -11,7 +15,7 @@ This topic is a one-stop resource for Secret Server developers. It points to TDP
 
 ## General Scripting
 
-- [Accessing Secret Server - PowerShell](https://thycotic.force.com/support/s/article/Accessing-Secret-Server-programmatically-PowerShell-script) (KBA)
+- [Accessing Secret Server—PowerShell](https://thycotic.force.com/support/s/article/Accessing-Secret-Server-programmatically-PowerShell-script) (KBA)
 - [Configure CredSSP for use with PowerShell](https://thycotic.force.com/support/s/article/Configuring-CredSSP-for-use-with-WinRM-PowerShell)
 - [Creating and Using PowerShell Scripts](../api-scripting/creating-using-powershell-scripts/index.md)
 - [Creating and Using SSH Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SSH-Scripts) (KBA) 
