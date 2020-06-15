@@ -1,18 +1,8 @@
+[title]: # (SSH Terminal Administration Guide)
+[tags]: # (SSH Terminal, CLI)
+[priority]: # (1000)
+
 # Secret Server: SSH Terminal Administration Guide
-
-**Secret Server Version 10.7**
-
-September 25, 2019
-
-> **Note:** The PDF version of this online document is automatically generated and thus may have minor formatting anomalies.
->
-> **Note:** This document is not updated with every Secret Server release—many releases do not affect the guide's contents and thus do not warrant a document update.
-
-
-
-## Contents
-
-[TOC]
 
 ## Introduction
 
@@ -80,7 +70,7 @@ User: View Secret
     
 1. Navigate to **Secret Server \> Admin \> SSH Proxy**.
 
-    ![1565192991895](assets/1565192991895.png)
+    ![1565192991895](images/1565192991895.png)
 
 1. Click the **Edit** button.
 
@@ -99,7 +89,7 @@ User: View Secret
     
     1. The resulting settings should look something like this:
     
-         ![1565191783487](assets/1565191783487.png)
+         ![1565191783487](images/1565191783487.png)
     
 1. Specify the IP address for nodes (and engines) that will run SSH proxy:
 
@@ -461,25 +451,25 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
     - Shared with the terminal user 
 1. Log in to the terminal with SS user credentials:
 
-    ![1565211104745](assets/1565211104745.png)
+    ![1565211104745](images/1565211104745.png)
 1. If the secret ID is unknown, search for the desired secret with the search command:
 
-    ![1565211304624](assets/1565211304624.png)
+    ![1565211304624](images/1565211304624.png)
 1. To view secret detail, get the secret ID from search results, and run
 
     `cat <secret_id>`
 
-    ![1565211392881](assets/1565211392881.png)
+    ![1565211392881](images/1565211392881.png)
 
 5. To launch the secret, enter the launch command as specified in the last line of secret details:
 
    `launch <secret_id>`
 
-   ![1565211520674](assets/1565211520674.png)
+   ![1565211520674](images/1565211520674.png)
 
 6. To exit the launch session and return to the terminal, type `exit`.
 
-![1565963705255](assets/1565963705255.png)
+![1565963705255](images/1565963705255.png)
 
 7. To exit the terminal session, type `exit` again.
 
@@ -491,11 +481,11 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
 
 1. Log in to the terminal with SS user credentials:
 
-   ![1565211104745](assets/1565211104745.png)
+   ![1565211104745](images/1565211104745.png)
 
 1. If secret ID is unknown, search for the desired secret with the search command:
 
-   ![1565211304624](assets/1565211304624.png)
+   ![1565211304624](images/1565211304624.png)
 
 1. To view secret detail, get the secret ID from search results, and run
 
@@ -503,7 +493,7 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
 
    
 
-   ![1565286105456](assets/1565286105456.png)
+   ![1565286105456](images/1565286105456.png)
 
 1. Note that the connection is not made, and instructions are displayed for logging into another distributed engine terminal to launch the secret.
 
@@ -511,7 +501,7 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
 
 1. Type `exit` and press **\<Enter\>** to disconnect from the current session:
 
-   ![1565286692529](assets/1565286692529.png)
+   ![1565286692529](images/1565286692529.png)
 
 1. Open a new SSH session suggested parameters:
 
@@ -550,7 +540,7 @@ SS terminal can launch secrets with custom SSH Command restrictions. For detaile
 
 3. Type a name, description and the SSH commands:
    
-   ![1569424832544](assets/1569424832544.png)
+   ![1569424832544](images/1569424832544.png)
    
    Once one or more command menus have ben created, access can be controlled to individual Unix SSH secrets.
    
@@ -558,23 +548,23 @@ SS terminal can launch secrets with custom SSH Command restrictions. For detaile
 
 6. In the following example, the “admin” group is unrestricted, and everyone who is not in that admin group is restricted to only being able to run the whitelisted commands that are specified in the user command menu created above.
    
-    ![1569425961920](assets/1569425961920.png)
+    ![1569425961920](images/1569425961920.png)
     
     When you click the Edit link:
     
-    ![1569426630093](assets/1569426630093.png)
+    ![1569426630093](images/1569426630093.png)
     
     And click the dropdown list to select Whitelisted Commands:
     
-    ![1569426365427](assets/1569426365427.png)
+    ![1569426365427](images/1569426365427.png)
     
 1. A user who is subject to SSH command restrictions is presented with a screen similar to the following when launching this secret from SS terminal:
    
-    ![1569431038970](assets/1569431038970.png)
+    ![1569431038970](images/1569431038970.png)
     
     The user simply enters the number of the command menu to see available commands or types “?” to display the options again:
     
-    ![1569431232559](assets/1569431232559.png)    
+    ![1569431232559](images/1569431232559.png)    
     
     Only the commands listed can be run by this user. The user can either enter the number of the command to be run, or the name of the command, which is the word to the left of the equal = sign. Other options are available (as shown) to navigate through the available command menus, display help, or exit the session.
 
