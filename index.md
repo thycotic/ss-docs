@@ -1,6 +1,6 @@
-[title]: # (Secret Server Documentation)
+[title]: # "Secret Server Documentation"
 [tags]: #
-[priority]: # (1000)
+[priority]: # "1000"
 
 # Secret Server Documentation
 
