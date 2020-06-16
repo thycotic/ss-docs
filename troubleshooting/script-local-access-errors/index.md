@@ -97,7 +97,7 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 ## Option 4: Creating a Heartbeat GPO Workaround
 
-1. Make sure that **Admin \> Scripts** is functional. Once you have it working, download and run this script [HBWorkAroundScript.ps1](./HBWorkAroundScript.ps1).
+1. Make sure that **Admin \> Scripts** is functional. Once you have it working, download, unzip, and run this script [HBWorkAroundScript.ps1](./HBWorkAroundScript.zip).
 2. Please run the script in **Admin \> Scripts**. 
 2. Add the appropriate `args[]` as needed. Add arguments 0-4 with no quotes or commas. Spaces are required. 
 

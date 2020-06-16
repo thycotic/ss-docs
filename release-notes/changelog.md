@@ -59,6 +59,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Restoring Secret Server from a Backup
 - Running the IIS Application Pool As a Service Account
 - Secret Server Cloud Architecture
+- Secret Server Clustering
 - Secret Server Release Notes
 - Secret Server Role Permissions List
 - Secret Server Software Development Kit for DevOps
@@ -69,7 +70,9 @@ Created the following topics from Salesforce articles (often including substanti
 - SOAP API PowerShell Script Examples
 - SQL Server 2014 Express Edition Installation
 - SQL Server 2016 Standard Edition Installation
+- SSH Terminal Administration
 - System Requirements for Secret Server
+- Thycotic One and Secret Server
 - Understanding Expiration, Auto Change and Auto Change Schedules
 - Upgrading Secret Server with Web Clustering
 - Upgrading Secret Server Without Outbound Access

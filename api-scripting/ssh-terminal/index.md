@@ -1,8 +1,8 @@
-[title]: # (SSH Terminal Administration Guide)
+[title]: # (SSH Terminal Administration)
 [tags]: # (SSH Terminal, CLI)
 [priority]: # (1000)
 
-# Secret Server: SSH Terminal Administration Guide
+# SSH Terminal Administration
 
 ## Introduction
 
@@ -65,38 +65,38 @@ User: View Secret
 ### Enabling SSH Terminal on Secret Server
 
 1. Prerequisites:
-    - Must meet Admin permission requirements (see [Secret Server Permission Requirements](#Secret-Server-Permission-Requirements))
-    - Secret Server **Professional** or **Platinum** Edition license
-    
+  - Must meet Admin permission requirements (see [Secret Server Permission Requirements](#Secret-Server-Permission-Requirements))
+  - Secret Server **Professional** or **Platinum** Edition license
+
 1. Navigate to **Secret Server \> Admin \> SSH Proxy**.
 
-    ![1565192991895](images/1565192991895.png)
+  ![1565192991895](images/1565192991895.png)
 
 1. Click the **Edit** button.
 
 1. Type your SSH proxy configuration settings (see "Configuring SSH Proxies for Launchers" in the [Secret Server Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Admin-Guide)):
-    1. Enable **SSH Proxy** (required to use SSH terminal).
-    
-    1. (optional) Enable **Proxy New Secrets by Default**.
-    
-       > **Note:** To launch a secret via the terminal, the secret must have proxy enabled. Only SSH-based credentials can be launched in the terminal.
-       
-    1. Click to enable **SSH Terminal**.
-    
-    1. (optional) Customize the **Terminal banner** for your environment.
-    
-    1. (optional) Click to enable **Terminal Inactivity Timeout** (in seconds).
-    
-    1. The resulting settings should look something like this:
-    
-         ![1565191783487](images/1565191783487.png)
-    
+  1. Enable **SSH Proxy** (required to use SSH terminal).
+  
+  1. (optional) Enable **Proxy New Secrets by Default**.
+
+  > **Note:** To launch a secret via the terminal, the secret must have proxy enabled. Only SSH-based credentials can be launched in the terminal.
+
+  1. Click to enable **SSH Terminal**.
+  
+  1. (optional) Customize the **Terminal banner** for your environment.
+  
+  1. (optional) Click to enable **Terminal Inactivity Timeout** (in seconds).
+  
+  1. The resulting settings should look something like this:
+
+  ![1565191783487](images/1565191783487.png)
+
 1. Specify the IP address for nodes (and engines) that will run SSH proxy:
 
-    1.  Navigate to **Admin \> SSH Proxy \> Nodes.** 
-    1. Set the **SSH Public Host.** This is the public hostname or IP that the client launcher connects to. In most cases, this is the same as the SSH bind address; however, there are cases where the public IP or host differs from the private IP that SS should bind to, such as NAT or Amazon EC2 instances.
+  1.  Navigate to **Admin \> SSH Proxy \> Nodes.** 
+  1. Set the **SSH Public Host.** This is the public hostname or IP that the client launcher connects to. In most cases, this is the same as the SSH bind address; however, there are cases where the public IP or host differs from the private IP that SS should bind to, such as NAT or Amazon EC2 instances.
 
-    1. Set the **SSH Bind IP Address**. This defaults to (0.0.0.0). The IP Address of the network adapter that the SS SSH listener should bind to. This should not be localhost or 127.0.0.1. If you are not sure which bind IP address to use, you may use 0.0.0.0, which binds to all IPv4 interfaces on the machine.
+  1. Set the **SSH Bind IP Address**. This defaults to (0.0.0.0). The IP Address of the network adapter that the SS SSH listener should bind to. This should not be localhost or 127.0.0.1. If you are not sure which bind IP address to use, you may use 0.0.0.0, which binds to all IPv4 interfaces on the machine.
 
 ### Enabling Terminal on Secret Server Distributed Engine
 
@@ -447,19 +447,19 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
 ### Launching a Secret on a Local Site
 
 1. To launch, the secret must be:
-    - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
-    - Shared with the terminal user 
+  - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
+  - Shared with the terminal user 
 1. Log in to the terminal with SS user credentials:
 
-    ![1565211104745](images/1565211104745.png)
+  ![1565211104745](images/1565211104745.png)
 1. If the secret ID is unknown, search for the desired secret with the search command:
 
-    ![1565211304624](images/1565211304624.png)
+  ![1565211304624](images/1565211304624.png)
 1. To view secret detail, get the secret ID from search results, and run
 
-    `cat <secret_id>`
+  `cat <secret_id>`
 
-    ![1565211392881](images/1565211392881.png)
+  ![1565211392881](images/1565211392881.png)
 
 5. To launch the secret, enter the launch command as specified in the last line of secret details:
 
@@ -548,25 +548,27 @@ SS terminal can launch secrets with custom SSH Command restrictions. For detaile
 
 6. In the following example, the “admin” group is unrestricted, and everyone who is not in that admin group is restricted to only being able to run the whitelisted commands that are specified in the user command menu created above.
    
-    ![1569425961920](images/1569425961920.png)
-    
-    When you click the Edit link:
-    
-    ![1569426630093](images/1569426630093.png)
-    
-    And click the dropdown list to select Whitelisted Commands:
-    
-    ![1569426365427](images/1569426365427.png)
-    
+
+  ![1569425961920](images/1569425961920.png)
+
+  When you click the Edit link:
+
+  ![1569426630093](images/1569426630093.png)
+
+  And click the dropdown list to select Whitelisted Commands:
+
+  ![1569426365427](images/1569426365427.png)
+
 1. A user who is subject to SSH command restrictions is presented with a screen similar to the following when launching this secret from SS terminal:
    
-    ![1569431038970](images/1569431038970.png)
-    
-    The user simply enters the number of the command menu to see available commands or types “?” to display the options again:
-    
-    ![1569431232559](images/1569431232559.png)    
-    
-    Only the commands listed can be run by this user. The user can either enter the number of the command to be run, or the name of the command, which is the word to the left of the equal = sign. Other options are available (as shown) to navigate through the available command menus, display help, or exit the session.
+
+  ![1569431038970](images/1569431038970.png)
+
+  The user simply enters the number of the command menu to see available commands or types “?” to display the options again:
+
+  ![1569431232559](images/1569431232559.png) 
+
+  Only the commands listed can be run by this user. The user can either enter the number of the command to be run, or the name of the command, which is the word to the left of the equal = sign. Other options are available (as shown) to navigate through the available command menus, display help, or exit the session.
 
 ## SSH Terminal Launching with Session Recording
 
