@@ -8,8 +8,6 @@
 
 This document is a guide to Thycotic's Secret Server (SS) clusters for administrators and advanced users. SS can run with multiple front-end Web servers. For a critical instance, clustering offers a redundant system to limit potential down time from a single point of failure. Clustering also allows users to load balance for better performance. 
 
-- https://thycotic.com/company/blog/)
-
 ## Overview
 
 ### Clustering and Background Thread Changes in 10.7.
@@ -27,7 +25,7 @@ With SS clustering, you can easily scale SS for redundancy and performance. Basi
 
 #### Nodes
 
-Each machine with SS installed on it, pointing to the same database, is a *node*.  All nodes respond to Web requests and thus are Web servers. 
+Each machine with SS installed on it, pointing to the same database, is a *node*. All nodes respond to Web requests and thus are Web servers.
 
 #### Backbone Bus
 
@@ -57,11 +55,11 @@ Messages are placed on the backbone bus by the Scheduler role and the website. M
 
 ![1565984037119](images/1565984037119.png)
 
-1: Manual or scheduled operation.
-2: Background worker processes a message.
-3: Outbound messages (password changes, heartbeats, and others) are placed on the site connector.
-4: Distributed engine performs the operation.
-5: Engine worker processes the response.
+1. Manual or scheduled operation.
+2. Background worker processes a message.
+3. Outbound messages (password changes, heartbeats, and others) are placed on the site connector.
+4. Distributed engine performs the operation.
+5. Engine worker processes the response.
 
 #### Server Node Configurations
 
@@ -125,15 +123,15 @@ To see the current state of these jobs, such as the last time they ran and how l
 1. Have SS upgraded or installed and running on a server.
 
 1. Enable clustering on the node:
-
-	1. In SS, click **Admin \> See All**. The Administration page appears:
-
-	![1565726671364](images/1565726671364.png)
-	2. Click the **Server Nodes** button in the **Setup** section. The Server Nodes page appears:
-   
-	![1565726759539](images/1565726759539.png)
-	
-	3. Click the **Enable Clustering** button.
+    
+    1. In SS, click **Admin \> See All**. The Administration page appears:
+    
+        ![1565726671364](images/1565726671364.png)
+    2. Click the **Server Nodes** button in the **Setup** section. The Server Nodes page appears:
+    
+        ![1565726759539](images/1565726759539.png)
+    
+    3. Click the **Enable Clustering** button.
 1. Copy the entire SS application folder (typically `c:\inetpub\wwwroot\SecretServer`) from the existing node to the secondary node. 
 
 1. Follow the steps in the Installation Guide for setting up the application pool and virtual directory in IIS. 
@@ -152,10 +150,10 @@ To see the current state of these jobs, such as the last time they ran and how l
 
 1. Configure the worker roles for the cluster:
 
-	- Each server node can optionally run the background worker, engine worker, and session recording worker roles.
-	- At least one instance of **each** type of those roles must be active in the cluster for the clustered SS application to function.
-	- You may run more than one instance of each role as desired to improve the performance of the clustered SS application.
-	- For more information on what the various roles do, please see the [Worker Roles](#worker-roles) section.
+    - Each server node can optionally run the background worker, engine worker, and session recording worker roles.
+    - At least one instance of **each** type of those roles must be active in the cluster for the clustered SS application to function.
+    - You may run more than one instance of each role as desired to improve the performance of the clustered SS application.
+> **Note:** For more information on what the various roles do, please see the [Worker Roles](#worker-roles) section.
 
 ### Upgrading Secret Server in a Clustered Environment
 
@@ -163,7 +161,7 @@ To see the current state of these jobs, such as the last time they ran and how l
 
 SS has a built-in Web installer. That installer is a series of pages inside SS for downloading and updating SS.  SS is accessible by users for most of the upgrade process. You can stop outside access to the site if you want to prevent users from making changes during the upgrade. Preventing user access will make restoring the database and site backups simpler if you decide to roll back the upgrade immediately afterward.
 
-> <span style="color:darkred">**Warning:**</span> Before upgrading, **backup your SS folder and database**. See [**Upgrading Secret Server - Single Instance and Web Clustering**](http://support.thycotic.com/KB/a17/upgrading-secret-server-single-instance-web-clustering.aspx) for important steps for ensuring your data is backed up.
+> **Warning:** Before upgrading, **backup your SS folder and database**. See [**Upgrading Secret Server - Single Instance and Web Clustering**](http://support.thycotic.com/KB/a17/upgrading-secret-server-single-instance-web-clustering.aspx) for important steps for ensuring your data is backed up.
 
 > **Important:** Upgrading to SS version 8.9.000000+ requires Windows Server 2008 R2 or greater.
 
@@ -179,10 +177,10 @@ SS has a built-in Web installer. That installer is a series of pages inside SS f
 
 1. Before you start:
    - Ensure that you have account credentials information and access for the server hosting SS and the SQL Server instance hosting your SS database.
-
-   - Have a recent backup of the application files and database available.
-   - Stop the application pools on all of the servers except the one that you have chosen to upgrade.
-   
+    
+    - Have a recent backup of the application files and database available.
+    - Stop the application pools on all of the servers except the one that you have chosen to upgrade.
+    
 1. Choose one SS server to upgrade
 
 1. Perform a backup of that server.
@@ -191,11 +189,11 @@ SS has a built-in Web installer. That installer is a series of pages inside SS f
 
 1. Perform the upgrade using the same procedure as a single instance.
 
-   > **Note:** If applicable, see [Upgrading Secret Server without Outbound Access](https://thycotic.force.com/support/s/article/Upgrading-Secret-Server-without-outbound-access). 
+    > **Note:** If applicable, see [Upgrading Secret Server without Outbound Access](https://thycotic.force.com/support/s/article/Upgrading-Secret-Server-without-outbound-access). 
 
 1. Once SS is upgraded and working, copy the Web application folder (without the database.config or encryption.config files) to all other servers.
 
-    > <span style="color:darkred">**Warning:**</span> Never overwrite or delete the encryption.config file on a SS server.
+    > **Warning:** Never overwrite or delete the encryption.config file on a SS server.
     
     > **Note:** Both encryption.config and database.config are  automatically propagated to the new servers from the original. If you need to copy those files because of database configuration changes and are using DPAPI, disable DPAPI encryption in SS by going to **Admin \> Configuration** on the **Security tab**. and clicking **Decrypt Key to not use DPAPI** *before* copying those files to secondary servers.
     
@@ -246,9 +244,13 @@ In a clustered Secret Server environment set up behind a load balancer, the acce
 In SS 8.5 and later, the Custom URL setting can be configured to ensure that links and resources are resolved correctly and are not based upon the server name:
 
 1. Navigate to **Admin \> Configuration**.
+
 1. On the **General** tab, click the **Edit** button.
+
 1. Go to the **Application Settings** section.
+
 1. Click to select the **Custom URL** check box.
+
 1. Type the desired URL in the **Secret Server Custom URL** text box.
 
 #### SSL Recommendations
@@ -280,8 +282,11 @@ In the `web-appSetting.config` file in your SS directory, add the following key:
 For SS 10.5.000000 and later:   
 
 1. Go to `https://<SecretServerAddress>/ConfigurationAdvanced.aspx`.
+
 1. Scroll to the bottom and click **Edit**.
+
 1. Locate the **IP Address Header** text box, type `X-Forwarded-For`.
+
 1. Click the **Save** button.
 
 > **Note:** The SSL certificate needs to exist on the load balancer and the Web server to ensure it has access to add the client IP address header.
