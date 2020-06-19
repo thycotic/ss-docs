@@ -1,6 +1,6 @@
 [title]: # (IIS Manual Installation)
 [tags]: # (Installation, IIS)
-[priority]: #
+[priority]: #	(1000)
 
 # Manual IIS Installation
 

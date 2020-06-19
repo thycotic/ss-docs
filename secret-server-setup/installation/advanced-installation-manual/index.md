@@ -55,7 +55,7 @@ Open Internet Information Services (IIS) Manager* and create a new application p
 1. Type a site name.
 1. Click **Select...** and choose the application pool you created in the Manual Installation section. 
 1. Click the **OK** button.
-1. Click the **...** button beside the **Physical path** field and select the directory containing the unzipped SS files, for example `C:\\inetpub\\wwwroot\\SecretServer`. 
+1. Click the **...** button beside the **Physical path** field and select the directory containing the unzipped SS files, for example `C:\inetpub\wwwroot\SecretServer`. 
 1. Click the **OK** button.
 1. Click the **OK** button at the bottom of the **Add Website** window to save your settings. Secret Server is now ready for installation. 
 
