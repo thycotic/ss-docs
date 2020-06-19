@@ -8,6 +8,26 @@
 
 This Secret Server Software Development Kit (SDK) for DevOps tool, or simply SDK, was created for securing and streamlining DevOps processes with regard to SS. The SDK for DevOps tool allows you to more efficiently engage SS via a Command Line Interface (CLI) without compromising security. It allows you to securely retrieve credentials from and track access to a secure vault.
 
+The SDK uses the [SS REST API](../rest-api-reference-download/index.md). The SDK is a .NET library (available via a NuGet package), which you can use in a custom application. The SDK .NET library exposes a limited subset of the REST API. 
+
+> **Note:** See the [Thycotic SDK Integration Doc](https://github.com/thycotic/sdk-documentation) on GitHub for more information.
+
+There is also a .NET Core CLI SDK Client that uses the SDK .NET library. The SDK Client was created to allow customers to write automation scripts to access secrets without having to write code to directly access the REST API.
+
+The .NET SDK library and the .NET Core CLI client both:
+
+- Automatically store the credentials and remote server in an encrypted file used to acquire an OAUTH token. The token is then used to make subsequent API calls. OAUTH tokens have an expiration time, which is configurable in the UI on the configuration page via the “Session Timeout for Webservices” value.
+- Get the contents of a secret.
+- Provide client-side caching (SDK client caching)
+
+Secret Server has user and application accounts. Both types can access SS via the REST API. Application accounts are not counted for licensing purposes. Application account can *only* access SS via the REST API. Both account types never expire.
+
+Secret Server provides security for automated clients. SDK rules manage permissions. Client IDs are created when `SecretServerClient.Configure()` or `tss init` is called. The client ID is used to reference SDK client instances.
+
+> **Note:** For REST API Client Generation (Advanced), please see [REST API Client Generation with OpenAPI Swagger ](https://docs.thycotic.com/ss/10.8.0/api-scripting/rest-api-client-generation/index.md#rest_api_client_generation_with_openapi_swagger)
+
+> **Note:** We have a [Python SDK](https://github.com/thycotic/python-tss-sdk) that is independent of the SDK .NET library. It allows a Python script to access secrets without requiring REST knowledge. It has access to a small subset of the REST API.
+
 ## How It Works
 
 The SDK is a console application written in .NET Core that wires up its own credentials based on the machine it is installed on. Those credentials, called "DevOps Users", do not have any rights in SS but can be assigned to other SS users or application user accounts, mimicking permissions to access secrets.
@@ -41,90 +61,72 @@ The SDK requires setup in two areas: SS configuration and SDK installation on th
 ### Task 1: Configuring Secret Server
 
 Configure SS for communication with the SDK:
-
 1. Navigate to **Admin \> Configuration**.
-
 2. Click the **General** tab.
-
 3. Click the **Edit** button.
-
 4. Click to select the **Enable Webservices** check box in the **Application Settings** section.
-
 5. Click the **Save** button.
-
 6. Select and setup any application accounts that you want for use by SDK clients. Make sure these application accounts have appropriate permissions to access any secrets or execute any operations the client host needs to perform. To create a new account with the needed permissions:
-   
    1. Go to **Admin \> Users**.
-   
    1. Click the **Create New** button. The Edit User page appears:
    
       ![image-20200604105821104](images/image-20200604105821104.png)
    
    1. Type the account name in the **User Name** and **Display Name** text boxes.
-   
    1. Type a password in the **Password** and **Confirm** text boxes. Record the password for future use.
-   
    1. Click the **Advanced** link. The Advance section appears:
    
       ![image-20200604110232358](images/image-20200604110232358.png)
    
    1.  Click to select the **Application Account** check box.
-   
    1. Click the **Save** button. A confirmation popup appears.
-   
       ![image-20200604110759641](images/image-20200604110759641.png)
-   
    1. Click the **OK** button. The View User page appears:
    
       ![image-20200604111246092](images/image-20200604111246092.png)
-   
-7. Create a new role:
 
+7. Create a new role:
    1. Go to **Admin > Roles**.
-   
    2. Click the **Create New** button. The Role Edit page appears:
    
       ![image-20200604111551561](images/image-20200604111551561.png)
    
    3. Type the new role name in the **Role Name** text box.
-   
    4. Assign the **View Secret** permission to that role. The permission appears in the Permissions Assigned text box. You can add additional permissions later as needed.
-   
    5. Click the **Save** button. The new role appears in the Roles table.
-   
 1.  Enable SDK management:
    
    1.  Go **Admin > See All**. The admin panel appears.
    
    2.  Type SDK in the **Search** text box and select **SDK Client Management**. The SDK Client Management page appears:
    
-      ![image-20200604112241735](images/image-20200604112241735.png)
+   ![image-20200604112241735](images/image-20200604112241735.png)
    
    3.  Click the **Disabled** toggle button to change it to **Enabled**.
    
 9.  Set up a SDK client rule:
-
+   
    1. Click the **Client Onboarding** tab.
-
+   
       ![image-20200604112653676](images/image-20200604112653676.png)
-
+   
    1. Click the **+ Rule** link. A new rule appears:
-
+   
       ![image-20200604112756444](images/image-20200604112756444.png)
-
+   
    1. Type a short, unique name in the **Rule Name** text box. Clients must provide a valid rule name when connecting. For example: `ProductionWebApp`.
-
+   
    1. Type an IPV 4 address or address range (in CIDR notation) in the **Details** text box. SS will only allow clients to use this rule if they connect from a valid IP address. If not provided, SS will not enforce IP address restrictions on this rule. We strongly recommend using this feature.
-
+   
    1. Click to select the application account you created earlier in the **Assignment** dropdown list. Clients are granted the same permissions as this account within SS. If not provided, an account will be automatically created for clients, but will have no default permissions. You must use an application account (the one you created) for a rule. Application accounts are restricted from logging into the system through the normal user interface and do not count towards your license quota.
-
+   
    1. Click to select the **Require this generated onboarding key** check box. Clients must provide a generated additional key string when authenticating. If not provided, SS allow any client to use the rule if its IP address is within the specified range. We strongly recommend using this feature.
-
+   
    1. Click the **Save** button. The Show Key link appears.
-
+   
    1. Click the **Show Key** link to save the generated onboarding key (something like `TFyORLL1teQmD8OAMstqKGWkJGksFRtaelY0b2NnhsM=`) for future use. It will not be visible again. 
 
-      > **Note:** If you cannot copy the key text after selecting it, you probably need to add the Secret Server Utilities extension for your browser. For now, just manually copy it.
+  > **Note:** If you cannot copy the key text after selecting it, you probably need to add the Secret Server Utilities extension for your browser. For now, just manually copy it.
 
 ### Task 2: Installing the SDK Client 
 
@@ -132,7 +134,7 @@ Configure SS for communication with the SDK:
 
 > **Note:** IWA is not supported by the SDK.
 
-You can use any any operating system supported by .NET Core 2.1. See [.NET Core 2.1 - Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) on GitHub.
+> **Note:** You can use any any operating system supported by .NET Core 2.1. See [.NET Core 2.1 - Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) on GitHub.
 
 1. [Download the SDK](../sdk-downloads/index.md) for your platform.
 1. Unzip the SDK zip file you downloaded.
@@ -168,16 +170,11 @@ Secret Server will validate that the client-provided information is correct and 
 
 ## Usage Examples
 
-- Retrieving a secret by ID (returns a JSON structure describing the entire secret record):
-  `tss secret -s 4`
-- Retrieving all secret field values for a secret by ID:
-  `tss secret -s 4 -ad`
-- Retrieving only the value of a particular secret field by secret ID:
-  `tss secret -s 4 -f password`
-- Writing a secret field value to a file:
-  `tss secret -s 4 -f password -o passwordfile.txt`
-- Retrieving an access token for use in other REST API requests:
-  `tss token`
+- Retrieving a secret by ID (returns a JSON structure describing the entire secret record): `tss secret -s 4`
+- Retrieving all secret field values for a secret by ID: `tss secret -s 4 -ad`
+- Retrieving only the value of a particular secret field by secret ID: `tss secret -s 4 -f password`
+- Writing a secret field value to a file: `tss secret -s 4 -f password -o passwordfile.txt`
+- Retrieving an access token for use in other REST API requests: `tss token`
 
 The SDK client also includes an interactive mode (`tss -i`) that allows you to input multiple commands into a series of prompts. To exit interactive mode, run the `exit` command.
 
@@ -185,11 +182,11 @@ The SDK client also includes an interactive mode (`tss -i`) that allows you to i
 
 To view and manage a list of connected SDK clients from within SS: 
 
-1.  Go **Admin > See All**. The admin panel appears.
-1.  Type SDK in the **Search** text box and select **SDK Client Management**. The SDK Client Management page appears.
-1.  Click the **Accounts** tab. A list of connected SDK clients SDK appears. You can remove or rename them. You can use the **Enable/Disable** button at the top of the page to disable and re-enable all SDK client activity.
-1.  Click the **Client Onboarding** tab to manage the onboarding rules.
-1.  Click the **Audit** tab. A list of SDK client activity appears.
+1. Go **Admin > See All**. The admin panel appears.
+1. Type SDK in the **Search** text box and select **SDK Client Management**. The SDK Client Management page appears.
+1. Click the **Accounts** tab. A list of connected SDK clients SDK appears. You can remove or rename them. You can use the **Enable/Disable** button at the top of the page to disable and re-enable all SDK client activity.
+1. Click the **Client Onboarding** tab to manage the onboarding rules.
+1. Click the **Audit** tab. A list of SDK client activity appears.
    
    > **Note:** If you remove a connected client, it may be able to reconnect unless you alter or remove the rule that it used. You can use the button above the grid to disable and re-enable all SDK client activity.
    
@@ -210,15 +207,11 @@ All these cache strategies have a configurable age, in minutes, after which the 
 
 ### Examples 
 
-- Turn off caching:
-  `tss cache --strategy 0`
+- Turn off caching: `tss cache --strategy 0`
 
-- Turn on “Cache Then Server” setting with a cache age of five minutes:
-  `tss cache --strategy 2 --age 5`
-- Immediately clear all cached values:
-  `tss cache --bust`
-- Show the current cache settings:
-  `tss cache --current`
+- Turn on “Cache Then Server” setting with a cache age of five minutes: `tss cache --strategy 2 --age 5`
+- Immediately clear all cached values: `tss cache --bust`
+- Show the current cache settings: `tss cache --current`
 
 > **Important:** Anytime you use a cached value, recent changes made to SS may not be applied, including changes to the value itself, permissions, or other access control settings. Examine your organization’s security policies and application requirements to determine the best cache settings to use.
 
