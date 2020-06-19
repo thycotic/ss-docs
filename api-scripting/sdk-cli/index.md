@@ -8,6 +8,26 @@
 
 This Secret Server Software Development Kit (SDK) for DevOps tool, or simply SDK, was created for securing and streamlining DevOps processes with regard to SS. The SDK for DevOps tool allows you to more efficiently engage SS via a Command Line Interface (CLI) without compromising security. It allows you to securely retrieve credentials from and track access to a secure vault.
 
+The SDK uses the [SS REST API](../rest-api-reference-download/index.md). The SDK is a .NET library (available via a NuGet package), which you can use in a custom application. The SDK .NET library exposes a limited subset of the REST API. 
+
+> **Note:** See the [Thycotic SDK Integration Doc](https://github.com/thycotic/sdk-documentation) on GitHub for more information.
+
+There is also a .NET Core CLI SDK Client that uses the SDK .NET library. The SDK Client was created to allow customers to write automation scripts to access secrets without having to write code to directly access the REST API.
+
+The .NET SDK library and the .NET Core CLI client both:
+
+- Automatically store the credentials and remote server in an encrypted file used to acquire an OAUTH token. The token is then used to make subsequent API calls. OAUTH tokens have an expiration time, which is configurable in the UI on the configuration page via the “Session Timeout for Webservices” value.
+- Get the contents of a secret.
+- Provide client-side caching (SDK client caching)
+
+Secret Server has user and application accounts. Both types can access SS via the REST API. Application accounts are not counted for licensing purposes. Application account can *only* access SS via the REST API. Both account types never expire.
+
+Secret Server provides security for automated clients. SDK rules manage permissions. Client IDs are created when `SecretServerClient.Configure()` or `tss init` is called. The client ID is used to reference SDK client instances.
+
+> **Note:** For REST API Client Generation (Advanced), please see [REST API Client Generation with OpenAPI Swagger ](https://docs.thycotic.com/ss/10.8.0/api-scripting/rest-api-client-generation/index.md#rest_api_client_generation_with_openapi_swagger)
+
+> **Note:** We have a [Python SDK](https://github.com/thycotic/python-tss-sdk) that is independent of the SDK .NET library. It allows a Python script to access secrets without requiring REST knowledge. It has access to a small subset of the REST API.
+
 ## How It Works
 
 The SDK is a console application written in .NET Core that wires up its own credentials based on the machine it is installed on. Those credentials, called "DevOps Users", do not have any rights in SS but can be assigned to other SS users or application user accounts, mimicking permissions to access secrets.
@@ -58,34 +78,36 @@ Configure SS for communication with the SDK:
    
    1. Click the **Create New** button. The Edit User page appears:
    
-      ![image-20200604105821104](images/image-20200604105821104.png)
-   
+
+  ![image-20200604105821104](images/image-20200604105821104.png)
+
    1. Type the account name in the **User Name** and **Display Name** text boxes.
    
    1. Type a password in the **Password** and **Confirm** text boxes. Record the password for future use.
    
    1. Click the **Advanced** link. The Advance section appears:
-   
-      ![image-20200604110232358](images/image-20200604110232358.png)
-   
+
+  ![image-20200604110232358](images/image-20200604110232358.png)
+
    1.  Click to select the **Application Account** check box.
    
    1. Click the **Save** button. A confirmation popup appears.
-   
-      ![image-20200604110759641](images/image-20200604110759641.png)
-   
+
+  ![image-20200604110759641](images/image-20200604110759641.png)
+
    1. Click the **OK** button. The View User page appears:
-   
-      ![image-20200604111246092](images/image-20200604111246092.png)
-   
+
+  ![image-20200604111246092](images/image-20200604111246092.png)
+
 7. Create a new role:
 
    1. Go to **Admin > Roles**.
    
    2. Click the **Create New** button. The Role Edit page appears:
    
-      ![image-20200604111551561](images/image-20200604111551561.png)
-   
+
+  ![image-20200604111551561](images/image-20200604111551561.png)
+
    3. Type the new role name in the **Role Name** text box.
    
    4. Assign the **View Secret** permission to that role. The permission appears in the Permissions Assigned text box. You can add additional permissions later as needed.
@@ -98,19 +120,20 @@ Configure SS for communication with the SDK:
    
    2.  Type SDK in the **Search** text box and select **SDK Client Management**. The SDK Client Management page appears:
    
-      ![image-20200604112241735](images/image-20200604112241735.png)
-   
+
+  ![image-20200604112241735](images/image-20200604112241735.png)
+
    3.  Click the **Disabled** toggle button to change it to **Enabled**.
    
 9.  Set up a SDK client rule:
 
    1. Click the **Client Onboarding** tab.
 
-      ![image-20200604112653676](images/image-20200604112653676.png)
+  ![image-20200604112653676](images/image-20200604112653676.png)
 
    1. Click the **+ Rule** link. A new rule appears:
 
-      ![image-20200604112756444](images/image-20200604112756444.png)
+  ![image-20200604112756444](images/image-20200604112756444.png)
 
    1. Type a short, unique name in the **Rule Name** text box. Clients must provide a valid rule name when connecting. For example: `ProductionWebApp`.
 
@@ -124,7 +147,7 @@ Configure SS for communication with the SDK:
 
    1. Click the **Show Key** link to save the generated onboarding key (something like `TFyORLL1teQmD8OAMstqKGWkJGksFRtaelY0b2NnhsM=`) for future use. It will not be visible again. 
 
-      > **Note:** If you cannot copy the key text after selecting it, you probably need to add the Secret Server Utilities extension for your browser. For now, just manually copy it.
+  > **Note:** If you cannot copy the key text after selecting it, you probably need to add the Secret Server Utilities extension for your browser. For now, just manually copy it.
 
 ### Task 2: Installing the SDK Client 
 

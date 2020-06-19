@@ -15,8 +15,8 @@ To access the guides:
 1. For SS versions 10.5.3 and later with the new user interface, click the ![image-20200603115047589](images/image-20200603115047589.png) icon in the top right of the dashboard and click **Secret Server REST API Guide**. The Secret Server REST API Guide page appears.
 1. On the Secret Server REST API page of your instance, click the link for one of the three guides:
    - **Documentation for REST API using bearer token authentication:** Hyperlinked documentation for REST API access using token authentication.
-   - **Documentation for token authentication:** Instructions for getting an authentication     token.
-   - **Documentation for REST API using Windows integrated authentication:** Hyperlinked     documentation for REST API access using Integrated Windows Authentication (IWA).
+   - **Documentation for token authentication:** Instructions for getting an authentication token.
+   - **Documentation for REST API using Windows integrated authentication:** Hyperlinked documentation for REST API access using Integrated Windows Authentication (IWA).
 
 ## Downloading the Guides
 

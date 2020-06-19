@@ -37,6 +37,7 @@ Created the following topics from Salesforce articles (often including substanti
 - DoubleLocks
 - Downloads for Secret Server Software Development Kit for DevOps
 - Enabling RADIUS Two-Factor Authentication
+- Enabling Secret Server Encryption
 - Event Subscription Page
 - Getting Started Tutorial
 - Giving Application Pools Event Log Access
@@ -44,6 +45,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Importing Secrets with XML
 - Installation
 - Installing and Configuring SQL Server
+- Installing a Self-Signed SSL Certificate
 - Installing RabbitMQ
 - Internal Site Connector
 - Load User Profile Setting Must Be Enabled for Application Pool
@@ -60,6 +62,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Running the IIS Application Pool As a Service Account
 - Secret Server Cloud Architecture
 - Secret Server Clustering
+- SQL Server Mirroring
 - Secret Server Release Notes
 - Secret Server Role Permissions List
 - Secret Server Software Development Kit for DevOps
@@ -89,3 +92,5 @@ Created the following topics from Salesforce articles (often including substanti
 Made significant changes to:
 - Document Conventions: Added Capitalization section.
 - Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.
+- Secret Server Software Development Kit for DevOps: Added introductory material from Support.
+- Release Notes: Added material for 10.8.00004.

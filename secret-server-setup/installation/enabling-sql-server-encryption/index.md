@@ -1,3 +1,7 @@
+[title]: # (Enabling SQL Server Encryption)
+[tags]: # (SQL Server, Encryption, installation)
+[priority]: #	(1000)
+
 # Enabling SQL Server Encryption
 
 Administrators can enable end-to-end encryption with the SQL database by using an  Encrypted connection. This is a feature that is built into Microsoft SQL Server and Secret Server supports. To enable encryption:

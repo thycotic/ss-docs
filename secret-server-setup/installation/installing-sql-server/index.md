@@ -30,7 +30,7 @@ A more advanced way to have Secret Server access the SQL server would be  throug
 
 ## Configuring Database Access in Secret Server
 
-Once the account has been created and SQL server installed with the MSI. The third step of the web installer will ask for Database access  information.
+Once the account has been created and SQL server installed with the MSI. The third step of the Web installer will ask for database access  information.
 
 ### SQL Location
 
