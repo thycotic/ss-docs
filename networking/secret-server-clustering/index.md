@@ -136,7 +136,7 @@ To see the current state of these jobs, such as the last time they ran and how l
 
 1. Follow the steps in the Installation Guide for setting up the application pool and virtual directory in IIS. 
   
-   > **Note:** If you use DPAPI encryption for your encryption.config file, you need to transfer the non-DPAPI-encrypted version of the file to the secondary node. You can turn on DPAPI encryption from that server node locally after SS is running. This setting can be found at **ADMIN > Configuration ** on the **Security** tab.
+   > **Note:** If you use DPAPI encryption for your encryption.config file, you need to transfer the non-DPAPI-encrypted version of the file to the secondary node. You can turn on DPAPI encryption from that server node locally after SS is running. This setting can be found at **ADMIN \> Configuration** on the **Security** tab.
   
 1. If running SS 8.9.300000 or later, ensure that both servers are using the same date and time.
 
