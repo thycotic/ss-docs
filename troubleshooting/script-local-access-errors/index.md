@@ -126,20 +126,27 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 > **Note:** See [Dependency Tokens](../../api-scripting/dependency-tokens/index.md) for a complete list.
 
 12. Click the **Save** button. Your configuration should look like this: 
-
-![img](images/clip_image004.jpg)
-
+    
+    ![img](images/clip_image004.jpg)
+    
 11. Go to **Admin \> Secret Templates**.
+
 11. Select **Windows Account**.
+
 11. Click the **Edit** button.
 
 13. Click the **Copy Secret Template** button.
+
 13. Click the **Configure Password Changing** button.
+
 13. Click the **Edit** button.
+
 13. Click the **Password Type to Use** dropdown list to select the password change you created earlier.
+
 13. Create your windows secret using the custom template. 
+
 13. Once it is created, add your privileged and associated Secret to the RPC tab as seen below. In that example we use the same one for the privileged and associated secret. 
-
-![img](images/clip_image006.jpg)
-
+    
+    ![img](images/clip_image006.jpg)
+    
 19. Run a heartbeat to confirm it works as desired.
