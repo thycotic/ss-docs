@@ -30,11 +30,11 @@ A more advanced way to have Secret Server access the SQL server would be  throug
 
 ## Configuring Database Access in Secret Server
 
-Once the account has been created and SQL server installed with the MSI. The third step of the web installer will ask for Database access  information.
+Once the account has been created and SQL server installed with the MSI. The third step of the Web installer will ask for database access  information.
 
 ### SQL Location
 
-- **Server Name or IP**: If it is a local machine  the server name will be (local) or localhost for the default instance,  or if a named instance such as SQL Express it would be `localhost\SQLExpress`. If you are unsure, copy the value from the "Server name" text box when connecting through SQL Management Studio. 
+- **Server Name or IP**: If it is a local machine  the server name will be (local) or localhost for the default instance, or if a named instance such as SQL Express it would be `localhost\SQLExpress`. If you are unsure, copy the value from the "Server name" text box when connecting through SQL Management Studio. 
 - **Database Name**: If you have created a database, enter the name. If you have given the SQL account dbCreator permission, enter a database name for Secret Server to create. 
 
 ### SQL Authentication
