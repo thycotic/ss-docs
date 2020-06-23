@@ -1,6 +1,6 @@
 [title]: # (IIS Manual Installation)
 [tags]: # (Installation, IIS)
-[priority]: #	(1000)
+[priority]: # (1000)
 
 # Manual IIS Installation
 
@@ -108,7 +108,7 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
    - .NET Framework 4.x Features \> WCF Services \> **HTTP Activation**
 
-   - .NET Framework 4.x Features \> WCF Services \> **TCP Activation** 
+   - .NET Framework 4.x Features \> WCF Services \> **TCP Activation**
 
 1. Click the **Next** button. The Web Server Role (IIS)  window appears.
 
@@ -124,7 +124,7 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
    - Web Server (IIS) \> Web Server \> Security \> **Windows Authentication**
 
-1. Click the **Next** button. The Confirmation window appears 
+1. Click the **Next** button. The Confirmation window appears
 
 1. Confirm your installation details.
 
@@ -148,7 +148,7 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
 1. Click the **Add Application Pool** link. The Add Application Pool dialog box appears.
 
-1. Type `SecretServer` in the **Name** text box. 
+1. Type `SecretServer` in the **Name** text box.
 
 1. Click to select **4.x** in the **.NET Framework Version** dropdown list.
 
@@ -157,10 +157,10 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 1. Click the **OK** button to save the new application pool. The dialog box closes.
 
 1. (optional) Customize the Windows account SS runs as:
-   
-   1. Right click the new application pool and select **Advance Settings…**
-
-   1. Click the **Identity** setting in the **Process Model** section to select the desired account. Using this, you can, for example, set SS to use IWA to connect to SQL.
+    
+    1. Right click the new application pool and select **Advance Settings…**
+    
+    1. Click the **Identity** setting in the **Process Model** section to select the desired account. Using this, you can, for example, set SS to use IWA to connect to SQL.
 
 1. Expand the **Sites** node on the **Connections** tree.
 
@@ -172,7 +172,7 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
 1. Click the **Close** button.
 
-1. In the **Connections** tree, expand the **Default Website** node. 
+1. In the **Connections** tree, expand the **Default Website** node.
 
 1. **Either**, If you see the default folder, **SecretServer**, which you created earlier:
    

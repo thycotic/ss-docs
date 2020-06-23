@@ -91,17 +91,10 @@ The “Administer Configuration SAML” role permission is required to use SAML 
 1. Type a name for your SS service provider, such as `SecretServerServiceProvider`, in the **Name** text box.
 
 1. Click the **Select Certificate** link. The Upload Certificate popup appears:
-
+   
    ![image-20200610152423326](images/image-20200610152423326.png)
-
-1.  Choose your certificate:
    
-   - **For on-premises instances:** the uploaded certificate should match the one used for Secret Server's HTTPS configuration, or you can create it as a self-signed certificate using this [PowerShell script](https://github.com/thycotic/extrabits/blob/master/Generate-Cert.ps1). 
-   - **For Secret Server Cloud users:** Generate your own certificate using this [PowerShell script](https://github.com/thycotic/extrabits/blob/master/Generate-Cert.ps1). 
-   
-   > **Note:** Run the referenced PowerShell script as an admin on a machine with .NET 4.5 or above, and replace the variables in the script as directed. Your certificate will be created in the directory from which you run the script. The subject name on the certificate is irrelevant, though for on-premises instances it typically will match the URL of the instance.
-   
-1. Click the **Upload Certificate** button.
+1. Click the **Upload Certificate** button to upload the certificate used for SS's HTTPS configuration.
 
 1. Locate your certificate `.pfx` file and select it. 
 
