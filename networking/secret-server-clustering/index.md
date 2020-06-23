@@ -176,8 +176,7 @@ SS has a built-in Web installer. That installer is a series of pages inside SS f
 #### Procedure
 
 1. Before you start:
-   - Ensure that you have account credentials information and access for the server hosting SS and the SQL Server instance hosting your SS database.
-    
+    - Ensure that you have account credentials information and access for the server hosting SS and the SQL Server instance hosting your SS database.
     - Have a recent backup of the application files and database available.
     - Stop the application pools on all of the servers except the one that you have chosen to upgrade.
     

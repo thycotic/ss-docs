@@ -6,32 +6,13 @@
 
 ## Introduction
 
->**Note:** Navigate using the dynamic table of contents on the left, the page contents on the right, or by entering a search term above.
-
-> **Note:** Many pages in this documentation have sub-pages. The container (parent) pages can have introductory text or simply a heading with no text. Please click the table of contents on the left to see any sub-pages it might have.
-
 Thycotic Secret Server (SS) is an enterprise-grade, privileged access management solution that is quickly deployable and easily managed. With SS, you can automatically discover and manage your privileged accounts through an intuitive interface, protecting against malicious activity, enterprise-wide. This section of the Thycotic Document Portal (TDP) supports SS.
 
->**Important:** The SS portion of the Thycotic Documentation Portal is in a transitional phase and does not yet contain all SS documentation. For now, there are many locations here where the SS TDP links to legacy documentation. In addition, there are still topics that are only on the [Knowledge Base Articles](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server) (use the Search text box at the top of the page).
+> **Note:** Navigate using the dynamic table of contents on the left, the page contents on the right, or by entering a search term above. Many pages in this documentation have sub-pages. The container (parent) pages can have introductory text or simply a heading with no text. Please click the table of contents on the left to see any sub-pages it might have.
 
-## Quick Links
+## Documentation
 
-> **Note:** The following links mirror and add to the legacy Secret Server main and Documentation pages:
-
-### Developer Resources
-
-[Developer Resources](./developer-resources/index.md)
-
-### Help
-
-- [Document Conventions](./help/document-conventions/index.md)
-- [Secret Server Glossary](./help/secret-server-glossary/index.md)
-- [Self-Help Resources](./help/self-help-resources/index.md)
-- [Technical Support](./help/technical-support/index.md)
-
-### Documentation
-
-#### Primary Documentation
+### Primary Documentation
 
 - [Thycotic Documentation Portal](https://docs.thycotic.com/ss/): You are at the home page of the current Thycotic Document Portal for Secret Server. It contains:
   - Converted knowledge base articles. These are marked as *deprecated* in the legacy knowledge base.
@@ -40,14 +21,16 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
   - New material
 - [Knowledge Base Articles](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server): Use the Search text box at the top of the page. This is the legacy platform that we are replacing with the Thycotic Documentation Portal (where you are right now). This portal does not yet contain all SS documentation. For now, there are many locations here where this online documentation links to legacy documentation.
 
-#### Getting Started
+>**Important:** The SS portion of the Thycotic Documentation Portal is in a transitional phase and does not yet contain all SS documentation. For now, there are many locations here where the SS TDP links to legacy documentation. In addition, there are still topics that are only on the [Knowledge Base Articles](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server) (use the Search text box at the top of the page).
+
+### Getting Started
 
 - [End User Guide](https://docs.thycotic.com/ss/10.8.0/secret-server-end-user-guide) (for non-technical users) 
 - [Getting Started Tutorial](https://docs.thycotic.com/ss/10.8.0/getting-started-tutorial) (for technical users)
 - [Installation Guides](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/installation)
 - [System Requirements](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/system-requirements) 
 
-#### Best Practices  
+### Best Practices  
 
 - [Best Practices](https://thycotic.force.com/support/s/article/Best-Practices-Secret-Server)  
 - [Discovery Best Practices](./discovery/discovery-best-practices/index.md)  
@@ -55,13 +38,20 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 - [Secret Server Government Edition—Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf)
 - [Security Hardening Guide](https://docs.thycotic.com/ss/10.8.0/security-hardening)  
 
-#### Security Whitepapers
+### Security Whitepapers
 - [Distributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf)
 - [Launcher Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_Launcher.pdf) 
 - [Meltdown and Spectre Security Information](https://updates.thycotic.net/secretserver/documents/SS_Sec_MeltdownAndSpectre.pdf) 
 - [\*nix Management](https://updates.thycotic.net/secretserver/documents/SS_Sec_nixManagement.pdf)
 - [Security Model](https://updates.thycotic.net/secretserver/documents/SS_Security_Model.pdf)
 - [Web Services Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_WebServices.pdf) 
+
+## Help
+
+- [Document Conventions](./help/document-conventions/index.md)
+- [Secret Server Glossary](./help/secret-server-glossary/index.md)
+- [Self-Help Resources](./help/self-help-resources/index.md)
+- [Technical Support](./help/technical-support/index.md)
 
 ### Download Secret Server
 
@@ -94,6 +84,10 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 
 - [Forum](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server) (legacy—replaced by Secret Society)
 - [Thycotic Secret Society](https://thycotic.com/community/secret-society/): An Educational Community, replacing the Forum.
+
+### Developer Resources
+
+[Developer Resources](./developer-resources/index.md)
 
 ### Video Tutorials
 
