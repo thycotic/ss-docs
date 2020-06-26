@@ -32,4 +32,3 @@ Use the Server Manager to install ASP.NET 4.5.
 1. Click the Next button until you arrive at the final page.
 1. Click the **Install** button.
 1. Once installed, follow the resolution instructions in [HTTP Error 404.2 - ISAPI and CGI Restrictions](http://support.thycotic.com/KB/a397/http-error-4042-isapi-and-cgi-restrictions.aspx) (KBA) to ensure ASP.NET 4.0 is allowed to execute in IIS.
-

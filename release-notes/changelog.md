@@ -97,6 +97,7 @@ Created the following topics from Salesforce articles (often including substanti
 - X.509 Certificate Security Chain Options
 
 Made significant changes to:
+
 - Document Conventions: Added Capitalization section.
 - Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.
 - Secret Server Software Development Kit for DevOps: Added introductory material from Support.

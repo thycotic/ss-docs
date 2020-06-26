@@ -7,7 +7,7 @@
 
 ## Introduction
 
-By default, the launcher is enabled by the **Enable Launcher** setting under **Admin > Configuration**.
+By default, the launcher is enabled by the **Enable Launcher** setting under **Admin > Configuration**. 
 
 The launcher (protocol handler) can be deployed in two ways—with the ClickOnce (the default) or MSI-installable applications. This can also be set in the configuration settings. The latter method allows the launcher to be used in virtualized environments or any environment in which the user does not have access to a Windows Temp directory. The Protocol Handler can be downloaded by clicking the ![1557174423911](images/1557174423911.png) button on the Dashboard and selecting **Launcher Tools**:
 

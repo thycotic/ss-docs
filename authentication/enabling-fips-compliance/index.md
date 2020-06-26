@@ -21,7 +21,7 @@ To enable FIPS compliance:
 
 1. Ensure SS is already installed.
    
-    > **Important:** Secret Server is unavailable and may give errors (such as "Parser Error Message: This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms") until all the steps are completed.
+   > **Important:** Secret Server is unavailable and may give errors (such as "Parser Error Message: This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms") until all the steps are completed.
     
     > **Important:** During SS installation, if FIPS compliance for Windows has already been enabled 'InvalidOperationException' error messages may result. To resolve the issue, please contact support for assistance.
     
