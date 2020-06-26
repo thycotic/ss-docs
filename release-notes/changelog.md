@@ -30,17 +30,24 @@ Created the following topics from Salesforce articles (often including substanti
 - Creating and Editing Reports
 - Creating and Using PowerShell Scripts
 - Custom Launcher Process Arguments
+- Custom Launchers
+- C# Example Code for SOAP
 - Dependency Token List
 - Developer Resources
 - Discovery Best Practices
 - Distributed Engines
 - DoubleLocks
 - Downloads for Secret Server Software Development Kit for DevOps
+- Duo Security Authentication
+- Enabling FIPS Compliance
+- Enabling Launchers
 - Enabling RADIUS Two-Factor Authentication
 - Enabling Secret Server Encryption
 - Event Subscription Page
 - Getting Started Tutorial
 - Giving Application Pools Event Log Access
+- HTTP Error 404.17 -  Not Found After Upgrading .NET Framework Version
+- HTTP 404.2 Error ISAPI/CGI Restrictions Stopping .NET Framework 4.5.1
 - Importing Secrets
 - Importing Secrets with XML
 - Installation
@@ -90,6 +97,7 @@ Created the following topics from Salesforce articles (often including substanti
 - X.509 Certificate Security Chain Options
 
 Made significant changes to:
+
 - Document Conventions: Added Capitalization section.
 - Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.
 - Secret Server Software Development Kit for DevOps: Added introductory material from Support.
