@@ -1,9 +1,9 @@
 
-[title]: # (HTTP 404.17 Error ISAPI/CGI Restrictions Stopping .NET Framework 4.5.1)
-[tags]: # (troubleshooting, workaround, .NET, HTTP 404,ISAPI/CGI)
+[title]: # (HTTP Error 404.17 - Not Found After Upgrading .NET Framework Version)
+[tags]: # (troubleshooting, workaround, .NET, HTTP 404)
 [priority]: # (1000)
 
-# HTTP Error 404.17 -  Not Found After Upgrading .NET Framework Version
+# HTTP Error 404.17 - Not Found After Upgrading .NET Framework Version
 
 ## Error
 
