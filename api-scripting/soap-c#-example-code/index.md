@@ -1,6 +1,6 @@
-
-
-
+[title]: # "C# Example Code for SOAP"
+[tags]: # "SOAP API,API,Scripting,c#"
+[priority]: # "1000"
 
 # C# Example Code for SOAP
 

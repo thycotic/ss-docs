@@ -1,6 +1,6 @@
 [title]: # (Enabling SQL Server Encryption)
 [tags]: # (SQL Server, Encryption, installation)
-[priority]: #	(1000)
+[priority]: # (1000)
 
 # Enabling SQL Server Encryption
 
@@ -9,7 +9,7 @@ Administrators can enable end-to-end encryption with the SQL database by using a
 1. Go to **Admin > See All**. The admin panel appears.
    
 2. Type Database in the **Search** text box and select **Database**. The Database Configuration page appears:
-
+    
    ![image-20200616151810093](images/image-20200616151810093.png)
    
 3. Click the **Edit** button.

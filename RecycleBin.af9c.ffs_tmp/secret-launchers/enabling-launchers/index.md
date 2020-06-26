@@ -31,3 +31,5 @@ The launcher (protocol handler) can be deployed in two ways—with the ClickOnce
 ## Installing by Group Policy
 
 The Protocol Handler application runs without requiring any input from the user. The installation may be pushed to your network without any special configuration. For details, see [Installing Protocol Handler through Group Policy](http://support.thycotic.com/KB/a372/installing-protocol-handler-through-group-policy-server-2008.aspx) (KBA).
+
+ 
