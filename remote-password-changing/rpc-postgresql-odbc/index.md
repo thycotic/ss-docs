@@ -22,7 +22,7 @@ ODBC connection strings vary depending on product. See [Example Connection Strin
 
 4. Under **Password Reset Commands**, type a command to reset a password (see below).
 
-> **Note**  Secret field variables can be used in a way similar to how they are used in a Linux or UNIX password changer, with the exception that they can be specified as ODBC parameters, assuming the command allows it. To parameterize a secret field variable, prefix it with the **@** symbol instead of a **$**.
+> **Note:**  Secret field variables can be used in a way similar to how they are used in a Linux or UNIX password changer, with the exception that they can be specified as ODBC parameters, assuming the command allows it. To parameterize a secret field variable, prefix it with the **@** symbol instead of a **$**.
 
 ## Example Reset Commands
 

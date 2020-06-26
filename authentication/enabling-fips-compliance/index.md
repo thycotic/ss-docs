@@ -1,6 +1,6 @@
-[title]: # "Enabling FIPS Compliance"
-[tags]: # "Encryption, FIPS compliance"
-[priority]: # "1000"
+[title]: # (Enabling FIPS Compliance)
+[tags]: # (Encryption, FIPS compliance)
+[priority]: # (1000)
 
 # Enabling FIPS Compliance
 

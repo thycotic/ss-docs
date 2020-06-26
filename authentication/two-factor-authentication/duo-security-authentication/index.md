@@ -1,5 +1,5 @@
-[title]: # "Duo Security Authentication"
-[tags]: # "Authentication, Credentials, 2FA"
+[title]: # (Duo Security Authentication)
+[tags]: # (Authentication, Credentials, 2FA)
 [priority]: #
 
 # Duo Security Authentication
