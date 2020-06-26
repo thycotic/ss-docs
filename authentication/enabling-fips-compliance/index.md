@@ -1,6 +1,7 @@
 
-
-
+[title]: # (Enabling FIPS Compliance)
+[tags]: # (authentication,FIPS)
+[priority]: # (1000)
 
 # Enabling FIPS Compliance
 
@@ -10,7 +11,7 @@ The Federal Information Processing Standard 140-1 (FIPS 140-1) and its successor
 
 > **Note:** The Microsoft .NET implementations of AES and SHA are not FIPS certified so Secret Server uses the Windows API versions for encryption functionality which *are* FIPS certified. 
 
-See  [FIPS 140-2 Validation](http://technet.microsoft.com/en-us/library/cc750357.aspx) for the FIPS certificate numbers for the Windows operating systems, including the algorithm implementations that we use. Supported operating systems include Windows Server 2008 R2 and above.
+See [FIPS 140-2 Validation](http://technet.microsoft.com/en-us/library/cc750357.aspx) for the FIPS certificate numbers for the Windows operating systems, including the algorithm implementations that we use. Supported operating systems include Windows Server 2008 R2 and above.
 
 ## Procedure
 

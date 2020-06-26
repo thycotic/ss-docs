@@ -1,6 +1,7 @@
 
-
-
+[title]: # (Enabling Launchers)
+[tags]: # (launchers, protocol handlers)
+[priority]: # (1000)
 
 # Enabling Launchers
 

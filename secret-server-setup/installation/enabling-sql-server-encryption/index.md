@@ -1,6 +1,6 @@
 [title]: # (Enabling SQL Server Encryption)
 [tags]: # (SQL Server, Encryption, installation)
-[priority]: #	(1000)
+[priority]: # (1000)
 
 # Enabling SQL Server Encryption
 

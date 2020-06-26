@@ -1,7 +1,7 @@
-
-
+[title]: # (Documentation Change Log)
+[tags]: # (Release Notes,documentation)
 [priority]: #
-
+[display]: # (search,content,print)
 
 # Documentation Change Log
 
