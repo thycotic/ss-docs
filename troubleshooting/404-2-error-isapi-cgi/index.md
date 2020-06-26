@@ -1,6 +1,6 @@
-
-
-
+[title]: # (HTTP 404.2 Error ISAPI/CGI Restrictions Stopping .NET Framework 4.5.1)
+[tags]: # (troubleshooting, workaround, .NET, HTTP 404)
+[priority]: # (1000)
 
 # HTTP 404.2 Error ISAPI/CGI Restrictions Stopping .NET Framework 4.5.1
 
