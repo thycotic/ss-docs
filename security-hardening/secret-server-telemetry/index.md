@@ -1,6 +1,6 @@
-[title]: # "Secret Server Telemetry"
-[tags]: # "Best Practice, Security Hardening, telemetry"
-[priority]: # "1000"
+[title]: # (Secret Server Telemetry)
+[tags]: # (Best Practice, Security Hardening, telemetry)
+[priority]: # (1000)
 
 # Secret Server Telemetry
 

@@ -1,6 +1,6 @@
-[title]: # "Licensing"
-[tags]: # "License"
-[priority]: # "1000"
+[title]: # (Licensing)
+[tags]: # (License)
+[priority]: # (1000)
 
 # Licensing
 

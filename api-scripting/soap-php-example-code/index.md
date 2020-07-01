@@ -1,6 +1,6 @@
-[title]: # "PHP Example Code for SOAP"
-[tags]: # "SOAP API,API,Scripting,PHP"
-[priority]: # "1000"
+[title]: # (PHP Example Code for SOAP)
+[tags]: # (SOAP API,API,Scripting,PHP)
+[priority]: # (1000)
 
 # PHP Example Code for SOAP
 

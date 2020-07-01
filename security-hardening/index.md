@@ -1,6 +1,6 @@
-[title]: # "Security and Hardening"
-[tags]: # "Best Practice, Security Hardening, encryption, efs encryption"
-[priority]: # "1000"
+[title]: # (Security and Hardening)
+[tags]: # (Best Practice, Security Hardening, encryption, efs encryption)
+[priority]: # (1000)
 
 # Security and Hardening
 

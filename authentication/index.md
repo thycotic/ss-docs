@@ -1,6 +1,6 @@
-[title]: # "Authentication"
-[tags]: # "Authentication"
-[priority]: # "1000"
+[title]: # (Authentication)
+[tags]: # (Authentication)
+[priority]: # (1000)
 
 # Secret Server Authentication, Encryption, and Security
 

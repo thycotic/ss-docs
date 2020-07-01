@@ -1,6 +1,6 @@
-[title]: # "Perl Example Code for SOAP"
-[tags]: # "SOAP API,API,Scripting,Perl"
-[priority]: # "1000"
+[title]: # (Perl Example Code for SOAP)
+[tags]: # (SOAP API,API,Scripting,Perl)
+[priority]: # (1000)
 
 # Perl Example Code for SOAP
 

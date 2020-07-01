@@ -1,6 +1,6 @@
-[title]: # "License Activation FAQ"
-[tags]: # "License, activation, faq"
-[priority]: #	"1000"
+[title]: # (License Activation FAQ)
+[tags]: # (License, activation, faq)
+[priority]: #	(1000)
 
 # License Activation FAQ
 

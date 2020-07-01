@@ -1,5 +1,5 @@
-[title]: # "TOTP"
-[tags]: # "Authentication, Credentials, 2FA"
+[title]: # (TOTP)
+[tags]: # (Authentication, Credentials, 2FA)
 [priority]: #
 
 # TOTP

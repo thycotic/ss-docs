@@ -1,5 +1,5 @@
-[title]: # "Event Subscription Page"
-[tags]: # "Event Subscription"
+[title]: # (Event Subscription Page)
+[tags]: # (Event Subscription)
 [priority]: #
 
 # Event Subscription Page

@@ -1,6 +1,6 @@
-[title]: # "Custom Launcher Errors"
-[tags]: # "error, custom launcher"
-[priority]: # "1000"
+[title]: # (Custom Launcher Errors)
+[tags]: # (error, custom launcher)
+[priority]: # (1000)
 
 # Custom Launcher Errors
 

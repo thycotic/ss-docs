@@ -1,6 +1,6 @@
-[title]: # "Using Webservices with IWA via Perl"
-[tags]: # "API,Scripting,perl,webservices,IWA,authentication"
-[priority]: # "1000"
+[title]: # (Using Webservices with IWA via Perl)
+[tags]: # (API,Scripting,perl,webservices,IWA,authentication)
+[priority]: # (1000)
 
 # Using Webservices with IWA via Perl
 
