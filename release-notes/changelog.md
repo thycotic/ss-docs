@@ -19,6 +19,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Backup Settings
 - Basic (Automatic) Installation
 - Built-in Reports
+- Changing Agent Configuration - Outdated (archived)
 - Changing IIS to Not Stop Worker Process in IIS 7.0 and Later
 - Changing SQL Server Connection Parameters
 - Configuration and Sizing
@@ -31,6 +32,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Creating and Using PowerShell Scripts
 - Custom Launcher Process Arguments
 - Custom Launchers
+- Custom Launcher Errors (Custom Process Launcher Setup Instructions and Troubleshooting)
 - C# Example Code for SOAP
 - Dependency Token List
 - Developer Resources
@@ -38,9 +40,9 @@ Created the following topics from Salesforce articles (often including substanti
 - Distributed Engines
 - DoubleLocks
 - Downloads for Secret Server Software Development Kit for DevOps
-- Duo Security Authentication
+- Duo Security Authentication (Secret Server: Configuring Duo for Two Factor)
 - Enabling FIPS Compliance
-- Enabling Launchers
+- Enabling Launchers (Custom Launcher Types)
 - Enabling RADIUS Two-Factor Authentication
 - Enabling Secret Server Encryption
 - Event Subscription Page
@@ -55,6 +57,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Installing a Self-Signed SSL Certificate
 - Installing RabbitMQ
 - Internal Site Connector
+- License Activation FAQ
 - Load User Profile Setting Must Be Enabled for Application Pool
 - Manual IIS Installation
 - Manually Backing up Secret Server
@@ -74,15 +77,20 @@ Created the following topics from Salesforce articles (often including substanti
 - Secret Server Role Permissions List
 - Secret Server Software Development Kit for DevOps
 - Secure Syslog/CEF Logging
+- Securing ASP Cookies
 - Security Hardening Guide
 - Setting Maximum Time for Offline Caching
 - Setting up Clustering
-- SOAP API PowerShell Script Examples
+- Perl Example Code for SOAP
+- PHP Example Code for SOAP
+- PostgreSQL and ODBC Remote Password Changing
+- PowerShell Example Code for SOAP
 - SQL Server 2014 Express Edition Installation
 - SQL Server 2016 Standard Edition Installation
 - SSH Terminal Administration
 - System Requirements for Secret Server
 - Thycotic One and Secret Server
+- Troubleshooting Invalid Domain Errors
 - Understanding Expiration, Auto Change and Auto Change Schedules
 - Upgrading Secret Server with Web Clustering
 - Upgrading Secret Server Without Outbound Access
@@ -90,6 +98,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Using Dynamic Parameters in Reports
 - Using Regex with Dependencies
 - Using Secret Fields in Scripts
+- Using Webservices with IWA via Perl (Using Web Services with Windows Authentication (Perl))
 - Using Webservices with IWA via PowerShell
 - VMware ESX/ESXi Account Discovery
 - Web Password Filler
