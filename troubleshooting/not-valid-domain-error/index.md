@@ -1,5 +1,5 @@
-[title]: # (Troubleshooting)
-[tags]: # (troubleshooting, workaround)
+[title]: # (Troubleshooting Invalid Domain Errors)
+[tags]: # (troubleshooting, workaround, domain errors)
 [priority]: # (1000)
 
 # Troubleshooting Invalid Domain Errors
