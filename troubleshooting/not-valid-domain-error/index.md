@@ -15,8 +15,11 @@ This topic discusses resolving the "The specified domain is not a valid domain" 
 1. Ensure that your server is connecting to the correct DNS server: 
 
    1. Open the command console as an administrator (**Start \> Run \> cmd**).
+ 
    1. Type `ipconfig /all`.
+
    1. Press **\<Enter\>**.
+
    1. Find your primary ethernet adapter and look in the **DNS Servers** section. Verify that the DNS server is correct.
 
 1. If the DNS server is incorrect, then follow these steps to configure the DNS server: 
