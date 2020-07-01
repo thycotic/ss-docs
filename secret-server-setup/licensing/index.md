@@ -1,6 +1,6 @@
-[title]: # (Licensing)
-[tags]: # (License)
-[priority]: #
+[title]: # "Licensing"
+[tags]: # "License"
+[priority]: # "1000"
 
 # Licensing
 
@@ -40,7 +40,7 @@ To activate licenses:
 6. When you have added all licenses, click **License Activation**.
 7. Enter your name, email address, and phone number, then click the **Activate** button. If your server does not have outbound network access, click **Activate Offline** instead.
 
-> **Note:**  For more information about license activation, see [License Activation](https://updates.thycotic.net/links.ashx?WhatIsActivation) (KBA).
+> **Note:**  For more information about license activation, see the [License Activation FAQ](../../secret-server-setup/licensing/licensing-faq/index.md).
 
 ## Installing New Licenses
 

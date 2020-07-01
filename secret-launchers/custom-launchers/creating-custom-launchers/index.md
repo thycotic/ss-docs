@@ -1,8 +1,10 @@
-[title]: # (Creating Custom Launchers)
-[tags]: # (Launcher)
-[priority]: # (1000)
+[title]: # "Creating Custom Launchers"
+[tags]: # "Launcher"
+[priority]: # "1000"
 
 # Creating Custom Launchers
+
+> **Note:** See [Custom Launcher Errors](../custom-launcher-errors/index.md) if errors arise. 
 
 To create a new custom launcher:
 

@@ -1,10 +1,10 @@
-[title]: # (Event Subscription Page)
-[tags]: # (Event Subscription)
+[title]: # "Event Subscription Page"
+[tags]: # "Event Subscription"
 [priority]: #
 
 # Event Subscription Page
 
-> **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
+> **Note:** Please click the table of contents on the left to see the sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
 The Event Subscription Page includes:
 

@@ -15,9 +15,11 @@ ODBC connection strings vary depending on product. See [Example Connection Strin
 1. In Secret Server, go to **Admin \> Remote Password Changing**.
 
 2. Click **Configure Password Changers**, and then scroll to the bottom of the page.
+
 2. Click the **New** button.
 
 3. Select **Generic ODBC (DataSource)** in the **Base Password Changer** dropdown list.
+
 3. Type a name for your new custom password changer.
 
 4. Under **Password Reset Commands**, type a command to reset a password (see below).
