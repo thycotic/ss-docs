@@ -1,3 +1,7 @@
+[title]: # (Securing ASP Cookies)
+[tags]: # (Best Practice, Security Hardening, asp, cookies)
+[priority]: # (1000)
+
 # Securing ASP Cookies
 
 To secure your ASP session and forms authentication cookies, perform the following steps: 
