@@ -4,6 +4,8 @@
 
 # Creating Custom Launchers
 
+> **Note:** See [Custom Launcher Errors](../custom-launcher-errors/index.md) if errors arise. 
+
 To create a new custom launcher:
 
 1. Select **Secret Templates** from the **Admin** main menu item. The Manage Secret Templates page appears:
