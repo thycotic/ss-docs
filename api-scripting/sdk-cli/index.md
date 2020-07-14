@@ -80,6 +80,7 @@ Configure SS for communication with the SDK:
    
    1.  Click to select the **Application Account** check box.
    1. Click the **Save** button. A confirmation popup appears.
+   
       ![image-20200604110759641](images/image-20200604110759641.png)
    1. Click the **OK** button. The View User page appears:
    
@@ -87,7 +88,8 @@ Configure SS for communication with the SDK:
 
 7. Create a new role:
    1. Go to **Admin > Roles**.
-   2. Click the **Create New** button. The Role Edit page appears:
+   
+   1. Click the **Create New** button. The Role Edit page appears:
    
       ![image-20200604111551561](images/image-20200604111551561.png)
    
