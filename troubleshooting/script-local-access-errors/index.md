@@ -97,37 +97,41 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 ## Option 4: Creating a Heartbeat GPO Workaround
 
-1. Make sure that **Admin \> Scripts** is functional. Once you have it working, download, unzip, and run this script [HBWorkAroundScript.zip](https://updates.thycotic.net/secretserver/documents/HBWorkAroundScript.zip).
-2. Please run the script in **Admin \> Scripts**. 
-2. Add the appropriate `args[]` as needed. Add arguments 0-4 with no quotes or commas. Spaces are required. 
+1. Make sure that **Admin \> Scripts** is functional. Once you have it working, download, unzip, and run this script [HBWorkAroundScripts.zip](https://updates.thycotic.net/secretserver/documents/HBWorkAroundScripts.zip).
 
-4. You should get a return of “True,” such as this:
+2. Go to **Admin \> Scripts**. 
+
+3. Add the HBWorkAroundScript and the HBWorkAroundPasswordChange scripts.
+
+4. Test the first script. Add the appropriate `args[]` as needed. Add arguments 0-4 with no quotes or commas. Spaces are the argument separator and are required. 
+
+5. You should get a return of “True,” such as this:
 
    ![img](images/clip_image002.jpg)
 
-4. Navigate to **Admin \> Remote Password Changing.**
+6. Navigate to **Admin \> Remote Password Changing.**
 
-4. Click the **Configure Password Changers** button. The Password Changers Configuration page appears.
+7. Click the **Configure Password Changers** button. The Password Changers Configuration page appears.
 
-6. Click the **New** button at the bottom.
+8. Click the **New** button at the bottom.
 
-7. Click the **Base Password Changer** dropdown list to select **PowerShell Script** as your password changer. 
+9. Click the **Base Password Changer** dropdown list to select **PowerShell Script** as your password changer. 
 
-7. Type a name in the **Name** text box.
+10. Type a name in the **Name** text box.
 
-7. Click the **Save** button. The password change command page appears:
+11. Click the **Save** button. The password change command page appears:
 
-   ![image-20200513140026241](images/image-20200513140026241.png)
+    ![image-20200513140026241](images/image-20200513140026241.png)
 
-7. Click the **PowerShell Script** dropdown list in the **Password Change Commands** section to select the script you ran earlier.
+12. Click the **PowerShell Script** dropdown list in the **Password Change Commands** section to select the script you ran earlier.
 
-7. Add the appropriate tokens in the **Script Args** text box. 
+13. Add the appropriate tokens in the **Script Args** text box. 
 
 > **Note:** See [Dependency Tokens](../../api-scripting/dependency-tokens/index.md) for a complete list.
 
 12. Click the **Save** button. Your configuration should look like this: 
     
-    ![img](images/clip_image004.jpg)
+    ![image-20200716114511238](images/image-20200716114511238.png)
     
 11. Go to **Admin \> Secret Templates**.
 
@@ -145,8 +149,8 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 13. Create your windows secret using the custom template. 
 
-13. Once it is created, add your privileged and associated Secret to the RPC tab as seen below. In that example we use the same one for the privileged and associated secret. 
+13. Once it is created, add your privileged and associated secret to the RPC tab as seen below. In that example we use the same one for the privileged and associated secret. 
     
-    ![img](images/clip_image006.jpg)
+    ![image-clip_image006](images/clip_image006.jpg)
     
 19. Run a heartbeat to confirm it works as desired.
