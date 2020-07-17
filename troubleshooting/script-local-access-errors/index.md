@@ -151,6 +151,6 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 13. Once it is created, add your privileged and associated secret to the RPC tab as seen below. In that example we use the same one for the privileged and associated secret. 
     
-    ![img](images/clip_image006.jpg)
+    ![image-clip_image006](images/clip_image006.jpg)
     
 19. Run a heartbeat to confirm it works as desired.
