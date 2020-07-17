@@ -7,7 +7,7 @@
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
 
-**April to June 2020**
+**April to July 2020**
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
@@ -61,6 +61,8 @@ Created the following topics from Salesforce articles (often including substanti
 - Load User Profile Setting Must Be Enabled for Application Pool
 - Manual IIS Installation
 - Manually Backing up Secret Server
+- Notice: jQuery CVE-2019-11358
+- Notice: jQuery CVE-2020-11022
 - Password Changer List
 - Ports Used by Secret Server
 - PowerShell Ticketing Integration
@@ -103,6 +105,7 @@ Created the following topics from Salesforce articles (often including substanti
 - VMware ESX/ESXi Account Discovery
 - Web Password Filler
 - Windows Local-Account Access-Denied Error Workaround PowerShell Scripts
+- Windows Local-Account Access-Denied Error Workaround PowerShell Scripts (modified again and script added)
 - X.509 Certificate Security Chain Options
 
 Made significant changes to:
