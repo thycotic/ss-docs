@@ -1,7 +1,7 @@
-[title]: # (Controlled Access Documentation)
+[title]: # (Google Cloud Platform Discovery and Service Accounts)
 [tags]: #
 [priority]: # (1000)
-[display]: # (content,print)
+[display]: # (None)
 
 # Google Cloud Platform Discovery and Service Accounts
 
@@ -25,7 +25,7 @@ To create the service account:
 
 3. Click the **+ Create Service Account** button. The "Service account details" page of the Create Service Account wizard appears:
 
-   ![image-20200717113234577](../Google Cloud Platform/images/image-20200717113234577.png)
+   ![image-20200717113234577](../google-cloud-platform/images/image-20200717113234577.png)
 
 3. Type the service account name in the **Service Account Name** text box.
 
@@ -33,7 +33,7 @@ To create the service account:
 
 3. Click the **Create** button. The "Grant this service account access to project (optional)" page appears:
 
-   ![image-20200717120752361](../Google Cloud Platform/images/image-20200717120752361.png)
+   ![image-20200717120752361](../google-cloud-platform/images/image-20200717120752361.png)
 
 3. Click the **Role** list box and select **Service Account Key Admin**.
 
@@ -43,17 +43,17 @@ To create the service account:
 
 3. Click the **Continue** button.  The "Grant users access to this service account (optional)" page appears:
 
-   ![image-20200717120102018](../Google Cloud Platform/images/image-20200717120102018.png)
+   ![image-20200717120102018](../google-cloud-platform/images/image-20200717120102018.png)
 
 3. Click the **+ Create Key** button in the **Keys** section. The "Create key (optional)" popup appears:
 
-   ![image-20200717120429653](../Google Cloud Platform/images/image-20200717120429653.png)
+   ![image-20200717120429653](../google-cloud-platform/images/image-20200717120429653.png)
 
 3. Click to select the **JSON** selection button.
 
 3. Click the **Create** button.  This creates and downloads a JSON private key file. A confirmation popup appears:
 
-   ![image-20200717121005798](../Google Cloud Platform/images/image-20200717121005798.png)
+   ![image-20200717121005798](../google-cloud-platform/images/image-20200717121005798.png)
 
 3. Click the **Close** button in the bottom right. The service account is created, and its JSON private key is on your computer.
 
@@ -91,8 +91,6 @@ To add the permission In GCP:
 1. Click the **Roles** dropdown list to select **Service Account Key Admin** (you can also type it).
 1. Click the **Add** button. The new member appears in the table on the "Permissions for project…" page.
 
-![img](images/clip_image001.png)GCP Console - IAM Manage Keys Permission
-
 ### Task 3: Creating a GCP IAM Service-Account Secret
 
 Secret Server now has a build in GCP IAM Service Account Key template. 
@@ -103,11 +101,11 @@ Create a new secret (see [Creating Secrets](../../secret-management/procedures/c
 
 1. Click the **+** on the **Secrets** item on the main menu. The "Create New Secret" page appears:
 
-   ![image-20200717135026250](../Google Cloud Platform/images/image-20200717135026250.png)
+   ![image-20200717135026250](../google-cloud-platform/images/image-20200717135026250.png)
 
 1. Select **Google IAM Service Account Key** as the template. Another "Create New Secret" page, tailored to GCP, appears:
 
-   ![image-20200717135327827](../Google Cloud Platform/images/image-20200717135327827.png)
+   ![image-20200717135327827](../google-cloud-platform/images/image-20200717135327827.png)
 
 1. Click to select a folder for the new secret.
 
@@ -129,45 +127,45 @@ RPC/Heartbeat can be tested from the Password Changers page
 
 1. In SS, go to **Admin \> Remote Password Changing**:
 
-   ![image-20200717142902654](../Google Cloud Platform/images/image-20200717142902654.png)
+   ![image-20200717142902654](../google-cloud-platform/images/image-20200717142902654.png)
 
 1. Click the Configure Password Changers button. The Password Changers Configuration page appears:
 
-   ![image-20200717143020221](../Google Cloud Platform/images/image-20200717143020221.png)
+   ![image-20200717143020221](../google-cloud-platform/images/image-20200717143020221.png)
 
 1. Click the **Google IAM Service Account Key** link. The "Google IAM Service Account Key" page appears:
 
-   ![image-20200717143143581](../Google Cloud Platform/images/image-20200717143143581.png)
+   ![image-20200717143143581](../google-cloud-platform/images/image-20200717143143581.png)
 
 1. Test the heartbeat: Click the **Test Action** button in the **Verify Password Changed Commands** section. The Test Action popup appears:
 
-   ![image-20200717145508543](../Google Cloud Platform/images/image-20200717145508543.png)
+   ![image-20200717145508543](../google-cloud-platform/images/image-20200717145508543.png)
 
 1. Ensure that the **JSONPRIVATEKEY** text box is populated. The others are optional.
 
 1. Click the **OK** button. The popup goes away. If successful, this appears on the previous page:
 
-   ![image-20200717145923848](../Google Cloud Platform/images/image-20200717145923848.png)
+   ![image-20200717145923848](../google-cloud-platform/images/image-20200717145923848.png)
 
 1. Test RPC: Click the **Test Action** button in the **Password Change Commands** section. The Test Action popup appears:
 
-   ![image-20200717150106494](../Google Cloud Platform/images/image-20200717150106494.png)
+   ![image-20200717150106494](../google-cloud-platform/images/image-20200717150106494.png)
 
 1. Ensure that the **JSONPRIVATEKEY** and **Email** text boxes are populated. The others are optional.
 
 1. Click the **OK** button. The popup goes away. If successful, this appears on the previous page:
 
-   ![image-20200717150246606](../Google Cloud Platform/images/image-20200717150246606.png)
+   ![image-20200717150246606](../google-cloud-platform/images/image-20200717150246606.png)
 
 1. Test RPC with admin credentials: Click the **Test Action** button in the **Password Change By Admin Credentials Commands** section. The Test Action popup appears:
 
-   ![image-20200717150509758](../Google Cloud Platform/images/image-20200717150509758.png)
+   ![image-20200717150509758](../google-cloud-platform/images/image-20200717150509758.png)
 
 1. Ensure that all text boxes are populated except  **JSONPRIVATEKEY**, **Admin Email**, and **Admin PRIVATEKEYID**, which are optional.
 
 1. Click the **OK** button. The popup goes away. If successful, this appears on the previous page:
 
-   ![image-20200717150920726](../Google Cloud Platform/images/image-20200717150920726.png)
+   ![image-20200717150920726](../google-cloud-platform/images/image-20200717150920726.png)
 
 ## Discovery
 
@@ -175,7 +173,7 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
 
 1. In SS, go to **Admin \> Discovery**:
 
-   ![image-20200717151856817](../Google Cloud Platform/images/image-20200717151856817.png)
+   ![image-20200717151856817](../google-cloud-platform/images/image-20200717151856817.png)
 
 1. Click the 
 
