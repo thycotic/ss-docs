@@ -225,7 +225,7 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
 
 1. Click the **Finish** button.
 
-### Viewing Discovery Scanners for the GCP Discovery Source
+## Viewing Discovery Scanners for the GCP Discovery Source
 
 To view these scanners:
 

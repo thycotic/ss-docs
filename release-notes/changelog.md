@@ -48,6 +48,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Event Subscription Page
 - Getting Started Tutorial
 - Giving Application Pools Event Log Access
+- Google Cloud Platform Discovery and Service Accounts
 - HTTP Error 404.17 -  Not Found After Upgrading .NET Framework Version
 - HTTP 404.2 Error ISAPI/CGI Restrictions Stopping .NET Framework 4.5.1
 - Importing Secrets
