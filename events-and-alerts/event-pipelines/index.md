@@ -30,31 +30,26 @@ The current secret policy filters:
 - Day of Week 
 - Event Time 
 - Event User: Group 
-
 - Event User: Has Two Factor 
 - Event User: Role 
 - Event User: Role Permission 
 - Event User: Team 
 - Event User: User Domain 
-
 - Event User: User Last Login 
 - Event User: User Setting 
 - IP Address 
 - Group 
 - Policy on a Secret 
-
 - Role 
 - Role Permission 
 - Secret Access Role Permission 
 - Secret Field 
 - Secret has Field 
-
 - Secret has RPC enabled 
 - Secret Name 
 - Secret Setting 
 - Secret Template 
 - Site 
-
 - Target User: Two Factor Type 
 - Two Factor Type
 
@@ -64,31 +59,26 @@ The current user policy filters:
 
 - Custom Variable 
 - Day of Week 
-
 - Event Time 
 - Event User: Group 
 - Event User: Has Two Factor 
 - Event User: Role 
 - Event User: Role Permission 
-
 - Event User: Team 
 - Event User: User Domain 
 - Event User: User Last Login 
 - Event User: User Setting 
 - IP Address 
-
 - Multi-Group 
 - Target User: Group 
 - Target User: Has Two Factor 
 - Target User: Multi-Group 
 - Target User: Role 
-
 - Target User: Role Permission 
 - Target User: Team 
 - Target User: Two Factor Type 
 - Target User: User Domain 
 - Target User: User Setting 
-
 - Two Factor Type
 
 Some filters prompt you for additional information when you select them.
@@ -298,13 +288,10 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 
 - $TargetUser.DisplayName
 - $TargetUser.IsApplicationAccount
-
 - $TargetUser.IsSystemUser
-
 - $TargetUser.UserEmail
 - $TargetUser.UserEnabled
 - $TargetUser.UserName
-
 - $TargetUserDomain
 - $TargetUserId
 - $TargetUserKnownAs
@@ -370,25 +357,21 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 
 - Added to Group 
 - Challenge Applied 
-
 - Challenge Cleared 
 - Disable 
 - Enable 
 - Lockout 
 - Login 
-
 - Login Failure 
 - Logout 
 - Owners Modified 
 - Remove Personally Identifiable Information 
 - Removed From Group 
-
 - Two Factor Changed 
 - Two Factor Reset Failure 
 - Two Factor Reset Success 
 - User: Create 
 - User: Edit 
-
 - User: Password Change 
 
 ## Permissions
@@ -445,22 +428,19 @@ To create a new EP:
    - Whereas triggers focused on secrets, filters can access secret and user information.
    - Because the same filter can differ by its settings, you can add the same filter multiple times to an EP.
    - Filters are logically ANDed together—all filters apply at once and all matter.
+   
 1. Click the **Next** button. The Choose Tasks page of the wizard appears.
 
 ##### Step Four: Choose Tasks
 
 1. Use the exact same method to add tasks to the EP. Many tasks present a popup page for you to provide additional information when you click on them.  
-
 1. Set the task order. Tasks run in order of their appearance in the **Task** tab of the **Event Pipeline** page. To change the task running order, hover the mouse pointer over the one you want to move, and use the anchor on the left of its card to drag the task to the order you wish it to run. If a Task fails, then the following tasks will not run.
 
    > **Warning:** Tasks are very powerful and thus can be dangerous. You can alter SS in dramatic, sometimes irreversible ways. We strongly recommend testing EPs in a safe sandbox environment before applying them to production SS servers.
 
 1. Click the **Next** button. The Name Pipeline page of the wizard appears.
-
 1. Type the EP's name in the **Pipeline** text box.
-
 1. Type a description of the EP in the **Pipeline Description** text box.
-
 1. Click the **Save** button.
 
 #### Editing Existing Event Pipelines
@@ -582,13 +562,8 @@ Fortunately, SS detects these loops and automatically deactivates the involved E
 There are a few new Advanced Setting that can be used with EP polices. 
 
 - **Event Pipeline Activity Log entries removed after (days)**: The EP activity log entries stay in the log for this many days. Default value: 90. 
-
 - **Event Pipelines: Allow Confidential Secret Fields to be used in Scripts**: Allows confidential secret fields to be used in EP script, such as $password. Default value: False. 
-
 - **Event Pipelines Infinite Loop Time (Minutes)**: If an EP executes the number of times specified in the infinite loop  threshold during the Infinite Loop Time period, it is marked as an infinite loop. Default Value: 5 (on premises), 20 (cloud). 
-
 - **Event Pipelines Infinite Loop Threshold:** Number of times that an EP can execute within the infinite loop time on an individual item before it is considered to be an infinite loop. Default Value: 5. 
-
 - **Event Pipelines Log Skipped Policies**: If true, the the pipeline activity log will log filtered policies runs. Default value: False. 
-
 - **Event Pipelines Maximum Script Run Time (Minutes)**: Scripts ran by EP tasks are stopped after this many minutes. Default Value: 5 minutes. 
