@@ -115,3 +115,7 @@ Made significant changes to:
 - Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.
 - Secret Server Software Development Kit for DevOps: Added introductory material from Support.
 - Release Notes: Added material for 10.8.00004.
+
+Added topics for 10.9 features:
+
+- Synching with the OpenLDAP Directory Service
