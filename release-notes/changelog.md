@@ -7,7 +7,7 @@
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
 
-**April to July 2020**
+## April to July 2020
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
@@ -116,6 +116,13 @@ Made significant changes to:
 - Secret Server Software Development Kit for DevOps: Added introductory material from Support.
 - Release Notes: Added material for 10.8.00004.
 
+## 10.9 Release
+
 Added topics for 10.9 features:
 
+- Event Pipelines (updated)
+- Google Cloud Platform Discovery and Service Accounts
+- Integrate Secret Server with Azure Active Directory
+- Limiting Launcher Domains
+- Release Notes
 - Synching with the OpenLDAP Directory Service

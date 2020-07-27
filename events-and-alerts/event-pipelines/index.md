@@ -10,6 +10,8 @@
 
 ## Definitions
 
+Custom Task Variables
+
 ### Event Pipelines
 
 An EP is a single named group of triggers, filters, and tasks. The same EP can be in multiple EP policies. Changing an EP affects all EP policies that EP is a part of. EPs do nothing if not assigned to an EP policy.
@@ -205,6 +207,10 @@ The user tasks are:
 - Target User: Send Email to Target User
 - Target User: Unlock User
 
+### Event Users
+
+An event user is the user making the action. For example: Admin updated user Jane’s email. Admin is the event user.
+
 ### Event Variables
 
 Event variables are used in EP filters or tasks. They are:
@@ -298,9 +304,29 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 - $TargetUserLastLogin
 - $TargetUserName
 
-##### Custom Task Variables
+#### Custom Task Variables
 
-These are variables that are created with the Event Pipeline Task. These can be referenced in the same way in this format:  $CustomVariableName.
+These are variables created with the EP task. There are two types, global and item, both of which are referenced in the same way.
+
+> **Note:** You must set a custom variable before using it. Thus, you cannot set a variable and use it in the same pipeline. The way around this is to create two pipelines in a policy—the first pipeline sets the variable and the second one uses it. 
+
+#####  Global Variable
+
+- $GlobalVariable.CustomVariableName
+- This custom task variable is global, so there should only be one per variable name.
+
+##### Item Variable
+
+- $ItemVariable.CustomVariableName
+- This variable is per SecretId (secret pipeline) or UserId (user pipeline).
+
+Add note:
+
+
+
+### Target User
+
+A target user is the affected user. Example: Admin updated user Jane’s email. Jane is the target user. 
 
 ### Triggers
 
@@ -345,7 +371,7 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 - Password Change Failed
 - Password Change Maximum Attempts Reached
 - Password Displayed
-- Pre-CheckOut
+- Pre-Check Out
 - Secret Policy Change
 - Session Recording View
 - Undelete

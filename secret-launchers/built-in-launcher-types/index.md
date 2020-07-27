@@ -4,7 +4,7 @@
 
 # Built-In Launcher Types
 
-SS launchers, also called protocol handlers, come in three primary types:
+SS launchers, supported by protocol handlers, come in three primary types:
 
 - **Remote Desktop:** Launches a Windows Remote Desktop session and automatically authenticates the user to the machine.
 
