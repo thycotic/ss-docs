@@ -59,7 +59,7 @@ Session Connector is downloaded separately from SS. Go to [Session Connector Dow
 
    ![image-20200727152030364](images/image-20200727152030364.png)
 
-1. Click to select the Remote Desktop Services check box.
+1. Click to select the **Remote Desktop Services** check box.
 
 1. Click the **Next \>** button. The Select role services page appears:
 
@@ -83,7 +83,7 @@ Session Connector is downloaded separately from SS. Go to [Session Connector Dow
 4. Create a Secret for the **RDS Credentials** mentioned above. If the credential is a local account, use a Windows Local Account secret, and if it is a domain user, use an Active Directory secret.
 5. Create application users in SS, one for each of the RDS server machines. See **Creating RDS Application Accounts** for details.
 6. Share the secret created for the RDS credential mentioned above with the RDS application accounts that will be used by the RDS server(s). See **Application Account RDS Credential Sharing**.
-7. Create Session Connector custom launchers. For example, if you wanted to run an RDPsession on the RDS server, you should configure a custom Session Connector launcher that uses the built-in RDP launcher as its child launcher. See **Configure Session Connector Custom Launchers**.
+7. Create Session Connector custom launchers. For example, if you wanted to run an RDP session on the RDS server, you should configure a custom Session Connector launcher that uses the built-in RDP launcher as its child launcher. See **Configure Session Connector Custom Launchers**.
 8. Assign your Session Connector custom launchers to the secret templates you want to launch from. See **Assign Session Connector Custom Launchers to Secret Templates**.
 9. Configuration and setup is finished for SS, but there are still some things you need to do inside of the RDS servers before setup is complete.
 
@@ -188,160 +188,172 @@ You must create a custom launcher for each combination of and RDS server cluster
 
 ### Step 1: Install the Secret Server RDS Protocol Handler
 
-·     Install the **Secret Server** **RDS Protocol Handler** RDS server(s) - **SSProtocolHandlerRDS.msi**
+1. Go to the [Session Connector Download](../session-connector-download/index.md) page.
+1. Download the `SSProtocolHandlerRDS.msi` protocol handler for RDS installer file.
+1. (Optional) Ensure the listed hash value matches that for the file.
 
-o  Download URL: [**https://updates.thycotic.net/links.ashx?SessionConnector**](https://updates.thycotic.net/links.ashx?SessionConnector) - 
+> **Note:** This special version of protocol handler can record keystrokes on its own, if configured in SS. Due to this optional keystroke recording, you may need to whitelist the protocol handler file in any antivirus software running on the server. This is not currently necessary with Windows Defender.
 
-o  This special version of Protocol Handler can record keystrokes on its own, if configured in Secret Server.
-
-o  Due to the optional keystroke recording (only done if configured in Secret Server), it may need to be whitelisted in any AV software running on the server.
-
-§ Not currently necessary with Windows Defender.
-
-o  **It does not auto-update itself**, unlike the regular version of Protocol Handler, since this could cause problems with multiple users running it at once on a single RDS server. Older versions will continue to work with new Secret Server releases until updated, but a manual update will be required on the RDS server(s) to take advantage of any new Protocol Handler features in future releases.
+> **Note:** This protocol handler does not auto-update itself, unlike the regular version of protocol handler, because this could cause problems with multiple users running it at once on a single RDS server. Older protocol handler versions will continue to work with new SS releases until updated, but a manual update will be required on the RDS server(s) to take advantage of any future protocol handler features.
 
 ### Step 2: Add the Remote Desktop Collection and Application
 
-·     Add the Remote Desktop Collection and Application:
+1. While logged in as a domain user, go to Server Manager:
 
-o  While logged in as a domain user, go to Server Manager, click Remote Desktop Services on the left side.
- ![img](images/clip_image028.png)
+   ![image-20200728140610532](images/image-20200728140610532.png)
 
-§ If logged in as a local user, you will see this error and be unable to configure RDS. Must be logged in as a domain user.
- ![img](images/clip_image030.png)
+1. Click the **Remote Desktop Services** menu item on the left. The Overview page appears:
 
-o  Add a RDS Collection for **Session Connector**.
- ![img](images/clip_image032.png)
+   ![image-20200728142024786](images/image-20200728142024786.png)
 
-§ **Collection Name:** Session Connector
+   > **Note:** If you logged on as a local user, you will see this error and be unable to configure RDS. You must be logged on as a domain user. 
+   >
+   > ![image-20200728135910159](images/image-20200728135910159.png)
 
-§ **RD Session Host:** add the local server from the left side (Server Pool) to the right side (Selected)
+1. Click the Collections menu item. The Collections page appears:
 
-§ **User Groups:** leave the default of Domain Users
+   ![image-20200728141229177](images/image-20200728141229177.png)
 
-·     This is not actually used by Session Connector (it creates temporary local users), but RDS requires something to be selected.
+1. Click the **Tasks** dropdown list and select **Create Session Collection**. The **Create Collection** wizard appears on the Before You Begin page:
 
-§ **User Profile Disks:** unchecking this is fine, this is not used by Session Connector.
+   ![image-20200728142308479](images/image-20200728142308479.png)
 
-§ **Confirmation:** click Create.
+1. Click the **Next \>** button to arrive at the Collection Name page:
 
-o  Edit the Collection to configure advanced settings.
+   ![image-20200728142709737](images/image-20200728142709737.png)
 
-§ Click on the Collection on the left side.
- ![img](images/clip_image034.png)
+1. Type `Session Connector` in the **Name** text box. 
 
-§ In the Properties section, click **Tasks** / **Edit Properties**.
- ![img](images/clip_image036.png)
+1. Click the **Next \>** button. The Specify RD Session Host Servers page appears:
 
-§ Click on the **Security** tab, **uncheck** “Allow connections only from computers running Remote Desktop with Network Level Authentication”. 
+   ![image-20200728143337887](images/image-20200728143337887.png)
 
-·     Necessary because Session Connector uses temporary one-time use local users which do not exist until a connection is authenticated with Secret Server, making them incompatible with NLA.
- ![img](images/clip_image038.png)
+1. Add the local server from the left side (**Server Pool**) to the right side (**Selected**).
 
+1. Click the **Next \>** button. The User Groups page appears:
 
-§ **Optional:** If you would like to restrict what can be mapped at the server level (drives/clipboard/etc), you can do so on the **Client Settings** tab. (This is also configurable in Secret Server on each Secret)
+   ![image-20200728143639198](images/image-20200728143639198.png)
+   
+1. Select **Domain Users** in the **User Groups** list. This is not actually used by Session Connector (it creates temporary local users), but RDS requires that something is selected.
 
-§ Click **OK** to save.
+1. Click the **Next \>** button. The User Profiles page appears.
 
-o  Add the RemoteApp for RDS Protocol Handler.
+   ![image-20200728145317460](images/image-20200728145317460.png)
+   
+1. Click to select the **Enable user profile disks** check box. Session Connector does not use user profile disks. We select the check box to enable the Create button.
 
-§ Click on the Collection on the left side.
- ![img](images/clip_image039.png)
+1. Click the **Create** button. The collection is created, and the wizard disappears. The Session Connector is now listed under Collections: 
 
-§ In the RemoteApp Programs section, click on **Tasks**, then **Publish RemoteApp Programs**.
- ![img](images/clip_image041.png)
+   ![image-20200728145852513](images/image-20200728145852513.png)
+   
+1. Click the **Tasks** dropdown list in the **Properties** section and select **Edit Properties**. The Properties  popup appears.
 
-§ Click the “**Add…**” button, and browse to C:\Program Files\Thycotic Software Ltd\Secret Server Protocol Handler
+1. In the left menu, click **Security**:
 
-§ Select RDPWin.exe and click “**Open**”
+   ![image-20200728160603928](images/image-20200728160603928.png)
+   
+1. Click to deselect the **Allow connections only from computers…** check box. This necessary because Session Connector uses temporary one-time use local users that do not exist until a connection is authenticated with SS, making them incompatible with network-level authentication.
 
-§ RDPWin will now be selected in the list. Click “**Next**”.
- ![img](images/clip_image043.png)
+1. (Optional) If you want to restrict what can be mapped at the server level, such as drives, you can do so on the **Client Settings** tab. This is also configurable in SS on each secret.
 
-§ Click “**Publish**” to save, then click **Close**.
+1. Click the **OK** button. The popup disappears.
 
-§ Right click on the RDPWin RemoteApp and click “**Edit Properties**”.
- ![img](images/clip_image045.png)
+1. Click the collection name in the menu on the left.
 
-§ On the **Parameters** tab, select “Allow any command-line parameters”, then click **OK**.
- ![img](images/clip_image047.png)
+1. In the **RemoteApp Programs** section, click the **Tasks** dropdown and select **Publish RemoteApp Programs**.
 
-o  Configure RDS related Group Policy Settings
+1. Click the **Add…** button to add the RemoteApp for RDS protocol handler. A dialog box appears.
 
-§ To configure on a single server, run the Group Policy Editor (gpedit.msc)
+1. Navigate to `C:\Program Files\Thycotic Software Ltd\Secret Server Protocol Handler`.
 
-§ Go to Computer Configuration / Administrative Templates / Windows Components / Remote Desktop Services / Remote Desktop Session Host / Session Time Limits
+1. Select `RDPWin.exe`.
 
-§ Edit “Set time limit for logoff of RemoteApp sessions”
+1. Click the **Open** button. The dialog closes, and RDPWin is now selected in the list:
 
-·     Set to Enabled, with RemoteApp session logoff delay of “Immediately”
- ![img](images/clip_image049.jpg)
+    ![image-20200728161655567](images/image-20200728161655567.png)
 
-### Task 3: Install the Secret Server Session Connector
+1. Click the **Next \>** button. The Confirmation page appears.
 
-·     Install the **Secret Server Session Connector** on the RDS server(s) - **SSSessionConnector.msi**
+1. Click the **Publish** button to save.
 
-o  Download URL: [**https://updates.thycotic.net/links.ashx?SessionConnector**](https://updates.thycotic.net/links.ashx?SessionConnector)
+1. Click the **Close** button.
 
-o  Setup will require you to enter the Secret Server URL, and Application Account Username/Password configured above.
- ![img](images/clip_image051.png)
+1. On the RemoteApp Programs page, right click **RDPWin RemoteApp** and select **Edit Properties**. A property page appears.
 
-o  The Secret Server URL must start with https:// for security reasons, or the installer will not proceed.
+1. Click the Parameters menu item on the left:
 
-o  When finished, this will prompt you to reboot the server, which really is necessary to restart all of the various Remote Desktop / Terminal Service services.
+    ![image-20200728163023910](images/image-20200728163023910.png)
 
-o  After the server reboots, it will be Session Connector listening on the Remote Desktop port (i.e. TCP 3389), and you can now use Session Connector Custom Launchers pointed at it.
+1. Click to select the **Allow any command-line parameters** selection button.
 
-### Task 4: Updating API Credentials
+1. Click the OK button.
 
-·     The credentials for the Secret Server Application Account are saved encrypted in the registry    
+### Step 3: Configure RDS-related Group Policy Settings
 
-o  Restricted to the NETWORK SERVICE account (which Remote Desktop runs under) using DPAPI-NG
+To configure on a single server:
 
-·     If the Application Account credentials change in the future, follow these steps to update them
+1. Run the Group Policy Editor (gpedit.msc).
 
-o  Run Regedit.exe
+1. Go to **Computer Configuration \> Administrative Templates \>  Windows Components \>  Remote Desktop Services \> Remote Desktop Session Host \>  Session Time Limits**.
 
-o  Navigate to HKLM\SOFTWARE\Thycotic\SessionConnector
+1. Click **Set time limit for logoff of RemoteApp sessions** to edit it. Its properties appear:
 
-o  Edit “CredentialsEncrypted”, set it to 0
+   ![image-20200728163655226](images/image-20200728163655226.png)
 
-o  Edit “SecretServerUsername”, set it to the plain text new username
+1. Click the selection buttons to select **Enabled**.
 
-o  Edit “SecretServerPassword”, set it to the plain text new password
+1. Click the **RemoteApp session logoff delay** dropdown list and select **Immediately**.
 
-·     These credentials will then be encrypted upon their first use, either the next time someone launches a Session Connector session that hits this server, or if you reboot the entire server. If you refresh in Regedit once this happens, CredentialsEncrypted will be set back to “1” and an encrypted version of the username and password will be visible.
+1. Click the **OK** button to save. 
 
-Launching
+### Task 4: Install the Secret Server Session Connector
 
-·     Now that it has been configured and installed, you should be able to launch Session Connector sessions.
+1. Go to the [Session Connector Download](../session-connector-download/index.md) page.
+1. Download the `SSSessionConnector.msi` SS session connector installer file.
+1. (Optional) Ensure the listed hash value matches that for the file.
+1. Run the file.
+1. When prompted, type the SS URL and application account username and password you previously configured. The SS URL must start with `https://` for security reasons, or the installer will not proceed.
+1. When the installation is finished, you are prompted to reboot the server. This is to restart all of the remote desktop and terminal service services.
+1. Once the server reboots, it will be a Session Connector listening on the RDP port (TCP 3389). You can now use the Session Connector custom launchers connected to it.
 
-·     Once configured, the Session Connector Custom Launchers will appear just like any other launcher on the associated Secret template types.
+### Task 5: Updating API Credentials
 
-·     When clicked, a Remote Desktop shortcut (.RDP) file will be downloaded.
+The credentials for the SA application account are saved encrypted in the registry. The credentials are restricted to the NETWORK SERVICE account, which Remote Desktop runs under using DPAPI-NG.
 
-·     This .RDP file can then be opened by standard Remote Desktop clients like mstsc.exe in Windows or RoyalTS in OSX.
+If those application account credentials change in the future, follow these steps to update them:
 
-·     When launched, the end-user will connect to the RDS host configured on the Session Connector Custom Launcher.
+1. Run the Windows Registry Editor, `Regedit.exe`.
 
-·     The RDS host will then launch RDS Protocol Handler and connect to the actual destination machine.
+1. Navigate to `HKLM\SOFTWARE\Thycotic\SessionConnector`.
 
-# Troubleshooting
+1. Set **CredentialsEncrypted** to 0.
 
-·     When launching a downloaded .RDP file, if Session Connector rejects the session due to any issues (including being expired based on the “Session Connector Session Timeout” setting), the user’s Remote Desktop client will receive a generic error about the RemoteApp being invalid
+1. Set **SecretServerUsername** to the plain text new username.
 
-·     In the SS.log file, you can search for “SessionConnector” to find more details about why sessions may have been rejected
+1. Set **SecretServerPassword** to the plain text new password.
 
-·     Session Connector will also log to the file “C:\Program Files\Thycotic Software Ltd\Secret Server Session Connector\log\SS-SC.log” on each individual RDS server. 
+These credentials are encrypted upon their first use, either the next time someone launches a Session Connector session that hits this server, or if you reboot the entire server. Once this happens, returning to the Registry Editor, CredentialsEncrypted will be set back to “1,” and an encrypted version of the username and password will be visible.
 
-o  i.e. If the RDS server has trouble using the supplied **RDS Credential** to create a local user, it will be logged to this file
+### Task 6: Launching Session Connector Sessions
 
-# Uninstalling
+Now that it has been configured and installed, you should be able to launch Session Connector sessions.
 
-·     Secret Server Session Connector can be removed from “Add/Remove Programs” or “Apps & Features”
+Once configured, the Session Connector custom launchers appear just like any other launcher on the associated secret template types. When clicked, a Remote Desktop shortcut (.RDP) file is downloaded. This .RDP file can then be opened by standard Remote Desktop clients, such as mstsc.exe in Windows or RoyalTS in OSX.
 
-·     Once uninstalled, a reboot will be required to restore the default Remote Desktop behavior
+When launched, the end-user will connect to the RDS host configured on the Session Connector custom launcher. The RDS host then launches the RDS protocol handler and connects to the actual destination machine.
 
-·     Any related Session Connector Custom Launchers will need to be un-associated with any Secret Templates they were previously tied to. 
+# Troubleshooting Session Connector
 
-o  It is not currently possible to delete a Custom Launcher in Secret Server, but if unassociated with all Secret Templates, it will not appear on any actual Secrets.
+When launching a downloaded .RDP file, if Session Connector rejects the session due to any issues (including being expired based on the “Session Connector Session Timeout” setting), the user’s Remote Desktop client will receive a generic error about the RemoteApp being invalid.
+
+In the `SS.log` file, you can search for “SessionConnector” to find details about why sessions may have been rejected.
+
+Session Connector will also log to the file `C:\Program Files\Thycotic Software Ltd\Secret Server Session Connector\log\SS-SC.log` on each RDS server. That is, If the RDS server has trouble using the supplied RDS credential to create a local user, it is logged to this file
+
+# Uninstalling Session Connector
+
+Secret Server Session Connector can be removed from “Add/Remove Programs” or “Apps & Features.” Once uninstalled, a reboot is required to restore the default Remote Desktop behavior.
+
+Any related Session Connector custom launchers need to be un-associated with any secret templates they were previously tied to. 
+
+> **Note:** It is not currently possible to delete a custom launcher in SS, but if it is unassociated with all secret templates, it will not appear on any secrets.
