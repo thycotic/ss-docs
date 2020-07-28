@@ -1,7 +1,11 @@
 [title]: # (Google Cloud Platform Discovery and Service Accounts)
-[tags]: #
+[tags]: #	(GCP, discovery, service account, google cloud platform)
 [priority]: # (1000)
-[display]: # (None)
+<<<<<<< HEAD
+[display]: #
+=======
+[display]: # (none)
+>>>>>>> 07322cc25c4654d1326e4e3d2f2f711b8ba90db7
 
 # Google Cloud Platform Discovery and Service Accounts
 
@@ -167,7 +171,7 @@ RPC/Heartbeat can be tested from the Password Changers page
 
    ![image-20200717150920726](../google-cloud-platform/images/image-20200717150920726.png)
 
-## Discovery
+### Task 5: Creating a GCP Discovery Source
 
 Secret Server now has a built-in GCP discovery source wizard that creates the scanners to pull the projects, zones, service accounts. To create a GCP discovery source:
 
@@ -175,196 +179,271 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
 
    ![image-20200717151856817](../google-cloud-platform/images/image-20200717151856817.png)
 
-1. Click the 
+1. Click the **Create Discovery Source** dropdown list and select **GCP (Google Platform)**. The GCP Discovery Source wizard Overview page appears:
 
-1. Go to Admin menu, then select Discovery
+   ![image-20200720095244264](images/image-20200720095244264.png)
 
-\2.   Click Edit Discovery Sources
+1. Click the **Next** button. The Discovery Source Name page appears:
 
-\3.   Click Create New
+   ![image-20200720095501925](images/image-20200720095501925.png)
 
-\4.   Select GCP Discovery Source
+1. Type the name of the GCP discovery source in the **Discovery Source Name** text box.
 
-\5.   Click OK
+1. Click the **Next** button. The Site page appears:
 
-\6.   Then follow the Wizard steps
+   ![image-20200720095901078](images/image-20200720095901078.png)
 
-![img](images/clip_image001.png)Secret Server - GCP Discovery Wizard 
+1. Click the **Add Site** list box to select the site.
 
-![img](images/clip_image035.png)![img](images/clip_image037.png)![img](images/clip_image039.png)![img](images/clip_image041.png)![img](images/clip_image043.png)![img](images/clip_image045.png)
+1. Click the **Next** button. GCP Service Account Scanner page appears:
 
-### Scanners
+   ![image-20200720100219781](images/image-20200720100219781.png)
 
-Currently there are 4 Discovery Scanners for the GCP Discovery Source. (In the future, we may add an Instance Local Account and a Service Account Dependency Scanner.)
+1. Click the **Next** button.
 
-**GCP Project Scanner** - This is a Host Range Scanner type that will scan GCP and pull all of the Projects that the provided GCP Service Account secret has access to.
+   ![image-20200720100723071](images/image-20200720100723071.png)
 
-**GCP Windows Instance Scanner** - This is a Machine Scanner type that will scan each Project and pull all of the GCP Windows OS VM Instances.
+1. Click to select the **Scan GCP Instances** check box.
 
-**GCP (Non-Windows) Instance Scanner** - This is a Machine Scanner type that will scan each Project and pull all of the GCP Non-Windows OS VM Instances.
+1. Click the check boxes for the scanners you desire. Currently, there are four discovery scanners for the GCP discovery source.
 
-**GCP Service Account Scanner** - This is an Account Scanner type that will scan each Project and pull all of the GCP Service Accounts.
+   > **Note:** In the future, we may add an Instance Local Account and a Service Account Dependency scanner.
 
-To view these scanner
+   - **GCP Project Scanner**: This is a host range scanner that scans the GCP and pulls all of the projects that the provided GCP service account secret has access to.
 
-\1.   Go to Admin menu, then select Discovery
+   - **GCP Windows Instance Scanner**: This is a machine scanner that scans each project and pulls all of the GCP Windows OS VM instances.
 
-\2.   Click on Edit Discovery Sources
+   - **GCP (Non-Windows) Instance Scanner**: This is a machine scanner that scans each project and pulls all of the GCP Non-Windows OS VM instances.
 
-\3.   Select the GCP Discovery Source
+   - **GCP Service Account Scanner**: This is an account scanner that scans each project and pull all of the GCP Service accounts.
 
-![img](images/clip_image001.png)Secret Server - GCP Discovery Source Scanners
+1. Click the **Next** button. The Credential Secrets page appears:
 
-![img](images/clip_image046.png)
+   ![image-20200720101134864](images/image-20200720101134864.png)
+
+1. Click the **Add Secret** link. The Select a Secret popup appears:
+
+   ![image-20200720105542718](images/image-20200720105542718.png)
+
+1. Navigate the folder tree and select the secret you created earlier. As soon as you select the check box, the popup disappears and the secret appears under the Add Secret link.
+
+1. Click the **Finish** button.
+
+<<<<<<< HEAD
+### Viewing Discovery Scanners for the GCP Discovery Source
+=======
+## Viewing Discovery Scanners for the GCP Discovery Source
+>>>>>>> 07322cc25c4654d1326e4e3d2f2f711b8ba90db7
+
+To view these scanners:
+
+1. In SS, go to **Admin \> Discovery**:
+1. Go to **Admin \> Discovery**.
+1. Click the discovery source name link in the table. The Discovery Source page for it appears.
+1. Click the **Scanner Settings** button in the top right of the page. The Discovery Source Scanner Settings page appears, which lists the scanners.
 
 ## Instance Custom Filter
 
-This option is only available for the Instance Scanners. The Custom Filter Setting can be used to include or exclude instances by using a filter expression to filter by name, label, or any other field allowed by GCP. 
+This option is only available for the instance scanners. The Custom Filter Setting can be used to include or exclude instances using a filter expression on the name, label, or any other field allowed by GCP. The filter must:
 
-·     Value must be a string, number, or boolean
+- Be a string, number, or Boolean value
 
-·     Comparison operator must be =, !=, >, or <
+- Use these comparison operators: =, \!=, \>, or \<
 
-·     Use parentheses ( ) around each filter
+- Use parentheses ( ) around each filter
 
-·     Combine different filters using AND or OR (all caps) Ex: (name="instanceName") AND (labels.key="value")
+- Combine different filters using AND or OR (all caps). For example: `(name="instanceName") AND (labels.key="value")`
 
-![img](images/clip_image001.png)Secret Server - GCP Discovery Instance Custom Filter
-
-![img](images/clip_image048.png)
-
-More information on how to [filter for specific Instances](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters).
+> **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
 
 Other useful filters:
 
-·     status=”StatusValue”
+Status:
 
-o  StatusValues
+`status=”StatusValue”`
 
-§ Running
+`StatusValue` can be `Running` or `Terminated`
 
-§ Terminated
+Zone:
 
-·     zone="https://www.googleapis.com/compute/v1/projects/{ProjectName}/zones/{ZoneName}"
+`zone=https://www.googleapis.com/compute/v1/projects/{ProjectName}/zones/{ZoneName}`
 
-Unfortunately at this time Google has an open issue the tag filter not working: https://issuetracker.google.com/issues/143463446
+> **Note:** Unfortunately, at this time of this topic, Google has an [open issue](https://issuetracker.google.com/issues/143463446) of the tag filter not working.
 
-## Service Account Import
+## Importing Service Accounts
 
 From the Discovery Network View, Secret Server can import Service Account keys and automatically take over the account. This import process will create a new Secret for the Service Account key, delete the associated key, create a new key, and save the json private key file with the Secret, so this can be easily managed by Secret Server.
 
 To Import a Service Account
 
-\1.   Go to Admin menu, then select Discovery
+1. Go to **Admin \> Discovery**.
 
-\2.   Click on Discovery Network View
+1. Click the **Discovery Network View** button. The Discovery Network View page appears.
 
-\3.   Select the Domain\Cloud Account tab
+1. Select the **Domain\Cloud Account** tab
 
-\4.   Select the Service Account(s) to import
+1. Click to select the Service Account(s) to import in the unlabeled Domain/Cloud tree on the left.
 
-\5.   Click Import
+1. Click the **Import** button. The importation wizard begins:
+   
+   ![image-20200721095039584](images/image-20200721095039584.png)
+   
+1. For secrets:
+   
+   1. Click the **Secret Type** dropdown list and select **Google IAM Service Account Key**.
+   1. Click the link after **Folder** to select a folder.
+   1. Type a name in the **Secret Name** text box (It auto fills `$EMAIL`).
+   1. Click the Site dropdown list to select a site.
+   
+1. Click the **Next** button. The Key page appears:
+   
+   ![image-20200721095441085](images/image-20200721095441085.png)
+   
+1. When importing GCP service account keys, the only option is take over the account. Meaning, SS triggers a remote password change on import to rotate the imported key and obtain a new JSON private key file. With the JSON private key file, SS can then manage the GCP service account.
 
-\6.   Secret:
+1. Click the **Next** button. The Import Key page appears:
+   
+   ![image-20200721095632101](images/image-20200721095632101.png)
+   
+1. Click the link to select a secret to use for the initial take over of the account.
 
-\1.   Select a Secret Type: Google IAM Service Account Key
+1. Click the **Next** button. The Key Rotation page appears:
+   
+    ![image-20200721095952069](images/image-20200721095952069.png)
+   
+1. For key rotation, click one of two selection button options to choose a secret for future key rotations. Either option would need the permissions mentioned above. When the password for the chosen secret are changed in the future, SS will use one of these two options:
+   
+   - **Use Secret Credentials**: Use the imported service account to rotate itself, and it has permissions to rotate keys.
+   - **Use Privileged Account**: Use another service account that has permissions to rotate keys
+   
+1. Click the **Finish** button. 
 
-\2.   Select a Folder
+## Errors and Solutions
 
-\3.   Enter a Secret Name (It auto fills $EMAIL)
+### Create Keys Failed: Access Denied
 
-\4.   Select a Site
+#### Error
 
-\7.   Key:
+`Create Keys Failed: AccessDenied, Google.Apis.Requests.RequestError Permission iam.serviceAccountKeys.create is required to perform this operation on service account projects/-/serviceAccounts/discovery-me@gcpprojectname.iam.gserviceaccount.com. [403] Errors [ Message[Permission iam.serviceAccountKeys.create is required to perform this operation on service account projects/-/serviceAccounts/discovery-me@gcpprojectname.iam.gserviceaccount.com.] Location[ - ] Reason[forbidden] Domain[global] ]`
 
-\1.   When importing GCP Service Account keys, the only option is take over the account. Meaning, Secret Server will trigger a Remote Password Change on import, to rotate the imported key, and obtain a new json private key file. With the json private key file, Secret Server can then manage the GCP Service Account.
+#### Likely Cause
 
-\8.   Import Key:
+The service account used to rotate the key does not have necessary permission to perform this task.
 
-\1.   Select a Secret to use for the initial take over of the account.
+#### Solution
 
-\9.   Key Rotation: 
+1. Go to the GCP console.
+1. Select **IAM \> Permissions**.
+1. Select the service account.
+1. Add the **Service Account Key Admin** permission. 
+1. Once the service account has permission:
+   1. In SS, select the secret to rotate.
+   1. Stop the current rotation.
+   1. Try the operation again.
 
-\1.   Secret to use for future key rotations, either option would need the permissions mentioned above.
+### Create Keys Failed: Maximum Number of Keys on Account Reached
 
-\2.   Select Use Secret Credential
+#### Error
 
-\1.   If you wish it to use the imported Service Account to rotate itself, and it has permissions to rotate keys.
+`Create Keys Failed: ArgumentError, Google.Apis.Requests.RequestError  Maximum number of keys on account reached. [429] Errors [  Message[Maximum number of keys on account reached.] Location[ - ]  Reason[rateLimitExceeded] Domain[global] ]`
 
-\3.   Select Use Privileged Account
+#### Likely Cause
 
-\1.   If you wish to use another Service Account that has permissions to rotate keys.
+The rotated service account has reached the maximum number of keys allowed. GCP maximum is 10 keys.
 
-![img](images/clip_image001.png)Secret Server - GCP Discovery Service Account Import
+#### Solution
 
-![img](images/clip_image050.png)![img](images/clip_image052.png)![img](images/clip_image054.png)![img](images/clip_image056.png)
+1. Go to the GCP console.
+1. Select **IAM \> Permissions**.
+1. Remove the unused keys. 
+1. Once the service account has less than 10 keys, in SS:
+   1. In SS, select the secret to rotate.
+   1. Stop the current rotation.
+   1. Try the operation again.
 
-## Errors/Resolutions
+### Discovery Consumer: Syncing OUs Failed
 
-**Error**
+#### Error
 
-**Resolution**
+`DiscoveryConsumer: Synchronizing Organizational Units failed for [Our Google Cloud]! Error: An issue was encountered during the scan. Google.Apis.Requests.RequestError Access Not Configured. Compute Engine API has not been used in project 123456 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=123456 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [403] Errors [ Message[Access Not Configured. Compute Engine API has not been used in project 123456 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=123456 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.] Location[ - ] Reason[accessNotConfigured] Domain[usageLimits] ] , -2146233088`
 
-**GCP Console**
+#### Likely Cause
 
-Create Keys Failed: AccessDenied, Google.Apis.Requests.RequestError Permission iam.serviceAccountKeys.create is required to perform this operation on service account projects/-/serviceAccounts/discovery-me@gcpprojectname.iam.gserviceaccount.com. [403] Errors [ Message[Permission iam.serviceAccountKeys.create is required to perform this operation on service account projects/-/serviceAccounts/discovery-me@gcpprojectname.iam.gserviceaccount.com.] Location[ - ] Reason[forbidden] Domain[global] ]
+The discovery service account used for has access to a GCP project that has not been set up or is disabled.
 
-The Service Account being used to rotate the key does not have necessary permission to perform this task.
+#### Solution
 
-Go to GCP console, select IAM, select the Service Account and add the **Service Account Key Admin** permission. Once the Service Account has permission, in Secret Server, select the Secret to rotate, stop the current rotation, and then try it again.
+1. Go to GCP console.
+1. Go to  **Compute Engine \> VM Instances**.
+1. Set up the compute engine
 
-![img](images/clip_image001.png)GCP IAM permission 
+> **Note:** This requires billing information.
 
-![img](images/clip_image058.png)
+### Discovery Consumer: Syncing Machines Failed
 
-Create Keys Failed: ArgumentError, Google.Apis.Requests.RequestError Maximum number of keys on account reached. [429] Errors [ Message[Maximum number of keys on account reached.] Location[ - ] Reason[rateLimitExceeded] Domain[global] ]
+#### Error
 
-The Service Account being rotated, has reach the maximum number of keys allowed. GCP max is 10 keys.
+`DiscoveryConsumer: Synchronizing Machines failed for [GCP Discovery Source]! Error: An issue was encountered during the scan. Google.Apis.Requests.RequestError Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression. [400] Errors [ Message[Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression.] Location[ - ] Reason[invalid] Domain[global] ] , -2146233088 Exception Caught: Google.Apis.Requests.RequestError Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression. [400] Errors [ Message[Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression.] Location[ - ] Reason[invalid] Domain[global] ] Attempting GCP scan for Instances Parameters are valid. Checking for permissions to list Projects.. Has permissions to list Projects.. Starting scan..`
 
-Go to GCP console, select IAM, select the Service Account and remove the unused keys. Once the Service Account has less than 10 keys, in Secret Server, select the Secret to rotate, stop the current rotation, and then try it again.
+#### Likely Cause
 
-![img](images/clip_image001.png)GCP Max Keys 
+The instance scanner custom filter is not valid.
 
-![img](images/clip_image060.png)![img](images/clip_image062.png)
+#### Solution
 
-DiscoveryConsumer: Synchronizing Organizational Units failed for [Our Google Cloud]! Error: An issue was encountered during the scan. Google.Apis.Requests.RequestError Access Not Configured. Compute Engine API has not been used in project 123456 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=123456 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry. [403] Errors [ Message[Access Not Configured. Compute Engine API has not been used in project 123456 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=123456 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.] Location[ - ] Reason[accessNotConfigured] Domain[usageLimits] ] , -2146233088
+1. In SS, go to the GCP discovery source. 
+1. Edit the instance scanner.
+1. Update the "custom filter" setting.
 
-The Service Account used for Discovery has access to a GCP Project that has not been set up or it is disabled.
+> **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
 
-Go to GCP console and set up Compute Engine, this will require billing information.
+### Discovery Consumer: Machine Scan Completed but Computers Failed Authentication
 
-![img](images/clip_image001.png)GCP Compute Engine set up 
+#### Error
 
-![img](images/clip_image064.png)
+`DiscoveryConsumer: Synchronizing Machines failed for [GCP Discovery Source]! Error: An issue was encountered during the scan. Google.Apis.Requests.RequestError Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression. [400] Errors [ Message[Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression.] Location[ - ] Reason[invalid] Domain[global] ] , -2146233088 Exception Caught: Google.Apis.Requests.RequestError Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression. [400] Errors [ Message[Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression.] Location[ - ] Reason[invalid] Domain[global] ] Attempting GCP scan for Instances Parameters are valid. Checking for permissions to list Projects.. Has permissions to list Projects.. Starting scan..`
 
-DiscoveryConsumer: Synchronizing Machines failed for [GCP Discovery Source]! Error: An issue was encountered during the scan. Google.Apis.Requests.RequestError Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression. [400] Errors [ Message[Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression.] Location[ - ] Reason[invalid] Domain[global] ] , -2146233088 Exception Caught: Google.Apis.Requests.RequestError Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression. [400] Errors [ Message[Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression.] Location[ - ] Reason[invalid] Domain[global] ] Attempting GCP scan for Instances Parameters are valid. Checking for permissions to list Projects.. Has permissions to list Projects.. Starting scan..
+#### Likely Cause
 
-OR
+The instance scanner custom filter is not valid.
 
-DiscoveryConsumer: Machine Scan completed but the following computers failed authentication: An issue was encountered during the scan. Google.Apis.Requests.RequestError Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression. [400] Errors [ Message[Invalid value for field 'filter': 'filtername="value"'. Invalid list filter expression.] Location[ - ] Reason[invalid] Domain[global] ] , -2146233088. DiscoverySource: GCP Discovery Source ScanItemTemplateId: 12 HostRangeName: GCP Discovery Source SpecificOu: GCP Discovery Source ComputerItems: 0
+#### Solution
 
-The Instance Scanner Custom Filter is not valid.
+1. In SS, go to the GCP discovery source. 
+1. Edit the instance scanner.
+1. Update the "custom filter" setting.
 
-In Secret Server, go to the GCP Discovery Source. Edit the Instance Scanner and update the Custom Filter setting.
+> **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
 
-More information on [how to filter instances](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) on GCP website.
+### Invalid Grant: Account Not Found
 
- 
+####  Error
 
-An issue was encountered during the scan. Error:"invalid_grant", Description:"Invalid grant: account not found", Uri:"", -2146233088
+`An issue was encountered during the scan. Error:"invalid_grant", Description:"Invalid grant: account not found", Uri:"", -2146233088`
 
-The Service Account does not exist in GCP. There may be a typo or it was deleted in GCP.
+#### Likely Cause
 
-Go to GCP console and create a Service Account to use. See **GCP Service Accounts** section above.
+The service account does not exist in GCP. There may be a typo or it was deleted.
 
- 
+#### Solution
 
-An issue was encountered during the scan. Google.Apis.Requests.RequestError The caller does not have permission [403] Errors [Message[The caller does not have permission] Location[ - ] Reason[forbidden] Domain[global]], -2146233088
+1. Go to GCP console.
+1. Create a service account to use. See [Task 1: Creating GCP Service Accounts](#Task-1:-Creating-GCP-Service-Accounts).
 
-The Service Account does not have permissions in IAM.
+### Request Error: Caller Does Not Have Permission
 
-Go to GCP console, select IAM, add Service Account with permissions. See **GCP Permissions** section above.
+#### Error
 
- 
+`An issue was encountered during the scan. Google.Apis.Requests.RequestError The caller does not have permission [403] Errors [Message[The caller does not have permission] Location[ - ] Reason[forbidden] Domain[global]], -2146233088`
+
+#### Likely Cause
+
+The service account does not have permissions in IAM.
+
+#### Solution
+
+1. Go to GCP console.
+1. Select IAM.
+1. Click the **Service Account** menu item to create a service account with the desire permissions. See [Task 1: Creating GCP Service Accounts](#Task-1:-Creating-GCP-Service-Accounts) and [Task 2: Setting GCP Permissions](#Task-2:-Setting-GCP Permissions).
 
  

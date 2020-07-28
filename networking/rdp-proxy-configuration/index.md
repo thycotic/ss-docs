@@ -87,10 +87,17 @@ The RDP proxy configuration settings for the recommended method:
 ![image-20200326111039717](images/image-20200326111039717.png)
 
 2. Enable the **Enable SSH Tunneling** option.
-
 3. Click the **Endpoints** tab to ensure that your server nodes, sites, and engines are properly configured. 
-
 4. Proxied RDP secrets now launch into the SSH proxy using local port forwarding.
 
+## Known Issues
 
- 
+### "Could not load file or assembly..." Error
+
+Error appears in SS.log or DE.log. Install the most recent version of the .NET Framework to correct it.
+
+### RDP Proxy Does Not Work with FIPS Validation
+
+RDP proxy does not work on machines the have the FIPS validation security policy active. No fix is currently available.
+
+
