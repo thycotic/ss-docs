@@ -7,7 +7,7 @@
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
 
-**April to July 2020**
+## April to July 2020
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
@@ -48,6 +48,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Event Subscription Page
 - Getting Started Tutorial
 - Giving Application Pools Event Log Access
+- Google Cloud Platform Discovery and Service Accounts
 - HTTP Error 404.17 -  Not Found After Upgrading .NET Framework Version
 - HTTP 404.2 Error ISAPI/CGI Restrictions Stopping .NET Framework 4.5.1
 - Importing Secrets
@@ -114,3 +115,16 @@ Made significant changes to:
 - Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.
 - Secret Server Software Development Kit for DevOps: Added introductory material from Support.
 - Release Notes: Added material for 10.8.00004.
+
+## 10.9 Release
+
+Added topics for 10.9 features:
+
+- Event Pipelines (updated)
+- Google Cloud Platform Discovery and Service Accounts
+- Integrate Secret Server with Azure Active Directory
+- Limiting Launcher Domains
+- Release Notes
+- Secret Server Session Connector
+- Synching with DevOps Secret Vault
+- Synching with the OpenLDAP Directory Service
