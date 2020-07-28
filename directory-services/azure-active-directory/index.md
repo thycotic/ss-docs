@@ -2,7 +2,7 @@
 [tags]: # (Azure, directory service, active directory)
 [priority]: # (1000)
 
-
+[display]: # (none)
 
 Integrate Secret Server with Azure Active Directory
 ====================

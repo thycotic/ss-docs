@@ -125,4 +125,6 @@ Added topics for 10.9 features:
 - Integrate Secret Server with Azure Active Directory
 - Limiting Launcher Domains
 - Release Notes
+- Secret Server Session Connector
+- Synching with DevOps Secret Vault
 - Synching with the OpenLDAP Directory Service
