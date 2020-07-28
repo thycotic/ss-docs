@@ -1,5 +1,5 @@
 [title]: # (Controlled Access Documentation)
-[tags]: # ()
+[tags]: #
 [priority]: # (1000)
 [display]: # (print)
 
