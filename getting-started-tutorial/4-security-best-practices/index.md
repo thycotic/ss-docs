@@ -8,7 +8,7 @@ As you start using SS, we strongly recommend configuring the following security 
 
 ## Local Admin Account Best Practices
 
-Even if you plan to [integrate with Active Directory](../../active-directory/index.md) to log into Secret Server, chances are you will need to use this account again. This is the first account you created during the installation process. Keep this account secure and avoid being locked out of SS by following these suggestions:
+Even if you plan to [integrate with Active Directory](../../directory-services/active-directory/index.md) to log into Secret Server, chances are you will need to use this account again. This is the first account you created during the installation process. Keep this account secure and avoid being locked out of SS by following these suggestions:
 
 - Store the credentials in a secure location that you can access if you lose all access to SS.
 
