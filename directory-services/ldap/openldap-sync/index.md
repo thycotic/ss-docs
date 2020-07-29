@@ -1,7 +1,7 @@
 [title]: # (Synching with OpenLDAP Directory Service)
 [tags]: # (LDAP, directory service)
 [priority]: # (1000)
-[display]: # (none)
+[display]: # (all)
 
 # Synching with OpenLDAP Directory Service
 

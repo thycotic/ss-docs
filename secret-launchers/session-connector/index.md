@@ -1,7 +1,7 @@
 [title]: # (Secret Server Session Connector)
 [tags]: # (Launcher, protocol handler, session connector, RDS)
 [priority]: # (1000)
-[display]: # (none)
+[display]: # (all)
 
 # Secret Server Session Connector
 
