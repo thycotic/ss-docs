@@ -24,7 +24,9 @@ The SSSC feature is largely scalable and can be set up using a single RDS server
 | RDS        | *Remote Desktop Services*. Remote control services (using RDP) provided by a dedicated server or servers. |
 | SSPH       | *Secret Server Protocol Handler*. SSPH is an application on an end-user's machine. It enables communication between SS and that client machine. It also provides the files needed by secret launchers. |
 | SSPH (RDP) | *Secret Server Protocol Handler, RDP Version*. A special SSPH that adds RDP functionality, specifically, keystroke detection. |
+
 []()
+
 ## Connection Sequences
 
 **Figure: Session Connector Connection Sequences for an RDS Server.**
