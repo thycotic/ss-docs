@@ -126,5 +126,5 @@ Added topics for 10.9 features:
 - Limiting Launcher Domains
 - Release Notes
 - Secret Server Session Connector
-- Synching with DevOps Secret Vault
-- Synching with the OpenLDAP Directory Service
+- Syncing with DevOps Secret Vault
+- Syncing with the OpenLDAP Directory Service
