@@ -31,7 +31,7 @@ Go to **Admin \> DevOps Secrets Vault Tenants** to specify the DSV tenant for in
 
 ![](images/c2db746f4751b30f7bf46b3d63e5eb3b.png)
 
-Using the DSV Client Template, you provide the client ID, secret, the tenant URL, and the client’s role (the role field might be removed).
+Using the DSV client template, you provide the client ID, secret, the tenant URL, and the client’s role (the role field might be removed).
 
 ### Creating a DevOps Secret Vault Tenant
 

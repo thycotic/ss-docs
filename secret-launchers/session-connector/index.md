@@ -24,7 +24,7 @@ The SSSC feature is largely scalable and can be set up using a single RDS server
 | RDS        | *Remote Desktop Services*. Remote control services (using RDP) provided by a dedicated server or servers. |
 | SSPH       | *Secret Server Protocol Handler*. SSPH is an application on an end-user's machine. It enables communication between SS and that client machine. It also provides the files needed by secret launchers. |
 | SSPH (RDP) | *Secret Server Protocol Handler, RDP Version*. A special SSPH that adds RDP functionality, specifically, keystroke detection. |
-
+[]()
 ## Connection Sequences
 
 **Figure: Session Connector Connection Sequences for an RDS Server.**
@@ -252,12 +252,10 @@ You must create a custom launcher for each combination of and RDS server cluster
 1. (Optional) If you want to restrict what can be mapped at the server level, such as drives, you can do so on the **Client Settings** tab. This is also configurable in SS on each secret.
 1. Click the **OK** button. The popup disappears.
 1. Click the collection name in the menu on the left.
-
 1. In the **RemoteApp Programs** section, click the **Tasks** dropdown and select **Publish RemoteApp Programs**.
 1. Click the **Add…** button to add the RemoteApp for RDS protocol handler. A dialog box appears.
 1. Navigate to `C:\Program Files\Thycotic Software Ltd\Secret Server Protocol Handler`.
 1. Select `RDPWin.exe`.
-
 1. Click the **Open** button. The dialog closes, and RDPWin (SSSH (RDP)) is now selected in the list:
 
     ![image-20200728161655567](images/image-20200728161655567.png)
@@ -266,7 +264,6 @@ You must create a custom launcher for each combination of and RDS server cluster
 1. Click the **Publish** button to save.
 1. Click the **Close** button.
 1. On the RemoteApp Programs page, right click **RDPWin RemoteApp** and select **Edit Properties**. A property page appears.
-
 1. Click the Parameters menu item on the left:
 
     ![image-20200728163023910](images/image-20200728163023910.png)
@@ -308,7 +305,6 @@ If those application account credentials change in the future, follow these step
 1. Navigate to `HKLM\SOFTWARE\Thycotic\SessionConnector`.
 1. Set **CredentialsEncrypted** to 0.
 1. Set **SecretServerUsername** to the plain text new username.
-
 1. Set **SecretServerPassword** to the plain text new password.
 
 These credentials are encrypted upon their first use, either the next time someone launches a SSSC session that hits this server, or if you reboot the entire server. Once this happens, returning to the Registry Editor, CredentialsEncrypted will be set back to “1,” and an encrypted version of the username and password will be visible.
