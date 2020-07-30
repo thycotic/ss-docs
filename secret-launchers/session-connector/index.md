@@ -13,17 +13,18 @@ With Secret Server Session Connector (SSSC) installed on a Remote Desktop Servic
 
 The SSSC feature is largely scalable and can be set up using a single RDS server, a load-balanced cluster of RDS servers, or multiple load-balanced clusters of RDS servers. Before you set up the SSSC feature, there are some baseline requirements for those RDS servers and on your domain.
 
-> **Note:** SSSC (RDP) is sometimes referred to as RDPWin in this topic. RDPWin is the internal development name for SSSC (RDP).
+> **Note:** SSPH (RDS) is sometimes referred to as RDPWin in this topic. RDPWin is the main executable that SSPH runs to launch and record sessions.
 
 **Table:** Terms and Definitions
 
 | Term       | Definition                                                   |
 | ---------- | ------------------------------------------------------------ |
 | RDP        | *Remote Desktop Protocol*. A Microsoft protocol for remote control of computers. |
-| RDPWin     | The internal development name for SSSC (RDP).                |
+| RDPWin     | The primary executable for SSPH.                             |
 | RDS        | *Remote Desktop Services*. Remote control services (using RDP) provided by a dedicated server or servers. |
 | SSPH       | *Secret Server Protocol Handler*. SSPH is an application on an end-user's machine. It enables communication between SS and that client machine. It also provides the files needed by secret launchers. |
-| SSPH (RDP) | *Secret Server Protocol Handler, RDP Version*. A special SSPH that adds RDP functionality, specifically, keystroke detection. |
+| SSPH (RDS) | *Secret Server Protocol Handler, RDS Version*. A special SSPH for use with SSSC that enables optional keystroke recording. |
+| SSSC       | *Secret Server Session Connector*. SSSC is the subject of this topic. |
 
 []()
 
@@ -51,7 +52,7 @@ Session Connector is downloaded separately from SS. Go to [Session Connector Dow
   - More info: [The latest supported Visual C++ downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
 
 - Each RDS server needs to have a credential available to manage temporary users.  This credential should be able to create and delete local users and add users to the Remote Desktop Users group. If you plan to use one or more load-balanced clusters of RDS servers, this credential should be a domain user and will be used for all servers inside of a cluster. We recommend one domain user per cluster. This credential will be referred to as the **RDS Credential**
-- Each RDS server needs to have RDS installed. See the next section.
+- Each RDS server needs to have the RDS Session Host Windows feature installed. See the next section.
 
 ## Task 2: RDS Services Setup
 
@@ -192,12 +193,12 @@ You must create a custom launcher for each combination of and RDS server cluster
 ### Step 1: Install the Secret Server RDS Protocol Handler
 
 1. Go to the [Session Connector Download](../session-connector-download/index.md) page.
-1. Download the SSPH (RDP) installer file,  `SSProtocolHandlerRDS.msi` .
+1. Download the SSPH (RDS) installer file,  `SSProtocolHandlerRDS.msi` .
 1. (Optional) Ensure the listed hash value matches that for the file.
 
-> **Note:** SSPH (RDP) is a special version of SSPH that can record keystrokes on its own, if configured in SS. Due to this optional keystroke recording, you may need to whitelist the SSPH (RDP) file in any antivirus software running on the server. This is not currently necessary with Windows Defender.
+> **Note:** SSPH (RDS) is a special version of SSPH that can record keystrokes on its own, if configured in SS. Due to this optional keystroke recording, you may need to whitelist the `RDPWin.exe` file (the primary executable for SSPH) in any antivirus software running on the server. This is not currently necessary with Windows Defender.
 
-> **Note:** SSPH (RDP) does not auto-update itself, unlike SSPH, because this could cause problems with multiple users running it at once on a single RDS server. Older SSPH (RDP) versions will continue to work with new SS releases until updated, but a manual update is required on the RDS server(s) to take advantage of any future SSPH (RDP) features.
+> **Note:** SSPH (RDS) does not auto-update itself, unlike SSPH, because this could cause problems with multiple users running it at once on a single RDS server. Older SSPH (RDS) versions will continue to work with new SS releases until updated, but a manual update is required on the RDS server(s) to take advantage of any future SSPH (RDS) features.
 
 ### Step 2: Add the Remote Desktop Collection and Application
 
