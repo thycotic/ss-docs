@@ -16,7 +16,7 @@
 
 1. Click the **Scanner Settings** button in the top right of the page. The Discovery Source Scanner Settings page appears, which lists the scanners.
 
-   ![image-20200730121724048](images/image-20200730121724048.png)
+   ![image-20200730132312502](images/image-20200730132312502.png)
 
 1. Click pencil edit icon for the machine listing. The settings for that scanner appears:
 
