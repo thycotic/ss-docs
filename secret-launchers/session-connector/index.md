@@ -154,7 +154,7 @@ Enable SSSC:
 1. Click the **Close** button.
 1. On the RemoteApp Programs page, right click **RDPWin RemoteApp** and select **Edit Properties**. A property page appears.
 1. Click the Parameters menu item on the left:
-    ![image-20200728163023910](images/image-20200728163023910.png)
+   ![image-20200728163023910](images/image-20200728163023910.png)
 1. Click to select the **Allow any command-line parameters** selection button.
 1. Click the **OK** button.
 
