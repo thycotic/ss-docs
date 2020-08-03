@@ -42,7 +42,9 @@ The SSSC feature is largely scalable and can be set up using a single RDS server
 
 Session Connector is downloaded separately from SS. Go to [Session Connector Download](../session-connector-download/index.md)  for download links and hashes.
 
-## Task 1: Review the RDS Server Prerequisites
+## Configuration
+
+### Task 1: Reviewing RDS Server Prerequisites
 
 - Each RDS server should be a 64-bit installation of Windows Server 2012, 2016 or 2019.
 - You **MUST** have access to the console session (non-RDP) to install the SSSC integration. This is in case of any of any errors during installation, which may disable RDP access to the server.
@@ -54,9 +56,9 @@ Session Connector is downloaded separately from SS. Go to [Session Connector Dow
 - Each RDS server needs to have a credential available to manage temporary users.  This credential should be able to create and delete local users and add users to the Remote Desktop Users group. If you plan to use one or more load-balanced clusters of RDS servers, this credential should be a domain user and will be used for all servers inside of a cluster. We recommend one domain user per cluster. This credential will be referred to as the **RDS Credential**
 - Each RDS server needs to have the RDS Session Host Windows feature installed. See the next section.
 
-## Task 2: RDS Services Setup
+### Task 2: Setting up RDS Services
 
-### Step 1: Install Remote Desktop Services—Remote Desktop Session Host
+#### Step 2.1: Installing Remote Desktop Services—Remote Desktop Session Host
 
 > **Note:** SSSC cannot function without this feature and will refuse to install if it is not present. **RDS requires additional remote desktop licensing from Microsoft.** This may also require installing the remote desktop licensing feature if you do not already have a licensing server available in your environment. See [Activate the Remote Desktop Services license server](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-activate-license-server) for details.
 
@@ -80,7 +82,7 @@ Session Connector is downloaded separately from SS. Go to [Session Connector Dow
 1. Click the **Add Features** button. A "Confirm installation selections" page appears.
 1. Click the **Install** button.
 
-### Step 2: Setup in Secret Server
+#### Step 2.2: Setting up RDS in Secret Server
 
 1. Enable the **Session Connector** advanced configuration setting. For more instructions on this please follow the steps under **Configuring Session Connector Settings** below.
 2. Go to **Admin \> Configuration \> General** tab.
@@ -92,7 +94,7 @@ Session Connector is downloaded separately from SS. Go to [Session Connector Dow
 8. Assign your SSSC custom launchers to the secret templates you want to launch from. See **Assign Session Connector Custom Launchers to Secret Templates**.
 9. Configuration and setup is finished for SS, but there are still some things you need to do inside of the RDS servers before setup is complete.
 
-### Step 3: Configuring Session Connector Settings
+#### Step 2.3: Configuring Session Connector Settings
 
 Enable SSSC:
 
@@ -106,91 +108,9 @@ Enable SSSC:
 1. (Optional) Set **Session Connector Allow Connection Sharing** to **True**. This changes the value of "disableconnectionsharing" in the output SSSC RDP files. If true, this speeds up concurrent launches into the same RDS server quite a bit by re-using the existing Windows sessions, at the risk of sometimes causing errors if launching a new session while an old session is in the middle of closing. The default is false.
 1. Click the **Save** button.
 
-### Subprocedures for Task 1
+### Task 3: Setting up RDS
 
-#### Creating RDS Application Accounts
-
-1. Go to **Admin \> Users**.
-1. Click the **Create New** button. The Edit User page appears:
-
-   ![image-20200728092445272](images/image-20200728092445272.png)
-
-3. Type in or set the account details. 
-3. Ensure that the **Enabled** check box is selected.
-5. Click the **Advanced** link. Additional parameters appear:
-
-   ![image-20200729130716718](images/image-20200729130716718.png)
-
-   > **Note:** Leave the Two Factor and Managed By controls set to their defaults, \<None\> and User Administrators. Because this account is for SSSC and not a human being, 2FA is not appropriate.
-
-3. Click to select the **Application Account** check box. As an application account, the user can only log on through the application account API and does not require a separate user license.
-
-   > **Note:** We recommend application account users because only API access is required by SSSC, and they do not consume regular user licenses.  You may want to name the users to make it obvious which server they belong to. We recommend one user per RDS server for auditing purposes and to avoid one server with invalid credentials locking out the user, impacting all the other servers. See [REST Web Services API Reference and Download](../../api-scripting/rest-api-reference-download/index.md) for more about the API.
-
-7. Click the **Save** button.
-8. Repeat this process for each RDS server if you are clustering more than one.
-
-#### Enabling Application Account RDS Credential Sharing
-
-Each RDS application account must have view access to the RDS Credential that the RDS server(s) use to manage the temporary Windows local accounts:
-
-1. Go to the RDS credential secret you created earlier.
-1. Click the **Sharing** tab:
-
-   ![image-20200728094013055](images/image-20200728094013055.png)
-
-1. Grant view access to the applicable application account users. That is usually one SS user account per RDS server. If you are using a cluster, this secret would be an Active Directory secret for a domain credential that all the RDS servers can use, and you would share it with each of the RDS application accounts for each RDS Server in the cluster using in their SSSC configuration.
-
-#### Configuring Session Connector Custom Launchers
-
-You must create a custom launcher for each combination of and RDS server cluster and custom launcher type:
-
-1. Go to **Admin \>  Secret Templates**.
-1. Click the **Configure Launchers** button. The Launcher Types page appears.
-1. Click the **New** button. The Launcher page appears:
-
-   ![image-20200728102413609](images/image-20200728102413609.png)
-
-1. Type or set the parameters as follows:
-
-   - **Launcher Type:** Session Connector Launcher. This launcher type will not be visible until the Configuration Advanced Setting is enabled.
-   - **Active:** Ensure this is selected.
-   - **Record Keystrokes:** Check to record keystrokes in addition to video on related secrets with session monitoring enabled.
-   - **Child Launcher Type:** Click to select the launcher type, such as Remote Desktop or PuTTY. This is the real launcher type that runs on the RDS server to connect to the secret. 
-   - **RDS Server Hostname:** IP or hostname for the RDS server or cluster.
-   - **RDS Server Port:** Type the port. The default RDP port is TCP 3389.
-   - **RDS Server Credentials:** Click the **RDS Credentials** link to pick the Secret configured above for credentials that can create and delete local users. If RDS Server Hostname points to a cluster, all servers must be able to use these credentials.
-
-1. Click the **Save** button.
-
-####  Assigning Session Connector Custom Launchers to Secret Templates
-
-1. Go to **Admin \>  Secret Templates**. The Manage Secret Templates page appears:
-
-   ![image-20200728105659401](images/image-20200728105659401.png)
-
-1. Click the unlabeled dropdown to select a secret template that you want to allow SSSC to launch from.
-1. Click the **Edit** button to view that secret template. The Secret Template Designer page appears:
-
-   ![image-20200728110315833](images/image-20200728110315833.png)
-
-1. Click the **Configure Launchers** button at the bottom of the page to open the launcher mappings. The Secret Template Edit Launcher Configuration page appears:
-
-   ![image-20200728110600115](images/image-20200728110600115.png)
-
-1. Click the **Add New Launcher** button. A page of the same name appears:
-
-   ![image-20200728110805173](images/image-20200728110805173.png)
-
-1. Click to select the desired parameters for the launcher:
-
-   ![image-20200728111015293](images/image-20200728111015293.png)
-
-1. All secrets using this template are now ready to run SSSC launches.
-
-# Task 2: RDS Setup
-
-### Step 1: Install the Secret Server RDS Protocol Handler
+#### Step 3.1: Installing the Secret Server RDS Protocol Handler
 
 1. Go to the [Session Connector Download](../session-connector-download/index.md) page.
 1. Download the SSPH (RDS) installer file,  `SSProtocolHandlerRDS.msi` .
@@ -200,7 +120,7 @@ You must create a custom launcher for each combination of and RDS server cluster
 
 > **Note:** SSPH (RDS) does not auto-update itself, unlike SSPH, because this could cause problems with multiple users running it at once on a single RDS server. Older SSPH (RDS) versions will continue to work with new SS releases until updated, but a manual update is required on the RDS server(s) to take advantage of any future SSPH (RDS) features.
 
-### Step 2: Add the Remote Desktop Collection and Application
+#### Step 3.2: Adding the Remote Desktop Collection and Application
 
 1. While logged in as a domain user, go to Server Manager:
 
@@ -274,7 +194,7 @@ You must create a custom launcher for each combination of and RDS server cluster
 1. Click to select the **Allow any command-line parameters** selection button.
 1. Click the **OK** button.
 
-### Step 3: Configure RDS-related Group Policy Settings
+#### Step 3.3: Configuring RDS-related Group Policy Settings
 
 To configure on a single server:
 
@@ -288,7 +208,7 @@ To configure on a single server:
 1. Click the **RemoteApp session logoff delay** dropdown list and select **Immediately**.
 1. Click the **OK** button to save. 
 
-### Task 4: Install the Secret Server Session Connector
+### Task 4: Installing the Secret Server Session Connector
 
 1. Go to the [Session Connector Download](../session-connector-download/index.md) page.
 1. Download the `SSSessionConnector.msi`  SSSC installer file.
@@ -319,6 +239,96 @@ Now that it has been configured and installed, you should be able to launch SSSC
 Once configured, the SSSC custom launchers appear just like any other launcher on the associated secret template types. When clicked, a Remote Desktop shortcut (.RDP) file is downloaded. This .RDP file can then be opened by standard Remote Desktop clients, such as mstsc.exe in Windows or RoyalTS in OSX.
 
 When launched, the end-user will connect to the RDS host configured on the SSSC custom launcher. The RDS host then launches the RDS protocol handler and connects to the actual destination machine.
+
+## Subprocedures
+
+### Creating RDS Application Accounts
+
+1. Go to **Admin \> Users**.
+
+1. Click the **Create New** button. The Edit User page appears:
+
+   ![image-20200728092445272](images/image-20200728092445272.png)
+
+1. Type in or set the account details. 
+
+1. Ensure that the **Enabled** check box is selected.
+
+1. Click the **Advanced** link. Additional parameters appear:
+
+   ![image-20200729130716718](images/image-20200729130716718.png)
+
+   > **Note:** Leave the Two Factor and Managed By controls set to their defaults, \<None\> and User Administrators. Because this account is for SSSC and not a human being, 2FA is not appropriate.
+
+1. Click to select the **Application Account** check box. As an application account, the user can only log on through the application account API and does not require a separate user license.
+
+   > **Note:** We recommend application account users because only API access is required by SSSC, and they do not consume regular user licenses.  You may want to name the users to make it obvious which server they belong to. We recommend one user per RDS server for auditing purposes and to avoid one server with invalid credentials locking out the user, impacting all the other servers. See [REST Web Services API Reference and Download](../../api-scripting/rest-api-reference-download/index.md) for more about the API.
+
+1. Click the **Save** button.
+
+1. Repeat this process for each RDS server if you are clustering more than one.
+
+### Enabling Application Account RDS Credential Sharing
+
+Each RDS application account must have view access to the RDS Credential that the RDS server(s) use to manage the temporary Windows local accounts:
+
+1. Go to the RDS credential secret you created earlier.
+
+1. Click the **Sharing** tab:
+
+   ![image-20200728094013055](images/image-20200728094013055.png)
+
+1. Grant view access to the applicable application account users. That is usually one SS user account per RDS server. If you are using a cluster, this secret would be an Active Directory secret for a domain credential that all the RDS servers can use, and you would share it with each of the RDS application accounts for each RDS Server in the cluster using in their SSSC configuration.
+
+### Configuring Session Connector Custom Launchers
+
+You must create a custom launcher for each combination of and RDS server cluster and custom launcher type:
+
+1. Go to **Admin \>  Secret Templates**.
+
+1. Click the **Configure Launchers** button. The Launcher Types page appears.
+
+1. Click the **New** button. The Launcher page appears:
+
+   ![image-20200728102413609](images/image-20200728102413609.png)
+
+1. Type or set the parameters as follows:
+
+   - **Launcher Type:** Session Connector Launcher. This launcher type will not be visible until the Configuration Advanced Setting is enabled.
+   - **Active:** Ensure this is selected.
+   - **Record Keystrokes:** Check to record keystrokes in addition to video on related secrets with session monitoring enabled.
+   - **Child Launcher Type:** Click to select the launcher type, such as Remote Desktop or PuTTY. This is the real launcher type that runs on the RDS server to connect to the secret. 
+   - **RDS Server Hostname:** IP or hostname for the RDS server or cluster.
+   - **RDS Server Port:** Type the port. The default RDP port is TCP 3389.
+   - **RDS Server Credentials:** Click the **RDS Credentials** link to pick the Secret configured above for credentials that can create and delete local users. If RDS Server Hostname points to a cluster, all servers must be able to use these credentials.
+
+1. Click the **Save** button.
+
+###  Assigning Session Connector Custom Launchers to Secret Templates
+
+1. Go to **Admin \>  Secret Templates**. The Manage Secret Templates page appears:
+
+   ![image-20200728105659401](images/image-20200728105659401.png)
+
+1. Click the unlabeled dropdown to select a secret template that you want to allow SSSC to launch from.
+
+1. Click the **Edit** button to view that secret template. The Secret Template Designer page appears:
+
+   ![image-20200728110315833](images/image-20200728110315833.png)
+
+1. Click the **Configure Launchers** button at the bottom of the page to open the launcher mappings. The Secret Template Edit Launcher Configuration page appears:
+
+   ![image-20200728110600115](images/image-20200728110600115.png)
+
+1. Click the **Add New Launcher** button. A page of the same name appears:
+
+   ![image-20200728110805173](images/image-20200728110805173.png)
+
+1. Click to select the desired parameters for the launcher:
+
+   ![image-20200728111015293](images/image-20200728111015293.png)
+
+1. All secrets using this template are now ready to run SSSC launches.
 
 # Troubleshooting Session Connector
 
