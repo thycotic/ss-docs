@@ -289,7 +289,7 @@ To Import a Service Account
 
 ### Overview
 
-To make API calls to GCP, you need to enable the following APIs GCP discovery in SS. More information can be found on the [GCP Getting Started](https://cloud.google.com/apis/docs/getting-started) page. The APIs are:
+To make API calls to GCP, you need to enable the following APIs to use GCP discovery in SS. More information can be found on the [GCP Getting Started](https://cloud.google.com/apis/docs/getting-started) page. The APIs are:
 
 - **Cloud Resource Manager API**: Used for managing GCP resource containers, such as Projects.
 - **Compute Engine API**: Used for managing GCP instances (virtual machines).
