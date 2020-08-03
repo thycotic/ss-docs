@@ -245,15 +245,12 @@ When launched, the end-user will connect to the RDS host configured on the SSSC 
 ### Creating RDS Application Accounts
 
 1. Go to **Admin \> Users**.
-
 1. Click the **Create New** button. The Edit User page appears:
 
    ![image-20200728092445272](images/image-20200728092445272.png)
 
 1. Type in or set the account details. 
-
 1. Ensure that the **Enabled** check box is selected.
-
 1. Click the **Advanced** link. Additional parameters appear:
 
    ![image-20200729130716718](images/image-20200729130716718.png)
@@ -265,7 +262,6 @@ When launched, the end-user will connect to the RDS host configured on the SSSC 
    > **Note:** We recommend application account users because only API access is required by SSSC, and they do not consume regular user licenses.  You may want to name the users to make it obvious which server they belong to. We recommend one user per RDS server for auditing purposes and to avoid one server with invalid credentials locking out the user, impacting all the other servers. See [REST Web Services API Reference and Download](../../api-scripting/rest-api-reference-download/index.md) for more about the API.
 
 1. Click the **Save** button.
-
 1. Repeat this process for each RDS server if you are clustering more than one.
 
 ### Enabling Application Account RDS Credential Sharing
@@ -273,7 +269,6 @@ When launched, the end-user will connect to the RDS host configured on the SSSC 
 Each RDS application account must have view access to the RDS Credential that the RDS server(s) use to manage the temporary Windows local accounts:
 
 1. Go to the RDS credential secret you created earlier.
-
 1. Click the **Sharing** tab:
 
    ![image-20200728094013055](images/image-20200728094013055.png)
@@ -285,9 +280,7 @@ Each RDS application account must have view access to the RDS Credential that th
 You must create a custom launcher for each combination of and RDS server cluster and custom launcher type:
 
 1. Go to **Admin \>  Secret Templates**.
-
 1. Click the **Configure Launchers** button. The Launcher Types page appears.
-
 1. Click the **New** button. The Launcher page appears:
 
    ![image-20200728102413609](images/image-20200728102413609.png)
@@ -311,7 +304,6 @@ You must create a custom launcher for each combination of and RDS server cluster
    ![image-20200728105659401](images/image-20200728105659401.png)
 
 1. Click the unlabeled dropdown to select a secret template that you want to allow SSSC to launch from.
-
 1. Click the **Edit** button to view that secret template. The Secret Template Designer page appears:
 
    ![image-20200728110315833](images/image-20200728110315833.png)
