@@ -315,6 +315,8 @@ Allows a user to start a process that rotates the Secret encryption keys.
 
 Grants access to the session recording of a secret to a user with at least "List Access" permission on the secret. Administrators do not have this permission by default.
 
+>**Note:** Users also need the "View Session Monitoring" permission to view the recordings in SS.
+
 **Unlimited Administrator**
 
 Allows a user to view and edit all secrets in the system, regardless of  permissions, when Unlimited Admin Mode is on. Note that another user  with the "Administer Unlimited Admin Configuration" role permission  would still need to turn this mode on.
