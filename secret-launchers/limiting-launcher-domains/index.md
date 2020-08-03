@@ -4,6 +4,8 @@
 
 # Limiting Launcher Domains
 
+>**Note:** This capability applies to Secret Server 10.9 or later. That is Secret Server Protocol Handler 6.0.0.28 or later.
+
 You can limit the domains that a launcher connects to. If this is not set, then nothing changes—the launcher can connect to any domain. If it is set, however, Secret Server refuses to connect to any domains that are not explicitly allowed.
 
 This setting is done via a Windows Group Policy Object (GPO) administrative template XML file (.admx). The file specifies the registry key that are changed when the GPO is edited. Download that file here: [LimitLauncherDomainPolicyDefinitions.zip](https://updates.thycotic.net/secretserver/documents/LimitLauncherDomainPolicyDefinitions.zip).

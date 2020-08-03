@@ -12,3 +12,9 @@ SS can scan Amazon Web Services (AWS) for accounts that can access the cloud res
 
 - AWS Access Key: Keys used for programmatic integration with AWS.
 - AWS Console Account: User login accounts for AWS.
+
+
+
+
+
+

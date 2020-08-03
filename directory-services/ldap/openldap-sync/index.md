@@ -1,13 +1,33 @@
-[title]: # (Synching with OpenLDAP Directory Service)
+[title]: # (Syncing with OpenLDAP Directory Service)
 [tags]: # (LDAP, directory service)
 [priority]: # (1000)
-[display]: # (none)
+[display]: # (all)
 
-# Synching with OpenLDAP Directory Service
+# Syncing with OpenLDAP Directory Service
 
-OpenLDAP is a free, open source version of the Lightweight Directory Access Protocol (LDAP) developed by the OpenLDAP Project. This topic describes synching OpenLDAP to Secret Server (SS).
+## Introduction
+
+OpenLDAP is a free, open source version of the Lightweight Directory Access Protocol (LDAP) developed by the OpenLDAP Project. This topic describes syncing OpenLDAP to Secret Server (SS).
 
 > **Note:** This feature is only supported by the new interface. The classic interface does not support OpenLDAP Directory Services.
+
+## Unsupported Use Cases
+
+### Anonymous User Authentication
+
+We do not support anonymous user authentication:
+
+When creating an OpenLDAP directory service, “Anonymous” is a supported authentication method.  When this is chosen, SS connects anonymously to the OpenLDAP directory service as configured during the synchronization process and creates any users found on the directory service.  
+
+When anonymous is selected, a secondary authentication option, "User Authentication," appears, which is the method used when the synchronized users attempt to authenticate to SS. In short, user authentication cannot be anonymous because SS does not allow anonymous access.
+
+The valid options for user authentication when anonymous is selected for the synchronization process are “Basic,” “Kerberos,” or “No Authentication.” “No Authentication” supports using an OpenLDAP directory service as a user directory while enabling alternative methods of authentication, such as SAML.
+
+### Duplicate User Attributes
+
+We do not support configurations where using different attributes yield users with the same username, GUID, or user principal name (email address format—not necessarily an actual email address). These must all be unique to each user. If a duplicate exists, it may result in odd, unpredictable behavior from the application.
+
+## Procedure
 
 1. Create a secret in SS of type **OpenLDAP Account**. This sync secret is used to synchronize users and groups. It requires permission to search and view the attributes of the users and groups. If you plan on using SS discovery, the account will also need permissions to scan computers on the network for accounts. Complete these parameters:
 
