@@ -119,5 +119,7 @@ View a list of secret sync statuses by running a GET to
 `/api/v1/devops-secrets-vault/sync/status`. Query parameters accepted:
 
 - `filter.secretId=`
+
 - `filter.includeInactive=`
+
 - `filter.tenantId=`

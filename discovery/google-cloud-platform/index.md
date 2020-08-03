@@ -22,19 +22,25 @@ Secret Server uses the GCP service account to make authorized API calls to GCP t
 To create the service account:
 
 1. Click the **IAM & Admin** dropdown list in the left menu in GCP and select **Service Accounts**. A list of service accounts appears.
+
 3. Click the **+ Create Service Account** button. The "Service account details" page of the Create Service Account wizard appears:
 
    ![image-20200717113234577](../google-cloud-platform/images/image-20200717113234577.png)
 
 3. Type the service account name in the **Service Account Name** text box.
+
 3. Start to type the service account ID name and select the service account in the **Service Account Name** text/list box.
+
 3. Click the **Create** button. The "Grant this service account access to project (optional)" page appears:
 
    ![image-20200717120752361](../google-cloud-platform/images/image-20200717120752361.png)
 
 3. Click the **Role** list box and select **Service Account Key Admin**.
+
 3. Click the **+ Add Role** button to add another role.
+
 3. Click the new **Role** list box and select **API Keys Admin roles**.
+
 3. Click the **Continue** button.  The "Grant users access to this service account (optional)" page appears:
 
    ![image-20200717120102018](../google-cloud-platform/images/image-20200717120102018.png)
@@ -44,6 +50,7 @@ To create the service account:
    ![image-20200717120429653](../google-cloud-platform/images/image-20200717120429653.png)
 
 3. Click to select the **JSON** selection button.
+
 3. Click the **Create** button.  This creates and downloads a JSON private key file. A confirmation popup appears:
 
    ![image-20200717121005798](../google-cloud-platform/images/image-20200717121005798.png)
@@ -67,9 +74,13 @@ To run discovery in Secret Server, the GCP service account needs the "project vi
 To add the permission In GCP:
 
 1. Click the **IAM & Admin** dropdown list in the left menu in GCP and select **IAM**. The "Permissions for project…" page appears.
+
 1. Click the **Add** button. The "Add member to…" page appears.
+
 1. Type the service account email address in the **Members** text box.
+
 1. Click the **Roles** dropdown list to select **Project \> Viewer** (you can also type it).
+
 1. Click the **Add** button. The new member appears in the table on the "Permissions for project…" page.
 
 #### RPC/Heartbeat
@@ -79,9 +90,13 @@ To run RPC/Heartbeat in Secret Server, the service account needs the "service ac
 To add the permission In GCP:
 
 1. Click the **IAM & Admin** dropdown list in the left menu in GCP and select **IAM**. The "Permissions for project…" page appears.
+
 1. Click the **Add** button. The "Add member to…" page appears.
+
 1. Type the service account email address in the **Members** text box.
+
 1. Click the **Roles** dropdown list to select **Service Account Key Admin** (you can also type it).
+
 1. Click the **Add** button. The new member appears in the table on the "Permissions for project…" page.
 
 ### Task 3: Creating a GCP IAM Service-Account Secret
@@ -101,10 +116,15 @@ Create a new secret (see [Creating Secrets](../../secret-management/procedures/c
    ![image-20200717135327827](../google-cloud-platform/images/image-20200717135327827.png)
 
 1. Click to select a folder for the new secret.
+
 1. Type the secret's name in the **Secret Name** text box.
+
 1. Type the service account email address (use client_email from the JSON private key file) in the **Email** text box.
+
 1. Type the private key ID (use private_key_id from the JSON private key file) in the **Private Key ID** text box.
+
 1. Click the **Change** button to upload the JSON private key file you created earlier.
+
 1. Click the **Create Secret** button. 
 
 ### Task 4: Creating an RPC/Heartbeat Password Changer
@@ -130,6 +150,7 @@ RPC/Heartbeat can be tested from the Password Changers page
    ![image-20200717145508543](../google-cloud-platform/images/image-20200717145508543.png)
 
 1. Ensure that the **JSONPRIVATEKEY** text box is populated. The others are optional.
+
 1. Click the **OK** button. The popup goes away. If successful, this appears on the previous page:
 
    ![image-20200717145923848](../google-cloud-platform/images/image-20200717145923848.png)
@@ -139,6 +160,7 @@ RPC/Heartbeat can be tested from the Password Changers page
    ![image-20200717150106494](../google-cloud-platform/images/image-20200717150106494.png)
 
 1. Ensure that the **JSONPRIVATEKEY** and **Email** text boxes are populated. The others are optional.
+
 1. Click the **OK** button. The popup goes away. If successful, this appears on the previous page:
 
    ![image-20200717150246606](../google-cloud-platform/images/image-20200717150246606.png)
@@ -148,6 +170,7 @@ RPC/Heartbeat can be tested from the Password Changers page
    ![image-20200717150509758](../google-cloud-platform/images/image-20200717150509758.png)
 
 1. Ensure that all text boxes are populated except  **JSONPRIVATEKEY**, **Admin Email**, and **Admin PRIVATEKEYID**, which are optional.
+
 1. Click the **OK** button. The popup goes away. If successful, this appears on the previous page:
 
    ![image-20200717150920726](../google-cloud-platform/images/image-20200717150920726.png)
@@ -169,11 +192,13 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
    ![image-20200720095501925](images/image-20200720095501925.png)
 
 1. Type the name of the GCP discovery source in the **Discovery Source Name** text box.
+
 1. Click the **Next** button. The Site page appears:
 
    ![image-20200720095901078](images/image-20200720095901078.png)
 
 1. Click the **Add Site** list box to select the site.
+
 1. Click the **Next** button. GCP Service Account Scanner page appears:
 
    ![image-20200720100219781](images/image-20200720100219781.png)
@@ -183,6 +208,7 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
    ![image-20200720100723071](images/image-20200720100723071.png)
 
 1. Click to select the **Scan GCP Instances** check box.
+
 1. Click the check boxes for the scanners you desire. Currently, there are four discovery scanners for the GCP discovery source.
 
    > **Note:** In the future, we may add an Instance Local Account and a Service Account Dependency scanner.
@@ -204,6 +230,7 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
    ![image-20200720105542718](images/image-20200720105542718.png)
 
 1. Navigate the folder tree and select the secret you created earlier. As soon as you select the check box, the popup disappears and the secret appears under the Add Secret link.
+
 1. Click the **Finish** button.
 
 ## Viewing Discovery Scanners for the GCP Discovery Source
@@ -211,8 +238,11 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
 To view these scanners:
 
 1. In SS, go to **Admin \> Discovery**:
+
 1. Go to **Admin \> Discovery**.
+
 1. Click the discovery source name link in the table. The Discovery Source page for it appears.
+
 1. Click the **Scanner Settings** button in the top right of the page. The Discovery Source Scanner Settings page appears, which lists the scanners.
 
 ## Instance Custom Filter
@@ -250,13 +280,18 @@ From the Discovery Network View, Secret Server can import Service Account keys a
 To Import a Service Account
 
 1. Go to **Admin \> Discovery**.
+
 1. Click the **Discovery Network View** button. The Discovery Network View page appears.
+
 1. Select the **Domain\Cloud Account** tab
+
 1. Click to select the Service Account(s) to import in the unlabeled Domain/Cloud tree on the left.
+
 1. Click the **Import** button. The importation wizard begins:
    
    ![image-20200721095039584](images/image-20200721095039584.png)
    
+
 1. For secrets:
    
    1. Click the **Secret Type** dropdown list and select **Google IAM Service Account Key**.
@@ -264,25 +299,32 @@ To Import a Service Account
    1. Type a name in the **Secret Name** text box (It auto fills `$EMAIL`).
    1. Click the Site dropdown list to select a site.
    
+
 1. Click the **Next** button. The Key page appears:
    
    ![image-20200721095441085](images/image-20200721095441085.png)
    
+
 1. When importing GCP service account keys, the only option is take over the account. Meaning, SS triggers a remote password change on import to rotate the imported key and obtain a new JSON private key file. With the JSON private key file, SS can then manage the GCP service account.
+
 1. Click the **Next** button. The Import Key page appears:
    
    ![image-20200721095632101](images/image-20200721095632101.png)
    
+
 1. Click the link to select a secret to use for the initial take over of the account.
+
 1. Click the **Next** button. The Key Rotation page appears:
    
     ![image-20200721095952069](images/image-20200721095952069.png)
    
+
 1. For key rotation, click one of two selection button options to choose a secret for future key rotations. Either option would need the permissions mentioned above. When the password for the chosen secret are changed in the future, SS will use one of these two options:
    
    - **Use Secret Credentials**: Use the imported service account to rotate itself, and it has permissions to rotate keys.
    - **Use Privileged Account**: Use another service account that has permissions to rotate keys
    
+
 1. Click the **Finish** button. 
 
 ## GCP APIs
@@ -292,7 +334,9 @@ To Import a Service Account
 To make API calls to GCP, you need to enable the following APIs to use GCP discovery in SS. More information can be found on the [GCP Getting Started](https://cloud.google.com/apis/docs/getting-started) page. The APIs are:
 
 - **Cloud Resource Manager API**: Used for managing GCP resource containers, such as Projects.
+
 - **Compute Engine API**: Used for managing GCP instances (virtual machines).
+
 - **Identity and Access Management (IAM) API**: Used for managing identity and access control for GCP resources, such as service accounts.
 
 ### Enabling GCP APIs
@@ -300,6 +344,7 @@ To make API calls to GCP, you need to enable the following APIs to use GCP disco
 In GCP:
 
 1. In GCP, click the **APIs & Services** menu item and select **Library**. The Library page appears.
+
 2. Type the name of the API in the Search text box and press **\<Enter\>**. Matching APIs appear:
 
    ![image-20200730133420939](images/image-20200730133420939.png)
@@ -325,9 +370,13 @@ The service account used to rotate the key does not have necessary permission to
 #### Solution
 
 1. Go to the GCP console.
+
 1. Select **IAM \> Permissions**.
+
 1. Select the service account.
+
 1. Add the **Service Account Key Admin** permission. 
+
 1. Once the service account has permission:
    1. In SS, select the secret to rotate.
    1. Stop the current rotation.
@@ -346,8 +395,11 @@ The rotated service account has reached the maximum number of keys allowed. GCP 
 #### Solution
 
 1. Go to the GCP console.
+
 1. Select **IAM \> Permissions**.
+
 1. Remove the unused keys. 
+
 1. Once the service account has less than 10 keys, in SS:
    1. In SS, select the secret to rotate.
    1. Stop the current rotation.
@@ -366,7 +418,9 @@ The discovery service account used for has access to a GCP project that has not 
 #### Solution
 
 1. Go to GCP console.
+
 1. Go to  **Compute Engine \> VM Instances**.
+
 1. Set up the compute engine
 
 > **Note:** This requires billing information.
@@ -384,7 +438,9 @@ The instance scanner custom filter is not valid.
 #### Solution
 
 1. In SS, go to the GCP discovery source. 
+
 1. Edit the instance scanner.
+
 1. Update the "custom filter" setting.
 
 > **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
@@ -402,7 +458,9 @@ The instance scanner custom filter is not valid.
 #### Solution
 
 1. In SS, go to the GCP discovery source. 
+
 1. Edit the instance scanner.
+
 1. Update the "custom filter" setting.
 
 > **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
@@ -420,6 +478,7 @@ The service account does not exist in GCP. There may be a typo or it was deleted
 #### Solution
 
 1. Go to GCP console.
+
 1. Create a service account to use. See [Task 1: Creating GCP Service Accounts](#Task-1:-Creating-GCP-Service-Accounts).
 
 ### Request Error: Caller Does Not Have Permission
@@ -435,7 +494,9 @@ The service account does not have permissions in IAM.
 #### Solution
 
 1. Go to GCP console.
+
 1. Select IAM.
+
 1. Click the **Service Account** menu item to create a service account with the desire permissions. See [Task 1: Creating GCP Service Accounts](#Task-1:-Creating-GCP-Service-Accounts) and [Task 2: Setting GCP Permissions](#Task-2:-Setting-GCP Permissions).
 
  

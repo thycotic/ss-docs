@@ -44,9 +44,13 @@ We do not support configurations where using different attributes yield users wi
    ![image-20200722150621144](images/image-20200722150621144.png) 
 
 1. Type the domain's FQDN in the **Fully Qualified Domain Name** text box. For example: `ldap.omega.thycotic.com`.
+
 1. Type any name you desire in the **Friendly Name** text box.
+
 1. Ensure the **Active** check box is selected.
+
 1. Type the distinguished name (node path) in the **Distinguished Name** text box. For example: `dc=omegaldap,dc=local`
+
 1. Click the **Authentication** dropdown list to select either the **Basic** or **Anonymous** authentication method. 
 
    - Basic  authentication requires that valid credentials are assigned as the sync secret. Those credentials are used to authenticate to the OpenLDAP system on each sync. 
@@ -65,6 +69,9 @@ We do not support configurations where using different attributes yield users wi
    - No authentication is for when customers want users synced from OpenLDAP but use authentication through another service, such as SAML. We do *not* support anonymous authentication for security reasons.
 
 1. Click to select the **Use LDAPS** check box if you intend to use secure LDAP.
+
 1. Click the **Site** dropdown list to select your site.
+
 1. Click the **Multifactor Authentication** dropdown list to select the desired authentication method.
+
 1. Click the **Validate & Save** button. The information is validated. If there are any connectivity issues, an error message will appear stating what field is the likely cause. If the Active check box is not selected no validation occurs. If you chose anonymous authentication, no secret is needed and no credential validation occurs; however the distinguished name and FQDN are still used. Upon a successful save, a new box appears, prompting the user to select their initial synchronization groups. If groups appear in the search box that  also indicates the connection was successful.
