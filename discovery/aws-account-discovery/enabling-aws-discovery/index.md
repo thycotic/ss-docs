@@ -14,6 +14,6 @@
 
 1. Once this access key is created, use the access key and secret key to create a secret in SS using the Amazon IAM key template.
 
-1. Create a new AWS discovery source and use the Amazon IAM key as the credentials secret for the discovery source.
+1. Create a new AWS discovery source and use the Amazon IAM key as the credentials secret for that discovery source.
 
    > **Note:** AWS only allows programmatic integration through access keys. This type of secret is required for discovery to work. Discovery must be enabled in SS for this feature to work.

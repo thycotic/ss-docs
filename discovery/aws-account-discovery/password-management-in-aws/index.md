@@ -19,13 +19,13 @@ During password changing, you can disable or remove old keys through settings av
 
 ## Amazon IAM Console Password
 
-Password changing, and privileged password changing are available for Amazon IAM console password secrets. Due to AWS IAM's restrictions on programmatic integration, this secret type cannot use SS heart beat.
+Password changing, and privileged password changing are available for Amazon IAM console password secrets. Due to AWS IAM's restrictions on programmatic integration, this secret type cannot use SS heartbeat.
 
 In addition, an Amazon IAM key secret must be associated with an Amazon IAM console password secret for password changing to occur. To associate the two:
 
 1. Create the Amazon IAM console password secret, and an Amazon IAM Key secret for an account that has the permissions to change the console user's password. This can be the console account's own access keys, if the user has permission.
 1. Navigate to the RPC tab of the Amazon IAM Console Password.
-1. Under **Change Password Using Privileged Account** select **Edit**, and choose the IAM key secret created in the previous step. RPC should now be possible on the console password secret.
+1. Under **Change Password Using Privileged Account** select **Edit** and choose the IAM key secret created in the previous step. RPC should now be possible on the console password secret.
 
 ## Permissions Required for Secret Key Changes
 
