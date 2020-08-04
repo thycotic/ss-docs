@@ -2,10 +2,14 @@
 [tags]: #	(GCP, discovery, service account, google cloud platform)
 [priority]: # (1000)
 <<<<<<< HEAD
+<<<<<<< HEAD
 [display]: #
 =======
 [display]: # (none)
 >>>>>>> 07322cc25c4654d1326e4e3d2f2f711b8ba90db7
+=======
+[display]: # (all)
+>>>>>>> 2b658e12873749b82ac8c8db384e4d993397db75
 
 # Google Cloud Platform Discovery and Service Accounts
 
@@ -78,9 +82,13 @@ To run discovery in Secret Server, the GCP service account needs the "project vi
 To add the permission In GCP:
 
 1. Click the **IAM & Admin** dropdown list in the left menu in GCP and select **IAM**. The "Permissions for project…" page appears.
+
 1. Click the **Add** button. The "Add member to…" page appears.
+
 1. Type the service account email address in the **Members** text box.
+
 1. Click the **Roles** dropdown list to select **Project \> Viewer** (you can also type it).
+
 1. Click the **Add** button. The new member appears in the table on the "Permissions for project…" page.
 
 #### RPC/Heartbeat
@@ -90,9 +98,13 @@ To run RPC/Heartbeat in Secret Server, the service account needs the "service ac
 To add the permission In GCP:
 
 1. Click the **IAM & Admin** dropdown list in the left menu in GCP and select **IAM**. The "Permissions for project…" page appears.
+
 1. Click the **Add** button. The "Add member to…" page appears.
+
 1. Type the service account email address in the **Members** text box.
+
 1. Click the **Roles** dropdown list to select **Service Account Key Admin** (you can also type it).
+
 1. Click the **Add** button. The new member appears in the table on the "Permissions for project…" page.
 
 ### Task 3: Creating a GCP IAM Service-Account Secret
@@ -238,8 +250,11 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
 To view these scanners:
 
 1. In SS, go to **Admin \> Discovery**:
+
 1. Go to **Admin \> Discovery**.
+
 1. Click the discovery source name link in the table. The Discovery Source page for it appears.
+
 1. Click the **Scanner Settings** button in the top right of the page. The Discovery Source Scanner Settings page appears, which lists the scanners.
 
 ## Instance Custom Filter
@@ -288,6 +303,7 @@ To Import a Service Account
    
    ![image-20200721095039584](images/image-20200721095039584.png)
    
+
 1. For secrets:
    
    1. Click the **Secret Type** dropdown list and select **Google IAM Service Account Key**.
@@ -295,28 +311,61 @@ To Import a Service Account
    1. Type a name in the **Secret Name** text box (It auto fills `$EMAIL`).
    1. Click the Site dropdown list to select a site.
    
+
 1. Click the **Next** button. The Key page appears:
    
    ![image-20200721095441085](images/image-20200721095441085.png)
    
+
 1. When importing GCP service account keys, the only option is take over the account. Meaning, SS triggers a remote password change on import to rotate the imported key and obtain a new JSON private key file. With the JSON private key file, SS can then manage the GCP service account.
 
 1. Click the **Next** button. The Import Key page appears:
    
    ![image-20200721095632101](images/image-20200721095632101.png)
    
+
 1. Click the link to select a secret to use for the initial take over of the account.
 
 1. Click the **Next** button. The Key Rotation page appears:
    
     ![image-20200721095952069](images/image-20200721095952069.png)
    
+
 1. For key rotation, click one of two selection button options to choose a secret for future key rotations. Either option would need the permissions mentioned above. When the password for the chosen secret are changed in the future, SS will use one of these two options:
    
    - **Use Secret Credentials**: Use the imported service account to rotate itself, and it has permissions to rotate keys.
    - **Use Privileged Account**: Use another service account that has permissions to rotate keys
    
+
 1. Click the **Finish** button. 
+
+## GCP APIs
+
+### Overview
+
+To make API calls to GCP, you need to enable the following APIs to use GCP discovery in SS. More information can be found on the [GCP Getting Started](https://cloud.google.com/apis/docs/getting-started) page. The APIs are:
+
+- **Cloud Resource Manager API**: Used for managing GCP resource containers, such as Projects.
+
+- **Compute Engine API**: Used for managing GCP instances (virtual machines).
+
+- **Identity and Access Management (IAM) API**: Used for managing identity and access control for GCP resources, such as service accounts.
+
+### Enabling GCP APIs
+
+In GCP:
+
+1. In GCP, click the **APIs & Services** menu item and select **Library**. The Library page appears.
+
+2. Type the name of the API in the Search text box and press **\<Enter\>**. Matching APIs appear:
+
+   ![image-20200730133420939](images/image-20200730133420939.png)
+
+4. Click the button for the desired API. That API's page appears:
+
+   ![image-20200730133546762](images/image-20200730133546762.png)
+
+4. Click the **Enable** button.
 
 ## Errors and Solutions
 
@@ -333,9 +382,13 @@ The service account used to rotate the key does not have necessary permission to
 #### Solution
 
 1. Go to the GCP console.
+
 1. Select **IAM \> Permissions**.
+
 1. Select the service account.
+
 1. Add the **Service Account Key Admin** permission. 
+
 1. Once the service account has permission:
    1. In SS, select the secret to rotate.
    1. Stop the current rotation.
@@ -354,8 +407,11 @@ The rotated service account has reached the maximum number of keys allowed. GCP 
 #### Solution
 
 1. Go to the GCP console.
+
 1. Select **IAM \> Permissions**.
+
 1. Remove the unused keys. 
+
 1. Once the service account has less than 10 keys, in SS:
    1. In SS, select the secret to rotate.
    1. Stop the current rotation.
@@ -374,7 +430,9 @@ The discovery service account used for has access to a GCP project that has not 
 #### Solution
 
 1. Go to GCP console.
+
 1. Go to  **Compute Engine \> VM Instances**.
+
 1. Set up the compute engine
 
 > **Note:** This requires billing information.
@@ -392,7 +450,9 @@ The instance scanner custom filter is not valid.
 #### Solution
 
 1. In SS, go to the GCP discovery source. 
+
 1. Edit the instance scanner.
+
 1. Update the "custom filter" setting.
 
 > **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
@@ -410,7 +470,9 @@ The instance scanner custom filter is not valid.
 #### Solution
 
 1. In SS, go to the GCP discovery source. 
+
 1. Edit the instance scanner.
+
 1. Update the "custom filter" setting.
 
 > **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
@@ -428,6 +490,7 @@ The service account does not exist in GCP. There may be a typo or it was deleted
 #### Solution
 
 1. Go to GCP console.
+
 1. Create a service account to use. See [Task 1: Creating GCP Service Accounts](#Task-1:-Creating-GCP-Service-Accounts).
 
 ### Request Error: Caller Does Not Have Permission
@@ -443,7 +506,9 @@ The service account does not have permissions in IAM.
 #### Solution
 
 1. Go to GCP console.
+
 1. Select IAM.
+
 1. Click the **Service Account** menu item to create a service account with the desire permissions. See [Task 1: Creating GCP Service Accounts](#Task-1:-Creating-GCP-Service-Accounts) and [Task 2: Setting GCP Permissions](#Task-2:-Setting-GCP Permissions).
 
  

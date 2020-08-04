@@ -1,19 +1,18 @@
-[title]: # (Release Notes)
+[title]: # (Secret Server Release Notes)
 [tags]: # (Release Notes)
 [priority]: # (2000)
 
 # Secret Server Release Notes
 
-> **Note:** As of Secret Server 10.8, Secret Server Cloud release notes are included in the main release notes.
-
-> **Note:** Scroll down for legacy Secret Server Cloud.
+> **Note:** As of Secret Server 10.8, Secret Server Cloud release notes are included in the main release notes. Scroll down for legacy Secret Server Cloud.
 
 ## Current
 
-[Secret Server 10.8.000004](ss-rn-10-8-000004.md)
+[Secret Server 10.9.000000](ss-rn-10-9-000000.md)
 
 ## Secret Server On-Premises Legacy
 
+- [Secret Server 10.8.000004](ss-rn-10-8-000004.md)
 - [Secret Server 10.8.000000](ss-rn-10-8-000000.md)
 - [Secret Server 10.7.000059](ss-rn-10-7-000059.md)
 - [Secret Server 10.7.000002](ss-rn-10-7-000002.md)
