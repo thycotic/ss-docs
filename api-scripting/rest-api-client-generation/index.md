@@ -11,25 +11,34 @@ Secret Server (SS) contains an OpenAPI Swagger specification file that describes
 ## Generating Clients 
 
 ### C# Client Using NSwagStudio
-$1
-$2$1
-$2   `{Your SecretServer Base Url}/Documents/restapi/OAuth/swagger.json`
-$1
-$2
+
+1. Download and install NSwagStudio ( https://github.com/RicoSuter/NSwag/wiki/NSwagStudio )
+
+1. Copy and paste the `swagger.json` file for "Documentation for token authentication." This is located at:
+   `{Your SecretServer Base Url}/Documents/restapi/OAuth/swagger.json`
+
+1. Suggested settings:
+
    - Namespace: SecretServerAuthentication
    - Inject HttpClient via constructor
    - Generate default values for properties
-$1
-$2$1
-$2$1
-$2$1
-$2
+
+1. Generate output.
+
+1. Copy output into a C# file in solution.
+
+1. Copy and paste the swagger.json for "Documentation for REST API using bearer token authentication." It is located at `{Your SecretServer Base Url}/Documents/restapi/TokenAuth/swagger.json`.
+
+1. Suggested Settings:
+
    - Namespace: SecretServerRestClient
    - Inject HttpClient via constructor
    - Generate default values for properties
-$1
-$2$1
-$2
+
+1.   Generate output.
+
+1.   Copy output into a C# file in solution
+
 ``` csharp
 // Authenticate:
 var httpClient = new HttpClient();
@@ -51,21 +60,25 @@ var results = search.Result;
 >**Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments.
 
 > **Note:** These instructions assume that you have Java and .NET Core installed on your machine. They should work on all systems, but the syntax will need to be tweaked for other shells.
-$1
-$2$1
-$2
+
+1. Follow the steps in [Getting OpenAPI Generator](#Getting-OpenAPI-Generator).
+
+2. Store the path to the relevant `swagger.json` files as variables. These variables can be either a local file path or a URL.
+
 ``` javascript
 $oauthSwagger = 'OAuth/swagger.json'
 $tokenAuthSwagger = 'TokenAuth/swagger.json'
 ```
-$1
-$2   
+
+3. Run the following commands to generate the necessary clients. You can run `java -jar openapi-generator-cli.jar help generate` to see advanced options that you may wish to configure.
+   
 ```shellscript
 java -jar openapi-generator-cli.jar generate -i $oauthSwagger -g csharp-netcore --skip-validate-spec --package-name SecretServerOAuth --remove-operation-id-prefix --additional-properties=netCoreProjectFile=true -o oauth-csharp
 java -jar openapi-generator-cli.jar generate -i $tokenAuthSwagger -g csharp-netcore --skip-validate-spec --package-name SecretServerTokenAuth --remove-operation-id-prefix --additional-properties=netCoreProjectFile=true -o tokenauth-csharp
 ```
-$1
-$2   
+
+4. Edit several files to fix a bug in OpenAPI Generator. OpenAPI Generator generates code that uses the [null-coalescing operator](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator) with non-nullable enums, which is invalid C#.
+   
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For PowerShell:
    
@@ -87,20 +100,23 @@ sed -i '' -e 's/this.Direction = direction ?? throw new ArgumentNullException("d
 sed -i -e 's/this.WorkflowType = workflowType ?? throw new ArgumentNullException("workflowType is a required property for WorkflowTemplateCreateArgs and cannot be null");;/this.WorkflowType = workflowType;/g' tokenauth-csharp/src/SecretServerTokenAuth/Model/WorkflowTemplateCreateArgs.cs
 sed -i -e 's/this.Direction = direction ?? throw new ArgumentNullException("direction is a required property for Sort and cannot be null");;/this.Direction = direction;/g' tokenauth-csharp/src/SecretServerTokenAuth/Model/Sort.cs
 ```
-$1
-$2
+
+5. Build the packages in release mode:
+
 ```shellscript
 dotnet build -c Release oauth-csharp/src/SecretServerOAuth
 dotnet publish -c Release tokenauth-csharp/src/SecretServerTokenAuth
 ```
-$1
-$2
+
+6. Add the necessary .dll files to your project. The DLLs are located at the paths below:
+
 ```
 oauth-csharp/src/SecretServerOAuth/bin/Release/netstandard2.0/SecretServerOAuth.dll
 tokenauth-csharp/src/SecretServerTokenAuth/bin/Release/netstandard2.0/publish/*.dll
 ```
-$1
-$2
+
+7. Test the API. For example:
+
 ```csharp
 // set to the root of the Secret Server instance with no trailing slash
 const string basePath = "https://thycotic.com/SecretServer";
@@ -135,37 +151,43 @@ Console.WriteLine(folder);
 >**Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments.
 
 > **Note:** These instructions assume that you have Java configured on your machine. JDK 8 or greater is required. These instructions should work on all systems, but the syntax will need to be tweaked for other shells.
-$1
-$2$1
-$2
+
+1. Follow the steps in [Getting OpenAPI Generator](#Getting-OpenAPI-Generator).
+
+2. Store the path to the relevant `swagger.json` files as variables. These variables can be either a local file path or a URL.
+
 ```javascript
 $oauthSwagger = 'OAuth/swagger.json'
 $tokenAuthSwagger = 'TokenAuth/swagger.json'
 ```
-$1
-$2
+
+3. Run the following commands to generate the necessary clients. You can run `java -jar openapi-generator-cli.jar help generate` to see advanced options that you may wish to configure.
+
 ```shellscript
 java -jar openapi-generator-cli.jar generate -i $oauthSwagger -g java --skip-validate-spec --invoker-package secretserver.oauth.client --api-package secretserver.oauth.api --model-package secretserver.oauth.model --group-id secretserver --artifact-id secretserver.oauth --remove-operation-id-prefix -o oauth-java
 java -jar openapi-generator-cli.jar generate -i $tokenAuthSwagger -g 
 java --skip-validate-spec --invoker-package secretserver.tokenauth.client --api-package secretserver.tokenauth.api --model-package secretserver.tokenauth.model --group-id secretserver --artifact-id secretserver.tokenauth --remove-operation-id-prefix -o tokenauth-java
 ```
-$1
-$2
+
+4. Follow the instructions in `oauth-java/README.md` to include the package in your build process. Alternatively, follow the steps below to generate JAR files and test.
+
 ```shellscript
 cd oauth-java
 mvn clean install -DskipTests # this step will throw errors about HTML documentation generation that can be ignored
 cd ..\tokenauth-java
 mvn clean install -DskipTests # this step will throw errors about HTML documentation generation that can be ignored
 ```
-$1
-$2
+
+5.   Include the following JARs in your project (replace version numbers as necessary):
+
 ```shellscript
 oauth-java/target/secretserver.oauth-10.7.30.jar
 tokenauth-java/target/secretserver.tokenauth-10.7.73.jar
 tokenauth-java/target/lib/*.jar
 ```
-$1
-$2
+
+6.   Test the JAR files:
+
 ```csharp
 /*
 need to import:
@@ -205,67 +227,78 @@ System.out.println(folderModel);
 >**Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments.
 
 > **Note:** These instructions assume that you have Java configured on your machine. JDK 8 or greater is required. Only Windows is supported at this time, though PowerShell Core does work.
-$1
-$2$1
-$2  
+
+1. Follow the steps in [Getting OpenAPI Generator](#Getting-OpenAPI-Generator).
+
+2. Store the path to the relevant `swagger.json` files as variables. These variables can be either a local file path or a URL.
+  
 ```javascript
 $oauthSwagger = 'OAuth/swagger.json'
 $tokenAuthSwagger = 'TokenAuth/swagger.json'
 ```
-$1
-$2
+3. Run the following commands to generate the necessary clients. You can run `java -jar openapi-generator-cli.jar help generate` to see advanced options that you may wish to configure.
+
 ```shellscript
 java -jar openapi-generator-cli.jar generate -i $oauthSwagger -g java --skip-validate-spec --invoker-package secretserver.oauth.client --api-package secretserver.oauth.api --model-package secretserver.oauth.model --group-id secretserver --artifact-id secretserver.oauth --remove-operation-id-prefix -o oauth-java
 java -jar openapi-generator-cli.jar generate -i $tokenAuthSwagger -g java --skip-validate-spec --invoker-package secretserver.tokenauth.client --api-package secretserver.tokenauth.api --model-package secretserver.tokenauth.model --group-id secretserver --artifact-id secretserver.tokenauth --remove-operation-id-prefix -o tokenauth-java
 ```
-$1
-$2
+
+4. Replace several invalid values generated by the previous step:
+
 ```shellscript
 (Get-Content -Path .\tokenauth-ps\src\SecretServerTokenAuth\API\SecretSessionsApi.ps1) | Foreach-Object {$_ -replace '\[SecretServerTokenAuth.Model.System.Guid\]', '[System.Guid]'} | Set-Content -Path .\tokenauth-ps\src\SecretServerTokenAuth\API\SecretSessionsApi.ps1
 (Get-Content -Path .\tokenauth-ps\src\SecretServerTokenAuth\Model\New-SecretItemUpdateArgs.ps1) | Foreach-Object { $_ -replace '\[System.Nullable\[String\]\]', '[byte[]]' } | Set-Content -Path .\tokenauth-ps\src\SecretServerTokenAuth\Model\New-SecretItemUpdateArgs.ps1
 ```
-$1
-$2
+
+5. Edit one of the build files that will be used in the next step to significantly decrease build time:
+
 ```shellscript
 Get-ChildItem .\tokenauth-ps\src\SecretServerTokenAuth\*.ps1 -rec | %{ $f=$_; (Get-Content $f.PSPath) | %{ $_ -replace '\[SecretServerTokenAuth.Model.System.Guid\]', '[System.Guid]' } | %{ $_ -replace '\[System.Nullable\[String\]\]', '[byte[]]' } | Set-Content $f.PSPath }
 
 ```
-$1
-$2
+
+6. Run the following commands to build the PowerShell modules. `-Verbose` can be specified if desired.
+
 ```shellscript
 .\oauth-ps\Build.ps1
 .\tokenauth-ps\Build.ps1
 ```
-$1
-$2
+
+7. Import both modules:
+
 ```shellscript
 Import-Module .\oauth-ps\src\SecretServerOAuth
 Import-Module .\tokenauth-ps\src\SecretServerTokenAuth
 ```
-$1
-$2
+
+8. Set the base path of each module. Only edit the first line below. The value must be the full URL to the root of Secret Server **with no trailing slash**, for example `https://thycotic.com/SecretServer`.
+
 ```shellscript
 $basePath = 'https://thycotic.com/SecretServer'
 [SecretServerOAuth.Client.Configuration]::Default.BasePath = $basePath
 [SecretServerTokenAuth.Client.Configuration]::Default.BasePath = "$basePath/api/v1"
 ```
-$1
-$2
+
+9. Store the Secret Server credentials to be used:
+
 ```shellscript
 $cred = Get-Credential -Message 'Enter your Secret Server username/password'
 ```
-$1
-$2
+
+10. Store a token by running the following commands:
+
 ```shellscript
 $token = Invoke-AuthenticationApiAuthorize $cred.UserName $cred.GetNetworkCredential().Password 'password'
 ```
-$1
-$2
+
+11. Set the TokenAuth module to use the token:
+
 ```shellscript
 [SecretServerTokenAuth.Client.Configuration]::Default.AddApiKey('Authorization', "$($token.TokenType) $($token.AccessToken)")
 ```
-$1
-$2
+
+12. Test the folder service Get endpoint (replace the ID as needed):
+
 ```shellscript
 Invoke-FoldersApiGet -id 11
 ```

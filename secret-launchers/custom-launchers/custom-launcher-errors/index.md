@@ -19,7 +19,6 @@ The process is set to launch as the credentials of the secret but the username o
 When using "Run process as Secret credentials," even though the credentials have admin privileges, the process cannot be run with elevated privileges from the command prompt using runas. Instead, configure the process launcher as follows (substituting your .exe for program.exe): 
 
 - Process Name: cmd.exe
-
 - Process Arguments: `/C start /B program.exe /wait`
 
  

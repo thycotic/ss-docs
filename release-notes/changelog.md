@@ -12,207 +12,108 @@ The following is a chronological list of significant documentation changes. Mino
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
 - Accessing MS SQL Server with IWA
-
 - Account Permissions for Discovery
-
-- Accessing MS SQL Server with IWA
-
+- Active Directory Rights for Synchronization Account
 - Advanced (Manual) Installation
-
-- Accessing MS SQL Server with IWA
-
+- Backing up Secret Server to a Network Share
 - Backup Settings
-
-- Accessing MS SQL Server with IWA
-
+- Basic (Automatic) Installation
 - Built-in Reports
-
-- Accessing MS SQL Server with IWA
-
+- Changing Agent Configuration - Outdated (archived)
 - Changing IIS to Not Stop Worker Process in IIS 7.0 and Later
-
-- Accessing MS SQL Server with IWA
-
+- Changing SQL Server Connection Parameters
 - Configuration and Sizing
-
-- Accessing MS SQL Server with IWA
-
+- Configuring CredSSP for WinRM with PowerShell
 - Configuring Integrated Windows Authentication
-
-- Accessing MS SQL Server with IWA
-
+- Configuring SAML Single Sign-on
 - Configuring Session Recording
-
-- Accessing MS SQL Server with IWA
-
+- Configuring WinRM for PowerShell
 - Creating and Editing Reports
-
-- Accessing MS SQL Server with IWA
-
+- Creating and Using PowerShell Scripts
 - Custom Launcher Process Arguments
-
-- Accessing MS SQL Server with IWA
-
+- Custom Launchers
 - Custom Launcher Errors (Custom Process Launcher Setup Instructions and Troubleshooting)
-
-- Accessing MS SQL Server with IWA
-
+- C# Example Code for SOAP
 - Dependency Token List
-
-- Accessing MS SQL Server with IWA
-
+- Developer Resources
 - Discovery Best Practices
-
-- Accessing MS SQL Server with IWA
-
+- Distributed Engines
 - DoubleLocks
-
-- Accessing MS SQL Server with IWA
-
+- Downloads for Secret Server Software Development Kit for DevOps
 - Duo Security Authentication (Secret Server: Configuring Duo for Two Factor)
-
-- Accessing MS SQL Server with IWA
-
+- Enabling FIPS Compliance
 - Enabling Launchers (Custom Launcher Types)
-
-- Accessing MS SQL Server with IWA
-
+- Enabling RADIUS Two-Factor Authentication
 - Enabling Secret Server Encryption
-
-- Accessing MS SQL Server with IWA
-
+- Event Subscription Page
 - Getting Started Tutorial
-
-- Accessing MS SQL Server with IWA
-
+- Giving Application Pools Event Log Access
 - Google Cloud Platform Discovery and Service Accounts
-
-- Accessing MS SQL Server with IWA
-
+- HTTP Error 404.17 -  Not Found After Upgrading .NET Framework Version
 - HTTP 404.2 Error ISAPI/CGI Restrictions Stopping .NET Framework 4.5.1
-
-- Accessing MS SQL Server with IWA
-
+- Importing Secrets
 - Importing Secrets with XML
-
-- Accessing MS SQL Server with IWA
-
+- Installation
 - Installing and Configuring SQL Server
-
-- Accessing MS SQL Server with IWA
-
+- Installing a Self-Signed SSL Certificate
 - Installing RabbitMQ
-
-- Accessing MS SQL Server with IWA
-
+- Internal Site Connector
 - License Activation FAQ
-
-- Accessing MS SQL Server with IWA
-
+- Load User Profile Setting Must Be Enabled for Application Pool
 - Manual IIS Installation
-
-- Accessing MS SQL Server with IWA
-
+- Manually Backing up Secret Server
 - Notice: jQuery CVE-2019-11358
-
-- Accessing MS SQL Server with IWA
-
+- Notice: jQuery CVE-2020-11022
 - Password Changer List
-
-- Accessing MS SQL Server with IWA
-
+- Ports Used by Secret Server
 - PowerShell Ticketing Integration
-
-- Accessing MS SQL Server with IWA
-
+- RabbitMQ Naming Conventions for Queues
 - Remote Password Changing with PowerShell
-
-- Accessing MS SQL Server with IWA
-
+- REST API PowerShell Script Examples
 - REST Web Services API Reference and Download
-
-- Accessing MS SQL Server with IWA
-
+- Restoring Secret Server from a Backup
 - Running the IIS Application Pool As a Service Account
-
-- Accessing MS SQL Server with IWA
-
+- Secret Server Cloud Architecture
 - Secret Server Clustering
-
-- Accessing MS SQL Server with IWA
-
+- SQL Server Mirroring
 - Secret Server Release Notes
-
-- Accessing MS SQL Server with IWA
-
+- Secret Server Role Permissions List
 - Secret Server Software Development Kit for DevOps
-
-- Accessing MS SQL Server with IWA
-
+- Secure Syslog/CEF Logging
 - Securing ASP Cookies
-
-- Accessing MS SQL Server with IWA
-
+- Security Hardening Guide
 - Setting Maximum Time for Offline Caching
-
-- Accessing MS SQL Server with IWA
-
+- Setting up Clustering
 - Perl Example Code for SOAP
-
-- Accessing MS SQL Server with IWA
-
+- PHP Example Code for SOAP
 - PostgreSQL and ODBC Remote Password Changing
-
-- Accessing MS SQL Server with IWA
-
+- PowerShell Example Code for SOAP
 - SQL Server 2014 Express Edition Installation
-
-- Accessing MS SQL Server with IWA
-
+- SQL Server 2016 Standard Edition Installation
 - SSH Terminal Administration
-
-- Accessing MS SQL Server with IWA
-
+- System Requirements for Secret Server
 - Thycotic One and Secret Server
-
-- Accessing MS SQL Server with IWA
-
+- Troubleshooting Invalid Domain Errors
 - Understanding Expiration, Auto Change and Auto Change Schedules
-
-- Accessing MS SQL Server with IWA
-
+- Upgrading Secret Server with Web Clustering
 - Upgrading Secret Server Without Outbound Access
-
-- Accessing MS SQL Server with IWA
-
+- User Teams
 - Using Dynamic Parameters in Reports
-
-- Accessing MS SQL Server with IWA
-
+- Using Regex with Dependencies
 - Using Secret Fields in Scripts
-
-- Accessing MS SQL Server with IWA
-
+- Using Webservices with IWA via Perl (Using Web Services with Windows Authentication (Perl))
 - Using Webservices with IWA via PowerShell
-
-- Accessing MS SQL Server with IWA
-
+- VMware ESX/ESXi Account Discovery
 - Web Password Filler
-
-- Accessing MS SQL Server with IWA
-
+- Windows Local-Account Access-Denied Error Workaround PowerShell Scripts
 - Windows Local-Account Access-Denied Error Workaround PowerShell Scripts (modified again and script added)
-
 - X.509 Certificate Security Chain Options
 
 Made significant changes to:
 
 - Document Conventions: Added Capitalization section.
-
 - Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.
-
-- Document Conventions: Added Capitalization section.
-
+- Secret Server Software Development Kit for DevOps: Added introductory material from Support.
 - Release Notes: Added material for 10.8.00004.
 
 ## 10.9 Release
@@ -220,17 +121,10 @@ Made significant changes to:
 Added topics for 10.9 features:
 
 - Event Pipelines (updated)
-
 - Google Cloud Platform Discovery and Service Accounts
-
-- Event Pipelines (updated)
-
+- Integrate Secret Server with Azure Active Directory
 - Limiting Launcher Domains
-
-- Event Pipelines (updated)
-
+- Release Notes
 - Secret Server Session Connector
-
-- Event Pipelines (updated)
-
+- Syncing with DevOps Secret Vault
 - Syncing with the OpenLDAP Directory Service

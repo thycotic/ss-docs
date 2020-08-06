@@ -7,21 +7,15 @@
 Before running reports and audits, you must create something to report on—to that end:
 
 - Import a few accounts or create secrets manually
-
 - Rotate passwords a few times
-
 - View a couple of your secrets
 
 This generates enough audit logs to provide meaningful outputs in your reports:
 
 - Security Hardening Report
-
 - What secrets have been accessed
-
-- Security Hardening Report
-
+- What secrets failed heartbeat
 - Failed login attempts
-
 - Secret activity
 
 See [List of Built-In Reports](../../reports/built-in-reports/index.md) for the most up-to-date list of reports included.
@@ -29,5 +23,4 @@ See [List of Built-In Reports](../../reports/built-in-reports/index.md) for the 
 For details on using reports, see:
 
 - [Creating and Editing Reports](../../reports/creating-and-editing-reports/index.md)
-
 - [Viewing Reports](../../reports/viewing-reports/index.md)

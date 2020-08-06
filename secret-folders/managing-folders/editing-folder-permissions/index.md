@@ -3,19 +3,25 @@
 [priority]: # (1000)
 
 # Editing Folder Permissions
-$1
-$2
+
+1. Click **Admin > Folders**. The Folders page appears:
+
    ![image-20200526105212752](images/image-20200526105212752.png)
-$1
-$2$1
-$2
+
+1. Navigate to or search for the desired folder.
+
+1. Click the folder's name. The folder is bolded, which indicates it is selected, as does the appearance of several new buttons:
+
    ![image-20200526105305148](images/image-20200526105305148.png)
-$1
-$2
+
+1. Click the **Edit** button. The unlabeled folder details and permissions page appears:
+
    ![image-20200526110127406](images/image-20200526110127406.png)
-$1
-$2$1
-$2
+
+1. To edit the folder name, click the **Edit** link next to **Folder Name**.
+
+1. To edit the policy that is inherited by secrets in the folder:
+
    1. Click the **Edit** link next to **Secret Policy**. The Edit Folder popup appears:
 
       ![image-20200526110608499](images/image-20200526110608499.png)
@@ -23,8 +29,9 @@ $2
    1. Click the **Secret Policy** dropdown list to select the desired policy.
 
    1. Click the **Save** button.
-$1
-$2
+
+1. To edit the folder permissions:
+
    1. Click the **Edit** link next to **Folder Permissions**. The Folder Permissions section becomes editable. It is currently set to the default, which is Inherit Permissions, so the Inherit Permissions check box is selected and the selected groups are not editable:
 
       ![image-20200526111329578](images/image-20200526111329578.png)

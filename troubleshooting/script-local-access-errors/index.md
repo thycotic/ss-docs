@@ -19,7 +19,6 @@ On most systems, the Administrators group on the local machine is part of the �
 For heartbeat to work correctly, make sure that the local or authenticated users are:
 
 - *Not* in the "Deny access to this computer from the network" security policy
-
 - *In* the "Access this computer from the network" security policy
 
 ## Remediation Options
@@ -97,39 +96,61 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
  [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls)
 
 ## Option 4: Creating a Heartbeat GPO Workaround
-$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2
+
+1. Make sure that **Admin \> Scripts** is functional. Once you have it working, download, unzip, and run this script [HBWorkAroundScripts.zip](https://updates.thycotic.net/secretserver/documents/HBWorkAroundScripts.zip).
+
+2. Go to **Admin \> Scripts**. 
+
+3. Add the HBWorkAroundScript and the HBWorkAroundPasswordChange scripts.
+
+4. Test the first script. Add the appropriate `args[]` as needed. Add arguments 0-4 with no quotes or commas. Spaces are the argument separator and are required. 
+
+5. You should get a return of “True,” such as this:
+
    ![img](images/clip_image002.jpg)
-$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2
+
+6. Navigate to **Admin \> Remote Password Changing.**
+
+7. Click the **Configure Password Changers** button. The Password Changers Configuration page appears.
+
+8. Click the **New** button at the bottom.
+
+9. Click the **Base Password Changer** dropdown list to select **PowerShell Script** as your password changer. 
+
+10. Type a name in the **Name** text box.
+
+11. Click the **Save** button. The password change command page appears:
+
     ![image-20200513140026241](images/image-20200513140026241.png)
-$1
-$2$1
-$2
+
+12. Click the **PowerShell Script** dropdown list in the **Password Change Commands** section to select the script you ran earlier.
+
+13. Add the appropriate tokens in the **Script Args** text box. 
+
 > **Note:** See [Dependency Tokens](../../api-scripting/dependency-tokens/index.md) for a complete list.
-$1
-$2    
+
+12. Click the **Save** button. Your configuration should look like this: 
+    
     ![image-20200716114511238](images/image-20200716114511238.png)
     
-$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2    
+11. Go to **Admin \> Secret Templates**.
+
+11. Select **Windows Account**.
+
+11. Click the **Edit** button.
+
+13. Click the **Copy Secret Template** button.
+
+13. Click the **Configure Password Changing** button.
+
+13. Click the **Edit** button.
+
+13. Click the **Password Type to Use** dropdown list to select the password change you created earlier.
+
+13. Create your windows secret using the custom template. 
+
+13. Once it is created, add your privileged and associated secret to the RPC tab as seen below. In that example we use the same one for the privileged and associated secret. 
+    
     ![image-clip_image006](images/clip_image006.jpg)
     
 19. Run a heartbeat to confirm it works as desired.

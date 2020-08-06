@@ -25,18 +25,25 @@ Example:
 #### Procedure
 
 To configure the unknown errors to trigger connection failures:
-$1
-$2
+
+1. Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears:
+
    ![image-20191203153013109](images/image-20191203153013109.png)
-$1
-$2
+
+1. Click the **Configure Password Changers** button. The Password Changers Configuration page appears:
+
    ![image-20191105140347335](images/image-20191105140347335.png)
-$1
-$2
+
+1. Click the link for the desired password type. Its Account page appears:
+
    ![image-20191105131917774](images/image-20191105131917774.png)
-$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2
+
+1. If necessary, click the **Advanced Settings** link.
+
+1. Click the pencil icon next to **Heartbeat Unknown Error to Unable to Connect Translation (regex)**. The Value text box appears.
+
+1. Determine the desired text string to search for.
+
+1. Type the desired regex in the **Value** text box.
+
+1. Click the **Save** icon next to the text box

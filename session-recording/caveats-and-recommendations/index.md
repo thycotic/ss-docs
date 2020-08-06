@@ -55,23 +55,20 @@ System requirements apply to both physical and virtual machines.
 ## Session Recording
 
 - Server hosting session recording requires fixed RAM and disk space. We strongly recommend that you **do not apply dynamic settings**.
-
 - **Do not record more sessions than you can encode**. If more concurrent sessions are recorded than the system can process, the sessions wait in a queue and are processed when enough server resources become available, which could be in a very long time or perhaps never if your storage is overwhelmed.
-
-- Server hosting session recording requires fixed RAM and disk space. We strongly recommend that you **do not apply dynamic settings**.
-
+- The frame rate we can encode varies dramatically based on many factors, so **testing what encoding rate your session recording configuration can sustain is a must**. From there, you can get an idea of what is possible. For example, let us say you found that we can process 20 FPS on average on your Xeon processors. Given that rate, we could encode around 1 minute of a session recording in 3 seconds, or 1 hour in 3 minutes, or 1 day in 72 minutes--giving you perhaps 480 session hours per day. You could then parse that figure based on your typical usage to arrive at a maximum potential usage, for example, 60 people doing 8-hours of session recording.
 - Typically, you can record **up to one hundred sessions at a time per web node**, load balanced, which should handle large use cases.
-
-- Server hosting session recording requires fixed RAM and disk space. We strongly recommend that you **do not apply dynamic settings**.
-
+- CPU usage during video processing varies depending on concurrent users and recording length. We recommend that you **closely monitor CPU percentages on your web server** during video processing, as well on your client machines during recording, to increase CPU count for machines, if needed.
 - We recommend that you **set up RabbitMQ as the backbone service bus** in session recording environments. To setup RabbitMQ. See: [Secret Server: How to install RabbitMQ](https://thycotic.force.com/support/s/article/How-to-install-RabbitMq) (KBA).
 
 ## macOS Catalina Security
 
 macOS Catalina enforces security policy around screen recording. To use the session recording feature of the Thycotic launcher on MacOS Catalina, you must first:
-$1
-$2$1
-$2
+
+1. Go to **System Preferences \> Security & Privacy \> Screen Recording** on your Mac.
+
+1. Allow recording for the SecretServerLauncher.app:
+
    ![image-20200519101823315](images/image-20200519101823315.png)
 
 

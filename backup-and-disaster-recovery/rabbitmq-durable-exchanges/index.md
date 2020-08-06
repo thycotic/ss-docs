@@ -49,9 +49,11 @@ powershell.exe -file exchangedurability.ps1 -username "guest" -password "guest" 
 The user has access to the RabbitMQ admin interface. The computername and port is where the admin interface is located. 
 
 The script:
-$1
-$2$1
-$2
+
+1. Removes all of the exchanges that are not durable and any that are not the `thycotic-sr*` ones for legacy ASRAs. 
+
+1. Kills all of the connections. This forces the distributed engines and SS to reconnect to the durable exchanges.
+
 ### Script
 
 ```powershell

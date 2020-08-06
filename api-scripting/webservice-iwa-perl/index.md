@@ -15,19 +15,29 @@ You can enable webservices at **Admin \> Configuration** on the **General** tab.
 ## Procedure 
 
  To enable IWA for webservices in IIS:
-$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2
+
+1. Open IIS Manager (`inetmgr`).
+
+1. Expand the **Sites** node until you locate your Secret Server application or website
+
+1. Expand the **Secret Server** node to locate the **winauthwebservices** folder.
+
+1. Click on the **winauthwebservices** folder.
+
+1. Click on **authentication** in the **Security** section. 
+
+1. Disable **Anonymous Authentication**.
+
+1. Enable **Windows Authentication**. 
+
    > **Note:** If you are using IIS7 or greater and do not see this option, the option will need to be added through the server roles (webserver). IIS may give an alert about using both challenge and redirect-based authentication, which you can ignore.)
-$1
-$2$1
-$2$1
-$2
+
+1. Open Windows Explorer.
+
+1. Navigate to the **winauthwebservices** folder.
+
+1. Give **read access** to the **winauthwebservices** folder to the domain users and groups that will be using IWA to access the webservices.
+
 ## Example
 
 ### Overview
@@ -37,10 +47,11 @@ The SOAP web service URL for IWA is `<Secret Server URL>/winauthwebservices/sswi
 The method below uses the `SecretServerGetSecret.ps1` PowerShell script to  make the SecretGet WebService call, exposing it through the `SecretServer.pm` Perl package. The `Sample.pl` file uses the `SecretServer.pm` package to retrieve specific fields from the result.
 
 The flow is as follows:
-$1
-$21. The `SecretServer.pm`package passes the request on to the `SecretServerGetSecret.ps1` PowerShell script.
-$1
-$21. The results are passed back to `SecretServer.pm` and then on to your Perl script (`Sample.pl`)
+
+1. Your Perl script (`sample.pl`) makes a request to the `SecretServer.pm` package.
+1. The `SecretServer.pm`package passes the request on to the `SecretServerGetSecret.ps1` PowerShell script.
+1. The `SecretServerGetSecret.ps1` PowerShell script calls the Secret Server web services and authenticates using the service account that `sample.pl` is running under.
+1. The results are passed back to `SecretServer.pm` and then on to your Perl script (`Sample.pl`)
 
 Create the following three files:
 
@@ -89,8 +100,8 @@ sub get_field_from_result {
     
     return("$1");
 }
-$1
-$2
+1;
+
 # this is if you want to execute the Get Secret call manually from the command line
 # if (@ARGV != 2)
 # {

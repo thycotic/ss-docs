@@ -19,9 +19,7 @@ This topic describes the process of configuring Secret Server (SS) and SQL Serve
 Three different SQL Server instances are required to implement this scenario:
 
 - **Primary database:** The main application database
-
 - **Mirror database:**  Replicates all of the data on the primary database in a transactional manner
-
 - **Witness database:** Monitors the health of the primary and mirror databases and initiates failover if necessary
 
 In the setup described here, mirroring operates in synchronous mode, which means that a transaction does not commit on the primary database until it has committed on the mirror.
@@ -41,51 +39,63 @@ The three SQL Server instances should all be running under the same domain accou
 ### Configuring Mirroring
 
 To configure mirroring:
-$1
-$21. Right click the primary database and select **Properties**. The Database Properties window appears.
-$1
-$21. Click on the **Configure Security** button. The Configure Database Mirroring Security Wizard appears on the introduction page.
-$1
-$21. Click to select the **Yes** selection button.
-$1
-$21. Click to select all three interface check boxes (principal, mirror, and witness servers).
-$1
-$21. Click the **Principal server instance** dropdown list to select the current (primary) server.
-$1
-$21. Click to select the **Encrypt data sent through this endpoint** check box. This enables RC4 encryption on data sent through this endpoint.
-$1
-$21. Click the **Next** button. The Mirror Server Instance page appears.
-$1
-$21. Click the **Next** button. The Witness Server Instance page appears.
-$1
-$21. Click the **Next** button. The Service Accounts page appears.
-$1
-$21. Click the **Finish \>\>** button. Logins are created for each account and are given CONNECT permission on each endpoint, if needed. The Complete the Wizard page appears.
-$1
-$2
+
+1. In Microsoft SQL Server Management Studio, drill down to the primary database in the Object Explorer.
+1. Right click the primary database and select **Properties**. The Database Properties window appears.
+1. Select the **Mirror** page.
+1. Click on the **Configure Security** button. The Configure Database Mirroring Security Wizard appears on the introduction page.
+1. Click the **Next** button. The Include Witness Server page appears.
+1. Click to select the **Yes** selection button.
+1. Click the **Next** button. The Choose Server to Configure page appears.
+1. Click to select all three interface check boxes (principal, mirror, and witness servers).
+1. Click the **Next** button. The Principal Server Instance page appears.
+1. Click the **Principal server instance** dropdown list to select the current (primary) server.
+1. Type a port number for connecting to the other servers in the **Listener port** text box. The port must be open for TCP communication on the machine’s firewall and on any network devices that restrict access to this machine.
+1. Click to select the **Encrypt data sent through this endpoint** check box. This enables RC4 encryption on data sent through this endpoint.
+1. Type `Mirroring` in the **Endpoint name** text box. The endpoint name is for referencing the endpoint later.
+1. Click the **Next** button. The Mirror Server Instance page appears.
+1. Repeat the exact same configuration you set for the primary server instance with only the server instance name different (choose the mirror instance).
+1. Click the **Next** button. The Witness Server Instance page appears.
+1. Repeat the exact same configuration you set for the primary server instance with only the server instance name different (choose the witness instance).
+1. Click the **Next** button. The Service Accounts page appears.
+1. Type the domain user that SQL Server runs under for each instance's Service Accounts text box. For example `mydomain\sql_svc`.
+1. Click the **Finish \>\>** button. Logins are created for each account and are given CONNECT permission on each endpoint, if needed. The Complete the Wizard page appears.
+1. Click the **Finish** button
+
 ### Configuring Secret Server for Mirroring
 
 > **Note:** The credentials used to access the primary database must also be valid on the mirror database for failover to work.
-$1
-$2$1
-$2
+
+1. Go to **Admin > See All**. The admin panel appears.
+
+1. Type Database in the **Search** text box and select **Database**. The Database Configuration page appears:
+
     ![image-20200616151810093](images/image-20200616151810093.png)
-$1
-$2$1
-$2
+
+1. Click the **Edit** button.
+
+1. Click the **Advanced (Not Required)** link. A new section appears:
+
    ![image-20200616152210555](images/image-20200616152210555.png)
-$1
-$2$1
-$2$1
-$2
+
+1. Click the select the **SSL Encryption** check box.
+
+1. Type the mirror server name in the **Failover Partner** text box.
+
+1. Click the **Save Database Connection Settings** button.
+
 ### Testing Mirroring
 
 This procedure is necessary to verify that failover will function correctly in the event that the primary server is unavailable or inoperable:
-$1
-$2$1
-$2$1
-$2$1
-$2
+
+1. Open SQL Server Enterprise Manager.
+
+1. Right click the primary database and select **Properties**.
+
+1. Click the **Mirroring** tab.
+
+1. Click the **Failover Now** button. This causes the database on primary to switch roles and become the mirror database. The mirror database becomes the primary. Clients using the application should be able to continue as before.
+
 > **Note:** One request may fail before SS begins making requests to the new primary database.
 
 ### Database SSL Configuration
@@ -95,9 +105,13 @@ $2
 The certificate authority used for the SSL certificates must be trusted on all of the machines that are a part of SS's installation. The SQL Server service account must be granted access to the certificate.
 
 Procedure:
-$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2
+
+1. Open Microsoft Management Console by running `mmc` on the Windows command prompt.
+
+1. Drill down to **Console Root \> Certificates \> Personal \> Certificates** in the navigation tree.
+
+1. Right click the certificate and select **All Tasks \> Manage Private Keys**.
+
+1. Grant the user account that SQL Server uses read permission.
+
+1. Ensure SSL is enabled for both the primary and mirror database server. See [Configuring Secret Server for Mirroring](#configuring-secret-server-for-mirroring). It is not necessary to configure SSL on the witness server.

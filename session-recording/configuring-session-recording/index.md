@@ -15,10 +15,13 @@ The Windows protocol handler encodes your session in WebM format in real time an
 You can set the advanced session recording agent to "Record All Sessions." If someone logs into a server directly without launching from SS, or even logs in at the console, the full session is recorded, including metadata.
 
 ## Configuration
-$1
-$2$1
-$2$1
-$2   
+
+1. Go to **Admin \> Configuration \> Session Recording**.
+
+1. On the **Session Recording** tab, click the **Edit** button.
+
+1. Ensure the **Enable Session Recording** check box is selected.
+   
 > **Note:** For testing and proof of concept deployments, SS's [**Internal Site Connector**](https:/"updates.thycotic.net/links.ashx?InternalSiteConnector) is sufficient for session recording. For production deployments we strongly recommend [**RabbitMQ**](https://updates.thycotic.net/links.ashx?RabbitMQ) for a more-robust message queue.
 
 ### Using Legacy Video Codecs
@@ -58,8 +61,9 @@ If you click the **Request Video Processing** button, the recording is converted
 ### Extending Session Recording with Custom Launchers
 
 You can configure SS with custom launchers to run arbitrary programs, which can then be recorded by session recording. To do so:
-$1
-$2   1. Go to **Admin \> Secret Templates \> Configure Launchers**. The Manage Launcher Types page appears.
+
+1. Define a custom launcher:
+   1. Go to **Admin \> Secret Templates \> Configure Launchers**. The Manage Launcher Types page appears.
    
    1. Click the **New** button.
    1. Leave the **Launcher Type** dropdown list set to **Process**.
@@ -68,8 +72,8 @@ $2   1. Go to **Admin \> Secret Templates \> Configure Launchers**. The Manage L
    1. (optional) Type process arguments in the Process Arguments text box.
    1. Customize other Options as needed.
    1. Click the **Save** button. 
-$1
-$2   1. Go to **Admin > Secret Templates**. The Manage Secret Templates page appears.
+1. Associate the launcher with a secret template:
+   1. Go to **Admin > Secret Templates**. The Manage Secret Templates page appears.
    1. Click the template dropdown list and select the desired template.
    1. Click the **Edit** button.
    1. Click the **Configure Launcher** button. The Secret Template Edit Launcher Configuration page appears.

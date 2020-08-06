@@ -11,19 +11,12 @@ In addition to changing the password on check in, secret owners can also specify
 To specify a before- or after-checkout hook, click **Create New Hook** and specify the following settings:
 
 - **Before/After:** Whether the PowerShell script should run before or after the event action.
-
 - **Event Action:** The hook runs at either check in or checkout.
-
-- **Before/After:** Whether the PowerShell script should run before or after the event action.
-
+- **Name:** A descriptive name for the hook.
 - **Description:** An extended description for the purpose of the hook.
-
-- **Before/After:** Whether the PowerShell script should run before or after the event action.
-
+- **PowerShell Script:** Administrator-created PowerShell script to run.
 - **Arguments:** Any command line arguments to pass to the PowerShell script.
-
-- **Before/After:** Whether the PowerShell script should run before or after the event action.
-
+- **Stop on Failure:** If enabled, SS prevents the event action if the script returns an error. For example, if "Stop on Failure" is selected for a checkout action, then SS prevents the user from checking out the secret if the script fails.
 - **Privileged Account:** If needed, the script can run as another secret's identity.
 
 ## Checkout User Variables for Scripts
