@@ -29,18 +29,23 @@ Secret Server is a powerful, advanced product with a wide range of capabilities.
 ## Logging on Secret Server
 
 Depending on how your administrators configured SS, you can log on with either your Active Directory account or a local account.
-$1
-$2
+
+1. In your browser, go to the URL for your organization's SS.
+
    ![image-20200327132844211](images/image-20200327132844211.png)
-$1
-$2
+
+2. On the login screen, enter your:
+
    - Active Directory username (or local one if you do not have one)
    
    - Active Directory password (or local one if you do not have one)
-$1
-$2$1
-$2$1
-$2
+
+3. Select the your domain from the **Domain** dropdown list. If you do not have an AD domain, select **Local** instead.
+
+4. (optional) Click to select the **Remember Me on This Computer** check box if you want to retain your username and domain on this computer.
+
+5. Click the **Login** button. If you have Duo two-factor authentication, this appears:
+
    ![image-20200327133313731](images/image-20200327133313731.png)
 
    Your cell phone receives a notification you have to approve to access SS. 
@@ -48,8 +53,9 @@ $2
    > **Note:** SS also supports other two-factor authentication methods (depending on what your organization configured), such as text or email codes that SS prompts you for.
    
    > **Note:** After you log on with your local account for the first time, you are immediately prompted to change your password .
-$1
-$2
+
+6. Click the **Login** button. The SS Dashboard appears.
+
 ## Secrets
 
 _Secrets_ are individually named packets of sensitive information, such as passwords. Secrets address a broad spectrum of secure data, each type represented and created by a _secret template_ that defines the parameters of all secrets based on it. Secrets are very powerful and provide many ways of controlling and protecting their data, such as:
@@ -91,12 +97,17 @@ Some important basic information about secrets:
 ## Using Secrets on Websites (Web Password Filler)
 
 Please set up Web Password Filler (WPF) in the following order:
-$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2
+
+1. Ensure you can log in to SS the conventional way.
+
+1. If necessary, create a folder in SS where the WPF secrets will reside.
+
+1. [Install the WPF browser extension](https://docs.thycotic.com/wpf/2.0.0/getting-started/install.md).
+
+1. [Configure WPF to point to SS](https://docs.thycotic.com/wpf/2.0.0/getting-started/connect.md).
+
+1. [Login to SS via WPF](https://docs.thycotic.com/wpf/2.0.0/getting-started/login-ss.md).
+
 ## Checking out Secrets
 
 The SS _check-out_ feature grants exclusive access to a single user. If a secret is configured for check out, a user can then access it. No other user can access a secret while it is checked out, except unlimited administrators. This guarantees that if the remote machine is accessed using the secret, the user who had it checked out was the only one with proper credentials at that time. See [Secret Checkout](../secret-checkout/index.md) for details.

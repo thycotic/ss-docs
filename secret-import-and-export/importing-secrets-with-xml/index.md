@@ -11,9 +11,7 @@ The XML file should look like the example below, the comments are for explanatio
 ## Notes
 
 - Leaving the `<Permissions>` tag empty for a folder will cause that folder to inherit permissions from its parent folder.
-
 - Leaving the `<Permissions>` tag empty for a secret will cause it to inherit permissions from its folder.
-
 - To add a line-break within a Notes field use `##BR##`.
 
 > **Note:** Please do **not** edit the XML file with Windows Notepad. Use Notepad++, Visual Studio Code, or Atom to make your edits. Using Notepad increases you chances of importation failure.

@@ -43,7 +43,6 @@ This document discusses using an SSH terminal with Thycotic Secret Server (SS).
 ### System Requirements
 
 - Secret Server 10.7.000000
-
 - Secret Server **Professional** or **Platinum** Edition license
 
 ### Recommended
@@ -55,11 +54,8 @@ This document discusses using an SSH terminal with Thycotic Secret Server (SS).
 Admin:
 
 - Administer Configuration
-
 - Administer Proxying Configuration
-
-- Administer Configuration
-
+- View Configuration
 - View Proxying Configuration
 
 User: View Secret
@@ -67,15 +63,19 @@ User: View Secret
 ## Configuring SSH Terminal 
 
 ### Enabling SSH Terminal on Secret Server
-$1
-$2  - Must meet Admin permission requirements (see [Secret Server Permission Requirements](#Secret-Server-Permission-Requirements))
+
+1. Prerequisites:
+  - Must meet Admin permission requirements (see [Secret Server Permission Requirements](#Secret-Server-Permission-Requirements))
   - Secret Server **Professional** or **Platinum** Edition license
-$1
-$2
+
+1. Navigate to **Secret Server \> Admin \> SSH Proxy**.
+
   ![1565192991895](images/1565192991895.png)
-$1
-$2$1
-$2  1. Enable **SSH Proxy** (required to use SSH terminal).
+
+1. Click the **Edit** button.
+
+1. Type your SSH proxy configuration settings (see "Configuring SSH Proxies for Launchers" in the [Secret Server Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Admin-Guide)):
+  1. Enable **SSH Proxy** (required to use SSH terminal).
   
   1. (optional) Enable **Proxy New Secrets by Default**.
 
@@ -90,8 +90,9 @@ $2  1. Enable **SSH Proxy** (required to use SSH terminal).
   1. The resulting settings should look something like this:
 
   ![1565191783487](images/1565191783487.png)
-$1
-$2
+
+1. Specify the IP address for nodes (and engines) that will run SSH proxy:
+
   1.  Navigate to **Admin \> SSH Proxy \> Nodes.** 
   1. Set the **SSH Public Host.** This is the public hostname or IP that the client launcher connects to. In most cases, this is the same as the SSH bind address; however, there are cases where the public IP or host differs from the private IP that SS should bind to, such as NAT or Amazon EC2 instances.
 
@@ -102,52 +103,62 @@ $2
 SSH terminal can also run on each proxy-enabled distributed engine (DE) site. 
 
 > **Note:** To launch secrets on non-local sites, users **must** connect to an SSH terminal over an engine on this site.
-$1
-$21. Click to select **Proxy Enabled**.
-$1
-$21. Go to **Admin > SSH Proxy > Engines**.
-$1
-$21. Type the **SSH Bind Address** (description above).
+
+1. Go to **Admin \> SSH Proxy \> Sites**. 
+1. Click to select **Proxy Enabled**.
+1. Type an **SSH Port**.
+1. Go to **Admin > SSH Proxy > Engines**.
+1. Type the **Hostname** and **IP Address** (description above).
+1. Type the **SSH Bind Address** (description above).
 
 ## Logging into the SSH Terminal
-$1
-$2
+
+1. From any SSH terminal, connect to hostname or IP address and port, as specified in the SSH Proxy Configuration page. Use the DE hostname or IP if connecting to an engine. Examples:
+
    `ssh 127.0.0.1 -p 22`
 
    `ssh user54@127.0.0.1 -p 22`
-$1
-$2   
-$1
-$2
+
+1. If not provided in the SSH connect command, enter your SS username and password at the **Login as:** prompt.
+   
+1. If successful, you will see the terminal banner displayed, along with a list of available commands.
+
 ## Increasing Maximum Concurrent Logins for Users
 
 Logging in to SSH terminal counts against the number of concurrent SS sessions a user is allowed. For example, if **Maximum concurrent logins per user** is set to “1” and the user john.smith is logged into the SS Web user interface, then john.smith logs into SSH terminal, his first Web session will end, and he will have to log in again to use the Web user interface. 
 
 To increase the maximum concurrent logins per user:
-$1
-$21. Click the **Login** tab.
-$1
-$21. Click the **Maximum concurrent logins per user** dropdown list and select the desired number.
-$1
-$2
+
+1. Go to **Admin > Configuration**. The Configuration page appears.
+1. Click the **Login** tab.
+1. Click the **Edit** button at the bottom of the page. The page becomes editable.
+1. Click the **Maximum concurrent logins per user** dropdown list and select the desired number.
+1. Click the **Save** button.
+
 ## SSH Terminal Login with Two Factor Authentication
 
 SSH terminal is considered a Web service and can be used with two factor authentication (2FA). To enable 2FA for terminal:
-$1
-$2$1
-$2   - **Website and Web Service Login**
+
+1. Follow the steps in the **Two-Factor Authentication** section of the [Secret Server Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Admin-Guide) to set up 2FA.
+
+1. Go to **Admin \> Configuration \> Login \> Require Two Factor for these Login Types** and select one of these:
+   - **Website and Web Service Login**
    - **Web Service Log on Only**
-$1
-$2
+
+1. Enable 2FA on the SS user by going to **Admin \> Users \> Select a user \> Edit \> Two Factor** and select the 2FA option. 
+
    > **Note:** FIDO2 authentication is not supported in this version of SSH terminal. 
-$1
-$2
+
+1. From any SSH terminal, connect to hostname or IP address and port, as speciﬁed in the SSH Proxy Conﬁguration page. Use the distributed engine hostname or IP if connecting to an engine. Examples:
+
    `ssh 127.0.0.1 -p 22`
 
    `ssh username@127.0.0.1 -p 22`
-$1
-$2$1
-$2
+
+1. If not provided in the SSH connect command, enter your SS username and password at the **Login as:** prompt. 
+
+1. You will be prompted for a PIN or custom challenge message by your 2FA provider. Example:
+
    login as:  `duouser` **\<Enter\>**
 
    Using keyboard-interactive authentication.
@@ -157,8 +168,9 @@ $2
    Using keyboard-interactive authentication.
 
    Pin Code: `3787` **\<Enter\>**
-$1
-$2
+
+1. If successful, you will see the terminal banner displayed, along with a list of available commands.
+
 ## Escaping Special Characters
 
 When manipulating secrets containing special characters, such as single quotes and double quotes, you must escape those characters in the command.
@@ -246,63 +258,34 @@ Ignore subfolders in the search. Subfolders are included by default.
 ID of the secret field to limit the search to. Potential fields, which vary by secret template, can include the following examples:
 
 - Address1
-
 - Address2
-
-- Address1
-
+- Address3
 - Blog
-
-- Address1
-
+- CardType
 - City
-
-- Address1
-
+- Combination
 - Contact Number
-
-- Address1
-
+- Country
 - Email Address
-
-- Address1
-
+- ExpirationDate
 - Fax
-
-- Address1
-
+- First Name
 - FullName
-
-- Address1
-
+- Home Phone
 - Last Name
-
-- Address1
-
+- Machine
 - Mobile Phone
-
-- Address1
-
+- Notes
 - Number
-
-- Address1
-
+- Password
 - Pin
-
-- Address1
-
+- PinCode
 - Server
-
-- Address1
-
+- SSN
 - State
-
-- Address1
-
+- Username
 - Website
-
-- Address1
-
+- Work Phone
 - Zip
 
 > **Note:** These fields match those on the REST API endpoint.
@@ -354,7 +337,6 @@ Find a list of secrets matching “admin” in any field. Return 25 results, whi
 #### Description
 
 - Displays information on a secret. The available information depends on the secret's template. *cat* is short for *concatenate*. 
-
 - Catches access errors, such as “comment required” or “requires approval”, and displays them on the terminal
 
 - Audits "view" comments.
@@ -463,88 +445,109 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
 ## Launching a Secret with the SSH Terminal
 
 ### Launching a Secret on a Local Site
-$1
-$2  - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
+
+1. To launch, the secret must be:
+  - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
   - Shared with the terminal user 
-$1
-$2
+1. Log in to the terminal with SS user credentials:
+
   ![1565211104745](images/1565211104745.png)
-$1
-$2
+1. If the secret ID is unknown, search for the desired secret with the search command:
+
   ![1565211304624](images/1565211304624.png)
-$1
-$2
+1. To view secret detail, get the secret ID from search results, and run
+
   `cat <secret_id>`
 
   ![1565211392881](images/1565211392881.png)
-$1
-$2
+
+5. To launch the secret, enter the launch command as specified in the last line of secret details:
+
    `launch <secret_id>`
 
    ![1565211520674](images/1565211520674.png)
-$1
-$2
+
+6. To exit the launch session and return to the terminal, type `exit`.
+
 ![1565963705255](images/1565963705255.png)
-$1
-$2
+
+7. To exit the terminal session, type `exit` again.
+
 ### Launching a Secret on a Distributed Engine Site
-$1
-$2   - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
+
+1. To launch, the secret must be:
+   - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
    - Shared with the terminal user 
-$1
-$2
+
+1. Log in to the terminal with SS user credentials:
+
    ![1565211104745](images/1565211104745.png)
-$1
-$2
+
+1. If secret ID is unknown, search for the desired secret with the search command:
+
    ![1565211304624](images/1565211304624.png)
-$1
-$2
+
+1. To view secret detail, get the secret ID from search results, and run
+
    `cat <secret_id>`
 
    
 
    ![1565286105456](images/1565286105456.png)
-$1
-$2$1
-$2$1
-$2
+
+1. Note that the connection is not made, and instructions are displayed for logging into another distributed engine terminal to launch the secret.
+
+1. Note the suggested parameters in the **Launch Instructions**.
+
+1. Type `exit` and press **\<Enter\>** to disconnect from the current session:
+
    ![1565286692529](images/1565286692529.png)
-$1
-$2
+
+1. Open a new SSH session suggested parameters:
+
    `ssh <secret_server_username>@<engine_hostname_or_ip> -p <Port> -t launch <secret_id>`
    
-$1
-$2
+1. Enter the password to log in, and the secret should immediately launch.
+
 ### Launching a Secret upon Terminal Connection
-$1
-$2
+
+1. To launch, the secret must be:
+
    - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
    - Shared with the terminal user 
-$1
-$2
+
+1. If the secret ID and connection string is known, you can log in and immediately launch the secret with the following command:
+
    `ssh <secret_server_username>@<hostname_or_ip> -p <Port> -t launch <secre_id>`
-$1
-$2
+
+3. If you do not know that connection string, log into terminal and run:
+
    `cat <secret_id>`
-$1
-$2
+
+4. Look at the **Launch Instructions** at the end of secret details, and note the parameters.
+
 ## SSH Terminal Launching with a Custom SSH Command Whitelist
 
 SS terminal can launch secrets with custom SSH Command restrictions. For detailed instructions on SSH command menus, please consult the **Managing SuperUser Privilege** section of the [Secret Server Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Admin-Guide).
 
 > **Note:** Custom SSH command menus require either the SS Platinum or Unix SUPM add on license.
-$1
-$2$1
-$2$1
-$2$1
-$2   
+
+1. Go to **Admin > See All**. The Administration page appears.
+
+1. Click the **SSH Command Menus** link. The SSH Command Menus page appears.
+
+2. Click the **Create New** button.
+
+3. Type a name, description and the SSH commands:
+   
    ![1569424832544](images/1569424832544.png)
    
    Once one or more command menus have ben created, access can be controlled to individual Unix SSH secrets.
    
-$1
-$2$1
-$2   
+5. On the **Security** tab of a secret that can use a proxied SSH session, proxy must be enabled, as well as command menu restrictions. If **Allow Owners Unrestricted SSH Commands** is enabled, any user who is an owner of the secret has unrestricted use of the launched session. That is, that user is able to type in commands as in a normal SSH session. Additionally, other groups can be assigned the unrestricted role as well.
+
+6. In the following example, the “admin” group is unrestricted, and everyone who is not in that admin group is restricted to only being able to run the whitelisted commands that are specified in the user command menu created above.
+   
 
   ![1569425961920](images/1569425961920.png)
 
@@ -555,8 +558,9 @@ $2
   And click the dropdown list to select Whitelisted Commands:
 
   ![1569426365427](images/1569426365427.png)
-$1
-$2   
+
+1. A user who is subject to SSH command restrictions is presented with a screen similar to the following when launching this secret from SS terminal:
+   
 
   ![1569431038970](images/1569431038970.png)
 
@@ -575,25 +579,28 @@ SS SSH terminal launches also support session recording for session client or se
 > **Note:** See the Session Recording section of the [Secret Server Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Admin-Guide). for more information.
 
 To enable session recording: 
-$1
-$21. Click the **Session Recording** tab.
-$1
-$21. Ensure the **Enable Session Recording** check box is selected.
-$1
-$21. Click the **Save** button.
+
+1. Go to **Admin > Configuration**. The Configuration page appears.
+1. Click the **Session Recording** tab.
+1. Click the **Edit** button at the bottom of the page. The page becomes editable.
+1. Ensure the **Enable Session Recording** check box is selected.
+1. Modify other settings as desired.
+1. Click the **Save** button.
 
 To enable session recording on a secret:
-$1
-$21. Click the **Security** tab. 
-$1
-$21. Click to select the **Session Recording Enabled** check box.
-$1
-$2
+
+1. Open a secret.
+1. Click the **Security** tab. 
+1. Click the **Edit** link to the right of the **Session Recording Enabled** setting. The Edit Security popup page appears.
+1. Click to select the **Session Recording Enabled** check box.
+1. Click the **Save** button.
+
 To view session data following a terminal secret launch:
-$1
-$21. Click the **Audit** tab.
-$1
-$21. Click the **View SSH Session Log** link.
+
+1. Open a secret.
+1. Click the **Audit** tab.
+1. Find the **LAUNCH** action in the table.
+1. Click the **View SSH Session Log** link.
 
 
 

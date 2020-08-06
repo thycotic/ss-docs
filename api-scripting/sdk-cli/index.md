@@ -17,9 +17,7 @@ There is also a .NET Core CLI SDK Client that uses the SDK .NET library. The SDK
 The .NET SDK library and the .NET Core CLI client both:
 
 - Automatically store the credentials and remote server in an encrypted file used to acquire an OAUTH token. The token is then used to make subsequent API calls. OAUTH tokens have an expiration time, which is configurable in the UI on the configuration page via the “Session Timeout for Webservices” value.
-
 - Get the contents of a secret.
-
 - Provide client-side caching (SDK client caching)
 
 Secret Server has user and application accounts. Both types can access SS via the REST API. Application accounts are not counted for licensing purposes. Application account can *only* access SS via the REST API. Both account types never expire.
@@ -45,9 +43,7 @@ Secret Server exposes a REST API interface the is used by the SDK client. When t
  Out of the box, the SDK offers: 
 
 - token retrieval 
-
 - secret retrieval 
-
 - secret field retrieval
 
 > **Note:** We expect to expand the SDK’s capabilities over time to allow even greater access to the REST API.
@@ -57,9 +53,7 @@ The SDK requires setup in two areas: SS configuration and SDK installation on th
 ## Required Roles and Permissions
 
 - **Administer Configuration:** Allows a user to enable SDK functionality in SS, that is, to enable webservices and enable the SDK itself.
-
 - **Administer Users:** Allows a user to use the SDK to retrieve account credentials on client machines. Alternatively, you can be the owner of the application account used by the SDK.
-
 - **Administer Create Users:** Allows a user to access the **Admin > SDK Client Management** page in SS.
 
 ## Setup Procedure
@@ -67,12 +61,12 @@ The SDK requires setup in two areas: SS configuration and SDK installation on th
 ### Task 1: Configuring Secret Server
 
 Configure SS for communication with the SDK:
-$1
-$22. Click the **General** tab.
-$1
-$24. Click to select the **Enable Webservices** check box in the **Application Settings** section.
-$1
-$26. Select and setup any application accounts that you want for use by SDK clients. Make sure these application accounts have appropriate permissions to access any secrets or execute any operations the client host needs to perform. To create a new account with the needed permissions:
+1. Navigate to **Admin \> Configuration**.
+2. Click the **General** tab.
+3. Click the **Edit** button.
+4. Click to select the **Enable Webservices** check box in the **Application Settings** section.
+5. Click the **Save** button.
+6. Select and setup any application accounts that you want for use by SDK clients. Make sure these application accounts have appropriate permissions to access any secrets or execute any operations the client host needs to perform. To create a new account with the needed permissions:
    1. Go to **Admin \> Users**.
    1. Click the **Create New** button. The Edit User page appears:
    
@@ -91,8 +85,9 @@ $26. Select and setup any application accounts that you want for use by SDK clie
    1. Click the **OK** button. The View User page appears:
    
       ![image-20200604111246092](images/image-20200604111246092.png)
-$1
-$2   1. Go to **Admin > Roles**.
+
+7. Create a new role:
+   1. Go to **Admin > Roles**.
    
    1. Click the **Create New** button. The Role Edit page appears:
    
@@ -101,8 +96,8 @@ $2   1. Go to **Admin > Roles**.
    3. Type the new role name in the **Role Name** text box.
    4. Assign the **View Secret** permission to that role. The permission appears in the Permissions Assigned text box. You can add additional permissions later as needed.
    5. Click the **Save** button. The new role appears in the Roles table.
-$1
-$2   
+1.  Enable SDK management:
+   
    1.  Go **Admin > See All**. The admin panel appears.
    
    2.  Type SDK in the **Search** text box and select **SDK Client Management**. The SDK Client Management page appears:
@@ -111,8 +106,8 @@ $2
    
    3.  Click the **Disabled** toggle button to change it to **Enabled**.
    
-$1
-$2   
+9.  Set up a SDK client rule:
+   
    1. Click the **Client Onboarding** tab.
    
       ![image-20200604112653676](images/image-20200604112653676.png)
@@ -142,16 +137,17 @@ $2
 > **Note:** IWA is not supported by the SDK.
 
 > **Note:** You can use any any operating system supported by .NET Core 2.1. See [.NET Core 2.1 - Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) on GitHub.
-$1
-$21. Unzip the SDK zip file you downloaded.
-$1
-$21. On non-Windows systems, you must make the tss program executable by running `chmod u+x tss`.
-$1
-$2   - On Red Hat or Centos, run `sudo yum install libunwind libicu`
+
+1. [Download the SDK](../sdk-downloads/index.md) for your platform.
+1. Unzip the SDK zip file you downloaded.
+1. To get the SDK Nuget packages, see our [documentation on GitHub](https://github.com/thycotic/sdk-documentation).
+1. On non-Windows systems, you must make the tss program executable by running `chmod u+x tss`.
+1. On Linux systems, you must install libunwind as follows:
+   - On Red Hat or Centos, run `sudo yum install libunwind libicu`
    - On Ubuntu, run `sudo apt-get install libunwind-dev`
    
-$1
-$2   - On Windows, run `tss --help` 
+1. To confirm the SDK client tool is installed and working, run the help:
+   - On Windows, run `tss --help` 
    - On non-Windows systems, run `./tss --help` 
 
 ### Task 3: Connecting to Secret Server
@@ -163,9 +159,7 @@ Run `tss init --url <url> -r <rule> -k <key>` using the parameters you recorded 
 For example, if your parameters are:
 
 - SS is hosted at `https://myserver/SecretServer/`
-
 - You created a rule named ProductionWebApp
-
 - Your onboarding key is CNrQwRBscnq4qAZ6v3EIAcE27vQuLlz6KSpfRJHryyA=
 
 Then you would run: 
@@ -179,13 +173,9 @@ Secret Server will validate that the client-provided information is correct and 
 ## Usage Examples
 
 - Retrieving a secret by ID (returns a JSON structure describing the entire secret record): `tss secret -s 4`
-
 - Retrieving all secret field values for a secret by ID: `tss secret -s 4 -ad`
-
-- Retrieving a secret by ID (returns a JSON structure describing the entire secret record): `tss secret -s 4`
-
+- Retrieving only the value of a particular secret field by secret ID: `tss secret -s 4 -f password`
 - Writing a secret field value to a file: `tss secret -s 4 -f password -o passwordfile.txt`
-
 - Retrieving an access token for use in other REST API requests: `tss token`
 
 The SDK client also includes an interactive mode (`tss -i`) that allows you to input multiple commands into a series of prompts. To exit interactive mode, run the `exit` command.
@@ -193,16 +183,17 @@ The SDK client also includes an interactive mode (`tss -i`) that allows you to i
 ## SDK Client Management
 
 To view and manage a list of connected SDK clients from within SS: 
-$1
-$21. Type SDK in the **Search** text box and select **SDK Client Management**. The SDK Client Management page appears.
-$1
-$21. Click the **Client Onboarding** tab to manage the onboarding rules.
-$1
-$2   
+
+1. Go **Admin > See All**. The admin panel appears.
+1. Type SDK in the **Search** text box and select **SDK Client Management**. The SDK Client Management page appears.
+1. Click the **Accounts** tab. A list of connected SDK clients SDK appears. You can remove or rename them. You can use the **Enable/Disable** button at the top of the page to disable and re-enable all SDK client activity.
+1. Click the **Client Onboarding** tab to manage the onboarding rules.
+1. Click the **Audit** tab. A list of SDK client activity appears.
+   
    > **Note:** If you remove a connected client, it may be able to reconnect unless you alter or remove the rule that it used. You can use the button above the grid to disable and re-enable all SDK client activity.
    
-$1
-$2
+1. To remove the SS connection from a client machine, run the `tss remove` command. This deletes the connection, and the client can no longer retrieve SS data without being re-initialized. 
+
 ## SDK Client Caching
 
 ### Overview
@@ -210,11 +201,8 @@ $2
 To increase performance and reliability, you can configure the SDK client to cache values retrieved from SS on the client machine. Cached values are stored encrypted on disk. You can configure client caching in one of four ways: 
 
 - **Never** (0): With this default setting, the client never caches SS data. All data requests result in a query directly against the SSS instance. If the instance is unavailable, the requests fail.
-
 - **Server Then Cache** (1): With this setting, the client first attempts to retrieve the value from the server. If the server is unavailable, it checks to see if the same value has been previously fetched within a given period, and if so, it will returns the cached value. Use this setting to guard against losing the connection to SS.
-
-- **Never** (0): With this default setting, the client never caches SS data. All data requests result in a query directly against the SSS instance. If the instance is unavailable, the requests fail.
-
+- **Cache Then Server** (2): With this setting, the client first checks to see if the same value has been previously fetched within a given period. If so, it returns the value without consulting the server. If not, it fetches, caches, and returns the value from the server. Use this setting for increased performance by reducing requests sent to SS.
 - **Cache Then Server Fallback on Expired Cache** (3): This strategy operates similarly to “Cache Then Server,” but if the server is unavailable and an expired value exists in the cache, the client returns that value as a last resort. Use this strategy for increased performance and reliability.
 
 All these cache strategies have a configurable age, in minutes, after which the value is considered expired and not used (except in “Cache Then Server Fallback” mode). Cache settings are set using the client application. See the examples below.
@@ -224,9 +212,7 @@ All these cache strategies have a configurable age, in minutes, after which the 
 - Turn off caching: `tss cache --strategy 0`
 
 - Turn on “Cache Then Server” setting with a cache age of five minutes: `tss cache --strategy 2 --age 5`
-
 - Immediately clear all cached values: `tss cache --bust`
-
 - Show the current cache settings: `tss cache --current`
 
 > **Important:** Anytime you use a cached value, recent changes made to SS may not be applied, including changes to the value itself, permissions, or other access control settings. Examine your organization’s security policies and application requirements to determine the best cache settings to use.

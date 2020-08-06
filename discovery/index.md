@@ -51,13 +51,19 @@ A typical automated discovery process for Active Directory domains, running on a
 > **Note:** The majority of current discovery processes are for AD discovery source type. The others types differ by input and output but follow a similar process.
 
 > **Note:** Even though automatic discoveries run on a set interval, you cannot schedule when those occur. The interval is from whenever the discovery last ran.
-$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2$1
-$2
+
+1. Discovery matching runs. The discovery matcher creates a link between existing active secrets and any existing secrets in SS based on their machine names, accounts and dependencies. The matcher is automatic. When matches are found, the corresponding existing discovery results appear as “managed” in the discovery network view with a link to the existing secret or dependency.
+
+1. Discovery rules run and attempt to match any unmanaged discovery results to the rule’s parameters. If a rule matches the results, discovery automatically imports the results using the settings in the discovery rule. Once finished, discovery begins:
+
+1. The Find Host Ranges scanner (using the Windows Discovery base scanner) runs with an Active Directory Domain input template. The scanner determines which OUs are to be scanned and populates its Organizational Unit output template with a list of those OUs. The output template will be used by the following Find Machine scanner and also by the Find Local Accounts scanner, which does not require machine information.
+
+1. The Find Machine scanner (using the Windows Discovery base scanner) examines OUs from its Organizational Unit input template via LDAP and creates a list of machines with which it populates its Windows Computer output template. This is the list of computers to run a dependency scan on. The Find Dependencies scanner uses this instance of the output template as its input template.
+
+1. The Find Local Accounts scanner (using the File Load Discovery base scanner) examines OUs from its Organizational Unit input template via LDAP and creates a list of all AD admin accounts with which it populates its Active Directory Account output template. This is the list of discovered admin accounts.
+
+1. The Find Dependencies scanner (using the Windows Discovery base scanner) examines a list of machines from its Windows Computer input template using various technologies. For example, applications pools use Microsoft Web Administration (WMA) or, failing that, Windows Management Instrumentation (WMI). Services use WMI, and scheduled tasks use Windows’ task scheduler interfaces. The Find Dependencies scanner can return any number of output templates as desired. These include: Com+ Application, Computer Dependency (Basic), PS Dependency, Remote File, SQL Dependency (Basic), SSH Dependency (Basic), SSH Key Rotation Dependency, Windows Application Pool, Windows Scheduled Task, and Windows Service.
+
 The discovered dependencies for local accounts are displayed at Admin \> Discovery \> Discovery Network View \> Local Accounts Tab. Returned accounts for AD users are displayed at  Admin \> Discovery \> Discovery Network View \> Domain \> Cloud Accounts. 
 
 > **Note:** Any dependencies that were discovered in prior discovery runs that are no longer present are removed from the discovery results, and their secret dependencies are deactivated.
