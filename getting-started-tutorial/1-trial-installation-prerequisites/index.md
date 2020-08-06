@@ -23,8 +23,11 @@ For testing of high availability for the SQL Server, you can use either existing
 ### Checklist
 
 - Windows Server 2012 or newer (recommended) (one server, minimum)
+
 - SQL Server (one instance, minimum)
-- Application server prerequisites
+
+- Windows Server 2012 or newer (recommended) (one server, minimum)
+
 - SSL certificate
 
 ### SQL Server
@@ -42,11 +45,10 @@ We recommend installing SS on Windows Server 2012 or greater. Include IIS, ASP.N
 ### Service Account
 
 Set up a service account:
-
-1. Log on as a batch job (on the server that SS runs on)
-1. Modify permissions to the SS application directory (typically `C:\inetpub\wwwroot`) and `C:\Windows\temp`.
-1. Provide access to your SQL Server instance by adding the db_owner permission to the SS database.
-
+$1
+$21. Modify permissions to the SS application directory (typically `C:\inetpub\wwwroot`) and `C:\Windows\temp`.
+$1
+$2
 For detailed instructions on how to configure the permissions for the service account, see [Running Secret Server IIS Application Pool with a Service Account ](https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB)(KB). The installation guides iinclude instructions for assigning db_owner permission to the service account in SQL Server.
 
 If you would like to test features that rely on Active Directory, such as AD group sync or discovery, you should also have accounts available with the appropriate permissions (described below). One option is to use the same account for both features.
@@ -68,10 +70,15 @@ We recommend having a few test accounts available to represent the types of acco
 To test email notifications, which can be used for event subscription notifications or requests for approval to passwords, you need configuration information for the company SMTP server:
 
 - Service account to run the application and connect to SQL
+
 - Domain (test or production)
-- Domain account to be used for AD sync and discovery
+
+- Service account to run the application and connect to SQL
+
 - Test machines (if testing discovery)
-- Test accounts
+
+- Service account to run the application and connect to SQL
+
 - SMTP server settings
 
 ### SSL Certificate

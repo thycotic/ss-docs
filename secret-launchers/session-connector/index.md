@@ -38,7 +38,7 @@ The SSSC feature is largely scalable and can be set up using a single RDS server
 
 ## Download
 
-Session Connector is downloaded separately from SS. Go to [Session Connector Download](../session-connector-download/index.md)  for download links and hashes.
+Session Connector is downloaded separately from SS. Go to [Session Connector Download](../session-connector-downloads/index.md)  for download links and hashes.
 
 ## Configuration
 

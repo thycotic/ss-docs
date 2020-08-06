@@ -19,9 +19,13 @@ It is critical to secure your SS implementation. That needs to include a layered
 ### General
 
 - **Keep Windows up-to-date:** Microsoft regularly releases security patches that resolve vulnerabilities in Windows operating systems.
+
 - **Backup at least daily:** Consider your disaster recovery plan. Review the [Business Continuity and Disaster Recovery Planning](http://updates.thycotic.net/link.ashx?SSBusinessContinuity) KBA for more information.
-- **Review system log for errors:** Periodically check the system log (Admin > System Log) for recurring errors. Also do so after any upgrades.
+
+- **Keep Windows up-to-date:** Microsoft regularly releases security patches that resolve vulnerabilities in Windows operating systems.
+
 - **Whole-disk encryption:** Use whole disk encryption, such as [BitLocker](https://technet.microsoft.com/en-us/library/hh831507(v=ws.11).aspx?f=255&MSPPError=-2147217396), with a trusted platform module (TPM) to prevent those with physical access from removing disks to gain access to your SS application by circumventing OS and application authentication.
+
 - **Security Hardening Standards:** Consider security hardening standards that apply to either the operating system or applications, such as IIS or Microsoft SQL. Our application does not currently have full compatibility with third party standards such as CIS Level 1 hardening or the Microsoft Published Security Baselines. We are compatible with CIS Level 2 hardening and have STIG compatibility.
 
    > **Note:** Attaining full security-hardening standards compatibility is a Thycotic priority.
@@ -33,10 +37,15 @@ On Active Directory domain controllers, there is a set of unsafe default configu
 ### Database
 
 - **Limit access to your Secret Server database:** When you create your SS database, limit access to as few users as possible. We recommend you disable the "sa" account in the SQL instance that contains SS.
+
 - **Limit access to other databases:** When you create a database account for SS, you should ensure it only has access to the SS database. 
-- **Use Windows Authentication for database access:** Windows authentication is much more secure than SQL authentication. See [Choose an Authentication Mode](http://updates.thycotic.net/link.ashx?UsingWindowsAuthenticationInSQLServer) (TechNet article) for details. To use Windows authentication in SS, you need to create a service account. See the [Using Windows Authentication to access SQL Server](http://updates.thycotic.net/link.ashx?SSWindowsAuthentication) KBA for details.
+
+- **Limit access to your Secret Server database:** When you create your SS database, limit access to as few users as possible. We recommend you disable the "sa" account in the SQL instance that contains SS.
+
 - **Limit access to your database backups:** Database backups are critical for disaster recovery, but they also carry a risk if someone gains access. The SS database is encrypted, but you should still limit access to ensure maximum security. Limit access to database backups to as few users as possible.
-- **Don't share a SQL instance with less secure databases:** Putting the database on a server with less-secure database instances can expose vulnerabilities. For example, an attacker could use SQL injection on another application to access your private SS database. If you intend to put SS on a shared SQL instance, ensure that the other databases are classified internally as sensitive as SS and have similar security controls in place.
+
+- **Limit access to your Secret Server database:** When you create your SS database, limit access to as few users as possible. We recommend you disable the "sa" account in the SQL instance that contains SS.
+
 - **Review Microsoft's recommendations for SQL security:** See the [Securing SQL Server](https://updates.thycotic.net/links.ashx?SecuringSqlServer) article in Microsoft's documentation.
 
 > **Note:** SS also supports SQL Server Transparent Data Encryption ([TDE](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?redirectedfrom=MSDN&view=sql-server-ver15)) for further protection of the database files. This can have a slight performance impact on the environment and can increase the complexity of the database configuration. Please review this page for more information: [Transparent Data Encryption (TDE)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15).
@@ -413,11 +422,10 @@ To prevent a single person from having that much access, the two role permission
 A solution is to create the two roles, each containing one of the permissions, and then take those two permissions out of the day-to-day administrator role and any other roles besides the two. You can then assign either one of those roles to trusted people with no single person having both roles. 
 
 Thus, the access procedure is:
-
-1. User A with the role with the "administer configuration unlimited admin" permission puts the system into "unlimited administration" mode. Not having the correct role, user A cannot make any changes requiring the "unlimited administrator" permission.
-1. User B with the role with the "unlimited administrator" permission performs any configuration or accesses secrets only available to that role.
-1. When User B is finished, user A takes the system out of "unlimited administration" mode. 
-1. User B can no longer make any changes requiring the "unlimited administrator" permission because roles with that permission can only be accessed in "unlimited administration" mode. User A cannot make any changes either because User A does not a the role with the "unlimited administrator" permission.
+$1
+$21. User B with the role with the "unlimited administrator" permission performs any configuration or accesses secrets only available to that role.
+$1
+$21. User B can no longer make any changes requiring the "unlimited administrator" permission because roles with that permission can only be accessed in "unlimited administration" mode. User A cannot make any changes either because User A does not a the role with the "unlimited administrator" permission.
 
 Additional safeguards included:
 
@@ -448,8 +456,11 @@ To turn on DPAPI encryption of the file, select **Configuration** from the **Adm
 You can use DPAPI while clustering is enabled for SS, however there are a few things to take into consideration:
 
 - Backup the encryption key before using this option, otherwise disaster recovery could prove impossible, should the server fail.
+
 - You must initially transfer the un-encrypted key that DPAPI will encrypt to each SS node. 
-- You must enable DPAPI for SS by accessing each server locally (browse to SS while on the server it is installed on, and then enable DPAPI encryption).
+
+- Backup the encryption key before using this option, otherwise disaster recovery could prove impossible, should the server fail.
+
 - During upgrades, to avoid turning off DPAPI, you can copy all files over to secondary nodes *except* for  `database.config` and `encryption.config`.
 
 For more information about clustering SS, see [Setting up Clustering](http://support.thycotic.com/kb/a159/setting-up-clustering.aspx) (KBA). 
@@ -459,23 +470,16 @@ For more information about clustering SS, see [Setting up Clustering](http://sup
 Encrypting File System (EFS) is a Microsoft technology that allows a user to encrypt files with their password. This means that only the user who encrypted the file will be able to access it, even if it is assigned to other users. If an administrator resets the password on this account and the account does not change its own password, then the file is not recoverable.
 
 You can use EFS to protect your SS encryption key. This allows only a single service account to access the file, and no other user can read the key unless they know the service account password. Below are the steps for encrypting your `encryption.config` and `database.config` files with EFS:
-
-1. Backup your `encryption.config` and `database.config` files to a secure location.  This is very important for DR recovery purposes. 
-
+$1
+$2
    > **Important:** This step is critical—If you lose access to your service account or the server fails,  you will be unable to recover your secrets without these backup files.
-
-1. Create a new service account or select an existing one. The service account should initially have privileges to log on a computer.
-
-1. If you have already installed SS and are using Windows authentication for database access, make sure the service account has access to the database.
-
-1. Run the SS application pool as this service account. See [Running the IIS Application Pool As a Service Account](../networking/running-ss-iis-app-pool-service-account/index.md) .
-
-1. Give the service account full access to your SS directory through Windows Explorer if it does not have it already.
-
-1. Log on your server as the service account.
-
-1. For both the `encryption.config` and `database.config files` (this instruction uses the former):
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
    1. Locate the `encryption.config` file in your SS directory (usually `C:\inetpub\wwwroot\SecretServer`).
    1. Right-click the file and select **Properties**.
    1. Click the **General** tab.
@@ -485,13 +489,10 @@ You can use EFS to protect your SS encryption key. This allows only a single ser
    1. Click the **Apply** button.
    1. If prompted, select the **Encrypt the file only** option.
    1. Click the **OK** button.
-
-1. Log out of Windows and log back in as an administrator. 
-
-1. Confirm that the application still works by performing an IIS Reset (`IISReset` command at the command prompt) or recycling the application pool. 
-
-1. Ensure you you can still log in and view your secrets.
-
+$1
+$2$1
+$2$1
+$2
 ### SSL (TLS) and HSTS
 
 We strongly recommend employing SSL (TLS) for SS. Taking SSL a step further, SS also supports HTTP Strict Transport Security (HSTS). HSTS is supported by modern browsers and tells the browser that a site is only accessible by SSL with a valid certificate, period. Even if there is a man-in-the-middle attack with a trusted, but different, SSL certificate, the browser will reject the SSL certificate. Consequently, this setting is very useful for protecting against forged SSL certificates or man-in-the-middle attacks.
@@ -505,20 +506,19 @@ Host SSH Key verification is supported for use with heartbeat, proxied launchers
 ### Mapping an SHA1 Digest to Secrets
 
 To configure host SSH key verification:
-
-1. Navigate to **Secret Templates** from the **Admin** menu.
-1. And add a field for the host's SSH key digest. 
-1. Click **Configure Extended Mappings**. 
-1. Add a **Server SSH Key** mapping to your newly created SSH key digest field. 
-1. On your secrets, add the SSH key digest of the hosts to your digest field. Verification takes effect the next time you connect to the host.
-
+$1
+$21. And add a field for the host's SSH key digest. 
+$1
+$21. Add a **Server SSH Key** mapping to your newly created SSH key digest field. 
+$1
+$2
 ### Validating SHA1 Digests for Unix Account Discovery 
 
 To validate SHA1 server digests for Unix account discovery, create a file named `KeyDigests.txt` in the root of the SS website. Each line should contain an IP address or other computer identifier, a comma, and the SHA1 digest, for example:
 
 ```
-192.168.1.5,7E:24:0D:E7:4F:B1:ED:08:FA:08:D3:80:63:F6:A6:A9:14:62:A8:15
-apollo,7A:25:AB:38:3C:DD:32:D1:EA:86:6E:1C:A8:C8:37:8C:A6:48:F9:7B
+$1
+$2apollo,7A:25:AB:38:3C:DD:32:D1:EA:86:6E:1C:A8:C8:37:8C:A6:48:F9:7B
 ```
 
 When the file exists and has data, all scanned machines must match one of the SHA1 hashes in the file before scanning. Any computers that do not match will still show up on the "Discovery Network View" page, but authenticated scanning will not take place. That is, no credentials will be passed to the machine, and accounts will not be retrieved from the machine.
@@ -532,27 +532,24 @@ This section describes plugging some potential, minor but significant, informati
 ### Procedure
 
 First, **hide the IIS version**. The HTTP header "X-Powered-By" reveals the version of IIS used on the server. To stop this, remove the header:
-
-1. Open the IIS Manager.
-1. In the **Connections** tree, select the website that SS is running under.
-1. Click the **HTTP Response Headers** button on the right. The HTTP Response Headers panel appears.
-1. Click to select the **X-Powered-By** HTTP header.
-1. Click the **Remove** button in the **Actions** panel. The header disappears.
-
+$1
+$21. In the **Connections** tree, select the website that SS is running under.
+$1
+$21. Click to select the **X-Powered-By** HTTP header.
+$1
+$2
 Second, **hide the ASP.NET version**. The HTTP header "X-ASPNET-VERSION" reveals the version of ASP.NET being used by the SS application pool. To stop this, remove the header:
-
-1. Open the `web.config` file for SS, which is located in the root directory for the website.
-1. Inside the `<system.web>` tag, add the tag `<httpRuntime enableVersionHeader="false"/>`.
-1. Save the file.
-
+$1
+$21. Inside the `<system.web>` tag, add the tag `<httpRuntime enableVersionHeader="false"/>`.
+$1
+$2
 Third, **hide the server type**. The header line `Server: Microsoft-HTTPAPI/2.0` is added to the header by the .NET framework. To remove that information, you must update the Windows Registry:
 
 **Important:** Do not simply remove the Server header variable—it will cause parts of SS to malfunction. 
-
-1. Open the Windows Registry Editor.
-1. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters`.
-1. Change the `DisableServerHeader` (REG_DWORD type) registry key from `0` to `1`.
-
+$1
+$21. Navigate to `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters`.
+$1
+$2
 > **Note:** There are other ways to hide the server type. We strongly recommend this one.
 
 ## Additional Resources

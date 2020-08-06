@@ -11,12 +11,19 @@
 Before you contact Support, gather the following information:
 
 - Your Thycotic Support username and password
+
 - The email account already associated with your account (if using email)
-- Your company name
+
+- Your Thycotic Support username and password
+
 - The technical contact name
-- The technical contact phone number
+
+- Your Thycotic Support username and password
+
 - The product name
-- Issue symptoms and details
+
+- Your Thycotic Support username and password
+
 - Any other relevant details, such as hours the technical contact is present
 
 ## Step Two: Get a Mandatory Support PIN 
@@ -24,13 +31,12 @@ Before you contact Support, gather the following information:
 The support PIN validates that your license includes support, and you must provide the PIN in your email or when you call. The PIN also makes it easier for Thycotic Support to locate your customer records and give you better support.
 
 To get your PIN:
-
-1. Get the log on credentials you received when you became a Thycotic customer.
-1. Log on the [Support Portal](https://thycotic.force.com/support/s/login/) using your credentials.
-1. On the main page, click the large blue **PIN** bar to get your PIN.
-1. Record your PIN.
-1. If you want to use our ticketing system for support, leave the browser tab open, and return for step four.
-
+$1
+$21. Log on the [Support Portal](https://thycotic.force.com/support/s/login/) using your credentials.
+$1
+$21. Record your PIN.
+$1
+$2
 ## Step Three: Choose a Support Method
 
 Thycotic customers have access to support by phone, email, and our support ticketing system (best for issue tracking). In all cases, **you must first obtain a support PIN**.

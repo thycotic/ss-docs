@@ -11,15 +11,11 @@ General Data Protection Regulation (GDPR) adherence raises the possibility that 
 To address this, SS has a button that automatically removes most PII for any deactivated user.
 
 ## Removing the PII
-
-1. Remove the user from Active Directory (AD). See [Active Directory Considerations](#active-directory-considerations) below.
-
-1. In SS, go to **Admin \> Users**. The Users page appears.
-
-1. Click the user name link for the desired user. The View User Page appears.
-
-1. Click the **Remove Personally Identifiable Information** button. A confirmation dialog box appears.
-   
+$1
+$2$1
+$2$1
+$2$1
+$2   
     > **Important:** Once you confirm, the user cannot log on to SS. Click the Cancel button if you are not positive this is what you want to do.
     
     Clicking the **OK** button will change these to random values:
@@ -38,10 +34,9 @@ To address this, SS has a button that automatically removes most PII for any dea
     - The user's name is replaced with "\<redacted\>" in event audits where it can be clearly identified.
     - The PII removal is recorded in the user's audit
     
-1. Click the **OK** button. The removal begins. Once complete, the Remove PII button disappears for that user.
-
-1. (Optional) Run a query that scans the entire SS database for the removed strings. You may want to do this because the process cannot find *all* potential instances of USER PII throughout SS, such as that in secret names or notes.
-
+$1
+$2$1
+$2
 >**Note:** You can create an Event Subscription to "remove user PII" events.
 
 ## Active Directory Considerations

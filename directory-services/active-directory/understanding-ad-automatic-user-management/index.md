@@ -19,26 +19,24 @@ Newly-added users remain enabled until the first synchronization after the confi
 ## Examples
 
 ### Example One
-
-1. Maria joined the company today.
-1. The next AD synchronization creates a SS account for Maria.
-1. Maria never logs in to SS because she does not need it for her job.
-1. Once the defined number of months have passed, the next AD synchronization disables Maria's SS account.
-1. The SS license used by Maria's account becomes available for use.
-
+$1
+$21. The next AD synchronization creates a SS account for Maria.
+$1
+$21. Once the defined number of months have passed, the next AD synchronization disables Maria's SS account.
+$1
+$2
 ### Example Two
-
-1. Joe gets added to SS but never logs in.
-1. The defined number of months later, Automatic User Management disables his account, freeing his license.
-1. Joe gets promoted to a job that requires SS.
-1. Joe logs into SS.
-1. His account is automatically re-enabled, and he now takes up a license.
-1. Joe gets demoted to his old job, which does not require SS.
-1. A defined number of months later, Automatic User Management disables his account, and the license is freed up once again.
-1. Joe has no idea any of this has happened—the automated process is hidden from him.
+$1
+$21. The defined number of months later, Automatic User Management disables his account, freeing his license.
+$1
+$21. Joe logs into SS.
+$1
+$21. Joe gets demoted to his old job, which does not require SS.
+$1
+$21. Joe has no idea any of this has happened—the automated process is hidden from him.
 
 ### Example Three
-
-1. Rupert logs in to SS several times per month.
-1. The defined number of months for Automatic User Management to disable his account is never reached.
-1. Rupert's account stays current and his license remains his. The entire process is invisible to Rupert.
+$1
+$21. The defined number of months for Automatic User Management to disable his account is never reached.
+$1
+$2

@@ -15,7 +15,9 @@ This is a working example for Secret Server Online. A test user has been filled 
 These modules need to be enabled in the `php.ini` file:
 
 - `extension_dir = "ext"` (depends on path to extension directory)
+
 - `extension=php_soap.dll`
+
 - `extension=php_openssl.dll`
 
 ## Code

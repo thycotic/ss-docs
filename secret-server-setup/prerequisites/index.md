@@ -21,8 +21,11 @@ For testing of high availability for the SQL Server, you can use either existing
 ### Checklist
 
 - Windows Server 2012 or newer (recommended) (one server, minimum)
+
 - SQL Server (one instance, minimum)
-- Application server prerequisites
+
+- Windows Server 2012 or newer (recommended) (one server, minimum)
+
 - SSL certificate
 
 ### SQL Server

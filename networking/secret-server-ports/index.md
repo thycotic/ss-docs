@@ -102,4 +102,5 @@ This article lists ports typically used in Secret Server. Please note the follow
 ## Related Articles and Resources
 
 - [Enabling WMI port on Windows client machines](https://thycotic.force.com/support/s/article/Enabling-WMI-ports-on-Windows-client-machines) (KBA)
+
 - [How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/en-us/help/154596/how-to-configure-rpc-dynamic-port-allocation-to-work-with-firewalls) (KBA)

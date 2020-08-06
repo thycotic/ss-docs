@@ -19,7 +19,9 @@ After installation, the first thing we recommend doing is entering your licenses
 For the Express edition, you have one license to enter. For Professional edition and higher, you have, at minimum:
 
 - An edition license
+
 - A user license
+
 - A support license.
 
 If you purchased additional licenses for sites or distributed engines, you may have more licenses to add.
@@ -31,25 +33,22 @@ If you purchased additional licenses for sites or distributed engines, you may h
 All non-evaluation licenses require activation after install. Activation is per license and Web server combination. Therefore, if you bring up a new Web server, it needs activation, even if your previous Web server was already activated. After installing each license, you are prompted to activate. Follow the on-screen prompts for online or offline activation. The activation process gathers the name, email, and phone number of the individual activating for internal purposes only. No other personal information is be sent to Thycotic.
 
 To activate licenses:
-
-1. Go to **Admin \> Licenses**.
-2. Click the **Install New License** button.
-3. Type the **License Name** and **License Key** for one of the licenses that you received from your account manager.
-4. Click the **Save** button.
-5. If you have another license to add, click **Add Another License**.
-6. When you have added all licenses, click **License Activation**.
-7. Enter your name, email address, and phone number, then click the **Activate** button. If your server does not have outbound network access, click **Activate Offline** instead.
-
+$1
+$22. Click the **Install New License** button.
+$1
+$24. Click the **Save** button.
+$1
+$26. When you have added all licenses, click **License Activation**.
+$1
+$2
 > **Note:**  For more information about license activation, see the [License Activation FAQ](../../secret-server-setup/licensing/licensing-faq/index.md).
 
 ## Installing New Licenses
 
 Once a license is obtained, it can be installed by copying the license name and code into the corresponding text-entry fields to a new license page. To access this page:
-
-1. Select **Licenses** from the **Administration** menu.
-
-2. Click **Install New License**.
-
+$1
+$2$1
+$2
 ## Converting from Trial Licenses
 
 If you previously had evaluation licenses and recently purchased SS, you need to remove all evaluation licenses and install your purchased licenses. Normal trial licenses expire one month after issue. If the new licenses are not installed, users see "License has expired" error messages.

@@ -12,28 +12,43 @@ _Release Date: 3/8/2016_
 ### Enhancements
 
 - Secret Script Dependency Parameters can now reference associated Secrets by Secret ID in addition to the Secret order number in the associated Secrets list. See this KB for more information.
+
 - Added new Time to Live and Retry Time settings to Distributed Engine configuration
+
 - Secret Server Express Edition is now called Secret Server Free. There are no changes in capabilities available between the two editions.
 
 ### Bug Fixes
 
 - Fixed issue where domain password changing failed when target credential was on different domain than Secret Server and no privileged account was used
+
 - Fixed issue with running Discovery over LDAPS
-- Fixed issue where nested groups would not import correctly in AD synchronization when the group is nested within multiple AD groups
+
+- Fixed issue where domain password changing failed when target credential was on different domain than Secret Server and no privileged account was used
+
 - Fixed issue where Folder was not added to the Dependency when importing Scheduled Tasks through Discovery
-- Fixed issue where scheduled task discovery could get incorrectly marked with an error and prevent import
+
+- Fixed issue where domain password changing failed when target credential was on different domain than Secret Server and no privileged account was used
+
 - Fixed authentication issues when using the Web Password Filler with Integrated Windows Authentication
-- Fixed RDP proxying error when using FIPS compliance mode
+
+- Fixed issue where domain password changing failed when target credential was on different domain than Secret Server and no privileged account was used
+
 - Fixed Session Launcher error if TLS 1.0 is disabled on the web server.
-- Fixed Discovery issue when scanning using credentials from a different domain.
+
+- Fixed issue where domain password changing failed when target credential was on different domain than Secret Server and no privileged account was used
+
 - Fixed issue where new domain users were not getting a personal folder.
-- Fixed issue where Distributed Engine could create excessive database entries for background threads
+
+- Fixed issue where domain password changing failed when target credential was on different domain than Secret Server and no privileged account was used
+
 - Oracle Script Dependencies will now ignore extra parameters passed in from Secret Server
+
 - Fixed potential error during upgrade if there were users that had never logged in
 
 ### Security Fixes
 
 - Fixed reflected XSS issue
+
 - Removed ASP.NET version disclosure from response headers
 
 ## Release Notes 8.9.300000

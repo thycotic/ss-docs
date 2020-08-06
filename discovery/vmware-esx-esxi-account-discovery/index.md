@@ -24,20 +24,16 @@ Secret Server searches the machine’s Windows path PATH for the VMWare SDK, the
 > **Note:** After installing the VMware PowerCLI, the default installation path is: `C:\Program Files\WindowsPowerShell\Modules\VMware.Vim\[version]\net45`. The PowerCLI installation path **must be** in the system PATH variable.
 
  To edit your PATH:
-
-1. Add `C:\Program Files\WindowsPowerShell\Modules\VMware.Vim\[version]\net45` to the PATH using the system panel (sysdm.cpl).
-
-2. From the **System Properties** dialog, select **Advanced** tab
-2. Click **Environment Variables…**
-
-3. Under the **System Variables** section, highlight **Path** then **Edit**. The Edit Environment Variable dialog box appears:
-
+$1
+$2$1
+$22. Click **Environment Variables…**
+$1
+$2
    ![User-added image](images/clip_image002.png)
-
-4. Click the **New** button
-4. Type `C:\Program Files\WindowsPowerShell\Modules\VMware.Vim\[version]\net45`, similar to the example above:
-4. Click the **OK** button when done. 
-
+$1
+$24. Type `C:\Program Files\WindowsPowerShell\Modules\VMware.Vim\[version]\net45`, similar to the example above:
+$1
+$2
 ## Download Locations
 
 Download supported versions of PowerCLI from VMware:
@@ -47,10 +43,15 @@ Download supported versions of PowerCLI from VMware:
 ## Troubleshooting and Issues
 
 - The error "The VMware VIM API is not installed or is the wrong version" indicates that PowerCLI needs to be installed.
+
 - We recommend not using an outdated SDK with an updated version of VMWare.
-- Secret Server’s VMWare password changer rejects self-signed SSL certificates. Make sure your VMWare servers have valid SSL certificates (see below for settings).
+
+- The error "The VMware VIM API is not installed or is the wrong version" indicates that PowerCLI needs to be installed.
+
 - The error "Exception: The remote certificate is invalid according to the validation procedure" indicates that vCenter server root certificates needs to be installed. More info [here.](https://kb.vmware.com/s/article/2108294)
-- For SS installed editions, you may need to restart the SS website after installing PowerCLI. Do this by recycling the SS application pool or performing an IIS reset.
+
+- The error "The VMware VIM API is not installed or is the wrong version" indicates that PowerCLI needs to be installed.
+
 - For distributed engines, the distributed engine service may need to be restarted after PowerCLI is installed.
 
 ## ESXi Certificate Settings

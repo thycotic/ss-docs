@@ -11,6 +11,7 @@ This topic is a one-stop resource for Secret Server developers. It points to TDP
 - [Custom Reports Gallery](https://my.thycotic.com/products_secretserver_customreportgallery.html)
 
 - [Creating Custom Reports](../reports/creating-and-editing-reports/index.md#creating-a-custom-report)
+
 - [Using Dynamic Parameters in Reports](../using-dynamic-parameters-reports/index.md) 
 
 

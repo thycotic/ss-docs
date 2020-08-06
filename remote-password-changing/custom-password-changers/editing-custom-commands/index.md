@@ -37,6 +37,7 @@ Any secret text-entry field value can be substituted by prefacing the text-entry
 - `$[1]` Adding this prefix to any text-entry field targets the associated reset secret with order 1.
 
 - `$[1]$USERNAME` The mapped username of the associated secret, identified by order. Can also reference any other property on the associated secret. Common examples include:
+
 - `$[1]$PASSWORD`
 
 - `$[1]$CURRENTPASSWORD`

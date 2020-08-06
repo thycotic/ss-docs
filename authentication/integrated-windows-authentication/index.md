@@ -11,15 +11,11 @@ For further information, Microsoft has a [knowledge base article](http://support
 ## Enabling Integrated Windows Authentication
 
 Active Directory integration and synchronization must be enabled before configuring integrated Windows authentication:
-
-1. Navigate to **Administration > Active Directory**.
-
-1. Click **Edit**.
-
-1. Check the Enable Integrated Windows Authentication box.
-
-1. Click **Save**.
-
+$1
+$2$1
+$2$1
+$2$1
+$2
 ## Configuring IIS
 
 Open IIS and highlight your SS website or application. In the right pane, double-click **Authentication**. Enable Windows Authentication and disable **Anonymous Authentication**.
@@ -29,11 +25,8 @@ Open IIS and highlight your SS website or application. In the right pane, double
 ## Logging on As a Local Account
 
 After you have set up integrated Windows authentication, you may sometimes want to log in as a local admin account to configure SS, perform an upgrade, or if AD is down.
-
-1. Log on your computer as an Active Directory account that has read access to the SS application directory but is not enabled in SS.
-
-1. Browse to SS using Firefox or Chrome.
-
-1. Go to your SS website. You may be prompted for your AD credentials. If you are, log on as a user with read access to the SS application directory that is not enabled in SS. You should then be redirected to the log on page of SS.
-
-1. Select the "local" domain and enter your local account username and password.
+$1
+$2$1
+$2$1
+$2$1
+$2

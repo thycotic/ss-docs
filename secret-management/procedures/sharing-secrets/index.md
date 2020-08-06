@@ -27,27 +27,18 @@ Secrets can be shared with either groups or individual users. The Secret Sharing
 To add or remove secret sharing:
 
 > **Note:** To simplify the sharing process, new secrets automatically inherit the settings from the folder they are stored in. That is, we enable the **Inherit Permissions from Folder** check box on the **Sharing Edit** page by default, so secrets inherit all the parent folders' sharing settings. As long as this check box is selected, you cannot set the permissions for the secret. For more on folder security, see the [Folders](../../../secret-folders/index.md) section.
-
-1. [View the secret](../viewing-secrets/index.md) you want to share.
-
-1. Click the **Sharing** tab.
-
+$1
+$2$1
+$2
    ![1556740541839](images/1556740541839.png)
-
-1. Click the **Edit** link. The page becomes editable:
-
+$1
+$2
    ![1556740706807](images/1556740706807.png)
-
-1. Click the **Remove** link next to any share you want to delete.
-
-1. Type any user or group you want to share with in the **Add Groups / Users** search text box.
-
-1. When the user or group appears in the dropdown list, click to select it. The user or group appears in the **Shared with** table.
-
-1. Click the unlabeled permission dropdown list box to select the desired permission.
-
-1. Repeat the process for additional users or groups.
-
-1. Click the **Save** button to commit the changes.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
 You can also modify sharing settings for users or groups that already have sharing enabled for the secret. If a user or group is not displayed, they do not have access to the secret.

@@ -9,9 +9,8 @@
 You can use PowerShell scripts in Secret Server to automate specific tasks. These scripts are useful in several places in SS, such as in creating custom remote password changers, custom dependency changers, discovery scanners, and custom ticket system integration. 
 
 ##  Creating a PowerShell Script
-
-1. Develop your script. See:
-   
+$1
+$2   
    - [REST API PowerShell Script Examples](../rest-api-powershell-examples/index.md) 
    - [Using Secret Fields in Scripts](../using-secret-fields-scripts/index.md)
    - [Dependency Token List](../dependency-tokens/index.md)
@@ -19,27 +18,20 @@ You can use PowerShell scripts in Secret Server to automate specific tasks. Thes
    >**Important:** Do not edit the script with Windows Notepad. Instead, use Notepad++, Visual Studio Code, or Atom. Windows Notepad can add invisible characters that can cause issues.
    
    >**Note:** Using PowerShell in SS involves passing a parameter string to the script. This string can contain literal values as well as tokens that represent values on the object in SS that the script is attached to. For example, when creating a custom password changer, you pass in values such as the user name, old password, and new password using tokens that represent these values for whichever secret is running the password change script. Similarly, dependencies have a set of tokens that represent values on the dependency and its associated secret. 
-
-1. Go to **Admin \> Scripts**.
-
+$1
+$2
    ![image-20200529131022337](images/image-20200529131022337.png)
 
    > **Note:** In some older versions of Secret Server, you can find the **Scripts** option under **Remote Password Changing** on the **Administration** menu bar.
-
-1. On the **PowerShell** tab, click **+Create New**. The New PowerShell Script popup appears:
-
+$1
+$2
    ![image-20200529131304135](images/image-20200529131304135.png)
-
-1. Type the script name in the **Name** text box.
-
-1. Type a description in the **Description** text box.
-
-1. Click the **Category** dropdown list to select the type of script. This will determine where the script resides in SS and more. For instance, the Dependency choice ensures that Remote Password Changing is turned on by enabling it on the Remote Password Changing page.
-
-1. Paste your script into the **Script** text box.
-
-1. Click the **OK** button. The new script appears in the table on the Scripts page.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
 ## Best Practices
 
 ### Debugging

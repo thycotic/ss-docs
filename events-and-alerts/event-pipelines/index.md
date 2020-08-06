@@ -29,30 +29,55 @@ EP *Filters* are parameters that limit when an EP runs. All Filters have setting
 The current secret policy filters:
 
 - Custom Variable 
+
 - Day of Week 
-- Event Time 
+
+- Custom Variable 
+
 - Event User: Group 
-- Event User: Has Two Factor 
+
+- Custom Variable 
+
 - Event User: Role 
-- Event User: Role Permission 
+
+- Custom Variable 
+
 - Event User: Team 
-- Event User: User Domain 
+
+- Custom Variable 
+
 - Event User: User Last Login 
-- Event User: User Setting 
+
+- Custom Variable 
+
 - IP Address 
-- Group 
+
+- Custom Variable 
+
 - Policy on a Secret 
-- Role 
+
+- Custom Variable 
+
 - Role Permission 
-- Secret Access Role Permission 
+
+- Custom Variable 
+
 - Secret Field 
-- Secret has Field 
+
+- Custom Variable 
+
 - Secret has RPC enabled 
-- Secret Name 
+
+- Custom Variable 
+
 - Secret Setting 
-- Secret Template 
+
+- Custom Variable 
+
 - Site 
-- Target User: Two Factor Type 
+
+- Custom Variable 
+
 - Two Factor Type
 
 #### User Policy Filters
@@ -60,27 +85,49 @@ The current secret policy filters:
 The current user policy filters:
 
 - Custom Variable 
+
 - Day of Week 
-- Event Time 
+
+- Custom Variable 
+
 - Event User: Group 
-- Event User: Has Two Factor 
+
+- Custom Variable 
+
 - Event User: Role 
-- Event User: Role Permission 
+
+- Custom Variable 
+
 - Event User: Team 
-- Event User: User Domain 
+
+- Custom Variable 
+
 - Event User: User Last Login 
-- Event User: User Setting 
+
+- Custom Variable 
+
 - IP Address 
-- Multi-Group 
+
+- Custom Variable 
+
 - Target User: Group 
-- Target User: Has Two Factor 
+
+- Custom Variable 
+
 - Target User: Multi-Group 
-- Target User: Role 
+
+- Custom Variable 
+
 - Target User: Role Permission 
-- Target User: Team 
+
+- Custom Variable 
+
 - Target User: Two Factor Type 
-- Target User: User Domain 
+
+- Custom Variable 
+
 - Target User: User Setting 
+
 - Two Factor Type
 
 Some filters prompt you for additional information when you select them.
@@ -106,71 +153,137 @@ EP *tasks* are actions, which are triggered in an EP, assuming any filtering con
 The secret tasks are:
 
 - Add Custom Audit
+
 - Add Share
-- Assign Secret Policy
+
+- Add Custom Audit
+
 - Assigning Site to Secret
-- Change Password Remotely
+
+- Add Custom Audit
+
 - Change Secrets to not require a comment when viewed
-- Change Secrets to not require Check Out
+
+- Add Custom Audit
+
 - Change Secrets to require Check Out
-- Change Secrets to require Comment on View
+
+- Add Custom Audit
+
 - Change to Inherit Permissions
-- Delete
+
+- Add Custom Audit
+
 - Disable Auto Change
-- Disable Heartbeat
+
+- Add Custom Audit
+
 - Edit Share
-- Enable Heartbeat
+
+- Add Custom Audit
+
 - Expire Secrets
-- Fail with a message
+
+- Add Custom Audit
+
 - Hide Launcher Password
-- Move to Folder
+
+- Add Custom Audit
+
 - Post Slack Message (WebHook)
-- Retry with new random password
+
+- Add Custom Audit
+
 - Run Heartbeat
-- Run Script
+
+- Add Custom Audit
+
 - Schedule Pipeline
-- Secret: Add Custom Audit
+
+- Add Custom Audit
+
 - Secret: Add Share
-- Secret: Assign Secret Policy
+
+- Add Custom Audit
+
 - Secret: Assigning Site to Secret
-- Secret: Change Password Remotely
+
+- Add Custom Audit
+
 - Secret: Change Secrets to not require a comment when viewed
-- Secret: Change Secrets to not require Check Out
+
+- Add Custom Audit
+
 - Secret: Change Secrets to require Check Out
-- Secret: Change Secrets to require Comment on View
+
+- Add Custom Audit
+
 - Secret: Change to Inherit Permissions
-- Secret: Delete
+
+- Add Custom Audit
+
 - Secret: Disable Auto Change on Secret
-- Secret: Disable Heartbeat
+
+- Add Custom Audit
+
 - Secret: Edit Share
-- Secret: Enable Auto Change on Secret
+
+- Add Custom Audit
+
 - Secret: Enable Heartbeat
-- Secret: Expire Secrets
+
+- Add Custom Audit
+
 - Secret: Fail with a message
-- Secret: Move to Folder
+
+- Add Custom Audit
+
 - Secret: Retry with new random password
-- Secret: Run Heartbeat
+
+- Add Custom Audit
+
 - Secret: Send Email to Owners
-- Secret: Set Privileged Account
+
+- Add Custom Audit
+
 - Secret: Stop RPC
-- Secret: Undelete
+
+- Add Custom Audit
+
 - Secret: Update Secret by field
-- Secret: Update Secret Name
+
+- Add Custom Audit
+
 - Secret: Update Secret with a script
-- Secret: Viewing Password Does Not Require Edit
+
+- Add Custom Audit
+
 - Secret: Viewing Password Requires Edit
-- Send Email to Event User
+
+- Add Custom Audit
+
 - Send Email to Group
-- Send Email to List
+
+- Add Custom Audit
+
 - Send Email to Owners
-- Set Custom Variable
+
+- Add Custom Audit
+
 - Set Privileged Account
-- Stop RPC
+
+- Add Custom Audit
+
 - Undelete
-- Unhide Launcher Password
+
+- Add Custom Audit
+
 - Update Secret by field
-- Update Secret Name
+
+- Add Custom Audit
+
 - Update Secret with a script
+
 - Update Secrets to automatically change the password
 
 #### User Tasks
@@ -178,33 +291,61 @@ The secret tasks are:
 The user tasks are:
 
 - Post Slack Message (WebHook)
+
 - Run Script
-- Schedule Pipeline
+
+- Post Slack Message (WebHook)
+
 - Send Email to Event User
-- Send Email to Group
+
+- Post Slack Message (WebHook)
+
 - Send Email to List
-- Set Custom Variable
+
+- Post Slack Message (WebHook)
+
 - Target User: Add User to Group
-- Target User: Add User to Team
+
+- Post Slack Message (WebHook)
+
 - Target User: Disable Duo Two Factor
-- Target User: Disable Email Two Factor
+
+- Post Slack Message (WebHook)
+
 - Target User: Disable FIDO2 Two Factor
-- Target User: Disable RADIUS Two Factor
+
+- Post Slack Message (WebHook)
+
 - Target User: Disable TOTP Auth Two Factor
-- Target User: Disable Users
+
+- Post Slack Message (WebHook)
+
 - Target User: Enable Duo Two Factor
-- Target User: Enable Email Two Factor
+
+- Post Slack Message (WebHook)
+
 - Target User: Enable FIDO2 Two Factor
-- Target User: Enable RADIUS Two Factor
+
+- Post Slack Message (WebHook)
+
 - Target User: Enable TOTP Auth Two Factor
-- Target User: Enable Users
+
+- Post Slack Message (WebHook)
+
 - Target User: Force Logout
-- Target User: Lock User
+
+- Post Slack Message (WebHook)
+
 - Target User: Remove User from Group
-- Target User: Remove User from Team
+
+- Post Slack Message (WebHook)
+
 - Target User: Reset FIDO2 Two Factor
-- Target User: Reset TOTP Auth Two Factor
+
+- Post Slack Message (WebHook)
+
 - Target User: Send Email to Target User
+
 - Target User: Unlock User
 
 ### Event Users
@@ -274,34 +415,51 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 ##### Secret
 
 - $SecretName
+
 - $SecretId
 
 ##### Folder
 
 - $FolderId
+
 - $FolderName
+
 - $FolderPath
 
 ##### Event User
 
 - $EventUserDomain 
+
 - $EventUserKnownAs
-- $EventUserName
+
+- $EventUserDomain 
+
 - $EventUserLastLogin
+
 - $EventUserId
 
 ##### Target User
 
 - $TargetUser.DisplayName
+
 - $TargetUser.IsApplicationAccount
-- $TargetUser.IsSystemUser
+
+- $TargetUser.DisplayName
+
 - $TargetUser.UserEmail
-- $TargetUser.UserEnabled
+
+- $TargetUser.DisplayName
+
 - $TargetUser.UserName
-- $TargetUserDomain
+
+- $TargetUser.DisplayName
+
 - $TargetUserId
-- $TargetUserKnownAs
+
+- $TargetUser.DisplayName
+
 - $TargetUserLastLogin
+
 - $TargetUserName
 
 #### Custom Task Variables
@@ -313,11 +471,13 @@ These are variables created with the EP task. There are two types, global and it
 #####  Global Variable
 
 - $GlobalVariable.CustomVariableName
+
 - This custom task variable is global, so there should only be one per variable name.
 
 ##### Item Variable
 
 - $ItemVariable.CustomVariableName
+
 - This variable is per SecretId (secret pipeline) or UserId (user pipeline).
 
 Add note:
@@ -335,69 +495,129 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 #### Secret Triggers
 
 - Access Approved
+
 - Access Denied
-- Cache View
+
+- Access Approved
+
 - Check In
-- Check Out
+
+- Access Approved
+
 - Copy
-- Create
+
+- Access Approved
+
 - Custom Audit
-- Custom Password Requirement Added To Field
+
+- Access Approved
+
 - Custom Password Requirement Removed From Field
-- Delete
+
+- Access Approved
+
 - Dependency Added
-- Dependency Deleted
+
+- Access Approved
+
 - Dependency Failure
-- Edit
+
+- Access Approved
+
 - Expired Today
-- Expires in 1 Day
+
+- Access Approved
+
 - Expires in 15 Days
-- Expires in 3 Days
+
+- Access Approved
+
 - Expires in 30 Days
-- Expires in 45 Days
+
+- Access Approved
+
 - Expires in 60 Days
-- Expires in 7 Days
+
+- Access Approved
+
 - Export
-- File Save
+
+- Access Approved
+
 - Heartbeat Failure
-- Heartbeat Success
+
+- Access Approved
+
 - Hook Create
-- Hook Delete
+
+- Access Approved
+
 - Hook Edit
-- Hook Failure
+
+- Access Approved
+
 - Hook Success
-- Launch
+
+- Access Approved
+
 - Password Change
-- Password Change Failed
+
+- Access Approved
+
 - Password Change Maximum Attempts Reached
-- Password Displayed
+
+- Access Approved
+
 - Pre-Check Out
-- Secret Policy Change
+
+- Access Approved
+
 - Session Recording View
-- Undelete
+
+- Access Approved
+
 - View
-- Viewed Secret Edit
+
+- Access Approved
+
 - Web Password Fill
 
 #### User Triggers
 
 - Added to Group 
+
 - Challenge Applied 
-- Challenge Cleared 
+
+- Added to Group 
+
 - Disable 
-- Enable 
+
+- Added to Group 
+
 - Lockout 
-- Login 
+
+- Added to Group 
+
 - Login Failure 
-- Logout 
+
+- Added to Group 
+
 - Owners Modified 
-- Remove Personally Identifiable Information 
+
+- Added to Group 
+
 - Removed From Group 
-- Two Factor Changed 
+
+- Added to Group 
+
 - Two Factor Reset Failure 
-- Two Factor Reset Success 
+
+- Added to Group 
+
 - User: Create 
-- User: Edit 
+
+- Added to Group 
+
 - User: Password Change 
 
 ## Permissions
@@ -405,7 +625,9 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 There are three permissions: 
 
 - **Administer Pipelines:** Allows the user to create, edit, and remove EPs and EP policies.
+
 - **Assign Pipelines:** Allows the user to assign an EP policy to secret policies, or folders.
+
 - **View Pipelines:** Allows the user to view EP policies and policy activities.
 
 ## Procedures
@@ -415,13 +637,12 @@ There are three permissions:
 #### Activating or Deactivating Event Pipelines
 
 To control if an EP is available to all EP policies, you can toggle the EP's active status:
-
-1. Go to the **Event Pipelines** page.
-1. Click the **Pipelines** tab.
-1. Locate the card for the EP you want to activate or deactivate.
-1. Click the **Active/Inactive** toggle button. A confirmation popup appears.
-1. Click the **OK** button. The EP's status is changed for all EP policies it belongs to.
-
+$1
+$21. Click the **Pipelines** tab.
+$1
+$21. Click the **Active/Inactive** toggle button. A confirmation popup appears.
+$1
+$2
 #### Creating New Event Pipelines
 
 > **Note:** You can create EPs from the Event Pipelines list (shown below) or an EP policy's details view. With the former method, you will have to add the EP to an EP policy separately. With the latter method, the EP is automatically added to the EP policy you are viewing. You can later manually add additional EPs to the policy as desired.
@@ -429,54 +650,48 @@ To control if an EP is available to all EP policies, you can toggle the EP's act
 To create a new EP:
 
 ##### Step One: Create EP
-
-1. Go to the **Event Pipeline** page.
-1. If necessary, click the **Pipelines** tab. The Event Pipeline Pipelines page appears.
-1. Click the **Add Pipeline** button. The New Pipeline popup page appears.
-1. Click to select the EP type: **Secret** or **User**.
-1. Click to select the **Create New Pipeline** selection button.
-1. Click the **Create** button. The New Pipeline wizard appears on the Choose Triggers page.
+$1
+$21. If necessary, click the **Pipelines** tab. The Event Pipeline Pipelines page appears.
+$1
+$21. Click to select the EP type: **Secret** or **User**.
+$1
+$21. Click the **Create** button. The New Pipeline wizard appears on the Choose Triggers page.
 
 ##### Step Two: Add Triggers
-
-1. In the **Add Triggers** section, click the **+** button next to the triggers you desire. You can also search for a trigger by typing in the search text box. The selected triggers appear in the Selected Triggers list. Consider the following when selecting triggers:
-
+$1
+$2
    - Currently triggers are centralized around events that are linked to a secret.
    - You can add multiple triggers.
    - You can limit when the EP runs by adding filters.
    - Multiple triggers are logically ORed (not XORed) together. Each trigger is considered individually, and only one needs to apply for the EP to run—if concurrent triggers do not apply, it does not matter. If multiple triggers do apply, the EP will only run once per EP policy.
-1. Click the **Next** button. The Choose Filters page of the wizard appears.
-
+$1
+$2
 ##### Step Three: Add Filters
-
-1. Use the exact same method to add filters to the EP. All filters present a popup page for you to provide additional information when you click on them. Consider the following when selecting filters:
-
+$1
+$2
    - Whereas triggers focused on secrets, filters can access secret and user information.
    - Because the same filter can differ by its settings, you can add the same filter multiple times to an EP.
    - Filters are logically ANDed together—all filters apply at once and all matter.
    
-1. Click the **Next** button. The Choose Tasks page of the wizard appears.
-
+$1
+$2
 ##### Step Four: Choose Tasks
-
-1. Use the exact same method to add tasks to the EP. Many tasks present a popup page for you to provide additional information when you click on them.  
-1. Set the task order. Tasks run in order of their appearance in the **Task** tab of the **Event Pipeline** page. To change the task running order, hover the mouse pointer over the one you want to move, and use the anchor on the left of its card to drag the task to the order you wish it to run. If a Task fails, then the following tasks will not run.
+$1
+$21. Set the task order. Tasks run in order of their appearance in the **Task** tab of the **Event Pipeline** page. To change the task running order, hover the mouse pointer over the one you want to move, and use the anchor on the left of its card to drag the task to the order you wish it to run. If a Task fails, then the following tasks will not run.
 
    > **Warning:** Tasks are very powerful and thus can be dangerous. You can alter SS in dramatic, sometimes irreversible ways. We strongly recommend testing EPs in a safe sandbox environment before applying them to production SS servers.
-
-1. Click the **Next** button. The Name Pipeline page of the wizard appears.
-1. Type the EP's name in the **Pipeline** text box.
-1. Type a description of the EP in the **Pipeline Description** text box.
-1. Click the **Save** button.
+$1
+$21. Type the EP's name in the **Pipeline** text box.
+$1
+$21. Click the **Save** button.
 
 #### Editing Existing Event Pipelines
 
 To create an EP:
-
-1. Go to the **Event Pipeline** page.
-1. If necessary, click the **Pipelines** tab. The Event Pipeline Pipelines page appears.
-1. Click the title of the card representing the EP you want to edit. The EP wizard appears.
-1. See [Creating New Event Pipelines](#creating-new-event-pipelines) for instructions on using the wizard.
+$1
+$21. If necessary, click the **Pipelines** tab. The Event Pipeline Pipelines page appears.
+$1
+$21. See [Creating New Event Pipelines](#creating-new-event-pipelines) for instructions on using the wizard.
 
 #### Viewing Event Pipelines
 
@@ -487,53 +702,48 @@ Because EPs are not directly tied to a single EP policy, they can be viewed thro
 #### Activating or Deactivating Event Pipeline Policies
 
 To control if an EP policies is available, you can toggle the EP policy's active status:
-
-1. Go to the **Event Pipelines** page.
-1. If necessary, click the **Policies** tab.
-1. Locate the card for the EP policy you want to activate or deactivate.
-1. Click the **Active/Inactive** toggle button. A confirmation popup appears.
-1. Click the **OK** button. The EP policy's status is changed.
-
+$1
+$21. If necessary, click the **Policies** tab.
+$1
+$21. Click the **Active/Inactive** toggle button. A confirmation popup appears.
+$1
+$2
 > **Note:** The EPs belonging to the EP policy remain available to other EP policies. 
 
 #### Adding an Existing Event Pipeline 
 
 **Note:** Adding Existing Pipeline enables the pipeline to be used in other policies.  Only pipelines of the same type (Secret or User) can be added. Note:  This does not create a copy of the existing pipeline, it creates a link. Thus, any changes to the pipeline will affect the other policies that  use it. 
-
-1. Go to the **Event Pipelines** page. 
-1. If necessary, click the **Policies** tab. 
-1. Select the EP policy you want to add a pipeline to.
-1. Click the **Add Pipeline** button. 
-1. Click the **Add Existing Pipeline** dropdown list and select the pipeline (only pipelines of the same type will show). 
-1. Click the **Create** button. 
+$1
+$21. If necessary, click the **Policies** tab. 
+$1
+$21. Click the **Add Pipeline** button. 
+$1
+$21. Click the **Create** button. 
 
 #### Assigning Folders and Secret Policies to Event Policy Targets
 
 ##### Folders
-
-1. Go to the **Event Pipeline** page.
-1. If necessary, click the **Policies** tab. The Event Pipeline Policies page appears.
-1. Click the title of the EP policy on its card on the **Event Pipeline Policies** page. The page for that EP policy appears.
-1. Click the **No Folder Selected** link in the **Targets** section. A destination page appears. 
-1. Click to select the check boxes for the desired target folders in the tree. Click the tiny arrow next to the check box to expand the tree. Remember, selecting a folder does *not* automatically select its subfolders.
-1. Click the **Save** button.
+$1
+$21. If necessary, click the **Policies** tab. The Event Pipeline Policies page appears.
+$1
+$21. Click the **No Folder Selected** link in the **Targets** section. A destination page appears. 
+$1
+$21. Click the **Save** button.
 
 ##### Secret Policies
-
-1. Click **Admin > Secret Policies**. The Secret Policy page appears.
-1. Click the desired secret policy's name in the list. The Secret Policy page for that policy appears.
-1. Click the **Edit** button. The list becomes editable.
-1. Click the **Event Pipeline Policy** dropdown list in the **Security Setting** section and select **Enforced**.
-1. Click the **Save** button. All secrets under that secret policy are now affected by the EP policy.
-
+$1
+$21. Click the desired secret policy's name in the list. The Secret Policy page for that policy appears.
+$1
+$21. Click the **Event Pipeline Policy** dropdown list in the **Security Setting** section and select **Enforced**.
+$1
+$2
 #### Creating, Importing, and Duplicating Event Pipeline Policies
 
 > **Note:** Newly added EP policies are deactivated by default.
-
-1. Click **Admin \> See All**.
-1. Click the **Action** button and select **Event Pipeline Policy**.
-1. If you plan to duplicate an existing EP policy, click the card for that policy in the **Event Pipeline Policies** list. 
-1. Click the **Add Policy** button, and you will be presented with the following options:
+$1
+$21. Click the **Action** button and select **Event Pipeline Policy**.
+$1
+$21. Click the **Add Policy** button, and you will be presented with the following options:
    - **Create New Policy:** Click the selection button, and type a name in the **Policy Name** text box, and optionally type a description in the **Policy Description** text box. 
    - **Import Policy:** Import an exported EP policy in JSON format. This can be a policy exported from a separate SS instance. Click the selection button, and paste the JSON payload in the **Add Policy** text box, click the **Create** button.
    - **Duplicate Selected Policy:** Copy an existing EP policy. Click the selection button, and then click the **Create** button. 
@@ -545,38 +755,36 @@ To control if an EP policies is available, you can toggle the EP policy's active
 There are two ways to monitor your EP policy:
 
 - **Audit:** Shows changes to EP policies, targets, and EPs. Click the **Audits** tab on the **Event Pipeline Policies** page.
+
 - **Activity:** Shows the actions each EP policy or single EP took each time it is triggered. This includes failures, skips, and successes. Click the card for the desired EP policy, and then click the **View Policy Activity** button on the right. Alternatively, you can click the title on the card. When the page for the EP policy appears, click the **Activity** tab.
 
 #### Ordering Event Pipelines in Event Pipeline Policies
 
 Event Pipelines run in order they appear in the EP policy. Since EPs can be in multiple EP policies, the order is unique to each policy. To change the EP order in the EP policy:
-
-1. Go to the **Event Pipeline Policies** page.
-1. Click the name on the card for the EP policy you want to edit. The policy's page appears on the Details tab.
-1. Hover the mouse pointer over the EP you want to reorder. An anchor appears on the left of the card.
-1. Drag that anchor to the desired position. 
+$1
+$21. Click the name on the card for the EP policy you want to edit. The policy's page appears on the Details tab.
+$1
+$21. Drag that anchor to the desired position. 
 
 > **Note:** If an error occurs in a policy's EP, then the following EP  still runs.
 
 #### Removing Event Pipelines from Event Pipeline Policies
 
 To remove an EP from an EP:
-
-1. Go to the **Event Pipeline Policies** page.
-1. Click the name on the card for the EP policy you want to edit. The policy's page appears on the Details tab.
-1. Click on an EP in the details of an EP policy. A panel appears on the right of the page.
-1. Click the **Remove Pipeline** button.
+$1
+$21. Click the name on the card for the EP policy you want to edit. The policy's page appears on the Details tab.
+$1
+$21. Click the **Remove Pipeline** button.
 
 > **Note:** The button removes the EP from the EP policy, but it does not remove it from SS. Other EP policies using the EP still have access to it. 
 
 ## Infinite Loops
 
 It is possible for EPs to trigger each other over and over in an endless loop. For example:
-
-1. Editing a secret triggers one EP to run a heartbeat on the secret.
-1. The heartbeat triggers another EP to edit the secret. 
-1. Editing the secret triggers the original EP to run another heartbeat, restarting the cycle, creating an infinite feedback loop.
-
+$1
+$21. The heartbeat triggers another EP to edit the secret. 
+$1
+$2
 Fortunately, SS detects these loops and automatically deactivates the involved EPs. So, if you have EPs that seem to be deactivating themselves, look for circular logic paths involving the EPs.
 
 > **Note:** By default, pipelines are configured to consider any event that executes five tasks within five minutes from the same trigger as an infinite loop. For example, "secret edit" is selected as a pipeline trigger, and "remote password change" is selected as the task. After the first edit is made on a secret, an RPC is triggered. Every time the RPC completes, a new edit is triggered, which, in turn, triggers another RPC. If this happens five times within five minutes, then an infinite loop is declared. If the RPC is slow, taking more than five minutes for five password changes to occur, then an infinite loop is **not** declared. In this case, use the "configuration advanced" page to change "event pipelines infinite loop time (minutes)" to a longer time.
@@ -588,8 +796,13 @@ Fortunately, SS detects these loops and automatically deactivates the involved E
 There are a few new Advanced Setting that can be used with EP polices. 
 
 - **Event Pipeline Activity Log entries removed after (days)**: The EP activity log entries stay in the log for this many days. Default value: 90. 
+
 - **Event Pipelines: Allow Confidential Secret Fields to be used in Scripts**: Allows confidential secret fields to be used in EP script, such as $password. Default value: False. 
-- **Event Pipelines Infinite Loop Time (Minutes)**: If an EP executes the number of times specified in the infinite loop  threshold during the Infinite Loop Time period, it is marked as an infinite loop. Default Value: 5 (on premises), 20 (cloud). 
+
+- **Event Pipeline Activity Log entries removed after (days)**: The EP activity log entries stay in the log for this many days. Default value: 90. 
+
 - **Event Pipelines Infinite Loop Threshold:** Number of times that an EP can execute within the infinite loop time on an individual item before it is considered to be an infinite loop. Default Value: 5. 
-- **Event Pipelines Log Skipped Policies**: If true, the the pipeline activity log will log filtered policies runs. Default value: False. 
+
+- **Event Pipeline Activity Log entries removed after (days)**: The EP activity log entries stay in the log for this many days. Default value: 90. 
+
 - **Event Pipelines Maximum Script Run Time (Minutes)**: Scripts ran by EP tasks are stopped after this many minutes. Default Value: 5 minutes. 

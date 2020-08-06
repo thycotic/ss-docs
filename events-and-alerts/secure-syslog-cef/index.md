@@ -27,36 +27,29 @@ Due to the sensitive nature of SS logs, we strongly recommend using Secure TCP.
 ### Compatible Audit Servers 
 
 - syslog-ng
+
 - Any Audit server that accepts TLS encrypted messages using the BSD syslog protocol
 
 ### Configuring an External Audit Server
-
-1. Navigate to **Admin** > **Configuration**.
-
-1. Click the **General** tab.
-
-1. Click the **Edit** button at the bottom of the page.
-
-1. Go to the **Application Settings** section.
-
-1. Click to select the **Enable Syslog/CEF Logging** check box. A syslog/CEF section appears:
-   
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2   
    ![image-20200602120849610](images/image-20200602120849610.png)
    
    > **Note**: syslog/CEF may require an additional license key. To install licenses, navigate to **Admin** > **Licenses** > **Install New License**. Once installed, the license requires activation. Contact your Thycotic Sales Representative with any questions. 
    
-1. Type IP address or name for the IIS server hosting the syslog/CEF server in  the **Syslog/CEF Server** text box.
-
-1. Type the port number where the logging information will be passed (6514 is the default port for secure TCP syslog) in the **Syslog/CEF Port** text box.
-   
+$1
+$2$1
+$2   
    > **Note**: SS requires outbound access to this server and port so communication can pass freely. 
    
-1. Click the **Syslog/CEF Protocol** dropdown list and select **Secure TCP**. Secure TCP means either TLS v1.2 or v1.1  because other versions of SSL, such as SSL v3 and TLS v1.0, have known weaknesses.
-
-1. Click to select **Syslog/CEF Time Zone** list box to **UTC Time** or **Server Time**, depending on your preference.
-
-1. Click the **Save** button.
-
+$1
+$2$1
+$2$1
+$2
 ## Caching Syslog Audits
 
 If the connection between the external syslog server and SS breaks once secure syslog logging is enabled in SS, syslog failure notification messages is cached in the SS database and re-sent at regular intervals until the connection between the syslog server and SS is reestablished.
@@ -64,42 +57,34 @@ If the connection between the external syslog server and SS breaks once secure s
 ## Configure Auditing for TLS Connections
 
 To track problems with TLS connections (including whenever the connection fails), enable the TLS certificate chain policy and error auditing in S: 
-
-1. Navigate to **Admin** > **Configuration**.
-1. Click the **Security** tab. 
-1. Click the **Edit** button at the bottom of the page.
-1. Scroll to the **TLS Auditing** section.
-1. Ensure the **Apply TLS Certificate Chain Policy and Error Auditing** check box is enabled. If not, you cannot use client certificates.
-
+$1
+$21. Click the **Security** tab. 
+$1
+$21. Scroll to the **TLS Auditing** section.
+$1
+$2
 > **Note:** If secure TCP is used for the syslog/CEF protocol and there are one or more client certificate thumbprints entered, SS checks the local computer’s Web hosting and personal certificate store and uses the first one it finds. 
 
 ## Adding Client Certificate Thumbprints
-
-1. Navigate to **Admin** > **Configuration**.
-
-1. Click the **Security** tab. 
-
-1. Click the **Edit** button at the bottom of the page.
-
-1. Scroll to the **TLS Auditing** section.
-
-1. Click the **Advances (not required)** link. A client certificate thumbprint section appears:
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
    ![image-20200602122748037](images/image-20200602122748037.png)
-
-1. Copy and paste a list of SHA1 SSL certificate thumbprints into the **Client Certificate Thumbprints(s)** text box. Separate each thumbprint (40 characters each) with a semicolon. Up to ten are allowed.
-
+$1
+$2
 > **Note:** SS's IIS application pool must be granted permission to use the client certificates, using the 
 >  Windows HTTP Services Certificate Configuration Tool (WinHttpCertCfg.exe). See [Compatibility Notes for Client Certificates](#compatibility-notes-for-client-certificates).                                        
 
 ## Determining the Status of a Remote Audit Server
 
  To view the logs for any TLS-Connection related errors, perform the following: 
-
-1. Open the **Microsoft SQL Server Management Studio**.
-1. Navigate to your SecretServer database at **\<DB Machine Name\>** > **Databases** > **SecretServer**).
-1. Set up a new query.
-1. Type and enter `select from tbSecurityAuditLog` to view the events from the TLS audit.
+$1
+$21. Navigate to your SecretServer database at **\<DB Machine Name\>** > **Databases** > **SecretServer**).
+$1
+$21. Type and enter `select from tbSecurityAuditLog` to view the events from the TLS audit.
 
 > **Note:** For more detailed troubleshooting reporting, reference the logs on the SS Web server at `C:\inetpub\wwwroot\SecretServer\log`). View the `SS.log`, `SS-BSSR.log` (background scheduler), and `SS-BSWR.log` (background worker) for any errors.
 

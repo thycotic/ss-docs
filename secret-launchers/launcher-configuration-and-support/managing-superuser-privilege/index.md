@@ -7,17 +7,13 @@
 Administrators can create command menus for use with a proxied SSH connection to restrict what commands can be run by users or groups on the connected server. This feature requires an additional license. To add a command menu:
 
 > **Note:** For details, see [SSH Command Menus](https://thycotic.force.com/support/s/article/SSH-Command-Menus) (KB).
-
-1. Navigate to **Admin \> All**.
-
-1. Click the **SSH Command Menus** button.
-
+$1
+$2$1
+$2
    ![1557249163056](images/1557249163056.png)
-
-1. Click the **Create New** button.
-
-1. Type a name, description and the SSH commands:
-
+$1
+$2$1
+$2
    ![1557249586328](images/1557249586328.png)
 
 Once one or more command menus have been created, access can be controlled to individual Unix SSH secrets.

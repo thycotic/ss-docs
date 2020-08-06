@@ -11,10 +11,9 @@ To manually use heartbeat to check the credentials, the **Secret View** page has
 > **Note:** Heartbeat does not work on Windows accounts on the server that is running SS. These accounts are flagged with an "Incompatible Host" status.
 
 To run heartbeat for a secret:
-
-1. From **Dashboard**, click the secret you would like to test.
-1. Click the **View** button.  The **Last Heartbeat** field of the secret shows the last date and time that Heartbeat ran for this secret. 
-1. To run Heartbeat once more, click **Run Heartbeat** at the bottom of the Secret.
-1. Monitor the **Last Heartbeat** field to see the updated status. This may take a few seconds to complete.
+$1
+$21. Click the **View** button.  The **Last Heartbeat** field of the secret shows the last date and time that Heartbeat ran for this secret. 
+$1
+$21. Monitor the **Last Heartbeat** field to see the updated status. This may take a few seconds to complete.
 
 If you receive any Heartbeat status code aside from Success, you can check the Heartbeat log for details. To view the entry, Go to **Admin \> Remote Password Changing** and then search for the secret name in the **Search** field of the **Heartbeat Log**.

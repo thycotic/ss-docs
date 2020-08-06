@@ -11,11 +11,9 @@ SS connects to the domain: from the Web server _or_ routed through a distributed
 > **Note:** The Active Directory secret is used to synchronize users and groups, it requires permission to search and view the attributes of the users and groups. If you plan on using discovery, the account also needs permissions to scan computers on the network for accounts.
 
 To setup AD to sync from a DE:
-
-1. Create a synced secret. Before synchronizing or creating users, create a secret for use as the sync secret. This secret should contain Domain Admin credentials (or an account with appropriate permissions for read access to all your organization’s AD objects).
-
-1. Specify the domain to authenticate against:
-
+$1
+$2$1
+$2
    1. Before synchronizing or creating users, you must first specify which domains SS can authenticate against. SS can synchronize with any number of domains.
 
    1. Go to **Admin \> Active Directory**. The Active Directory Configuration page appears.
@@ -35,17 +33,14 @@ To setup AD to sync from a DE:
       > **Note:** The AD sync secret is used to synchronize users and groups. It requires permission to search and view the attributes of the users and groups.  If you plan on using SS discovery, the account will also need permissions to scan computers on the network for accounts.
    
    1. Click the **Save and Validate** button.  
-
-1. Set up the synchronization groups:
-
+$1
+$2
    1. Once the domain has been added, go to **Admin \> Active Directory**. The Active Directory Configuration page appears.
    1. Click the **Edit Synchronization** button.  The Synchronization Edit page appears.
       The Available Groups represent all accessible groups on the specified AD domain. You can preview the user membership with the Group Preview control.
-
-1. Select the desired group from the Available Groups that contains the AD accounts for users you would like to create in SS.
-
-1. Configure AD:
-
+$1
+$2$1
+$2
    > **Note:** See [Active Directory Configuration Parameters](../configuration-parameters/index.md) for more information.
 
    1. Go to **Admin \> Active Directory**. The Active Directory Configuration page appears.

@@ -11,15 +11,14 @@ Secret Server (SS) requires the application pool to have the “load user profil
 > **Note:** This applies to version 10.2 and later.
 
 Steps to enable the "load user profile” setting: 
-
-1. On each Web server that is running Secret Sever, open IIS Manager. 
-1. Under the **Application Pool** node on the left, select **Secret Server**.
-1. On the right-hand panel, select **Advanced Settings** to get to the full properties.
-1. Scroll to the **Load User Profile** setting in the **Process Model** section.
-1. Set **Load User Profile** to **True**.
-1. Click the **OK** button.
-1. Preform an `iisreset` on the server:
-   1. Open a Windows command prompt as an administrator.
+$1
+$21. Under the **Application Pool** node on the left, select **Secret Server**.
+$1
+$21. Scroll to the **Load User Profile** setting in the **Process Model** section.
+$1
+$21. Click the **OK** button.
+$1
+$2   1. Open a Windows command prompt as an administrator.
    1. Type `iisreset`.
    1. Press the **\<Enter\>** key.
       

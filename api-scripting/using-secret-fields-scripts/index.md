@@ -9,6 +9,7 @@ Secret Server supports using PowerShell, SSH, and SQL scripts as dependencies on
 There are two contexts in which script dependencies run:
 
 - As part of the RPC process. See [Password Changing Scripts](../../remote-password-changing/custom-password-changers/password-changing-scripts/index.md).
+
 - When run manually from the Dependencies tab on the secret.
 
 For a complete list of tokens that are available to script dependencies, see [List of Dependency Tokens](../dependency-tokens/index.md).

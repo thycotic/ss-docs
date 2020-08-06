@@ -17,6 +17,7 @@ There are two major architectural changes in SS 10.7:
 > **Note:** The first change is obvious in the SS user interface, and the second is hidden but very important to those supporting SS.
 
 - **Primary Node:** We eliminated "primary nodes." Previously, some important background operations, such as password changing and heartbeat, would only run from the primary node. Now they run from all nodes. Given that, there is no longer a “Make Primary” button, and the ValidPrimaryNode setting no longer applies.  
+
 - **Background Operations:** There are no longer background threads for scheduled operations. Instead, operations are scheduled by Quartz. 
 
 ### Clustering Overview
@@ -54,13 +55,12 @@ Messages are placed on the backbone bus by the Scheduler role and the website. M
 **Figure:** Secret Server Distributed Engine Communication
 
 ![1565984037119](images/1565984037119.png)
-
-1. Manual or scheduled operation.
-2. Background worker processes a message.
-3. Outbound messages (password changes, heartbeats, and others) are placed on the site connector.
-4. Distributed engine performs the operation.
-5. Engine worker processes the response.
-
+$1
+$22. Background worker processes a message.
+$1
+$24. Distributed engine performs the operation.
+$1
+$2
 #### Server Node Configurations
 
 The work an individual node handles depends entirely on which boxes are checked on the Server Nodes page (in edit mode):
@@ -68,48 +68,86 @@ The work an individual node handles depends entirely on which boxes are checked 
 ![1565717798898](images/1565717798898.png)
 
 - **In Cluster** is a toggle that turns a server node on or off. If enabled this node can process Web requests, and (if configured) will run the background, engine, and session recording roles. If disabled, the node is just a backup—it cannot run any roles, and trying to access the website on the node will redirect to the server nodes page. 
+
 - **Background Worker** is a toggle for all background operations, such as password changing, heartbeat, and discovery. When it is set to false, only the bulk operations, password generation, email, and secret import operations run on the node. See the list of background operations below.      
-- The **Background Worker**, **Engine Worker**, and **Session Recording Worker** check boxes enable the corresponding roles for that node.  
+
+- **In Cluster** is a toggle that turns a server node on or off. If enabled this node can process Web requests, and (if configured) will run the background, engine, and session recording roles. If disabled, the node is just a backup—it cannot run any roles, and trying to access the website on the node will redirect to the server nodes page. 
+
 - **Engine Worker** enables or disables the engine worker role, which processes responses from distributed engines.
-- **Session Recording Worker** enables or disables the session recording role, which encodes session videos.
+
+- **In Cluster** is a toggle that turns a server node on or off. If enabled this node can process Web requests, and (if configured) will run the background, engine, and session recording roles. If disabled, the node is just a backup—it cannot run any roles, and trying to access the website on the node will redirect to the server nodes page. 
+
 - **Maintenance Mode** enables or disables a read-only mode where the node cannot change secrets or related data.
 
 ####  Scheduled Background Operations
 
  The current scheduled background operations operations in SS are:
 - ActiveDirectorySynchronizationMonitor
+
 - BackgroundWorkerTaskTriggerJob
-- BackupMonitor
+
+- ActiveDirectorySynchronizationMonitor
+
 - Bulk Operations When triggered by user
-- CheckOutMonitor
+
+- ActiveDirectorySynchronizationMonitor
+
 - ComputerScanMonitor
-- ConnectWiseMonitor
+
+- ActiveDirectorySynchronizationMonitor
+
 - DatabaseCleanupTriggerJob
-- DiscoveryMonitor
+
+- ActiveDirectorySynchronizationMonitor
+
 - EventQueueMonitor
-- ExpiredSecretPasswordChangeTriggerJob
+
+- ActiveDirectorySynchronizationMonitor
+
 - ExpiringLicenseTaskTriggerJob
-- ExpiringSecretTaskTriggerJob     
+
+- ActiveDirectorySynchronizationMonitor
+
 - HeartbeatMonitor
-- Local Heartbeat Trigger Job
+
+- ActiveDirectorySynchronizationMonitor
+
 - Local Password Change Trigger Job
-- NodeClusteringMonitor
+
+- ActiveDirectorySynchronizationMonitor
+
 - NodeTaskTriggerJob       
-- PasswordRequirementTriggerJob
+
+- ActiveDirectorySynchronizationMonitor
+
 - PbaDirectiveTriggerJob
-- PbaMetadataUploadTriggerJob
+
+- ActiveDirectorySynchronizationMonitor
+
 - PrimaryNodeTaskMonitor
-- Process Field Encryption Changes Task
+
+- ActiveDirectorySynchronizationMonitor
+
 - ProcessDashboardJsonValidationTask
-- ProcessSecretPolicyChangesMessage
+
+- ActiveDirectorySynchronizationMonitor
+
 - ScheduledReportMonitor
-- SecretComputerMatcherMonitor
+
+- ActiveDirectorySynchronizationMonitor
+
 - SecretItemHashMonitor
-- SqlReplicationConflictMonitor    
+
+- ActiveDirectorySynchronizationMonitor
+
 - TelemetryTriggerJob
-- ThycoticOneSyncUserTriggerJob
+
+- ActiveDirectorySynchronizationMonitor
+
 - TruncateDatabaseCacheTriggerJob
-- TruncateEngineLogTriggerJob
+
+- ActiveDirectorySynchronizationMonitor
+
 - VideoConversionTriggerJob
 
 To see the current state of these jobs, such as the last time they ran and how long until they run again, go to **Admin \> Diagnostics**.  
@@ -119,11 +157,9 @@ To see the current state of these jobs, such as the last time they ran and how l
 ### **Setting up Clustering**
 
 > **Note:** Clustering requires a Secret Server Premium add-on or Enterprise Plus edition license.
-
-1. Have SS upgraded or installed and running on a server.
-
-1. Enable clustering on the node:
-    
+$1
+$2$1
+$2    
     1. In SS, click **Admin \> See All**. The Administration page appears:
     
         ![1565726671364](images/1565726671364.png)
@@ -132,24 +168,20 @@ To see the current state of these jobs, such as the last time they ran and how l
         ![1565726759539](images/1565726759539.png)
     
     3. Click the **Enable Clustering** button.
-1. Copy the entire SS application folder (typically `c:\inetpub\wwwroot\SecretServer`) from the existing node to the secondary node. 
-
-1. Follow the steps in the Installation Guide for setting up the application pool and virtual directory in IIS. 
-  
+$1
+$2$1
+$2  
    > **Note:** If you use DPAPI encryption for your encryption.config file, you need to transfer the non-DPAPI-encrypted version of the file to the secondary node. You can turn on DPAPI encryption from that server node locally after SS is running. This setting can be found at **ADMIN \> Configuration** on the **Security** tab.
   
-1. If running SS 8.9.300000 or later, ensure that both servers are using the same date and time.
-
-1. Once the secondary server is running, navigate to its SS using a Web browser.
-
-1.  Reset the database connection, following the instruction in [this KB article](https://thycotic.force.com/support/s/article/ka0370000005RBqAAM/Changing-SQL-Connection-Details).
-    
-1. Activate licenses for the new node. You can do this on either server once the database connection is established on the secondary node.
-   
-1. Configure your load balancer for the two sites to have "sticky sessions" to prevent a user from bouncing between server on each request.
-
-1. Configure the worker roles for the cluster:
-
+$1
+$2$1
+$2$1
+$2    
+$1
+$2   
+$1
+$2$1
+$2
     - Each server node can optionally run the background worker, engine worker, and session recording worker roles.
     - At least one instance of **each** type of those roles must be active in the cluster for the clustered SS application to function.
     - You may run more than one instance of each role as desired to improve the performance of the clustered SS application.
@@ -174,66 +206,46 @@ SS has a built-in Web installer. That installer is a series of pages inside SS f
 > **Note:** You do **not** need to download the SS installer to perform an upgrade.
 
 #### Procedure
-
-1. Before you start:
-    - Ensure that you have account credentials information and access for the server hosting SS and the SQL Server instance hosting your SS database.
+$1
+$2    - Ensure that you have account credentials information and access for the server hosting SS and the SQL Server instance hosting your SS database.
     - Have a recent backup of the application files and database available.
     - Stop the application pools on all of the servers except the one that you have chosen to upgrade.
     
-1. Choose one SS server to upgrade
-
-1. Perform a backup of that server.
-
-1. Stop the Web servers of all other nodes. 
-
-1. Perform the upgrade using the same procedure as a single instance.
-
+$1
+$2$1
+$2$1
+$2$1
+$2
     > **Note:** If applicable, see [Upgrading Secret Server without Outbound Access](https://thycotic.force.com/support/s/article/Upgrading-Secret-Server-without-outbound-access). 
-
-1. Once SS is upgraded and working, copy the Web application folder (without the database.config or encryption.config files) to all other servers.
-
+$1
+$2
     > **Warning:** Never overwrite or delete the encryption.config file on a SS server.
     
     > **Note:** Both encryption.config and database.config are  automatically propagated to the new servers from the original. If you need to copy those files because of database configuration changes and are using DPAPI, disable DPAPI encryption in SS by going to **Admin \> Configuration** on the **Security tab**. and clicking **Decrypt Key to not use DPAPI** *before* copying those files to secondary servers.
     
     > **Note:** EFS encryption is tied to the user account running the SS application pool, so it is not machine-specific. Thus, it is not necessary to copy EFS encrypted files between SS instances, but it is allowed.
     
-1. If Thycotic management server (TMS) is installed and clustered, copy the TMS directory to the secondary servers as well. The TMS directory is included by default for new installs of SS 10.2+. TMS is used by advanced session recording and Privilege Manager. If the TMS folder and site does not exist in IIS, then no additional actions are needed.
-
-1. Start the secondary servers to confirm they still work.
-
+$1
+$2$1
+$2
 ### Upgrading Database Mirroring
-
-1. If there is more than one Web server running SS, ensure all instances are pointing to their primary database.
-
-2. Select one server to perform the upgrade on, stop all other web servers.
-
-3. Perform the upgrade on the single instance.
-
-4. Once upgraded and working, copy the Web application folder to all other Web servers.
-
-5. Start all other Web servers and confirm they work
-
-6. Ensure all instances are properly activated
-
-7. Ensure that the primary database changes have been replicated to the mirror database.
-
-8. If one of the servers was pointing originally to the secondary database, adjust it to point there again.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
 ###  Upgrading Disaster Recovery Installations
-
-1. Perform the upgrade on the production instance.
-
-2. Backup the production instance.
-
-3. Copy the database backup to the remote DR instance and restore the database.
-
-4. Once the database is upgraded and working, copy the web application folder (but not the database.config or encryption.config files) to the remote DR instance, overwriting the existing files.
-
-5. Restart IIS or recycle the application pool running SS on the remote DR instance.
-
-6. Confirm that the remote DR instance is working correctly.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
 ### Load Balancing Secret Server Clusters
 
 In a clustered Secret Server environment set up behind a load balancer, the accessible outside URL may be something other than the server name.
@@ -241,17 +253,12 @@ In a clustered Secret Server environment set up behind a load balancer, the acce
 #### Custom URL Configuration
 
 In SS 8.5 and later, the Custom URL setting can be configured to ensure that links and resources are resolved correctly and are not based upon the server name:
-
-1. Navigate to **Admin \> Configuration**.
-
-1. On the **General** tab, click the **Edit** button.
-
-1. Go to the **Application Settings** section.
-
-1. Click to select the **Custom URL** check box.
-
-1. Type the desired URL in the **Secret Server Custom URL** text box.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
 #### SSL Recommendations
 
 For the best security, we recommend placing the SSL certificate on each of the Web servers. This ensures the traffic leaving the server is encrypted by SSL. Optionally, the load balancer would need the certificates as well for adding the client's IP address.
@@ -279,15 +286,11 @@ In the `web-appSetting.config` file in your SS directory, add the following key:
 ```
 
 For SS 10.5.000000 and later:   
-
-1. Go to `https://<SecretServerAddress>/ConfigurationAdvanced.aspx`.
-
-1. Scroll to the bottom and click **Edit**.
-
-1. Locate the **IP Address Header** text box, type `X-Forwarded-For`.
-
-1. Click the **Save** button.
-
+$1
+$2$1
+$2$1
+$2$1
+$2
 > **Note:** The SSL certificate needs to exist on the load balancer and the Web server to ensure it has access to add the client IP address header.
 
 ## Clustering Errors

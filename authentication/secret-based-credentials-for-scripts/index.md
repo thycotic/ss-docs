@@ -15,59 +15,41 @@ You can specify a secret to provide the default credentials for running all Powe
 ### Remote Password Changing
 
 The precedence order for which RunAs secret to use for remote password changing is:
-
-1. Privileged account on the secret RPC tab
-
-1. Secret site's RunAs secret 
-
-1. Secret
-
+$1
+$2$1
+$2$1
+$2
 ### Secret Dependencies
 
 The precedence order for which RunAs secret to use for PowerShell Secret dependencies is:
-
-1. Privileged account on the dependency
-
-1. Run As secret on the dependency group's site
-
-1. Secret site's RunAs secret
-
-1. Secret
-
+$1
+$2$1
+$2$1
+$2$1
+$2
 ### Checkout Hooks
 
 The precedence order for which RunAs secret to use for checkout hooks is:
-
-1. Privileged account on the hook
-
-1. Secret site's RunAs secret
-
-1. Secret
-
+$1
+$2$1
+$2$1
+$2
 ## Procedures
 
 ### Setting the Default PowerShell Credential for a Site
 
 To set a default PowerShell credential for a site:
-
-1. Go to **Admin \> Distributed Engines \> Manage Sites**.
-
-1. Select the desired site.
-
-1. Click **Edit**.
-
-1. Click the secret picker link on the **Default PowerShell RunAs Secret** field.
-
-1. Click **Save**.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
 ### Using the Site PowerShell Credentials for Discovery
 
 To use the site PowerShell credentials on a discovery scanner:
-
-1. Add a PowerShell scanner to a discovery source or edit an existing scanner.
-
-1. In the **Edit** dialog for the scanner, click to select the **Use Site RunAs Secret** checkbox.
-
-1. Click **Save**. 
-
+$1
+$2$1
+$2$1
+$2
    > **Note:** If no RunAs secret is set on the site, you will get an error message when you try to save.

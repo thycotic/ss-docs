@@ -37,85 +37,55 @@ To download and install the latest version of .NET Framework: See [Microsoft .NE
 ### Administer Configuration SAML Role Permission
 
 The “Administer Configuration SAML” role permission is required to use SAML to access SS. To grant a user this permission from an administrator account:
-
-1. Go to **Admin > Roles**. The Roles page appears.
-
-1. Click the **Create New** button. The Role Edit page appears:
-
+$1
+$2$1
+$2
    ![image-20200610145830073](images/image-20200610145830073.png)
-
-1. Type the name, such as `SAML`, in the **Role Name** text box.
-
-1. Click to select the **Enabled** check box.
-
-1. Click **Administer Configuration SAML** in the right side **Permissions Unassigned** list box.
-
-1. Click the **\<** button to move the permission to the other side.
-
-1. Click the **Save** button. The Roles page returns.
-
-1. Click the Assign Roles button.name link of the newly created role. The View Role Assignment page appears:
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
    ![image-20200610150702026](images/image-20200610150702026.png)
-
-1. Click the **Role** dropdown list to select the role you just created.
-
+$1
+$2
    ![image-20200610150844712](images/image-20200610150844712.png)
-
-1. Click the **Edit** button. The Role Assignment page appears:
-
+$1
+$2
    ![image-20200610151025938](images/image-20200610151025938.png)
-
-1. Move the desired users to the **Assigned** list using the same method as before.
-
-1. Click the **Save Changes** button.
-
+$1
+$2$1
+$2
 ## Setting up Secret Server
-
-1. Navigate to **Admin \> Configuration**.
-
-1. Click the **SAML** tab:
-
+$1
+$2$1
+$2
    ![image-20200610151801952](images/image-20200610151801952.png)
-
-1. Click the **Edit** button in the **SAML General Settings** section. 
-
-1. Click to select the **SAML Enabled** check box.
-
-1. Click the **Save** button.
-
-1. Under General Settings, click **Edit**, then check the **SAML Enabled** checkbox. **Save** changes.
-
-1. Click the **Edit** button in the **SAML Service Providers** section. 
-
-1. Type a name for your SS service provider, such as `SecretServerServiceProvider`, in the **Name** text box.
-
-1. Click the **Select Certificate** link. The Upload Certificate popup appears:
-   
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2   
    ![image-20200610152423326](images/image-20200610152423326.png)
    
-1. Click the **Upload Certificate** button to upload the certificate used for SS's HTTPS configuration.
-
-1. Locate your certificate `.pfx` file and select it. 
-
-1. Click the **Open** button. The new certificate appears.
-
-1. Type the access password for the private key of the certificate in the **Password** text box.
-
-1. Click the **OK** button. The certificate is uploaded and tested, and the popup disappears. The certificate now appears in the SAML Service Provider Settings section.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
    > **Note:** If you have an outdated version .NET Framework (earlier than 4.6.2), you may see an error recommending you upgrade to fix the error. Reload the certificate after you do so.
-
-1. Click the **Save** button.
-
-1. Click the Create New Identity Provider link. An Identity Provider popup appears.
-
-1. Click the **Import IDP from XML Metadata** link.
-
-1. Navigate to your `SecretServerSAMLMetadata.xml` file and select it. This is used for uploading into your IDP, which varies by provider. Follow instructions in the following section.. 
-
-1. Click the Open button.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
 ## Setting up IDPs
 
 IDP setup varies by provider. Click one of the following links for instructions for your provider:
@@ -123,8 +93,11 @@ IDP setup varies by provider. Click one of the following links for instructions 
 > **Note:** You must be logged in to access these links.
 
 - [How To Set Up Okta For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OKTA-for-SAML) (KBA)
+
 - [How To Set Up OneLogin For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OneLogin-for-SAML) (KBA)
-- [How To Set Up Azure AD For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-Azure-AD-for-SAML) (KBA)
+
+- [How To Set Up Okta For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OKTA-for-SAML) (KBA)
+
 - [How To Set Up ADFS For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-ADFS-for-SAML) (KBA)
 
 > **Note:** The username returned from the IDP to SS within the SAML Response/Assertion's subject statement must match the desired format. The format of the username passed depends upon how the user was created within SS.

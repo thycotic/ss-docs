@@ -3,25 +3,20 @@
 [priority]: # (1000)
 
 # Editing Teams
-
-1. In SS, click the **Admin** menu item. The Administration page appears.
-
-1. Type and then click **Teams** in the list. The Teams page appears:
-
+$1
+$2$1
+$2
    ![1558127834788](images/1558127834788.png)
-
-1. Click the table row for the desired team. That team's page appears:
-
+$1
+$2
    ![1558127845278](images/1558127845278.png)
-
-1. On the **General** page, click the **Edit** button to change:
-
+$1
+$2
    - The team name
    - The team's description
    - The team's status
-
-1. To restrict the visible sites:
-
+$1
+$2
   1. Click the **Sites** button on the left. The Sites page appears
 
      ![1558127999023](images/1558127999023.png)
@@ -39,9 +34,8 @@
      ![1558128033283](images/1558128033283.png)
 
   1. Click the **Save** button.
-
-1. To edit the team's member users or groups:
-
+$1
+$2
    1. Click the **Members** button on the left. The Members page appears:
 
       ![1558128182659](images/1558128182659.png)
@@ -57,9 +51,8 @@
    1. Click the **Save** button. The member appears on the Members page:
 
       ![1558128222774](images/1558128222774.png)
-
-1. View events for the team using its audit trail:
-
+$1
+$2
      1. Click the **Audit** button on the left. The Audit page appears:
 
         ![1558128279786](images/1558128279786.png)

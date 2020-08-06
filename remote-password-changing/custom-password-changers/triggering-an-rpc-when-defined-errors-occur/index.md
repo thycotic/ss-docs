@@ -31,25 +31,18 @@ Examples:
 ## Procedure
 
 To configure RPC in response to specific unknown errors:
-
-1. Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears:
-
+$1
+$2
 ![image-20191203153013109](images/image-20191203153013109.png)
-
-1. Click the **Configure Password Changers** button. The Password Changers Configuration page appears:
-
+$1
+$2
 ![image-20191105140347335](images/image-20191105140347335.png)
-
-1. Click the link for the desired password type. Its Account page appears:
-
+$1
+$2
 ![image-20191105140733364](images/image-20191105140733364.png)
-
-1. If necessary, click the **Advanced Settings** link.
-
-1. Click the pencil icon next to **Attempt Password Change with new password when error contains (regex)**. The Value text box appears.
-
-1. Determine the desired text string to search for.
-
-1. Type the desired regex in the **Value** text box.
-
-1. Click the **Save** icon next to the text box.
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2

@@ -15,8 +15,11 @@ A Regular Expression (Regex) is a phrase in a language for matching text. For de
 Setting up a remote file dependency, requires:
 
 -  **File Path:** This is the file path on the remote server where the remote password exists. UNC paths do not work here. See [UNC Names](#unc-names).
+
 - **Regex:** This regular expression to be used to locate the password embedded in the configuration file.
-- **Machine Name:** Computer name or IP address where the dependency is located.
+
+-  **File Path:** This is the file path on the remote server where the remote password exists. UNC paths do not work here. See [UNC Names](#unc-names).
+
 - **Privileged Account:** The account SS will authenticate as when changing the dependency. It must have privileges on the remote machine.
 
 A typical filled in New Dependency page looks something like this:

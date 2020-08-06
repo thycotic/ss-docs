@@ -26,31 +26,46 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 ### Getting Started
 
 - [End User Guide](https://docs.thycotic.com/ss/10.8.0/secret-server-end-user-guide) (for non-technical users) 
+
 - [Getting Started Tutorial](https://docs.thycotic.com/ss/10.8.0/getting-started-tutorial) (for technical users)
-- [Installation Guides](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/installation)
+
+- [End User Guide](https://docs.thycotic.com/ss/10.8.0/secret-server-end-user-guide) (for non-technical users) 
+
 - [System Requirements](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/system-requirements) 
 
 ### Best Practices  
 
 - [Best Practices](https://thycotic.force.com/support/s/article/Best-Practices-Secret-Server)  
+
 - [Discovery Best Practices](./discovery/discovery-best-practices/index.md)  
-- [High Availability and Disaster Recovery](https://thycotic.force.com/support/s/article/Secret-Server-HADR)  
+
+- [Best Practices](https://thycotic.force.com/support/s/article/Best-Practices-Secret-Server)  
+
 - [Secret Server Government Edition—Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf)
+
 - [Security Hardening Guide](https://docs.thycotic.com/ss/10.8.0/security-hardening)  
 
 ### Security Whitepapers
 - [Distributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf)
+
 - [Launcher Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_Launcher.pdf) 
-- [Meltdown and Spectre Security Information](https://updates.thycotic.net/secretserver/documents/SS_Sec_MeltdownAndSpectre.pdf) 
+
+- [Distributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf)
+
 - [\*nix Management](https://updates.thycotic.net/secretserver/documents/SS_Sec_nixManagement.pdf)
-- [Security Model](https://updates.thycotic.net/secretserver/documents/SS_Security_Model.pdf)
+
+- [Distributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf)
+
 - [Web Services Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_WebServices.pdf) 
 
 ## Help
 
 - [Document Conventions](./help/document-conventions/index.md)
+
 - [Secret Server Glossary](./help/secret-server-glossary/index.md)
-- [Self-Help Resources](./help/self-help-resources/index.md)
+
+- [Document Conventions](./help/document-conventions/index.md)
+
 - [Technical Support](./help/technical-support/index.md)
 
 ### Download Secret Server
@@ -66,14 +81,23 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 #### Legacy
 
 - [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration) 
+
 - [Devolutions](https://docs.thycotic.com/ssi/1.0.0/devolutions) 
-- [F5 BIG-IP](https://thycotic.force.com/support/s/article/F5-BIG-IP-Integration) 
+
+- [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration) 
+
 - [HP ArcSight](https://thycotic.force.com/support/s/article/HP-ArcSight-Integration) 
-- [HSM](https://thycotic.force.com/support/s/article/HSM-Integration) 
+
+- [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration) 
+
 - [IBM Verify](https://thycotic.force.com/support/s/article/IBM-Verify-Gateway-Integration) 
-- [OpenID Connect](https://thycotic.force.com/support/s/article/OpenID-Connect-Integration) 
+
+- [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration) 
+
 - [SCIM Connector](https://thycotic.force.com/support/s/article/SS-INST-EXT-SCIM-Connector) 
-- [SecureLink](https://www.securelink.com/thycotic-integration/) 
+
+- [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration) 
+
 - [Syslog](https://thycotic.force.com/support/s/article/Syslog-Events-Secret-Server) 
 
 ### Release Notes
@@ -83,6 +107,7 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 ### Secret Society (Forum)
 
 - [Forum](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server) (legacy—replaced by Secret Society)
+
 - [Thycotic Secret Society](https://thycotic.com/community/secret-society/): An Educational Community, replacing the Forum.
 
 ### Developer Resources

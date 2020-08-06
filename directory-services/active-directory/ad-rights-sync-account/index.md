@@ -13,6 +13,7 @@ Below is a listing of the Active Directory permissions required by the account u
 This object and all descendant objects:
 
 - List contents
+
 - Read all properties
 
 ## Minimum Required Permissions
@@ -34,20 +35,31 @@ This object and all descendant objects:
 Descendant User objects:
 
 - Read Display Name
+
 - Read Distinguished Name
-- Read E-mail-Address
+
+- Read Display Name
+
 - Read objectGUID
-- Read Logon Name
+
+- Read Display Name
+
 - Read Logon Name (pre-Windows 2000)
 
 Descendant Group objects:
 
 - Read displayName
+
 - Read Distinguished Name
-- Read Group name (pre-Windows 2000)
+
+- Read displayName
+
 - Read groupAttributes
-- Read memberOf
+
+- Read displayName
+
 - Read Members
+
 - Read objectGUID
 
  

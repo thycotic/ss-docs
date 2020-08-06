@@ -5,9 +5,7 @@
 # Deleting a Subscription
 
 To delete an event subscription:
-
-1. Navigate to **Administration > Event Subscriptions**.
-
-1. Click the subscription name.
-
-1. Click **Delete** on the following page.
+$1
+$2$1
+$2$1
+$2

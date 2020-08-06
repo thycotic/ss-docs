@@ -7,26 +7,28 @@
 The Secret Server proxy routes SSH and RDP sessions and helps protect the endpoint credentials. There are two configuration options for proxying:
 
 - Proxy through the SS Web application
+
 - Proxy through a distributed engine
 
 > **Note:** To learn more about RDP Proxying, please see [RDP Proxy Configuration](../rdp-proxy-configuration/index.md).
 
 ##  Enabling Proxy
-
-1. Go to **Admin \> SSH Proxy**.
-1. Enable **SSH Proxying**.
-1. Generate a new key.
-1. To enable proxying on Web nodes, edit the row in the **Endpoints** tab to set the **Public Host** and **Bind IP Address**. For a standard server, these can be the same, but if the public IP of the server is not set on the server (such as a load balancer or an EC2 instance with an elastic IP), they will be different.
-1. To enable proxying for a specific site and all engines within that site, edit the row in the **Sites** section and enable proxying and set the **SSH Port**.
-1. The engines for the sites are listed in the **Engines** section. The **Hostname/IP Address** is the public host or IP the launcher connects to and the **SSH Bind Address** is the IP on the server that the SSH proxy is listen on. Again, these will typically be the same, but may be different if the resolvable IP or host of the engine machine is different than the IP on the network adapter on the machine.
-1. Enable proxying on a secret with a PuTTY launcher. The launcher now connects to the assigned site, which is set on the **General** tab. If the site has proxying enabled, it will go through the engines available in the site, otherwise it will use the SS Web application proxy.
-
+$1
+$21. Enable **SSH Proxying**.
+$1
+$21. To enable proxying on Web nodes, edit the row in the **Endpoints** tab to set the **Public Host** and **Bind IP Address**. For a standard server, these can be the same, but if the public IP of the server is not set on the server (such as a load balancer or an EC2 instance with an elastic IP), they will be different.
+$1
+$21. The engines for the sites are listed in the **Engines** section. The **Hostname/IP Address** is the public host or IP the launcher connects to and the **SSH Bind Address** is the IP on the server that the SSH proxy is listen on. Again, these will typically be the same, but may be different if the resolvable IP or host of the engine machine is different than the IP on the network adapter on the machine.
+$1
+$2
 ## Web Application Proxy Performance
 
 ### Minimum Hardware
 
 - Intel 3.7 GHz Quad Core
+
 - 16 GB of RAM
+
 - 100 MB/s plus network capability
 
 ### Session Activity

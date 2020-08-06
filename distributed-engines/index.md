@@ -69,40 +69,27 @@ For more information about DE security, see the [Distributed Engine Security Gui
 
 
  When an engine Windows service starts, the following steps occur:
-
-1. The service contacts SS directly using the engine callback port.
-
-1. The service receives configuration information for the site connector to connect to and what site to process work items for.
-
-1. The service connects to the site connector and registers with the site for work item processing.
-
-1. The service fetches a work item from the site.
-
-1. The service processes the work item.
-
-1. The service gives the site the result of the processing, such as heartbeat success or discovery results.
-
-1. The service fetches another work item, and the process continues.
-
+$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2$1
+$2
 ## Configuring Distributed Engines
 
 Below is a summary of the steps required to configure DEs:
-
-1. Enable the DE and specify the engine callback settings.
-
-1. Configure and Install the site connector. 
-
+$1
+$2$1
+$2
    - If you plan to use RabbitMQ (recommended), follow the instructions [here](https://thycotic.force.com/support/s/article/How-to-install-RabbitMq). You can find general information on using RabbitMQ Helper to install RabbitMQ can be found in [Thycotic’s GitHub Repository](https://thycotic.github.io/rabbitmq-helper/)
    - If you plan to use MemoryMQ, create the site connector record within SS then click the **Download Site Connector Installer** button to get the MSI. Run the MSI on the desired host.
-
-1. Setup sites.
-
-1. Install engines.
-
-1. Assign secrets to sites. Secrets can be assigned to a site through their Remote Password Changing tab or via a bulk operation on the SS dashboard. Once assigned to a site, all heartbeat or password changing operations take place through that site.
-
-1. Assign discovery sources to sites. To run discovery through a site, edit the discovery source and assign     the site. Once assigned, all discovery operations for that discovery source take place through that site.
-
+$1
+$2$1
+$2$1
+$2$1
+$2
 ## FAQ
 
 **What happens if SS sends work items to the site connector, but no engines are running to consume them?**

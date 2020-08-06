@@ -10,8 +10,11 @@ Secret Server requires Microsoft SQL Server as the back-end database. All editio
 
 Setting up SQL Server requires: 
 - Installing SQL Server
+
 - Creating a SQL Account
-- Configuring database access in Secret Server 
+
+- Installing SQL Server
+
 - Installing SQL Server
 
 > **Note:** If you are using SQL Express make sure to get the edition with tools that  will include SQL Management Studio. Follow the link in the KB article [Download SQL Express with Tools](http://updates.thycotic.net/link.ashx?SQLServerExpressDownload).
@@ -35,6 +38,7 @@ Once the account has been created and SQL server installed with the MSI. The thi
 ### SQL Location
 
 - **Server Name or IP**: If it is a local machine  the server name will be (local) or localhost for the default instance, or if a named instance such as SQL Express it would be `localhost\SQLExpress`. If you are unsure, copy the value from the "Server name" text box when connecting through SQL Management Studio. 
+
 - **Database Name**: If you have created a database, enter the name. If you have given the SQL account dbCreator permission, enter a database name for Secret Server to create. 
 
 ### SQL Authentication

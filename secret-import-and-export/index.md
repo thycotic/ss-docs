@@ -17,7 +17,9 @@ You can import your data to another SS server as XML by going to **Admin > All**
 XML export includes: 
 
 - Folders (and their permissions)
+
 - Secret templates
+
 - Secrets (and their permissions)
 
 The XML export does **not** include users, groups, launchers, configuration, and others.
@@ -29,20 +31,31 @@ The XML export does **not** include users, groups, launchers, configuration, and
 The following secret template settings **are** transferred with the XML export or import:
 
 - Edit Requires
+
 - Field slug Names
-- Hide on View
+
+- Edit Requires
+
 - Is Required?
-- Keep Secret Name History
+
+- Edit Requires
+
 - One-time password settings
-- Secret template icons
+
+- Edit Requires
+
 - Type descriptions
+
 - Validate password requirements on create or edit
 
 The following secret template settings are **not** transferred:
 
 - Associated secrets
+
 - Launcher settings
-- Password changing settings
+
+- Associated secrets
+
 - Session recording enabled
 
 > **Note:** You *can* use this XML import and export to transfer between on-premises and cloud editions.

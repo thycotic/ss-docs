@@ -11,13 +11,10 @@ Enabling folder synchronization requires specifying the synchronization interval
 ## Synchronizing with the ConnectWise API
 
 The ConnectWise API is the recommended way to sync folders from ConnectWise. To sync:
-
-1. Select ConnectWise API from the Folder Synchronization Method list.
-
-1. Enter your ConnectWise site name.
-
-1. Select a ConnectWise Integrator Secret for API Access.
-
+$1
+$2$1
+$2$1
+$2
    ![1558126393202](images/1558126393202.png)
 
 > **Note:** The Integrator account must have access to the Company API in ConnectWise and access to all records

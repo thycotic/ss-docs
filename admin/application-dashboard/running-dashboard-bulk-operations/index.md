@@ -5,11 +5,9 @@
 # Running Dashboard Bulk Operations
 
 You can perform bulk operations from the Dashboard on multiple secrets:
-
-1. Click to select the secrets you wish to include. To check them all, check the check box in the column header row.
-
-1. Click to select the bulk operation from the dropdown list below the list of secrets. Available bulk operations include:
-
+$1
+$2$1
+$2
    - Add share
    - Assign secret policy
    - Assign to site
