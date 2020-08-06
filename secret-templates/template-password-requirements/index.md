@@ -1,6 +1,6 @@
-[title]: # (Template Password Requirements)
-[tags]: # (Template)
-[priority]: # (1000)
+[title]: # "Template Password Requirements"
+[tags]: # "Template"
+[priority]: # "1000"
 
 # Template Password Requirements
 
@@ -41,15 +41,21 @@ To create a new password requirement:
 1. Click to select the desired password no-no check boxes in the Password Validation section. The options are:
 
    - **Prevent Username in Password**: Do not allow the username to be part of the password.
+ 
    - **Prevent Common Dictionary Words**: Do not allow everyday English words in the password.
+ 
    - **Prevent Spatial Terms in Password**: Do not allow strings of characters based their order on the keyboard, such as `qwerty` or `asdfg`.
+
    - **Prevent Sequences in Password**: Do not allow strings of characters based on their order in the character set, such as `abcd` or `5678`.
 
-1. Create rules for the password requirement.
+1. Create rules for the password requirement:
 
    1. If necessary, click the **+** icon in the **Character Set Validation** section to create a blank rule.
+
    1. Click the **Character Set Validation** dropdown list to select either **Minimum of** or **Starts with**. The former set characters that must be present in the password, and the latter sets what characters the password must start with.
+
    1. Type the number of characters that must be present or start with in the unlabeled text box.
+
    1. Click the **from** dropdown list box to select the character set to use.
 
 1. Repeat the process to add any additional rules.
