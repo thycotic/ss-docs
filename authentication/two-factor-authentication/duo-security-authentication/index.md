@@ -13,7 +13,9 @@
 ## Task 1: Create a Duo Application Representing Your Secret Server (Admin)
 
 1. Sign up for a new Duo account, or log in to an existing one at [Duo Security](http://duosecurity.com).
-1. Under **Applications**, create a new application of the **Thycotic Secret Server** type. Name the application as you wish. 
+
+1. Under **Applications**, create a new application of the **Thycotic Secret Server** type. Name the application as you wish.
+
 1. Record the API hostname, integration key, and secret key from the new Duo application you just created.
 
 ## Task 2: Configure Secret Server to Use Duo (Admin)
@@ -49,5 +51,7 @@
 ## Task 3: Setting up Duo (User)
 
 1. Log on to SS.
+
 1. After successful authentication, a new screen appears with the option to select a method to authenticate with.
+
 1. Select one of the options (**Duo Push**, **Send SMS**, or **Phone)**, depending on your setup with Duo) and complete the selected authentication process to log in.

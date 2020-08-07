@@ -26,7 +26,7 @@ The error message to display to the user when their entered ticket number fails 
 
 ## Instance Name
 
-This is the name of your instance in the format `https://<instance name>.service-now.com`. 
+This is the name of your instance in the format `https://<instance name>.service-now.com`.
 
 ## System Credentials
 

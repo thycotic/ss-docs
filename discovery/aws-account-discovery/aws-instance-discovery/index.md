@@ -34,7 +34,7 @@ SS can now scan for instance resources in AWS. You can add this ability in the s
 
    ![image-20200730103954581](images/image-20200730103954581.png)
 
-1. Click the check boxes for the scanners you desire. 
+1. Click the check boxes for the scanners you desire.
 
 1. Click the **Next** button.
 
@@ -49,6 +49,7 @@ SS can now scan for instance resources in AWS. You can add this ability in the s
 1. Click to select the check boxes for the scanners you desire:
 
    - **AWS Windows Machine Scanner**: This is a machine scanner that scans each region and pulls all of the AWS Windows OS VM instances.
+
    - **AWS Machine (Non-Windows) Scanner**: This is a machine scanner that scans each region and pulls all of the AWS Non-Windows OS VM instances.
 
 1. Click the **Next** button. The Credential Secrets page appears:
@@ -62,4 +63,3 @@ SS can now scan for instance resources in AWS. You can add this ability in the s
 1. Navigate the folder tree and select the secret you created earlier. As soon as you select the check box, the popup disappears and the secret appears under the Add Secret link.
 
 1. Click the **Finish** button.
-

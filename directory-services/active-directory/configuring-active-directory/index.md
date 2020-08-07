@@ -49,13 +49,21 @@ SS can sync with security groups from AD to automatically add, enable, and disab
 ## Step 5: Enabling Active Directory Synchronization
 
 1. From the **Active Directory** page, click the **Edit** button. The Edit Active Directory Configuration page appears.
+
 1. Click to select the **Enable Synchronization of Active Directory** check box. Additional settings appear.
+
 1. Choose how often you want Secret Server to sync with AD by configuring the **Synchronization Interval**. The default value is one day.
+
 1. Click the **User Account Options** Dropdown list to select a default status for users. See below for a description of each option. We recommend selecting **Users are disabled by default (Manual)** for initial testing. The options are:
+
    - **Users are enabled by default (Manual)**: SS users are automatically enabled when they are synced as new users from AD. If they were disabled explicitly in SS, they are not automatically re-enabled. If creating a new user will cause the user count to exceed your license limit, the user created disabled.
+
    - **Users are disabled by default (Manual)**: SS users are automatically disabled when they are pulled in as new users from AD. If they were enabled explicitly in SS, they are not automatically re-disabled.
+
    - **User status mirrors Active Directory (Automatic)**: When new users are pulled in from AD, they are automatically enabled if active on the domain. The exception is when this will cause you to exceed your license count. For existing users, they are automatically be disabled if they are removed from all synchronization groups, deleted in AD, or disabled in AD. They are automatically re-enabled when they are part of a synchronization group and are active in AD. See [Understanding Active Directory Automatic User Management](../../directory-services/active-directory/understanding-ad-automatic-user-management/index.md).
+
 1. Change the **Days to Keep Operational Logs** text box to set the period to keep AD-related logs that might contain PII. SS automatically deletes logs older than that (in days).
+
 1. Click the **Save** button.
 
 ## Step 6: Choosing Synchronization Groups

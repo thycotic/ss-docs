@@ -4,7 +4,7 @@
 
 # Securing ASP Cookies
 
-To secure your ASP session and forms authentication cookies, perform the following steps: 
+To secure your ASP session and forms authentication cookies, perform the following steps:
 
 1. Ensure that there is an SSL certificate installed for the instance.
 
@@ -28,7 +28,7 @@ To secure your ASP session and forms authentication cookies, perform the followi
 
 1. Open the `web-auth.config`file in the application installation folder.
 
-1. Set `requireSSL` to `true` . If the attribute does not exist, add it to the `forms` tag. 
+1. Set `requireSSL` to `true` . If the attribute does not exist, add it to the `forms` tag.
 
    Save and Close the file.
 

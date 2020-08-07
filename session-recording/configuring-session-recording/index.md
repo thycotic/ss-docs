@@ -21,7 +21,7 @@ You can set the advanced session recording agent to "Record All Sessions." If so
 1. On the **Session Recording** tab, click the **Edit** button.
 
 1. Ensure the **Enable Session Recording** check box is selected.
-   
+
 > **Note:** For testing and proof of concept deployments, SS's [**Internal Site Connector**](https:/"updates.thycotic.net/links.ashx?InternalSiteConnector) is sufficient for session recording. For production deployments we strongly recommend [**RabbitMQ**](https://updates.thycotic.net/links.ashx?RabbitMQ) for a more-robust message queue.
 
 ### Using Legacy Video Codecs
@@ -64,14 +64,14 @@ You can configure SS with custom launchers to run arbitrary programs, which can 
 
 1. Define a custom launcher:
    1. Go to **Admin \> Secret Templates \> Configure Launchers**. The Manage Launcher Types page appears.
-   
+
    1. Click the **New** button.
    1. Leave the **Launcher Type** dropdown list set to **Process**.
    1. Type a name for the custom launcher in the **Launcher Name** text box.
    1. Type a process name in the Process Name text box.
    1. (optional) Type process arguments in the Process Arguments text box.
    1. Customize other Options as needed.
-   1. Click the **Save** button. 
+   1. Click the **Save** button.
 1. Associate the launcher with a secret template:
    1. Go to **Admin > Secret Templates**. The Manage Secret Templates page appears.
    1. Click the template dropdown list and select the desired template.
@@ -83,7 +83,7 @@ You can configure SS with custom launchers to run arbitrary programs, which can 
 
 Secret Server 10.8 added two new options to custom launchers:
 
-#### Record Multiple Windows Option 
+#### Record Multiple Windows Option
 
 If this option is not checked, only the main window of the main launcher process will be recorded (this was always the behavior prior to Secret Server 10.8). If it is checked, multiple windows as well as child processes are recorded.
 
@@ -91,7 +91,7 @@ Without this enabled, the main window of the main process sometimes does not sho
 
 #### Record Additional Processes Option
 
-Here you can type an optional comma-separated list of processes to record if found, running under your same user account, that are not started or terminated by the custom launcher. "Record Multiple Windows" must be enabled for this option to be available. 
+Here you can type an optional comma-separated list of processes to record if found, running under your same user account, that are not started or terminated by the custom launcher. "Record Multiple Windows" must be enabled for this option to be available.
 
 In the example above of launching PowerShell and then opening Notepad, if "Record Multiple Windows" is enabled, both PowerShell and Notepad would be recorded automatically, because the OS can tell that Notepad is a child process of PowerShell. This even works multiple levels deep—for example, launching PowerShell, then the command prompt, and then launching in PowerShell again, finally followed by Notepad.
 

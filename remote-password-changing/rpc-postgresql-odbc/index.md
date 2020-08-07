@@ -30,7 +30,7 @@ ODBC connection strings vary depending on product. See [Example Connection Strin
 
 Parameterized SQL server command:
 
-`EXEC sp_password @CURRENTPASSWORD, @NEWPASSWORD` 
+`EXEC sp_password @CURRENTPASSWORD, @NEWPASSWORD`
 
 > **Note:**  If the command does not support using parameters, the secret field values can be substituted into the command.
 
@@ -52,12 +52,15 @@ Each ODBC password changer requires a connection string. This can be specified w
 Add a connection string to password changer settings:
 
 1. In Secret Server, go to **Admin \> Remote Password Changing**.
+
 1. Click **Configure Password Changers**.
 
 2. Click the name of your password changer.
+
 2. Click the **Edit** button.
 
 3. Type your database ODBC connection string in the **Connection String** text box.
+
 3. Click the **Save** button.
 
 ### Adding Connection Strings to Secrets
@@ -93,5 +96,3 @@ A machine with a distributed engine installed requires the corresponding ODBC dr
 2. Modify the `pg_hba.conf` (for example: `/PostreSql/9.3/pg_hba.conf`) file to have a host entry for the agent computer IP address. For example, where 192.168.60.147 is the IP address of the distributed engine:
 
    `host all all 192.168.60.147/32 md5`
-
- 

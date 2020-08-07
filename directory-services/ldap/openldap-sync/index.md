@@ -17,7 +17,7 @@ OpenLDAP is a free, open source version of the Lightweight Directory Access Prot
 
 We do not support anonymous user authentication:
 
-When creating an OpenLDAP directory service, “Anonymous” is a supported authentication method.  When this is chosen, SS connects anonymously to the OpenLDAP directory service as configured during the synchronization process and creates any users found on the directory service.  
+When creating an OpenLDAP directory service, “Anonymous” is a supported authentication method.  When this is chosen, SS connects anonymously to the OpenLDAP directory service as configured during the synchronization process and creates any users found on the directory service.
 
 When anonymous is selected, a secondary authentication option, "User Authentication," appears, which is the method used when the synchronized users attempt to authenticate to SS. In short, user authentication cannot be anonymous because SS does not allow anonymous access.
 
@@ -32,7 +32,9 @@ We do not support configurations where using different attributes yield users wi
 1. Create a secret in SS of type **OpenLDAP Account**. This sync secret is used to synchronize users and groups. It requires permission to search and view the attributes of the users and groups. If you plan on using SS discovery, the account will also need permissions to scan computers on the network for accounts. Complete these parameters:
 
    - Domain. Example: `ldap.omega.thycotic.com`
+
    - Username. Example: `cn=ldap,dc=omegaldap,dc=local`
+
    - Password
 
 1. Go to **Admin \> Directory Services**. The Directory Services page appears:
@@ -41,7 +43,7 @@ We do not support configurations where using different attributes yield users wi
 
 1. Click the **Add Domain** dropdown list and select **OpenLDAP Domain**. The OpenLDAP popup appears:
 
-   ![image-20200722150621144](images/image-20200722150621144.png) 
+   ![image-20200722150621144](images/image-20200722150621144.png)
 
 1. Type the domain's FQDN in the **Fully Qualified Domain Name** text box. For example: `ldap.omega.thycotic.com`.
 
@@ -51,9 +53,10 @@ We do not support configurations where using different attributes yield users wi
 
 1. Type the distinguished name (node path) in the **Distinguished Name** text box. For example: `dc=omegaldap,dc=local`
 
-1. Click the **Authentication** dropdown list to select either the **Basic** or **Anonymous** authentication method. 
+1. Click the **Authentication** dropdown list to select either the **Basic** or **Anonymous** authentication method.
 
-   - Basic  authentication requires that valid credentials are assigned as the sync secret. Those credentials are used to authenticate to the OpenLDAP system on each sync. 
+   - Basic  authentication requires that valid credentials are assigned as the sync secret. Those credentials are used to authenticate to the OpenLDAP system on each sync.
+
    - Anonymous authentication does not require valid credentials and removes the Synchronization Secret section. Instead, it exposes a User Authentication field.
 
    > **Note:** The Kerberos authentication method probably works but has not been test by Thycotic.
@@ -66,6 +69,7 @@ We do not support configurations where using different attributes yield users wi
 1. Anonymous authentication: Click the **User Authentication** list to select **Basic** or **No Authentication**. This sets which authentication method to use when users who are synced anonymously try to authenticate:
 
    - Basic authentication requires valid OpenLDAP account credentials.
+
    - No authentication is for when customers want users synced from OpenLDAP but use authentication through another service, such as SAML. We do *not* support anonymous authentication for security reasons.
 
 1. Click to select the **Use LDAPS** check box if you intend to use secure LDAP.

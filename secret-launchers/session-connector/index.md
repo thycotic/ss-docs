@@ -7,7 +7,7 @@
 
 ## Overview
 
-Normally, Secret Server (SS) requires installing additional software such as Connection Manager or Secret Server Protocol Handler (SSPH) on the end-user computers to launch secrets, such as RDP, SSH, or custom, and optionally record the session. 
+Normally, Secret Server (SS) requires installing additional software such as Connection Manager or Secret Server Protocol Handler (SSPH) on the end-user computers to launch secrets, such as RDP, SSH, or custom, and optionally record the session.
 
 With Secret Server Session Connector (SSSC) installed on a Remote Desktop Services (RDS) server, anyone who can download and launch a standard Remote Desktop Protocol (RDP) shortcut file can have the same experience. The RDS server itself runs a special SSPH for RDS—SSPH (RDS) as a remote app to record the sessions, so end-users do not need to install any additional software.
 
@@ -152,7 +152,7 @@ Enable SSSC:
 
    ![image-20200728142024786](images/image-20200728142024786.png)
 
-   > **Note:** If you logged on as a local user, you will see this error and be unable to configure RDS. You must be logged on as a domain user. 
+   > **Note:** If you logged on as a local user, you will see this error and be unable to configure RDS. You must be logged on as a domain user.
    >
    > ![image-20200728135910159](images/image-20200728135910159.png)
 
@@ -168,7 +168,7 @@ Enable SSSC:
 
    ![image-20200728142709737](images/image-20200728142709737.png)
 
-1. Type `Session Connector` in the **Name** text box. 
+1. Type `Session Connector` in the **Name** text box.
 
 1. Click the **Next \>** button. The Specify RD Session Host Servers page appears:
 
@@ -188,7 +188,7 @@ Enable SSSC:
 
 1. Click to select the **Enable user profile disks** check box. SSSC does not use user profile disks. We select the check box to enable the Create button.
 
-1. Click the **Create** button. The collection is created, and the wizard disappears. The SSSC is now listed under Collections: 
+1. Click the **Create** button. The collection is created, and the wizard disappears. The SSSC is now listed under Collections:
 
    ![image-20200728145852513](images/image-20200728145852513.png)
 
@@ -250,7 +250,7 @@ To configure on a single server:
 
 1. Click the **RemoteApp session logoff delay** dropdown list and select **Immediately**.
 
-1. Click the **OK** button to save. 
+1. Click the **OK** button to save.
 
 ### Task 4: Installing the Secret Server Session Connector
 
@@ -304,7 +304,7 @@ When launched, the end-user will connect to the RDS host configured on the SSSC 
 
    ![image-20200728092445272](images/image-20200728092445272.png)
 
-1. Type in or set the account details. 
+1. Type in or set the account details.
 
 1. Ensure that the **Enabled** check box is selected.
 
@@ -354,7 +354,7 @@ You must create a custom launcher for each combination of and RDS server cluster
 
    - **Record Keystrokes:** Check to record keystrokes in addition to video on related secrets with session monitoring enabled.
 
-   - **Child Launcher Type:** Click to select the launcher type, such as Remote Desktop or PuTTY. This is the real launcher type that runs on the RDS server to connect to the secret. 
+   - **Child Launcher Type:** Click to select the launcher type, such as Remote Desktop or PuTTY. This is the real launcher type that runs on the RDS server to connect to the secret.
 
    - **RDS Server Hostname:** IP or hostname for the RDS server or cluster.
 
@@ -403,6 +403,6 @@ Session Connector will also log to the file `C:\Program Files\Thycotic Software 
 
 Secret Server Session Connector can be removed from “Add/Remove Programs” or “Apps & Features.” Once uninstalled, a reboot is required to restore the default Remote Desktop behavior.
 
-Any related SSSC custom launchers need to be un-associated with any secret templates they were previously tied to. 
+Any related SSSC custom launchers need to be un-associated with any secret templates they were previously tied to.
 
 > **Note:** It is not currently possible to delete a custom launcher in SS, but if it is unassociated with all secret templates, it will not appear on any secrets.

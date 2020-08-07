@@ -25,7 +25,6 @@ DEs support heartbeat, Remote Password Changing (RPC), and discovery. A DE is co
 - A **site connector** is a Windows service that holds the work items for a number of sites. The site connector can be either [RabbitMQ](https://www.rabbitmq.com/) or MemoryMQ (a built-in service developed by Thycotic). Each site can only be assigned to a single site connector, but you can have multiple site connectors running on separate machines, each storing work items for multiple sites. Those sites, in turn, distribute the work items among multiple engines. The ability to add new Site Connectors, Sites, and Engines as needed makes Distributed Engine a highly-scalable solution.
 
 > **Note:** For the highest scalability and reliability, Thycotic recommends using RabbitMQ. MemoryMQ is an easier but less capable alternative for customers who do not need many engines or sites.
->
 
 **Figure:** Distributed Engine Components
 
@@ -35,7 +34,7 @@ DEs support heartbeat, Remote Password Changing (RPC), and discovery. A DE is co
 
 ### Ports
 
-DEs have two configurable ports: one for connecting to the site connector, and one for the engine to retrieve configuration information from SS at regular intervals. The callback port from an engine to SS can be configured to contact the website directly over HTTP, HTTPS, or TCP. HTTP and HTTPS connections use the existing IIS port bindings. All connections are outbound—no inbound connections are made from SS or the site connectors to the remote networks. 
+DEs have two configurable ports: one for connecting to the site connector, and one for the engine to retrieve configuration information from SS at regular intervals. The callback port from an engine to SS can be configured to contact the website directly over HTTP, HTTPS, or TCP. HTTP and HTTPS connections use the existing IIS port bindings. All connections are outbound—no inbound connections are made from SS or the site connectors to the remote networks.
 
 > **Note**: If using Secret Server Cloud, port 9354 must also be opened for outbound messages.
 
@@ -67,8 +66,7 @@ For more information about DE security, see the [Distributed Engine Security Gui
 
 ### Engine Workflow
 
-
- When an engine Windows service starts, the following steps occur:
+When an engine Windows service starts, the following steps occur:
 
 1. The service contacts SS directly using the engine callback port.
 
@@ -90,9 +88,10 @@ Below is a summary of the steps required to configure DEs:
 
 1. Enable the DE and specify the engine callback settings.
 
-1. Configure and Install the site connector. 
+1. Configure and Install the site connector.
 
    - If you plan to use RabbitMQ (recommended), follow the instructions [here](https://thycotic.force.com/support/s/article/How-to-install-RabbitMq). You can find general information on using RabbitMQ Helper to install RabbitMQ can be found in [Thycotic’s GitHub Repository](https://thycotic.github.io/rabbitmq-helper/)
+
    - If you plan to use MemoryMQ, create the site connector record within SS then click the **Download Site Connector Installer** button to get the MSI. Run the MSI on the desired host.
 
 1. Setup sites.

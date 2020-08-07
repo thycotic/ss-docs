@@ -16,12 +16,17 @@ Currently, you can enable this either globally, via user settings, or per secret
 ## Enabling Globally with User Settings
 
 1. In SS, click the user icon and select **User Preferences**. The User Preferences page appears.
+
 1. Click the **Settings** tab.
+
 1. In the **Launcher Settings** section, click to enable the **Allow Access to Smart Cards** toggle. The change is automatically saved.
 
 ## Enabling on a Specific Secret
 
 1. On a Secret with an RDP launcher, click the **Settings** tab.
+
 1. Click the **Edit** link on the **Under RDP Launcher – Personalized User Settings** title bar. The page changes to edit mode.
+
 1. Click to select the **Allow Access to Smart Cards** check box.
+
 1. Click the **Save** button.

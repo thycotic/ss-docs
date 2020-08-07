@@ -9,16 +9,25 @@ The Dashboard Tools Menus is available via the ![1557174423911](images/155717442
 ## Tool Section
 
 - Connection Manager
+
 - Importing Secrets
+
 - Exporting Secrets
+
 - Manage Secret Access Request
+
 - Launcher Tools
+
 - Privilege Manager
+
 - Privilege Behavior Analytics
 
 ## Help Section
 
 - About
+
 - Help
+
 - Secret Server REST API Guide
+
 - User Guide
