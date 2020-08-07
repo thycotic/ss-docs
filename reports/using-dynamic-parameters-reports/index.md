@@ -53,7 +53,7 @@ This displays a user dropdown list with all active users on view and returns an 
 Example: display all audit entries for  a certain user:
 
 ``` sql
-SELECT 
+SELECT
   tau.UserIdAffected,
   tau.[Action],
   tau.Notes,
@@ -62,7 +62,7 @@ SELECT
   tau.MachineName,
   tau.DatabaseName,
   tu.UserId,
-  tu.UserName 
+  tu.UserName
 FROM tbAuditUser tau INNER JOIN tbUser tu ON tau.UserId=tu.UserId WHERE tu.UserId=#USER
 ```
 
@@ -93,7 +93,7 @@ Displays a folder picker that shows all Folders and returns a folder id.
 Example: Display secret names in a selected folder:
 
 ``` sql
-SELECT 
+SELECT
   s.SecretName
 FROM tbSecret s
 WHERE s.Folderid = #FOLDERID
@@ -122,7 +122,7 @@ FROM tbFolder f
 WHERE FolderPath LIKE '%' + #CUSTOMTEXT + '%'
 ```
 
-## Additional Parameters 
+## Additional Parameters
 
 The following additional parameters can be used to make your report more dynamic:
 
@@ -154,9 +154,9 @@ For example, the following script would give you a list of all users who have lo
 ``` sql
 SELECT
   Domain,
-  Username, 
+  Username,
   LastLogin
-FROM tbUser 
+FROM tbUser
   LEFT  JOIN tbDomain ON tbUser.DomainId = tbDomain.DomainId
 WHERE
   LastLogin BETWEEN #STARTPREVIOUSMONTH AND #ENDPREVIOUSMONTH
@@ -166,7 +166,7 @@ WHERE
 
 ## Coloring Your Reports
 
-Another option when creating reports is to include a Column in your SQL query called "Color" this will give the row that particular color. See [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp). 
+Another option when creating reports is to include a Column in your SQL query called "Color" this will give the row that particular color. See [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
 
 For example, to show users who haven't logged in within 90 days in Red:
 

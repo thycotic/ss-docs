@@ -47,7 +47,9 @@ There are two ways to create a Report. From the Reports Edit page, click the **A
 To edit a report:
 
 1. Click the **Reports** menu item. The Reports page appears, listing all the reports.
+
 1. Click the name of the report, which is a link. That report’s page appears.
+
 1. Click the **Edit** button. The Report Edit page appears. See [Creating a Custom Report](#creating-a-custom-report) for details about the parameters.
 
 > **Note:** The SQL script text cannot be edited for non-custom (built-in) reports.

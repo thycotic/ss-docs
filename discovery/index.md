@@ -18,7 +18,7 @@ Some typical accounts that discovery can find include Windows local admin, Windo
 
 ### Automated Discovery
 
-The following is a high-level overview of how the most common type of automated discovery works without customization. Discovery is organized into an ordered set of discovery scans that pass information based on input and output templates. This is all configured by default. You cannot alter the out-of-the-box discovery scanners, but you can copy them and then modify the copy. 
+The following is a high-level overview of how the most common type of automated discovery works without customization. Discovery is organized into an ordered set of discovery scans that pass information based on input and output templates. This is all configured by default. You cannot alter the out-of-the-box discovery scanners, but you can copy them and then modify the copy.
 
 #### Automated Discovery Terms
 
@@ -64,7 +64,7 @@ A typical automated discovery process for Active Directory domains, running on a
 
 1. The Find Dependencies scanner (using the Windows Discovery base scanner) examines a list of machines from its Windows Computer input template using various technologies. For example, applications pools use Microsoft Web Administration (WMA) or, failing that, Windows Management Instrumentation (WMI). Services use WMI, and scheduled tasks use Windows’ task scheduler interfaces. The Find Dependencies scanner can return any number of output templates as desired. These include: Com+ Application, Computer Dependency (Basic), PS Dependency, Remote File, SQL Dependency (Basic), SSH Dependency (Basic), SSH Key Rotation Dependency, Windows Application Pool, Windows Scheduled Task, and Windows Service.
 
-The discovered dependencies for local accounts are displayed at Admin \> Discovery \> Discovery Network View \> Local Accounts Tab. Returned accounts for AD users are displayed at  Admin \> Discovery \> Discovery Network View \> Domain \> Cloud Accounts. 
+The discovered dependencies for local accounts are displayed at Admin \> Discovery \> Discovery Network View \> Local Accounts Tab. Returned accounts for AD users are displayed at  Admin \> Discovery \> Discovery Network View \> Domain \> Cloud Accounts.
 
 > **Note:** Any dependencies that were discovered in prior discovery runs that are no longer present are removed from the discovery results, and their secret dependencies are deactivated.
 

@@ -15,8 +15,11 @@ A Regular Expression (Regex) is a phrase in a language for matching text. For de
 Setting up a remote file dependency, requires:
 
 -  **File Path:** This is the file path on the remote server where the remote password exists. UNC paths do not work here. See [UNC Names](#unc-names).
+
 - **Regex:** This regular expression to be used to locate the password embedded in the configuration file.
+
 - **Machine Name:** Computer name or IP address where the dependency is located.
+
 - **Privileged Account:** The account SS will authenticate as when changing the dependency. It must have privileges on the remote machine.
 
 A typical filled in New Dependency page looks something like this:
@@ -45,11 +48,11 @@ In the **Machine Name** text box:
 
 `BARAKA`
 
-## Examples 
+## Examples
 
 The following are some examples of using Regex within file dependencies:
 
-###  XML Configuration Files 
+###  XML Configuration Files
 
 #### Example One
 
@@ -84,7 +87,7 @@ The following are some examples of using Regex within file dependencies:
 
 ##### Regex
 
-`<User name="Bob" password="([^"]+)" />` 
+`<User name="Bob" password="([^"]+)" />`
 
 ### Windows Initialization (.ini) Files
 
@@ -98,7 +101,7 @@ organization=Acme Widgets Inc.
 ```
 #### Regex
 
-`name=John\sDoe\s*password=([^\r\n]+)` 
+`name=John\sDoe\s*password=([^\r\n]+)`
 
 
 ### SQL Server Connection Strings
@@ -111,7 +114,7 @@ Data Source=myServerAddress;Initial Catalog=myDataBase;UserId=myUsername;Passwor
 
 #### Regex
 
-`Password=([^;]+)` 
+`Password=([^;]+)`
 
 ### Oracle Connection Strings
 
@@ -126,7 +129,7 @@ User Id=myUsername;Password=myPassword;
 ````
 ##### Regex
 
-`Password=([^;]+)` 
+`Password=([^;]+)`
 
 #### Example Two
 
@@ -138,7 +141,7 @@ Data Source=username/password@//myserver:1521/[my.service.com](http://my.service
 
 ##### Regex
 
-`username/([^@/]+)` 
+`username/([^@/]+)`
 
 ### YAML
 
@@ -158,4 +161,4 @@ password: Password1
 
 #### Regex
 
-`name:\s*Dorothy\s*password:\s*([^\r\n]+)` 
+`name:\s*Dorothy\s*password:\s*([^\r\n]+)`

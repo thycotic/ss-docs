@@ -11,24 +11,35 @@
 Before you contact Support, gather the following information:
 
 - Your Thycotic Support username and password
+
 - The email account already associated with your account (if using email)
+
 - Your company name
+
 - The technical contact name
+
 - The technical contact phone number
+
 - The product name
+
 - Issue symptoms and details
+
 - Any other relevant details, such as hours the technical contact is present
 
-## Step Two: Get a Mandatory Support PIN 
+## Step Two: Get a Mandatory Support PIN
 
 The support PIN validates that your license includes support, and you must provide the PIN in your email or when you call. The PIN also makes it easier for Thycotic Support to locate your customer records and give you better support.
 
 To get your PIN:
 
 1. Get the log on credentials you received when you became a Thycotic customer.
+
 1. Log on the [Support Portal](https://thycotic.force.com/support/s/login/) using your credentials.
+
 1. On the main page, click the large blue **PIN** bar to get your PIN.
+
 1. Record your PIN.
+
 1. If you want to use our ticketing system for support, leave the browser tab open, and return for step four.
 
 ## Step Three: Choose a Support Method
@@ -60,7 +71,7 @@ Thycotic delivers support by phone worldwide. Select the applicable number from 
 
 ### Email Support
 
-Send your email to support@thycotic.com __with the PIN number as part of the subject line__ of your email. For example: PIN 345 Workflow Stopped Unexpectedly. Include all the information listed in step one. 
+Send your email to support@thycotic.com __with the PIN number as part of the subject line__ of your email. For example: PIN 345 Workflow Stopped Unexpectedly. Include all the information listed in step one.
 
 > **Important:** You must send your email using an email address already noted in your account with Thycotic. Otherwise, it might delay our response.​
 
@@ -68,6 +79,8 @@ Send your email to support@thycotic.com __with the PIN number as part of the sub
 
 Open a support ticket and track your issue to resolution.
 
-* Visit the [Support Portal Login Page](https://thycotic.force.com/support/s/login/) using the credentials you received when you became a customer.
-* After logging on, click the __Cases__ tab, and then click __Create a Case__.
-* Follow the instructions to complete your case.
+- Visit the [Support Portal Login Page](https://thycotic.force.com/support/s/login/) using the credentials you received when you became a customer.
+
+- After logging on, click the __Cases__ tab, and then click __Create a Case__.
+
+- Follow the instructions to complete your case.

@@ -6,9 +6,9 @@
 
 ## Overview
 
-Secret Server webservices can be called using scripts. This example demonstrates how to authenticate and retrieve secrets and folders programmatically in C# using SOAP.  There are also [Perl](../soap-perl-example-code/index.md) and [PHP](../soap-php-example-code/index.md) versions. 
+Secret Server webservices can be called using scripts. This example demonstrates how to authenticate and retrieve secrets and folders programmatically in C# using SOAP.  There are also [Perl](../soap-perl-example-code/index.md) and [PHP](../soap-php-example-code/index.md) versions.
 
-You can use your own account username, organization code (omit this if you are not using Secret Server Online Edition), and password to run it. To use this code, a WebReference named SSWebService must be added to the Visual Studio project for `https://<Your_URL>/webservices/SSWebService.asmx`. If connecting to an installed instance, change the web reference URL to match your site and pass in an empty string for organizationCode. 
+You can use your own account username, organization code (omit this if you are not using Secret Server Online Edition), and password to run it. To use this code, a WebReference named SSWebService must be added to the Visual Studio project for `https://<Your_URL>/webservices/SSWebService.asmx`. If connecting to an installed instance, change the web reference URL to match your site and pass in an empty string for organizationCode.
 
 ## Code
 

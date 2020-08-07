@@ -3,8 +3,6 @@
 [priority]: # (1000)
 [display]: # (all)
 
-
-
 # Syncing with DevOps Secret Vault
 
 ## Overview
@@ -35,7 +33,7 @@ Using the DSV client template, you provide the client ID, secret, the tenant URL
 
 ### Creating a DevOps Secret Vault Tenant
 
-Use a POST to `/api/v1/devops-secrets-vault/tenant` using the body below to create a tenant in SS. 
+Use a POST to `/api/v1/devops-secrets-vault/tenant` using the body below to create a tenant in SS.
 
 
 ```json

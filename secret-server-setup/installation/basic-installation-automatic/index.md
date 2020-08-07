@@ -10,7 +10,7 @@ This is the installation guide for Windows Server 2016 and Windows 10. For other
 
 ### Secret Server Is an ASP.NET Website
 
-Secret Server is installed as an ASP.NET website. The setup.exe file sets up the website with the correct permissions and creates the settings in IIS. 
+Secret Server is installed as an ASP.NET website. The setup.exe file sets up the website with the correct permissions and creates the settings in IIS.
 
 ### SQL Server Is Usually Required
 
@@ -20,17 +20,20 @@ Secret Server requires an instance of SQL Server for the database backend and is
 
 Throughout the installation, you will be required to be an administrator to perform most of these actions. Please ensure that you are logged onto your system with a Windows account that has administrative rights.
 
-### Review the Prerequisites 
+### Review the Prerequisites
 
-> **Important:** Except for the operating system, the following prerequisites are installed automatically by our installer. If you already have some of them installed or wish to install them yourself, the installer will skip over them. 
+> **Important:** Except for the operating system, the following prerequisites are installed automatically by our installer. If you already have some of them installed or wish to install them yourself, the installer will skip over them.
 
 If this is the first time you are installing Secret Server, please take the time to review the [full list of system requirements and recommendations](https://updates.thycotic.net/links.ashx?SSSystemRequirements).
 
 ### System Requirements Overview
 
 - Windows Server 2016 operating system
+
 - Microsoft SQL Server 2008 or greater (any edition)
+
 - Microsoft Internet Information Services (IIS)
+
 - Microsoft .NET Framework 4.6
 
 > **Note:**  Windows Server 2016 and Windows 10 come with the .NET Framework 4.6 already installed.
@@ -39,10 +42,11 @@ If this is the first time you are installing Secret Server, please take the time
 
 We suggest you:
 
-- Use an SSL certificate for Secret Server. 
+- Use an SSL certificate for Secret Server.
+
 - Run [Microsoft Update](http://update.microsoft.com/) on your server to make sure all components are up to date.
 
-## Procedure  
+## Procedure
 
 ### Step 1: Downloading the Latest Version of Secret Server
 
@@ -52,13 +56,13 @@ The latest version of SS is available for [download](http://thycotic.com/product
 
 #### Welcome Page
 
-The first installer page you are presented is the Welcome Page. The installer should detect whether the machine has SS or Privilege Manager for Windows and will declare which of those products it will install.         
+The first installer page you are presented is the Welcome Page. The installer should detect whether the machine has SS or Privilege Manager for Windows and will declare which of those products it will install.
 
 #### Database Page
 
-The Database page allows you to choose to install SQL Express or connect to an existing SQL Server. If you select SQL Express, the installer requires Internet access to download the installation for SQL Server Express. 
+The Database page allows you to choose to install SQL Express or connect to an existing SQL Server. If you select SQL Express, the installer requires Internet access to download the installation for SQL Server Express.
 
-If Internet access is not available, a link to download SQL Server Express is presented. You are expected to install SQL Server Express and then restart the installer. 
+If Internet access is not available, a link to download SQL Server Express is presented. You are expected to install SQL Server Express and then restart the installer.
 
 If Internet access is available, SQL Server Express is installed.
 

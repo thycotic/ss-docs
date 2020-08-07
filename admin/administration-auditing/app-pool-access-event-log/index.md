@@ -17,6 +17,7 @@ The follow permissions are required for the identity configured on the SS applic
 Applies to key and subkeys
 
 - Read permissions:
+
   - Query Value
   - Enumerate Subkeys
   - Notify
@@ -33,8 +34,11 @@ Applies to key and subkeys
 Read permissions:
 
 - Query Value
+
 - Enumerate Subkeys
+
 - Notify
+
 - Read Control
 
 ## Applying Windows Event Log Permissions
@@ -43,7 +47,7 @@ Read permissions:
 
    1. Log on SS.
 
-   1. Go to **Admin \> Diagnostics**. 
+   1. Go to **Admin \> Diagnostics**.
 
    1. Look for any of the **Thread Identity** labels. These contain the identity of SS (often `NT AUTHORITY\NETWORK SERVICE` or `IIS APPPOOL\SecretServer` or the service account set up for IWA. See [Running the IIS Application Pool As a Service Account](../../../secret-server-setup/installation/running-ss-iis-app-pool-service-account/index.md).
 
@@ -87,4 +91,3 @@ Read permissions:
 
 1. Click the **OK** button to apply the permission.
 
- 
