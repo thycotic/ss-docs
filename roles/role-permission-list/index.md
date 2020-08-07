@@ -4,11 +4,11 @@
 
 # Secret Server Role Permissions List
 
-## Overview  
+## Overview
 
 Secret Server uses role-based access control (RBAC) to regulate permissions. The roles are assigned to users or groups. A complete list of the permissions available to roles appears below:
 
-> **Note:** to see the built-in roles and what permissions they possess, click the desired role link on the Admin \> Roles page. 
+> **Note:** to see the built-in roles and what permissions they possess, click the desired role link on the Admin \> Roles page.
 
 ## Complete List
 
@@ -121,7 +121,7 @@ Allows a user to create, edit, and delete IP Address Ranges. These ranges are  u
 
 **Administer Key Management**
 
-Allows a user to enable, change, or disable the Key Management (Secret Server Cloud only). 
+Allows a user to enable, change, or disable the Key Management (Secret Server Cloud only).
 
 **Administer Languages**
 
@@ -217,7 +217,7 @@ Allows users to manage workflows (advanced access management).
 
 **Advanced Import**
 
-Allows a user to import Secrets from an XML file. Users with the this  permission can import groups, folders, site connectors, sites, and  secret templates, without having to create a secret. Users must have the Secret Server permissions needed for the objects listed in the XML. 
+Allows a user to import Secrets from an XML file. Users with the this  permission can import groups, folders, site connectors, sites, and  secret templates, without having to create a secret. Users must have the Secret Server permissions needed for the objects listed in the XML.
 
 **Allow Access Challenge**
 

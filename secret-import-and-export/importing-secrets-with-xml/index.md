@@ -11,7 +11,9 @@ The XML file should look like the example below, the comments are for explanatio
 ## Notes
 
 - Leaving the `<Permissions>` tag empty for a folder will cause that folder to inherit permissions from its parent folder.
+
 - Leaving the `<Permissions>` tag empty for a secret will cause it to inherit permissions from its folder.
+
 - To add a line-break within a Notes field use `##BR##`.
 
 > **Note:** Please do **not** edit the XML file with Windows Notepad. Use Notepad++, Visual Studio Code, or Atom to make your edits. Using Notepad increases you chances of importation failure.
@@ -32,7 +34,7 @@ The XML file should look like the example below, the comments are for explanatio
           <View>true</View>
           <Edit>true</Edit>
           <Owner>true</Owner>
-          <UserName>admin</UserName> 
+          <UserName>admin</UserName>
 <!-- Either UserName or GroupName is required in permissions -->
         </Permission>
         <Permission>
@@ -46,12 +48,12 @@ The XML file should look like the example below, the comments are for explanatio
     <Folder>
       <FolderName>Customer A</FolderName>
       <FolderPath>Customers\Customer A</FolderPath>
-      <Permissions /> 
+      <Permissions />
 <!-- Empty Permissions will cause folder to inherit from parent -->
     </Folder>
   </Folders>
 <!-- Groups are optional -->
-  <Groups> 
+  <Groups>
     <Group>
       <GroupName>Other Administrators</GroupName>
       <GroupMembers>
@@ -77,7 +79,7 @@ The XML file should look like the example below, the comments are for explanatio
   </Groups>
   <SecretTemplates>
 <!-- You can have multiple secrettype entries -->
-    <secrettype>      
+    <secrettype>
       <name>Windows Account</name>
       <active>true</active>
       <fields>
@@ -112,7 +114,7 @@ The XML file should look like the example below, the comments are for explanatio
           <isfile>false</isfile>
           <passwordlength>12</passwordlength>
 <!-- Use this number for 'All' history -->
-           <historylength>2147483647</historylength> 
+           <historylength>2147483647</historylength>
           <isindexable>false</isindexable>
         </field>
         <field isexpirationfield="false">
@@ -192,7 +194,7 @@ The XML file should look like the example below, the comments are for explanatio
           <Value>This line has an empty line##BR####BR##in between this line.</Value>
         </SecretItem>
       </SecretItems>
-      <SecretDependencies> 
+      <SecretDependencies>
 <!-- Secret dependencies are optional, and there can be multiple ones -->
         <SecretDependency>
           <Active>true</Active>
@@ -202,7 +204,7 @@ The XML file should look like the example below, the comments are for explanatio
           <DependencyName>Some Service</DependencyName>
           <Type>Windows Service</Type>
 <!-- Leave this blank to not use a PrivilegedAccount -->
-          <PrivilegedAccount>Some Account</PrivilegedAccount> 
+          <PrivilegedAccount>Some Account</PrivilegedAccount>
           <WaitBeforeSeconds>10</WaitBeforeSeconds>
         </SecretDependency>
       </SecretDependencies>

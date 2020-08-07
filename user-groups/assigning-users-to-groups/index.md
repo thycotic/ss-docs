@@ -4,7 +4,7 @@
 
 # Assigning Users to Groups
 
-On the Group Assignment page, users can be added and removed from the group. 
+On the Group Assignment page, users can be added and removed from the group.
 
 1. Navigate to the **Groups** page:
 

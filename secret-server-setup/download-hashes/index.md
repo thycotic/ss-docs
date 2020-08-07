@@ -6,7 +6,7 @@
 
 ## 10.9.000000 (Current Version)
 
-The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.9.000000. 
+The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.9.000000.
 
 ThycoticSetup.exe:
 
@@ -28,7 +28,7 @@ If Secret Server is version 8.4.000004 to 9.1.000000 the upgrade process will up
 
 ### 10.8.000004
 
-The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.8.000004. 
+The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.8.000004.
 
 ThycoticSetup.exe::
 
@@ -44,7 +44,7 @@ Version_10_8_000004.zip:
 
 ### 10.8.000000
 
-The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.7.000059. 
+The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.7.000059.
 
 ThycoticSetup.exe:
 
@@ -60,7 +60,7 @@ Version_10_8_000000.zip:
 
 ### 10.7.000059
 
-The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.7.000059. 
+The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.7.000059.
 
 ThycoticSetup.exe:
 
@@ -90,4 +90,3 @@ Version_8_4_000004.zip:
 
 - SHA256: 17515f5ab81f9f0537fd74ff4edaa89e8af6486439219d2cc6f8538082f15a37
 
- 

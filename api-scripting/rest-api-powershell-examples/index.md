@@ -20,7 +20,7 @@
 
 ## OAuth Authentication
 
-> **Note:**  If your account is secured with 2FA, use the `-UseTwoFactor` switch to be prompted to enter your two-factor OTP code. 
+> **Note:**  If your account is secured with 2FA, use the `-UseTwoFactor` switch to be prompted to enter your two-factor OTP code.
 
 ```powershell
 
@@ -90,8 +90,8 @@ try
         username = "<username>"
         password = "<password>"
         grant_type = "password"
-    }  
-   
+    }
+
     $token = ""
 
     $response = Invoke-RestMethod $tokenRoute -Method Post -Body $creds
@@ -103,20 +103,20 @@ try
     $headers.Add("Authorization", "Bearer $token")
 
     $filters = "?filter.HeartbeatStatus=1&filter.includeRestricted=true&filter.searchtext=< mySearchText >"
-  
+
     Write-Host "------------------------------"
     Write-Host "----- Secret Search Values -----"
     Write-Host "------------------------------"
 
-    #?filter.searchfield=username&filter.searchfield=displayname&filter.searchfield=filter.searchText=mister&filter.includeinactive=true" -Headers $headers 
+    #?filter.searchfield=username&filter.searchfield=displayname&filter.searchfield=filter.searchText=mister&filter.includeinactive=true" -Headers $headers
 
-    $result = Invoke-RestMethod "$api/secrets$filters" -Headers $headers 
+    $result = Invoke-RestMethod "$api/secrets$filters" -Headers $headers
 
     Write-Host $result.filter.searchField
     Write-Host $result.total
 
     foreach($secret1 in $result.records)
-    { 
+    {
        Write-Host $secret1.id" - "$secret1.name" - "$secret1.folderId - $secret1.lastHeartBeatStatus
     }
 
@@ -124,15 +124,15 @@ try
     Write-Host "----- Secret Lookup Values -----"
     Write-Host "------------------------------"
 
-    #?filter.searchfield=username&filter.searchfield=displayname&filter.searchfield=filter.searchText=mister&filter.includeinactive=true" -Headers $headers 
+    #?filter.searchfield=username&filter.searchfield=displayname&filter.searchfield=filter.searchText=mister&filter.includeinactive=true" -Headers $headers
 
-    $result = Invoke-RestMethod "$api/secrets/lookup$filters" -Headers $headers 
+    $result = Invoke-RestMethod "$api/secrets/lookup$filters" -Headers $headers
 
     Write-Host $result.filter.searchField
     Write-Host $result.total
 
     foreach($secret in $result.records)
-    { 
+    {
        Write-Host $secret.id" - "$secret.value
     }
     Write-Host "------------------------------"
@@ -159,7 +159,7 @@ catch [System.Net.WebException]
 
 ````powershell
 try
-{  
+{
     $site = "https://<Secret Server URL>"
    $api = "$site/api/v1"
    $creds = @{
@@ -167,7 +167,7 @@ try
        password = "<password>"
        grant_type = "password"
    }
-    
+
     $token = ""
 
     $response = Invoke-RestMethod "$site/oauth2/token" -Method Post -Body $creds
@@ -184,13 +184,13 @@ try
 
     #modify
     $timestamp = Get-Date
-    
+
     $secret.name = "$timestamp"
     $secret.secretTemplateId = $templateId
     $secret.AutoChangeEnabled = $true
     $secret.autoChangeNextPassword = "NextpA$$w0rd"
     $secret.SiteId = 1
-                                          
+
     $secret.IsDoubleLock = $true
 
     foreach($item in $secret.items)
@@ -237,7 +237,7 @@ catch [System.Net.WebException]
     $reader.DiscardBufferedData()
     $responseBody = $reader.ReadToEnd()
 
-    Write-Host $responseBody 
+    Write-Host $responseBody
 }
 
 ````
@@ -247,16 +247,16 @@ catch [System.Net.WebException]
 ````powershell
 
 try
-{  
+{
    $site = "https://<Secret Server URL>"
    $api = "$site/api/v1"
-   
+
    $creds = @{
        username = "<username>"
        password = "<password>"
        grant_type = "password"
    }
-    
+
     $token = ""
 
     $response = Invoke-RestMethod "$site/oauth2/token" -Method Post -Body $creds
@@ -266,7 +266,7 @@ try
 
     $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
     $headers.Add("Authorization", "Bearer $token")
-   
+
     #get
     $secretId = 45
     $secret = Invoke-RestMethod $api"/secrets/$secretId/" -Headers $headers
@@ -290,9 +290,9 @@ try
     $secret.EnableInheritSecretPolicy = $false
     $secret.SecretPolicyId = -1
     $secret.AutoChangeNextPassword = "pass1232"
-    
+
     $secretArgs = $secret | ConvertTo-Json
-   
+
     #update
     Write-Host ""
     Write-Host "-----Update secret -----"
@@ -314,7 +314,7 @@ catch [System.Net.WebException]
     $reader.DiscardBufferedData()
     $responseBody = $reader.ReadToEnd()
 
-    Write-Host $responseBody 
+    Write-Host $responseBody
 }
 ````
 
@@ -324,16 +324,16 @@ catch [System.Net.WebException]
 ````powershell
 
 try
-{  
+{
   $site = "https://<Secret Server URL>"
   $api = "$site/api/v1"
-  
+
   $creds = @{
       username = "<username>"
       password = "<password>"
       grant_type = "password"
   }
-    
+
     $token = ""
 
     $response = Invoke-RestMethod "$site/oauth2/token" -Method Post -Body $creds
@@ -347,13 +347,13 @@ try
     $secretId = 3803
     #SecretArgs are only required as needed for the REST endpoint. ForceCheckIn may be relevant if the secret has been checked out by another user since you will need to force checkin to use the secret. This removes the other user's checkin and rotates the password if the secret is configured to do so.
     $secretArgs = @{
-        #DoubleLockPassword 
-        #TicketNumber 
-        #TicketSystemId 
+        #DoubleLockPassword
+        #TicketNumber
+        #TicketSystemId
         #Comment ="Passing a comment"
         #ForceCheckIn = $false
-        #ExposeFieldValues 
-        #IncludeInactive 
+        #ExposeFieldValues
+        #IncludeInactive
     }| ConvertTo-Json
 
     $secret = Invoke-RestMethod $api"/secrets/$secretId/check-in" -Method Post -Body $secretArgs -Headers $headers -ContentType "application/json"
@@ -382,7 +382,7 @@ catch [System.Net.WebException]
     $reader.DiscardBufferedData()
     $responseBody = $reader.ReadToEnd()
 
-    Write-Host $responseBody 
+    Write-Host $responseBody
 }
 
 ````
@@ -391,16 +391,16 @@ catch [System.Net.WebException]
 
 ````powershell
 try
-{  
+{
    $site = "https://<Secret Server URL>"
    $api = "$site/api/v1"
-   
+
    $creds = @{
        username = "<username>"
        password = "<password>"
        grant_type = "password"
    }
-    
+
     $token = ""
 
     $response = Invoke-RestMethod "$site/oauth2/token" -Method Post -Body $creds
@@ -412,13 +412,13 @@ try
     $headers.Add("Authorization", "Bearer $token")
 
     $secretId = 11231
- 
+
     Write-Host "----- Delete a Secret -----"
 
     $timestamp = Get-Date
-    
+
     $deletemodel = Invoke-RestMethod "$api/secrets/$secretId" -Headers $headers -Method DELETE -ContentType "application/json"
-    Write-Host $deletemodel   
+    Write-Host $deletemodel
 }
 catch [System.Net.WebException]
 {
@@ -447,7 +447,7 @@ try
 {
     $site = "https://<Secret Server URL>"
     $api = "$site/api/v1"
-    
+
     $creds = @{
         username = "<username>"
         password = "<password>"
@@ -463,7 +463,7 @@ try
 
     $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
     $headers.Add("Authorization", "Bearer $token")
-   
+
     # create user
     Write-Host ""
     Write-Host "----- Create a User -----"
@@ -509,7 +509,7 @@ catch
 
 ````powershell
 try
-{    
+{
 $site = "https://<Secret Server URL>"
 echo $site
 
@@ -524,9 +524,9 @@ $fileSecretId = 283;
 $fileFieldToUpdate = "private-key"
 
 $creds = @{
-    username = "<username>"        
+    username = "<username>"
 
-password = "<password>"         
+password = "<password>"
 grant_type = "password"
 }
 
@@ -620,22 +620,22 @@ catch [System.Net.WebException]
 
 ````
 
-## Expiring a Token 
+## Expiring a Token
 
 >**Note:** This script requires SS 10.1 or later.
 
 ````powershell
 try
-{  
+{
    $site = "https://<Secret Server URL>"
    $api = "$site/api/v1"
-   
+
    $creds = @{
        username = "<username>"
        password = "<password>"
        grant_type = "password"
    }
-    
+
     $response = $null
     $token = $null
     $response = Invoke-RestMethod -Method Post -Uri "$site/oauth2/token" -Body $creds
@@ -697,27 +697,27 @@ catch [System.Net.WebException]
 
 function Get-Token ($adminUserName, $adminPassword, $adminDomain, $api){
     try
-    {  
+    {
         $creds = @{
            username = $adminUserName
            password = $adminPassword
            domain = $adminDomain
            grant_type = "password"
        }
-       
+
         $token = ""
         #echo "----------------"
         #echo "--Authenticate--"
         #echo "----------------"
         $response = Invoke-RestMethod "$uri/oauth2/token" -Method Post -Body $creds -ContentType "application/json"
-    
+
         if($response -and $response.access_token)
         {
            # echo ""
            # echo "---------------------------------"
            # echo "--Authenticatication Successful--"
            # echo "---------------------------------"
-           # echo ""        
+           # echo ""
             $token = $response.access_token;
             return $token;
         }
@@ -725,7 +725,7 @@ function Get-Token ($adminUserName, $adminPassword, $adminDomain, $api){
         {
             echo "ERROR: Failed to authenticate."
             return
-        }      
+        }
     }
     catch [System.Net.WebException]
     {
@@ -738,18 +738,18 @@ function Get-Token ($adminUserName, $adminPassword, $adminDomain, $api){
         $reader.BaseStream.Position = 0
         $reader.DiscardBufferedData()
         $responseBody = $reader.ReadToEnd()
-    
-        Write-Host $responseBody 
+
+        Write-Host $responseBody
     }
 }
 
-Write-Host "Start" 
+Write-Host "Start"
 $adminUsername = '<username>'
 $adminPassword = '<password>'
 $adminDomain = $null
 $uri = "https://<Secret Server URL>"
 
-$api = "$uri/api/v1" 
+$api = "$uri/api/v1"
 
 $token = Get-Token -adminUserName $adminUsername -adminPassword $adminPassword -api $api
 Write-Host "Token is"
@@ -762,7 +762,7 @@ $headers.Add("Authorization", "Bearer $token")
 #Get Folder Stub
 $folderStub = Invoke-RestMethod $api"/folders/stub" -Method GET -Headers $headers -ContentType "application/json"
 
-######################## Add Folder ################################## 
+######################## Add Folder ##################################
 
 $timeStamp = Get-Date
 $folderStub.folderName = "Rest Folder" + $timeStamp
@@ -773,7 +773,7 @@ $folderStub.inheritSecretPolicy = $false
 $folderArgs = $folderStub | ConvertTo-Json
 
 $folderAddResult = Invoke-RestMethod $api"/folders" -Method POST -Body $folderArgs -Headers $headers -ContentType "application/json"
-$folderId = $folderAddResult.id 
+$folderId = $folderAddResult.id
 
 if($folderId-gt 1)
 {
@@ -788,9 +788,9 @@ else
 {
     Write-Error "ERROR: Failed to Add a folder."
     return
-}    
+}
 
-######################## Delete Folder ################################## 
+######################## Delete Folder ##################################
 
 #DeleteFolder is not implemented. Must be done through the UI.
 echo ""
@@ -799,10 +799,10 @@ echo "--Delete Folder Not Implemented--"
 echo "---------------------------------"
 echo ""
 
-######################## Get Folder ##################################    
+######################## Get Folder ##################################
 
 $folderGetResult = Invoke-RestMethod $api"/folders/$folderid" -Method GET -Headers $headers -ContentType "application/json"
-    
+
 if($folderGetResult.id -eq $folderId)
 {
     echo ""
@@ -816,10 +816,10 @@ else
 {
     Write-Error "ERROR: Failed to Get a folder."
     return
-} 
+}
 
-######################## Add Child Folder ################################## 
-    
+######################## Add Child Folder ##################################
+
     $timeStamp = Get-Date
     $folderStub.folderName = "Rest Child Folder" + $timeStamp
     $folderStub.folderTypeId = 1
@@ -830,7 +830,7 @@ else
     $folderArgs = $folderStub | ConvertTo-Json
 
     $folderChildAddResult = Invoke-RestMethod $api"/folders" -Method POST -Body $folderArgs -Headers $headers -ContentType "application/json"
-    $childfolderId = $folderChildAddResult.id 
+    $childfolderId = $folderChildAddResult.id
 
     if($childfolderId-gt 1)
     {
@@ -845,13 +845,13 @@ else
     {
         Write-Error "ERROR: Failed to Add a Child folder."
         return
-    }    
+    }
 
-######################## Update Folder ################################## 
+######################## Update Folder ##################################
 
-    $childFolderId = $folderChildAddResult.id    
+    $childFolderId = $folderChildAddResult.id
     $childFolderGetResult = Invoke-RestMethod $api"/folders/$childFolderId" -Method GET -Headers $headers -ContentType "application/json"
-    
+
     $foldername = "UpdatedFolderNAME"
     $childFolderGetResult.folderName = $foldername
     $childFolderGetResult.folderTypeId = 1
@@ -861,7 +861,7 @@ else
     $childFolderUpdateArgs = $childFolderGetResult | ConvertTo-Json
 
     $childFolderUpdateResult = Invoke-RestMethod $api"/folders/$childFolderId" -Method PUT -Body $childFolderUpdateArgs -Headers $headers -ContentType "application/json"
-   
+
     if($childFolderUpdateResult.folderName -eq $foldername)
     {
         echo ""
@@ -875,17 +875,17 @@ else
     {
         Write-Error "ERROR: Failed to Update a folder."
         return
-    }  
-   
-######################## Search Folders ##################################    
-   
+    }
+
+######################## Search Folders ##################################
+
     $searchFilter ="?filter.searchText=UpdatedFolderNAME"
 
     $searchResults = Invoke-RestMethod $api"/folders$searchFilter" -Method GET -Headers $headers -ContentType "application/json"
     $folder = $searchResults.records[0]
-    echo $searchResults 
+    echo $searchResults
     echo $folder
-   
+
     $name =  "UpdatedFolderNAME"
     if($searchResults.total -gt 0 -and $folder.folderName -eq $name)
     {
@@ -902,15 +902,15 @@ else
         return
     }
 
-######################## Lookup Groups ##################################    
-   
+######################## Lookup Groups ##################################
+
     $lookupFilter = "?filter.searchText=Updated"
 
     $lookupResults = Invoke-RestMethod $api"/folders/lookup$lookupFilter" -Method GET -Headers $headers -ContentType "application/json"
     $folder = $lookupResults.records[0]
     echo $lookupResults
     echo $folder
-   
+
    if($searchResults.total -gt 0 -and $folder.value -eq $name)
    {
        echo ""
@@ -926,7 +926,7 @@ else
        return
    }
 
-######################## Add Group To Folder ################################## 
+######################## Add Group To Folder ##################################
 
 $folderPermissionCreateArgs = Invoke-RestMethod $api"/folder-permissions/stub?filter.folderId=$folderId" -Method GET -Headers $headers -ContentType "application/json"
 #To give permissions to a group, populate the GroupId variable and leave UserId $null.
@@ -955,7 +955,7 @@ else
 }
 $folderPermissionId = $permissionResults.id
 
-######################## Remove Group From Folder ################################## 
+######################## Remove Group From Folder ##################################
 
 $permissionDeleteResult = Invoke-RestMethod $api"/folder-permissions/$folderPermissionId" -Method DELETE -Headers $headers -ContentType "application/json"
 if($permissionDeleteResult.id -eq $folderPermissionId)

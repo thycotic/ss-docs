@@ -81,7 +81,7 @@ Use these steps to integrate Secret Server with Azure Active Directory:
 
 1. Click the name link of the new domain in the table. The domain's page appears.
 
-1. Click the **Groups** tab. 
+1. Click the **Groups** tab.
 
 1. Click the **Edit** link next to **Synchronized Groups**. The Select Groups table appears.
 

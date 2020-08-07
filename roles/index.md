@@ -12,4 +12,4 @@ You can assign multiple permissions to a role. For example, you could assign Adm
 
 > **Note:** The Unlimited Administrator permission allows the user to have unlimited administrator rights when Unlimited Administrator is enabled in the configuration. By default, it is disabled.
 
-> **Note:** to see the built-in roles and what permissions they possess, click the desired role link on the Admin \> Roles page. 
+> **Note:** to see the built-in roles and what permissions they possess, click the desired role link on the Admin \> Roles page.

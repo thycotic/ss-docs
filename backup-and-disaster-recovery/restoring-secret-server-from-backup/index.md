@@ -6,11 +6,12 @@
 
 To restore your Secret Server from a backup:
 
-## Restoring the Application 
-
+## Restoring the Application
 
 1. Extract your backup zip file of  the SS application directory, or copy the files from your other backup location to the physical file path that your virtual directory is pointing to.
+
 1. If you have configured encryption of your `encryption.config` using EFS or DPAPI, you will need to replace the file from the backup with the unencrypted one.
+
 1. Check that FIPS mode is not enabled on the server to avoid an error during the process.
 
 ## Restoring the SQL Server Database
@@ -18,7 +19,6 @@ To restore your Secret Server from a backup:
 Choose one of the following scenarios:
 
 ### Scenario One: Database and Secret Server Are in the Same Location
-
 
 1. Open SQL Server Management Studio and connect.
 
@@ -35,6 +35,7 @@ Choose one of the following scenarios:
 1. Click the **Ok** button.
 
 1. If you get an error saying that Management Studio was unable to get exclusive access to the database:
+
    1. Right click on the SS database and go to **Properties**.
    1. At the very bottom, change the **Restrict Access** property to "SINGLE_USER". This closes all other connections to the SS database.
    1. Re-attempt the restore.
@@ -49,7 +50,7 @@ Choose one of the following scenarios:
 
 1. Click **Execute** on the menu bar.
 
-1. After the query executes successfully, restart Internet Information Server (IIS) by running `iisreset` from the command line. 
+1. After the query executes successfully, restart Internet Information Server (IIS) by running `iisreset` from the command line.
 
     > **Note:** If you are prompted for database credentials when accessing SS and are unable to re-connect, you may need to remap the user.
 
@@ -66,7 +67,6 @@ Choose one of the following scenarios:
 1. If necessary, activate your licenses by going to the **Licenses** page.
 
 ### Scenario Two: The Database and Secret Server Are in Different Locations
-
 
 1. Delete the `database.config` file from the SS folder.
 
@@ -86,11 +86,14 @@ Choose one of the following scenarios:
 
 1. In the Restore Database window options make sure the Force Restore over Existing Database Check box is checked.
 
-1. Click Ok.
+1. Click **Ok**.
 
 1. If you get an error saying that Management Studio was unable to get exclusive access to the database:
+
    1. Right click on the SS database and go to **Properties**.
+
    1. At the very bottom, change the **Restrict Access** property to "SINGLE_USER". This closes all other connections to the SS database.
+
    1. Re-attempt the restore.
 
 1. Disable **Force SSL** if there is no certificate installed on the server you are restoring to.
@@ -108,7 +111,7 @@ Choose one of the following scenarios:
       > **Note:** If you are prompted for database credentials when accessing SS and are unable to re-connect, you may need to remap the user.
 
 1. Expand the **Security \> Users** folder under the SS database.
-   
+
 1. Remove the user that SS will use to access the database.
 
 1. Expand the **Security \> Logins** folder under the SQL Server root.
@@ -117,9 +120,6 @@ Choose one of the following scenarios:
 
 1. Re-map the log on to the SS database.
 
-1. Once past Step 3, you are finished. Go to the `home.aspx` page (click the Secret Server logo).
-      There is no need to go any further with the install because the `database.config` has been recreated with the new information.
+1. Once past Step 3, you are finished. Go to the `home.aspx` page (click the Secret Server logo). There is no need to go any further with the install because the `database.config` has been recreated with the new information.
 
 1. If necessary, activate your licenses by going to the **Licenses** page.
-
- 

@@ -43,9 +43,9 @@
 
 - Fixed error when trying to import folders with line breaks in a Secret field.
 
-- Fixed issue with Password Type configuration not saving correctly in certain situations. 
+- Fixed issue with Password Type configuration not saving correctly in certain situations.
 
-## Release 4.1.000000 
+## Release 4.1.000000
 
 ### Main Focus: Addressing Role Based Access Control Features and Enhancements
 
@@ -103,11 +103,11 @@
 
 - Fixed bug where permission checkboxes were being displayed when the secret was set to inherit permissions from folder.
 
-- Fixed bug where duplicate users appeared in the Active Directory synchronization preview. 
+- Fixed bug where duplicate users appeared in the Active Directory synchronization preview.
 
-## Release 4.0.000003 
+## Release 4.0.000003
 
-### Main Focus: Improving Permission Inheritance and Bug Fixes 
+### Main Focus: Improving Permission Inheritance and Bug Fixes
 
 #### Features and Enhancements
 

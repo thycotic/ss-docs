@@ -27,11 +27,11 @@
    ![1556293196791](images/1556293196791.png)
 
 1. Click the **Cancel** button. The other access approval setting become enabled:
-   
+
    > **Note:** You cannot set approvers and use a workflow at the same time. The intent of the next few instructions is avoid attempting to do so, which causes an error.
-   
+
    ![1556293267404](images/1556293267404.png)
-   
+
 1. Click the **Request Access Approvers** list and select **Not Set**.
 
 1. Click the **Request Access Workflow** list and select **Enforced**. A new list appears alongside.

@@ -36,7 +36,7 @@ The system credentials are specific to your ticketing system. Any secret using t
 
 ### Overview
 
-To validate tickets you will need to create a PowerShell script to retrieve and validate the ticket. The integration will use arguments to pass custom values to your script. By default we will map certain fields to the first set of arguments. The ticket number will be collected by user input and assigned to the first parameter. When you have your ticketing system credentials mapped to a secret and assigned to the "System Credentials" field in the ticketing system setup, SS inserts UserName and Password as the second and third parameters. 
+To validate tickets you will need to create a PowerShell script to retrieve and validate the ticket. The integration will use arguments to pass custom values to your script. By default we will map certain fields to the first set of arguments. The ticket number will be collected by user input and assigned to the first parameter. When you have your ticketing system credentials mapped to a secret and assigned to the "System Credentials" field in the ticketing system setup, SS inserts UserName and Password as the second and third parameters.
 
 Therefore, for the sample script below, the Ticket Status Script Arguments text box should be only contain`$url` (which is also retrieved from the System Credentials secret), as `$ticket`, `$user` and `$password` are supplied automatically by the system.
 
@@ -61,7 +61,7 @@ if($response.result.state -ne $validStatus)
 
 ## Adding Comments to Tickets
 
-To add a comment to tickets, create another script to do so. Example: 
+To add a comment to tickets, create another script to do so. Example:
 
 ```powershell
 $ticket = $args[0]
@@ -94,4 +94,3 @@ $password = $args[3]
 
 ```
 
- 

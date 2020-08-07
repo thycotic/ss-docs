@@ -6,9 +6,9 @@
 
 ## Overview
 
-As of SS 10.7.59, the SS MessageQueue Client attempts to create RabbitMQ durable exchanges, logging the activity. A durable exchange is normally automatically re-created if RabbitMQ restarts for any reason. Any legacy non-durable exchanges disappear when RabbitMQ goes down and can only be manually recreated. 
+As of SS 10.7.59, the SS MessageQueue Client attempts to create RabbitMQ durable exchanges, logging the activity. A durable exchange is normally automatically re-created if RabbitMQ restarts for any reason. Any legacy non-durable exchanges disappear when RabbitMQ goes down and can only be manually recreated.
 
-If the MessageQueue client detects that creating a durable exchange failed, it will log an error and attempt to create a non-durable one. 
+If the MessageQueue client detects that creating a durable exchange failed, it will log an error and attempt to create a non-durable one.
 
 > **Important:** Any existing non-durable exchanges, from previous versions of SS, will also cause durable exchange creation to fail. See [Manually Creating Durable RabbitMQ Exchanges](#manually-creating-durable-rabbitmq-exchanges).
 
@@ -22,7 +22,7 @@ Note the absence of a 'D' in the Features column, meaning that exchange is not d
 
 Earlier versions of SS (before 10.7.59) created non-durable RabbitMQ exchanges during a SS server or IIS restart. If the environment is clustered, the same is true of every node in that cluster. The current durable exchanges persist during any IIS restart, eliminating the need to restart SS or recreate the exchanges.
 
-However, any existing non-durable exchanges prevent the creation of the newer durable ones. To remedy that, you need to restart all of the RabbitMQ servers in the cluster at the same time or manually delete the non-durable exchanges. 
+However, any existing non-durable exchanges prevent the creation of the newer durable ones. To remedy that, you need to restart all of the RabbitMQ servers in the cluster at the same time or manually delete the non-durable exchanges.
 
 ## Manually Creating Durable RabbitMQ Exchanges
 
@@ -33,7 +33,7 @@ To enjoy the benefits of the durable exchanges, you must first eliminate any leg
 >**Note:** Customers usually reset or turn off all servers via third party tools, but some prefer to shut off the service via services.msc because of their system configuration.
 
 - Delete the exchanges manually:
-  
+
   1. Click to select each SS non-durable exchange, including distributed engine ones.
   1. Scroll to the bottom of the window.
   1. Click the **Delete** button.
@@ -46,11 +46,11 @@ To enjoy the benefits of the durable exchanges, you must first eliminate any leg
 ```powershell
 powershell.exe -file exchangedurability.ps1 -username "guest" -password "guest" -computerName "localhost" -port "15672"
 ```
-The user has access to the RabbitMQ admin interface. The computername and port is where the admin interface is located. 
+The user has access to the RabbitMQ admin interface. The computername and port is where the admin interface is located.
 
 The script:
 
-1. Removes all of the exchanges that are not durable and any that are not the `thycotic-sr*` ones for legacy ASRAs. 
+1. Removes all of the exchanges that are not durable and any that are not the `thycotic-sr*` ones for legacy ASRAs.
 
 1. Kills all of the connections. This forces the distributed engines and SS to reconnect to the durable exchanges.
 
@@ -68,7 +68,7 @@ $defaultComputerName = if ($computerName -eq "") { "localhost" }else { $computer
 $defaultVirtualhost = "/"
 $defaultUserName = if ($userName -eq "") { "guest" }else { $userName }
 $defaultPassword = if ($password -eq "") { "guest" }else { $password }
-$defaultPort = if ($port -eq "") { "15672" }else { $port } 
+$defaultPort = if ($port -eq "") { "15672" }else { $port }
 $defaultHttp = "http" #Use https if ssl
 
 $defaultCredentials = New-Object System.Management.Automation.PSCredential ($defaultUserName, $(ConvertTo-SecureString $defaultPassword -AsPlainText -Force))
@@ -88,12 +88,12 @@ function Get-RabbitMQConnection
         [parameter(ValueFromPipeline=$true, ValueFromPipelineByPropertyName=$true)]
         [Alias("Connection", "ConnectionName")]
         [string[]]$Name = "",
-               
+
         # Name of the computer hosting RabbitMQ server. Default value is localhost.
         [parameter(ValueFromPipelineByPropertyName=$true)]
         [Alias("HostName", "hn", "cn")]
         [string]$ComputerName = $defaultComputerName,
-                
+
         # UserName to use when logging to RabbitMq server.
         [Parameter(Mandatory=$true, ParameterSetName='login')]
         [string]$UserName,
@@ -116,7 +116,7 @@ function Get-RabbitMQConnection
         if ($pscmdlet.ShouldProcess("server $ComputerName", "Get connection(s): $(NamesToString $Name '(all)')"))
         {
             $result = GetItemsFromRabbitMQApi -ComputerName $ComputerName $Credentials "connections"
-            
+
             $result = ApplyFilter $result 'name' $Name
 
             $result | Add-Member -NotePropertyName "ComputerName" -NotePropertyValue $ComputerName
@@ -144,7 +144,7 @@ function GetUriParserFlags {
 function SetUriParserFlags([int]$newValue) {
     $getSyntax = [System.UriParser].GetMethod("GetSyntax", 40)
     $flags = [System.UriParser].GetField("m_Flags", 36)
-    
+
     $parser = $getSyntax.Invoke($null, "http")
     $flags.SetValue($parser, $newValue)
 }
@@ -156,7 +156,7 @@ function PreventUnEscapeDotsAndSlashesOnUri {
     Write-Verbose "Switching off UnEscapesDotsAndSlashes flag on UriParser."
 
     $newValue = $defaultUriParserFlagsValue -bxor $UnEscapeDotsAndSlashes
-    
+
     SetUriParserFlags $newValue
 }
 
@@ -266,12 +266,12 @@ function Invoke-RestMethod {
             if ($PSBoundParameters.TryGetValue('OutBuffer', [ref]$outBuffer)) {
                 $PSBoundParameters['OutBuffer'] = 1
             }
-            
+
             $wrappedCmd = $ExecutionContext.InvokeCommand.GetCommand('Microsoft.PowerShell.Utility\Invoke-RestMethod', [System.Management.Automation.CommandTypes]::Cmdlet)
 
             # check whether need to disable UnEscapingDotsAndSlases on UriParser
             $requiresDisableUnEscapingDotsAndSlashes = ($AllowEscapedDotsAndSlashes -and $Uri.OriginalString -match '%2f')
-            
+
             # remove additional proxy parameter to prevent original function from failing
             if ($PSBoundParameters['AllowEscapedDotsAndSlashes']) { $null = $PSBoundParameters.Remove('AllowEscapedDotsAndSlashes') }
 
@@ -292,7 +292,7 @@ function Invoke-RestMethod {
             }
 
             $steppablePipeline.Process($_)
-        } 
+        }
         finally {
             # Restore UnEscapingDotsAndSlashes on UriParser when necessary
             if ($requiresDisableUnEscapingDotsAndSlashes) {
@@ -321,7 +321,7 @@ function GetRabbitMQCredentials {
     (
         [parameter(Mandatory = $true)]
         [string]$userName,
-        
+
         [parameter(Mandatory = $true)]
         [string]$password
     )
@@ -348,15 +348,15 @@ function ApplyFilter {
     Param (
         [parameter()]
         [PSObject[]]$items,
-        
+
         [parameter(Mandatory = $true)]
         [string]$prop,
-        
+
         [string[]]$name
     )
 
     if (-not $name) { return $items }
-            
+
     # apply property filter
     $filter = @()
     foreach ($n in $name) { $filter += '$_.' + $prop + '-like "' + $n + '"' }
@@ -416,23 +416,23 @@ function GetItemsFromRabbitMQApi {
 
         [parameter(Mandatory = $true, ParameterSetName = 'cred', Position = 1)]
         [PSCredential]$cred,
-        
+
         [parameter(Mandatory = $true, ParameterSetName = 'cred', Position = 2)]
         [string]$function
     )
 
     Add-Type -AssemblyName System.Web
     #Add-Type -AssemblyName System.Net
-    
-    if ($PsCmdlet.ParameterSetName -eq "login") { 
+
+    if ($PsCmdlet.ParameterSetName -eq "login") {
         $computerName = $cn
-        $cred = GetRabbitMqCredentials $userName $password 
+        $cred = GetRabbitMqCredentials $userName $password
         $function = $fn
     }
     Write-Output $computerName
     $url = $defaultHttp + "://$([System.Web.HttpUtility]::UrlEncode($computerName)):$defaultPort/api/$function"
     Write-Verbose "Invoking REST API: $url"
-    
+
     return Invoke-RestMethod $url -Credential $cred -DisableKeepAlive -AllowEscapedDotsAndSlashes
 }
 
@@ -450,13 +450,13 @@ function Get-RabbitMQExchange {
         [parameter(ValueFromPipelineByPropertyName = $true)]
         [Alias("vh")]
         [string]$VirtualHost = "",
-        
+
         # Name of the computer hosting RabbitMQ server. Defalut value is localhost.
         [parameter(ValueFromPipelineByPropertyName = $true)]
         [Alias("HostName", "hn", "cn")]
         [string]$ComputerName = $defaultComputerName,
-        
-        
+
+
         # UserName to use when logging to RabbitMq server.
         [Parameter(Mandatory = $true, ParameterSetName = 'login')]
         [string]$UserName,
@@ -476,7 +476,7 @@ function Get-RabbitMQExchange {
     Process {
         if ($pscmdlet.ShouldProcess("server $ComputerName", "Get exchange(s): $(NamesToString $Name '(all)')")) {
             $exchanges = GetItemsFromRabbitMQApi -ComputerName $ComputerName $Credentials "exchanges"
-            
+
             $result = ApplyFilter $exchanges 'vhost' $VirtualHost
             $result = ApplyFilter $result 'name' $Name
 
@@ -508,8 +508,8 @@ function Remove-RabbitMQExchange {
         [parameter(ValueFromPipelineByPropertyName = $true)]
         [Alias("HostName", "hn", "cn")]
         [string]$ComputerName = $defaultComputerName,
-        
-        
+
+
         # UserName to use when logging to RabbitMq server.
         [Parameter(Mandatory = $true, ParameterSetName = 'login')]
         [string]$UserName,
@@ -562,11 +562,11 @@ function Add-RabbitMQExchange {
         # Determines whether the exchange should be Durable.
         [parameter(ValueFromPipelineByPropertyName = $true)]
         [switch]$Durable,
-        
+
         # Determines whether the exchange will be deleted once all queues have finished using it.
         [parameter(ValueFromPipelineByPropertyName = $true)]
         [switch]$AutoDelete,
-        
+
         # Determines whether the exchange should be Internal.
         [parameter(ValueFromPipelineByPropertyName = $true)]
         [switch]$Internal,
@@ -585,8 +585,8 @@ function Add-RabbitMQExchange {
         [parameter(ValueFromPipelineByPropertyName = $true)]
         [Alias("HostName", "hn", "cn")]
         [string]$ComputerName = $defaultComputerName,
-        
-        
+
+
         # UserName to use when logging to RabbitMq server.
         [Parameter(Mandatory = $true, ParameterSetName = 'login')]
         [string]$UserName,
@@ -605,7 +605,7 @@ function Add-RabbitMQExchange {
     }
     Process {
         if ($pscmdlet.ShouldProcess("server: $ComputerName, vhost: $VirtualHost", "Add exchange(s): $(NamesToString $Name '(all)')")) {
-            
+
             $body = @{
                 type = "$Type"
             }
@@ -620,7 +620,7 @@ function Add-RabbitMQExchange {
             foreach ($n in $Name) {
                 $url = $defaultHttp+"://$([System.Web.HttpUtility]::UrlEncode($ComputerName)):$defaultPort/api/exchanges/$([System.Web.HttpUtility]::UrlEncode($VirtualHost))/$([System.Web.HttpUtility]::UrlEncode($n))"
                 Write-Verbose "Invoking REST API: $url"
-        
+
                 $result = Invoke-RestMethod $url -Credential $Credentials -AllowEscapedDotsAndSlashes -DisableKeepAlive -ErrorAction Continue -Method Put -ContentType "application/json" -Body $bodyJson
 
                 Write-Verbose "Created Exchange $n on server $ComputerName, Virtual Host $VirtualHost"
@@ -684,7 +684,7 @@ function MakeExistingExchangesDurable() {
         Write-Output "All the exchanges are durable."
         return
     }
-    
+
     Write-Output "`r`nFound these exchanges as not durable:"
     Write-Output $nondurableExchanges | ForEach-Object { '{0}' -f $_.Name }
 
@@ -692,31 +692,31 @@ function MakeExistingExchangesDurable() {
     if ($IgnoreConfirms -eq $false) {
         $confirmation = Read-Host "Are you Sure You Want To Proceed [y/n]"
     }
-    if ($confirmation -eq 'y' -or $IgnoreConfirms -eq $true) {    
+    if ($confirmation -eq 'y' -or $IgnoreConfirms -eq $true) {
         try {
             Foreach ($nondurableExchange in $nondurableExchanges) {
-                Remove-RabbitMQExchange -Name $nondurableExchange.Name -VirtualHost $nondurableExchange.vhost -Confirm:$(-not $IgnoreConfirms) 
-                Add-RabbitMQExchange -Name $nondurableExchange.Name -Durable:$true -Type $nondurableExchange.type -AutoDelete:$nondurableExchange.auto_delete -Internal:$nondurableExchange.Internal -VirtualHost $nondurableExchange.vhost -Confirm:$(-not $IgnoreConfirms) 
+                Remove-RabbitMQExchange -Name $nondurableExchange.Name -VirtualHost $nondurableExchange.vhost -Confirm:$(-not $IgnoreConfirms)
+                Add-RabbitMQExchange -Name $nondurableExchange.Name -Durable:$true -Type $nondurableExchange.type -AutoDelete:$nondurableExchange.auto_delete -Internal:$nondurableExchange.Internal -VirtualHost $nondurableExchange.vhost -Confirm:$(-not $IgnoreConfirms)
             }
             $connections = Get-RabbitMQConnection
             Foreach ($connection in $connections) {
                 if ($connection.Name)
                 {
-                    Remove-RabbitMQConnection $connection.Name 
+                    Remove-RabbitMQConnection $connection.Name
                 }
             }
-            
-        }   
+
+        }
         catch {
             throw $_
         }
-        Write-Output "Exchanges are now durable."      
+        Write-Output "Exchanges are now durable."
     }
     else {
         Write-Output "Not going to make the exchanges durable."
     }
 }
-   
+
 
 MakeExistingExchangesDurable -IgnoreConfirms $true
 ```
