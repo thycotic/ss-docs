@@ -28,13 +28,13 @@ To setup AD to sync from a DE:
 
    1. Click the **Link a Secret** selection button.
 
-   1. Click the **Sync Secret** list to select the AD secret you created earlier.  
-   
+   1. Click the **Sync Secret** list to select the AD secret you created earlier.
+
       > **Note:** If you do not have a secret setup yet, click the **Create New Secret** link to create your AD secret.
-   
+
       > **Note:** The AD sync secret is used to synchronize users and groups. It requires permission to search and view the attributes of the users and groups.  If you plan on using SS discovery, the account will also need permissions to scan computers on the network for accounts.
-   
-   1. Click the **Save and Validate** button.  
+
+   1. Click the **Save and Validate** button.
 
 1. Set up the synchronization groups:
 

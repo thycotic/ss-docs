@@ -8,21 +8,21 @@ This topic discusses resolving the "The specified domain is not a valid domain" 
 
 ## Troubleshooting Procedure
 
-1. Verify that you are entering the fully qualified domain name in the domain field and that the domain username and password fields are correct. 
+1. Verify that you are entering the fully qualified domain name in the domain field and that the domain username and password fields are correct.
 
 1. Ensure that the ports used for LDAP (389) or LDAPS (636) are open. For more information about the ports used by Secret Server, see [Ports Used by Secret Server](../../networking/secret-server-ports/index.md).
 
-1. Ensure that your server is connecting to the correct DNS server: 
+1. Ensure that your server is connecting to the correct DNS server:
 
    1. Open the command console as an administrator (**Start \> Run \> cmd**).
- 
+
    1. Type `ipconfig /all`.
 
    1. Press **\<Enter\>**.
 
    1. Find your primary ethernet adapter and look in the **DNS Servers** section. Verify that the DNS server is correct.
 
-1. If the DNS server is incorrect, then follow these steps to configure the DNS server: 
+1. If the DNS server is incorrect, then follow these steps to configure the DNS server:
 
    1. Open up your control panel (**Start \> Control Panel**).
 
@@ -40,7 +40,7 @@ This topic discusses resolving the "The specified domain is not a valid domain" 
 
    1. Type your primary DNS server in the first row.
 
-   1. If you have a secondary DNS server, put it in the second row. 
+   1. If you have a secondary DNS server, put it in the second row.
 
       > **Important:** Both DNS servers must contain the SRV record for your domain controller.
 
@@ -123,4 +123,3 @@ Secret Server requires that the DNS is correctly configured to add a domain. For
 
 Also ensure the domain controller is using the appropriate DNS. The `ipconfig /registerdns` command (as per the link above) is frequently helpful for entering the correct DNS entries in for a given domain.
 
- 

@@ -157,9 +157,9 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 1. Click the **OK** button to save the new application pool. The dialog box closes.
 
 1. (optional) Customize the Windows account SS runs as:
-    
+
     1. Right click the new application pool and select **Advance Settings…**
-    
+
     1. Click the **Identity** setting in the **Process Model** section to select the desired account. Using this, you can, for example, set SS to use IWA to connect to SQL.
 
 1. Expand the **Sites** node on the **Connections** tree.
@@ -175,13 +175,13 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 1. In the **Connections** tree, expand the **Default Website** node.
 
 1. **Either**, If you see the default folder, **SecretServer**, which you created earlier:
-   
+
    1. Right click the **SecretServer** folder and select **Convert to Application**. The Add Application dialog box appears.
 
    1. Click the **Select…** button to choose the pool you created earlier for SS.
-   
+
    **Or**, If you used a custom location instead:
-   
+
    1. right click the Default Website. The Add Application dialog box appears.
 
    1. Type `SecretServer` in the **Alias** text box.
@@ -194,9 +194,9 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 
 ## Step Three: Ensure IIS Does Not Stop the Worker Process
 
-When using IIS version 7.0 and above, by default, the worker process terminates after an inactive period. If SS is in its own application pool, that application pool will stop after a period of no requests. To ensure this does not happen, perform the following procedure. Additionally, by default, IIS launches a worker process when the first request for the Web application is received, so if the SS application takes a long time to start, issues can result. Thus, we recommend launching the SS application pool worker process as soon as IIS starts by setting the start mode to "AlwaysRunning." 
+When using IIS version 7.0 and above, by default, the worker process terminates after an inactive period. If SS is in its own application pool, that application pool will stop after a period of no requests. To ensure this does not happen, perform the following procedure. Additionally, by default, IIS launches a worker process when the first request for the Web application is received, so if the SS application takes a long time to start, issues can result. Thus, we recommend launching the SS application pool worker process as soon as IIS starts by setting the start mode to "AlwaysRunning."
 
-Procedure: 
+Procedure:
 
 1. Open **Internet Information Server (IIS) Manager**:
 
@@ -211,11 +211,11 @@ Procedure:
 1. Determine which application pool SS is running as:
 
    1. Expand **Sites** at the left.
-   
+
    1. Find the website SS is running on.
-   
+
    1. Click on the SS website or virtual directory (if it is running on one).
-   
+
    1. Click **Basic Settings** on the right panel. This indicates SS's application pool.
 
 1. Right-click the application pool and select **Advanced Settings…** The Advance Settings dialog appears.
@@ -232,9 +232,9 @@ Procedure:
 
 ## Step Four: Ensure the User Profile Always Loads
 
-As of version 10.2, SS requires its application pool "Load User Profile" setting enabled. Otherwise, SS reports a critical alert to system admins. 
+As of version 10.2, SS requires its application pool "Load User Profile" setting enabled. Otherwise, SS reports a critical alert to system admins.
 
-> **Note:** Even without the setting enabled, SS loads to give access to secrets but many internal operations may malfunction, so we recommend resolving this issue as soon as possible. 
+> **Note:** Even without the setting enabled, SS loads to give access to secrets but many internal operations may malfunction, so we recommend resolving this issue as soon as possible.
 
 Procedure:
 

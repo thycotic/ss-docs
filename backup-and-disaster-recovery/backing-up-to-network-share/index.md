@@ -8,13 +8,13 @@ Secret Server can be configured to backup to a network share instead of a local 
 
 To back up:
 
-1. Ensure the SS IIS Application Pool is running as a service account if it is not already. See 
+1. Ensure the SS IIS Application Pool is running as a service account if it is not already. See
     [Running the IIS Application Pool As a Service Account](../../secret-server-setup/installation/running-ss-iis-app-pool-service-account/index.md).
 
 1. Grant access to the network share (using Windows ACLs) to the account running the SS IIS Application Pool (so that SS can backup the application folder and zip it to the network share).
 
-1. Grant access to the network share (using Windows ACLs) to the account running Microsoft SQL Server service. (so that Microsoft SQL Server can backup the SS database to the network share). 
-   You can change the service account running Microsoft SQL Server by going to SQL Server Configuration Manager. 
+1. Grant access to the network share (using Windows ACLs) to the account running Microsoft SQL Server service. (so that Microsoft SQL Server can backup the SS database to the network share).
+   You can change the service account running Microsoft SQL Server by going to SQL Server Configuration Manager.
 
 1. Go to **Admin \> Backup**. This may require you to go to **Admin \> All** and search for **Backup**.
 
@@ -29,6 +29,5 @@ To back up:
 1. Type the database backup path in the **Backup Database Path** text box.
 
 1. Click the **Save** button.
-   
 
- 
+

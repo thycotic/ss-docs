@@ -6,14 +6,16 @@
 
 ## Overview
 
-> **Important:** Thycotic recommends using SQL Express in sandbox or trial environments **only** due to size and performance limitations. 
+> **Important:** Thycotic recommends using SQL Express in sandbox or trial environments **only** due to size and performance limitations.
 
 SQL Express is a free edition of SQL and is available for use with Thycotic products. The following steps walk you through setup and configuration for SQL Server 2014 Express Edition as an example. For the most up to date resources on installing SQL see [Microsoft SQL Technical Documentation](https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15) for more information.
 
-At the completion of this article you will have: 
+At the completion of this article you will have:
 
 - Installed a basic stand-alone instance of SQL Server 2014 Express with the minimum features necessary for SQL Server. This includes SQL Server Management Studio and other tools.
+
 - Created a database in SQL for your Thycotic product
+
 - Created a new SQL Server user login for your SQL database
 
 > **Note:** This document uses Thycotic's Secret Server product as example in the instructions, but the same steps apply for Privilege Manager advanced installs.
@@ -26,7 +28,7 @@ If you plan to use SQL Server Express, we strongly recommend downloading the pac
 
 Procedure:
 
-1. Go to the [SQL Server 2014 Express download page](https://www.microsoft.com/en-US/download/details.aspx?id=42299). 
+1. Go to the [SQL Server 2014 Express download page](https://www.microsoft.com/en-US/download/details.aspx?id=42299).
 
 1. Click the **Select Language** list box and select **English**.
 
@@ -37,13 +39,14 @@ Procedure:
 1. Click to select the following check boxes (you may need to scroll down):
 
    - **ExpressAndTools 64BIT\SQLEXPRWT_x64_ENU.exe**
+
    - **MgmtStudio 64BIT\SQLManagementStudio_x64_ENU.exe**
 
 1. Click the **Next** button. `SQLEXPRWT_x64_ENU.exe` and `SQLManagementStudio_x64_ENU.exe*` download to your computer.
 
 ### Installing SQL Server Express 2014
 
-1. If necessary, download and install the latest version of .NET Framework. See [Microsoft .NET Framework 4.8 offline Installer for Windows](https://support.microsoft.com/en-us/help/4503548/microsoft-net-framework-4-8-offline-installer-for-windows) for the latest version as of when this topic was written. If you have already installed Secret Server, you have already done this. 
+1. If necessary, download and install the latest version of .NET Framework. See [Microsoft .NET Framework 4.8 offline Installer for Windows](https://support.microsoft.com/en-us/help/4503548/microsoft-net-framework-4-8-offline-installer-for-windows) for the latest version as of when this topic was written. If you have already installed Secret Server, you have already done this.
 
 1. Double click the `SQLEXPRWT_x64_ENU.exe` you downloaded to run it. The User Account Control appears.
 
@@ -68,7 +71,7 @@ Procedure:
 1. Ensure that the **Database Engine Services** and **Management Tools – Basic** check boxes are selected. Leave the others as is.
 
    > **Note:** A SQL Server instance is isolated from other SQL Server instances. SQL Server instances can operate side-by-side on the same computer.
-   
+
    > **Note:** Management tools include Management Studio support for the database engine and SQL Server Express, SQL Server CLI (SQLCMD), SQL Server PowerShell provider, and the distributed replay administration tool.
 
 1. Click the **Next \>** button. The installation processes one page with no input from you and stops on the Instance Configuration page:
@@ -77,7 +80,7 @@ Procedure:
 
 1. **Ether** click to select the **Default instance** selection button, which uses an already present instance called SQLEXPRESS.
 
-1. **Or** type your desired name in the **Named instance** text box. 
+1. **Or** type your desired name in the **Named instance** text box.
 
 1. Type your instance ID in the **Instance ID** text box. We chose `MySQLInstance`. The instance ID will become part of the installation path.
 
@@ -90,13 +93,13 @@ Procedure:
    ![image-20200610114749551](images/image-20200610114749551.png)
 
 1. You have the choice to select either **Windows Authentication Mode** or **Mixed Mode**. Click to select the option that works best for your environment:
-   
+
    - **Mixed Mode (for easiest configuration)**: This mode is required if you intend on using a SQL Server account to authenticate Secret Server to your SQL Server instance. **We recommend using mixed mode if you are setting up a test or demo environment**. Selecting this option will also require you to set a password for the SQL Server system administrator (sa) account. See [Adding a SQL Server User ](https://thycotic.force.com/support/s/article/Adv-Install-SQL-2016#user)(section below) for instructions on adding more users.
-   
+
    - **Windows Mode (recommended for best security)**: This mode prevents SQL Server account authentication. We recommend using Windows mode for production environments. Whatever user or group assigned will have administrative access to your SQL instance. According to best security practices, limit this number to as few users as possible. Only choose this if you have experience and require this for a specific issue—we do **not** recommend SQL Server Express for production accounts.
-   
-   > **Note:** If choosing **Windows Mode** you will also need to  [run the IIS application pool as a service account](../running-ss-iis-app-pool-service-account/index.md) later in the installation process. 
-   
+
+   > **Note:** If choosing **Windows Mode** you will also need to  [run the IIS application pool as a service account](../running-ss-iis-app-pool-service-account/index.md) later in the installation process.
+
 1. If you selected mixed mode, which you almost certainly did, type your SQL Server system administrator (sa) account password in the **Enter password** and **Confirm password** text boxes. The password must meet Microsoft’s definition of a strong password. Click the **Help** button and search for “Database Engine Configuration - Account Provisioning” if you what to find out what that is. A 16 character mixture of lower and uppercase letters and numerals works fine.
 
 1. Your user account should already be shown in the **Specify SQL Server administrators** text box. If not, click the **Add Current User** button.
@@ -114,9 +117,13 @@ To install SS, the Thycotic installer creates the SQL database for you if it doe
 If not using the Thycotic Installer, use the following steps to create a database manually through SQL Server Management Studio:
 
 1. Open SQL Server Management Studio.
+
 1. Connect to your SQL Server instance.
+
 1. Right click the **Databases** folder and select **New Database…** The New Database page appears.
+
 1. Type a name for your database in the **Database Name** text box.
+
 1. Click the **OK** button.
 
 ### Adding a SQL Server User
@@ -144,5 +151,3 @@ According to security best practices, limit the number of users with access to y
 1. In the **Database Role Membership** window, click to select the **db_owner** check box.
 
 1. Click the **OK** button.
-
- 

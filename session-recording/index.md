@@ -23,7 +23,9 @@ Searching across sessions can search the following data. To select what data is 
 Some search filters require additional components to be installed or configured:
 
 - **Proxy Session Client Data**: Search within keystroke data of proxied SSH sessions. Requires that the SSH proxy is enabled and SSH sessions are using it.
+
 - **RDP Keystroke Data**: Requires the RDP Session Monitoring Agent be installed on the target.
+
 - **RDP Application Name**: Requires the additional RDP Session Monitoring Agent be installed on the target.
 
 To view a recording, click the camera icon on the session. The Watch Session Recording page appears:
@@ -39,6 +41,7 @@ Selecting an activity in the grid also shows additional details below such as th
 For active sessions, there are two actions that can be taken:
 
 - **Watch Live:** When session recording is turned on for the secret and admin can view and replay the user's activity.
+
 - **Terminate:** Sends a message to the end user or terminates their session. The end user sees an alert dialog pop up on their machine with the message. Session recording does not need to be enabled for this to work. For ended sessions admins can watch the recorded video and view the SSH log if session recording was turned on for the secret.
 
 ## Advanced Session Recording
@@ -60,17 +63,21 @@ ASR enhances the launcher sessions, which typically only include screenshots, ke
 In addition to those, ASR includes these enhanced video playback features:
 
 - Searchable Video: You can search video activity to find locations where specific activities, such as specific keystrokes or ran processes.
+
 - Enhanced Playback: Sessions recorded using ASR display additional data on playback, such as the current active window, the used processes, and keystrokes in the session.
+
 - On-demand video processing
+
 - Recording all sessions
+
 - Inactivity timeout
+
 - Maximum session-length protection
 
 > **Note:** The Windows protocol handler encodes your session in WEBM format in real time and sends the recording to SS. There is now an "Enable On-Demand Video Processing" option in SS which leaves the recordings in WEBM format, which Chrome and Firefox can playback without any further processing, saving server processing time. If an on-demand recording is viewed with Internet Explorer or Edge (which do not support WEBM playback), you can click a "Request Video Processing" button and the video will be converted to H.264/MP4, which they can then play. If "Enable On-Demand Video Processing" is not checked, then all sessions recorded by the Windows protocol handler will be automatically converted to H.264/MP4.
 
->**Note:** The Mac protocol handler does not yet support this feature, so any recordings created with it are converted to the chosen legacy video codec format. We recommend H.264/MP4.
->You can set the advanced session recording agent to "Record All Sessions." If someone logs into a server directly without launching from SS, or even logs in at the console, the full session is recorded, including metadata.
->
+>**Note:** The Mac protocol handler does not yet support this feature, so any recordings created with it are converted to the chosen legacy video codec format. We recommend H.264/MP4. You can set the advanced session recording agent to "Record All Sessions." If someone logs into a server directly without launching from SS, or even logs in at the console, the full session is recorded, including metadata.
+
 >**Note:** See [Secret Server Advanced Session-Recording Agent Installation](https://thycotic.force.com/support/s/article/SS-INST-EXT-Adv-Session-Rec-Agent) (KBA) for details.
 
 ## Session Recording Tab

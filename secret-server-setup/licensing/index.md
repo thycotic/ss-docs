@@ -19,7 +19,9 @@ After installation, the first thing we recommend doing is entering your licenses
 For the Express edition, you have one license to enter. For Professional edition and higher, you have, at minimum:
 
 - An edition license
+
 - A user license
+
 - A support license.
 
 If you purchased additional licenses for sites or distributed engines, you may have more licenses to add.
@@ -33,11 +35,17 @@ All non-evaluation licenses require activation after install. Activation is per 
 To activate licenses:
 
 1. Go to **Admin \> Licenses**.
+
 2. Click the **Install New License** button.
+
 3. Type the **License Name** and **License Key** for one of the licenses that you received from your account manager.
+
 4. Click the **Save** button.
+
 5. If you have another license to add, click **Add Another License**.
+
 6. When you have added all licenses, click **License Activation**.
+
 7. Enter your name, email address, and phone number, then click the **Activate** button. If your server does not have outbound network access, click **Activate Offline** instead.
 
 > **Note:**  For more information about license activation, see the [License Activation FAQ](../../secret-server-setup/licensing/licensing-faq/index.md).

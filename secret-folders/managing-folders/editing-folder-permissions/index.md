@@ -25,7 +25,7 @@
    1. Click the **Edit** link next to **Secret Policy**. The Edit Folder popup appears:
 
       ![image-20200526110608499](images/image-20200526110608499.png)
-      
+
    1. Click the **Secret Policy** dropdown list to select the desired policy.
 
    1. Click the **Save** button.
@@ -40,9 +40,9 @@
 
       ![image-20200526111502299](images/image-20200526111502299.png)
 
-   1. In the **Selected Groups** section, click the **Folder Permission** dropdown list for the desired user of group to select the desired maximum permission available to them for the folder: View (folder), Add Secret (to folder), Edit (folder), or Owner (of folder). 
+   1. In the **Selected Groups** section, click the **Folder Permission** dropdown list for the desired user of group to select the desired maximum permission available to them for the folder: View (folder), Add Secret (to folder), Edit (folder), or Owner (of folder).
 
-   1. In the **Selected Groups** section, click the **Secret Permission** dropdown list for the desired user of group to select the desired maximum permission available to them for secrets in the folder: List (secrets in folder), View (secrets in folder), Edit (secrets in folder), or Owner (of secrets in folder). 
+   1. In the **Selected Groups** section, click the **Secret Permission** dropdown list for the desired user of group to select the desired maximum permission available to them for secrets in the folder: List (secrets in folder), View (secrets in folder), Edit (secrets in folder), or Owner (of secrets in folder).
 
    1. If you wish to add a user or group (to set their permissions):
 

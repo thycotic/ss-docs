@@ -18,7 +18,7 @@ The Auto Change Schedule section, which appears when you set the Auto Change Sch
 
 ![image-20200527095610715](images/image-20200527095610715.png)
 
-This setting is useful for having the RPC occur during off-hours in order to prevent disruptions. By default, this setting is "When password expires,” which allows the secret to be changed immediately upon expiration. 
+This setting is useful for having the RPC occur during off-hours in order to prevent disruptions. By default, this setting is "When password expires,” which allows the secret to be changed immediately upon expiration.
 
 > **Note:** There is a check box in the auto change schedule settings labeled "Only change password if the secret is expired.” When it is enabled, auto change will not change the password until after the secret expires. The auto change occurs on the first scheduled time after the secret expires. If the box is unchecked, auto change occurs on the defined schedule, whether or not the secret has expired.
 

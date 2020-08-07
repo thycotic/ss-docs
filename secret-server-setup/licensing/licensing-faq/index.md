@@ -4,7 +4,7 @@
 
 # License Activation FAQ
 
-**What happens if we find that we had more named users than licenses after activation? Will the account lock us out?** 
+**What happens if we find that we had more named users than licenses after activation? Will the account lock us out?**
 The user licenses are per named individual.  You can simply disable any excess users so you are within your license count—these users can be re-enabled at a later time and all audit log information is kept.
 
 **Why is license activation required?**
@@ -41,13 +41,13 @@ The following information is sent to `thycotic.com` when you activate:
 
 - All Licenses (license name, license key)
 
-- Hardware Hash of each web server 
+- Hardware Hash of each web server
 
 This information is one way hashed before it is sent so it does not reveal any identifiable hardware information.
 
 - Secret Server version
 
-- An encrypted value to identify the instance 
+- An encrypted value to identify the instance
 
 - This does not include any secret data or the `encryption.config` file.
 
@@ -57,14 +57,20 @@ This information is one way hashed before it is sent so it does not reveal any i
 
 Yes, there is an offline option for activating licenses. (See the Demo movie above for the offline process - also note the *offline=true* option described below if you have trouble activating offline)
 
-To activate your Secret Server licenses when your server does not have internet access, perform the following steps: 
+To activate your Secret Server licenses when your server does not have internet access, perform the following steps:
 
 1. Go to **Admin > Licenses**.
+
 1. Click the **Install New License** button.
+
 1. Type the **License Name** and **License Key** for one of the licenses that you received from your account manager.
+
 1. Click the **Save** button.
+
 1. If you have another license to add, click **Add Another License**.
+
 1. When you have added all licenses, click **License Activation**.
+
 1. Enter your name, email address, and phone number, then click the **Activate Offline** button.
 
 Your activation is complete.  If you received an error message, please take note of the error code and call the phone number contained in the message.
@@ -82,5 +88,3 @@ Secret Server may be activated on an Airgap Network for both Trials and Licensed
 1. **My Server is a VM that moves to different hardware often.  Will this cause me to need to reactivate over and over?**
 
 As of version 7.8.000000, you will not need to reactivate over and over. When you activate, you will be able to use Secret Server for a year without needing to reactivate regardless VM hardware changes. However, if your machine name changes as well as your hardware, you will need to reactivate. If you are using a version older than 7.8.000000, you will need to reactivate when the VM moves.
-
- 

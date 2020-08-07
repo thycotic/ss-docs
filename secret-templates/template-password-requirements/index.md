@@ -10,7 +10,7 @@
 
 A password requirement is a stored SS object that defines the requirements on a password text-entry field to validate user-entered passwords or make auto-generated passwords conform to set specifications. You can have multiple password requirements, but only one can be set to the default.
 
-A password requirement is made up of a minimum and maximum length, a set of characters, and optional rules such as "At least three upper-case characters" or "The first character must be lower-case". The default password requirement is 12 characters from the default character set, with at least one upper-case, lower-case, numeric, and symbol character. 
+A password requirement is made up of a minimum and maximum length, a set of characters, and optional rules such as "At least three upper-case characters" or "The first character must be lower-case". The default password requirement is 12 characters from the default character set, with at least one upper-case, lower-case, numeric, and symbol character.
 
 ## Creating a Custom Password Requirement
 
@@ -36,14 +36,14 @@ To create a new password requirement:
 
 1. Type the minimum and maximum password lengths for generated (by SS) passwords in the **Generate Length Between** text boxes.
 
-1. Click the **Using** dropdown list to select the character set to use. You can also create a custom character set (or view the contents of a current one) by clicking the **Character Set** link. The out-of-the-box default is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`. 
+1. Click the **Using** dropdown list to select the character set to use. You can also create a custom character set (or view the contents of a current one) by clicking the **Character Set** link. The out-of-the-box default is `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()`.
 
 1. Click to select the desired password no-no check boxes in the Password Validation section. The options are:
 
    - **Prevent Username in Password**: Do not allow the username to be part of the password.
- 
+
    - **Prevent Common Dictionary Words**: Do not allow everyday English words in the password.
- 
+
    - **Prevent Spatial Terms in Password**: Do not allow strings of characters based their order on the keyboard, such as `qwerty` or `asdfg`.
 
    - **Prevent Sequences in Password**: Do not allow strings of characters based on their order in the character set, such as `abcd` or `5678`.

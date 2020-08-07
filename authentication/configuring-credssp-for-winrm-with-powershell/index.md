@@ -4,14 +4,16 @@
 
 # Configuring CredSSP for WinRM with PowerShell
 
-## Introduction 
+## Introduction
 
 In some cases, a PowerShell script may need to access resources outside of a Secret Server (SS) machine. This requires that any credentials are delegated to the target machine. SS runs PowerShell scripts using Windows Remote Management (WinRM), which does not allow credential delegation by default. To allow credential delegation, the SS machine must have Credential Security Support Provider (CredSSP) enabled. CredSSP is a security support provider that allows a client to delegate credentials to a target server.
 
 Some scenarios requiring CredSSP:
 
 - The script needs to query or update a value in Active Directory.
+
 - The script needs to query or update a value in a SQL Server instance.
+
 - The script is used as part of extensible discovery for locating accounts or machines on a different domain or non-domain joined environment.
 
 ## Enabling CredSSP for WinRM in Secret Server
@@ -53,8 +55,10 @@ Some scenarios requiring CredSSP:
 1. The Web server always uses a specified account to run the PowerShell scripts. Considerations:
 
    - Ensure that account is added to the “Remote Management Users” local group on each Web server.
+
    - For RPCs with custom password changers, this would be “Change Password Using,” and then select “Privileged Account.”
    - For PowerShell password changers in the classic UI, this would be “Run PowerShell Using” and can alternatively be configured as the “Default Privileged Account” at the template level.
+
    - For custom dependencies using PowerShell scripts, this would be the “Run As” secret.
    - If you use any form of extensible discovery, this account needs to be the first secret that is linked to the scanner. Any additional secrets linked to the scanner are typically associated with authentication to the destination system.
 
@@ -101,27 +105,37 @@ You can alternatively configure CredSSP and the credential delegation to occur f
 1. The distribute engine will always use a specified account to run the PowerShell scripts. Considerations:
 
    - Ensure that account is added to the “Remote Management Users” local group on each engine where CredSSP is enabled.
-   - For RPCs with custom password changers, this would be “Change Password Using,” and then select “Privileged Account”. 
+
+   - For RPCs with custom password changers, this would be “Change Password Using,” and then select “Privileged Account”.
    - For PowerShell password changers in the classic UI, this would be “Run PowerShell Using” and can alternatively be configured as the “Default Privileged Account” at the template level.
+
    - For custom dependencies using PowerShell scripts, this would be the “Run As” secret.
    - If you use any form of extensible discovery, this account needs to be the first secret that is linked to the scanner. Any additional secrets linked to the scanner are typically associated with authentication to the destination system.
 
 1. Ensure that the "Allow Delegating Fresh Credentials" group policy setting is enabled and is not disabled by a domain policy.
 
    1. Open the gpedit.msc file on your SS machine or distributed engine, depending on where CredSSP is enabled
+
    1. Navigate to **Computer Settings \> Administrative Templates \> System \> Credentials Delegation**.
+
    1. Edit the "Allow Delegating Fresh Credentials" setting.
+
    1. Verify that it is Enabled.
+
    1. Click "Show..."
+
    1. Verify that the list contains an entry that begins with "wsman/" and ends with the fully qualified machine name of the SS machine or distributed engine.
+
    1. If destination systems are non-domain joined or on another domain without a trust, it may be required for you to add in an entry for **each** destination system you wish to run the script or do discovery on (as examples). Consider collecting a list of all destination FQDNs for your specific use case and adding them all in one go.
 
 1. Depending on where CredSSP is configured (Web server or distributed engine), run the following commands:
 
    - View existing entries:
      `Get-Item WSMan:\localhost\Client\TrustedHosts`
+
    - Adding computers if your TrustedHosts list is empty:
      `Set-Item WSMan:\localhost\Client\TrustedHosts *-Value* <ComputerName>,[<ComputerName>]`
+
    - Adding computers to your existing TrustedHosts list:
      `$curList = (Get-Item WSMan:\localhost\Client\TrustedHosts).value`
      `Set-Item WSMan:\localhost\Client\TrustedHosts -Value "$curList, Server01"`
@@ -158,10 +172,4 @@ By default, SS agents inherit the "Enable CredSSP Authentication for WinRM" sett
    `<add key="EnableCredSSPForWinRM" value="true" />`
 
 1. Restart the “Secret Server Agent” service to apply the setting.
-
- 
-
-
-
- 
 

@@ -17,6 +17,7 @@ Field slug names are automatically generated, based on the field name, when the 
 With SS 10.7.X+, The generated field slug names are now user-definable. You can edit the generated names to:
 
 - Conform to a naming convention used in your API calls.
+
 - Maintain the same name for a field across secret templates to simplify coding by developers.
 
 The only requirement is that each slug field name is unique to that template.

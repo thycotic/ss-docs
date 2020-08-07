@@ -13,7 +13,7 @@ Secret Server can manage Google Cloud Platform (GCP) service accounts and VM ins
 
 ### Task 1: Creating GCP Service Accounts
 
-These are special accounts created in GCP to make authorized API calls for Compute Engine and other GCP applications. 
+These are special accounts created in GCP to make authorized API calls for Compute Engine and other GCP applications.
 
 > **Note:** See [GCP Service Accounts](https://cloud.google.com/iam/docs/service-accounts) for more information.
 
@@ -63,7 +63,7 @@ To create the service account:
 
 ### Task 2: Setting GCP Permissions
 
-GCP permissions are IAM permissions from the IAM & Admin section of GCP. Without the proper permissions, GCP discovery, RPC, and heartbeat may not function properly. 
+GCP permissions are IAM permissions from the IAM & Admin section of GCP. Without the proper permissions, GCP discovery, RPC, and heartbeat may not function properly.
 
 For the service accounts to have access to a project, you must add the service account IAM permissions in each Project. If you did not add the permissions when you created the service account, you need to add the IAM permissions in the project they were created in as well.
 
@@ -101,11 +101,11 @@ To add the permission In GCP:
 
 ### Task 3: Creating a GCP IAM Service-Account Secret
 
-Secret Server now has a build in GCP IAM Service Account Key template. 
+Secret Server now has a build in GCP IAM Service Account Key template.
 
 > **Note:** To create a Secret using GCP IAM service account key template, you must have the service account’s JSON private key file from GCP (created earlier).
 
-Create a new secret (see [Creating Secrets](../../secret-management/procedures/creating-secrets/index.md) for details): 
+Create a new secret (see [Creating Secrets](../../secret-management/procedures/creating-secrets/index.md) for details):
 
 1. Click the **+** on the **Secrets** item on the main menu. The "Create New Secret" page appears:
 
@@ -125,7 +125,7 @@ Create a new secret (see [Creating Secrets](../../secret-management/procedures/c
 
 1. Click the **Change** button to upload the JSON private key file you created earlier.
 
-1. Click the **Create Secret** button. 
+1. Click the **Create Secret** button.
 
 ### Task 4: Creating an RPC/Heartbeat Password Changer
 
@@ -288,44 +288,44 @@ To Import a Service Account
 1. Click to select the Service Account(s) to import in the unlabeled Domain/Cloud tree on the left.
 
 1. Click the **Import** button. The importation wizard begins:
-   
+
    ![image-20200721095039584](images/image-20200721095039584.png)
-   
 
 1. For secrets:
-   
+
    1. Click the **Secret Type** dropdown list and select **Google IAM Service Account Key**.
    1. Click the link after **Folder** to select a folder.
    1. Type a name in the **Secret Name** text box (It auto fills `$EMAIL`).
    1. Click the Site dropdown list to select a site.
-   
+
 
 1. Click the **Next** button. The Key page appears:
-   
+
    ![image-20200721095441085](images/image-20200721095441085.png)
-   
+
 
 1. When importing GCP service account keys, the only option is take over the account. Meaning, SS triggers a remote password change on import to rotate the imported key and obtain a new JSON private key file. With the JSON private key file, SS can then manage the GCP service account.
 
 1. Click the **Next** button. The Import Key page appears:
-   
+
    ![image-20200721095632101](images/image-20200721095632101.png)
-   
+
 
 1. Click the link to select a secret to use for the initial take over of the account.
 
 1. Click the **Next** button. The Key Rotation page appears:
-   
+
     ![image-20200721095952069](images/image-20200721095952069.png)
-   
+
 
 1. For key rotation, click one of two selection button options to choose a secret for future key rotations. Either option would need the permissions mentioned above. When the password for the chosen secret are changed in the future, SS will use one of these two options:
-   
-   - **Use Secret Credentials**: Use the imported service account to rotate itself, and it has permissions to rotate keys.
-   - **Use Privileged Account**: Use another service account that has permissions to rotate keys
-   
 
-1. Click the **Finish** button. 
+   - **Use Secret Credentials**: Use the imported service account to rotate itself, and it has permissions to rotate keys.
+
+   - **Use Privileged Account**: Use another service account that has permissions to rotate keys
+
+
+1. Click the **Finish** button.
 
 ## GCP APIs
 
@@ -375,7 +375,7 @@ The service account used to rotate the key does not have necessary permission to
 
 1. Select the service account.
 
-1. Add the **Service Account Key Admin** permission. 
+1. Add the **Service Account Key Admin** permission.
 
 1. Once the service account has permission:
    1. In SS, select the secret to rotate.
@@ -398,7 +398,7 @@ The rotated service account has reached the maximum number of keys allowed. GCP 
 
 1. Select **IAM \> Permissions**.
 
-1. Remove the unused keys. 
+1. Remove the unused keys.
 
 1. Once the service account has less than 10 keys, in SS:
    1. In SS, select the secret to rotate.
@@ -437,7 +437,7 @@ The instance scanner custom filter is not valid.
 
 #### Solution
 
-1. In SS, go to the GCP discovery source. 
+1. In SS, go to the GCP discovery source.
 
 1. Edit the instance scanner.
 
@@ -457,7 +457,7 @@ The instance scanner custom filter is not valid.
 
 #### Solution
 
-1. In SS, go to the GCP discovery source. 
+1. In SS, go to the GCP discovery source.
 
 1. Edit the instance scanner.
 
@@ -499,4 +499,3 @@ The service account does not have permissions in IAM.
 
 1. Click the **Service Account** menu item to create a service account with the desire permissions. See [Task 1: Creating GCP Service Accounts](#Task-1:-Creating-GCP-Service-Accounts) and [Task 2: Setting GCP Permissions](#Task-2:-Setting-GCP Permissions).
 
- 

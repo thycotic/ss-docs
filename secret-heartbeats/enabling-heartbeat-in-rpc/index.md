@@ -6,7 +6,7 @@
 
 To enable heartbeat, ensure it is enabled on the **Remote Password Changing Configuration** page:
 
-1. Navigate to **Admin > Remote Password Changing**. 
+1. Navigate to **Admin > Remote Password Changing**.
 
 1. Click the **Edit** button.
 
