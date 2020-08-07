@@ -23,7 +23,7 @@
 | CRM                           | _Customer Relationship Management_                           |
 | CSV                           | _Comma-Separated Values_                                     |
 | DBA                           | _Database Administrator_                                     |
-| DE                            | Distributed Engine (Secret Server)                           |
+| DE                            | _Distributed Engine_ (Secret Server)                           |
 | DES                           | _Data Encryption Standard_                                   |
 | DPAPI                         | _Data Protection Application Programming Interface_          |
 | DSS                           | _Data Security Standard_                                     |
