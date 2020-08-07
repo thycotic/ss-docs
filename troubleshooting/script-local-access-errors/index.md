@@ -4,7 +4,7 @@
 
 # Windows Local-Account Access-Denied Error Workaround PowerShell Scripts
 
-## Overview 
+## Overview
 
 Beginning with Windows 10 version 1607 (Creator’s Update) and Windows Server 2016, the default GPO security descriptor denies users [remote access to Security Account Manager (SAM)](https://docs.microsoft.com/en-us/windows/device-security/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls) with non-domain credentials, and therefore prevents remote heartbeat and password changes made by otherwise-authenticated local user accounts. Affected Windows local account secrets return “Access Denied” on a heartbeat or remote password change.
 
@@ -19,6 +19,7 @@ On most systems, the Administrators group on the local machine is part of the �
 For heartbeat to work correctly, make sure that the local or authenticated users are:
 
 - *Not* in the "Deny access to this computer from the network" security policy
+
 - *In* the "Access this computer from the network" security policy
 
 ## Remediation Options
@@ -49,13 +50,13 @@ Run in an elevated PowerShell ISE session.
 
 For full help text, run:
 
- `> Get-Help C:\Script\Win10-HbFix.ps1 -Examples` 
+ `> Get-Help C:\Script\Win10-HbFix.ps1 -Examples`
 
 #### Parameters
 
 ##### -ComputerNames (string[])
 
-Specifies the computers on which the script runs (comma separated). If unspecified, the default is the local computer. 
+Specifies the computers on which the script runs (comma separated). If unspecified, the default is the local computer.
 
 ##### -Username (string)
 
@@ -71,25 +72,25 @@ Specifies whether a group policy update should be forced for immediate effect fo
 
 #### Examples
 
-`> C:\Script\Win10-HbFix.ps1` 
-This example gives remote SAM access to all local users on the current machine. The current PowerShell credentials would be used for authentication. 
+`> C:\Script\Win10-HbFix.ps1`
+This example gives remote SAM access to all local users on the current machine. The current PowerShell credentials would be used for authentication.
 
-`> C:\Script\Win10-HbFix.ps1 -LogDir "D:\Win10-HbFix\log"` 
-This example changes the default output log path to `D:\Win10-HbFix\log` (default is `[user temp directory]\log`). 
+`> C:\Script\Win10-HbFix.ps1 -LogDir "D:\Win10-HbFix\log"`
+This example changes the default output log path to `D:\Win10-HbFix\log` (default is `[user temp directory]\log`).
 
- `> C:\Script\Win10-HbFix.ps1 -ComputerNames "WINSERVER","TestDomain\SOMEMACHINE" -Username "TestDomain\Administrator" ` 
+ `> C:\Script\Win10-HbFix.ps1 -ComputerNames "WINSERVER","TestDomain\SOMEMACHINE" -Username "TestDomain\Administrator" `
 This example gives remote SAM access to all local users on the WINSERVER and TestDomain\SOMEMACHINE remote computers. The domain user "TestDomain\Administrator" credentials will be used. You would be prompted for a password.
 
- `> C:\Script\Win10-HbFix.ps1 -ComputerNames "D:\Win10MachineList.txt" -Username "TestDomain\Administrator"` 
+ `> C:\Script\Win10-HbFix.ps1 -ComputerNames "D:\Win10MachineList.txt" -Username "TestDomain\Administrator"`
 
 This example gives remote SAM access to all local users on the remote computers listed in D:\Win10MachineList.txt (one machine per line). The domain user "TestDomain\Administrator" credentials will be used. You would be prompted for a password.
 
-`> C:\Script\Win10-HbFix.ps1 -ComputerNames "WINSERVER" -GroupName "Secret Server Group"` 
+`> C:\Script\Win10-HbFix.ps1 -ComputerNames "WINSERVER" -GroupName "Secret Server Group"`
 
 This example gives remote SAM access to all local users on the WINSERVER remote computer. The local group created will be named "Secret Server Group". Current PowerShell credentials would be used for authentication.
 
- `> C:\Script\Win10-HbFix.ps1 -ComputerNames "WINSERVER" -ForceGPUpdate -Verbose` 
-This example gives remote SAM access to all local users on the WINSERVER remote computer, with verbose output. The current PowerShell credentials will be used for authentication. Group policy update will be forced on WINSERVER for immediate effect. 
+ `> C:\Script\Win10-HbFix.ps1 -ComputerNames "WINSERVER" -ForceGPUpdate -Verbose`
+This example gives remote SAM access to all local users on the WINSERVER remote computer, with verbose output. The current PowerShell credentials will be used for authentication. Group policy update will be forced on WINSERVER for immediate effect.
 
 ### Related Articles and Resources
 
@@ -99,11 +100,11 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 1. Make sure that **Admin \> Scripts** is functional. Once you have it working, download, unzip, and run this script [HBWorkAroundScripts.zip](https://updates.thycotic.net/secretserver/documents/HBWorkAroundScripts.zip).
 
-2. Go to **Admin \> Scripts**. 
+2. Go to **Admin \> Scripts**.
 
 3. Add the HBWorkAroundScript and the HBWorkAroundPasswordChange scripts.
 
-4. Test the first script. Add the appropriate `args[]` as needed. Add arguments 0-4 with no quotes or commas. Spaces are the argument separator and are required. 
+4. Test the first script. Add the appropriate `args[]` as needed. Add arguments 0-4 with no quotes or commas. Spaces are the argument separator and are required.
 
 5. You should get a return of “True,” such as this:
 
@@ -115,7 +116,7 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 8. Click the **New** button at the bottom.
 
-9. Click the **Base Password Changer** dropdown list to select **PowerShell Script** as your password changer. 
+9. Click the **Base Password Changer** dropdown list to select **PowerShell Script** as your password changer.
 
 10. Type a name in the **Name** text box.
 
@@ -125,14 +126,14 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 12. Click the **PowerShell Script** dropdown list in the **Password Change Commands** section to select the script you ran earlier.
 
-13. Add the appropriate tokens in the **Script Args** text box. 
+13. Add the appropriate tokens in the **Script Args** text box.
 
 > **Note:** See [Dependency Tokens](../../api-scripting/dependency-tokens/index.md) for a complete list.
 
-12. Click the **Save** button. Your configuration should look like this: 
-    
+12. Click the **Save** button. Your configuration should look like this:
+
     ![image-20200716114511238](images/image-20200716114511238.png)
-    
+
 11. Go to **Admin \> Secret Templates**.
 
 11. Select **Windows Account**.
@@ -147,10 +148,10 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 13. Click the **Password Type to Use** dropdown list to select the password change you created earlier.
 
-13. Create your windows secret using the custom template. 
+13. Create your windows secret using the custom template.
 
-13. Once it is created, add your privileged and associated secret to the RPC tab as seen below. In that example we use the same one for the privileged and associated secret. 
-    
+13. Once it is created, add your privileged and associated secret to the RPC tab as seen below. In that example we use the same one for the privileged and associated secret.
+
     ![image-clip_image006](images/clip_image006.jpg)
-    
+
 19. Run a heartbeat to confirm it works as desired.

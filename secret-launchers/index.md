@@ -10,7 +10,9 @@ A secret _launcher_ launches applications on end-user machines and automatically
 
 A *protocol handler* is an application on an end-user's machine. It enables communication between SS and that client machine. It also provides the files needed by launchers. When a SS user starts a launcher:
 
-1. The protocol handler bootstraps the client-side application. 
-1. The protocol handler communicates with Secret Server over HTTP(S) to ensure that it is the latest version. If not, it begins an upgrade process. 
+1. The protocol handler bootstraps the client-side application.
+
+1. The protocol handler communicates with Secret Server over HTTP(S) to ensure that it is the latest version. If not, it begins an upgrade process.
+
 1. The protocol handler bootstraps the target launcher type and begin the process of securely logging in the user. Beyond HTTP(S) transport protection, credentials are retrieved securely from SS using signed AES-256-encrypted messages.
 

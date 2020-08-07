@@ -19,14 +19,15 @@ SS can make it easier to comply with PCI-DSS requirements:
 - **Requirement 11:** Regularly test security systems and processes.
 
 - **Requirement 12:** Maintain a policy that addresses information security: You can optimize SS's software's global configuration and template-driven data structure to fit the requirements of your current information security policy or assist in creating a policy based on SS. Configuration options include:
-- Applying two-factor authentication
 
-- Enabling launchers
+   - Applying two-factor authentication
 
-- Enabling Web services
+   - Enabling launchers
 
-- Enforcing local-user password requirements
+   - Enabling Web services
 
-- Forcing HTTPS/SSL
+   - Enforcing local-user password requirements
 
-- Requiring folders for secrets (for uniform permissions)
+   - Forcing HTTPS/SSL
+
+   - Requiring folders for secrets (for uniform permissions)

@@ -14,4 +14,4 @@ YubiKey is a FIDO2-compliant product series from Yubico, a commercial company. W
 
 ## Configuration
 
-  See [FIDO2 (YubiKey) Two-Factor Authentication Configuration](https://thycotic.force.com/support/s/article/SS-CFG-EXT-Yubikey) for details.
+  See [FIDO2 (YubiKey) Two-Factor Authentication Configuration](https://thycotic.force.com/support/s/article/SS-CFG-EXT-Yubikey) (KBA) for details.

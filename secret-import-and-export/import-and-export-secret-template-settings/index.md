@@ -4,7 +4,7 @@
 
 # Import and Export Secret Template Settings
 
-Secret template settings for importation and exportation include: 
+Secret template settings for importation and exportation include:
 
 - Is Required?
 

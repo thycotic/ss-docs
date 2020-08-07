@@ -15,42 +15,62 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 ### Primary Documentation
 
 - [Thycotic Documentation Portal](https://docs.thycotic.com/ss/): You are at the home page of the current Thycotic Document Portal for Secret Server. It contains:
+
   - Converted knowledge base articles. These are marked as *deprecated* in the legacy knowledge base.
+
   - Links to legacy knowledge bases article that have yet to be converted or retired
+
   - Links to legacy PDF documentation
+
   - New material
+
 - [Knowledge Base Articles](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server): Use the Search text box at the top of the page. This is the legacy platform that we are replacing with the Thycotic Documentation Portal (where you are right now). This portal does not yet contain all SS documentation. For now, there are many locations here where this online documentation links to legacy documentation.
 
 >**Important:** The SS portion of the Thycotic Documentation Portal is in a transitional phase and does not yet contain all SS documentation. For now, there are many locations here where the SS TDP links to legacy documentation. In addition, there are still topics that are only on the [Knowledge Base Articles](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server) (use the Search text box at the top of the page).
 
 ### Getting Started
 
-- [End User Guide](https://docs.thycotic.com/ss/10.8.0/secret-server-end-user-guide) (for non-technical users) 
+- [End User Guide](https://docs.thycotic.com/ss/10.8.0/secret-server-end-user-guide) (for non-technical users)
+
 - [Getting Started Tutorial](https://docs.thycotic.com/ss/10.8.0/getting-started-tutorial) (for technical users)
+
 - [Installation Guides](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/installation)
-- [System Requirements](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/system-requirements) 
 
-### Best Practices  
+- [System Requirements](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/system-requirements)
 
-- [Best Practices](https://thycotic.force.com/support/s/article/Best-Practices-Secret-Server)  
-- [Discovery Best Practices](./discovery/discovery-best-practices/index.md)  
-- [High Availability and Disaster Recovery](https://thycotic.force.com/support/s/article/Secret-Server-HADR)  
+### Best Practices
+
+- [Best Practices](https://thycotic.force.com/support/s/article/Best-Practices-Secret-Server)
+
+- [Discovery Best Practices](./discovery/discovery-best-practices/index.md)
+
+- [High Availability and Disaster Recovery](https://thycotic.force.com/support/s/article/Secret-Server-HADR)
+
 - [Secret Server Government Edition—Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf)
-- [Security Hardening Guide](https://docs.thycotic.com/ss/10.8.0/security-hardening)  
+
+- [Security Hardening Guide](https://docs.thycotic.com/ss/10.8.0/security-hardening)
 
 ### Security Whitepapers
 - [Distributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf)
-- [Launcher Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_Launcher.pdf) 
-- [Meltdown and Spectre Security Information](https://updates.thycotic.net/secretserver/documents/SS_Sec_MeltdownAndSpectre.pdf) 
+
+- [Launcher Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_Launcher.pdf)
+
+- [Meltdown and Spectre Security Information](https://updates.thycotic.net/secretserver/documents/SS_Sec_MeltdownAndSpectre.pdf)
+
 - [\*nix Management](https://updates.thycotic.net/secretserver/documents/SS_Sec_nixManagement.pdf)
+
 - [Security Model](https://updates.thycotic.net/secretserver/documents/SS_Security_Model.pdf)
-- [Web Services Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_WebServices.pdf) 
+
+- [Web Services Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_WebServices.pdf)
 
 ## Help
 
 - [Document Conventions](./help/document-conventions/index.md)
+
 - [Secret Server Glossary](./help/secret-server-glossary/index.md)
+
 - [Self-Help Resources](./help/self-help-resources/index.md)
+
 - [Technical Support](./help/technical-support/index.md)
 
 ### Download Secret Server
@@ -65,24 +85,34 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 
 #### Legacy
 
-- [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration) 
-- [Devolutions](https://docs.thycotic.com/ssi/1.0.0/devolutions) 
-- [F5 BIG-IP](https://thycotic.force.com/support/s/article/F5-BIG-IP-Integration) 
-- [HP ArcSight](https://thycotic.force.com/support/s/article/HP-ArcSight-Integration) 
-- [HSM](https://thycotic.force.com/support/s/article/HSM-Integration) 
-- [IBM Verify](https://thycotic.force.com/support/s/article/IBM-Verify-Gateway-Integration) 
-- [OpenID Connect](https://thycotic.force.com/support/s/article/OpenID-Connect-Integration) 
-- [SCIM Connector](https://thycotic.force.com/support/s/article/SS-INST-EXT-SCIM-Connector) 
-- [SecureLink](https://www.securelink.com/thycotic-integration/) 
-- [Syslog](https://thycotic.force.com/support/s/article/Syslog-Events-Secret-Server) 
+- [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration)
+
+- [Devolutions](https://docs.thycotic.com/ssi/1.0.0/devolutions)
+
+- [F5 BIG-IP](https://thycotic.force.com/support/s/article/F5-BIG-IP-Integration)
+
+- [HP ArcSight](https://thycotic.force.com/support/s/article/HP-ArcSight-Integration)
+
+- [HSM](https://thycotic.force.com/support/s/article/HSM-Integration)
+
+- [IBM Verify](https://thycotic.force.com/support/s/article/IBM-Verify-Gateway-Integration)
+
+- [OpenID Connect](https://thycotic.force.com/support/s/article/OpenID-Connect-Integration)
+
+- [SCIM Connector](https://thycotic.force.com/support/s/article/SS-INST-EXT-SCIM-Connector)
+
+- [SecureLink](https://www.securelink.com/thycotic-integration/)
+
+- [Syslog](https://thycotic.force.com/support/s/article/Syslog-Events-Secret-Server)
 
 ### Release Notes
 
-[Release Notes](./release-notes/index.md) (On-Premises and Cloud) 
+[Release Notes](./release-notes/index.md) (On-Premises and Cloud)
 
 ### Secret Society (Forum)
 
 - [Forum](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server) (legacy—replaced by Secret Society)
+
 - [Thycotic Secret Society](https://thycotic.com/community/secret-society/): An Educational Community, replacing the Forum.
 
 ### Developer Resources

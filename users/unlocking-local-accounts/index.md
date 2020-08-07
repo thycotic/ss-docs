@@ -9,8 +9,13 @@ If a user fails their login too many times (specified in the **Local User Passwo
 To unlock the account:
 
 1. Log on as an administrator.
+
 2. Click on **Admin > Users**.
+
 3. Click on the user who is locked out.
+
 4. Click **Edit**.
+
 5. Click to deselect the **Locked out** check box.
+
 6. Click **Save**.

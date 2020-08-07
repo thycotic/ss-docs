@@ -11,7 +11,8 @@ This topic is a one-stop resource for Secret Server developers. It points to TDP
 - [Custom Reports Gallery](https://my.thycotic.com/products_secretserver_customreportgallery.html)
 
 - [Creating Custom Reports](../reports/creating-and-editing-reports/index.md#creating-a-custom-report)
-- [Using Dynamic Parameters in Reports](../using-dynamic-parameters-reports/index.md) 
+
+- [Using Dynamic Parameters in Reports](../using-dynamic-parameters-reports/index.md)
 
 
 ## General Scripting
@@ -22,7 +23,7 @@ This topic is a one-stop resource for Secret Server developers. It points to TDP
 
 - [Creating and Using PowerShell Scripts](../api-scripting/creating-using-powershell-scripts/index.md)
 
-- [Creating and Using SSH Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SSH-Scripts) (KBA) 
+- [Creating and Using SSH Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SSH-Scripts) (KBA)
 
 - [Creating and Using SQL Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SQL-Scripts) (KBA)
 
@@ -56,7 +57,7 @@ This topic is a one-stop resource for Secret Server developers. It points to TDP
 
 - [Downloads for Secret Server Software Development Kit for DevOps](..//api-scripting/sdk-downloads/index.md)
 
-- [Secret Server Software Development Kit for DevOps](../sdk-cli/index.md) 
+- [Secret Server Software Development Kit for DevOps](../sdk-cli/index.md)
 
 - [Thycotic Community GitHub Repository](https://github.com/thycotic)
 

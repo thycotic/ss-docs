@@ -6,16 +6,18 @@
 
 ## Overview
 
-Secret Server webservices can be called using scripts. This example demonstrates how to authenticate and retrieve secrets programmatically in Perl using SOAP. There are also [Perl](../soap-perl-example-code/index.md) and [C#](../soap-C#-example-code/index.md) versions. 
+Secret Server webservices can be called using scripts. This example demonstrates how to authenticate and retrieve secrets programmatically in Perl using SOAP. There are also [Perl](../soap-perl-example-code/index.md) and [C#](../soap-C#-example-code/index.md) versions.
 
-This is a working example for Secret Server Online. A test user has been filled in and OrganizationCode passed in. The test user has  been restricted to only viewing secrets. If connecting to an installed instance, change the web reference URL to match your site and pass in an empty string for organizationCode. 
+This is a working example for Secret Server Online. A test user has been filled in and OrganizationCode passed in. The test user has  been restricted to only viewing secrets. If connecting to an installed instance, change the web reference URL to match your site and pass in an empty string for organizationCode.
 
 ## php.ini
 
 These modules need to be enabled in the `php.ini` file:
 
 - `extension_dir = "ext"` (depends on path to extension directory)
+
 - `extension=php_soap.dll`
+
 - `extension=php_openssl.dll`
 
 ## Code
@@ -246,7 +248,7 @@ if(count($errors) > 0)
 
  return;
 
-} 
+}
 
 
 
@@ -334,7 +336,7 @@ print "\n";
 
 }
 
-print "\n\n"; 
+print "\n\n";
 
 }
 

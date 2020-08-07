@@ -17,6 +17,7 @@
 1. On the **General** page, click the **Edit** button to change:
 
    - The team name
+
    - The team's description
    - The team's status
 
@@ -67,6 +68,9 @@
      1. Audit events occur when:
 
         - The team is created
+
         - General tab: name, description, or active status is changed
+
         - Sites tab: restrictions are added, removed, or changed
+
         - Members: users or groups are added or removed

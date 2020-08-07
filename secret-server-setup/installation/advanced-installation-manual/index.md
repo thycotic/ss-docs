@@ -15,8 +15,11 @@ Go to the [download page](https://thycotic.force.com/support/s/download-onprem) 
 ### Step 2: Creating Folders and Extracting Contents
 
 1. Extract the contents of the .zip file downloaded above (Right-click, **Extract All\...**). The original file is named with the latest version number for SS.
+
 1. Extracting this file reveals a `nugetCache` folder, as well as another zipped folder named `ss\_update`. For a SS-only install, you will not need the contents of the `nugetCache` folder.
+
 1. Create a folder called `SecretServer` in the location `C:\inetpub\wwwroot\`.
+
 1. Extract the contents of the `ss\_update.zip` file (Right-click, **Extract All\...**) to `C:\\inetpub\\wwwroot\\SecretServer`.
 
 ### Step 3: Configuring IIS
@@ -26,14 +29,19 @@ Open Internet Information Services (IIS) Manager* and create a new application p
 > **Note:** Our IIS installation sets the .NET trust level to “Full (internal), which may affect other applications on the server.
 
 1. Right-click **Application Pools** and select **Add Application Pool\...**
-1. Type a name (for example, SecretServerAppPool). 
+
+1. Type a name (for example, SecretServerAppPool).
+
 1. Ensure that the highest .NET CLR version is selected.
+
 1. Ensure the Managed pipeline mode is set to **Integrated**.
+
 1. Click the **OK** button.
-   
+
    > **Note:** The SS installer sets the application pool to default to the system Network Service account.  Follow [these instructions](https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB) if you selected Windows Authentication Mode during the SQL Installation process. To use Windows Authentication you must use an Active Directory service account to run the application pool in IIS. We recommend this as a security best practice.
-   
+
 1. Follow [these instructions](https://thycotic.force.com/support/s/article/Changing-IIS-to-not-stop-worker-process-in-IIS-7-and-8) to set the Idle Timeout and Regular Timeout settings to 0 for the application pool in IIS.
+
 1. Install SS as either a virtual directory (4a) or as a website (4b):
 
 ### Step 4a: Installing Secret Server as a Virtual Directory
@@ -43,7 +51,9 @@ Open Internet Information Services (IIS) Manager* and create a new application p
 1. Select an alias for your Secret Server. The alias is appended to the website, and it is best to name it the name of your earlier unzipped folder. For example, SecretServer becomes `https://myserver/SecretServer`.
 
 1. Select the physical directory for where you unzipped SS, for example, `C:\inetpub\wwwroot\SecretServer`.
+
 1. Click the **OK** button.
+
 1. In the tree, right-click the new virtual directory and select **Convert to Application**.
 
 1. Set the **Application Pool** to the same one you created in the Manual Installation section, for instance, SecretServerAppPool. Secret Server is now ready for installation. Skip to Step 5.
@@ -52,12 +62,18 @@ Open Internet Information Services (IIS) Manager* and create a new application p
 ### Step 4b: Installing Secret Server as a Website
 
 1. In IIS, right-click **Sites** and select **Add Website...**
+
 1. Type a site name.
-1. Click **Select...** and choose the application pool you created in the Manual Installation section. 
+
+1. Click **Select...** and choose the application pool you created in the Manual Installation section.
+
 1. Click the **OK** button.
-1. Click the **...** button beside the **Physical path** field and select the directory containing the unzipped SS files, for example `C:\inetpub\wwwroot\SecretServer`. 
+
+1. Click the **...** button beside the **Physical path** field and select the directory containing the unzipped SS files, for example `C:\inetpub\wwwroot\SecretServer`.
+
 1. Click the **OK** button.
-1. Click the **OK** button at the bottom of the **Add Website** window to save your settings. Secret Server is now ready for installation. 
+
+1. Click the **OK** button at the bottom of the **Add Website** window to save your settings. Secret Server is now ready for installation.
 
 ### Step 5: Completing Secret Server Installation from the Website
 
@@ -71,7 +87,7 @@ Your SS advanced installation is now ready to complete:
 
 1. If you are using Windows authentication mode to access SQL (recommended), ensure the correct service account is listed.
 
-1. If you selected mixed mode during the SQL install, select **SQL Server Authentication** and enter the SQL username and password you created for the SQL account. For information about adding a SQL Server user, see the [Adding a SQL Server User](https://thycotic.force.com/support/s/article/Adv-Install-SQL-2016) (KB). 
+1. If you selected mixed mode during the SQL install, select **SQL Server Authentication** and enter the SQL username and password you created for the SQL account. For information about adding a SQL Server user, see the [Adding a SQL Server User](https://thycotic.force.com/support/s/article/Adv-Install-SQL-2016) (KB).
 
 1. Click the **Install Secret Server** button. Secret Server verifies it is able to successfully create the SS database. If an error occurs no database changes will be made.
 

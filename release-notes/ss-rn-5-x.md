@@ -11,9 +11,9 @@ Minor Updates to 5.1
 
 - Changed link on Administration pages, from "Languages" to "Language Maintenance"
 
-- BUG: Fixed issues with URL case sensitive localization causing mixed languages to be displayed. 
+- BUG: Fixed issues with URL case sensitive localization causing mixed languages to be displayed.
 
-## Release 5.1.000000 
+## Release 5.1.000000
 
 Main Focus: New email alerts and support for PuTTY Features and Enhancements
 
@@ -51,7 +51,7 @@ Main Focus: New email alerts and support for PuTTY Features and Enhancements
 
 - Fixed null reference bug on Secret Audit when user does have "View Secret" role permission
 
-- Fixed bug where an incorrect validation message was displayed when password history was set to 'all' 
+- Fixed bug where an incorrect validation message was displayed when password history was set to 'all'
 
 ## Release 5.0.000002
 
@@ -65,11 +65,11 @@ Main Focus: Minor enhancements to 5.0
 
 - BUG: Fixed Secret Template to not allow search indexing on file attachments.
 
-- Fix: Cleaned up the CSS and layout on several pages. 
+- Fix: Cleaned up the CSS and layout on several pages.
 
-## Release 5.0.00000 
+## Release 5.0.00000
 
-Main Focus:Changing Passwords for Scheduled Tasks and 
+Main Focus:Changing Passwords for Scheduled Tasks and
 Service Accounts Features and Enhancements:
 
 - Enhanced Remote Password Changing to update dependent Scheduled Tasks, IIS AppPools and Windows Services.

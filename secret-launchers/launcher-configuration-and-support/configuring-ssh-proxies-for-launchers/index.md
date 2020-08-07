@@ -19,17 +19,15 @@ To configure this:
    The **SSH Proxy Settings** are:
 
     - **Enable Proxy:** Enable or disable SSH proxying.
+
     - **Enable SSH Tunneling:** SSH Tunneling allows Remote Desktop Sessions to be proxied using the same proxy configuration settings.
-    - **Proxy New secrets By Default:** This setting determines whether newly created secrets have their SSH proxy setting enabled; secret policy takes precedence over this default.
-
- - **SSH Proxy Port:** The default port to apply to all connections, unless another port is assigned to a specific connection.
-
+$1
+$2
    - **SSH Banner:** Users connecting through SS see this text banner on the SSH client.
+
    - **SSH Proxy Private Key:** The SS SSH private key, this can be generated using the **Generate New SSH Key** button.
-   - **Enable Inactivity Timeout:** Enable or disable closing the session if there is inactivity for a defined number of seconds. When enabled, a **Timeout (seconds)** text box appears.
-
- - **Days to Keep Operational Logs**: Sets the period to keep SSH-proxy-related logs that might contain PII. SS automatically deletes logs older than that (in days).
-
+$1
+$2
    The **SSH Terminal Settings** are:
 
    - **Enable Inactivity Timeout:** Enable or disable closing the SSH terminal session if there is inactivity for a defined number of seconds. When enabled, a **Timeout (seconds)** text box appears.
@@ -61,7 +59,9 @@ To configure this:
     The **Engines** settings are:
 
     - **Friendly Name:** Human readable site name or ID.
+
     - **Hostname/IP Address:** The public hostname or IP that the client launcher connects to. In most cases this can be the same as the SSH Bind Address, however there may be cases where the public IP or host differs than the private IP that SS should bind to, such as NAT or an Amazon EC2 instance.
+
     - **SSH Bind Address:** The IP Address of the network adapter that the SS SSH listener should bind to. This should not be localhost or 127.0.0.1\. If you are not sure which bind IP Address to use, you may use 0.0.0.0, which binds to all IPv4 interfaces on the machine.
 
 1. To enable secrets assigned to a site, edit the corresponding site and check the **Proxy Enabled** check box and optionally specify a custom SSH port.

@@ -14,9 +14,9 @@ $url = "< your secret server url >/webservices/sswebservice.asmx"
 $proxy = New-WebServiceProxy -uri $url -UseDefaultCredential -Namespace "ss"
 
 # Define the user credentials
-$username = "< username >" 
+$username = "< username >"
 $password = "< password >"
-$domain = "" 
+$domain = ""
 
 # Get a auth token
 echo "------------------------"
@@ -42,9 +42,9 @@ $url = "< your secret server url >/webservices/sswebservice.asmx"
 $proxy = New-WebServiceProxy -uri $url -UseDefaultCredential -Namespace "ss"
 
 # Define the user credentials
-$username = "< username >" 
+$username = "< username >"
 $password = "< password >"
-$domain = "" 
+$domain = ""
 
 # Get a auth token
 echo "------------------------"
@@ -79,9 +79,9 @@ $url = "< your secret server url >/webservices/sswebservice.asmx"
 $proxy = New-WebServiceProxy -uri $url -UseDefaultCredential -Namespace "ss"
 
 # Define the user credentials
-$username = "ssadmin" 
+$username = "ssadmin"
 $password = "sspass1"
-$domain = "" 
+$domain = ""
 
 # Get a auth token
 echo "------------------------"
@@ -132,15 +132,15 @@ function GetFieldId($template, [string]$name) {
 function CreateNewSecret {
 
     param($accountUserName)
-   
+
     # Define the proxy
     $url = "< your secret server url >/webservices/sswebservice.asmx"
     $proxy = New-WebServiceProxy -uri $url -UseDefaultCredential -Namespace "ss"
 
     # Define the user credentials
-    $username = "ssadmin" 
+    $username = "ssadmin"
     $password = "sspass1"
-    $domain = "" 
+    $domain = ""
 
     # Get a auth token
     echo "------------------------"
@@ -168,15 +168,15 @@ function CreateNewSecret {
 
     # Define the machine name on the Secret
     $machine = "< target machine >"
- 
+
     # Show that the Secret is in process of cfreation
     echo "Creating Local Windows Account Account: " + $machine + "\" + $accountUserName;
-    
+
     # Password is set to null so will generate a new one based on settings on template
     $newPass = $null
     if($newPass -eq $null)
     {
-        echo "Generating New Password for account"        
+        echo "Generating New Password for account"
         $secretFieldIdForPassword = (GetFieldId $template "Password")
         $newPass = $proxy.GeneratePassword($token, $secretFieldIdForPassword).GeneratedPassword
     }
@@ -190,7 +190,7 @@ function CreateNewSecret {
 
     # Define the folder where the Secret is created
     $folderId = -1;
-        
+
     # Shows whether Secret was successfully created
     $addResult = $proxy.AddSecret($token, $template.Id, $secretName, $secretItemFields, $secretItemValues, $folderId)
     if($addResult.Errors.Count -gt 0)
@@ -219,9 +219,9 @@ $url = "< your secret server url >/webservices/sswebservice.asmx"
 $proxy = New-WebServiceProxy -uri $url -UseDefaultCredential -Namespace "ss"
 
 # Define the user credentials
-$username = "ssadmin" 
+$username = "ssadmin"
 $password = "sspass1"
-$domain = "" 
+$domain = ""
 
 # Get a auth token
 echo "------------------------"
@@ -244,7 +244,7 @@ $secretId = "1"
 echo "Get secret $secretId"
 $secret = $proxy.GetSecret($token, $secretId, $false, $null)
 
-# Chooses the field and value to update the Secret with. 
+# Chooses the field and value to update the Secret with.
 # Choose either 0,1,2, or 3 in Secret.Items[].value where 0 = the first field below the Secret name, 1 = the second field, etc
 $secret.Secret.Items[0].value = '< new value >'
 
@@ -260,9 +260,9 @@ $url = "< your secret server url >/webservices/sswebservice.asmx"
 $proxy = New-WebServiceProxy -uri $url -UseDefaultCredential -Namespace "ss"
 
 # Define the user credentials
-$username = "ssadmin" 
+$username = "ssadmin"
 $password = "sspass1"
-$domain = "" 
+$domain = ""
 
 # Get a auth token
 echo "------------------------"
@@ -297,7 +297,7 @@ $proxy.SetCheckOutEnabled($token, $secretId, $true, $false, $null)
 # Check out Secret
 echo "Checkout secret..."
 
-$result = $proxy.GetSecret($token, $secretId , $true, $null) 
+$result = $proxy.GetSecret($token, $secretId , $true, $null)
 $result.Secret
 
 # Check in Secret
@@ -334,21 +334,21 @@ New-ADUser `
 function GetFieldId($template, [string]$name) {
 
     Return ($template.Fields | Where {$_.DisplayName -eq $name}).Id
-} 
+}
 
 # Define the function of creating a Secret
 function CreateNewSecret {
 
     param($accountUserName)
-   
+
     # Define the proxy
     $url = "< your secret server url >/webservices/sswebservice.asmx"
     $proxy = New-WebServiceProxy -uri $url -UseDefaultCredential -Namespace "ss"
 
     # Define the user credentials
-    $username = "ssadmin" 
+    $username = "ssadmin"
     $password = "sspass1"
-    $domain = "" 
+    $domain = ""
 
     # Get a auth token
     echo "------------------------"
@@ -381,7 +381,7 @@ function CreateNewSecret {
     # Show that the Secret is in the process of creation
     $msg = "Creating Active Directory Account: " + $domain + "\" + $accountUserName;
     echo $msg
-       
+
     # Define the password on the Secret using the password you specified earlier when creating the AD account
     $newPass = $pwd
     if($newPass -eq $null)
@@ -400,7 +400,7 @@ function CreateNewSecret {
 
     # Define the folder where the Secret is created
     $folderId = -1;
-        
+
     # Shows whether Secret was successfully created
     $addResult = $proxy.AddSecret($token, $template.Id, $secretName, $secretItemFields, $secretItemValues, $folderId)
     if($addResult.Errors.Count -gt 0)
@@ -429,9 +429,9 @@ $url = "< your secret server url >/webservices/sswebservice.asmx"
 $proxy = New-WebServiceProxy -uri $url -UseDefaultCredential -Namespace "ss"
 
 # Define the user credentials
-$username = "ssadmin" 
+$username = "ssadmin"
 $password = "sspass1"
-$domain = "" 
+$domain = ""
 
 # Get a auth token
 echo "------------------------"
@@ -453,13 +453,13 @@ $secretId = "< your secret Id >"
 
 echo "Get secret $secretId"
 
-$result = $proxy.GetSecret($token, $secretId, $true, $null) 
+$result = $proxy.GetSecret($token, $secretId, $true, $null)
 $result.Secret
 
 # Set the Group in this case groupId 3 = Human Resources
 $group = @{
     groupId = 3
-    IsUser = $false 
+    IsUser = $false
 }
 
 # Apply the Group set beforehand with either View, Edit, or Owner permissions
