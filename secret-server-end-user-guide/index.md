@@ -37,7 +37,7 @@ Depending on how your administrators configured SS, you can log on with either y
 2. On the login screen, enter your:
 
    - Active Directory username (or local one if you do not have one)
-   
+
    - Active Directory password (or local one if you do not have one)
 
 3. Select the your domain from the **Domain** dropdown list. If you do not have an AD domain, select **Local** instead.
@@ -48,10 +48,10 @@ Depending on how your administrators configured SS, you can log on with either y
 
    ![image-20200327133313731](images/image-20200327133313731.png)
 
-   Your cell phone receives a notification you have to approve to access SS. 
+   Your cell phone receives a notification you have to approve to access SS.
 
    > **Note:** SS also supports other two-factor authentication methods (depending on what your organization configured), such as text or email codes that SS prompts you for.
-   
+
    > **Note:** After you log on with your local account for the first time, you are immediately prompted to change your password .
 
 6. Click the **Login** button. The SS Dashboard appears.
@@ -60,7 +60,7 @@ Depending on how your administrators configured SS, you can log on with either y
 
 _Secrets_ are individually named packets of sensitive information, such as passwords. Secrets address a broad spectrum of secure data, each type represented and created by a _secret template_ that defines the parameters of all secrets based on it. Secrets are very powerful and provide many ways of controlling and protecting their data, such as:
 
-- Ensuring passwords are long, complex, and frequently changed. 
+- Ensuring passwords are long, complex, and frequently changed.
 
 - Relieving users of having to remember numerous complex passwords or when to change them. You only need to remember your password to access SS. All of your secret passwords are managed for you.
 

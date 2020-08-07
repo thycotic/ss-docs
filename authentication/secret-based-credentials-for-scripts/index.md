@@ -6,7 +6,7 @@
 
 ## Overview
 
-You can specify a secret to provide the default credentials for running all PowerShell scripts on a site. This allows sites in  different data centers to have different default credentials. This applies to remote password changing, checkout hooks, and account discovery PowerShell scripts. 
+You can specify a secret to provide the default credentials for running all PowerShell scripts on a site. This allows sites in  different data centers to have different default credentials. This applies to remote password changing, checkout hooks, and account discovery PowerShell scripts.
 
 > **Note:** If you want a specific secret checkout hook, secret  password changer, or account discovery scanner to use different credentials you can still provide credentials in those areas, which will take precedence over the one set on the site.
 
@@ -18,7 +18,7 @@ The precedence order for which RunAs secret to use for remote password changing 
 
 1. Privileged account on the secret RPC tab
 
-1. Secret site's RunAs secret 
+1. Secret site's RunAs secret
 
 1. Secret
 
@@ -68,6 +68,6 @@ To use the site PowerShell credentials on a discovery scanner:
 
 1. In the **Edit** dialog for the scanner, click to select the **Use Site RunAs Secret** checkbox.
 
-1. Click **Save**. 
+1. Click **Save**.
 
    > **Note:** If no RunAs secret is set on the site, you will get an error message when you try to save.

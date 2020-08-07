@@ -8,11 +8,14 @@
 
 The following steps walk you through setup and configuration for SQL Server 2016 Standard Edition as an example. For the most up to date resources on installing SQL see [Microsoft SQL Technical Documentation](https://docs.microsoft.com/en-us/sql/?view=sql-server-ver15) for more information.
 
-At the completion of this article you will have: 
+At the completion of this article you will have:
 
 - Installed a basic stand-alone instance of SQL Server 2016 Standard with the minimum features necessary for SQL Server.
+
 - Installed SQL Server Management Studio for managing the local database.
+
 - Created a database in SQL for your Thycotic product
+
 - Created a new SQL Server user login for your SQL database
 
 > **Note:** This document uses Thycotic's Secret Server product as example in the instructions, but the same steps apply for Privilege Manager advanced installs.
@@ -59,7 +62,7 @@ At the completion of this article you will have:
 
 1. Click to select the **Use Microsoft Update…** check box to check for updates (recommended), unless your software update process does not use automatic updates from Microsoft
 
-1. Click the **Next \>** button twice to bypass the Product Updates page. The Install Setup Files page appears. 
+1. Click the **Next \>** button twice to bypass the Product Updates page. The Install Setup Files page appears.
 
 1. Wait for the installation to complete.
 
@@ -68,8 +71,6 @@ At the completion of this article you will have:
 1. Click the **Next \>** button twice to bypass the Install Rules page. The Feature Selection page appears:
 
    ![User-added image](images/clip_image014.png)
-
-   
 
 1. Ensure the **Database Engine Services** check box is selected. This is the only feature necessary for Secret Server. Unless you are using Geo-Replication, you can leave everything else unchecked. Leave the directory locations unchanged.
 
@@ -91,9 +92,9 @@ At the completion of this article you will have:
 
     - **Windows Mode (recommended for best security)**: This mode prevents SQL Server account authentication. We recommend using Windows mode for production environments. Whatever user or group assigned will have administrative access to your SQL instance. According to best security practices, limit this number to as few users as possible.
 
-    > **Note:** If choosing **Windows Mode** you will also need to  [run the IIS application pool as a service account](../running-ss-iis-app-pool-service-account/index.md) later in the installation process. 
+    > **Note:** If choosing **Windows Mode** you will also need to  [run the IIS application pool as a service account](../running-ss-iis-app-pool-service-account/index.md) later in the installation process.
 
-1. You can leave the options in the remaining tabs at their default values or change the file locations in the **Data Directories** and **TempDB** tabs if you wish to store the database and log data in a different drive or directory. 
+1. You can leave the options in the remaining tabs at their default values or change the file locations in the **Data Directories** and **TempDB** tabs if you wish to store the database and log data in a different drive or directory.
 
 1. Click the **Next \> button** twice to bypass the Feature Configuration Rules page. The Ready to Install page appears:
 
@@ -101,7 +102,7 @@ At the completion of this article you will have:
 
 1. Click the **Install** button.
 
-1. Wait for installation to complete. This may take several minutes. 
+1. Wait for installation to complete. This may take several minutes.
 
 1. Click the **Close** button.
 
@@ -123,7 +124,7 @@ At the completion of this article you will have:
 
 1. Click the **Install** button.
 
-1. Wait for the installer to complete. This may take several minutes. 
+1. Wait for the installer to complete. This may take several minutes.
 
    ![User-added image](images/clip_image028.png)
 
@@ -138,9 +139,13 @@ To install SS, the Thycotic installer creates the SQL database for you if it doe
 If not using the Thycotic Installer, use the following steps to create a database manually through SQL Server Management Studio:
 
 1. Open SQL Server Management Studio.
+
 1. Connect to your SQL Server instance.
+
 1. Right click the **Databases** folder and select **New Database…** The New Database page appears.
+
 1. Type a name for your database in the **Database Name** text box.
+
 1. Click the **OK** button.
 
 ### Adding a SQL Server User
@@ -168,5 +173,3 @@ According to security best practices, limit the number of users with access to y
 1. In the **Database Role Membership** window, click to select the **db_owner** check box.
 
 1. Click the **OK** button.
-
- 

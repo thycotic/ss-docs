@@ -12,20 +12,21 @@ To set a verification policy:
 
 1. Go to **Admin > Configuration**.
 
-1. Click the **Security** tab. 
+1. Click the **Security** tab.
 
 1. Click the **Edit** button
 
 1. Click to select the **Apply TLS Certificate Chain Policy and Error Auditing** check box. The TLS Auditing options appear:
-   
+
    ![image-20200605134013656](images/image-20200605134013656.png)
-   
+
 1. To change the policy, type a semi-colon delimited list of policy options in the **Additional Certificate Chain Policy Options** text box. To use a policy, enter the `<full_enumeration_name>.<enumeration_item>`. For example, to validate the entire certificate chain, add `X509RevocationFlag.EntireChain` to the semi-colon delimited list of options. See [Certificate Validation Options](#certificate-validation-options) for details.
+
 1. If you wish to ignore certificate revocation warnings and allow revoked certificates, click to select the **Ignore Certificate Revocation Failures** check box.
 
 ## Certificate Validation Options
 
-The following Microsoft enumerations are the available certificate chain policy options. For detailed descriptions of each option, see the linked documentation. 
+The following Microsoft enumerations are the available certificate chain policy options. For detailed descriptions of each option, see the linked documentation.
 
 ### X509RevocationMode
 
@@ -86,9 +87,9 @@ If you enable certificate policy validation and logging, you may have server con
 
 Due to the possibility of exposing sensitive information in the logs, TLS debugging requires two steps to enable:
 
-1. Click to select the **Enable TLS Debugging and Connection Tracking** check box. 
+1. Click to select the **Enable TLS Debugging and Connection Tracking** check box.
+
 1. Change the global logging level to DEBUG. To do this, edit the `web-log4net.config` file in the root folder of your Web application. Follow the comments in the file to comment out the current log level line (the default is INFO), and uncomment the line that sets the value to DEBUG.
 
 > **Important:** Only enable TLS debugging when you are actively troubleshooting a certificate validation issue. Disable this option when you are not to prevent logging of certificate details.
 
- 

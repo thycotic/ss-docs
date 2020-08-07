@@ -21,8 +21,11 @@ SS's importation feature simplifies integration with legacy systems and allows u
 1. Paste the secrets for importation from MS Excel or a CSV file directly into the text box in the **Import Secrets**  page. The order of the imported fields is based on the template selected. Consider the following:
 
    - Do not include a header line. The field names are determined by the order, not a header line.
+
    - The fields **must** be in this order: `Secret Name`, `AccessKey`, `SecretKey`, `Username`, `SecretId`, and `Trigger`.
+
    - Secret names must be included, but other text-entry fields can be blank unless the secret template indicates that the text-entry field is required
+
    - Fields containing commas or tabs must be surrounded with double quotation marks
    - If you have to include double quotation marks inside your data, escape all of  them with a `\` character so the importer does not get confused.
 
@@ -41,7 +44,9 @@ SS's importation feature simplifies integration with legacy systems and allows u
 SS offers a migration utility for users wishing to import secrets from other applications. Currently, the migration tool supports to following applications:
 
 - KeePass
+
 - Password Corral
+
 - Password Safe
 
 > **Note:** This is done with another exportation tool that creates a single XML file. Please contact Thycotic Support for details.

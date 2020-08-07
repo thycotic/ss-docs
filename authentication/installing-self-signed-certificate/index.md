@@ -6,7 +6,7 @@
 
 ## Overview
 
-An SSL (Secure Sockets Layer) certificate greatly enhances the security between the user’s browser and the server your SS is installed on. It encrypts all data between the server and the client’s browser so if an attacker were to look at the data being transmitted between the two, they would not be able to decipher it. 
+An SSL (Secure Sockets Layer) certificate greatly enhances the security between the user’s browser and the server your SS is installed on. It encrypts all data between the server and the client’s browser so if an attacker were to look at the data being transmitted between the two, they would not be able to decipher it.
 
 > **Note:** SSL is required when using Integrated Windows Authentication.
 
@@ -34,7 +34,7 @@ You can create your own certificate for trial or sandbox environments:
 
 1. Type any name you desire in the **Specify a Friendly name for the certificate** text box.
 
-1. Click the **OK** button. You now have an IIS self-signed certificate that is valid for one year. It appears under the Server Certificates panel. The certificate common name (Issued To column) is the host name of the machine running the site. 
+1. Click the **OK** button. You now have an IIS self-signed certificate that is valid for one year. It appears under the Server Certificates panel. The certificate common name (Issued To column) is the host name of the machine running the site.
 
 ### Task Two: Bind the Self-Signed Certificate to the IIS Site
 
@@ -58,6 +58,6 @@ You can create your own certificate for trial or sandbox environments:
 
 1. In a browser, go to the Website using the certificate. You should see a warning that there is an issue with the site's security certificate—specifically, the security certificate was issued for a different website's address. This occurs because IIS uses the server's name as the common name when using a self-signed certificate, which usually does not match the hostname to access the site in your browser.
 
-1. To access the website, click the "continue to the website" link or button. You will have to do this each time you access the site. Because this is a test environment, this should not be an issue. 
+1. To access the website, click the "continue to the website" link or button. You will have to do this each time you access the site. Because this is a test environment, this should not be an issue.
 
 > **Note:** It is possible to remove the warning by adding the self-signed certificate to the trusted root certificate authorities, but that is beyond the scope of this instruction.

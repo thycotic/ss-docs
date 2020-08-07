@@ -13,9 +13,13 @@ The Secret Server (SS) REST API guides are version specific. In fact, they are a
 To access the guides:
 
 1. For SS versions 10.5.3 and later with the new user interface, click the ![image-20200603115047589](images/image-20200603115047589.png) icon in the top right of the dashboard and click **Secret Server REST API Guide**. The Secret Server REST API Guide page appears.
+
 1. On the Secret Server REST API page of your instance, click the link for one of the three guides:
+
    - **Documentation for REST API using bearer token authentication:** Hyperlinked documentation for REST API access using token authentication.
+
    - **Documentation for token authentication:** Instructions for getting an authentication token.
+
    - **Documentation for REST API using Windows integrated authentication:** Hyperlinked documentation for REST API access using Integrated Windows Authentication (IWA).
 
 ## Downloading the Guides
@@ -29,11 +33,17 @@ To access the guides:
 ### Legacy Documentation
 
 - [Secret Server 10.7.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.7/index.html).
+
 - [Secret Server 10.6.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.6/index.html).
+
 - [Secret Server 10.5.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.5/index.html).
+
 - [Secret Server 10.4.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.4/index.html).
+
 - [Secret Server 10.3.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.3/index.html).
+
 - [Secret Server 10.2.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.2/index.html).
+
 - [Secret Server 10.1.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.1/index.html).
 
 ## Downloading Example Scripts
@@ -41,7 +51,9 @@ To access the guides:
  Example Scripts:
 
 - [PowerShell Examples](https://thycotic.force.com/support/s/article/REST-API-PowerShell-Scripts-Getting-Started)
+
 - [Java Examples](https://updates.thycotic.net/links.ashx?RESTJavaExamples)
+
 - [Perl Examples](https://thycotic.force.com/support/s/article/REST-API-Perl-Scripts)
 
 > **Note:** For REST API Client Generation (Advanced), please see [REST API Client Generation with OpenAPI Swagger](https://docs.thycotic.com/ss/10.8.0/api-scripting/rest-api-client-generation/index.md#rest_api_client_generation_with_openapi_swagger)

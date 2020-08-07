@@ -19,7 +19,9 @@ This topic describes the process of configuring Secret Server (SS) and SQL Serve
 Three different SQL Server instances are required to implement this scenario:
 
 - **Primary database:** The main application database
+
 - **Mirror database:**  Replicates all of the data on the primary database in a transactional manner
+
 - **Witness database:** Monitors the health of the primary and mirror databases and initiates failover if necessary
 
 In the setup described here, mirroring operates in synchronous mode, which means that a transaction does not commit on the primary database until it has committed on the mirror.
@@ -41,25 +43,45 @@ The three SQL Server instances should all be running under the same domain accou
 To configure mirroring:
 
 1. In Microsoft SQL Server Management Studio, drill down to the primary database in the Object Explorer.
+
 1. Right click the primary database and select **Properties**. The Database Properties window appears.
+
 1. Select the **Mirror** page.
+
 1. Click on the **Configure Security** button. The Configure Database Mirroring Security Wizard appears on the introduction page.
+
 1. Click the **Next** button. The Include Witness Server page appears.
+
 1. Click to select the **Yes** selection button.
+
 1. Click the **Next** button. The Choose Server to Configure page appears.
+
 1. Click to select all three interface check boxes (principal, mirror, and witness servers).
+
 1. Click the **Next** button. The Principal Server Instance page appears.
+
 1. Click the **Principal server instance** dropdown list to select the current (primary) server.
+
 1. Type a port number for connecting to the other servers in the **Listener port** text box. The port must be open for TCP communication on the machine’s firewall and on any network devices that restrict access to this machine.
+
 1. Click to select the **Encrypt data sent through this endpoint** check box. This enables RC4 encryption on data sent through this endpoint.
+
 1. Type `Mirroring` in the **Endpoint name** text box. The endpoint name is for referencing the endpoint later.
+
 1. Click the **Next** button. The Mirror Server Instance page appears.
+
 1. Repeat the exact same configuration you set for the primary server instance with only the server instance name different (choose the mirror instance).
+
 1. Click the **Next** button. The Witness Server Instance page appears.
+
 1. Repeat the exact same configuration you set for the primary server instance with only the server instance name different (choose the witness instance).
+
 1. Click the **Next** button. The Service Accounts page appears.
+
 1. Type the domain user that SQL Server runs under for each instance's Service Accounts text box. For example `mydomain\sql_svc`.
+
 1. Click the **Finish \>\>** button. Logins are created for each account and are given CONNECT permission on each endpoint, if needed. The Complete the Wizard page appears.
+
 1. Click the **Finish** button
 
 ### Configuring Secret Server for Mirroring

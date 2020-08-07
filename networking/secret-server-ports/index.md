@@ -26,7 +26,7 @@ This article lists ports typically used in Secret Server. Please note the follow
 | LDAP             | TCP/389, UDP/389 |
 | Kerberos         | TCP/88, UDP/88   |
 | SMB/Microsoft-DS | TCP445, UDP/445  |
- 
+
 **Table:** Discovery Ports
 
 | Type of Traffic        | Port Number                      |
@@ -35,7 +35,7 @@ This article lists ports typically used in Secret Server. Please note the follow
 | SMB/Microsoft-DS       | TCP/445, UDP/445                 |
 | RPC Endpoint Mapper    | TCP/135                          |
 | SSH                    | TCP/22                           |
- 
+
 **Table:** Remote Password Changing Ports
 
 | Type of Traffic                                          | Port Number                      |
@@ -51,46 +51,46 @@ This article lists ports typically used in Secret Server. Please note the follow
 | Oracle Listener                                          | TCP/1521                         |
 | Kerberos Password Change                                 | TCP/464, UDP/464                 |
 | Windows Privileged Account (WinNT ADSI Service Provider) | TCP/139                          |
- 
+
 **Table:** Web Server Incoming Ports
 
 | Type of Traffic | Port Number |
 | --------------- | ----------- |
 | HTTP            | TCP/80      |
 | HTTPS           | TCP/443     |
- 
+
 **Table:** Database Server Incoming Ports
 
 | Type of Traffic | Port Number        |
 | --------------- | ------------------ |
 | SQL Connection  | TCP/1433, UDP/1434 |
- 
+
 **Table:** Email Ports
 
 | Type of Traffic | Port Number |
 | --------------- | ----------- |
 | SMTP            | TCP/25      |
 |                 |             |
- 
+
 **Table:** RADIUS Server Ports
 
 | Type of Traffic       | Port Number |
 | --------------------- | ----------- |
 | RADIUS Authentication | TCP/1812    |
- 
+
 **Table:** Syslog Ports
 
 | Type of Traffic | Port Number      |
 | --------------- | ---------------- |
 | Syslog          | TCP/514, UDP/514 |
- 
+
 **Table:** Internal Site Connector Ports
 
 | Type of Traffic | Port Number                        |
 | --------------- | ---------------------------------- |
 | RabbitMQ        | TCP/5672 (non-SSL), TCP/5671 (SSL) |
 | MemoryMQ        | TCP/8672 (non-SSL), TCP/8671 (SSL) |
- 
+
 **Table:** RabbitMQ Clustering Ports
 
 | Type of Traffic                                          | Port Number                    |

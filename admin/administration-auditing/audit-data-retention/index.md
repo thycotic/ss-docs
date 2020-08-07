@@ -7,8 +7,11 @@
 ## In This Section
 
 - [Overview](#overview)
+
 - [Data Retention Policies](#data-retention-policies)
+
 - [Permissions](#permissions)
+
 - [Procedures](#procedures)
   - [Viewing the Status and History of Audit-Data Retention Policies](#Viewing-the-Status-and-History-of-Audit-Data-Retention-Policies)
   - [Editing Audit Data Policies](#editing-audit-data-policies)
@@ -27,6 +30,7 @@ If enabled, old data deletion occurs automatically at 0200 EST every Sunday. Dat
 The audit data retention offers two data retention policies:
 
 - Personally Identifiable Information (PII): Tables containing identifiable user or organization data.
+
 - Database Size Management: Tables that are prone to grow large, which may affect SS performance.
 
 Each policy has a title and description, which are displayed to users, as well as a defined set of SS audit tables it manages. There is some overlap between the two policies’ table sets as some tables fall under both PII and size management.
@@ -55,9 +59,13 @@ By default, these two audit-data retention roles are not assigned to users. An a
 1. Notice that each policy lists:
 
    - The enabled status (editable)
+
    - The maximum age audits are allowed to remain (editable)
+
    - The last time the policy ran
+
    - The last time the policy finished running
+
    - All the audit data tables that the policy covers
 
 1. To view a list of previous "runs,” click the **Audit** tab. You can also hover the mouse pointer over individual records to view details:
