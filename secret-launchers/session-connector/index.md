@@ -38,7 +38,7 @@ The SSSC feature is largely scalable and can be set up using a single RDS server
 
 ## Download
 
-Session Connector is downloaded separately from SS. Go to [Session Connector Download](../session-connector-download/index.md)  for download links and hashes.
+Session Connector is downloaded separately from SS. Go to [Session Connector Downloads](../session-connector-downloads/index.md)  for download links and hashes.
 
 ## Configuration
 
@@ -133,7 +133,7 @@ Enable SSSC:
 
 #### Step 3.1: Installing the Secret Server RDS Protocol Handler
 
-1. Go to the [Session Connector Download](../session-connector-download/index.md) page.
+1. Go to the [Session Connector Downloads](../session-connector-downloads/index.md) page.
 
 1. Download the SSPH (RDS) installer file,  `SSProtocolHandlerRDS.msi` .
 
@@ -254,7 +254,7 @@ To configure on a single server:
 
 ### Task 4: Installing the Secret Server Session Connector
 
-1. Go to the [Session Connector Download](../session-connector-download/index.md) page.
+1. Go to the [Session Connector Downloads](../session-connector-downloads/index.md) page.
 
 1. Download the `SSSessionConnector.msi`  SSSC installer file.
 
