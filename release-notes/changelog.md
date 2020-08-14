@@ -7,6 +7,17 @@
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
 
+## August to  November 2020
+
+Created the following topics from Salesforce articles (often including substantial rewrite):
+
+- Moving the Microsoft SQL Server Database to Another Machine
+
+Created or made significant changes to these topics:
+
+- All Secrets Page
+- User Interfaces, Themes, and Color Modes
+
 ## April to July 2020
 
 Created the following topics from Salesforce articles (often including substantial rewrite):

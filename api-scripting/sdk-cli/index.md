@@ -133,12 +133,14 @@ Configure SS for communication with the SDK:
 
    1. Type an IPV 4 address or address range (in CIDR notation) in the **Details** text box. SS will only allow clients to use this rule if they connect from a valid IP address. If not provided, SS will not enforce IP address restrictions on this rule. We strongly recommend using this feature.
 
+      > **Note:** There is a 250-character limit, so you can only add a few dozen IP addresses unless you use CIDR notation.
+
    1. Click to select the application account you created earlier in the **Assignment** dropdown list. Clients are granted the same permissions as this account within SS. If not provided, an account will be automatically created for clients, but will have no default permissions. You must use an application account (the one you created) for a rule. Application accounts are restricted from logging into the system through the normal user interface and do not count towards your license quota.
 
    1. Click to select the **Require this generated onboarding key** check box. Clients must provide a generated additional key string when authenticating. If not provided, SS allow any client to use the rule if its IP address is within the specified range. We strongly recommend using this feature.
 
    1. Click the **Save** button. The Show Key link appears.
-
+   
    1. Click the **Show Key** link to save the generated onboarding key (something like `TFyORLL1teQmD8OAMstqKGWkJGksFRtaelY0b2NnhsM=`) for future use. It will not be visible again.
 
   > **Note:** If you cannot copy the key text after selecting it, you probably need to add the Secret Server Utilities extension for your browser. For now, just manually copy it.
