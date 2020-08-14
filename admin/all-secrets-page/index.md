@@ -1,6 +1,6 @@
-[title]: # "All Secrets Page"
-[tags]: # "Administration, all secrets"
-[priority]: # "1000"
+[title]: # (All Secrets Page)
+[tags]: # (Administration, all secrets)
+[priority]: # (1000)
 
 # All Secrets Page
 

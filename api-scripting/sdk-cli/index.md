@@ -1,6 +1,6 @@
-[title]: # "Secret Server Software Development Kit for DevOps"
-[tags]: # "API,Scripting,DevOps,SDK"
-[priority]: # "1000"
+[title]: # (Secret Server Software Development Kit for DevOps)
+[tags]: # (API,Scripting,DevOps,SDK)
+[priority]: # (1000)
 
 # Secret Server Software Development Kit for DevOps
 

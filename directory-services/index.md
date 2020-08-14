@@ -1,6 +1,6 @@
-[title]: # "Directory Services"
-[tags]: # "LDAP, directory service"
-[priority]: # "1000"
+[title]: # (Directory Services)
+[tags]: # (LDAP, directory service)
+[priority]: # (1000)
 
 # Directory Services
 

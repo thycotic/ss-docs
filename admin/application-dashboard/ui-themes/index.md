@@ -1,6 +1,6 @@
-[title]: # "User Interfaces, Themes, and Color Modes"
-[tags]: # "color modes, Themes, ui, user interfaces"
-[priority]: # "1000"
+[title]: # (User Interfaces, Themes, and Color Modes)
+[tags]: # (color modes, Themes, ui, user interfaces)
+[priority]: # (1000)
 
 # User Interfaces, Themes, and Color Modes
 
