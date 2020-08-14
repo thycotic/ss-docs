@@ -52,7 +52,7 @@ Set up a service account:
 
 1. Provide access to your SQL Server instance by adding the db_owner permission to the SS database.
 
-For detailed instructions on how to configure the permissions for the service account, see [Running Secret Server IIS Application Pool with a Service Account ](https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB)(KB). The installation guides iinclude instructions for assigning db_owner permission to the service account in SQL Server.
+For detailed instructions on how to configure the permissions for the service account, see [Running Secret Server IIS Application Pool with a Service Account ](../../secret-server-setup/installation/running-ss-iis-app-pool-service-account/index.md)(KB). The installation guides include instructions for assigning db_owner permission to the service account in SQL Server.
 
 If you would like to test features that rely on Active Directory, such as AD group sync or discovery, you should also have accounts available with the appropriate permissions (described below). One option is to use the same account for both features.
 
@@ -92,4 +92,4 @@ We recommend setting up SSL (or https) for access to SS. To do so, you will need
 
 SS must connect directly to a target system to change its password. For devices that are firewalled off from SS, remote agent can provide connectivity to them, but they also require connectivity from them to the target systems for password changing.
 
-Please see [Ports Used by Secret Server](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server) (KB) for a list of ports needed by SS for password changing, discovery, and other features.
+Please see [Ports Used by Secret Server](../../networking/secret-server-ports/index.md) for a list of ports needed by SS for password changing, discovery, and other features.
