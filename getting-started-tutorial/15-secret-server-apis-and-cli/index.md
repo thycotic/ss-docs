@@ -26,7 +26,7 @@ Both APIs, the .NET framework, and the CLI support:
 
 SDK Documentation:
 
--  [Secret Server SDK Guide](https://thycotic.force.com/support/s/article/SS-SDK-Guide): Includes these topics:
+-  [Secret Server SDK Guide](../../api-scripting/sdk-cli/index.md): Includes these topics:
 
    - SS configuration
 
@@ -39,7 +39,7 @@ SDK Documentation:
    - SDK client caching
 
    - Examples
--  [Secret Server SDK Downloads](https://thycotic.force.com/support/s/article/SS-SDK-Downloads): Includes these topics:
+-  [Secret Server SDK Downloads](../../api-scripting/sdk-downloads/index.md): Includes these topics:
 
    - SDK downloads
 
@@ -59,13 +59,13 @@ SDK Documentation:
 
 REST API Documentation:
 
-- [REST Web Services API - Secret Server](../rest-api-reference-download/index.md): Links to online reference guides (by SS release)
+- [REST Web Services API - Secret Server](../../api-scripting/rest-api-reference-download/index.md): Links to online reference guides (by SS release)
 
-- [REST API PowerShell Scripts - Getting Started](https://thycotic.force.com/support/s/article/REST-API-PowerShell-Scripts-Getting-Started)
+- [REST API PowerShell Scripts - Getting Started](../../api-scripting/rest-api-powershell-examples/index.md)
 
-- [REST API Perl Examples](https://thycotic.force.com/support/s/article/REST-API-Perl-Scripts)
+- [REST API Perl Examples](../../api-scripting/soap-perl-example-code/index.md)
 
-- [REST API Java Examples](https://updates.thycotic.net/links.ashx?RESTJavaExamples): Downloadable Zip file
+- [REST API Java Examples](../../api-scripting/soap-perl-example-code/index.md): Downloadable Zip file
 
 SOAP API Documentation:
 
@@ -73,4 +73,4 @@ SOAP API Documentation:
 
 - [Using Web Services with SOAP and JavaScript](https://thycotic.force.com/support/s/article/Using-Web-Services-with-SOAP-Javascript)
 
-- [SOAP-based Web services API - Getting Started](https://thycotic.force.com/support/s/article/API-PowerShell-Scripts-Getting-Started)
+- [SOAP-based Web services API - Getting Started](../../api-scripting/soap-api-powershell-examples/index.md)

@@ -1,6 +1,6 @@
-[title]: # (Secret Server Glossary)
-[tags]: # (Glossary)
-[priority]: # (1000)
+[title]: # "Secret Server Glossary"
+[tags]: # "Glossary"
+[priority]: # "1000"
 
 # Secret Server Glossary
 
@@ -23,7 +23,7 @@
 | CRM                           | _Customer Relationship Management_                           |
 | CSV                           | _Comma-Separated Values_                                     |
 | DBA                           | _Database Administrator_                                     |
-| DE                            | _Distributed Engine_ (Secret Server)                           |
+| DE                            | _Distributed Engine_ (Secret Server)                         |
 | DES                           | _Data Encryption Standard_                                   |
 | DPAPI                         | _Data Protection Application Programming Interface_          |
 | DSS                           | _Data Security Standard_                                     |
@@ -50,6 +50,7 @@
 | OS                            | _Operating System_                                           |
 | OTP                           | _One-Time Password_                                          |
 | OU                            | _Organizational Unit_                                        |
+| PBA                           | *Privileged Behavior Analytics*                              |
 | PCI                           | _Payment Card Industry_                                      |
 | PDF                           | _Portable Document Format_                                   |
 | PII                           | *Personally Identifiable Information*                        |

@@ -1,12 +1,12 @@
-[title]: # (Remote Password Changing)
-[tags]: # (Remote Password Changing)
-[priority]: # (1000)
+[title]: # "Remote Password Changing"
+[tags]: # "Remote Password Changing"
+[priority]: # "1000"
 
 # Remote Password Changing
 
 > **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
-*Remote Password Changing* (RPC) allows secrets to automatically update a corresponding remote account. Secrets can be set for automatic expiration, followed by automatic new password generation. SS automatically generates a new strong password and changes the remote password to keep all accounts synchronized with SS.
+*Remote Password Changing* (RPC) allows secrets to automatically update a corresponding remote account. You can set secrets for automatic expiration, followed by automatic strong password generation and a remote password update to keep the subject accounts synchronized with Secret Server.
 
 RPC allows SS to rotate passwords to meet domain password policy requirements. In most cases, RPC is configured with the secret "auto change" setting set to true. This causes the secret to rotate the password as soon as it expires. The "auto change schedule" setting changes the password on a set schedule, rather than when it expires. This provides the ability to change passwords when network activity is lower. You have a choice of changing the password as soon as the schedule interval arrives or only after the secret expires *and* the interval arrives. It is important to choose a large enough interval to complete all your password changes, otherwise any excess changes will have to wait for the next interval. Because the smallest interval is one day, this is only relevant if you have thousands of changes. If SS fails to change a remote password, an alert states there are secrets out of sync.
 
