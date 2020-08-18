@@ -10,15 +10,15 @@ The following are the download hashes for the combined installation files of Sec
 
 ThycoticSetup.exe:
 
-- SHA1 = df63369b0dab3f80a772164bad4e5fed933934fc
+- SHA1 = e507431a5312bc732501227726b35d3979c8036c
 
-- SHA256 = b9266a9580534119b3abb8701396bd808fa7b7a5c5b17a9a482457b34b53cfa3
+- SHA256 = 6947cdda490735bb7e876bf7ae49da417b083788da4711aefaeffcf56e551798
 
 Version_10_9_000000.zip:
 
-- SHA1 = b6c08a1b862e41a59ca62dcb52b938886142ce8f
+- SHA1 = f260f2ca5974d83770087f4f4c16744fe37b5c10
 
-- SHA256 = 4053871507cd2ab343af30ae34b3497764eca6ce20da6d27d930034a6a5a535d
+- SHA256 = aaf98a57062c8e11600e5767ee08dd5af2aae34dc37aa574b7a44d0be2011f6d
 
 ## Earlier Versions
 
