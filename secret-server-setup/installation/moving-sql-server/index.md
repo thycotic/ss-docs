@@ -1,3 +1,11 @@
+
+
+[title]: # (Moving the Microsoft SQL Server Database to Another Machine)
+[tags]: # (Setup,Install,sql server)
+[priority]: #	(1000)
+
+
+
 # Moving the Microsoft SQL Server Database to Another Machine
 
 > **Important**: This article only applies if your MS SQL Server database is only for Secret Server**. If you have a MS SQL Server database  for a combined installation of Privilege Manager and Secret Server, see [Moving MS SQL Server Database for Privilege Manager and Secret Server Combined Installation](https://thycotic.force.com/support/s/article/Moving-MS-SQL-Server-Database-for-Privilege-Manager-and-Secret-Server-Combined-Installation).
