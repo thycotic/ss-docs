@@ -28,23 +28,25 @@ To access the guides:
 
 ### Current Version
 
-[Secret Server 10.8.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.8/index.html).
+[Secret Server 10.9.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.9/index.html)
 
 ### Legacy Documentation
 
-- [Secret Server 10.7.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.7/index.html).
+- [Secret Server 10.8.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.8/index.html)
 
-- [Secret Server 10.6.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.6/index.html).
+- [Secret Server 10.7.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.7/index.html)
 
-- [Secret Server 10.5.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.5/index.html).
+- [Secret Server 10.6.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.6/index.html)
 
-- [Secret Server 10.4.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.4/index.html).
+- [Secret Server 10.5.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.5/index.html)
 
-- [Secret Server 10.3.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.3/index.html).
+- [Secret Server 10.4.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.4/index.html)
 
-- [Secret Server 10.2.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.2/index.html).
+- [Secret Server 10.3.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.3/index.html)
 
-- [Secret Server 10.1.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.1/index.html).
+- [Secret Server 10.2.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.2/index.html)
+
+- [Secret Server 10.1.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.1/index.html)
 
 ## Downloading Example Scripts
 

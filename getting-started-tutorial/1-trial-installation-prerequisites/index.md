@@ -62,7 +62,7 @@ Active Directory group synchronization means that SS can automatically add users
 
 ### Discovery
 
-To test discovery, please have some machines available for SS to connect to for discovering accounts. An account is required to sync with AD and also scan the machines found for Windows local account and service account discovery. [Account Permissions for Discovery](https://thycotic.force.com/support/s/article/Account-Permissions-for-Discovery) (KB) describes the permissions required for an AD account to be used for discovery.
+To test discovery, please have some machines available for SS to connect to for discovering accounts. An account is required to sync with AD and also scan the machines found for Windows local account and service account discovery. [Account Permissions for Discovery](../../discovery/account-permissions/index.md) describes the permissions required for an AD account to be used for discovery.
 
 ### Test Accounts
 

@@ -375,6 +375,8 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 | $ItemId             | Secret ID for the event                                      | Text   |
 | $ItemNameForDisplay | Event secret name                                            | Text   |
 
+[]()
+
 #### Secret Setting Tokens
 
 **Table:** Secret Setting Tokens with Filter Values
@@ -407,6 +409,8 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 | $Secret.SecretId                                      | Secret ID                                            | Text                                                         |
 | $Secret.SecretPolicyId                                | Secret policy ID                                     | Text                                                         |
 | $Secret.SecretTemplateName                            | Secret template name                                 | Text                                                         |
+
+[]()
 
 #### Additional Tokens
 
