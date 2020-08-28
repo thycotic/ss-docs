@@ -4,7 +4,7 @@
 
 # Secret Server End User Guide
 
-This guide is for regular, non-administrative, users of Secret Server (SS). It is mostly a set of links to a subset of the greater corpus of SS documentation.
+This guide is for regular, non-administrative, users of Secret Server (SS). It is mostly a set of links to a subset of the greater corpus of SS documentation. For Secret Server Cloud, see the [Secret Server Cloud Quick Start](../secret-server-cloud/quick-start/index.md).
 
 ## What Is Secret Server?
 
