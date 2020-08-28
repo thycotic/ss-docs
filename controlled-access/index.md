@@ -1,7 +1,7 @@
 [title]: # (Controlled Access Documentation)
 [tags]: #
 [priority]: # (1000)
-[display]: # (print)
+[display]: # (content,print)
 
 # Secret Server Controlled Access Documentation
 

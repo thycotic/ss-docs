@@ -16,6 +16,7 @@ Created the following topics from Salesforce articles (often including substanti
 Created or made significant changes to these topics:
 
 - All Secrets Page
+- Secret Server Cloud Quick Start
 - User Interfaces, Themes, and Color Modes
 
 ## April to July 2020
