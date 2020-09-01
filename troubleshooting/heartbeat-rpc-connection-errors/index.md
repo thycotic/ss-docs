@@ -74,13 +74,17 @@ To determine if the RPC issue is outside of SS:
 1. Determine the password type for the template:
 
    1. Go to **Admin > Secret Templates**.
+
    1. Click the desired template.
+
    1. Click **Edit > Configure Password Changing > Password Type to Use**. 
+
    1. Note the type of password.
 
 1. Determine the applicable custom RPC commands:
 
    1. Go to **Admin > Remote Password Changing > Configure Password Changers**.
+
    1. Click the same password changer. On the left side, you see heartbeat commands under **Verify Password Changed Commands**. On the right side, you see RPC commands under **Password Change Commands**. These commands are needed shortly.
 
 1. Return the SS or DE server.
@@ -102,4 +106,3 @@ To determine if the RPC issue is outside of SS:
 1. Replace the RPC commands under **Password Change Commands** with the amended ones.
 
 1. Click Test Action. DON'T SEE THIS. DO WE NEED TO GO TO ADMIN > SCRIPTS TO DO THIS?
-
