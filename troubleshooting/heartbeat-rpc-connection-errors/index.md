@@ -1,4 +1,4 @@
-[title]: # (Troubleshooting Heartbeat and RPC Connection Errors)
+[title]: # (Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets)
 [tags]: # (troubleshooting, workaround, rpc, heartbeat)
 [priority]: # (1000)
 
@@ -10,7 +10,7 @@
 
 Please follow these steps to address that. You start with heartbeat and then address Remote Password Changing (RPC). 
 
-> **Note:** See [Troubleshooting SSH Issues](https://thycotic.force.com/support/s/article/Troubleshooting-SSH-Issues) (KBA) for other SSH issues.
+> **Note:** See [Troubleshooting SSH Issues](../ssh-issues/index.md) for other SSH issues.
 
 ## Step 1: Troubleshooting Heartbeat
 
