@@ -30,7 +30,7 @@ IP addresses for all regions: 45.60.38.37, 45.60.40.37, 45.60.32.37, 45.60.34.37
 
 IP Address whitelisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
 
-Edge nodes for all regions: https://docs.microsoft.com/rest/api/cdn/edgenodes/list (type=Standard_Verizon)
+Edge nodes for all regions: [Microsoft Edge Node List](https://docs.microsoft.com/en-us/rest/api/cdn/edgenodes/list).
 
 #### 4: RADIUS
 
