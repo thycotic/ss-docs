@@ -1,10 +1,10 @@
-[title]: # (Secret Server Cloud Architecture)
-[tags]: # (Secret Server Cloud, Architecture)
-[priority]: # (1000)
+[title]: # "Secret Server Cloud Architecture"
+[tags]: # "Secret Server Cloud, Architecture"
+[priority]: # "1000"
 
 # Secret Server Cloud Architecture
 
-## Diagram
+## Generic  Hybrid Configuration
 
 **Figure:** Secret Server Cloud Hybrid Multi-Tenant Architecture
 
@@ -89,6 +89,7 @@ secretservercloud.eu:
  secretservercloud.com.sg:
 
 - http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl (Web server)
-
 - `http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%202.crl` (service bus)
 - `http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%202.crl` (service bus)
+
+## 

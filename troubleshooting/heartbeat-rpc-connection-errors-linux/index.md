@@ -159,5 +159,3 @@ To determine if the RPC issue is outside of SS:
 1. Type the known-good values for the text boxes.
 
 1. Click the **OK** button. Upon success, you know that the password changer works.
-
-1. Go to 
