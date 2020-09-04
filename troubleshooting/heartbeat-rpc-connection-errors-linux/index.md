@@ -90,7 +90,7 @@ To determine if the RPC issue is outside of SS:
 
       ![image-20200903110110639](images/image-20200903110110639.png)
 
-   1. Note the password type used.
+   1. Note the password types used, the applicable secret field, and the equivalent script variable. You will need to test your script using known-good values for these.
 
 1. Determine the applicable custom RPC commands:
 
@@ -158,4 +158,6 @@ To determine if the RPC issue is outside of SS:
 
 1. Type the known-good values for the text boxes.
 
-1. Click the **OK** button.
+1. Click the **OK** button. Upon success, you know that the password changer works.
+
+1. Go to 
