@@ -124,28 +124,38 @@ To determine if the RPC issue is outside of SS:
 
 1. Click the **Configure Password Changers** button. The Password Changes Configuration page appears:
 
-   ![image-20200903110538587](images/image-20200903110538587.png)
+    ![image-20200903110538587](images/image-20200903110538587.png)
 
 1. Click the name link for the same password changer. The password changer page for that changer appears:
 
-   ![image-20200903110755640](images/image-20200903110755640.png)
+    ![image-20200903110755640](images/image-20200903110755640.png)
 
-1. Click the **Edit Commands** button at the bottom of the page. The commands for that password changer appear:
+1. Test the PuTTY commands on the SS or DE server, replacing any variables with known-good values. If the commands do not work, revise them and try again.
 
-   ![image-20200903112417108](images/image-20200903112417108.png)
+1. If the original PuTTY commands did not work (you revised them):
+   
+    1. Click the **Edit Commands** button at the bottom of the page. The commands for that password changer appear:
+    
+        ![image-20200903112417108](images/image-20200903112417108.png)
+    
+    1. Scroll down to the **Password Change Commands** section:
+    
+        ![image-20200903112648078](images/image-20200903112648078.png)
+    
+    1. Click the blue edit icon to the right of any commands you want to change. The command becomes editable.
+    
+    1. Edit the command to make it match your known-good revision.
+    
+    1. Click the blue save icon next to the amended command.
+    
+    1. Click the **Back** button to return to the changer page:
+    
+        ![image-20200903110755640](images/image-20200903110755640.png)
+    
+1. Click the **Password Change Commands Test Action** button to confirm they work in SS. The Test Action Popup appears:
 
-1. Scroll down to the **Password Change Commands** section:
+     ![image-20200904102546044](images/image-20200904102546044.png)
 
-   ![image-20200903112648078](images/image-20200903112648078.png)
+1. Type the known-good values for the text boxes.
 
-1. Click the blue edit icon to the right of any commands you want to change. The command becomes editable.
-
-1. Make your changes.
-
-1. Click the blue save icon next to the amended command.
-
-1. Click the **Back** button to return to the changer page:
-
-   ![image-20200903110755640](images/image-20200903110755640.png)
-
-1. Click the **Password Change Commands Test Action** button to confirm they work in SS.
+1. Click the **OK** button.
