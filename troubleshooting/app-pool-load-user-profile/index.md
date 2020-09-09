@@ -2,7 +2,7 @@
 [tags]: # (troubleshooting, workaround, IIS, load user profile setting)
 [priority]: # (1000)
 
-# Load User Profile Setting Must Be Enabled for Application Pool
+# Application Pool Load User Profile Setting Must Be Enabled
 
 Secret Server (SS) requires the application pool to have the “load user profile” setting enabled. Secret Server will report a critical alert to notify admins if this setting is not enabled.
 
