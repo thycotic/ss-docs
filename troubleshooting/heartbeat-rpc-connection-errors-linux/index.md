@@ -4,7 +4,7 @@
 
 # Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets
 
- When creating custom SSH secret templates in Secret Server (SS), you may run into this error:
+ When creating custom SSH secret templates in Secret Server (SS), you may run into connection errors such as this:
 
 `Connection Failed - Connection lost (error code is 10058)` 
 
