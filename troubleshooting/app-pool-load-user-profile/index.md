@@ -1,4 +1,4 @@
-[title]: # (Load User Profile Setting Must Be Enabled for Application Pool)
+[title]: # (Application Pool Load User Profile Setting Must Be Enabled)
 [tags]: # (troubleshooting, workaround, IIS, load user profile setting)
 [priority]: # (1000)
 
