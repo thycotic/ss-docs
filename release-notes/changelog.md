@@ -17,6 +17,8 @@ Created the following topics from Salesforce articles (often including substanti
 Created or made significant changes to these topics:
 
 - All Secrets Page
+- Syncing with DevOps Secret Vault
+- Secret Server Cloud Architecture
 - Secret Server Cloud Quick Start
 - Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets
 - User Interfaces, Themes, and Color Modes
