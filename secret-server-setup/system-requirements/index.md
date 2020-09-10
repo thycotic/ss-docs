@@ -1,6 +1,6 @@
 [title]: # (System Requirements for Secret Server)
 [tags]: # (System Requirements)
-[priority]: #
+[priority]: #	(1000)
 
 # System Requirements for Secret Server
 
@@ -15,7 +15,7 @@
 | 25 GB Disk Space                          | 50 GB Disk Space                       |
 | Windows Server 2012                       | Windows Server 2012                    |
 | IIS 7 or newer (64-bit applications only) | SQL Server 2012-2019                   |
-| .NET 4.5.1 or newer                       | Collation SQL_Latin1_General_CP1_CI_AS |
+| .NET 4.8 or newer                         | Collation SQL_Latin1_General_CP1_CI_AS |
 
 ## Recommended Requirements for Basic Deployments
 
@@ -28,7 +28,7 @@
 | 25 GB Disk Space                          | 100+ GB Disk Space                     |
 | Windows Server 2012-2019                  | Windows Server 2012-2019               |
 | IIS 7 or newer (64-bit applications only) | SQL Server 2012-2019                   |
-| .NET 4.6.1 or newer                       | Collation SQL_Latin1_General_CP1_CI_AS |
+| .NET 4.8 or newer                         | Collation SQL_Latin1_General_CP1_CI_AS |
 
 ## Minimum Requirements for Advanced Deployments
 
@@ -43,7 +43,7 @@ Recommended for organizations deploying discovery, session recording,or increase
 | 25 GB Disk Space                          | 100+ GB Disk Space                     |
 | Windows Server 2012-2019                  | Windows Server 2012-2019               |
 | IIS 7 or newer (64-bit applications only) | SQL Server 2012-2019                   |
-| .NET 4.6.1 or newer                       | Collation SQL_Latin1_General_CP1_CI_AS |
+| .NET 4.8 or newer                         | Collation SQL_Latin1_General_CP1_CI_AS |
 
 | **Distributed Engines** | **RabbitMQ Messaging Server** |
 | ----------------------- | ----------------------------- |
