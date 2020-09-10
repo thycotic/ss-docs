@@ -4,29 +4,58 @@
 
 # Secret Server Cloud Architecture
 
-## Diagram
+> **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services support architects.
 
-**Figure:** Secret Server Cloud Hybrid Multi-Tenant Architecture
+## Hybrid Multi-Tenant Example Architecture 
+
+### Diagram
+
+**Figure:** Secret Server Cloud Hybrid Multi-Tenant Example Architecture
 
 ![image-20200522120219066](images/image-20200522120219066.png)
 
 > **Note:** Arrows indicate the direction of initial connection.
 
-## Details
+### Details
+
+See the [Details for All Architectures](#Details-for-All-Architectures) section at the end of this topic.
+
+## Distributed Engine Example Architecture
+
+### Diagram
+
+**Figure:** Secret Server Cloud Distributed Engine Example Architecture
+
+![image-20200904111444011](images/image-20200904111444011.png)
+
+>**Note:** This design is fully supported by Thycotic.
+
+> **Note:** Arrows indicate the direction of initial connection.
+
+> **Note:** Reference architecture requirements:
+>
+> - Ports for accessing, managing and discovering end-points must have the required ports opened between the site DEs the appropriate devices. Please see [Ports Used by Secret Server](../../networking/secret-server-ports/index.md).
+> - All DE servers must run on Windows Server 2012 to 2019.
+> - Distributed Engines servers must have 4 cores and 4 GB RAM. We encourage increasing CPUs before RAM to improve DE efficiency.
+
+> **Note:** Your first distributed engines will likely be located in the primary datacenter and will
+> serve as the management zone for all other locations and domains. This includes:
+>
+> - AD synchronization
+> - Account discovery
+> - Password changing and heartbeats
+> - SSH and RDP proxy
+> - Session recording
+
+### Details
+
+See the [Details for All Architectures](#Details-for-All-Architectures) section at the end of this topic.
+
+## Details for All Architectures
 
 ### 1: Service Buses
 
-IP Address whitelisting is not necessary unless outbound firewall rules are in place. If IP whitelisting is necessary, Azure data center public IPs can be downloaded here:
-
-- secretservercloud.com: https://www.microsoft.com/en-us/download/details.aspx?id=56519 (id = ServiceBus.EastUS)
-
-- secretservercloud.com.au: https://www.microsoft.com/en-us/download/details.aspx?id=56519 (id = ServiceBus.AustraliaCentral)
-
-- secretservercloud.eu: https://www.microsoft.com/en-us/download/details.aspx?id=57064 (id = ServiceBus.GermanyCentral)
-
-- secretservercloud.com.sg: https://www.microsoft.com/en-us/download/details.aspx?id=56519 (id = ServiceBus.SoutheastAsia)
-
-If you wish to restrict outbound traffic, Thycotic Support can provide you with your customer-specific service bus hostnames.
+IP Address whitelisting is not necessary unless outbound firewall rules are in place. If IP whitelisting is necessary, please open a ticket with [Thycotic Support](../../support/index.md) to use your customer-specific service bus host names.
 
 ### 2: Web Application Firewall (WAF)
 
@@ -38,11 +67,11 @@ IP addresses for all regions: 45.60.38.37, 45.60.40.37, 45.60.32.37, 45.60.34.37
 
 IP Address whitelisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
 
-Edge nodes for all regions: https://docs.microsoft.com/rest/api/cdn/edgenodes/list (type=Standard_Verizon)
+Edge nodes for all regions: [Microsoft Edge Node List](https://docs.microsoft.com/en-us/rest/api/cdn/edgenodes/list).
 
 ### 4: RADIUS
 
-Inbound whitelisting is necessary if RADIUS authentication is configured. Port 1812 needs to be open for inbound connection on the RADIUS server. The RADIUS server could either be publicly accessible or have port forwarding configured for Secret Server Cloud to be able to reach it. IP addresses:
+Inbound whitelisting is necessary if RADIUS authentication is configured. Port 1812 needs to be open for inbound connection on the RADIUS server. The RADIUS server could either be publicly accessible or have port forwarding configured for Secret Server Cloud to reach it. IP addresses:
 
 - secretservercloud.com: 40.76.197.147, 40.121.181.52
 
@@ -88,7 +117,8 @@ secretservercloud.eu:
 
  secretservercloud.com.sg:
 
-- http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl (Web server)
+- `http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl` (Web server)
 
 - `http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%202.crl` (service bus)
+
 - `http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%202.crl` (service bus)
