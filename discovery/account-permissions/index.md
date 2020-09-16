@@ -25,6 +25,8 @@ The scanning account needs the “Access This Computer From the Network” permi
 
 > **Note:** For more information refer to [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
+> **Note:** The discovery account must be part of the local admin's group to be able to pull back any local accounts.
+
 ## Windows Services, Scheduled Tasks, App Pools, and COM+ Applications
 
 > **Note:** There are special considerations for discovering service accounts running COM+ Applications, please see the following for instructions: [COM+ Dependency Scanner](https://thycotic.force.com/support/s/article/ka037000000HtkmAAC/COMPlus-Depenency-Scanner) (KBA).

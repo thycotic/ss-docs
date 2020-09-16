@@ -1,13 +1,27 @@
 [title]: # (Exporting Secrets)
-[tags]: # (Export)
+[tags]: # (Export secret, migration)
 [priority]: # (1000)
 
 # Exporting Secrets
 
-From within the **Administration > Export** page, select the folder that needs to be exported. By default, all secrets are exported if a folder is not selected. If no folder is selected, all secrets are exported by default. The administrative password must be entered, as it is a security measure to verify the permission of the user performing the export.
+To export a secret, either CSV or XML:
 
 > **Note:** Only the secrets the user has view access to are exported.
 
-Exports can be configured further with options to "Export with Folder Path" and "Export Child Folders." Export with Folder Path adds the full folder path to the export. Folder paths in the export file provide organizational structure if secrets need to be imported later.
+1. Go to **Admin \> See All**.
 
-By default, the option to "Export Child Folders" is active. While this option is enabled, any export of a specified folder also exports content located in folders beneath the initial selection.
+1. Click the **Export** link. The Export page appears:
+
+   ![image-20200916134748114](images/image-20200916134748114.png)
+
+1. Click the folder icon to choose a folder to export. By default, all secrets are exported if a folder is not selected. 
+
+1. Type your password in the **Password** text box. The administrative password must be entered, as it is a security measure to verify the permission of the user performing the export.
+
+1. (Optional) Click to select the **Export with Folder Path** check box. This adds the full folder path to the export. Folder paths in the export file provide organizational structure if secrets need to be imported later.
+
+1. (Optional) Click to select the **Export Child Folders** check box. This option includes any subfolders of the one you chose earlier.
+
+1. Click the Export Format selection button to choose the type of export. CSV is for Excel and the like, and XML is for migrating to other SS instances.
+
+1. Click the **Export** button. The Export Secrets popup appears. Any error messages, such as secrets with doublelocks, appear. When the exportation is finished, a dialog box appears for you to choose a location for the file.
