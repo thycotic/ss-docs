@@ -1,15 +1,7 @@
 [title]: # (Google Cloud Platform Discovery and Service Accounts)
 [tags]: #	(GCP, discovery, service account, google cloud platform)
 [priority]: # (1000)
-<<<<<<< HEAD
-<<<<<<< HEAD
-[display]: #
-=======
-[display]: # (none)
->>>>>>> 07322cc25c4654d1326e4e3d2f2f711b8ba90db7
-=======
 [display]: # (all)
->>>>>>> 2b658e12873749b82ac8c8db384e4d993397db75
 
 # Google Cloud Platform Discovery and Service Accounts
 
