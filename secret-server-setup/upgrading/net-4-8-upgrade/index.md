@@ -92,7 +92,7 @@ None.
 
 **Required Action**
 
-Ensuring existing installations of ASRA will continue to operate. New installations of ASRA after the December release will require .NET Framework 4.8 installed on the servers where ASRA is deployed.
+Existing installations of ASRA will continue to operate. New installations of ASRA after the December release will require .NET Framework 4.8 installed on the servers where ASRA is deployed.
 
 **Impact of Inaction**
 
@@ -123,7 +123,7 @@ Although the December release will not require .NET Framework 4.8, future update
 
 ## Effects on Connection Manager
 
-None: connection manager will be updated to require .NET Framework 4.8 at a later date.
+None: Connection Manager will be updated to require .NET Framework 4.8 at a later date.
 
 ## Unaffected Secret Server Components
 
@@ -141,7 +141,6 @@ The following components of SS and SSC are not affected by this change:
 - Microsoft provides several methods to determine the installed versions of .NET Framework. Please see [How to: Determine which .NET Framework versions are installed](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed).
 
 - See [.NET Framework versions and dependencies](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies) for additional Microsoft .NET Framework version information.
-
 
 - You can run the following command at a Windows PowerShell prompt to view currently installed .NET Framework version number:
   `(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").version`
