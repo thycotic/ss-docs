@@ -4,7 +4,7 @@
 
 # Importing Secrets
 
-SS's importation feature simplifies integration with legacy systems and allows users to easily add large numbers of secrets from an Excel or comma-separated values (CSV) file. Secrets are batch imported by template, so multiple types of input data need to be imported in several batches. The Password Migration Tool supports easy addition of existing secrets from other third-party password-storing applications.
+SS's importation feature simplifies integration with legacy systems and allows users to easily add large numbers of secrets from an Excel or comma-separated values (CSV) file. Secrets are batch imported by template, so multiple types of input data need to be imported in several batches. The [Secret Server Migration Tool](../secret-server-migration-tool/index.md) supports easy addition of existing passwords from other third-party password-storing applications.
 
 ## Importing CSV Data
 
@@ -50,6 +50,9 @@ Advanced XML importation adds folders, secret templates, and secrets based on an
 ### Procedure
 
 1. Ensure your XML is formatted correctly. If coming from a SS export, you should be good to go. See [Example XML File](#example-xml-file).
+
+   > **Important:** Do not edit the XML file with Windows Notepad. Instead, use Notepad++, Visual Studio Code, or Atom to make your edits. Windows Notepad can add invisible characters that can prevent importation.
+
 
 1. Go to **Admin \> See All**.
 

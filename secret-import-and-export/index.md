@@ -8,13 +8,21 @@
 
 ## Overview
 
-Secrets are exported as a comma-separated-value (CSV) file or as XML. The CSV file can be easily handled in Excel or other spreadsheet applications. The file is grouped by secret template and each cluster of secrets has a header row that contains the template text-entry field names followed by all exported secrets based on that template.
+Secrets are imported or exported as a comma-separated-value (CSV) file or as XML:
 
-The XML file follows the exact structure of the advanced xml import. As such, this can be useful with migrating data from one SS installation to another.
+- The CSV file is easily read and edited in Excel or other spreadsheet application. The file is grouped by secret template and each cluster of secrets has a header row that contains the template text-entry field names followed by all exported secrets based on that template.
+
+- The XML file is useful for migrating data from one SS installation to another or even from a third-party application to SS.
 
 Secrets are exported in the exact same structure as a secret Import. 
 
-> **Note:** File  attachments on the original secret are not exported into the XML file and require using the API to migrate. Secret audits and history  are not preserved during the migration. Be sure to first create the AD  groups and users using the permissions on the secrets in the original SS instance. Otherwise, they will not be created when the secrets are imported into the new instance.
+This topic has three subtopics:
+
+- [Exporting Secrets](./exporting-secrets/index.md)
+
+- [Importing Secrets](./importing-secrets/index.md)
+
+- [Secret Server Migration Tool](./secret-server-migration-tool/index.md)
 
 ## What Gets Imported or Exported
 
@@ -62,11 +70,8 @@ The following secret template settings are **not** transferred:
 
 - Session recording enabled
 
-## Migrating Secret Server Cloud
+## Migrating to and from Secret Server Cloud
 
 If you use XML import and export to migrate from SS on-premises to cloud, the major release version (x.x) must be the same. Otherwise, you need to upgrade before you can migrate. Additionally, the **Allow Duplicate Secret Names** check box on the **General** tab of the **Admin Configuration** page should be disabled in Secret Server Cloud before importing. 
 
 You can use XML import and export to transfer between on-premises and cloud editions.
-
-> **Important:** Do not edit the XML file with Windows Notepad. Instead, use Notepad++, Visual Studio Code, or Atom to make your edits. Windows Notepad can add invisible characters that can prevent importation.
-
