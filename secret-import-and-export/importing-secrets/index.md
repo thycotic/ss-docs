@@ -51,8 +51,7 @@ Advanced XML importation adds folders, secret templates, and secrets based on an
 
 1. Ensure your XML is formatted correctly. If coming from a SS export, you should be good to go. See [Example XML File](#example-xml-file).
 
-   > **Important:** Do not edit the XML file with Windows Notepad. Instead, use Notepad++, Visual Studio Code, or Atom to make your edits. Windows Notepad can add invisible characters that can prevent importation.
-
+    > **Important:** Do not edit the XML file with Windows Notepad. Instead, use Notepad++, Visual Studio Code, or Atom to make your edits. Windows Notepad can add invisible characters that can prevent importation.
 
 1. Go to **Admin \> See All**.
 
