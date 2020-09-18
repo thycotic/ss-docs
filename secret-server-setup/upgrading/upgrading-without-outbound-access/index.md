@@ -1,6 +1,6 @@
 [title]: # (Upgrading Secret Server Without Outbound Access)
 [tags]: # (Setup, Upgrading)
-[priority]: #
+[priority]: # (1000)
 
 # Upgrading Secret Server Without Outbound Access
 

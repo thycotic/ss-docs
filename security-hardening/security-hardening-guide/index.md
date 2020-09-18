@@ -26,7 +26,7 @@ It is critical to secure your SS implementation. That needs to include a layered
 
 - **Whole-disk encryption:** Use whole disk encryption, such as [BitLocker](https://technet.microsoft.com/en-us/library/hh831507(v=ws.11).aspx?f=255&MSPPError=-2147217396), with a trusted platform module (TPM) to prevent those with physical access from removing disks to gain access to your SS application by circumventing OS and application authentication.
 
-- **Security Hardening Standards:** Consider security hardening standards that apply to either the operating system or applications, such as IIS or Microsoft SQL. Our application does not currently have full compatibility with third party standards such as CIS Level 1 hardening or the Microsoft Published Security Baselines. We are compatible with CIS Level 2 hardening and have STIG compatibility.
+- **Security Hardening Standards:** Consider security hardening standards that apply to either the operating system  or applications, such as IIS or Microsoft SQL. Secret Server is  compatible with CIS Level 1 and CIS Level 2 hardening and has STIG  compatibility.
 
    > **Note:** Attaining full security-hardening standards compatibility is a Thycotic priority.
 

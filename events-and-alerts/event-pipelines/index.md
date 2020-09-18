@@ -142,11 +142,15 @@ EP policy *targets* are SS folders, secret policies, or user groups that are the
 
 ### Event Pipeline Tasks
 
-EP *tasks* are actions, which are triggered in an EP, assuming any filtering conditions are met.
+> **Important:** Tasks are powerful and can potentially do a lot of damage, so we highly recommend testing EPs in a safe environment before using them on production secrets.
+
+EP *tasks* are actions, which are triggered in an EP, assuming any filtering conditions are met. Tasks can edit secrets, move secrets, change permissions, send  notifications, and more. 
+
+Tasks run in order of their appearance on the Task tab of the Event Pipeline details page. To change the task running order, hover the mouse pointer over the one you want to move, and use  the anchor on the left of its card to drag the task to the order you want it to run. If a task fails, the follow-on tasks will not run.
 
 > **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy—the policy targets the secret in the policy or folder to trigger the EPs to process.
 >
-> Note: To reference the additional secrets in the script's Args field for the update secret with a script task or run script, use `$[ADD:1]` before the token. For example:  `$[ADD:1]$USERNAME` to reference additional secret one and `$[ADD:2]$USERNAME` to reference additional secret two.)
+> **Note:** To reference the additional secrets in the script's Args field for the update secret with a script task or run script, use `$[ADD:1]` before the token. For example:  `$[ADD:1]$USERNAME` to reference additional secret one and `$[ADD:2]$USERNAME` to reference additional secret two.)
 
 #### Secret Tasks
 
@@ -468,7 +472,7 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 
 These are variables created with the EP task. There are two types, global and item, both of which are referenced in the same way.
 
-> **Note:** You must set a custom variable before using it. Thus, you cannot set a variable and use it in the same pipeline. The way around this is to create two pipelines in a policy—the first pipeline sets the variable and the second one uses it.
+> **Note:** You must set a custom variable before using it. Thus, you cannot set a variable and use it in the same pipeline. One way around this is to create two pipelines in a policy—the first pipeline sets the variable and the second one uses it. Another way is to first set the variable in SS.
 
 #####  Global Variable
 
@@ -481,6 +485,8 @@ These are variables created with the EP task. There are two types, global and it
 - $ItemVariable.CustomVariableName
 
 - This variable is per SecretId (secret pipeline) or UserId (user pipeline).
+
+> **Note:** The first time an EP task is invoked, an item variable is not  translated, but subsequent invocations have the variable. Global variables are immediately available.
 
 ### Target User
 
