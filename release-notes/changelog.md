@@ -12,13 +12,29 @@ The following is a chronological list of significant documentation changes. Mino
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
 - Moving the Microsoft SQL Server Database to Another Machine
+
 - Troubleshooting SSH Issues
+
+- VMware Issues
 
 Created or made significant changes to these topics:
 
 - All Secrets Page
+
+- Distributed Engine Hardening
+
+- Syncing with DevOps Secret Vault
+
+- Secret Import and Export
+
+- Secret Server Cloud Architecture
+
 - Secret Server Cloud Quick Start
+
+- SS and SSC .NET Framework 4.8 Upgrade
+
 - Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets
+
 - User Interfaces, Themes, and Color Modes
 
 ## April to July 2020
