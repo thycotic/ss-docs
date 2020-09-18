@@ -41,6 +41,7 @@ The web node components of SSC are managed directly by Thycotic.
 **Products**
 
 - Secret Server
+
 - Secret Server Cloud
 
 **Required Action**
@@ -50,6 +51,7 @@ Installing .NET Framework 4.8 on servers running web nodes.
 **Impact of Inaction**
 
 - SS upgrade will request confirmation before upgrading if any connected distributed engines do not have .NET Framework 4.8 installed. Any distributed engines which do not have .NET framework 4.8 installed will fail to upgrade.
+
 - SSC will be upgraded whether or not distributed engines have .NET Framework 4.8 installed. Any distributed engines which do not have .NET framework 4.8 installed will fail to upgrade.
 
 **Notes**
@@ -61,16 +63,23 @@ Installing .NET Framework 4.8 after the upgrade will allow a distributed engine 
 **Products**
 
 - Secret Server
+
 - Secret Server Cloud
 
 **Required Action**
 
--  New installations of the protocol handler on Windows systems after the December release will require .NET Framework 4.8 installed.
+- New installations of the protocol handler on Windows systems after the December release will require .NET Framework 4.8 installed.
+
 - Fully patched Windows 10 systems should already have the framework in place.
+
 - Customers with existing deployments of protocol handler have two options:
+
   - Ensure that .NET Framework 4.8 is installed on all endpoints using protocol handler before the SS or SSC update.
+
   - Disable automatic updating of protocol handler:
+
     1. Go to **Admin \> Configuration**.
+
     1. Set **Enable Protocol Handler Auto-Update** to **No**.
 
 - SS is compatible with older versions of protocol handler. Older versions will continue to function when used with the SS December release.
@@ -88,6 +97,7 @@ None.
 **Products**
 
 - Secret Server
+
 - Secret Server Cloud
 
 **Required Action**
@@ -107,6 +117,7 @@ None.
 **Products**
 
 - Secret Server
+
 - Secret Server Cloud
 
 **Required Action**
