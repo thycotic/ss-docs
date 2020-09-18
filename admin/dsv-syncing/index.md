@@ -17,19 +17,47 @@ You can manually push secrets to the DSV tenant, in addition to SS checking for 
 
 To configure pushing secrets to DSV:
 
-Go to **Admin \> DevOps Secrets Vault Tenants** to specify the DSV tenant for integration with SS:
+1. Create a client in DSV. Save the client ID and secret that are generated when you created it. A DSV client is a container for a password.
 
-![image-20200729105047574](images/image-20200729105047574.png)
+   > **Note:** Please see the DSV documentation for details.
 
+1. Create a secret to connect to DSV:
 
+   1. [Create a new secret](../../secret-management/procedures/creating-secrets/index.md) based on the DevOps Secrets Vault Client Credentials template:
+
+      ![image-20200910124739622](images/image-20200910124739622.png)
+
+   1. Type the name for the new secret in the **Secret Name** text box.
+
+   1. Type the DSV client ID in the **Client ID** text box.
+
+   1. Type the DSV password for authentication in the **Client Secret** text box. If you do not have one, you can create a new here by clicking the **Generate** button. Then, create or configure a client in DSV using the password.
+
+   1. Type the name of the DSV tenant to connect to in the **Tenant** text box. A DSV tenant is your DSV cloud account and the rights to access it.
+
+   1. Click the **Site** dropdown list to select your SS site.
+
+   1. Click the **Create Secret** button.
+
+1. Go to **Admin \> See All**. The Admin Menu page appears.
+
+1. Click the **DevOps Secrets Vault** link. The DevOps Secrets Vault Tenants page appears:
+
+   ![image-20200910123846837](images/image-20200910123846837.png)
+
+1. Click the **Add New Tenant** button. The Add New Tenant popup appears:
+
+   ![image-20200910124022186](images/image-20200910124022186.png)
+
+1. Type the tenant name in the **Tenant Name** text box.
+
+1. Click the **Client Secret** link to select the secret you created earlier in this instruction.
+
+1. Click the **Sync Interval** list box to select how often you want SS to push secrets to DSV for this tenant.
+
+1. Click the **Save** button.
 
 ## API Examples
-
-### DevOps Secret Vault Client Credentials Template
-
-![](images/c2db746f4751b30f7bf46b3d63e5eb3b.png)
-
-Using the DSV client template, you provide the client ID, secret, the tenant URL, and the client’s role (the role field might be removed).
 
 ### Creating a DevOps Secret Vault Tenant
 
@@ -47,7 +75,7 @@ Use a POST to `/api/v1/devops-secrets-vault/tenant` using the body below to crea
 }
 ```
 
-The secret ID is the ID of the DSV Client Credentials secret. The Sync Interval is how often SS checks if secrets needs to be pushed to DSV. Only secrets associated with active tenants are pushed to DSV. You are returned the tenant ID if the POST is successful.
+The secret ID is the client ID for the secret based on the DSV Client Credentials template. The Sync Interval is how often SS checks if secrets needs to be pushed to DSV. Only secrets associated with active tenants are pushed to DSV. You are returned the tenant ID if the POST is successful.
 
 ### Creating a Sync Map
 
@@ -81,7 +109,7 @@ Use a POST to `/api/v1/devops-secrets-vault/add-sync` using this body to map a s
 }
 ```
 
-When the secret is mapped to a tenant, an initial sync immediately occurs. Following the initial sync, the secret is checked to determine if updates have been made when the sync Interval expires for the mapped tenant. If no changes have been made to the secret, then the secret is not pushed to DSV. You can reference fields from the secret to create the path in DSV. Secret Server will look for a `$`, then search for the following string as one of the "slugified" field names for the secret’s template.
+When the secret is mapped to a tenant, an initial sync immediately occurs. Following the initial sync, the secret is checked to determine if updates have been made when the sync Interval expires (making it "dirty") for the mapped tenant. If no changes have been made to the secret, then the secret is not pushed to DSV. You can reference fields from the secret to create the path in DSV. Secret Server will look for a `$`, then search for the following string as the [field slug names](../../secret-templates/secret-template-settings/field-slug-names/index.md) for the secret’s template. The path in DSV follows this format: `/secrets/<DSV_secret_name>`.
 
 ### Manually Syncing a Secret
 
