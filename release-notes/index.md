@@ -8,11 +8,11 @@
 
 ## Current
 
-[Secret Server 10.9.000000](ss-rn-10-9-000000.md)
+[Secret Server 10.9.000002](ss-rn-10-9-000002.md)
 
 ## Secret Server On-Premises Legacy
 
-<!-- - [Secret Server 10.9.000000](ss-rn-10-9-000000.md) -->
+- [Secret Server 10.9.000000](ss-rn-10-9-000000.md)
 
 - [Secret Server 10.8.000004](ss-rn-10-8-000004.md)
 
