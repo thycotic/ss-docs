@@ -4,9 +4,9 @@
 
 # Secret Server Example Architectures
 
-> **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services support architects.
+> **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Services Solutions Architects.
 
-## Minimal Single-Site HA Enterprise Deployment
+## Minimal Single-Site Enterprise Deployment
 
 ### Overview
 
@@ -22,7 +22,7 @@
 
 #### General
 
-- Single-site SQL Standard Edition: Basic availability group configuration local load balancers can be used for all Web server nodes.
+- SQL Standard Edition: Basic availability group configuration local load balancers can be used for all Web server nodes.
 
 - Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single node unplanned failures.
 
@@ -48,11 +48,11 @@
 
 > **Note:** The reference number for this diagram is A1.
 
-**Figure:** Minimal Single-Site HA Enterprise Deployment
+**Figure:** Minimal Single-Site Enterprise Deployment
 
 ![image-20200922112805644](images/image-20200922112805644.png)
 
-## Minimal Single-Site HA Enterprise Deployment with Separate RabbitMQ Server
+## Average Single-Site Enterprise Deployment
 
 ### Overview
 
@@ -68,7 +68,7 @@
 
 #### General
 
-- Single-site SQL Standard Edition: Basic availability group configuration local load balancers can be used for all Web server nodes.
+- SQL Standard Edition: Basic availability group configuration local load balancers can be used for all Web server nodes.
 
 - Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single node unplanned failures.
 
@@ -95,9 +95,9 @@
 
 > **Note:** The reference number for this diagram is A2.
 
-**Figure:** Secret Server Single-Site Minimum HA Enterprise Deployment with Separate RabbitMQ Server![image-20200922113746702](images/image-20200922113746702.png)
+**Figure:** Average Single-Site Enterprise Deployment![image-20200922113746702](images/image-20200922113746702.png)
 
-## Minimal Multi-Site HA/DR Enterprise Deployment
+## Minimal Multi-Site Enterprise Deployment
 
 ### Overview
 
@@ -163,11 +163,11 @@
 
 > **Note:** The reference number for this diagram is B1.
 
-**Figure:** Minimal Multi-Site HA/DR Enterprise Deployment 
+**Figure:** Minimal Multi-Site Enterprise Deployment 
 
-![image-20200922112805644](images/image-20200922112805644.png)
+![image-20200923082534021](images/image-20200923082534021.png)
 
-## Minimal Multi-Site Lower-Cost HA/DR Enterprise Deployment with Manual Failover
+## Average Multi-Site Enterprise Deployment
 
 ### Overview
 
@@ -233,11 +233,11 @@
 
 **Note:** The reference number for this diagram is B2.
 
-**Figure:** Minimal Multi-Site Lower-Cost HA/DR Enterprise Deployment with Manual Failover
+**Figure:** Average Multi-Site Enterprise Deployment
 
 ![image-20200922142635330](images/image-20200922142635330.png)
 
-## Best-Practice Lower-Cost Multi-Site HA/DR (RabbitMQ Separation) with Automatic Failover
+## Best Multi-Site Enterprise Deployment (C1)
 
 ### Overview
 
@@ -295,11 +295,11 @@
 
 > **Note:** The reference number for this diagram is C1.
 
-**Figure:** Best-Practice Multi-Site HA/DR (RabbitMQ Separation) with Automatic Failover
+**Figure:** Best Multi-Site Enterprise Deployment (C1)
 
 ![image-20200922144819813](images/image-20200922144819813.png)
 
-## Best-Practice Lower-Cost Multi-Site HA/DR (RabbitMQ Separation) with Manual Failover
+## Best Multi-Site Enterprise Deployment (C2)
 
 ### Overview
 
@@ -353,11 +353,11 @@
 
 > **Note:** The reference number for this diagram is C2.
 
-**Figure:** Best-Practice Lower-Cost Multi-Site HA/DR (RabbitMQ Separation) with Manual Failover
+**Figure:** Best Multi-Site Enterprise Deployment (C2)
 
 ![image-20200922150218977](images/image-20200922150218977.png)
 
-## Best-Practice Higher-Cost Multi-Site HA/DR (RabbitMQ Separation) with Automatic Failover
+## Best Multi-Site Enterprise Deployment (C3)
 
 ### Overview
 
@@ -421,6 +421,6 @@
 
 > **Note:** The reference number for this diagram is C3.
 
-**Figure:** Best-Practice Higher-Cost Multi-Site HA/DR (RabbitMQ Separation) with Automatic Failover
+**Figure:** Best Multi-Site Enterprise Deployment (C3)
 
 ![image-20200922151502292](images/image-20200922151502292.png)
