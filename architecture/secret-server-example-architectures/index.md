@@ -1,6 +1,6 @@
-[title]: # (Secret Server Example Architectures)
-[tags]: # (Secret Server, Architecture)
-[priority]: # (1000)
+[title]: # "Secret Server Example Architectures"
+[tags]: # "Secret Server, Architecture"
+[priority]: # "1000"
 
 # Secret Server Example Architectures
 
