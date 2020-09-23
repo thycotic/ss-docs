@@ -8,7 +8,7 @@
 
 This topic explains the steps to prepare your environment for the December 2020 upgrade to Secret Server (SS) and Secret Server Cloud (SSC).
 
-The Microsoft .NET Framework is a core component of the SS architecture. SS versions up to and including 10.9.0 require version 4.5.1 or higher of the .NET Framework.
+The Microsoft .NET Framework is a core component of the SS architecture. SS versions up to and including 10.9.000002 require version 4.5.1 or higher of the .NET Framework.
 
 The December 2020 releases of SS and SSC will change this requirement. From December 2020 onwards, version 4.8 or higher of the .NET Framework will be required.
 

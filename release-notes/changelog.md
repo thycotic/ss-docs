@@ -31,6 +31,8 @@ Created or made significant changes to these topics:
 
 - Secret Server Cloud Quick Start
 
+- Secret Server Example Architectures
+
 - SS and SSC .NET Framework 4.8 Upgrade
 
 - Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets
