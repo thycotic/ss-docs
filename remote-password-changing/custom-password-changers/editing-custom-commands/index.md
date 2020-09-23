@@ -10,9 +10,9 @@ SSH key rotation type changers also include post-reset success and failure custo
 
 To edit the custom commands, click on the **Edit** Commands button. This sets the command grids into Edit mode where you can add, update, or delete the commands in order to suit their purpose.
 
-Any secret text-entry field value can be substituted by prefacing the text-entry field name with a `$`. For example, to echo the notes value for a secret, the user would enter: `echo $Notes` as a command. Along with these secret field values, the following variables are available in custom commands:
-
 ## RPC-Mapped Text-Entry Fields
+
+Prepend a `$` to any text-entry field name to access that field. For example, to echo the notes value for a secret, you would use this command: `echo $Notes`.  Commonly accessed fields include:
 
 - `$USERNAME` The username text-entry field mapped in RPC on the secret template.
 
@@ -20,7 +20,7 @@ Any secret text-entry field value can be substituted by prefacing the text-entry
 
 - `$NEWPASSWORD` The next password (filled in Next Password textbox or auto-generated).
 
-- `PRIVATEKEY` The private key text-entry field mapped in RPC on the secret template.
+- `$PRIVATEKEY` The private key text-entry field mapped in RPC on the secret template.
 
 - `$NEWPRIVATEKEY` The next private key (filled in Next Private Key text box or auto-generated).
 
@@ -34,7 +34,7 @@ Any secret text-entry field value can be substituted by prefacing the text-entry
 
 ## Associated Reset Secrets
 
-- `$[1]` Adding this prefix to any text-entry field targets the associated reset secret with order 1.
+- `$[1]$` Adding this prefix to any text-entry field targets the associated reset secret with order 1.
 
 - `$[1]$USERNAME` The mapped username of the associated secret, identified by order. Can also reference any other property on the associated secret. Common examples include:
 
