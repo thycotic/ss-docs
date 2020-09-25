@@ -4,7 +4,7 @@
 
 # RabbitMQ Example Architectures
 
-> **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Services Solutions Architects.
+> **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services Solutions Architects.
 
 ## Basic Single-Site Deployment
 
@@ -41,7 +41,7 @@
 
 ### Overview
 
-- This is the basic single-site deployment plus a hot standby
+- This is the basic single-site deployment plus a hot standby.
 
 - No HA design.
 
@@ -55,7 +55,7 @@
 
 ### Requirements
 
-- Cross-data-center communication between DEs and RabbitMQ 
+- Cross-data-center communication between DEs and RabbitMQ. 
 
 - Does not require the creation of RabbitMQ policies, which are based on input from Professional Services.
 
@@ -71,7 +71,7 @@
 
 ### Overview
 
-- Minimum HA RabbitMQ design
+- Minimum HA RabbitMQ design.
 
 - Independent RabbitMQ nodes under load balancer configuration.
 
