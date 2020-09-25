@@ -6,6 +6,16 @@
 
 > **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services support architects.
 
+## Single-Tenant Example Architecture
+
+### Diagram
+
+**Figure:** Secret Server Cloud Single-Tenant Example Architecture
+
+### Details
+
+See the [Details for All Architectures](#Details-for-All-Architectures) section at the end of this topic.
+
 ## Hybrid Multi-Tenant Example Architecture 
 
 ### Diagram
