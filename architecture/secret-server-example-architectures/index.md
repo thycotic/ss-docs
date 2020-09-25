@@ -4,7 +4,7 @@
 
 # Secret Server Example Architectures
 
-> **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Services Solutions Architects.
+> **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services Solutions Architects.
 
 ## Minimal Single-Site Enterprise Deployment
 
