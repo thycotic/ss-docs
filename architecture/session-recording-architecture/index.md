@@ -8,8 +8,6 @@
 
 ## Endpoint via Secret Server Launcher
 
-### Scenario
-
 User connects to SS and clicks the launcher for a secret with a non-proxied session. This is the default. Session recording is enabled on the secret. This scenario applies to both SS and SSC.
 
 Simplified flow:
