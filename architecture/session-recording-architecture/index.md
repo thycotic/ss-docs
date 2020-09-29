@@ -8,6 +8,8 @@
 
 ## Endpoint via Secret Server Launcher
 
+### Overview
+
 User connects to SS and clicks the launcher for a secret with a non-proxied session. This is the default. Session recording is enabled on the secret. This scenario applies to both SS and SSC.
 
 Simplified flow:
@@ -43,12 +45,6 @@ Visual, video is created for video playback.
 1. The Web servers' session recording role does any encoding, transcoding, or re-composition of videos to ensure videos can be played back through the session monitoring page.
 1. The final video recording is stored in the database or file-share server (preferable) after the video has been processed. For Secret Server Cloud customers, this is stored in customer-specific BLOB. Playback can only occur through the Session Monitoring section within SS.
 
-### Notes
-
-- Many of these ports are configurable. These diagrams reflect best practice ports. We strongly recommend using RabbitMQ for your message bus. The ports attached to RabbitMQ/MemoryMQ only need to be singular (SSL OR non-SSL). If using RabbitMQ for example, most customers will only need to utilize port TCP 5672.
-- Session recording storage can be configured per site (separate file share servers), but the processing is still finalized from a Web server with session recording enabled. This means that data written from the Web server to the file share server may happen across different physical locations, which may add to the complexity of your networking requirements and may cause network saturation.
-- If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down.  Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
-
 ### Diagram
 
 > **Note:** The reference for this diagram is Flow 1.
@@ -57,7 +53,15 @@ Visual, video is created for video playback.
 
 ![image-20200928131533206](images/image-20200928131533206.png)
 
+### Notes
+
+- Many of these ports are configurable. These diagrams reflect best practice ports. We strongly recommend using RabbitMQ for your message bus. The ports attached to RabbitMQ/MemoryMQ only need to be singular (SSL OR non-SSL). If using RabbitMQ for example, most customers will only need to utilize port TCP 5672.
+- Session recording storage can be configured per site (separate file share servers), but the processing is still finalized from a Web server with session recording enabled. This means that data written from the Web server to the file share server may happen across different physical locations, which may add to the complexity of your networking requirements and may cause network saturation.
+- If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down.  Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
+
 ## Endpoint via Secret Server Launcher and Proxy
+
+### Overview
 
 User connects to SS and clicks the launcher for a secret with a proxied session. Session recording is enabled on the secret.  This scenario applies to both SS and SSC.
 
@@ -126,6 +130,8 @@ User > Secret Server > Launcher > Secret Server/DE Proxy > Endpoint System
 
 ## Endpoint via Secret Server Credentials and Proxy
 
+### Overview
+
 Scenario A: User connects to SS and generates proxy credentials for a specific secret with session recording enabled. The user launches a terminal (PuTTY) session or RDP proxy session outside of SS, connecting to either the SS Web server or a DE.
 
 Scenario B: User connects via a PuTTY session to the SS Web server or a DE proxy using SSH Terminal. User then runs TTY commands to manually initiate a connection to a destination system with a retrieved secret via the command line.
@@ -186,6 +192,8 @@ Textual data that passed through the proxy (client to server and server to clien
 - Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
 
 ## Endpoint via Secret Server Launcher and ASRA
+
+### Overview
 
 User connects to SS and clicks the launcher for a secret with a non-proxied session. This is the default. Session recording is enabled on the secret.  The Advanced Session Recording Agent (ASRA) is installed on the endpoint. This scenario applies to both SS and SSC.
 
@@ -251,6 +259,8 @@ User > Secret Server > Launcher > Endpoint System + Advanced Session Recording A
 - Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
 
 ## Endpoint and ASRA
+
+### Overview
 
 User connects directly to an endpoint without accessing SS at any point  The Advanced Session Recording Agent (ASRA) is installed on the endpoint. This scenario applies to both SS and SSC.
 
