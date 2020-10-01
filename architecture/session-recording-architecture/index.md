@@ -146,13 +146,11 @@ User > Secret Server > Generate Proxy Credentials > Secret Server/DE Proxy > End
 
 Scenario B:
 
-I MADE THE FOLLOWING UP, SO IT'S PROBABLY WRONG:
-
 User > SSH Terminal> Secret Server \> Provide Proxy Credentials > Secret Server/DE Proxy > Endpoint System
 
 ### Data Gathered
 
-Textual data that passed through the proxy (client to server and server to client) is recorded and can be viewed without a video. WITHOUT A VIDEO?
+Textual data that passed through the proxy (client to server and server to client) is recorded and can be viewed without a video recording.
 
 ### Flow
 

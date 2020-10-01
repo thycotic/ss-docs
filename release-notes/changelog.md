@@ -33,6 +33,8 @@ Created or made significant changes to these topics:
 
 - Secret Server Example Architectures
 
+- Session Recording Example Architectures
+
 - SS and SSC .NET Framework 4.8 Upgrade
 
 - Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets
