@@ -1,6 +1,6 @@
-[title]: # "Editing Folder Permissions"
-[tags]: # "Folder"
-[priority]: # "1000"
+[title]: # (Editing Folder Permissions)
+[tags]: # (Folder)
+[priority]: # (1000)
 
 # Editing Folder Permissions
 
@@ -57,7 +57,9 @@
    1. If you wish to add a user or group (to set their permissions):
 
       1. (optional) Click to select the dropdown list in the **Edit** section to filter the available list.
+
       1. (optional) Type a desired user or group name in the **Search** text box.
+
       1. Click the desired user or group in the **Edit** list that you want to add to the **Selected Groups** list. The user or group appears in the section.
 
    1. To delete an entry in the **Selected Groups** section, click the **Remove** link next to the entry.
