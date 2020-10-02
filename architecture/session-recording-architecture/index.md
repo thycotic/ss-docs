@@ -43,6 +43,7 @@ Visual, video is created for video playback.
      This information is uploaded via HTTPS (configurable) and stored in the database.
 
 1. The Web servers' session recording role does any encoding, transcoding, or re-composition of videos to ensure videos can be played back through the session monitoring page.
+
 1. The final video recording is stored in the database or file-share server (preferable) after the video has been processed. For Secret Server Cloud customers, this is stored in customer-specific BLOB. Playback can only occur through the Session Monitoring section within SS.
 
 ### Diagram
@@ -56,7 +57,9 @@ Visual, video is created for video playback.
 ### Notes
 
 - Many of these ports are configurable. These diagrams reflect best practice ports. We strongly recommend using RabbitMQ for your message bus. The ports attached to RabbitMQ/MemoryMQ only need to be singular (SSL OR non-SSL). If using RabbitMQ for example, most customers will only need to utilize port TCP 5672.
+
 - Session recording storage can be configured per site (separate file share servers), but the processing is still finalized from a Web server with session recording enabled. This means that data written from the Web server to the file share server may happen across different physical locations, which may add to the complexity of your networking requirements and may cause network saturation.
+
 - If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down.  Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
 
 ## Endpoint via Secret Server Launcher and Proxy
@@ -72,11 +75,12 @@ User > Secret Server > Launcher > Secret Server/DE Proxy > Endpoint System
 ### Data Gathered
 
 - For SSH secrets: Visual and Textual (keystroke/terminal output). Video is created for video playback and enhanced with textual data from the proxy.
+
 - RDP secrets With RDP tunneling enabled: - Visual only. Video is created for video playback (same as the first scenario).
+
 - For RDP proxy (new in 10.8):  Video and Keystrokes 
 
 > **Note:** As of the December 10th 2019 release, you can now choose from:
->
 > - Record keystrokes only
 > - Record video only 
 > - Do not record
@@ -124,8 +128,11 @@ User > Secret Server > Launcher > Secret Server/DE Proxy > Endpoint System
 ### Notes
 
 - Many of these ports are configurable. These diagrams reflect best practice ports. We strongly recommend using RabbitMQ for your message bus. The ports attached to RabbitMQ/MemoryMQ only need to be singular (SSL OR non-SSL). If using RabbitMQ for example, most customers will only need to utilize port TCP 5672.
+
 - Session recording storage can be configured per site (separate file share servers), but the processing is still finalized from a Web server with session recording enabled. This means that data written from the Web server to the file share server may happen across different physical locations, which may add to the complexity of your networking requirements and may cause network saturation.
+
 - If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down. 
+
 - Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
 
 ## Endpoint via Secret Server Credentials and Proxy
@@ -159,16 +166,23 @@ Textual data that passed through the proxy (client to server and server to clien
 #### Scenario A
 
 1. User logs on SS. User retrieves the proxy credential username and password for the configured secret. 
+
 1. User launches a PuTTY terminal session or RDP proxy session to a proxied Web server or DE, supplying the generated proxy credentials.
+
 1. The Web server or DE matches the proxy credentials to the correct secret and uses the real credentials to connect to the destination system. Thus, the real credentials are never exposed to you or your machine.
+
 1. Terminal output (server data) and client data (keystrokes) are recorded and are either written to the database by the Web server directly (Web server proxy) or is recorded by the DE proxy where the data is sent back in periodic 30-second chunks through RabbitMQ/MemoryMQ bus. The Web servers pull this work off the RabbitMQ/MemoryMQ bus for the engine worker role to store it in the database.
+
 1. SS indexes the textual information using its background worker role for presentation in the session monitoring page.
 
 #### Scenario B
 
 1. User launches a PuTTY terminal session or RDP proxy session to a proxied Web server or DE, supplying the user's credentials. This requires the user to access to the relevant secrets.
+
 1. The Web server or DE validates the username and password. If using a DE, a message is sent over the message bus to use SS to validate the credentials. The Web server provides a response to the DE. In some cases, SS may request additional information, such as a 2FA PIN code or a password re-do.
+
 1. Terminal output (server data) and client data (keystrokes) are recorded and are either written to the database by the Web server directly (Web server proxy) or is recorded by the DE proxy where the data is sent back in periodic 30-second chunks through RabbitMQ/MemoryMQ bus. The Web servers pull this work off the RabbitMQ/MemoryMQ bus for the engine worker role to store it in the database.
+
 1. SS indexes the textual information using its background worker role for presentation in the session monitoring page.
 
 ### Diagram
@@ -186,7 +200,9 @@ Textual data that passed through the proxy (client to server and server to clien
 ### Notes
 
 - Many of these ports are configurable. These diagrams reflect best practice ports. We strongly recommend using RabbitMQ for your message bus. The ports attached to RabbitMQ/MemoryMQ only need to be singular (SSL OR non-SSL). If using RabbitMQ for example, most customers will only need to utilize port TCP 5672.
+
 - This flow offers two different scenarios and is most relevant to Linux administrators and SSH-related secrets.
+
 - Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
 
 ## Endpoint via Secret Server Launcher and ASRA
@@ -204,7 +220,6 @@ User > Secret Server > Launcher > Endpoint System + Advanced Session Recording A
 - Data Gathered: Visual, process, keyboard. Video is created for video playback and enhanced with process and keyboard data from the ASRA. The data includes visual data provided during the connection sequence with the destination system. Recorded session for playback is based on secret name.
 
 > **Note:** As of the December 10th 2019 release, you can now choose from:
->
 > - Record keystrokes only
 > - Record video only 
 > - Do not record
@@ -250,10 +265,15 @@ User > Secret Server > Launcher > Endpoint System + Advanced Session Recording A
 ### Notes
 
 - Many of these ports are configurable. These diagrams reflect best practice ports. We strongly recommend using RabbitMQ for your message bus. The ports attached to RabbitMQ/MemoryMQ only need to be singular (SSL OR non-SSL). If using RabbitMQ for example, most customers will only need to utilize port TCP 5672.
+
 - This flow requires installing ASRA on the destination endpoint. ASRA is only available for Windows clients.
+
 - This flow can be combined with [SSH proxying](#endpoint-via-Secret-Server-Launcher-and-Proxy).
+
 - Session recording storage can be configured per site (separate file share servers), but the processing is still finalized from a Web server with session recording enabled. This means that data written from the Web server to the file share server may happen across different physical locations, which may add to the complexity of your networking requirements and may cause network saturation.
+
 - If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down.  
+
 - Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
 
 ## Endpoint and ASRA
@@ -271,7 +291,6 @@ User > Endpoint System + Advanced Session Recording Agent
 - Data Gathered: Visual, process, keyboard. Video is created for video playback and enhanced with process and keyboard data from the ASRA.
 
 > **Note:** As of the December 10th 2019 release, you can now choose from:
->
 > - Record keystrokes only
 > - Record video only 
 > - Do not record
@@ -303,8 +322,12 @@ User > Endpoint System + Advanced Session Recording Agent
 ### Notes
 
 - Many of these ports are configurable. These diagrams reflect best practice ports. We strongly recommend using RabbitMQ for your message bus. The ports attached to RabbitMQ/MemoryMQ only need to be singular (SSL OR non-SSL). If using RabbitMQ for example, most customers will only need to utilize port TCP 5672.
+
 - This flow requires installing ASRA on the destination endpoint. ASRA is only available for Windows clients.
+
 - This flow can be combined with [SSH proxying](#endpoint-via-Secret-Server-Launcher-and-Proxy).
+
 - Session recording storage can be configured per site (separate file share servers), but the processing is still finalized from a Web server with session recording enabled. This means that data written from the Web server to the file share server may happen across different physical locations, which may add to the complexity of your networking requirements and may cause network saturation.
+
 - If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server six times over the course of three hours. If that fails, it stops until the machine or service is restarted.
 - Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
