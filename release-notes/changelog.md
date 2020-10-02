@@ -20,6 +20,7 @@ Created the following topics from Salesforce articles (often including substanti
 Created or made significant changes to these topics:
 
 - All Secrets Page
+- Deleting Folders
 - Distributed Engine Hardening
 - Editing Folder Permissions
 - Syncing with DevOps Secret Vault

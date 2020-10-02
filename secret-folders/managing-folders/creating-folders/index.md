@@ -8,9 +8,9 @@ To create a folder:
 
 > **Note:** To create folders, you must have a role with the Administer Folder permission. You also must have Edit or Owner permission for the parent folder.
 
-1. Click the parent folder for the new folder in the folder tree in the main menu. If you do not select one, the root is assumed.
+1. Click the parent folder for the new folder in the folder tree in the main menu. If you do not select one, the root is assumed. The secrets and folders belonging to that folder appear.
 
-1. Click the ![1556810718437](images/1556810718437.png)icon and select **New Folder**. The Create New Folder pop-up page appears:
+1. Right click the folder and select **Add Subfolder**. The Create New Folder pop-up page appears:
 
    ![1556810830015](images/1556810830015.png)
 
