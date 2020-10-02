@@ -2,7 +2,7 @@
 [tags]: # (Upgrade, .net, secret server cloud)
 [priority]: # (1000)
 
-# SS and SSC .NET Framework 4.8 Upgrade
+# Secret Server and Secret Server Cloud .NET Framework 4.8 Mandatory Upgrade
 
 ## Introduction
 
@@ -12,7 +12,7 @@ The Microsoft .NET Framework is a core component of the SS architecture. SS vers
 
 The December 2020 releases of SS and SSC will change this requirement. From December 2020 onwards, version 4.8 or higher of the .NET Framework will be required.
 
-This change improves the security of communication between SS and distributed engines. It also allows Thycotic to maintain compatibility with other third party libraries required by SS and SSC.
+This change improves the security of communication between SS and distributed engines. It also allows Thycotic to maintain compatibility with other third party libraries required by SS and SSC. SS online is not impacted by these changes.
 
 ## Preparing Secret Server for the December Release
 
@@ -155,6 +155,10 @@ The following components of SS and SSC are not affected by this change:
 
 - You can run the following command at a Windows PowerShell prompt to view currently installed .NET Framework version number:
   `(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").version`
+  
+- SS on-premises (not SSC)  displays the .NET framework version on the Admin \> Diagnostics page.  The version displayed is for the Web server being accessed. It does not include information about the .NET Framework version installed on any other server.
+  
+  > **Important:** The version displayed on the Diagnostics page incorrectly identifies .NET Framework 4.8 as version 4.5.1 followed by a release number, such as 4.5.1.528040. If the release number is 528040 or higher, the framework version number is 4.8. If the release number is lower than 528040 or the release number is not displayed at all, the framework version is lower than 4.8 and an the mandatory update is required.
 
 ## Installing .NET Framework 4.8
 
