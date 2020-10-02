@@ -4,9 +4,9 @@
 
 # Deleting Folders
 
-To create a folder:
+To delete a folder:
 
-> **Note:** To create folders, you must have a role with the Administer Folder permission. You also must have Edit or Owner permission for the parent folder.
+> **Note:** To delete folders, you must have a role with the Administer Folder permission. You also must have Edit or Owner permission for the parent folder.
 
 1. Navigate to the folder in the folder tree on the main menu.
 
