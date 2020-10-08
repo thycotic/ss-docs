@@ -14,4 +14,4 @@
 
 1. To edit additional parameters (if applicable), click **Edit** from the password changer overview to change settings such as the name, line ending, and custom port.
 
-> **Note:** For more information about creating a custom PowerShell password changer, see [PowerShell Remote Password Changing](https://updates.thycotic.net/links.ashx?PowerShellPasswordChanging) (KB).
+> **Note:** For more information about creating a custom PowerShell password changer, see [Remote Password Changing with PowerShell](https://updates.thycotic.net/links.ashx?PowerShellPasswordChanging).
