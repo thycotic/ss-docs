@@ -133,8 +133,10 @@ Active Directory integration allows users to log in with their domain credential
 1. Click **Sync Secret** to select the secret you just created.
 
    > **Note**: The domain site is set to default. This means that the Active Directory authentication and synchronization will run through the distributed engine service installed on your network.
+   >
+   > **Note:** Do **not** select "Enable Login from AD." If you do, you cannot set the domain groups later in this instruction.
 
-1.   Click the **Save** button.
+1.   Click the **Save and Validate** button.
 
 1.   Click the **Back** button.
 
