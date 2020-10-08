@@ -41,6 +41,17 @@ Read permissions:
 
 - Read Control
 
+**HKEY_LOCAL_MACHINE \> SYSTEM \> CurrentControlSet \> Services \> EventLog \> State**
+
+Applies to key and subkeys. Only applies to Windows Server 2019.
+
+Read permissions:
+
+- Query Value
+- Enumerate Subkeys
+- Notify
+- Read Control
+
 ## Applying Windows Event Log Permissions
 
 1. Determine the account that is running SS:
@@ -91,3 +102,4 @@ Read permissions:
 
 1. Click the **OK** button to apply the permission.
 
+1. If you are running Windows Server 2019, use the same procedure to add Read permission to **HKEY_LOCAL_MACHINE \> SYSTEM \> CurrentControlSet \> Services \> EventLog \> State**.
