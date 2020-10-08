@@ -8,7 +8,7 @@ SS remote password changing (RPC) provides the ability to either start a passwor
 
 ## Enabling Remote Password Changing
 
-See [Enabling RPC](../../remote-password-changing/custom-password-changers/enabling-RPC/index.md).
+See [Enabling RPC](../../remote-password-changing/custom-password-changers/enabling-rpc/index.md).
 
 ## Performing a Manual RPC
 
