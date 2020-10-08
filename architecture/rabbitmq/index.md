@@ -18,7 +18,7 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ traffic is set via static DNS entry and communicates by TCP port 5671 or 5672.
+- RabbitMQ traffic is set via static DNS entry and communicates by TCP port 5671 or 5672 (do not use if using TLS).
 
 - All Sites connect to one site connector in SS.
 
@@ -49,7 +49,7 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ traffic is set via static DNS entry and communicates by TCP port 5671 or 5672. You can use a CNAME record and update the record during failover.
+- RabbitMQ traffic is set via static DNS entry and communicates by TCP port 5671 or 5672 (do not use if using TLS). You can use a CNAME record and update the record during failover.
 
 - All Sites connect to one site connector in SS.
 
@@ -79,7 +79,7 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ load balancer configuration only sends traffic to only node one unless it is down, then then it sends traffic to node two. Communicates by TCP port 5671 or 5672. This provides localized high availability for patching and more. 
+- RabbitMQ load balancer configuration only sends traffic to only node one unless it is down, then then it sends traffic to node two. Communicates by TCP port 5671 or 5672 (do not use if using TLS) . This provides localized high availability for patching and more. 
 
 - Singular nodes built as part of a load balancer configuration between multiple data centers is also a design possibility with the same type of load balancer configuration mentioned above. Do so will lose localized HA of RabbitMQ.
 
@@ -111,7 +111,7 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ traffic is set to round-robin through load balancers to RabbitMQ nodes in cluster. Communicates by TCP port 5671 or 5672.  
+- RabbitMQ traffic is set to round-robin through load balancers to RabbitMQ nodes in cluster. Communicates by TCP port 5671 or 5672 (do not use if using TLS).  
 
 - All Sites connect to one site connector in Secret Server (RabbitMQ FQDN).
 
@@ -139,7 +139,7 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ traffic for each local load balancer configuration is set to round-robin traffic through load balancer to RabbitMQ nodes in each respective cluster. Communicates by TCP port 5671 or 5672. 
+- RabbitMQ traffic for each local load balancer configuration is set to round-robin traffic through load balancer to RabbitMQ nodes in each respective cluster. Communicates by TCP port 5671 or 5672 (do not use if using TLS). 
 
 - Two site connectors configured in SS. This is a good design for manual failover between the primary and disaster recovery site but will require manual changes within SS for full functionality to resume in DR. The distributed engines global configuration has only the option for one response bus. This implies that traffic may be sent to one RabbitMQ cluster but will be processed via response by the primary data center RabbitMQ cluster.  
 
@@ -167,7 +167,7 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ traffic is set to force all traffic to the primary cluster in the primary site, unless the primary site is down. Communication through load balancer is via TCP port 5671 or 5672
+- RabbitMQ traffic is set to force all traffic to the primary cluster in the primary site, unless the primary site is down. Communication through load balancer is via TCP port 5671 or 5672 (do not use if using TLS).
 
 - Options available for site connector creation or use:
 
