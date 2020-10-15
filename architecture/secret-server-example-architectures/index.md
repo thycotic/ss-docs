@@ -26,7 +26,7 @@
 
 - Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single node unplanned failures.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
@@ -72,7 +72,7 @@
 
 - Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single node unplanned failures.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
@@ -129,7 +129,7 @@
 
 - Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single-node unplanned failures. A cloud witness is recommended. 
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
@@ -203,7 +203,7 @@
 
 - Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single-node unplanned failures. A cloud witness is recommended. 
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
@@ -263,7 +263,7 @@
 
 - Configuring a file share witness for SQL quorum voting is recommended. A cloud witness or DFSR share is recommended for witness configuration. Simultaneous failure of both SQL nodes in the primary location will still allow cluster to survive.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
@@ -331,7 +331,7 @@
 
 - Configuring a file share witness for SQL quorum voting is recommended. A cloud witness or DFSR share is recommended for witness configuration. Simultaneous failure of both SQL nodes in the primary location will still allow cluster to survive.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
@@ -387,7 +387,7 @@
 
 - Configuring a file share witness for SQL quorum voting is recommended. A cloud witness or DFSR share is recommended for witness configuration. Simultaneous failure of both SQL nodes in the primary location will still allow cluster to survive.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
