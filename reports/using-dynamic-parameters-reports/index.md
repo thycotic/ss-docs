@@ -68,7 +68,7 @@ FROM tbAuditUser tau INNER JOIN tbUser tu ON tau.UserId=tu.UserId WHERE tu.UserI
 
 ### #ORGANIZATION
 
-This is an internal parameter used for determining the current instance's organization code. This is only useful for Secret Server Cloud.  There is no need to use this parameter in your reports for on-premises edition.
+This is an internal parameter that returns the current instance's organization code. This is only useful for Secret Server Online (a legacy product, which is *not* the same as Secret Server Cloud).  Do not use this parameter in your reports for either Secret Server On-Premises or Secret Server Cloud.
 
 > **Note:** As of Secret Server 7.8.000048 the #GROUP parameter is also available.
 
