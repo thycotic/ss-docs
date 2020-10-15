@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This topic explains the steps to prepare your environment for the December 2020 upgrade to Secret Server (SS) and Secret Server Cloud (SSC).
+This topic explains the steps to prepare your environment for the December 2020 upgrade to Secret Server (SS) and Secret Server Cloud (SSC). These changes must be made before the December release is deployed.
 
 The Microsoft .NET Framework is a core component of the SS architecture. SS versions up to and including 10.9.000002 require version 4.5.1 or higher of the .NET Framework.
 
@@ -14,9 +14,12 @@ The December 2020 releases of SS and SSC will change this requirement. From Dece
 
 This change improves the security of communication between SS and distributed engines. It also allows Thycotic to maintain compatibility with other third party libraries required by SS and SSC. SS online is not impacted by these changes.
 
+The December release is scheduled for SS installed (on-premise) customers on 8 December 2020.
+ The December release is scheduled for SSC customers on 12 December 2020.
+
 ## Preparing Secret Server for the December Release
 
-To accommodate this change in software requirements, SS and SSC customers may need to install .NET Framework 4.8 on the computer systems hosting components of SS in their environment. The required actions, workarounds where available, and impact of not taking action are listed here for each component of SS infrastructure:
+To accommodate this change in software requirements, SS and SSC customers may need to install .NET Framework 4.8 runtime on the computer systems hosting components of SS in their environment. These changes can be made in advance without impacting the operation of your current version of SS or SSC. The required actions, workarounds, and the impact of not taking action are listed here for each component of SS infrastructure:
 
 ### Secret Server Web Nodes
 
@@ -136,14 +139,31 @@ Although the December release will not require .NET Framework 4.8, future update
 
 None: Connection Manager will be updated to require .NET Framework 4.8 at a later date.
 
+## Identifying Distributed Engine Servers
+
+To identify which servers in your environment are running Distributed Engines and may require a .NET Framework 4.8 update:
+
+1. In SS, go to **Admin > Distribute Engine**. The Distributed Engine Configuration page appears:
+
+    ![image-20201015135820974](images/image-20201015135820974.png)
+
+1. Click the **Manage Sites** button. The Manage Sites page appears:
+
+    ![image-20201015140958470](images/image-20201015140958470.png) 
+
+1. Click the name of the site you want to inspect in the **Site Name** column. The Site View page for that site appears:
+
+    ![image-20201015141855328](images/image-20201015141855328.png)
+
+1. Note the servers in your environment that currently have distributed engines installed. These are the machines where you need to install the .NET 4.8 runtime.
+
 ## Unaffected Secret Server Components
 
 The following components of SS and SSC are not affected by this change:
 
+- SQL Server. Database system requirements are not affected by this change.
 - Web password filler
-
 - SS Desktop Application
-
 - SS Mobile
 
 
