@@ -18,10 +18,6 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ### Overview
 
-- Minimum-cost HA configuration.
-- No shared storage requirement.
-- DEs for HA of local site, which is included with all licensing models.
-- Single-site design with no native DR capacity. DR can be provided by VM replication if subnets are spanning locations, otherwise re-IP + DNS changes may be necessary.
 
 > **Note:** Please see [Secret Server Example Architectures](../secret-server-example-architectures/index.md) for additional design variations.
 
@@ -156,7 +152,6 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
 
-
 > **Note:** Please see [Secret Server Example Architectures](../secret-server-example-architectures/index.md) for additional design variations.
 
 ### Requirements
@@ -205,18 +200,6 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ### Overview
 
-- Higher-cost HA configuration.
-- No shared storage requirement.
-- RabbitMQ installed on dedicated systems.
-- Uses a single RabbitMQ site connector design.
-- Two DEs for HA of local site, which is included with all licensing models.
-- Local site for AD or LDAP, SMTP, SIEM, or RADIUS integration.
-- DR site acts as temporary site only with no intention for long-term usage—down DR site services can incur system downtime.
-- Secondary SQL Server node at primary location is for planned failover (such as patching). Secondary SQL Server node in DR site is for unplanned failover.
-- DE in DR location can be in passive/standby mode.
-- DEs in primary and DR Locations require connectivity to managed endpoints in both locations.
-- Can accommodate automatic failover with synchronous replication (30 ms or less latency between SQL Server DB nodes).
-- Global load balancers for Web and RMQ configurations are configured to force all traffic to primary site unless primary site is down (priority group activation).
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
 
 > **Note:** Please see [Secret Server Example Architectures](../secret-server-example-architectures/index.md) for additional design variations.
@@ -269,22 +252,11 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ### Overview
 
-- Higher-cost HA configuration.
-- No shared storage requirement.
-- RabbitMQ installed on dedicated systems.
-- Uses a single RabbitMQ site connector design.
-- Two DEs for HA of local site, which is included with all licensing models.
-- Distributed Engine licenses required for this design: 
 
   - Two DE site licenses added (for DMZ and cloud locations), one DE included per site.
 
   - One DE per site license added, which allows for second DE in each DE site for HA and a third one for the local site (added to the primary location).
-- DR site acts as temporary site only with no intention for long-term usage—down DR site services can incur system downtime.
-- Secondary SQL Server node at primary location is for planned failover (such as patching). Secondary SQL Server node in DR site is for unplanned failover.
-- DE in DR location can be in passive/standby mode.
-- DEs in primary and DR Locations require connectivity to managed endpoints in both locations.
-- Can accommodate automatic failover with synchronous replication (30 ms or less latency between SQL Server DB nodes).
-- Global load balancers for Web and RMQ configurations are configured to force all traffic to primary site unless primary site is down (priority group activation).
+
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
 
 > **Note:** Please see [Secret Server Example Architectures](../secret-server-example-architectures/index.md) for additional design variations.
@@ -337,23 +309,12 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ### Overview
 
-- Higher-cost HA/DR configuration.
-- No shared storage requirement.
-- RabbitMQ clusters installed on dedicated systems.
-- Uses a single RabbitMQ site connector design.
-- Two DEs for HA of local site, which is included with all licensing models.
-- Local site for AD or LDAP, SMTP, SIEM, or RADIUS integration.
 - Distributed Engine licenses required for this design: 
 
   - Two DE site licenses added (for secret and discovery tasks), one DE included per site.
 
   - One DE per site license added, which allows for second DE in each DE site for HA and a third one for the local site (added to the primary location).
-- DR site acts as temporary site only with no intention for long-term usage—down DR site services can incur system downtime.
-- Secondary SQL Server node at primary location is for planned failover (such as patching). Secondary SQL Server node in DR site is for unplanned failover.
-- DE in DR location can be in passive/standby mode.
-- DEs in primary and DR Locations require connectivity to managed endpoints in both locations.
-- Can accommodate automatic failover with synchronous replication (30 ms or less latency between SQL Server DB nodes).
-- Global load balancers for Web and RMQ configurations are configured to force all traffic to primary site unless primary site is down (priority group activation).
+
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
 
 > **Note:** Please see [Secret Server Example Architectures](../secret-server-example-architectures/index.md) for additional design variations.
@@ -406,23 +367,11 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ### Overview
 
-- Higher-cost HA/DR configuration.
-- No shared storage requirement.
-- RabbitMQ clusters installed on dedicated systems.
-- Uses a single RabbitMQ site connector design.
-- Two DEs for HA of local site, which is included with all licensing models.
-- Local site for AD or LDAP, SMTP, SIEM, or RADIUS integration.
 - Distributed Engine licenses required for this design: 
 
   - Five DE site licenses added (for primary secret and discovery tasks, DMZ site, and cloud secret and discovery tasks), one DE included per site.
 
   - Two DE per site licenses added, which allows for second DE in each DE site for HA and a third one for the local site (added to the primary and DR locations).
-- DR site acts as temporary site only with no intention for long-term usage—down DR site services can incur system downtime.
-- Secondary SQL Server node at primary location is for planned failover (such as patching). Secondary SQL Server node in DR site is for unplanned failover.
-- DE in DR location can be in passive/standby mode.
-- DEs in primary and DR Locations require connectivity to managed endpoints in both locations.
-- Can accommodate automatic failover with synchronous replication (30 ms or less latency between SQL Server DB nodes).
-- Global load balancers for Web and RMQ configurations are configured to force all traffic to primary site unless primary site is down (priority group activation).
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
 
 > **Note:** Please see [Secret Server Example Architectures](../secret-server-example-architectures/index.md) for additional design variations.

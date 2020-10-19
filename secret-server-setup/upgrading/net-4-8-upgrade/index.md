@@ -6,7 +6,7 @@
 
 ## Introduction
 
-This topic explains the steps to prepare your environment for the December 2020 upgrade to Secret Server (SS) and Secret Server Cloud (SSC). These changes must be made before the December release is deployed.
+This topic explains the steps to prepare your environment for the December 2020 upgrade to Secret Server (SS) and Secret Server Cloud (SSC). These changes must be made before the December release is deployed. Secret Server Online is not affected by these changes.
 
 The Microsoft .NET Framework is a core component of the SS architecture. SS versions up to and including 10.9.000002 require version 4.5.1 or higher of the .NET Framework.
 
@@ -143,7 +143,7 @@ None: Connection Manager will be updated to require .NET Framework 4.8 at a late
 
 To identify which servers in your environment are running Distributed Engines and may require a .NET Framework 4.8 update:
 
-1. In SS, go to **Admin > Distribute Engine**. The Distributed Engine Configuration page appears:
+1. In SS, go to **Admin > Distributed Engine**. The Distributed Engine Configuration page appears:
 
     ![image-20201015135820974](images/image-20201015135820974.png)
 
