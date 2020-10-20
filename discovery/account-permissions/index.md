@@ -15,13 +15,31 @@ The scanning account needs “Shell Access” and the “Query VRM Policy” per
 
 ## Local Windows Accounts
 
-The scanning account needs the “Access This Computer From the Network” permission. To find this permission:
+The scanning account needs the “Access This Computer From the Network” permission (and possibly one more) on the endpoint:
 
 1. Open the local group policy editor (gpedit.msc).
 
 1. Go to **Computer Configuration \> Windows Settings \> Security Settings \> Local Policies \> User Rights Assignment**.
 
-1. For Windows 2016/Win10 endpoints, edit the security policy for "Network Access: Restrict Clients allowed to make remote calls to SAM,” adding the account used for discovery and giving it “Allow” permissions.
+1. Double-click the **Access this computer from the network** policy. The properties for the policy appears.
+
+1. Ensure the scanning account is one of the listed users. If not, click the **Add User or Group** button to add it.
+
+1. For Windows 2016 or Windows 10 endpoints:
+
+   1. **Computer Configuration \> Windows Settings \> Security Settings \> Local Policies \> Security Options**.
+
+   1. Double-click the **Network access: Restrict clients allowed to make remote calls to SAM** policy. The policy properties appear.
+
+   1. Click the **Edit Security** button to select an account for the Security descriptor text box. The Security Setting for Remote Access to SAM dialog box appears.
+
+   1. Ensure the scanning account is present (if not add it).
+
+   1. Click the account in the **Group or user names** list. The permissions for that account appear.
+
+   1. Ensure the **Allow** check box next to the **Remote Access** permission is selected.
+
+   1. Click the **OK** button.
 
 > **Note:** For more information refer to [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
