@@ -3,7 +3,7 @@
 [priority]: # (1001)
 [display]: # (all)
 
-# Secret Server: Cloud Release Notes - October 2020
+# Secret Server: Cloud Release Notes * October 2020
 
 October 24, 2020
 
@@ -30,3 +30,11 @@ The following bug fixes apply to Secret Server Cloud only.
 * Fixed an intermittent issue with the bulk exportation of event logs.
 * Fixed an issue where a secret’s audit log accumulated an excessive number of encryption and decryption event messages.
 * Fixed additional infrastructure bugs affecting the overall stability of Secret Server Cloud.
+
+The following bug fixes have been included in this cloud release based on fixes previously provided to on-prem instances via the September 10.9.000002 release:
+
+* Fix to Discovery rules to correctly handle OUs with bracketed names.
+* Secret names in reports are now links to the corresponding secret.
+* Logout from Secret Server no longer sends the `Clear-Site-Data` header, which could previously log users out of unrelated Web applications. 
+* SSH connections via SSH proxy now close correctly. 
+* Fixed an SSH proxy connection timeout when connecting via a distributed engine. 
