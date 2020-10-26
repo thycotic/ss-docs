@@ -11,6 +11,8 @@
 * [Secret Server 10.9.000002](ss-rn-10-9-000002.md)
 * [Secret Server Cloud - October 2020](ss-rn-10-9-cloud-24oct2020.md)
 
+[Secret Server Cloud 2020-10-24 Supplement to 10.9.000002](ssc-rn-2020-10-24.md)
+
 >**Note:** The system requirements last changed with version 10.7.000000. See [that version's release notes](./ss-rn-10-7-000000.md) for details.
 
 ## Secret Server On-Premises Legacy
