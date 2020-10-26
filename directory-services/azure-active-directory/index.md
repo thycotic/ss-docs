@@ -7,6 +7,8 @@
 Integrate Secret Server with Azure Active Directory
 ====================
 
+> **Important:** This integration requires .NET Framework version 4.8 or later.
+
 Use these steps to integrate Secret Server with Azure Active Directory:
 
 ## Task 1: Configure Azure
@@ -47,7 +49,7 @@ Use these steps to integrate Secret Server with Azure Active Directory:
 
 1. Click the **Microsoft Graph** button. Another Request API permissions page appears.
 
-1. Add the following permissions:
+1. Add the following application permissions:
    * Group.Read.All
    * GroupMember.Read.All
    * Member.Read.Hidden

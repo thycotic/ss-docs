@@ -79,12 +79,11 @@ Secret Server may be activated on an Airgap Network for both Trials and Licensed
 
 **If we have trouble activating our licenses, what should we do?**
 
-1. Please watch the demo at the top of this page to review how the process is supposed to work.
-
 1. If your Secret Server is currently supported, that is, there is a current support license for each user license, our technical support team will be able to help you. Please [contact us](http://thycotic.com/products/secret-server/support-2/).
 
 1. If an error message persists after successful activation, remove expired/invalid licenses from Secret Server by clicking the license name and then Delete (the license information will remain available to you from your account at [my.thycotic.com](http://my.thycotic.com)).
 
-1. **My Server is a VM that moves to different hardware often.  Will this cause me to need to reactivate over and over?**
+
+**My Server is a VM that moves to different hardware often.  Will this cause me to need to reactivate over and over?**
 
 As of version 7.8.000000, you will not need to reactivate over and over. When you activate, you will be able to use Secret Server for a year without needing to reactivate regardless VM hardware changes. However, if your machine name changes as well as your hardware, you will need to reactivate. If you are using a version older than 7.8.000000, you will need to reactivate when the VM moves.

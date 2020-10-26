@@ -28,19 +28,35 @@ Before you contact Support, gather the following information:
 
 ## Step Two: Get a Mandatory Support PIN
 
+### Secret Server
+
 The support PIN validates that your license includes support, and you must provide the PIN in your email or when you call. The PIN also makes it easier for Thycotic Support to locate your customer records and give you better support.
 
 To get your PIN:
 
-1. Get the log on credentials you received when you became a Thycotic customer.
-
+1. Get the log on the credentials you received when you became a Thycotic customer.
 1. Log on the [Support Portal](https://thycotic.force.com/support/s/login/) using your credentials.
+1. On the main page, click the large blue **PIN** bar to get your PIN. The PIN appears on the button.
+1. Record your PIN.
+1. If you want to use our ticketing system for support, leave the browser tab open, and return for step four.
 
-1. On the main page, click the large blue **PIN** bar to get your PIN.
+### Secret Server Cloud
+
+The support PIN validates that your license includes support, and you must provide the PIN in your email or when you call. The PIN also makes it easier for Thycotic Support to locate your customer records and give you better support. In addition, there is an additional "privileged PIN" for accessing your cloud instance.
+
+To get your PIN:
+
+1. Log on the Cloud Manager Dashboard at [https://portal.thycotic.com](https://portal.thycotic.com/).
+
+1. Click the **Generate Tech Support** PIN button. A Tech Support PIN popup appears. 
 
 1. Record your PIN.
 
-1. If you want to use our ticketing system for support, leave the browser tab open, and return for step four.
+1. Click the Generate Privilege PIN button. Another Tech Support PIN popup appears.
+
+1. Record your privileged PIN. Note that privileged PINs begin with "p"
+
+   > **Important:** Providing us a privileged PIN gives Thycotic Technical Support write access to your cloud database for one day. Secrets and other sensitive data remain encrypted and unreadable.
 
 ## Step Three: Choose a Support Method
 

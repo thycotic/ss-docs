@@ -4,7 +4,7 @@
 
 # Password Changing Scripts
 
-PowerShell scripts, SSH scripts, and SQL scripts for password changing, dependencies, and discovery custom actions can be created by administrators with the role permission called Administer Scripts. The scripts can be accessed by going to **Administration > Remote Password Changing > Scripts**.
+PowerShell scripts, SSH scripts, and SQL scripts for password changing (PowerShell only), dependencies, and discovery custom actions can be created by administrators with the role permission called Administer Scripts. The scripts can be accessed by going to **Administration > Remote Password Changing > Scripts**.
 
 > **Note:** SS requires that WinRM is configured on the Web server. For instructions please see [Configuring WinRM for PowerShell](https://updates.thycotic.net/links.ashx?SetUpPowerShell).
 

@@ -75,9 +75,9 @@ Recommended for organizations deploying discovery, session recording,or increase
 
 - A link to Microsoft documentation on the use and limitations of SQL Express can be found at: https://docs.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2017.
 
-- **Installing Secret Server with Azure SQL**: Currently, we do not recommend using SS with Azure SQL when the Web host and the Azure SQL instance are in different datacenters. According to Microsoft, applications, such as SS, that use frequent, high-volume, ad hoc queries use substantial response time on network communication between the application and Azure SQL database tiers. Thus, network latency with many data access operations across datacenters can become an issue.
+- Installing Secret Server with Azure SQL: Currently, we do not recommend using SS with Azure SQL when the Web host and the Azure SQL instance are in different datacenters. According to Microsoft, applications, such as SS, that use frequent, high-volume, ad hoc queries use substantial response time on network communication between the application and Azure SQL database tiers. Thus, network latency with many data access operations across datacenters can become an issue.
 
-- **Unsupported Web Servers**: Small Business Server (SBS), The Essentials Edition, Any client OS, domain controllers, SharePoint servers.
+- Unsupported Web Servers: Small Business Server (SBS), The Essentials Edition, Any client OS, domain controllers, SharePoint servers.
 
 - Secret Server Cloud requires an on-premise machine to use a distributed engine.
 
@@ -88,4 +88,18 @@ Recommended for organizations deploying discovery, session recording,or increase
 - AWS RDS: Currently, we do not recommend using SS with AWS Relational Database Service when the Web host and the SQL instance are in different datacenters. Applications, such as SS, that use frequent, high-volume, ad hoc queries depend on fast network communication response time between the application and SQL database. Thus, network latency with many data access operations across datacenters can become an issue.
 
 - Secret Server (SS) requires the application pool to have the “load user profile” setting enabled. Secret Server will report a critical alert to notify admins if this setting is not enabled.
+
+- Supported Web browsers: 
+
+  - Google Chrome
+  
+  - Mozilla Firefox
+  
+  - Microsoft Edge. Edge Chromium only. Legacy Microsoft Edge is not supported.
+  
+  - Safari
+  
+  - Microsoft Internet Explorer 11. Support for Internet Explorer 11 will end on 31 August 2021.
+
+  
 
