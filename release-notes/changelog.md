@@ -12,13 +12,10 @@ The following is a chronological list of significant documentation changes. Mino
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
 - Moving the Microsoft SQL Server Database to Another Machine
-
 - OpenID Connect Integration
-
 - Troubleshooting SSH Issues
-
 - Uninstalling Secret Server (PDF)
-
+- Upgrading Secret Server
 - VMware Issues
 
 Created or made significant changes to these topics:
