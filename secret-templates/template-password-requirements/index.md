@@ -22,7 +22,7 @@ To create a new password requirement:
 
 1. Click the **Password Requirements** button. The Password Requirements page appears:
 
-   ![1567712171025](images/1567712171025.png)
+   ![image-20201020141139645](images/image-20201020141139645.png)
 
 1. Click the **Create New** button.
 
