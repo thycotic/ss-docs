@@ -1,5 +1,5 @@
-[title]: # (Installing and Configuring SQL Server)
-[tags]: # (Installation, SQL Server)
+[title]: # "Installing and Configuring SQL Server"
+[tags]: # "Installation, SQL Server"
 [priority]: #
 
 # Installing and Configuring SQL Server
@@ -24,7 +24,7 @@ Setting up SQL Server requires:
 
 ### SQL Authentication
 
-The fastest method to get started with Secret Server is to create a  SQL Authentication account. Follow the instructions in the Database section of the [Installation Guide](http://updates.thycotic.net/link.ashx?Windows6InstallerGuide).
+The fastest method to get started with Secret Server is to create a  SQL Authentication account. Follow the instructions in the Database section of the [Installation Guide](../basic-installation-automatic/index.md).
 
 For troubleshooting and configuring SQL installation on a different server that the application server see [SQL Authentication Configuration](http://updates.thycotic.net/link.ashx?SSSQLAuthenticationSetup) article.
 

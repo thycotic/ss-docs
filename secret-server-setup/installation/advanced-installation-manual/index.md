@@ -1,5 +1,5 @@
-[title]: # (Advanced Installation)
-[tags]: # (Install)
+[title]: # "Advanced Installation"
+[tags]: # "Install"
 [priority]: #
 
 # Advanced (Manual) Installation
@@ -83,7 +83,7 @@ Your SS advanced installation is now ready to complete:
 
 1. Click the **Install** **Secret Server** button.
 
-1. On the **SQL Server Location** page, specify the server name of your SQL Database Server, `DatabaseMachineName)\InstanceName` and then the database name that you created in SQL for SS.
+1. On the **SQL Server Location** page, specify the server name of your SQL Database Server, `<DatabaseMachineName>\InstanceName` and then the database name that you created in SQL for SS.
 
 1. If you are using Windows authentication mode to access SQL (recommended), ensure the correct service account is listed.
 
