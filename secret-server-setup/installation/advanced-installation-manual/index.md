@@ -1,6 +1,6 @@
 [title]: # (Advanced Installation)
 [tags]: # (Install)
-[priority]: #
+[priority]: # (1000)
 
 # Advanced (Manual) Installation
 
@@ -79,11 +79,13 @@ Open Internet Information Services (IIS) Manager* and create a new application p
 
 Your SS advanced installation is now ready to complete:
 
+1. [Install your SQL Server](../installing-sql-server/index.md).
+
 1. Open a browser and navigate to where your Secret Server is located, such as `http://localhost/secretserver`. You should arrive at a page that says "Secret Server (Not Installed or Unable to Access the Database)."
 
 1. Click the **Install** **Secret Server** button.
 
-1. On the **SQL Server Location** page, specify the server name of your SQL Database Server, `DatabaseMachineName)\InstanceName` and then the database name that you created in SQL for SS.
+1. On the **SQL Server Location** page, specify the server name of your SQL Database Server, `<DatabaseMachineName>\InstanceName` and then the database name that you created in SQL for SS.
 
 1. If you are using Windows authentication mode to access SQL (recommended), ensure the correct service account is listed.
 
