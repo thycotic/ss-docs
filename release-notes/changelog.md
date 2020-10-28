@@ -11,33 +11,62 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
+- Minimum Permissions for Active Directory Remote Password Changing
+
 - Moving the Microsoft SQL Server Database to Another Machine
+
 - OpenID Connect Integration
+
+- SQL Server Authentication Configuration
+
+- SQL Server Replication Best Practices
+
 - Troubleshooting SSH Issues
+
 - Uninstalling Secret Server (PDF)
+
 - Upgrading Secret Server
+
 - VMware Issues
 
 Created or made significant changes to these topics:
 
 - Account Permissions for Discovery
+
 - All Secrets Page
+
 - Creating and Editing Custom Password-Exclusion Dictionaries
+
 - Creating or Editing Secret Templates
+
 - Deleting Folders
+
 - Distributed Engine Hardening
+
 - Editing Folder Permissions
+
 - Remote Password Changing on SQL Server Accounts
+
 - Syncing with DevOps Secret Vault
+
 - Secret Import and Export
+
 - Secret Server and Privilege Manager Example Architectures
+
 - Secret Server and Secret Server Cloud .NET Framework 4.8 Mandatory Upgrade
+
 - Secret Server Cloud Architecture
+
 - Secret Server Cloud Quick Start
+
 - Secret Server Example Architectures
+
 - Security Hardening Guide (Adjusting CORS Policy Headers)
+
 - Session Recording Example Architectures
+
 - Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets
+
 - User Interfaces, Themes, and Color Modes
 
 

@@ -1,6 +1,6 @@
-[title]: # "Advanced Installation"
-[tags]: # "Install"
-[priority]: #
+[title]: # (Advanced Installation)
+[tags]: # (Install)
+[priority]: # (1000)
 
 # Advanced (Manual) Installation
 
@@ -78,6 +78,8 @@ Open Internet Information Services (IIS) Manager* and create a new application p
 ### Step 5: Completing Secret Server Installation from the Website
 
 Your SS advanced installation is now ready to complete:
+
+1. [Install your SQL Server](../installing-sql-server/index.md).
 
 1. Open a browser and navigate to where your Secret Server is located, such as `http://localhost/secretserver`. You should arrive at a page that says "Secret Server (Not Installed or Unable to Access the Database)."
 

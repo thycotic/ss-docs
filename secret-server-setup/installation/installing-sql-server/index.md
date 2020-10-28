@@ -1,10 +1,10 @@
-[title]: # "Installing and Configuring SQL Server"
-[tags]: # "Installation, SQL Server"
-[priority]: #
+[title]: # (Installing and Configuring SQL Server)
+[tags]: # (Installation, SQL Server)
+[priority]: # (1000)
 
 # Installing and Configuring SQL Server
 
-For step-by-step instructions on how to install SQL 2016, see our example [SQL 2016 Installation guide here](../installing-sql-server-2016/index.md).
+For step-by-step instructions on how to install SQL 2016, see [SQL Server 2016 Standard Edition Installation](../installing-sql-server-2016/index.md).
 
 Secret Server requires Microsoft SQL Server as the back-end database. All editions including the Express version of 2012–2017 are supported.
 
@@ -26,7 +26,7 @@ Setting up SQL Server requires:
 
 The fastest method to get started with Secret Server is to create a  SQL Authentication account. Follow the instructions in the Database section of the [Installation Guide](../basic-installation-automatic/index.md).
 
-For troubleshooting and configuring SQL installation on a different server that the application server see [SQL Authentication Configuration](http://updates.thycotic.net/link.ashx?SSSQLAuthenticationSetup) article.
+For troubleshooting and configuring SQL installation on a different server that the application server see [SQL Authentication Configuration](../sql-authentication-config/index.md) article.
 
 ### Windows Authentication
 
