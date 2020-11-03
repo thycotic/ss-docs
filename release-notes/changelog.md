@@ -11,22 +11,18 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
+- Enabling Debug Mode in Distributed Engine Log Files
+- Enabling Debug Mode in System Log Files
 - Minimum Permissions for Active Directory Remote Password Changing
-
 - Moving the Microsoft SQL Server Database to Another Machine
-
 - OpenID Connect Integration
-
+- Outputting Syslog Events to a File
 - SQL Server Authentication Configuration
-
 - SQL Server Replication Best Practices
-
+- Syslog Events
 - Troubleshooting SSH Issues
-
 - Uninstalling Secret Server (PDF)
-
 - Upgrading Secret Server
-
 - VMware Issues
 
 Created or made significant changes to these topics:
