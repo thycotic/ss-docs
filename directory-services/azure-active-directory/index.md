@@ -1,71 +1,135 @@
-[title]: # (Integrate Secret Server with Azure Active Directory)
+[title]: # (Azure Active Directory)
 [tags]: # (Azure, directory service, active directory)
 [priority]: # (1000)
 
 [display]: # (all)
 
-Integrate Secret Server with Azure Active Directory
-====================
+# Integrate Secret Server with Azure Active Directory
 
 > **Important:** This integration requires .NET Framework version 4.8 or later.
 
-Use these steps to integrate Secret Server with Azure Active Directory:
+Use these steps to integrate Secret Server with Azure Active Directory.
 
-## Task 1: Configure Azure
+## Azure Portal
 
-1. Open a browser.
+### Create the App Registration
 
-1. Navigate to the Microsoft Azure dashboard.
+1. Login to the Azure Portal
+1. Switch to the intended Directory (_if needed_)
+1. Navigate to the **Azure Active Directory** blade
+1. Click **App registrations** on the left pane, under the Manage section
 
-1. Click the **Azure Active Directory** menu item on the left and select **App registrations**. The App Registrations panel appears.
+   ![App registrations icon from the portal](./images/appregistration_icon.png)
 
-1. Click the **New registration** button. The "Register an application" page appears.
+1. Click **New registration**
+1. In the **Register an application** blade enter the following:
 
-1. Type `Thycotic Secret Server` in the **Name** text box.
+   | Field | Value |
+   | -------------- | ------------------- |
+   | Name | `Thycotic Secret Server` |
+   | Supported account types | Single Tenant (`Accounts in this organizational directory only`) |
+   | Redirect URI | (**Web**) `https://{Secret Server URL}/signin-oidc` |
 
-1. Click to select **Accounts in this organizational directory only – (Single tenant)** in the **Supported account types** selection button.
+   An example:
 
-1. Click the **Register** button. An application registration is created.
+   ![sample app registration form](./images/appregistration_sample.png)
 
-1. Go the the Thycotic Secret Server App Registration page (**Home \> Default Directory - App registrations \> Thycotic Secret Server**).
+1. Click the **Register** button
 
-1. Copy and save both the **Application (client) ID** and **Directory (tenant) ID** for later.
+   > **Note**: Once the App Registration is created the Azure Portal should open the blade to this object.
 
-1. Click the **Add a Redirect URI** link on the same page. The Redirect URIs page appears.
+1. In the blade for this App Registration, take note of the **Application (client) ID** and **Directory (tenant) ID**, these will be needed for Secret Server configuration.
 
-1. Set a redirect URI for `https://{Secret Server URL}/signin-oidc` and set it to a **Web** type.
+   ![app registration app and directory tenant id](./images/appregistration_ids.png)
 
-1. Click to enable the **Implicit Grants** check boxes for both **Access tokens** and **ID tokens**.
+1. Navigate to the **Authentication** on the left panel under Manage section
 
-1. Click the **Certificates & secrets** menu item on the left.
+   ![authentication navigation](./images/appregistration_auth.png)
 
-1. Click the **+ New Client Secret** button to add a new client secret.
+1. Under the **Implicit grant** section **check both** boxes for `Access tokens` and `ID tokens`
 
-1. Copy the client secret value, and save it for later.
+   ![implicit grant](./images/appregistration_auth_implicitgrant.png)
 
-1. Click the **API Permissions** menu item. The API Permissions page appears.
+1. Click **Save** (_ensure you receive the portal notification that the application Authentication was updated_)
 
-1. Click the **Add a Permission** button. The "Request API permissions" page appears.
+### Add Client Secret to the App Registration
 
-1. Click the **Microsoft Graph** button. Another Request API permissions page appears.
+1. Navigate to the **Certificates & secrets** on the left panel under Manage section
 
-1. Add the following application permissions:
-   * Group.Read.All
-   * GroupMember.Read.All
-   * Member.Read.Hidden
-   * User.Read.All
+   ![Certs and secrets navigation](./images/appregistration_certnsecrets.png)
 
-1. If necessary, add the User.Read delegate permission.
+1. Under the **Client secrets** click **New client secret**
 
-1. Click the **Grant admin consent** link in the **Grant consent** section.
+   ![new client secret navigation](./images/appregistration_certnsecrets_newclientsecret.png)
 
-## Task 2: Configure Secret Server and Sync
+1. Add a description: `Secret Server`
+1. Set the Expires option desired
+   > **Note**: If the Client secret is set to expire that Secret Server will have to be updated upon or before expiration for this integration to function properly.
 
-1. Go to **Admin \> Directory Services**. The Directory Services page appears.
+1. Click **Add**
+1. Save the value displayed for the secret for the Secret Server configuration
 
-1. Click the **Add Domain** button and select **Azure Active Directory Domain**. The Azure Active Directory popup appears.
+![secret value](./images/appregistration_certnsecrets_secretvalue.png)
 
-1. Using the values you copied earlier during the app registration, paste or type in:
+### Add API Permissions to the App Registration
+
+1. Navigate to **API permissions** on the left panel under Manage section
+
+   ![api permission navigation](./images/appregistration_api.png)
+
+1. Remove any default permissions that may exists (_click the `...` and select `Remove permission`_)
+
+1. Click **Add a permission** under **Configured permissions** section
+
+   ![add a permission](./images/appregistration_api_addperm.png)
+
+1. In **Request API permissions** panel select **Microsoft Graph**
+
+   ![select microsoft graph](./images/appregistration_api_requestperm.png)
+
+1. Click **Application permissions** when asked `What type of permissions does your application require?`
+
+   ![microsoft graph app permission type](./images/appregistration_api_msgraphappperm.png)
+
+1. A **Select permissions** section will show up below.
+
+1. Search for **Group**
+1. Expand **Group** and **check** `Group.Read.All`
+1. Expand **GroupMember** and **check** `Groupmember.Read.All`
+
+   ![select group.read.all](./images/appregistration_api_msgraphgroup_readall.png)
+
+1. Search for **Member**
+1. Expand **Member** and **check** `Member.Read.Hidden`
+
+   ![select member.read.hidden](./images/appregistration_api_msgraphmember_readhidden.png)
+
+1. Search for **User**
+1. Expand **User** and **check** `User.Read.All`
+
+   ![select user.read.all](./images/appregistration_api_msgraphmember_userreadall.png)
+
+1. Click **Add permissions** button to add the permissions
+
+   ![grant admin consent](./images/appregistration_api_grantadminconsent.png)
+
+1. Click **Yes** to the prompt to grant consent to _all accounts_ in the Directory
+
+   ![grant admin consent prompt](./images/appregistration_api_grantadminconsent_prompt.png)
+
+1. Once you receive the notification for _Grant consent_ you should **see the Status** change to green checks
+
+   ![grant admin consent green checks](./images/appregistration_api_grantadminconsent_green.png)
+
+## Secret Server Directory Services
+
+1. Navigate to **Admin | Directory Services**.
+
+1. Click the **Add Domain** button.
+
+1. Click the **Azure Active Directory Domain**.
+
+1. Using the values saved from previous steps when creating the App registration, paste or type in:
 
    - Friendly domain name
 
@@ -73,26 +137,26 @@ Use these steps to integrate Secret Server with Azure Active Directory:
 
    - Client ID
 
-   - Client secret
+   - Client Secret
 
-1. Ensure the **Active** check box remain selected.
+1. Ensure the **Active** check box remains checked.
 
 1. (Optional) Click the **Multifactor Authentication** dropdown list to select your desired MFA.
 
-1. Click the **Validate & Save** button. The popup disappears, and the domain appears in the table.
+1. Click the **Validate & Save** button. Once validation completes you should see the Friendly domain name listed.
 
-1. Click the name link of the new domain in the table. The domain's page appears.
+1. Click the name of the new domain to open the configuration page.
 
 1. Click the **Groups** tab.
 
-1. Click the **Edit** link next to **Synchronized Groups**. The Select Groups table appears.
+1. Click the **Edit** link next to **Synchronized Groups**.
 
-1. Scroll to or search for each each desired group, which contains users you want to sync, in the **Select Groups** table.
+1. Scroll to or search for each desired group that contains users you want to sync, in the **Select Groups** table.
 
-1. Ensure each group's check box is selected.
+1. Ensure each group's check box is **checked**.
 
-1. Click the **Save** button to save your changes. The Select Groups table disappears, and your newly selected groups appear in the Synchronized Groups table.
+1. Click the **Save** button to save your changes. You should now see the selected groups in the Synchronized Groups table.
 
-1. Click the **Directory Services** breadcrumb link at the top of the page. The Directory Services page appears.
+1. Click the **Directory Services** breadcrumb link at the top of the page to navigate back to the Directory Services page.
 
-1. Click the **Sync Now** button to sync the directory.
+1. Click the **Sync Now** button to sync the directory groups.
