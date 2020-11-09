@@ -2,6 +2,8 @@
 [tags]: # (Azure, Azure Active Directory)
 [priority]: # (1000)
 
+# Create Azure App Registration
+
 The steps provided can be used to create the App Registration that is required for configuring Azure Active Directory integration.
 
 ## Azure Portal
