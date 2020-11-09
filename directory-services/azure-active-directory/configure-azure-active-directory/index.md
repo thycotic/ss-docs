@@ -2,6 +2,8 @@
 [tags]: # (Azure, Directory Service, Azure Active Directory)
 [priority]: # (1000)
 
+# Configure Azure Active Directory domain
+
 The steps below are used for adding an Azure Active Directory configuration to Directory Services.
 
 ## Add Azure Active Directory Domain
