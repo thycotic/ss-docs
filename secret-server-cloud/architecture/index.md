@@ -6,21 +6,13 @@
 
 > **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services support architects.
 
-## Single-Tenant Example Architecture
+## Hybrid Multi-Tenant Architecture
+
+> **Note:**  This, the standard SSC architecture, is called "hybrid multi-tenant" because only the front-end is multi-tenant—it is shared with other customers. The databases, service busses, and storage accounts are single-tenant (dedicated to you).
 
 ### Diagram
 
-**Figure:** Secret Server Cloud Single-Tenant Example Architecture
-
-### Details
-
-See the [Details for All Architectures](#Details-for-All-Architectures) section at the end of this topic.
-
-## Hybrid Multi-Tenant Example Architecture 
-
-### Diagram
-
-**Figure:** Secret Server Cloud Hybrid Multi-Tenant Example Architecture
+**Figure:** Secret Server Cloud Hybrid Multi-Tenant Architecture
 
 ![image-20200522120219066](images/image-20200522120219066.png)
 
@@ -30,11 +22,11 @@ See the [Details for All Architectures](#Details-for-All-Architectures) section 
 
 See the [Details for All Architectures](#Details-for-All-Architectures) section at the end of this topic.
 
-## Distributed Engine Example Architecture
+## Distributed Engine Multi-Site Example Architecture
 
 ### Diagram
 
-**Figure:** Secret Server Cloud Distributed Engine Example Architecture
+**Figure:** Secret Server Cloud Distributed Engine Multi-Site Example Architecture
 
 ![image-20200904111444011](images/image-20200904111444011.png)
 

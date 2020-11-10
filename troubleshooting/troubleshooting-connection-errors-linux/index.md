@@ -1,7 +1,7 @@
 [title]: # (Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets)
 [tags]: # (troubleshooting, workaround, rpc, heartbeat, linux)
 [priority]: # (1000)
-[display]: # (content)
+[display]: # (none)
 
 # Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets
 
@@ -133,33 +133,33 @@ Procedure:
 
 18. The **Password Change Commands** section defines the secret fields and commands to use to rotate (change) a password on the target machine. We now run a similar test on it.
 
-20.  Click the Password Change Commands **Test Action** button. Another Test Action popup page appears:
+20. Click the Password Change Commands **Test Action** button. Another Test Action popup page appears:
 
     ![](images/image-20200904102546044.png)
 
-    > **Important:** Clicking the OK button in the following instructions **really changes the password or rotates the SSH keys on the target account** (the $NEWPASSWORD parameter gets changed), so record what you change it to, and update the secret with the new password (assuming the RPC is successful).
+    >**Important:** Clicking the OK button in the following instructions **really changes the password or rotates the SSH keys on the target account** (the $NEWPASSWORD parameter gets changed), so record what you change it to, and update the secret with the new password (assuming the RPC is successful).
 
-21.  Similar to the last test, manually provide the input parameters.
+21. Similar to the last test, manually provide the input parameters.
 
-21.  Click the **OK** button. The test connects with the "Authenticate As"’ accounts and runs the commands to change the password.  A password rotation occurs, and more console output appears. Record any errors and output.
+21. Click the **OK** button. The test connects with the "Authenticate As"’ accounts and runs the commands to change the password. A password rotation occurs, and more console output appears. Record any errors and output.
 
-22.  If either of the test action buttons, resulted in errors, go to the next step:
+22. If either of the test action buttons, resulted in errors, go to the next step:
 
 ## Step 3: Troubleshooting Heartbeat or RPC Outside of Secret Server
 
 This section troubleshoots your previously errant commands outside of SS. The intent is to confirm the commands are correct, and something else is not causing the issue.
 
-1.  Use the procedure from Step 1 to determine which machine (SS application or DE) to perform this step on.
+1. Use the procedure from Step 1 to determine which machine (SS application or DE) to perform this step on.
 
-2.  If you did not already, [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on the application or any of the DE servers. 
+2. If you did not already, [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on the application or any of the DE servers. 
 
-3.  Open a browser tab on the secret which is failing to Heartbeat or RPC.
+3. Open a browser tab on the secret which is failing to Heartbeat or RPC.
 
-4.  Do the same for each associated secret of that secret.
+4. Do the same for each associated secret of that secret.
 
    > **Note:** Instead of the following three steps, you can instead go to `…\SecretServer\CustomCommandsEdit.aspx`.
 
-1.  Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears (not shown).
+1. Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears (not shown).
 
 2. Click the **Configure Password Changers** button. The Password Changers Configuration page appears:
 
@@ -232,5 +232,3 @@ This section troubleshoots your previously errant commands outside of SS. The in
 25. Click the **OK** button to test heartbeat or RPC. The result should look something like this:
 
     ![image-20200925111048690](images/image-20200925111048690.png)
-
-       
