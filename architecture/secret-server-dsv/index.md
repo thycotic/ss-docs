@@ -1,4 +1,4 @@
-[title]: # (Secret Server and Privilege Manager Example Architectures)
+[title]: # (Secret Server and DevOps Secrets Vault Example Architectures)
 [tags]: # (DevOps Secrets Vault, Architecture, Integration, DSV)
 [priority]: # (1000)
 
@@ -6,7 +6,7 @@
 
 > **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services Solutions Architects.
 
-This reference architecture is our best practice using Thycotic Secret Server (SS) with DevOps Secrets Vault (DSV). You can use DSV with Secret Server On-Premises or Cloud. DevOps Secrets Vault (DSV) is nimble, multi-platform privileged access manager specifically for developers and other IT professionals. So why might you want to integrate it with SS? Customers can use DSV as a native "backup" of critical SS secrets, effectively extending their on-premise instance into the cloud during SS outages. Similarly Secret Server Cloud (SSC) customers can back up their critical secrets to another cloud, effectively extending their SSC instance into another vendor's cloud during SS outages. SSC is hosted in Azure, and DSV is hosted in Amazon Web Services, which has a 99.999% uptime.
+This reference architecture is our best practices for using Thycotic Secret Server (SS) with DevOps Secrets Vault (DSV). You can use DSV with Secret Server On-Premises or Cloud. DevOps Secrets Vault (DSV) is nimble, multi-platform privileged access manager specifically for developers and other IT professionals. So why might you want to integrate it with SS? Customers can use DSV as a native "backup" of critical SS secrets, effectively extending their on-premise instance into the cloud during SS outages. Similarly Secret Server Cloud (SSC) customers can back up their critical secrets to another cloud, effectively extending their SSC instance into another vendor's cloud during SS outages. SSC is hosted in Azure, and DSV is hosted in Amazon Web Services, which has a 99.999% uptime.
 
 > **Note:** We suggest only doing this for critical secrets and not every secret in your environment. Back up critical IT infrastructure secrets, such as those needed if your data centers went down—routers, firewalls, and the like.
 
