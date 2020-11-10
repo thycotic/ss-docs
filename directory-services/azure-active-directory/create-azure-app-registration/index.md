@@ -119,22 +119,8 @@ The steps provided can be used to create the App Registration required for confi
 
 # Script Method
 
-> **Note:** The below code is provided as-is and future use may require adjusting based on the changes made by Microsoft with the AzureAD PowerShell module.
+> **Note:** The below script is provided as-is and future use may require adjusting based on the changes made by Microsoft with the AzureAD PowerShell module.
 
+The full script can be found [here](azuread_sample.ps1).
 
-```powershell
-Get-AzureADServicePrincipal -Filter "DisplayName eq 'Microsoft Graph'"
-```
-
-The output of the above should show the AppID is `00000003-0000-0000-c000-000000000000`.
-
-Assigning the Graph API permissions requires knowing the ID of each permission. The below list should be accurate, but the complete list of permissions and associated IDs can be pulled using the `az ad sp show` command noted below.
-
-```batch
-az ad sp show --id 00000003-0000-0000-c000-000000000000 > microsoft_graph_permission_list.json
-```
-
-- Group.Read.All - `5b567255-7703-4780-807c-7be8301ae99b`
-- GroupMember.Read.All - `bc024368-1153-4739-b217-4326f2e966d0`
-- Member.Read.Hidden - `f6a3db3e-f7e8-4ed2-a414-557c8c9830be`
-- User.Read.All - `a154be20-db9c-4678-8ab7-66f6cc099a59`
+> **Note:** At the time of writing there is no programatical way to grant admin consent to the app. That step has to be performed via the Azure Portal.
