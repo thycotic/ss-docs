@@ -1,6 +1,6 @@
 [title]: # (SQL Server 2016 Standard Edition Installation)
 [tags]: # (Installation, SQL Server 2016)
-[priority]: #
+[priority]: # (1000)
 
 # SQL Server 2016 Standard Edition Installation
 

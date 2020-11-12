@@ -1,14 +1,12 @@
-
-
 [title]: # (Moving the Microsoft SQL Server Database to Another Machine)
 [tags]: # (Setup,Install,sql server)
-[priority]: #	(1000)
+[priority]: # (1000)
 
 
 
 # Moving the Microsoft SQL Server Database to Another Machine
 
-> **Important**: This article only applies if your MS SQL Server database is only for Secret Server**. If you have a MS SQL Server database  for a combined installation of Privilege Manager and Secret Server, see [Moving MS SQL Server Database for Privilege Manager and Secret Server Combined Installation](https://thycotic.force.com/support/s/article/Moving-MS-SQL-Server-Database-for-Privilege-Manager-and-Secret-Server-Combined-Installation).
+> **Important**: This article only applies if your MS SQL Server database is only for Secret Server. If you have a MS SQL Server database  for a combined installation of Privilege Manager and Secret Server, see [Moving MS SQL Server Database for Privilege Manager and Secret Server Combined Installation](https://thycotic.force.com/support/s/article/Moving-MS-SQL-Server-Database-for-Privilege-Manager-and-Secret-Server-Combined-Installation).
 
   Follow the steps below for moving MS SQL Server database for Secret Server (SS).
 
@@ -19,11 +17,18 @@ To back up your SS installation:
 > **Note:** Your SS instance may be running during this procedure.
 
 1. Stop the SS site in Internet Information Server (IIS) to prevent any changes to the database.
+
 1. Navigate to the directory where SS is installed.
+
 1. Copy the  folder (holding the application) to your back up location.
+
 1. Open your SQL Server Management Studio.
+
 1. Right click the database your SS is running on, and select **Tasks \> Backup**.
+
 1. Click the **Add** button. You are prompted to enter a file path for the `.bak` file. This can be the final destination (not recommended) or a temporary one (for later moving to a back up location).
+
+
 1. Make sure SQL Server has permissions for this location. That is, create (if needed) and or grant access to the account that will access the database (see the [Installation Guide](../index.md) for account creation instructions). See [Running the IIS Application Pool As a Service Account](../running-ss-iis-app-pool-service-account/index.md) (Task 2) for details.
 1. Copy the resulting database backup file (`.bak`) to your backup location.
 
