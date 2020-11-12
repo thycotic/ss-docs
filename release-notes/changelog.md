@@ -11,15 +11,29 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
+- AWS Key Management in Secret Server Cloud
+
+- BMC Remedy Error Messages
+
+- Enabling Debug Mode in Distributed Engine Log Files
+
+- Enabling Debug Mode in System Log Files
+
 - Minimum Permissions for Active Directory Remote Password Changing
 
 - Moving the Microsoft SQL Server Database to Another Machine
 
 - OpenID Connect Integration
 
+- Outputting Syslog Events to a File
+
+- Secret Key Rotation
+
 - SQL Server Authentication Configuration
 
 - SQL Server Replication Best Practices
+
+- Syslog Events
 
 - Troubleshooting SSH Issues
 
@@ -41,6 +55,8 @@ Created or made significant changes to these topics:
 
 - Deleting Folders
 
+- Deprecated Article or Topic
+
 - Distributed Engine Hardening
 
 - Editing Folder Permissions
@@ -48,6 +64,8 @@ Created or made significant changes to these topics:
 - Remote Password Changing on SQL Server Accounts
 
 - Syncing with DevOps Secret Vault
+
+- Secret Server and DevOps Secrets Vault Example Architectures
 
 - Secret Import and Export
 
