@@ -135,7 +135,7 @@ Allows a user to view, edit, install, and delete licenses.
 
 Allows a user to view and edit server nodes and clustering settings.
 
-**Adminster OpenID Connect**
+**Administer OpenID Connect**
 
 Allows a user to manage OpenID connections.
 
@@ -203,13 +203,15 @@ Users can create, delete, and view all teams.
 
 Allows a user to enable the "Expose for Display" setting of a Secret template  field to make it available for use in Dashboard custom columns.
 
-<!-- **Administer Thycotic One**
+<!--**Administer Thycotic One**-->
 
-Allows a user to administer Thycotic One login settings on the Configuration window's Login tab. -->
+<!--Allows a user to administer Thycotic One login settings on the Configuration window's Login tab.--> 
 
 **Administer Users**
 
-Allows a user to create, disable, and edit users in the system.
+Allows a user to create, disable, and edit users in the system. 
+
+> **Note:** This permission also allows a user to create and edit SDK/CLI rules.
 
 **Administer Workflows**
 
@@ -267,9 +269,9 @@ Allows a user to expire Secrets listed in a report.''
 
 Allows a user to force a Secret that is checked out by another user to be checked in.
 
-<!-- **No Teams-related Permissions**
+<!--**No Teams-related Permissions**-->
 
-Users can only view other users within their team. -->
+<!--Users can only view other users within their team.--> 
 
 **Own Group**
 

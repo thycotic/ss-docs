@@ -33,7 +33,13 @@ To configure pushing secrets to DSV:
 
    1. Type the DSV password for authentication in the **Client Secret** text box. If you do not have one, you can create a new here by clicking the **Generate** button. Then, create or configure a client in DSV using the password.
 
-   1. Type the name of the DSV tenant to connect to in the **Tenant** text box. A DSV tenant is your DSV cloud account and the rights to access it.
+   1. Type the DSV tenant to connect to in the **Tenant** text box. A DSV tenant is your DSV cloud account and the rights to access it. Use the format: `https://<tenantname>.secretsvaultcloud.<region>` with the region being one of the following:
+
+      - U.S. region: `com`
+
+      - E.U. region: `eu`
+
+      - APAC region: `au` 
 
    1. Click the **Site** dropdown list to select your SS site.
 
@@ -49,7 +55,7 @@ To configure pushing secrets to DSV:
 
    ![image-20200910124022186](images/image-20200910124022186.png)
 
-1. Type the tenant name in the **Tenant Name** text box.
+1. Type a descriptive name for the tenant in the **Tenant Name** text box. This can be anything you wish.
 
 1. Click the **Client Secret** link to select the secret you created earlier in this instruction.
 
