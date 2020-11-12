@@ -34,35 +34,37 @@ Because `$machine` is a reserved word, the parser would separate the reserved `$
 
 **Table:** Dependency Tokens
 
-Token                              | Available In | Translates To
----------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-`$USERNAME`                          | pre-10.0     | The username on the secret.
-`$PASSWORD`                          | pre-10.0     | The password on the secret.
-`${name of any field on secret}`     | pre-10.0     | The value of the field on the secret with the same name. Examples: `$DOMAIN` matches the secret's "Domain" field, and `$NOTES` matches the "Notes" field.
-`$[x]$USERNAME`                      | pre-10.0     | The username on the xth secret on the RPC tab for use in custom password changing commands and scripts. Example: `$[1]$USERNAME` is the username of the first associated secret.
-`$[x]$PASSWORD`                      | pre-10.0     | The password on the xth secret on the RPC tab for use in custom password changing commands and scripts.
-`$[x]${name of any field on secret}` | pre-10.0     | The value of the field with the same name on the xth secret on the RPC tab for use in custom password changing commands and scripts.
-`$DATABASE`                          | pre-10.0     | The value of the Database field from the dependency. Only valid for SQL dependencies unless added as a field by the scan item template (see below).
-`$PORT`                              | pre-10.0     | The value of the Port field from the dependency. Only valid for SQL and SSH dependencies unless added as a field by the scan item template (see below).
-`$SERVICENAME`                       | 10.0         | The value of the Service Name field on the dependency. Service Name may have a different name based on the dependency type, but it is always the first part of the dependency title (\<service name\> on \<machine\>).
-`$MACHINE`                           | 10.0         | The value of the Machine Name field on the dependency. This is always the second part of the dependency title (\<service name\> on \<machine\>).
-`${scan item field name}`            | 10.0         | The name of any scan item field (defined on the scan item template) that is visible in the dependency edit dialog. If a scan item field is derived from a parent field, you may also use the parent field name as a parameter that translates to this field's value.
-`$CURRENTPASSWORD`                   | pre-10.0     | The password currently on the secret (context-sensitive to whether script is run before or after password change).
-`$NEWPASSWORD`                       | 10.2         | This is not available to the dependency at the time of the password change. It will no longer be set as the NewPassword gets set to the Password.
-`$PRIORPASSWORD`                     | 10.2         | In the context of a password change, this is the password at the beginning of the password change. The password that was set on the secret before the current password change. In the context of run dependency from the Dependency tab, this is the prior value of the password before the last password change.
-`$PASSPHRASE`                        | 10.2         | The passphrase used to encrypt the private key in a public/private key pair on this secret.
-`$PRIORPASSPHRASE`                   | 10.2         | The passphrase that was set on the secret before the current passphrase rotation.
-`$PUBLICKEY`                         | 10.2         | The public key on the secret.
-`$CURRENTPUBLICKEY`                  | 10.2         | The public key currently on the secret (context-sensitive to whether script is run before or after key rotation).
-`$NEWPUBLICKEY`                      | 10.2         | The new public key that is being set on the secret.
-`$PRIORPUBLICKEY`                    | 10.2         | The public key that was set on the secret before the current key rotation.
-`$DEPENDENCYPRIVILEGEDUSERNAME`      | 10.3         | The user name on the privileged account assigned to the dependency.
-`$DEPENDENCYPRIVILEGEDPASSWORD`      | 10.3         | The password on the privileged account assigned to the dependency.
-`$DEPENDENCYPRIVILEGEDPRIVATEKEY`    | 10.3         | The private key on the privileged account assigned to the dependency.
-`$DEPENDENCYPRIVILEGEDPASSPHRASE`    | 10.3         | The private key passphrase on the privileged account assigned to the dependency.
-`$DEPENDENCYSSHKEY`                  | 10.3         | The new SSH key to set on the dependency.
-`$DEPENDENCYSSHKEYPASSPHRASE`        | 10.3         | The new passphrase of the SSH key to be set on the dependency.
+| **Token**                           | **Available   In** | **Translates   To**                                          |
+| ----------------------------------- | ------------------ | ------------------------------------------------------------ |
+| $[x]${name  of any field on secret} | pre-10.0           | The  value of the field with the same name on the xth secret on the RPC tab for  use in custom password changing commands and scripts. |
+| $[x]$PASSWORD                       | pre-10.0           | The  password on the xth secret on the RPC tab for use in custom password changing  commands and scripts. |
+| $[x]$USERNAME                       | pre-10.0           | The  username on the xth secret on the RPC tab for use in custom password changing  commands and scripts. Example: $[1]$USERNAME is the username of the  first associated secret. |
+| ${name  of any field on secret}     | pre-10.0           | The  value of the field on the secret with the same name. Examples: $DOMAIN matches  the secret’s “Domain” field, and $NOTES matches the “Notes” field. |
+| ${scan  item field name}            | 10.0               | The  name of any scan item field (defined on the scan item template) that is  visible in the dependency edit dialog. If a scan item field is derived from a  parent field, you may also use the parent field name as a parameter that  translates to this field’s value. |
+| $CURRENTPASSWORD                    | pre-10.0           | The  password currently on the secret (context-sensitive to whether script is run  before or after password change). |
+| $CURRENTPUBLICKEY                   | 10.2               | The  public key currently on the secret (context-sensitive to whether script is  run before or after key rotation). |
+| $DATABASE                           | pre-10.0           | The  value of the Database field from the dependency. Only valid for SQL  dependencies unless added as a field by the scan item template (see below). |
+| $DEPENDENCYPRIVILEGEDPASSPHRASE     | 10.3               | The  private key passphrase on the privileged account assigned to the dependency. |
+| $DEPENDENCYPRIVILEGEDPASSWORD       | 10.3               | The  password on the privileged account assigned to the dependency. |
+| $DEPENDENCYPRIVILEGEDPRIVATEKEY     | 10.3               | The  private key on the privileged account assigned to the dependency. |
+| $DEPENDENCYPRIVILEGEDUSERNAME       | 10.3               | The  user name on the privileged account assigned to the dependency. |
+| $DEPENDENCYSSHKEY                   | 10.3               | The new  SSH key to set on the dependency.                   |
+| $DEPENDENCYSSHKEYPASSPHRASE         | 10.3               | The new  passphrase of the SSH key to be set on the dependency. |
+| $MACHINE                            | 10.0               | The  value of the Machine Name field on the dependency. This is always the second  part of the dependency title (\<service name\> on \<machine\>). |
+| $NEWPASSWORD                        | 10.2               | This is  not available to the dependency at the time of the password change. It will  no longer be set as the NewPassword gets set to the Password. |
+| $NEWPUBLICKEY                       | 10.2               | The new  public key that is being set on the secret.         |
+| $PASSPHRASE                         | 10.2               | The  passphrase used to encrypt the private key in a public/private key pair on  this secret. |
+| $PASSWORD                           | pre-10.0           | The  password on the secret.                                 |
+| $PORT                               | pre-10.0           | The value  of the Port field from the dependency. Only valid for SQL and SSH  dependencies unless added as a field by the scan item template (see below). |
+| $PRIORPASSPHRASE                    | 10.2               | The  passphrase that was set on the secret before the current passphrase rotation. |
+| $PRIORPASSWORD                      | 10.2               | In the  context of a password change, this is the password at the beginning of the  password change. The password that was set on the secret before the current  password change. In the context of run dependency from the Dependency tab,  this is the prior value of the password before the last password change. |
+| $PRIORPUBLICKEY                     | 10.2               | The  public key that was set on the secret before the current key rotation. |
+| $PUBLICKEY                          | 10.2               | The  public key on the secret.                               |
+| $SERVICENAME                        | 10.0               | The  value of the Service Name field on the dependency. Service Name may have a  different name based on the dependency type, but it is always the first part  of the dependency title (\<service name\> on \<machine\>). |
+| $USERNAME                           | pre-10.0           | The  username on the secret.                                 |
 
+> **Note:** The mappings of these parameters come from the remote password changer, so you can check the mapping by editing the secret template and selecting configure password changing.
+>
 > **Note:** Some of these tokens, such as `$PASSWORD`, `$CURRENTPASSWORD`, `$NEWPASSWORD`, and `$PRIORPASSWORD`, may seem to duplicate each other, but they have distinctions based on the context as described above.
 
 > **Note:** In some cases, whether or not the dependency is being changed locally or through a distributed engine may have an impact on what these tokens return. This is due to the asynchronous nature of distributed engines. The newer tokens, such as `$NEWPASSWORD` and `$PRIORPASSWORD`, were created to address this issue. If you are using older tokens, such as `$PASSWORD` and `$CURRENTPASSWORD`, and seeing unexpected results, try using `$PRIORPASSWORD` and `$NEWPASSWORD`.
