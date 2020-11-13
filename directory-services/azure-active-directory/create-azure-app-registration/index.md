@@ -113,7 +113,7 @@ The steps provided can be used to create the App Registration required for confi
 
    ![grant admin consent prompt](./images/appregistration_api_grantadminconsent_prompt.png)
 
-1. Once you receive the notification for _Grant consent_ you should **see the Status** change to green checks
+1. Once you receive the notification for _Grant consent_ you will **see the Status** change to green checks
 
    ![grant admin consent green checks](./images/appregistration_api_grantadminconsent_green.png)
 

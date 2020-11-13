@@ -28,7 +28,7 @@ The steps below are used for adding an Azure Active Directory configuration to D
 
 1. (Optional) Click the **Multifactor Authentication** dropdown list to select your desired MFA.
 
-1. Click the **Validate & Save** button. Once validation completes, you should see the Friendly domain name listed.
+1. Click the **Validate & Save** button. Once validation completes, you will see the Friendly domain name listed.
 
 1. Click the name of the new domain to open the configuration page.
 
