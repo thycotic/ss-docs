@@ -1,6 +1,6 @@
 [title]: # (Create an Azure App Registration)
 [tags]: # (Azure, Azure Active Directory)
-[priority]: # (1003)
+[priority]: # (1002)
 
 # Create Azure App Registration
 

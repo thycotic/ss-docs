@@ -1,6 +1,6 @@
 [title]: # (Configure Azure Active Directory)
 [tags]: # (Azure, Directory Service, Azure Active Directory)
-[priority]: # (1001)
+[priority]: # (1003)
 
 # Configure Azure Active Directory domain
 
