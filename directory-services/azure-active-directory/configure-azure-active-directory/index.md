@@ -1,4 +1,4 @@
-[title]: # (Configuring Azure Active Directory)
+[title]: # (Configure Azure Active Directory)
 [tags]: # (Azure, Directory Service, Azure Active Directory)
 [priority]: # (1000)
 
