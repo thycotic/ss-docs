@@ -40,7 +40,7 @@ The steps below are used for adding an Azure Active Directory configuration to D
 
 1. Ensure each group's check box is **checked**.
 
-1. Click the **Save** button to save your changes. You should now see the selected groups in the Synchronized Groups table.
+1. Click the **Save** button to save your changes. You will now see the selected groups in the Synchronized Groups table.
 
 1. Click the **Directory Services** breadcrumb link at the top of the page to navigate back to the Directory Services page.
 

@@ -32,7 +32,7 @@ The steps provided can be used to create the App Registration required for confi
 
 1. Click the **Register** button
 
-   > **Note**: Once the App Registration is created, the Azure Portal should open the blade to this object.
+   > **Note**: Once the App Registration is created, the Azure Portal will open the blade to this object.
 
 1. In the blade for this App Registration, take note of the **Application (client) ID** and **Directory (tenant) ID**. These will be needed for Secret Server configuration.
 
