@@ -6,4 +6,4 @@
 
 > **Important:** This integration requires .NET Framework version 4.8 or later.
 
-Use these steps to integrate Secret Server with a desired Azure Active Directory tenant.
+Use these steps to integrate Secret Server with an Azure Active Directory tenant.
