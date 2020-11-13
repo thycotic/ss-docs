@@ -121,6 +121,6 @@ The steps provided can be used to create the App Registration required for confi
 
 > **Note:** The below script is provided as-is, and future use may require adjusting based on Microsoft's changes with the AzureAD PowerShell module.
 
-The full script can be found [here](azuread_sample.ps1).
+The full script can be found [here](./scripts/azuread_sample.ps1).
 
 > **Note:** At the time of writing, there is no command in the AzureAD module that allows granting admin consent to the app. That step has to be performed via the Azure Portal.
