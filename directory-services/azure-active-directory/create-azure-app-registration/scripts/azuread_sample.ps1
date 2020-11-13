@@ -1,6 +1,6 @@
 <# Connect to your tenant #>
-$tentantId = ''
-Connect-AzureAd -TentantId $tentantId
+$tenantId = ''
+Connect-AzureAd -TenantId $tenantId
 
 <# Variables - Adjust for your environment/requirements #>
 $appName = "Thycotic Secret Server"
@@ -44,7 +44,7 @@ $clientSecret = New-AzureADApplicationPasswordCredential @paramsClientSecret
 
 [pscustomobject]@{
     Details = "These values required for Secret Server Configuration"
-    TentantId = (Get-AzureADTenantDetail).TentantID
+    TenantId = (Get-AzureADTenantDetail).ObjectId
     ClientID = $thycoticApp.AppId
     ClientSecret = $clientSecret.Value
 } | Format-List
