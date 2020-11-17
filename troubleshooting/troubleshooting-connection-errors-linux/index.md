@@ -133,6 +133,7 @@ Procedure:
 
 18. The **Password Change Commands** section defines the secret fields and commands to use to rotate (change) a password on the target machine. We now run a similar test on it.
 
+<<<<<<< HEAD
 20. Click the Password Change Commands **Test Action** button. Another Test Action popup page appears:
 
     ![](images/image-20200904102546044.png)
@@ -144,11 +145,25 @@ Procedure:
 21. Click the **OK** button. The test connects with the "Authenticate As"’ accounts and runs the commands to change the password. A password rotation occurs, and more console output appears. Record any errors and output.
 
 22. If either of the test action buttons, resulted in errors, go to the next step:
+=======
+20.  Click the Password Change Commands **Test Action** button. Another Test Action popup page appears:
+
+    ![](images/image-20200904102546044.png)
+
+    > **Important:** Clicking the OK button in the following instructions **really changes the password or rotates the SSH keys on the target account** (the $NEWPASSWORD parameter gets changed), so record what you change it to, and update the secret with the new password (assuming the RPC is successful).
+
+21.  Similar to the last test, manually provide the input parameters.
+
+21.  Click the **OK** button. The test connects with the "Authenticate As"’ accounts and runs the commands to change the password.  A password rotation occurs, and more console output appears. Record any errors and output.
+
+22.  If either of the test action buttons, resulted in errors, go to the next step:
+>>>>>>> 1de21ed20c32c527858524210c347806383bbcbb
 
 ## Step 3: Troubleshooting Heartbeat or RPC Outside of Secret Server
 
 This section troubleshoots your previously errant commands outside of SS. The intent is to confirm the commands are correct, and something else is not causing the issue.
 
+<<<<<<< HEAD
 1. Use the procedure from Step 1 to determine which machine (SS application or DE) to perform this step on.
 
 2. If you did not already, [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on the application or any of the DE servers. 
@@ -160,6 +175,19 @@ This section troubleshoots your previously errant commands outside of SS. The in
    > **Note:** Instead of the following three steps, you can instead go to `…\SecretServer\CustomCommandsEdit.aspx`.
 
 1. Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears (not shown).
+=======
+1.  Use the procedure from Step 1 to determine which machine (SS application or DE) to perform this step on.
+
+2.  If you did not already, [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on the application or any of the DE servers. 
+
+3.  Open a browser tab on the secret which is failing to Heartbeat or RPC.
+
+4.  Do the same for each associated secret of that secret.
+
+   > **Note:** Instead of the following three steps, you can instead go to `…\SecretServer\CustomCommandsEdit.aspx`.
+
+1.  Go to **Admin > Remote Password Changing**. The Remote Password Changing Configuration page appears (not shown).
+>>>>>>> 1de21ed20c32c527858524210c347806383bbcbb
 
 2. Click the **Configure Password Changers** button. The Password Changers Configuration page appears:
 
@@ -192,6 +220,7 @@ This section troubleshoots your previously errant commands outside of SS. The in
     ![image-20201103153351977](images/image-20201103153351977.png)
 
     In this example, we assumed the secret contained a value of "root" for the Username field, and the associated account in the first position was "testuser." This example was successful because the $$CHECKFOR $USERNAME found "root" on the previous line.
+<<<<<<< HEAD
 
     If the `su root` command were to fail above and reports the message "Username is not in the sudo userers file. This incident will be reported." then the $$CHECKFOR would fail and the heartbeat would fail to verify. This type of issue needs to be remediated on the endpoint.
 
@@ -232,3 +261,47 @@ This section troubleshoots your previously errant commands outside of SS. The in
 25. Click the **OK** button to test heartbeat or RPC. The result should look something like this:
 
     ![image-20200925111048690](images/image-20200925111048690.png)
+=======
+
+    If the `su root` command were to fail above and reports the message "Username is not in the sudo userers file. This incident will be reported." then the $$CHECKFOR would fail and the heartbeat would fail to verify. This type of issue needs to be remediated on the endpoint.
+
+15. If the issue is clearly an endpoint issue, remediate it and repeat the commands in PuTTY.
+
+16. Once the commands work properly in PuTTY, if the RPC or heartbeat command set needs adjustment to match the working PuTTY equivalent, return to SS and make the changes to the command set (see the next step). 
+
+    > **Important:** Before you change the RPC commands, ensure that the device that you are working on belongs to the secret template you are using. Secret templates dynamically update all the secrets based on them, so **all secrets with this template are affected by your changes**. We strongly recommend that if this device is unique or you are storing an independent root account in the associated secret template, you should:
+    >
+    > 1. Copy the template you are using, giving the copy a descriptive name.
+    > 1. Create a new password changer based on the current one that you are using. 
+    > 1. Assign it the the secret template you just created.
+    >
+    > This ensures that you do not change how ALL devices related to a secret template when you only intend to change a single devices. Accounts that are the same type on the same device should share the same template. 
+
+17. Click the **Edit Commands** button at the bottom of the subject password changer page. The commands for RPC and heartbeat appear:
+
+     ![image-20200925141910284](images/image-20200925141910284.png)
+
+18. Scroll down to the command list in the **Password Change Commands** section:
+
+     ![image-20201103155532365](images/image-20201103155532365.png)
+
+19. Click the blue edit icon to the right of any commands you want to change. The command becomes editable.
+
+20. Edit the command to make it match your known-good revision.
+
+21. Click the blue save icon next to the amended command.
+
+22. Click the **Back** button to return to the password changer page:
+
+    ![image-20200903110755640](images/image-20200903110755640.png)
+
+23. One of the Test Action popups appears.
+
+24. Type the known-good values from the secret in the text boxes.
+
+25. Click the **OK** button to test heartbeat or RPC. The result should look something like this:
+
+    ![image-20200925111048690](images/image-20200925111048690.png)
+
+       
+>>>>>>> 1de21ed20c32c527858524210c347806383bbcbb
