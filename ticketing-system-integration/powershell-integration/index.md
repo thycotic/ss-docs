@@ -1,6 +1,6 @@
-[title]: # (PowerShell Ticketing Integration)
-[tags]: # (PowerShell,ticketing)
-[priority]: # (1000)
+[title]: # "PowerShell Ticketing Integration"
+[tags]: # "PowerShell,ticketing"
+[priority]: # "1000"
 
 # PowerShell Ticketing Integration
 
@@ -8,7 +8,7 @@
 
 SS can integrate with your ticketing system via PowerShell. This integration includes validating ticket numbers, their status, and adding comments. In our example we are connecting to a ServiceNow instance.
 
-> **Note:** See [Creating and Using PowerShell Scripts](https://updates.thycotic.net/links.ashx?SecretServerPowerShellKB) (KBA).
+> **Note:** See [Creating and Using PowerShell Scripts](https://updates.thycotic.net/links.ashx?SecretServerPowerShellKB).
 
 ## Configurable Settings
 
@@ -18,7 +18,7 @@ You can configure the view ticket URL if you have a web based ticketing system t
 
 ### Ticket Number Validation Pattern (Regex)
 
-Before making a call to the PowerShell script you can have Secret Server validate the number matches a pattern. For example, your incident numbers might all be prefixed with “INC” and you want to ensure they enter this prefix. See [Regex KB](http://support.thycotic.com/kb/a242/setting-a-ticket-pattern-regex.aspx).
+Before making a call to the PowerShell script you can have Secret Server validate the number matches a pattern. For example, your incident numbers might all be prefixed with “INC” and you want to ensure they enter this prefix. See [Setting a Ticket Pattern Regex](../index.md#setting-a-ticket-pattern-regex)).
 
 ### Ticket Number Validation Error Message
 
