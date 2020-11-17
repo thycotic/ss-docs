@@ -1,6 +1,6 @@
-[title]: # "Deprecated Article or Topic"
+[title]: # (Deprecated Article or Topic)
 [tags]: #
-[priority]: # "1000"
+[priority]: # (1000)
 [display]:  #  "content"
 
 # Deprecated or Missing Article or Topic

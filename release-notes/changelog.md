@@ -1,7 +1,7 @@
-[title]: # "Documentation Change Log"
-[tags]: # "Release Notes,documentation"
+[title]: # (Documentation Change Log)
+[tags]: # (Release Notes,documentation)
 [priority]: #
-[display]: # "search,content,print"
+[display]: # (search,content,print)
 
 # Documentation Change Log
 
@@ -11,28 +11,19 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created the following topics from Salesforce articles (often including substantial rewrite):
 
-<<<<<<< HEAD
 - AWS Key Management in Secret Server Cloud
 - BMC Remedy Error Messages
-=======
->>>>>>> 1de21ed20c32c527858524210c347806383bbcbb
 - Enabling Debug Mode in Distributed Engine Log Files
 - Enabling Debug Mode in System Log Files
 - Minimum Permissions for Active Directory Remote Password Changing
 - Moving the Microsoft SQL Server Database to Another Machine
 - OpenID Connect Integration
 - Outputting Syslog Events to a File
-<<<<<<< HEAD
 - Secret Key Rotation
 - SQL Server Authentication Configuration
 - SQL Server Replication Best Practices
 - Syslog Events
 - Troubleshooting SAML Configuration Errors After Upgrading
-=======
-- SQL Server Authentication Configuration
-- SQL Server Replication Best Practices
-- Syslog Events
->>>>>>> 1de21ed20c32c527858524210c347806383bbcbb
 - Troubleshooting SSH Issues
 - Uninstalling Secret Server (PDF)
 - Upgrading Secret Server

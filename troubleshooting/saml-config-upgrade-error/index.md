@@ -1,6 +1,6 @@
-[title]: # "Troubleshooting"
-[tags]: # "troubleshooting, workaround, upgrade, saml error"
-[priority]: # "1000"
+[title]: # (Troubleshooting)
+[tags]: # (troubleshooting, workaround, upgrade, saml error)
+[priority]: # (1000)
 
 # Troubleshooting SAML Configuration Errors After Upgrading
 

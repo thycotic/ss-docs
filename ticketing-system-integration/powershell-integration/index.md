@@ -1,6 +1,6 @@
-[title]: # "PowerShell Ticketing Integration"
-[tags]: # "PowerShell,ticketing"
-[priority]: # "1000"
+[title]: # (PowerShell Ticketing Integration)
+[tags]: # (PowerShell,ticketing)
+[priority]: # (1000)
 
 # PowerShell Ticketing Integration
 
