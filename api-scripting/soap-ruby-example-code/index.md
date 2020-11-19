@@ -1,6 +1,6 @@
-[title]: # "Python Example Code for SOAP"
-[tags]: # "SOAP API,API,Scripting,Python"
-[priority]: # "1000"
+[title]: # (Python Example Code for SOAP)
+[tags]: # (SOAP API,API,Scripting,Python)
+[priority]: # (1000)
 
 # Python Example Code for SOAP
 

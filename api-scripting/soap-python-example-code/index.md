@@ -1,6 +1,6 @@
-[title]: # "Ruby Example Code for SOAP"
-[tags]: # "SOAP API,API,Scripting,Ruby"
-[priority]: # "1000"
+[title]: # (Ruby Example Code for SOAP)
+[tags]: # (SOAP API,API,Scripting,Ruby)
+[priority]: # (1000)
 
 # Ruby Example Code for SOAP
 
