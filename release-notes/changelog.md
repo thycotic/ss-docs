@@ -27,6 +27,10 @@ Created the following topics from Salesforce articles (often including substanti
 
 - Outputting Syslog Events to a File
 
+- Python Example Code for SOAP
+
+- Ruby Example Code for SOAP
+
 - Secret Key Rotation
 
 - SQL Server Authentication Configuration
@@ -34,6 +38,8 @@ Created the following topics from Salesforce articles (often including substanti
 - SQL Server Replication Best Practices
 
 - Syslog Events
+
+- Troubleshooting SAML Configuration Errors After Upgrading
 
 - Troubleshooting SSH Issues
 
@@ -62,6 +68,8 @@ Created or made significant changes to these topics:
 - Editing Folder Permissions
 
 - Remote Password Changing on SQL Server Accounts
+
+- Running Heartbeat and RPC for Office 365 Accounts with a PowerShell Module
 
 - Syncing with DevOps Secret Vault
 
