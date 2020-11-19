@@ -1,7 +1,7 @@
-[title]: # (Documentation Change Log)
-[tags]: # (Release Notes,documentation)
+[title]: # "Documentation Change Log"
+[tags]: # "Release Notes,documentation"
 [priority]: #
-[display]: # (search,content,print)
+[display]: # "search,content,print"
 
 # Documentation Change Log
 
@@ -19,6 +19,8 @@ Created the following topics from Salesforce articles (often including substanti
 - Moving the Microsoft SQL Server Database to Another Machine
 - OpenID Connect Integration
 - Outputting Syslog Events to a File
+- Python Example Code for SOAP
+- Ruby Example Code for SOAP
 - Secret Key Rotation
 - SQL Server Authentication Configuration
 - SQL Server Replication Best Practices
