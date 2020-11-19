@@ -38,16 +38,6 @@ The steps provided can be used to create the App Registration required for confi
 
    ![app registration app and directory tenant id](./images/appregistration_ids.png)
 
-1. Navigate to the **Authentication** on the left panel under the Manage section
-
-   ![authentication navigation](./images/appregistration_auth.png)
-
-1. Under the **Implicit grant** section, **check both** boxes for `Access tokens` and `ID tokens.`
-
-   ![implicit grant](./images/appregistration_auth_implicitgrant.png)
-
-1. Click **Save** (_ensure you receive the portal notification that the application Authentication was updated_)
-
 ### Add Client Secret to the App Registration
 
 1. Navigate to the **Certificates & secrets** on the left panel under the Manage section
@@ -90,15 +80,10 @@ The steps provided can be used to create the App Registration required for confi
 1. A **Select permissions** section will show up below.
 
 1. Search for **Group**
-1. Expand **Group** and **check** `Group.Read.All`
 1. Expand **GroupMember** and **check** `GroupMember.Read.All`
 
    ![select group.read.all](./images/appregistration_api_msgraphgroup_readall.png)
 
-1. Search for **Member**
-1. Expand **Member** and **check** `Member.Read.Hidden`
-
-   ![select member.read.hidden](./images/appregistration_api_msgraphmember_readhidden.png)
 
 1. Search for **User**
 1. Expand **User** and **check** `User.Read.All`
