@@ -1,7 +1,7 @@
-[title]: # "Syncing with DevOps Secret Vault"
-[tags]: # "dsv, DevOps Secret Vault"
-[priority]: # "1000"
-[display]: # "all"
+[title]: # (Syncing with DevOps Secret Vault)
+[tags]: # (dsv, DevOps Secret Vault)
+[priority]: # (1000)
+[display]: # (all)
 
 # Syncing with DevOps Secret Vault
 
