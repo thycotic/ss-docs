@@ -1,6 +1,6 @@
-[title]: # "Protocol Handler Administrative Settings"
-[tags]: # "launcher, protocol handler, settings"
-[priority]: # "1000"
+[title]: # (Protocol Handler Administrative Settings)
+[tags]: # (launcher, protocol handler, settings)
+[priority]: # (1000)
 
 # Protocol Handler Administrative Settings
 
