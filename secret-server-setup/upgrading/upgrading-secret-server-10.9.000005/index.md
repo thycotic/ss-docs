@@ -3,7 +3,7 @@
 [priority]: # (1000)
 [display]: # (all)
 
-# Upgrading Secret Server to 10.9.000005\/10.9.000032
+# Upgrading Secret Server to 10.9.000005 and 10.9.000032
 
 This upgrade of Secret Server (SS) is a two-step process where you first upgrade to version 10.9000005 and then to 10.9.000032. The reasoning behind this is to provide a safeguard that warns you if the new .NET system requirement is not met *prior* to the installation making irreversible changes, potentially resulting in a non-functioning SS installation. The second step to 10.9.000032 depends on the .NET update in the first step and deploys the new features for this release.
 
@@ -31,13 +31,13 @@ Secret Server periodically polls the update server to detect new updates. If the
 
 ## How to Upgrade
 
-1. Download the two zip files (`Version_10_9_000005.zip` and `Version_10_9_000032.zip`) you downloaded, which containing the installs.
-
 1. From a computer that has outbound network access, click on the upgrade link to go to: `http://<yourinstance>/SecretServer/Setup/Home`. The Secret Server Setup Home page appears:
 
    > **Note:** If your computer does not have outbound network access, please see [Upgrading Secret Server Without Outbound Access](../upgrading-without-outbound-access/index.md).
 
    ![image-20201207103758281](images/image-20201207103758281.png)
+
+1. Download the two zip files (`Version_10_9_000005.zip` and `Version_10_9_000032.zip`), which contain the installs, using the link at the top of the page.
 
 1. Click the **Enable Maintenance Mode** button to enter maintenance mode.
    
@@ -45,7 +45,7 @@ Secret Server periodically polls the update server to detect new updates. If the
    
    > **Important:** All your data is encrypted the `encryption.config` file in your SS application folder. **Your data cannot be decrypted without it**. Thus, it is critical that you make a backup of the application folder and its contents before proceeding.
    
-1. Backup the databased named SecretServer at the IP address listed.
+1. Backup the database named SecretServer at the IP address listed.
    
 1. When finished backing up both, click to select the **The Secret Server database and application folder have been backed up** check box. 
    
