@@ -38,7 +38,7 @@ Checking for updates and sending this information will only occur if both of the
 
 - The "Allow Automatic Checks for Software Updates" check box is enabled at Admin > Configuration (see below).
 
-No sensitive data is sent during the check. Its only purpose is to alert administrators if a software update is available.  The queried website is also used to download new software versions during the upgrade process. If you wish to whitelist the specific servers involved, they are:
+No sensitive data is sent during the check. Its only purpose is to alert administrators if a software update is available.  The queried website is also used to download new software versions during the upgrade process. If you wish to allowlist the specific servers involved, they are:
 
 - `d36zgw9sidnotm.cloudfront.net:443`
 
@@ -78,7 +78,7 @@ Secret Server returns anonymized metrics across several categories:
 
 - The "Send Anonymized System Metrics to Thycotic" setting under Admin > Configuration is enabled (see below).
 
-You can allow for the metrics reporting on your firewall by whitelisting: `https://telemetry.thycotic.net:443`.
+You can allow for the metrics reporting on your firewall by allowlisting: `https://telemetry.thycotic.net:443`.
 
 ## Setting and Viewing Secret Server Telemetry
 

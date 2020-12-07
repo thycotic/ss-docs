@@ -23,5 +23,5 @@ Please note:
 - There are three required Salesforce configurations:
 
   - Go to **Setup \> Administration \> Users \> Profile**. Choose the user profile. Make sure that **Enabled API** is checked. This option is not available in all versions of Salesforce. Other versions  will not have this enabled by default. Please see this ["Enable API" not available](https://developer.salesforce.com/forums/?id=906F0000000BaW7IAK) article. If this setting is not enabled in salesforce you will get one of these errors: `ERROR: Secret 'Salesforce Test' (Id = 1063) on Site 'EARTH' returned (LoginFailed). Exception: Login failed: API_DISABLED_FOR_ORG: API is not enabled for this Organization` or `Partner,System.Web.Services.Protocols.SoapException: API_DISABLED_FOR_ORG: API is not enabled for this Organization or Partner`.
-  - Configure network access and whitelist the distribute engine or SS IP address. If this is internal, use the public IP address.
+  - Configure network access and allowlist the distribute engine or SS IP address. If this is internal, use the public IP address.
   - Go to **Setup \> Company Settings \> My Domain**. Edit my domain settings and make sure that **Prevent login from https://login.salesforce.com** is unchecked.

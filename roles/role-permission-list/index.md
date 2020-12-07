@@ -189,7 +189,7 @@ Allows a user to view and terminate active launcher sessions.
 
 **Administer SSH Menus**
 
-Allows a user to edit and create SSH Menus, used in whitelisting commands that can be used on a SSH session.
+Allows a user to edit and create SSH Menus, used in allowlisting commands that can be used on a SSH session.
 
 **Administer System Log**
 
@@ -517,7 +517,7 @@ Allows a user to view recorded sessions within Secret Server.
 
 **View SSH Menus**
 
-Allows a user to view existing SSH Menus, used in whitelisting commands that can be used on a SSH session.
+Allows a user to view existing SSH Menus, used in allowlisting commands that can be used on a SSH session.
 
 **View System Log**
 
