@@ -1,6 +1,6 @@
-[title]: # "Upgrading Secret Server"
-[tags]: # "Setup, Upgrade"
-[priority]: # "1000"
+[title]: # (Upgrading Secret Server)
+[tags]: # (Setup, Upgrade)
+[priority]: # (1000)
 
 # Upgrading Secret Server
 
