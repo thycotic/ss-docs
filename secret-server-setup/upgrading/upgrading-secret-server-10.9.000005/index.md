@@ -1,8 +1,8 @@
-[title]: # (Upgrading Secret Server)
+[title]: # (Upgrading Secret Server 10.9.000005-10.9.000032)
 [tags]: # (Setup, Upgrade)
 [priority]: # (1000)
 
-# Upgrading Secret Server 10.9.000005 and 10.9.000032
+# Upgrading Secret Server 10.9.000005/10.9.000032
 
 This upgrade of Secret Server (SS) is a two-step process where you first upgrade to version 10.9000005 and then to 10.9.000032. The reasoning behind this is to provide a safeguard that warns you if the new .NET system requirement is not met *prior* to the installation making irreversible changes, potentially resulting in a non-functioning SS installation. The second step to 10.9.000032 depends on the .NET update in the first step and deploys the new features for this release.
 
