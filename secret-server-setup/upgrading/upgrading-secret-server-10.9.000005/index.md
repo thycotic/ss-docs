@@ -1,6 +1,7 @@
 [title]: # (Upgrading Secret Server 10.9.000005 and 10.9.000032)
 [tags]: # (Setup, Upgrade)
 [priority]: # (1000)
+[display]: # (all)
 
 # Upgrading Secret Server to 10.9.000005\/10.9.000032
 
