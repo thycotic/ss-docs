@@ -1,9 +1,11 @@
-[title]: # (Upgrading Secret Server)
-[tags]: # (Setup, Upgrade)
-[priority]: # (1000)
+[title]: # "Upgrading Secret Server"
+[tags]: # "Setup, Upgrade"
+[priority]: # "1000"
 
 # Upgrading Secret Server
 
+> **Note:**  See [Upgrading to Secret Server 10.9.000005/10.9.000032](../upgrading-secret-server-10.9.000005/index.md) for instructions specific to that upgrade.
+>
 > **Important:** If upgrading to 10.7.000000, using SQL Server 2008 R2 as the SS database is no longer supported. For more information, see the [release notes](../../../release-notes/index.md).
 
 > **Important:** Customers upgrading to 10.6.000000 or later and are using RabbitMQ, please see [How to clear message accumulation in RabbitMQ queues after upgrading to 10.6](https://thycotic.force.com/support/s/article/How-to-clear-message-accumulation-in-RabbitMQ-queues-after-upgrading-to-10-6)[ How to clear message accumulation in RabbitMQ queues after upgrading to 10.6](https://thycotic.force.com/support/s/article/How-to-clear-message-accumulation-in-RabbitMQ-queues-after-upgrading-to-10-6) (KBA).

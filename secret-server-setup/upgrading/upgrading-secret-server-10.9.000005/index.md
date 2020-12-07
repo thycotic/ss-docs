@@ -1,24 +1,16 @@
-[title]: # (Upgrading Secret Server 10.9.000005-10.9.000032)
-[tags]: # (Setup, Upgrade)
-[priority]: # (1000)
+[title]: # "Upgrading Secret Server 10.9.000005-10.9.000032"
+[tags]: # "Setup, Upgrade"
+[priority]: # "1000"
 
-# Upgrading Secret Server 10.9.000005/10.9.000032
+# Upgrading Secret Server to 10.9.000005/10.9.000032
 
 This upgrade of Secret Server (SS) is a two-step process where you first upgrade to version 10.9000005 and then to 10.9.000032. The reasoning behind this is to provide a safeguard that warns you if the new .NET system requirement is not met *prior* to the installation making irreversible changes, potentially resulting in a non-functioning SS installation. The second step to 10.9.000032 depends on the .NET update in the first step and deploys the new features for this release.
 
-> **Important:** If upgrading to 10.7.000000, using SQL Server 2008 R2 as the SS database is no longer supported. For more information, see the [release notes](../../../release-notes/index.md).
-
 > **Important:** Customers upgrading to 10.6.000000 or later and are using RabbitMQ, please see [How to clear message accumulation in RabbitMQ queues after upgrading to 10.6](https://thycotic.force.com/support/s/article/How-to-clear-message-accumulation-in-RabbitMQ-queues-after-upgrading-to-10-6)[ How to clear message accumulation in RabbitMQ queues after upgrading to 10.6](https://thycotic.force.com/support/s/article/How-to-clear-message-accumulation-in-RabbitMQ-queues-after-upgrading-to-10-6) (KBA).
-
-> **Important:** Customers using the Integrated Windows Authentication (IWA) feature  need to perform a workaround when upgrading to Secret Server 10.6 with a Distributed Engine. IWA is the Windows feature where users log on their Windows domain only once—once logged on, any additional domain logons  are done automatically without having to reenter a user name and  password. Please see the [Workaround for Integrated Windows Authentication When Upgrading to Secret Server 10.6](https://thycotic.force.com/support/s/article/SS-CFG-EXT-Workaround-IWA-10-6) KB article.
 
 > **Important:** Upgrading to Secret Server version 8.9.00000 and above requires **Windows Server 2008 R2 or greater.** 
 
-> **Important:** If you are upgrading to Secret Server version 8.5.000000 and above, there  are changes in the .NET Framework version you will need to be aware of  along with some additional steps in the upgrade process. For more  information, see [Secret Server Moving to .NET Framework 4.5.1](https://thycotic.force.com/support/s/article/Secret-Server-Moving-to-NET-Framework-4-5-1) (KBA).
-
 > **Important:** Upgrading to Secret Server version 10.0.000000 and above will require configuring integrated pipeline mode on the Secret Server Application Pool. Please  see [Manual IIS Installation](http://updates.thycotic.net/link.ashx?IisPiplineIntegratedKnowledgeBase) for details on configuring integrated pipeline mode in IIS. If using  Integrated Windows Authentication you will also need to update IIS  authentication settings as detailed in [Configuring Integrated Windows Authentication](../../../authentication/integrated-windows-authentication/configuring-iwa/index.md). If you are at version 9.1.000000 and below, you will need to first  upgrade to 9.1.000001 before you can upgrade to 10.0.000000 and above.
-
-> **Important:** If you are doing an incremental upgrade from Version 9.1.000000 to a  higher version, the system may require additional time to process the  changes before proceeding. A typical symptom of this behavior will be  the software will redirect you to the home page. If this happens, please allow up to 24 hours before retrying the upgrade. If the issue  persists, please contact technical support. You should lose no other  functionality of the software whilst this occurs.
 
 > **Important:** Please be aware that if you have Privilege Manager installed, the  Secret Server upgrade process will begin an upgrade for Privilege  Manager as well. 
 
@@ -33,6 +25,8 @@ Secret Server periodically polls the update server to detect new updates. If the
 1. Ensure you have a recent backup of the application files and database available.
 
 3. If you use clustering, stop the application pools on all of the servers except the one being upgraded.
+
+1. Conduct the [SS and SSC .NET Framework 4.8 Upgrade](../net-4-8-upgrade/index.md).
 
 ## How to Upgrade
 
