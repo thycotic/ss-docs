@@ -6,7 +6,7 @@
 
 1. Click the **Reports** menu item. The Reports page appears:
 
-   ![1566843951292](images/1566843951292.png)
+   ![image-20201204161742683](images/image-20201204161742683.png)
 
 1. Click the link for the desired report. Its page appears:
 

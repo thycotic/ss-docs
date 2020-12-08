@@ -25,13 +25,15 @@ SHA256 Hash:
 
 >**Note:** SSPH (RDS) is a special Remote Desktop Services version of Secret Server Protocol Handler that can record keystrokes on its own, if configured in SS. See [Session Connector](../session-connector/index.md) for details.
 
+>**Note:** .NET Framework 4.8 is required for SSPH (RDS).
+
 File:
-[SSProtocolHandlerRDS.msi](https://updates.thycotic.net/secretserver/tools/SSProtocolHandlerRDS.zip) (v6.0.0.33)
+[SSProtocolHandlerRDS.msi]([https://updates.thycotic.net/secretserver/tools/SSProtocolHandlerRDS-v6.0.3.0.zip ](https://updates.thycotic.net/secretserver/tools/SSProtocolHandlerRDS-v6.0.3.0.zip ) ) (v6.0.3.0)
 
 SHA1 Hash:
 
-13047DA5F538D12E255F6C270BD74E57B1EBB6CF
+AA0F3F5800AF86F5D54853A7AE464D1856FE01E0
 
 SHA256 Hash:
 
-15B92AEC7A81254986ED37EBCBDC56AC7FC3C4559C1C08FACB1C64A3AEB7AF7D
+45125C6C1C3A3E20A8A5662B9762D29F3F9B057616A4AD166A6476DEB07E779B

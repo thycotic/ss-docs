@@ -139,7 +139,7 @@ Enable SSSC:
 
 1. (Optional) Ensure the listed hash value matches that for the file.
 
-> **Note:** SSPH (RDS) is a special version of SSPH that can record keystrokes on its own, if configured in SS. Due to this optional keystroke recording, you may need to whitelist the `RDPWin.exe` file (the primary executable for SSPH) in any antivirus software running on the server. This is not currently necessary with Windows Defender.
+> **Note:** SSPH (RDS) is a special version of SSPH that can record keystrokes on its own, if configured in SS. Due to this optional keystroke recording, you may need to allowlist the `RDPWin.exe` file (the primary executable for SSPH) in any antivirus software running on the server. This is not currently necessary with Windows Defender.
 
 > **Note:** SSPH (RDS) does not auto-update itself, unlike SSPH, because this could cause problems with multiple users running it at once on a single RDS server. Older SSPH (RDS) versions will continue to work with new SS releases until updated, but a manual update is required on the RDS server(s) to take advantage of any future SSPH (RDS) features.
 
