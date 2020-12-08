@@ -8,7 +8,7 @@
 
 ## Current
 
-- [Secret Server 10.9.000005 and 10.9.000032](ss-rn-10-9-000005.md)
+- [Secret Server 10.9.000005/32](ss-rn-10-9-000005.md)
 
 - [Secret Server Cloud 2020-10-24 Supplement to 10.9.000002](ssc-rn-2020-10-24.md)
 
