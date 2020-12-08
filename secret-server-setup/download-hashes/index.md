@@ -4,9 +4,27 @@
 
 # Secret Server Download Hashes
 
-## 10.9.000005/10.9.000032 (Current Versions)
+## 10.9.000005/32 (Current Versions)
 
-The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.9.000002.
+### 10.9.000005
+
+The following are the download hashes for the first half of the combined "step upgrade" installation files of Secret Server.
+
+ThycoticSetup.exe:
+
+- SHA1 = 47a1e5eafa8797f9c6012a2b54efaa09e8ff0649
+
+- SHA256 = 6ccb2e6a9b695a432a006a143ad7fa672a8191c5aba9556eb4cff59180d1f82c
+
+Version_10_9_000002.zip:
+
+- SHA1 = e1f8f6dd8e8e43f81d4b30d9a6cabafe08c46023
+
+- SHA256 = 0e31766c54af67944e0ef16f8ad6512672640d0a5988ff7e03b99a40a1525de5
+
+### 10.9.000032
+
+The following are the download hashes for the second half of the combined "step upgrade" installation files of Secret Server.
 
 ThycoticSetup.exe:
 
