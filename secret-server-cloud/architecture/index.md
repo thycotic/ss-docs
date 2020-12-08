@@ -57,23 +57,23 @@ See the [Details for All Architectures](#Details-for-All-Architectures) section 
 
 ### 1: Service Buses
 
-IP Address whitelisting is not necessary unless outbound firewall rules are in place. If IP whitelisting is necessary, please open a ticket with [Thycotic Support](../../support/index.md) to use your customer-specific service bus host names.
+IP Address allowlisting is not necessary unless outbound firewall rules are in place. If IP allowlisting is necessary, please open a ticket with [Thycotic Support](../../support/index.md) to use your customer-specific service bus host names.
 
 ### 2: Web Application Firewall (WAF)
 
-IP Address whitelisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
+IP Address allowlisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
 
 IP addresses for all regions: 45.60.38.37, 45.60.40.37, 45.60.32.37, 45.60.34.37, 45.60.36.37, 45.60.104.37
 
 ### 3: Content Delivery Network (CDN)
 
-IP Address whitelisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
+IP Address allowlisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
 
 Edge nodes for all regions: [Microsoft Edge Node List](https://docs.microsoft.com/en-us/rest/api/cdn/edgenodes/list).
 
 ### 4: RADIUS
 
-Inbound whitelisting is necessary if RADIUS authentication is configured. Port 1812 needs to be open for inbound connection on the RADIUS server. The RADIUS server could either be publicly accessible or have port forwarding configured for Secret Server Cloud to reach it. IP addresses:
+Inbound allowlisting is necessary if RADIUS authentication is configured. Port 1812 needs to be open for inbound connection on the RADIUS server. The RADIUS server could either be publicly accessible or have port forwarding configured for Secret Server Cloud to reach it. IP addresses:
 
 - secretservercloud.com: 40.76.197.147, 40.121.181.52
 
@@ -89,7 +89,7 @@ If external clients must be able to connect to internal SSH or RDP endpoints, an
 
 ### 6: Certificate CRLs
 
-Whitelisting is not necessary unless outbound firewall rules are in place. If whitelisting is necessary, access to CRL distribution points is necessary.
+Allowlisting is not necessary unless outbound firewall rules are in place. If allowlisting is necessary, access to CRL distribution points is necessary.
 
 secretservercloud.com:
 
