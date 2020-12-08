@@ -4,6 +4,8 @@
 
 # Secret Server and Secret Server Cloud .NET Framework 4.8 Mandatory Upgrade
 
+>**Important:** This is a major part of the 10.9.000005/32 step upgrade. Please see [Upgrading to 10.9.000005/32](../upgrading-secret-server-10-9-000005/index.md).
+
 ## Introduction
 
 This topic explains the steps to prepare your environment for the December 2020 upgrade to Secret Server (SS) and Secret Server Cloud (SSC). These changes must be made before the December release is deployed. Secret Server Online is not affected by these changes.
