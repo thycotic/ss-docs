@@ -17,7 +17,7 @@ Secret key rotation is a somewhat similar process to RPC by which the encryption
 
 Secret key rotation begins as soon as SS enters maintenance mode. Because maintenance mode disables various functionality (such as secrets cannot be updated), the timing of secret key rotation merits consideration of SS processing time.  We recommend running secret key rotation during off-peak or non-business hours.
 
-Note: To learn more about maintenance mode, see the [Maintenance Mode FAQ](../../admin/maintenance-mode-faq/index.md).
+Note: To learn more about maintenance mode, see the [Maintenance Mode FAQ](../../../admin/maintenance-mode/index.md).
 
 ## Estimated Processing Time
 

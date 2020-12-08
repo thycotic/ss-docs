@@ -148,7 +148,7 @@ The following configuration settings are available in the General tab:
 
 ## HSM Tab
 
-From the Hardware Security Module (HSM) tab, you can enable or disable HSM for encryption. For more details about HSM configuration, see our [HSM Integration Guide](https://updates.thycotic.net/links.ashx?hsmintegrationguide) (PDF).
+From the Hardware Security Module (HSM) tab, you can enable or disable HSM for encryption. For more details about HSM configuration, see [Hardware Security Modules](../../security-hardening/hsm-integration/index.md).
 
 ## Local User Passwords Tab
 
