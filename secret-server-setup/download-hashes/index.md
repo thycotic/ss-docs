@@ -4,7 +4,29 @@
 
 # Secret Server Download Hashes
 
-## 10.9.000002 (Current Version)
+## 10.9.000005/10.9.000032 (Current Versions)
+
+The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.9.000002.
+
+ThycoticSetup.exe:
+
+- SHA1 = 332006c38327bf5f48e4d687239fad3f7798849b
+
+- SHA256 = 173f3a796412684808c256341995c50713e6b61ddef4510f9471748d9fa29b98
+
+Version_10_9_000002.zip:
+
+- SHA1 = d03cad17517e5b5054b93086d992d34909182c39
+
+- SHA256 = 4d5365b93670d33f3c9b9f02573c0b53e971943a1e35adf1950750e69821ee41
+
+## Earlier Versions
+
+Below are the hashes for the step-upgrade version. When upgrading from a version prior to 8.4.000004, the upgrade process will upgrade Secret Server to 8.4.000004.
+
+If Secret Server is version 8.4.000004 to 9.1.000000 the upgrade process will upgrade to 9.1.000001 and from there Secret Server can be upgraded to the latest release.
+
+### 10.9.000002
 
 The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.9.000002.
 
@@ -19,12 +41,6 @@ Version_10_9_000002.zip:
 - SHA1 = 61f19f05aa32597aa93c9590c7fa254129ba2577
 
 - SHA256 = f8d737cf3e60e81c89b6edee0f8d14236e90c831eda3814a353f0744a5e61c0c
-
-## Earlier Versions
-
-Below are the hashes for the step-upgrade version. When upgrading from a version prior to 8.4.000004, the upgrade process will upgrade Secret Server to 8.4.000004.
-
-If Secret Server is version 8.4.000004 to 9.1.000000 the upgrade process will upgrade to 9.1.000001 and from there Secret Server can be upgraded to the latest release.
 
 ### 10.9.000000
 

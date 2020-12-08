@@ -579,7 +579,7 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
 
 4. Look at the **Launch Instructions** at the end of secret details, and note the parameters.
 
-## SSH Terminal Launching with a Custom SSH Command Whitelist
+## SSH Terminal Launching with a Custom SSH Command Allowlist
 
 SS terminal can launch secrets with custom SSH Command restrictions. For detailed instructions on SSH command menus, please consult the **Managing SuperUser Privilege** section of the [Secret Server Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Admin-Guide).
 
@@ -599,7 +599,7 @@ SS terminal can launch secrets with custom SSH Command restrictions. For detaile
 
 5. On the **Security** tab of a secret that can use a proxied SSH session, proxy must be enabled, as well as command menu restrictions. If **Allow Owners Unrestricted SSH Commands** is enabled, any user who is an owner of the secret has unrestricted use of the launched session. That is, that user is able to type in commands as in a normal SSH session. Additionally, other groups can be assigned the unrestricted role as well.
 
-6. In the following example, the “admin” group is unrestricted, and everyone who is not in that admin group is restricted to only being able to run the whitelisted commands that are specified in the user command menu created above.
+6. In the following example, the “admin” group is unrestricted, and everyone who is not in that admin group is restricted to only being able to run the allowlisted commands that are specified in the user command menu created above.
 
 
    ![1569425961920](images/1569425961920.png)
@@ -608,7 +608,7 @@ SS terminal can launch secrets with custom SSH Command restrictions. For detaile
 
    ![1569426630093](images/1569426630093.png)
 
-   And click the dropdown list to select Whitelisted Commands:
+   And click the dropdown list to select Allowlisted Commands:
 
    ![1569426365427](images/1569426365427.png)
 
@@ -627,9 +627,9 @@ SS terminal can launch secrets with custom SSH Command restrictions. For detaile
 
 SS SSH terminal launches also support session recording for session client or server data. When a user launches a secret with session recording enabled through SSH terminal, session data is available in the Secret Audit tab as session data.
 
-> **Note:** Session recording requires either SS Platinum or the Session Recording add on license.
+> **Note:** Session recording requires either SS Platinum or the session recording add-on license.
 
-> **Note:** See the Session Recording section of the [Secret Server Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Admin-Guide). for more information.
+> **Note:** See the Session Recording section for more information.
 
 To enable session recording:
 
@@ -666,3 +666,62 @@ To view session data following a terminal secret launch:
 1. Find the **LAUNCH** action in the table.
 
 1. Click the **View SSH Session Log** link.
+
+## SSH Key Pairs for Terminal
+
+### Overview
+
+SSH key pairs allow users to authenticate to SS terminal without using a password. The user generates a key pair in SS, at which time the private key can be downloaded by the user locally in the format they require. The key pair generation process is the only time the private key will be provided to the user. If this private key is lost, the user must log back into SS and generate a new public/private key pair.
+
+### Limitations
+
+- Currently users can only authenticate to SS using SSH keys by using SS’s SSH terminal.
+
+- Only PuTTY and OpenSSH keys can be generated.
+
+
+### Enabling Users to use SSH Key Pairs to Authenticate
+
+There are three requirements for enabling Public SSH Keys:
+
+- SSH Proxy is enabled in SS.
+
+- SSH Terminal is enabled in SS.
+
+- SSH key integration is enabled in SS’s Configuration \> Login settings. To do so:
+    1. **Unix  Authentication Method**: choose **Public Key only**, **Password or  Public Key** or **Password and Public Key** to enable SSH key pair authentication.
+1. Once done, the admin can also set an optional expiration time frame for the public SSH keys, which applies to all users.
+
+ Once these 3 requirements have been met, users can use the main navigation to create SSH key pairs.
+
+### Creating SSH Key Pairs
+
+An SSH key pair consists of a private key and a public key. Only the public key is stored in the user’s settings—the private key downloaded during generation is **not** saved inside SS and should only be available to the user, to remain secure. 
+
+During terminal login, if the user provides a private key for authentication, SS validates the provided private key against the user’s available (and enabled) saved public keys. If a key pair match is found, the authentication succeeds (or the next required authentication step, for example a password prompt, is shown). 
+
+For security reasons, only users can create their own SSH key pairs. However, SS Administrators can deactivate any user’s public SSH keys as follows:
+
+1. Navigate to the **Public SSH Keys** page using the main navigation at the top right of the page.
+
+2. Click the **Create SSH Key** button above the grid, then fill out the form in the popup page.
+
+3. Click the **Create SSH Key** button in the popup. After a moment you will be able to save the private key.
+
+### Administering Public SSH Keys
+
+1. Navigate to the User by going to **Admin \> Users**.
+
+1. Locate the user in the dropdown list and select it.
+
+1. On the **General** tab click the **Administer Public SSH Keys** button. You can now deactivate the user’s public SSH keys.
+
+### Using SSH Keys for Authentication (PuTTY Example)
+
+1. In PuTTY, fill in the **Session** view to match your SSH proxy connection settings in SS.
+
+2. In the **SSH \> Auth** section of PuTTY, add the private key file that was saved when generating the key in SS.
+
+3. You will be prompted to enter your passphrase for the key if one was set.
+
+4. You will be prompted to enter your password if **Unix Authentication Method** also requires a password.

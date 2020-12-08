@@ -145,15 +145,11 @@ To identify which servers in your environment are running Distributed Engines an
 
 1. In SS, go to **Admin > Distributed Engine**. The Distributed Engine Configuration page appears:
 
-    ![image-20201015135820974](images/image-20201015135820974.png)
+    ![image-20201204162936743](images/image-20201204162936743.png)
 
-1. Click the **Manage Sites** button. The Manage Sites page appears:
+1. Click the site panel button for the desired DE. The panel expands, displaying the DEs for that site:
 
-    ![image-20201015140958470](images/image-20201015140958470.png) 
-
-1. Click the name of the site you want to inspect in the **Site Name** column. The Site View page for that site appears:
-
-    ![image-20201015141855328](images/image-20201015141855328.png)
+    ![image-20201204163347290](images/image-20201204163347290.png)
 
 1. Note the servers in your environment that currently have distributed engines installed. These are the machines where you need to install the .NET 4.8 runtime.
 
