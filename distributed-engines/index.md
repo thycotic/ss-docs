@@ -6,6 +6,16 @@
 
 > **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
+## On This Page
+
+[Overview](#Overview)
+
+[Architecture and Workflow](#Architecture-and Workflow)
+
+[Configuring Distributed Engines](#Configuring-Distributed Engines)
+
+[FAQ](#FAQ)
+
 ## Overview
 
 Out of the box, SS performs all functions from the Web server it is installed on; however, specific features can be routed through a distributed engine for enhanced performance. For example, synchronize and authenticate AD users can be done in SS via your local site or from a distributed engine (DE).

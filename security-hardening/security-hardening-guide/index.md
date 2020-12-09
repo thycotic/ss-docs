@@ -4,6 +4,30 @@
 
 # Security Hardening Guide
 
+## On This Page
+
+[Introduction](#Introduction)
+
+[Overview](#Overview)
+
+[Best Practices](#Best-Practices)
+
+[Security Hardening Report](#Security-Hardening Report)
+
+[Security Settings Not in the Hardening Report](#Security-Settings Not in the Hardening Report)
+
+[Two-Factor Authentication](#Two-Factor-Authentication)
+
+[Roles](#Roles)
+
+[Encryption](#Encryption)
+
+[Disabling IIS HTTP Headers](#Disabling-IIS HTTP Headers)
+
+[Adjusting CORS Policy Headers](#Adjusting-CORS Policy Headers)
+
+[Additional Resources](#Additional-Resources)
+
 ## Introduction
 
 This document outlines security hardening for securing your Secret Server (SS) instance, whether it be installed on a single server or in a multi-clustered environment.
