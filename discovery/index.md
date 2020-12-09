@@ -6,20 +6,6 @@
 
 > **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
-## On This Page
-
-[Overview](#Overview)
-
-[How Discovery Works](#How-Discovery Works)
-
-[Discovery and Sites—Where Does Secret Server Run Discovery Scans?](#Discovery-and Sites—Where Does Secret Server Run Discovery Scans?)
-
-[Discovery Performance](#Discovery-Performance)
-
-[Local Account Discovery Method for Active Directory](#Local-Account Discovery Method for Active Directory)
-
-[Extensible Discovery](#Extensible-Discovery)
-
 ## Overview
 
 Discovery is the process where SS scans an environment to find accounts and associated resources called *dependencies*. Once accounts are found, they can be used to create new secrets in SS. Users with the “administer discovery” role permission can either manually import accounts or can create an automated process, called a *discovery rule*, to do so. Using discovery does not stop users from manually creating their own secrets.
