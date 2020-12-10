@@ -1,5 +1,5 @@
-[title]: # (Secret Server Best Practices)
-[tags]: # (Best Practices)
+[title]: # (Best Practices)
+[tags]: # (best practices)
 [priority]: # (1000)
 
 # Best Practices
