@@ -5,7 +5,7 @@
 
 # Troubleshooting Heartbeat and RPC Errors for Linux Secrets
 
-When using SS for SSH password rotation, you may encounter errors when changing a secret. This article helps the reader troubleshoot the configuration of Remote Password Changing (RPC) in Secret Server (SS) to avoid errors,
+When using SS for SSH password rotation, you may encounter errors when changing a secret. This article helps the reader troubleshoot the configuration of Remote Password Changing (RPC) in Secret Server (SS) to avoid errors.
 
 > **Note:** See [Troubleshooting SSH Issues](../ssh-issues/index.md) for other SSH issues.
 
