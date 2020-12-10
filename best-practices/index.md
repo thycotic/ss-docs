@@ -148,7 +148,7 @@ A pitfall of this strategy can be that if the team (or function-specific account
 
 Sometimes, your employees' roles may require longer, more specialized access. For those accounts, you can have individual privileged domain accounts, and for the other regular users you can use a few shared privileged domain accounts. All of these can be stored in SS, but with different settings governing their usage. For example, the shared accounts would still have check out enabled, while the individual privileged accounts will simply have permissions limited to an individual user, possibly with the password hidden using hide launcher password.
 
-## What Is the Highest Risk?
+### What Is the Highest Risk?
 
 Implementing a comprehensive PAM policy should eventually cover all of your privileged/shared accounts, but this can take some time. When looking at where to start, it is important to consider the areas of risk that your team has to deal with. Where are the areas that need more immediate attention? Is it local Windows admin accounts all sharing the same password? Pass-the-hash vulnerability? Protecting your network equipment passwords? Avoiding fines for not meeting compliance mandates? Maybe it is password misuse and auditing employee access to accounts is most important to you. Choose a starting point that will that will give your organization the most value, and then branch out from there.
 
