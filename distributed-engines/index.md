@@ -46,7 +46,13 @@ Default ports:
 
 - Secret Server: existing IP address bindings or custom port over TCP. We reserve one port for legacy upgrades, usually port 9999.
 
-- Secret Server Cloud: 9354 (legacy port for NetMessaging in Azure Service Bus), used for outbound traffic for Engines to communicate with Secret Server Cloud instances
+- Secret Server Cloud: 
+
+    - 443 (Web sockets—the default)
+
+    - 5671 and 5672 (AMQP)
+
+    >**Note:** These ports are used for outbound traffic for engines to communicate with SSC instances. They are set by the "Azure ServiceBus Transport Type" global engine setting.
 
 ### Security
 

@@ -70,7 +70,6 @@ This article lists ports typically used in Secret Server. Please note the follow
 | Type of Traffic | Port Number |
 | --------------- | ----------- |
 | SMTP            | TCP/25      |
-|                 |             |
 
 **Table:** RADIUS Server Ports
 

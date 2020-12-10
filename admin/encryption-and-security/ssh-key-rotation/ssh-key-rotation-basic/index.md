@@ -1,7 +1,7 @@
 [title]: # (Basic SSH Key Rotation)
 [tags]: # (SSH,key rotation)
 [priority]: # (1000)
-[display]: # (none)
+[display]: # (all)
 
 # Basic SSH Key Rotation 
 
@@ -48,19 +48,29 @@ Use **Unix Account (Privileged Account SSH Key Rotation)** if:
 ### Creating the Secret
 
 1. Create a new secret in SS using the **Unix Account (SSH Key Rotation)** template.
+
 1. Enter the account user name and password.
+
 1. Upload the private key file.
+
 1. If the private key is encrypted using a passphrase, enter the passphrase.
+
 1. Uploading a public key is optional but recommended. If a public key is not provided, SS will regenerate it from the private key during key rotation, but if the key in `authorized_keys` is not in the same format as the generated key or does not match exactly (including comments), the rotation will fail because it could not find the public key that needs to be removed.
+
 1. After the secret is created you should see a successful heartbeat status. If heartbeat isn’t running, make sure heartbeat and RPC are enabled under **Admin \> Remote Password Changing**.
 
 ### Rotating the Key
 
 1. Go to the **Remote Password Changing** tab and click **Change Password Remotely**.
+
 1. Enter the new password or click **Generate** next to the **Next Password** field to generate a random password.
+
 1. Click to select **Generate New SSH Key** to create a new, random SSH key. If you want to supply your own private key, uncheck this option and paste the key into the **Next Private Key** text box that appears.
+
 1. If you have unchecked **Generate New SSH Key** you must enter the passphrase that was used to encrypt the private key at the time it was created. Leave this field blank if the private key was not encrypted with a passphrase. If you have checked **Generate New SSH Key** you have the option to enter your own passphrase, leave it blank (for an unencrypted private key), or click the **Generate** button next to the field to create a new, random passphrase. If you want to change the key without changing the passphrase, you must put the current passphrase in the **Next Private Key Passphrase** text box.
+
 1. Click **Change** to start the key rotation and a password change. After you start the change, you can check the status either in **Admin \> Remote Password Changing** or on the **Remote Password Changing** tab of the secret.
+
 1. Once the password change / key rotation is complete the heartbeat status should be successful. You can check the audit log to see notes that the key was rotated and start a session using the key with the PuTTY Launcher.
 
 ## SSH Key Rotation Using a Privileged Account
@@ -70,21 +80,33 @@ To use **Unix Account (Privileged Account SSH Key Rotation)**, you must have a s
 ### Creating the Secret
 
 1. Create a new secret in SS using the **Unix Account (Privileged Account SSH key rotation)** template.
+
 1. Enter the account user name and password.
+
 1. Upload the private key file.
+
 1. If the private key is encrypted using a passphrase, enter the passphrase.
+
 1. Uploading a public key is optional, but recommended. If it is not provided, SS will regenerate it from the private key during key rotation, but if the key in `authorized_keys` is not in the same format as the generated key or does not match exactly (including comments), the rotation will fail because it could not find the public key that needs to be removed.
+
 1. After the Secret is created you should see a successful heartbeat status. If heartbeat is not running, make sure that heartbeat and RPC are enabled under **Admin \> Remote Password Changing**.
+
 1. Next go to the **Remote Password Changing** tab and choose the privileged secret that can authenticate to the machine and modify the user’s `authorized_keys` file.
+
 1. Click the **Back** button after adding the associated secret.
 
 ### Rotating the Key
 
 1. Go to the **Remote Password Changing** tab and click **Change Password Remotely**.
+
 1. Enter the new password or click **Generate** next to the **Next Password** field to generate a random password.
+
 1. Click to select **Generate New SSH Key** to create a new, random SSH key. If you want to supply your own private key, uncheck this option and paste the key into the **Next Private Key** text box that appears.
+
 1. If you have unchecked **Generate New SSH Key** you must enter the passphrase that was used to encrypt the private key at the time it was created. Leave this text box blank if the private key was not encrypted with a passphrase. If you have checked **Generate New SSH Key** you have the option to enter your own passphrase, leave it blank (for an unencrypted private key), or click the **Generate** button next to the field to create a new, random passphrase. If you want to change the key without changing the passphrase, you must put the current passphrase in the **Next Private Key Passphrase** text box.
+
 1. Click **Change** to start the key rotation and a password change. After you start the change, you can check the status either in **Admin \> Remote Password Changing** or on the **Remote Password Changing** tab of the secret.
+
 1. Once the password change / key rotation is complete the heartbeat status should be successful. You can check the audit log to see notes that the key was rotated and start a session using the key with the PuTTY Launcher.
 
 ## Troubleshooting
@@ -106,7 +128,3 @@ To use **Unix Account (Privileged Account SSH Key Rotation)**, you must have a s
   `$[1]$PASSWORD`
 
   This caches the credentials for the rest of the script.
-
-
-
- 
