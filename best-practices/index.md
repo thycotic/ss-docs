@@ -1,5 +1,5 @@
 [title]: # (Secret Server Best Practices)
-[tags]: # (best practices)
+[tags]: # (Best Practices)
 [priority]: # (1000)
 
 # Best Practices
@@ -12,7 +12,7 @@ Think of SS as a platform for your organization to store all of its passwords an
 
 ## Installation
 
-Before installing SS, be sure to take a look at the [system requirements](../secret-server-setup/system-requirements/index.md). The process for installing SS is outlined in the [installation guides](../secret-server-setup/installation/index.md) matching the version of Windows Server you’re using. If you have an active trial or have purchased SS licenses, you can find your licenses by logging into your account at [thycotic.com](http://www.thycotic.com/).
+Before installing SS, be sure to take a look at the [system requirements](../secret-server-setup/system-requirements/index.md). The process for installing SS is outlined in the [installation guides](../secret-server-setup/installation/index.md) matching the version of Windows Server you are using. If you have an active trial or have purchased SS licenses, you can find your licenses by logging into your account at [thycotic.com](http://www.thycotic.com/).
 
 ## Basic Configuration
 
@@ -45,7 +45,7 @@ Throughout this topic, certain terms are used to refer to specific features or c
 
 Access to all the features within SS can be granted to users by creating and assigning different roles. Administrator is one of the default roles that comes installed with SS. By default, this role contains all role permissions, but it can be customized as well. In this guide, when "administrator" is used in the context of a SS user, it will be referring to the users who generally have most permissions and manage the system. Administrators have control over the global security and configuration settings.
 
-> **Note:** Administrators in SS do **not** automatically have access to all data stored in the system—access to data  is still controlled by explicit permissions on that data.  
+> **Note:** Administrators in SS do *not* automatically have access to all data stored in the system—access to data  is still controlled by explicit permissions on that data.  
 
 #### Secret
 
