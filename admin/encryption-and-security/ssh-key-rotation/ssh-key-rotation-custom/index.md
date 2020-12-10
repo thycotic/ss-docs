@@ -1,7 +1,7 @@
 [title]: # (Custom SSH Key Rotation)
 [tags]: # (SSH,key rotation)
 [priority]: # (1000)
-[display]: # (none)
+[display]: # (all)
 
 # Custom SSH Key Rotation
 
@@ -55,13 +55,21 @@ When creating a new secret based on either of these templates you will see the f
 ![image-20201204094455632](images/image-20201204094455632.png)
 
 1. Type the secret name in the **Secret Name** text box.
+
 1. Type the machine in the **Machine** text box.
+
 1. Type the username in the **Username** text box.
+
 1. Click the **Generate** button to create a user password.
+
 1. Click **Private Key** link to upload a file containing the private key.
+
 1. If you are creating a new secret and want to generate a new, random private key, click to select the **Generate New SSH Key** check box. This disables the "Change" links for both the private and public keys.
+
 1. If your uploaded private key was encrypted with a passphrase or you are generating a new key and wish to encrypt it with a passphrase, type that passphrase in the **Private Key Passphrase** text box. Otherwise, leave it empty.
+
 1. If you are creating a new key and want to create a random passphrase for it, click this **Generate** button.
+
 1. If you are uploading a private key, click the **Public Key Change** link to upload the corresponding public key. Uploading a public key is optional, but recommended. If not provided, SS regenerates it from the private key during key rotation, but if the key in the `authorized_keys` file is not in the same format as the generated key, the old key will not be removed when the new key is added.
 
 If neither private key nor public key is attached to the secret, a key rotation creates a new key pair, attaches them to the secret, and adds the new public key to `authorized_keys`.
@@ -82,8 +90,6 @@ If you are adding a secret using the **Unix Account (Privileged Account SSH Key 
 
 1. Click the **Back** button to exit edit mode.
 
-![Screenshot of adding the privileged account as an associated secret.](images/clip_image004.jpg)
-
 ## Editing the SSH Key Rotation Templates
 
 To edit a template, go to **Admin \> Secret Templates**, choose the template you want to edit in the dropdown list of templates, then click **Edit**.
@@ -102,51 +108,48 @@ You can add, remove, or edit any fields you like, but if you change or replace a
 
 - Public Key
 
-> **Note:** Private Key and Public Key must remain field type "File".
+> **Note:** Private key and public key must remain field type "File".
 
 If you change any of the fields listed above, click the **Configure Password Changing** button to map the fields to the password changer. Click the **Edit** button and assign all the password changer fields to the corresponding fields on the secret template.
-
-
-![Screenshot of password changer configuration edit page.](images/clip_image006.jpg)
 
 ## Password Changers
 
 Secret Server includes two password changers for SSH key rotation: **SSH Key Rotation** and **SSH Key Rotation Privileged Account**. The **Unix Account (SSH Key Rotation)** secret template uses the **SSH Key Rotation** password changer and the **Unix Account (Privileged Account SSH Key Rotation)** secret template uses the **SSH Key Rotation Privileged Account** password changer. Each of these password changers includes a set of command sets designed to change the password and public key on an account using the secret's credentials and using sudo with a privileged account, respectively.
 
- Although you can edit these password changers through **ADMIN \> Remote Password Changing \> Configure Password Changers**, clicking on the password changer and then **Edit** and **Edit Commands**, the recommended practice is to copy the existing password changers and then modify the copies. To do this:
+ Although you can edit these password changers through **Admin \> Remote Password Changing \> Configure Password Changers**, clicking on the password changer and then **Edit** and **Edit Commands**, the recommended practice is to copy the existing password changers and then modify the copies. To do this:
 
-1. Go to **ADMIN \> Remote Password Changing**.
+1. Go to **Admin \> Remote Password Changing**.
 
-1. Click the **Configure PasswordChangers** button.
+1. Click the **Configure Password Changers** button.
 
 1. Scroll down to the bottom of the page and click the **New** button.
 
-1. Select the password changer you want to copy in the "Base Password Changer" list and give the new password changer a name.
+1. Select the password changer you want to copy in the **Base Password Changer** list and give the new password changer a name.
 
 1. Click **Save**. This creates a new password changer and copies the command sets from the original password changer.
 
-1. Enter the authentication information (see below for more information), clicking the **Save** button in each Authentication field set.
+1. Enter the authentication information (see below for more information), clicking the **Save** button in each authentication field set.
 
 1. Make the required changes to the command sets for your environment by editing existing lines, deleting lines, adding new lines, and rearranging lines.
 
 ## Authentication
 
-The authentication section defines the credentials that will be used to connect to the machine and run the command set. These can be either the credentials of the secret or credentials from an associated secret. The command sets on the **SSH Key Rotation** password changer are designed to be run with the secret's credentials. Any customized password changer based on this password changer should use the secret's credentials in the Authentication section.
-
- Here is a typical authentication for **SSH Key Rotation**:
+The authentication section defines the credentials that will be used to connect to the machine and run the command set. These can be either the credentials of the secret or credentials from an associated secret. The command sets on the **SSH Key Rotation** password changer are designed to be run with the secret's credentials. Any customized password changer based on this password changer should use the secret's credentials in the authentication section.
 
 
-![Screenshot of a typical SSH Key Rotation Authentication: $USERNAME, $CURRENTPASSWORD, $PRIVATEKEY, $PASSPHRASE](images/clip_image008.jpg)
-
-
-For more information about tokens beginning with a dollar sign used in the above screenshot, see the **RPC Mapped Fields** section in the [Secret Server User Guide](http://thycotic.force.com/support/s/article/User-Guide-Secret-Server).
+For more information about tokens beginning with a dollar sign used in the above screenshot, see the [Dependency Token List](../../../../api-scripting/dependency-tokens/index.md).
 
 The command sets on the **SSH Key Rotation Privileged Account** password changer are designed to be run with the credentials of an account that can change the password and public key on behalf of other users. Any customized password changer based on **SSH Key Rotation Privileged Account** should use the credentials off one of the secret's associated secrets. This is typically the first associated secret but can be any associated secret if your password changer requires more than one associated secret. The exception to this is validation which does not run a command set by default and uses the secret's credentials. If you modify validation to use a command set you will need to change the default authentication for validation if the command set uses sudo.
 
- Here is a typical authentication for **SSH Key Rotation Privileged Account** (except validation, which is identical to the authentication block used by **SSH Key Rotation**):
+Here is a typical authentication for **SSH Key Rotation Privileged Account** (except validation, which is identical to the authentication block used by **SSH Key Rotation**):
 
+​	Username: `$[1]$USERNAME`
 
-![Screenshot of a typical SSH Key Rotation Privileged Account Authentication: $[1]$USERNAME, $[1]$PASSWORD, $[1]$PRIVATE KEY, $[1]$PRIVATE KEY PASSPHRASE](images/clip_image010.jpg)
+​	Password: `$[1]$PASSWORD`
+
+​	Key: `$[1]$PRIVATE KEY`
+
+​	Passphrase:  `$[1]$PRIVATE KEY PASSPHRASE`
 
 ## Command Sets
 
@@ -190,13 +193,13 @@ If the Password Change command set is successful but the Verify Password Changed
 
 ### Notes
 
-SSH Key Rotation scripts will typically be more complex than password change command sets that do not do key rotation. These scripts will often include tokens representing values from the secret and associated secrets as well as commands to verify success or failure of previous commands using $$CHECKFOR and $$CHECKCONTAINS. For more information about these features see the **Editing a Custom Command** section in the [Secret Server User Guide](http://thycotic.force.com/support/s/article/User-Guide-Secret-Server).
+SSH Key Rotation scripts will typically be more complex than password change command sets that do not do key rotation. These scripts will often include tokens representing values from the secret and associated secrets as well as commands to verify success or failure of previous commands using `$$CHECKFOR` and `$$CHECKCONTAINS`. For more information about these features see the **Editing a Custom Command** section in the [Secret Server User Guide](http://thycotic.force.com/support/s/article/User-Guide-Secret-Server).
 
  The default command sets for **SSH Key Rotation Privileged Account** use sudo to execute several commands. These command sets assume that the sudo command will not prompt for a password. If your environment prompts for a password when using sudo the command sets will need to be modified to supply the password. If your environment caches the sudo credentials, the easiest way to handle this is to add the following two lines at the top of each command set on the SSH key rotation Privileged Account password changer:
 
-sudo -i echo
+`sudo -i echo`
 
-$[1]$PASSWORD
+`$[1]$PASSWORD`
 
 This will pass the credentials from the first associated secret when prompted by sudo and cache the credentials for the rest of the script.
 
