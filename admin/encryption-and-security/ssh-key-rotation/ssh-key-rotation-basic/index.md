@@ -1,7 +1,7 @@
 [title]: # (Basic SSH Key Rotation)
 [tags]: # (SSH,key rotation)
 [priority]: # (1000)
-[display]: #
+[display]: # (all)
 
 # Basic SSH Key Rotation 
 
