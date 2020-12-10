@@ -2,7 +2,7 @@
 [tags]: # (best practices)
 [priority]: # (1000)
 
-# Secret Server Best Practices
+# Best Practices
 
 ## Getting Started
 
@@ -55,11 +55,11 @@ A secret is any sensitive piece of information (typically a password) that you w
 
 As you read through this guide, some features may be referenced that are only available in certain editions of SS. To get an idea of what’s available, you can reference the [main sales page](#https://thycotic.com/products/secret-server/) page online. 
 
-# Privileged Account Management (PAM) Strategy
+## Privileged Account Management (PAM) Strategy
 
 It is important to have a privileged account management strategy that helps you determine which types of features to leverage for your various accounts and sensitive data you will be storing. Below are some suggested guidelines for creating a strategic plan. We recommend reading all sections of the guide for a comprehensive look at ways you can secure your SS. However, these guidelines will also link to other parts of the guide so you can choose to jump to a specific section for more detail about a particular topic.
 
-## Identify Data at Risk
+### Identify Data at Risk
 
 Consider all the types of sensitive data your team needs to be securely stored and managed. Where are the biggest risks and pain points in your current password management strategy? Data at risk also often includes more than just passwords.
 
@@ -81,7 +81,7 @@ Typical account passwords and sensitive data being stored in SS:
 
 - UNIX, Linux, Mac root, and local user accounts
 
--  AD domain administrator accounts
+- AD domain administrator accounts
 
 
 - AD service accounts
@@ -98,19 +98,19 @@ Typical account passwords and sensitive data being stored in SS:
 
 - Software license keys, serial numbers, personnel data, Wi-Fi passwords
 
-## Who Accesses Secret Server?
+### Who Accesses Secret Server?
 
 After determining the data you will store in SS, the next step is to decide [who](#_Users) will use SS to access and manage that data. A common approach is to begin by focusing on one group of users and the passwords they use on a regular basis, later expanding to other teams once a good strategy has been put in place. However, you may find it more beneficial to organize SS for use by all of your users/teams at once so you can design an effective overall folder and policy structure that will work well across all teams.
 
-## What Privilege Levels Are Necessary?
+### What Privilege Levels Are Necessary?
 
 Giving a user access to an account in SS can entail different levels of privilege. Do you want a user to be able to edit the username, machine, or password of a secret, or only view the secret? Should they be able to share the secret with other users? Once you incorporate use of the Launcher into your users’ workflow for authenticating to an application, do they really need to know a password, or can you mask it? The [Workflow Security](#workflow-security) section can help you determine and implement key measures to ensure users have least privilege necessary.
 
-## What are your Password Requirements?
+### What are your Password Requirements?
 
 It’s unlikely that all your accounts will have the same [password complexity requirements](#Password-Requirements) and [rotation schedule](#Secret-Expiration). In fact, for best security, you should have some variation. You can create sets of password requirements to control password length, characters, and complexity, then apply those to various account types using [secret templates](#Secret-Templates). Secret templates also allow you to set a default expiration period, which can translate to how often an account password will be changed automatically.
 
-## Evaluate your Existing Setup
+### Evaluate your Existing Setup
 
 While transitioning to using a new tool for managing your passwords, it is important to take into account how accounts are currently used in your environment. The following questions can help evaluate this:
 
@@ -120,7 +120,7 @@ While transitioning to using a new tool for managing your passwords, it is impor
 
 - Are permissions to resources (such as servers and applications) controlled using AD group policy?
 
-## Define Your Core PAM Strategy
+### Define Your Core PAM Strategy
 
 There are a few different strategies that typically work best in SS. Other methods of password management may work but require a more significant amount of time and effort to configure and maintain. The most commonly-used strategies are defined below.
 
@@ -152,19 +152,19 @@ Sometimes, your employees' roles may require longer, more specialized access. Fo
 
 Implementing a comprehensive PAM policy should eventually cover all of your privileged/shared accounts, but this can take some time. When looking at where to start, it is important to consider the areas of risk that your team has to deal with. Where are the areas that need more immediate attention? Is it local Windows admin accounts all sharing the same password? Pass-the-hash vulnerability? Protecting your network equipment passwords? Avoiding fines for not meeting compliance mandates? Maybe it is password misuse and auditing employee access to accounts is most important to you. Choose a starting point that will that will give your organization the most value, and then branch out from there.
 
-# Users
+## Users
 
 At minimum, the administrators who manage and use your organization’s privileged passwords and data on a regular basis will need to access your SS. SS users can be defined in two ways: as local SS accounts or as AD user accounts. SS also has the concept of groups, which can be local (you create them in SS) or AD-synced (security groups from AD). Groups are a powerful tool for assigning and maintaining permissions to secrets, and therefore should be given careful thought and planning.
 
-## Local Secret Server Accounts
+### Local Secret Server Accounts
 
 Local users and groups have to be created and managed manually in SS, as they are not integrated with AD. The first account you create in SS is an example of a local account. Local groups can include local users and AD accounts, and can have a user established as the group owner that is permitted to add or remove users to or from the group.
 
-## Active Directory Accounts
+### Active Directory Accounts
 
 AD accounts can be added for access to SS either manually (one by one) or by AD security group. When adding users by security group, you choose which groups SS will synchronize with AD to update which users’ access to SS is enabled or disabled. AD group synchronization happens on a regular, customizable interval to keep group membership changes that happen in AD up-to-date in SS as well.
 
-## Local or Active Directory Accounts?
+### Local or Active Directory Accounts?
 
 We recommend using one of these options:
 
@@ -176,17 +176,17 @@ We recommend using one of these options:
 
 You  need to choose an option that provides the levels of security and convenience that are acceptable for your organization. Using the AD accounts option is easy for user maintenance, but it limits the security of SS to the level of security of your AD. This may be fine—just be sure to consider the question of domain admin access to AD in combination with SS permissions.
 
-### Only Local Users and Groups
+#### Only Local Users and Groups
 
 Creating local users and groups within SS provides a lot of flexibility because you can tailor permission assignment by group to your exact needs. The major benefit of local users and groups is security: users and group membership can be controlled entirely by role-based access control (RBAC) within SS. However, this approach requires more maintenance because creating or deleting users and managing group membership has to be controlled in SS.
 
-### Only AD Users and Groups
+#### Only AD Users and Groups
 
 If you are considering using AD users and groups for SS access and permissions assignment, review your teams that need access to SS. Compare them to the corresponding groups in your AD. If your AD groups map to ways you want to assign access to secrets, you can synchronize your AD groups with SS and start assigning permissions to secrets (and levels of those permissions—View/Edit/Owner) by group. You can then effectively manage SS access and secret permissions completely from AD by changing AD group membership.
 
 Many customers choose this option because they can maintain control in AD and do not have to worry about any user or group maintenance within SS. If you want to use this option but your AD groups don’t match the way you want to assign secret permissions, you will need to create new AD groups to match this, or may want to consider the hybrid approach (below), using local groups instead.
 
-### Hybrid of AD Users and Local Groups
+#### Hybrid of AD Users and Local Groups
 
 A third option is to create local groups in SS and add AD users to those groups for the purpose of organizing how permissions are assigned to secrets. Many customers who use this setup will create a single AD security group (for example, SecretServerUsers) to use to synchronize their AD users with SS. This approach is more secure than using only AD groups and users, but it is important to keep in mind that an adversary could still reset an AD account password to gain access to your SS.
 
@@ -194,7 +194,7 @@ A third option is to create local groups in SS and add AD users to those groups 
 
 Protect the tool you’re using to secure your privileged accounts by adding a second factor of authentication for users logging into SS. Two-factor authentication can be added whether users are logging in with local or AD accounts. For more information about using two-factor authentication with SS, see the [Security Hardening Guide](../security-hardening/security-hardening-guide/index.md).
 
-# Roles
+## Roles
 
 Roles control which features of SS a user is able to use, view, or administer. Existing roles can be customized, and new roles can be created as needed. SS comes with several roles by default, including administrator, user, and read only. You should review the default roles and decide whether your organization needs further roles for various purposes such as third-party consultants or auditors.
 
@@ -202,15 +202,15 @@ Roles control which features of SS a user is able to use, view, or administer. E
 
 We strongly recommend pulling one or both role permissions pertaining to unlimited administration mode out of the default administrator role. Unlimited administrator mode is a “break-the-glass” feature that allows a user to view all secrets in SS. By splitting the unlimited administration permissions into separate roles, it ensures no one user can both turn on the feature and operate as the unlimited administrator. For more information about how unlimited administration mode works and how to effectively control the relevant role permissions, see the [Security Hardening Guide](../security-hardening/security-hardening-guide/index.md).
 
-## Role Definition and Assignment
+### Role Definition and Assignment
 
 Once you have defined your roles, they will seldom need to be changed. Access to modify and assign roles should be tightly controlled.
 
-## Group Assignment
+### Group Assignment
 
 If roles are assigned to groups, then assignment of the groups will also need to be controlled. Often very sensitive role permissions, such as unlimited administrator, are assigned at the user level to limit the risk of granting group assignment permissions.
 
-# Permissions
+## Permissions
 
 You have different sets of passwords that should only be viewed by particular administrators. You may also have certain passwords that should be read-only to some administrators, editable by others and not even visible to other administrators. All of these options are possible to configure using the permissions within SS.
 
@@ -218,13 +218,13 @@ Permissions can be allocated at the individual user level but it tends to be eas
 
 For more information about what each level of permissions entails, see the [Secret Server Role Permissions List](../roles/role-permission-list/index.md).
 
-# Folder Structure
+## Folder Structure
 
-## Using Folders to Control Access (Inherit Permission)
+### Using Folders to Control Access (Inherit Permission)
 
 You can apply permissions (View/Edit/Owner) at the secret level. This allows you to apply very granular permissions on a single secret if needed. Managing permissions on each secret is powerful for situations where you need that flexibility, but it tends to be harder to manage over hundreds or thousands of secrets. Instead, you should consider using folders to control permissions for most secrets. This can be done by creating a folder structure that best represents your organization, teams or data being stored and then applying permissions on the folders, using inheritance across folders where appropriate. Secrets placed in a folder can then inherit the permissions of the folder.
 
-## Deciding on your Folder Structure
+### Deciding on your Folder Structure
 
 The folder structure creates a hierarchy for organization and permissions. This means that folders near the root level need to break out access in high level terms and then get more specific permissions (typically breaking inheritance) as you move down to the “leaf level” sub-folders.
 
@@ -284,7 +284,7 @@ The most common approach is:
 
 This allows different teams or even different departments within your organization to use the same SS instance independently.
 
-# Secret Policy
+## Secret Policy
 
 A *secret policy* is a set of security and remote password changing settings that are normally applied to a secret on the Security or Remote Password Changing tabs. The benefit of using a secret policy is not only that settings can be applied in bulk to secrets (that is, by folder), but that these settings can also be enforced, preventing users from changing them.
 
