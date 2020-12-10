@@ -55,13 +55,21 @@ When creating a new secret based on either of these templates you will see the f
 ![image-20201204094455632](images/image-20201204094455632.png)
 
 1. Type the secret name in the **Secret Name** text box.
+
 1. Type the machine in the **Machine** text box.
+
 1. Type the username in the **Username** text box.
+
 1. Click the **Generate** button to create a user password.
+
 1. Click **Private Key** link to upload a file containing the private key.
+
 1. If you are creating a new secret and want to generate a new, random private key, click to select the **Generate New SSH Key** check box. This disables the "Change" links for both the private and public keys.
+
 1. If your uploaded private key was encrypted with a passphrase or you are generating a new key and wish to encrypt it with a passphrase, type that passphrase in the **Private Key Passphrase** text box. Otherwise, leave it empty.
+
 1. If you are creating a new key and want to create a random passphrase for it, click this **Generate** button.
+
 1. If you are uploading a private key, click the **Public Key Change** link to upload the corresponding public key. Uploading a public key is optional, but recommended. If not provided, SS regenerates it from the private key during key rotation, but if the key in the `authorized_keys` file is not in the same format as the generated key, the old key will not be removed when the new key is added.
 
 If neither private key nor public key is attached to the secret, a key rotation creates a new key pair, attaches them to the secret, and adds the new public key to `authorized_keys`.
