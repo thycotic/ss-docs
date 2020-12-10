@@ -1,4 +1,4 @@
-[title]: # (Secret Server Best Practices)
+[title]: # (Best Practices)
 [tags]: # (best practices)
 [priority]: # (1000)
 
@@ -12,7 +12,7 @@ Think of SS as a platform for your organization to store all of its passwords an
 
 ## Installation
 
-Before installing SS, be sure to take a look at the [system requirements](../secret-server-setup/system-requirements/index.md). The process for installing SS is outlined in the [installation guides](../secret-server-setup/installation/index.md) matching the version of Windows Server you’re using. If you have an active trial or have purchased SS licenses, you can find your licenses by logging into your account at [thycotic.com](http://www.thycotic.com/).
+Before installing SS, be sure to take a look at the [system requirements](../secret-server-setup/system-requirements/index.md). The process for installing SS is outlined in the [installation guides](../secret-server-setup/installation/index.md) matching the version of Windows Server you are using. If you have an active trial or have purchased SS licenses, you can find your licenses by logging into your account at [thycotic.com](http://www.thycotic.com/).
 
 ## Basic Configuration
 
