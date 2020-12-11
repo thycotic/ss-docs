@@ -78,6 +78,6 @@ Secret Server periodically polls the update server to detect new updates. If the
 
 1. If you intend to use Web clustering, proceed to [Upgrading Secret Server with Web Clustering](../upgrading-with-web-clustering/index.md).
 
-1. Repeat the install procedure using the `Version_10_9_000032.zip` file you downloaded. 
+1. Repeat the install procedure using the `Version_10_9_000033.zip` file you downloaded. 
 
 1. Once again, if you intend to use Web clustering, proceed to [Upgrading Secret Server with Web Clustering](../upgrading-with-web-clustering/index.md).
