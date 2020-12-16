@@ -30,7 +30,7 @@ Secret Server periodically polls the update server to detect new updates. If the
 
 ## How to Upgrade
 
-1. From a computer that has outbound network access, click on the upgrade link to go to: `http://<yourinstance>/SecretServer/Setup/Home`. The Secret Server Setup Home page appears:
+1. From a computer that has outbound network access, click on the upgrade link to go to: `http://<yourinstance>/SecretServer/Setup/Upgrade`. The Secret Server Setup Home page appears:
 
    > **Note:** If your computer does not have outbound network access, please see [Upgrading Secret Server Without Outbound Access](../upgrading-without-outbound-access/index.md).
 
