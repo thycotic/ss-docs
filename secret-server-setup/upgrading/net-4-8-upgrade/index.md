@@ -4,7 +4,7 @@
 
 # Secret Server and Secret Server Cloud .NET Framework 4.8 Mandatory Upgrade
 
->**Important:** This is a major part of the 10.9.000005/32 step upgrade. Please see [Upgrading to 10.9.000005/32](../upgrading-secret-server-10-9-000005/index.md).
+>**Important:** This is a major part of the 10.9.000005/33 step upgrade. Please see [Upgrading to 10.9.000005/33](../upgrading-secret-server-10-9-000005/index.md).
 
 ## Introduction
 
