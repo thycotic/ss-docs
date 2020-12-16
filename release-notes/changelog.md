@@ -26,6 +26,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Ruby Example Code for SOAP
 - Secret Key Rotation
 - Secret Server Best Practices
+- Secret Server Offline Update File
 - Secret Server Slack Integration
 - SQL Server Authentication Configuration
 - SQL Server Replication Best Practices
