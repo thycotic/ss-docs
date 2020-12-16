@@ -1,10 +1,10 @@
-[title]: # (Upgrading to 10.9.000005/32)
+[title]: # (Upgrading to 10.9.000005/33)
 [tags]: # (Setup, Upgrade)
 [priority]: # (1000)
 
-# Upgrading to 10.9.000005/32
+# Upgrading to 10.9.000005/33
 
-This upgrade of Secret Server (SS) is a two-step process where you first upgrade to version 10.9000005 and then to 10.9.000032. The reasoning behind this is to provide a safeguard that warns you if the new .NET system requirement is not met *prior* to the installation making irreversible changes, potentially resulting in a non-functioning SS installation. The second step to 10.9.000032 depends on the .NET update in the first step and deploys the new features for this release.
+This upgrade of Secret Server (SS) is a two-step process where you first upgrade to version 10.9000005 and then to 10.9.000033. The reasoning behind this is to provide a safeguard that warns you if the new .NET system requirement is not met *prior* to the installation making irreversible changes, potentially resulting in a non-functioning SS installation. The second step to 10.9.000033 depends on the .NET update in the first step and deploys the new features for this release.
 
 > **Important:** Customers upgrading to 10.6.000000 or later and are using RabbitMQ, please see [How to clear message accumulation in RabbitMQ queues after upgrading to 10.6](https://thycotic.force.com/support/s/article/How-to-clear-message-accumulation-in-RabbitMQ-queues-after-upgrading-to-10-6)[ How to clear message accumulation in RabbitMQ queues after upgrading to 10.6](https://thycotic.force.com/support/s/article/How-to-clear-message-accumulation-in-RabbitMQ-queues-after-upgrading-to-10-6) (KBA).
 
@@ -30,13 +30,13 @@ Secret Server periodically polls the update server to detect new updates. If the
 
 ## How to Upgrade
 
-1. From a computer that has outbound network access, click on the upgrade link to go to: `http://<yourinstance>/SecretServer/Setup/Home`. The Secret Server Setup Home page appears:
+1. From a computer that has outbound network access, click on the upgrade link to go to: `http://<yourinstance>/SecretServer/Setup/Upgrade`. The Secret Server Setup Home page appears:
 
    > **Note:** If your computer does not have outbound network access, please see [Upgrading Secret Server Without Outbound Access](../upgrading-without-outbound-access/index.md).
 
    ![image-20201207103758281](images/image-20201207103758281.png)
 
-1. Download the two zip files (`Version_10_9_000005.zip` and `Version_10_9_000032.zip`), which contain the installs, using the link at the top of the page.
+1. Download the two zip files (`Version_10_9_000005.zip` and `Version_10_9_000033.zip`), which contain the installs, using the link at the top of the page.
 
 1. Click the **Enable Maintenance Mode** button to enter maintenance mode.
    
@@ -78,6 +78,6 @@ Secret Server periodically polls the update server to detect new updates. If the
 
 1. If you intend to use Web clustering, proceed to [Upgrading Secret Server with Web Clustering](../upgrading-with-web-clustering/index.md).
 
-1. Repeat the install procedure using the `Version_10_9_000032.zip` file you downloaded. 
+1. Repeat the install procedure using the `Version_10_9_000033.zip` file you downloaded. 
 
 1. Once again, if you intend to use Web clustering, proceed to [Upgrading Secret Server with Web Clustering](../upgrading-with-web-clustering/index.md).
