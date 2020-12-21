@@ -6,7 +6,7 @@
 
 > **Note:**  See [Upgrading to Secret Server 10.9.000005/10.9.000032](../upgrading-secret-server-10.9.000005/index.md) for instructions specific to that upgrade.
 >
-> **Important:** If upgrading to 10.7.000000, using SQL Server 2008 R2 as the SS database is no longer supported. For more information, see the [release notes](../../../release-notes/index.md).
+> **Important:** If upgrading to 10.7.000000 or later, using SQL Server 2008 R2 as the SS database is no longer supported.  In addition, the *existing* MS SQL database must be version 2012 or later for this upgrade. Otherwise, if the upgrade fails and you attempt to roll it back, the previous installation will not work. For more information, see the [release notes](../../../release-notes/index.md).
 
 > **Important:** Customers upgrading to 10.6.000000 or later and are using RabbitMQ, please see [How to clear message accumulation in RabbitMQ queues after upgrading to 10.6](https://thycotic.force.com/support/s/article/How-to-clear-message-accumulation-in-RabbitMQ-queues-after-upgrading-to-10-6)[ How to clear message accumulation in RabbitMQ queues after upgrading to 10.6](https://thycotic.force.com/support/s/article/How-to-clear-message-accumulation-in-RabbitMQ-queues-after-upgrading-to-10-6) (KBA).
 
@@ -20,7 +20,7 @@
 
 > **Important:** If you are doing an incremental upgrade from Version 9.1.000000 to a  higher version, the system may require additional time to process the  changes before proceeding. A typical symptom of this behavior will be  the software will redirect you to the home page. If this happens, please allow up to 24 hours before retrying the upgrade. If the issue  persists, please contact technical support. You should lose no other  functionality of the software whilst this occurs.
 
-> **Important:** Please be aware that if you have Privilege Manager installed, the  Secret Server upgrade process will begin an upgrade for Privilege  Manager as well. 
+> **Important:** If you have Privilege Manager installed, the  Secret Server upgrade process will begin an upgrade for Privilege  Manager as well. 
 
 ## How Upgrades Work 
 

@@ -30,6 +30,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Secret Server Slack Integration
 - SQL Server Authentication Configuration
 - SQL Server Replication Best Practices
+- SSH Command Menus
 - Syslog Events
 - Troubleshooting SAML Configuration Errors After Upgrading
 - Troubleshooting SSH Issues
