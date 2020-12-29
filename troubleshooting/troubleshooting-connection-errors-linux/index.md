@@ -11,7 +11,7 @@ When using SS for SSH password rotation, you may encounter errors when changing 
 
 ## Step 1: Verifying Ports and Connectivity
 
-To determine if the heartbeat issue is outside of SS: 
+To determine if the heartbeat issue is outside of SS:
 
 1. Go to the the secret which is failing Remote Password Changing in SS:
 
@@ -29,7 +29,7 @@ To determine if the heartbeat issue is outside of SS:
 
 6. Click the **Site Name** link for the site. The Site View page appears.
 
-7. Note the **Processing Location** parameter for the site. 
+7. Note the **Processing Location** parameter for the site.
 
 8. If the processing location is **Local** and website processing is enabled, do your testing on the SS application server. If it is **Distributed Engine**, do your testing on the distributed engine machine.
 
@@ -39,7 +39,7 @@ To determine if the heartbeat issue is outside of SS:
 
    > **Note:** If you chose a custom port, note it—that port will need to be changed on the RPC too.
 
-10. If the test was successful, proceed to the next step. If it was not successful, contact your networking team to open the port and test the connectivity. They can refer to [Ports Used by Secret Server](../../networking/secret-server-ports/index.md). 
+10. If the test was successful, proceed to the next step. If it was not successful, contact your networking team to open the port and test the connectivity. They can refer to [Ports Used by Secret Server](../../networking/secret-server-ports/index.md).
 
 ## Step 2: Testing Heartbeat and RPC in Secret Server
 
@@ -47,7 +47,7 @@ Procedure:
 
 1. Return to the secret on SS.
 
-3. Click the **Remote Password Changing** tab of the secret (not shown). 
+3. Click the **Remote Password Changing** tab of the secret (not shown).
 
 4. Check the **Associated Secret** section to see if there is an associated account set on the secret for use with RPC:
 
@@ -61,7 +61,7 @@ Procedure:
 
 1. Determine the password type for the template:
 
-   1. Go to **Admin > Secret Templates**. 
+   1. Go to **Admin > Secret Templates**.
 
    1. Click to select the desired template in the dropdown list.
 
@@ -85,7 +85,7 @@ Procedure:
 
    The **Verify Password Changed Commands** section defines the secret fields and commands to use to confirm that a password has rotated (changed) successfully on the target machine. The **Password Change Commands** section defines the secret fields and commands to use to change the password on the target machine.
 
-10. Click the **Edit** button at the bottom of the page. The Edit Password Changer page appears: 
+10. Click the **Edit** button at the bottom of the page. The Edit Password Changer page appears:
 
     ![image-20200924114219847](images/image-20200924114219847.png)
 
@@ -153,7 +153,7 @@ This section troubleshoots the commands used by SS to heartbeat and RPC outside 
 
 1. Use the procedure from [Step 1](#Step-1:-Verifying-Ports-and-Connectivity) to determine which machine (SS application or DE) to perform this step on.
 
-2. If you did not already, [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on the application or any of the DE servers. 
+2. If you did not already, [Download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on the application or any of the DE servers.
 
 3. Open a browser tab on the secret which is failing to Heartbeat or RPC.
 
@@ -171,7 +171,7 @@ This section troubleshoots the commands used by SS to heartbeat and RPC outside 
 
       ![image-20200924134208538](images/image-20200924134208538.png)
 
-4. Determine if you are troubleshooting heartbeat or RPC: The **Verify Password Change Commands** section applies to heartbeat, and the **Password Change Commands** section applies to RPC. Which you use (or both) depends on what failed in Step 
+4. Determine if you are troubleshooting heartbeat or RPC: The **Verify Password Change Commands** section applies to heartbeat, and the **Password Change Commands** section applies to RPC. Which you use (or both) depends on what failed in Step
 
 6. Return the SS or DE server you are testing.
 
@@ -197,15 +197,15 @@ This section troubleshoots the commands used by SS to heartbeat and RPC outside 
 
 15. If the issue is clearly an endpoint issue, remediate it and repeat the commands in PuTTY.
 
-16. Once the commands work properly in PuTTY, if the RPC or heartbeat command set needs adjustment to match the working PuTTY equivalent, return to SS and make the changes to the command set (see the next step). 
+16. Once the commands work properly in PuTTY, if the RPC or heartbeat command set needs adjustment to match the working PuTTY equivalent, return to SS and make the changes to the command set (see the next step).
 
     > **Important:** Before you change the RPC commands, ensure that the device that you are working on belongs to the secret template you are using. Secret templates dynamically update all the secrets based on them, so **all secrets with this template are affected by your changes**. We strongly recommend that if this device is unique or you are storing an independent root account in the associated secret template, you should:
     >
     > 1. Copy the template you are using, giving the copy a descriptive name.
-    > 1. Create a new password changer based on the current one that you are using. 
+    > 1. Create a new password changer based on the current one that you are using.
     > 1. Assign it the the secret template you just created.
     >
-    >This ensures that you do not change how ALL devices related to a secret template when you only intend to change a single devices. Accounts that are the same type on the same device should share the same template. 
+    >This ensures that you do not change how ALL devices related to a secret template when you only intend to change a single devices. Accounts that are the same type on the same device should share the same template.
 
 17. Click the **Edit Commands** button at the bottom of the subject password changer page. The commands for RPC and heartbeat appear:
 

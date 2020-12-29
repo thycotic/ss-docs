@@ -20,11 +20,11 @@ This address using a SS privileged account to change SQL Server accounts. This e
 
 1. Give the account a log on name.
 
-1. Select SQL authentication. 
+1. Select SQL authentication.
 
 1. Go to SS.
 
-1. Create a secret using the **SQL Server Account** template. 
+1. Create a secret using the **SQL Server Account** template.
 
 1. Assign it the desired username .
 
@@ -32,7 +32,7 @@ This address using a SS privileged account to change SQL Server accounts. This e
 
 1. Copy that password to the account creation wizard in SQL Server Management Studio.
 
-1. Click the **OK** button to save the secret. 
+1. Click the **OK** button to save the secret.
 
 ## Assign Permissions
 
@@ -40,9 +40,9 @@ This address using a SS privileged account to change SQL Server accounts. This e
 
 1. Right click on the SQL login object and select **Properties**. The Login Properties dialog box appears.
 
-1. Select **Securables** in the **Select a page** list. 
+1. Select **Securables** in the **Select a page** list.
 
-1. Find the **Alter any login** permission on the **Explicit** tab at the bottom of the dialog box. 
+1. Find the **Alter any login** permission on the **Explicit** tab at the bottom of the dialog box.
 
 1. Click to select the **Grant** check box for that permission.
 
@@ -68,6 +68,6 @@ This address using a SS privileged account to change SQL Server accounts. This e
 
 1. Provide or generate a new password.
 
-1. Click the **Change** button. You have now successfully changed a SQL Server account password using a privileged account. 
+1. Click the **Change** button. You have now successfully changed a SQL Server account password using a privileged account.
 
-> **Note:** You can also assign the account for use by multiple secrets by creating a secret policy and applying that policy to a folder. 
+> **Note:** You can also assign the account for use by multiple secrets by creating a secret policy and applying that policy to a folder.

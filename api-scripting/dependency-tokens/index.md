@@ -64,7 +64,7 @@ Because `$machine` is a reserved word, the parser would separate the reserved `$
 | $USERNAME                           | pre-10.0           | The  username on the secret.                                 |
 
 > **Note:** The mappings of these parameters come from the remote password changer, so you can check the mapping by editing the secret template and selecting configure password changing.
->
+
 > **Note:** Some of these tokens, such as `$PASSWORD`, `$CURRENTPASSWORD`, `$NEWPASSWORD`, and `$PRIORPASSWORD`, may seem to duplicate each other, but they have distinctions based on the context as described above.
 
 > **Note:** In some cases, whether or not the dependency is being changed locally or through a distributed engine may have an impact on what these tokens return. This is due to the asynchronous nature of distributed engines. The newer tokens, such as `$NEWPASSWORD` and `$PRIORPASSWORD`, were created to address this issue. If you are using older tokens, such as `$PASSWORD` and `$CURRENTPASSWORD`, and seeing unexpected results, try using `$PRIORPASSWORD` and `$NEWPASSWORD`.

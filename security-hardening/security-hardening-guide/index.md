@@ -593,10 +593,13 @@ Third, **hide the server type**. The header line `Server: Microsoft-HTTPAPI/2.0`
 By default, SS only allows Cross-Origin Resource Sharing (CORS) to unauthenticated resources. CORS allows a restricted resource on a Web page to be requested from a different domain from that resource. To adjust this behavior, either hardening (such as blocking all CORS calls) or relaxing it, follow these instructions:
 
 1. In the SS installation folder, open the `web-appsettings.config` file in a text editor.
-1. In the **appSettings** section add: 
+
+1. In the **appSettings** section add:
 `<add key="UseWebConfigCORS" value="true"></add>`
 1. Save the file.
+
 1. In the same folder, also open the `web.config` file in the text editor.
+
 1. In the **system.webServer/httpProtocol/customHeaders** section, add:
     `<add name="Access-Control-Allow-Origin" value="[customer URL here]" />`
     `<add name="Access-Control-Allow-Headers" value="Content-Type" />`

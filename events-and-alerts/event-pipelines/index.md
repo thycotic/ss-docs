@@ -144,12 +144,12 @@ EP policy *targets* are SS folders, secret policies, or user groups that are the
 
 > **Important:** Tasks are powerful and can potentially do a lot of damage, so we highly recommend testing EPs in a safe environment before using them on production secrets.
 
-EP *tasks* are actions, which are triggered in an EP, assuming any filtering conditions are met. Tasks can edit secrets, move secrets, change permissions, send  notifications, and more. 
+EP *tasks* are actions, which are triggered in an EP, assuming any filtering conditions are met. Tasks can edit secrets, move secrets, change permissions, send  notifications, and more.
 
 Tasks run in order of their appearance on the Task tab of the Event Pipeline details page. To change the task running order, hover the mouse pointer over the one you want to move, and use  the anchor on the left of its card to drag the task to the order you want it to run. If a task fails, the follow-on tasks will not run.
 
 > **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy—the policy targets the secret in the policy or folder to trigger the EPs to process.
->
+
 > **Note:** To reference the additional secrets in the script's Args field for the update secret with a script task or run script, use `$[ADD:1]` before the token. For example:  `$[ADD:1]$USERNAME` to reference additional secret one and `$[ADD:2]$USERNAME` to reference additional secret two.)
 
 #### Secret Tasks

@@ -33,14 +33,13 @@ The secret needs to have Require Comment or Requires Approval for Access enabled
 - **View Ticket URL Template:** The format of the URL to be used for viewing the ticket. This is placed in the audit log so you can easily view the corresponding ticket from SS. The Ticket URL Format field can be edited on the "Ticketing System Integration" tab of the configuration page. In this field, the \$TICKETID parameter will be replaced by the ticket number that is entered by the user. For example, if you specify the template as `http://myticketingsystem/ticket.aspx?ticketid=$TICKETID`, and a user enters 5125-242 as the ticket number, a link will appear in the audit log to `http://myticketingsystem/ticket.aspx?ticketid=5125-242`.
 
 - **Ticket Number and Reason Options:** This option allows fine-grained control of what the user must enter when Require Comment is enabled and ticket system integration is turned on.
+  - **Reason Only Required:** Ticket number is optional, reason is required.
 
-- **Reason Only Required:** Ticket number is optional, reason is required.
+  - **Both Required:** Ticket number and reason are required.
 
-- **Both Required:** Ticket number and reason are required.
+  - **Ticket Number or Reason Required**: Either ticket number or reason must be entered.
 
-- **Ticket Number or Reason Required**: Either ticket number or reason must be entered.
-
-- **Ticket Number Only Required**: Ticket number is required, reason is optional.
+  - **Ticket Number Only Required**: Ticket number is required, reason is optional.
 
 - **Ticket Number Format Pattern (Regex):** A regular expression to use for validating the ticket number entered. This can help prevent typos in the number. For details on creating this expression, see the [Setting a Ticket Pattern Regex](#setting-a-ticket-pattern-regex).
 
@@ -58,3 +57,14 @@ If you are supported and need assistance setting up a validation pattern, feel f
 
 Here is an example for a ticket pattern that must be a valid number:
 `^[0-9]+$`
+
+## Third-Party Integrations
+
+Secret Server can integrate into third-party ticket systems as well. Those supported are listed below. You can add multiple ticket systems to SS by clicking New Ticket System. You can make a specific ticket system the default system used by SS by clicking the System link and then clicking the Set as Default button.
+
+ The third-party integrations:
+
+- [Atlassian JIRA](https://thycotic.force.com/support/s/article/Ticket-System-Integration-Atlassian-JIRA) (KBA)
+- [BMC Remedy](./bmc-remedy-integration/index.md)
+- [ManageEngine](https://thycotic.force.com/support/s/article/Ticket-System-Integration-ManageEngine) (KBA)
+- [ServiceNow](./servicenow-integration/index.md)

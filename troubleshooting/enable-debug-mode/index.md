@@ -10,7 +10,7 @@
 
 You can expand distributed engine for SS logging to include errors for troubleshooting an issue using the following procedure.
 
-## Procedure 
+## Procedure
 
 1. Locate the `Thycotic.DistributedEngine.Service.exe.config` file. at `C:\Program Files\Thycotic Software Ltd\Distributed Engine` directory on the machine where distributed engine is installed:
 
