@@ -46,7 +46,7 @@ Default ports:
 
 - Secret Server: existing IP address bindings or custom port over TCP. We reserve one port for legacy upgrades, usually port 9999.
 
-- Secret Server Cloud: 
+- Secret Server Cloud:
 
     - 443 (Web sockets—the default)
 

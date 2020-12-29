@@ -35,9 +35,13 @@ The support PIN validates that your license includes support, and you must provi
 To get your PIN:
 
 1. Get the log on the credentials you received when you became a Thycotic customer.
+
 1. Log on the [Support Portal](https://thycotic.force.com/support/s/login/) using your credentials.
+
 1. On the main page, click the large blue **PIN** bar to get your PIN. The PIN appears on the button.
+
 1. Record your PIN.
+
 1. If you want to use our ticketing system for support, leave the browser tab open, and return for step four.
 
 ### Secret Server Cloud
@@ -48,7 +52,7 @@ To get your PIN:
 
 1. Log on the Cloud Manager Dashboard at [https://portal.thycotic.com](https://portal.thycotic.com/).
 
-1. Click the **Generate Tech Support** PIN button. A Tech Support PIN popup appears. 
+1. Click the **Generate Tech Support** PIN button. A Tech Support PIN popup appears.
 
 1. Record your PIN.
 

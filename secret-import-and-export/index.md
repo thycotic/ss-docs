@@ -14,7 +14,7 @@ Secrets are imported or exported as a comma-separated-value (CSV) file or as XML
 
 - The XML file is useful for migrating data from one SS installation to another or even from a third-party application to SS.
 
-Secrets are exported in the exact same structure as a secret Import. 
+Secrets are exported in the exact same structure as a secret Import.
 
 This topic has three subtopics:
 
@@ -72,6 +72,6 @@ The following secret template settings are **not** transferred:
 
 ## Migrating to and from Secret Server Cloud
 
-If you use XML import and export to migrate from SS on-premises to cloud, the major release version (x.x) must be the same. Otherwise, you need to upgrade before you can migrate. Additionally, the **Allow Duplicate Secret Names** check box on the **General** tab of the **Admin Configuration** page should be disabled in Secret Server Cloud before importing. 
+If you use XML import and export to migrate from SS on-premises to cloud, the major release version (x.x) must be the same. Otherwise, you need to upgrade before you can migrate. Additionally, the **Allow Duplicate Secret Names** check box on the **General** tab of the **Admin Configuration** page should be disabled in Secret Server Cloud before importing.
 
 You can use XML import and export to transfer between on-premises and cloud editions.

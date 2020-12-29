@@ -10,7 +10,7 @@
 
   Follow the steps below for moving MS SQL Server database for Secret Server (SS).
 
-## Task 1: Backing up and Restoring the Database 
+## Task 1: Backing up and Restoring the Database
 
 To back up your SS installation:
 
@@ -30,9 +30,10 @@ To back up your SS installation:
 
 
 1. Make sure SQL Server has permissions for this location. That is, create (if needed) and or grant access to the account that will access the database (see the [Installation Guide](../index.md) for account creation instructions). See [Running the IIS Application Pool As a Service Account](../running-ss-iis-app-pool-service-account/index.md) (Task 2) for details.
+
 1. Copy the resulting database backup file (`.bak`) to your backup location.
 
-> **Note:** You can also automate steps 2-4 using the command: `osql -S myserver\SQLEXPRESS -E - Q "BACKUP DATABASE SECRETSERVER TO DISK = 'c:\backup\ss.bak' `. 
+> **Note:** You can also automate steps 2-4 using the command: `osql -S myserver\SQLEXPRESS -E - Q "BACKUP DATABASE SECRETSERVER TO DISK = 'c:\backup\ss.bak' `.
 
 > **Note:** We recommend taking the old database offline after all steps are complete.
 
@@ -46,7 +47,7 @@ To back up your SS installation:
 
    ![image-20200810114614427](images/image-20200810114614427.png)
 
-   > **Note:** The setting here are stored in `C:\inetpub\wwwroot\Playground\database.config`. You can back that file up to revert or simply return to this page to reset the connection again. See the [Privilege Manager documentation](https://docs.thycotic.com/privman/) if you need to change its configuration too.             
+   > **Note:** The setting here are stored in `C:\inetpub\wwwroot\Playground\database.config`. You can back that file up to revert or simply return to this page to reset the connection again. See the [Privilege Manager documentation](https://docs.thycotic.com/privman/) if you need to change its configuration too.
 
 1. Click the **Edit** button. The page becomes editable.
 

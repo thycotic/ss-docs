@@ -50,7 +50,7 @@ SSC requires one AWS Key (“CMK”), and the number of requests per month will 
 
 1. Click the **Users** button on the left menu.
 
-1. Click **Add User** button. 
+1. Click **Add User** button.
 
 1. Type a name (such as *SecretServerCloud*) in the **User Name** text box.
 
@@ -64,17 +64,17 @@ SSC requires one AWS Key (“CMK”), and the number of requests per month will 
 
 1. Click the **Download .csv** button to save the credentials
 
-   > **Important:**  Be sure to **save both the  access key ID and the secret access key**! If you lose them, you can never view the secret access key again. Even after you enter them in SSC, you cannot retrieve the secret access key. 
+   > **Important:**  Be sure to **save both the  access key ID and the secret access key**! If you lose them, you can never view the secret access key again. Even after you enter them in SSC, you cannot retrieve the secret access key.
 
 1. Click the **Encryption Keys** button in the left menu.
 
-1. Click the **Region** dropdown list to select a region. We recommend picking **US East (Virginia)** if you are using `*.secretservercloud.com`, or **EU (Frankfurt)** if you are using `*.secretservercloud.eu`.     
+1. Click the **Region** dropdown list to select a region. We recommend picking **US East (Virginia)** if you are using `*.secretservercloud.com`, or **EU (Frankfurt)** if you are using `*.secretservercloud.eu`.
 
 1. Click the **Create key** button. The Create Alias and Description page appears.
 
 1. Type an alias in the **Alias** text box (such as *SecretServerCloud*).
 
-1. (Optional) Type a description in the **Description** text box. 
+1. (Optional) Type a description in the **Description** text box.
 
 1. In the **Advanced Options** section, you can either let Amazon create a new random key for you (default), or you can provide your own key, which is beyond the scope of this guide. Click the **Learn More** link for more information. Either way, Amazon will have access to the key because they are providing the encryption and decryption services.
 
@@ -103,30 +103,38 @@ SSC requires one AWS Key (“CMK”), and the number of requests per month will 
 ### Task 2: Adding Encryption Key and User Details in Secret Server
 
 1. In SSC, go to **Administration \> Key Management**. The Key Management page appears.
+
 1. Click the **Edit** button.  The page becomes editable.
+
 1. Click the **Key Management Type** dropdown list to select **Amazon KMS**.
+
 1. Type your AWS key details that you saved earlier in the remaining four text boxes.
+
 1. Click the **Save** button.
 
 ### Task 3: Secret Key Rotation
 
-1. Once you save your changes, your new settings are validated and a secret key rotation is triggered. 
+1. Once you save your changes, your new settings are validated and a secret key rotation is triggered.
+
 1. View the progress of the rotation:
    1. Go to **Admin \> Configuration**.
-   1. Click the **Security** tab. 
+   1. Click the **Security** tab.
    1. Go to the **Key Rotation** section.
 1. Later you can repeat the process to change the AWS encryption key, or you can select **None** for the **Key Management Type** to disable it completely.
-          
+ 
 
 ## Secret Server Key Management via the REST API
 
 SSC has a REST API for retrieving or updating your key management configuration. For details:
 
 1. Log on your SSC instance.
-1. Click the question mark icon in the top right corner and select **Secret Server REST API Guide**. 
-1. Click on the **Documentation for REST API** document link for your authentication style, normal tokens or Windows Integrated Authentication. 
+
+1. Click the question mark icon in the top right corner and select **Secret Server REST API Guide**.
+
+1. Click on the **Documentation for REST API** document link for your authentication style, normal tokens or Windows Integrated Authentication.
+
 1. Search for `KeyManagement` to view that section of our API.
 
-> **Important:** When changed via the API, maintenance mode and a secret key rotation still occur. 
+> **Important:** When changed via the API, maintenance mode and a secret key rotation still occur.
 
  

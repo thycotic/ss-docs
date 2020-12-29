@@ -6,7 +6,7 @@
 
 > **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
-A secret _launcher_ launches applications on end-user machines and automatically logs on using credentials stored in SS.  In general, there are three types of launchers: RDP, SSH, and Custom. This provides a convenient method to open RDP and PuTTy connections, but it also circumvents users needing to know their passwords—a user can still gain access to a needed machine but it is not required to view or copy the password out of SS. A Web launcher automatically logs into websites using the client's browser.
+A secret _launcher_ launches applications on end-user machines and automatically logs on using credentials stored in SS.  In general, there are three types of launchers: RDP, SSH, and Custom. This provides a convenient method to open RDP and PuTTY connections, but it also circumvents users needing to know their passwords—a user can still gain access to a needed machine but it is not required to view or copy the password out of SS. A Web launcher automatically logs into websites using the client's browser.
 
 A *protocol handler* is an application on an end-user's machine. It enables communication between SS and that client machine. It also provides the files needed by launchers. When a SS user starts a launcher:
 

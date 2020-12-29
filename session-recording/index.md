@@ -49,7 +49,7 @@ For active sessions, there are two actions that can be taken:
 Advanced Session Recording (ASR) is a licensed feature of SS that adds capabilities to those offered by basic session recording. You install the Advanced Session Recording Agent (ASRA), which uses the Remote Desktop Protocol, on any client machine where you want more information from the sessions recorded.
 
 > **Note:** ASR is not available to those using our Mac launcher.
->
+
 > **Note:** Older ASRAs (earlier than 7.7) only work if a distributed engine configuration is enabled with RabbitMQ or MemoryMQ installed.
 
 ASR enhances the launcher sessions, which typically only include screenshots, keystrokes, and process activity. ASR features include:

@@ -11,7 +11,7 @@ This topic discusses how to change public keys for Unix accounts using Remote Pa
 
 SSH key rotation allows you to manage your Unix account private keys and passphrases as well as their passwords. With key rotation, whenever the password is changed on the secret (manually, during a scheduled auto-change, or when checking in a secret that changes the password on check-in), the public/private key pair is regenerated and the private key encrypted using a new passphrase. The public key will then be updated on the Unix machine referenced on the secret.
 
-Secret Server provides secret templates and password changers for SSH key rotation. 
+Secret Server provides secret templates and password changers for SSH key rotation.
 
 ## Requirements
 

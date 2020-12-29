@@ -32,7 +32,7 @@ Visual, video is created for video playback.
 
 1. SS sends secret and the target remote server.
 
-1. Protocol launcher starts RDP session to target server. Recording begins. 
+1. Protocol launcher starts RDP session to target server. Recording begins.
 
 1. End user system via the protocol handler does one of two things:
 
@@ -78,11 +78,11 @@ User > Secret Server > Launcher > Secret Server/DE Proxy > Endpoint System
 
 - RDP secrets With RDP tunneling enabled: - Visual only. Video is created for video playback (same as the first scenario).
 
-- For RDP proxy (new in 10.8):  Video and Keystrokes 
+- For RDP proxy (new in 10.8):  Video and Keystrokes
 
 > **Note:** As of the December 10th 2019 release, you can now choose from:
 > - Record keystrokes only
-> - Record video only 
+> - Record video only
 > - Do not record
 
 ### Flow
@@ -95,7 +95,7 @@ User > Secret Server > Launcher > Secret Server/DE Proxy > Endpoint System
 
 1. Protocol handler requests instructions from SS.
 
-1. SS sends connection details for Web server or DE proxy back to the protocol handler. 
+1. SS sends connection details for Web server or DE proxy back to the protocol handler.
 
 1. Protocol launcher starts tunneling session to Web server or DE.
 
@@ -103,7 +103,7 @@ User > Secret Server > Launcher > Secret Server/DE Proxy > Endpoint System
 
 1. SS sends connection parameters to an individual Web server or DE proxy.
 
-1. Proxy starts remote session to target server.  Recording begins. 
+1. Proxy starts remote session to target server.  Recording begins.
 
 1. End user system via the protocol handler does one of two things:
 
@@ -131,7 +131,7 @@ User > Secret Server > Launcher > Secret Server/DE Proxy > Endpoint System
 
 - Session recording storage can be configured per site (separate file share servers), but the processing is still finalized from a Web server with session recording enabled. This means that data written from the Web server to the file share server may happen across different physical locations, which may add to the complexity of your networking requirements and may cause network saturation.
 
-- If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down. 
+- If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down.
 
 - Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
 
@@ -165,7 +165,7 @@ Textual data that passed through the proxy (client to server and server to clien
 
 #### Scenario A
 
-1. User logs on SS. User retrieves the proxy credential username and password for the configured secret. 
+1. User logs on SS. User retrieves the proxy credential username and password for the configured secret.
 
 1. User launches a PuTTY terminal session or RDP proxy session to a proxied Web server or DE, supplying the generated proxy credentials.
 
@@ -221,7 +221,7 @@ User > Secret Server > Launcher > Endpoint System + Advanced Session Recording A
 
 > **Note:** As of the December 10th 2019 release, you can now choose from:
 > - Record keystrokes only
-> - Record video only 
+> - Record video only
 > - Do not record
 
 ### Flow
@@ -236,7 +236,7 @@ User > Secret Server > Launcher > Endpoint System + Advanced Session Recording A
 
 1. SS sends the secret and the remote target server.
 
-1. Proxy starts remote session to target server.  Recording begins. 
+1. Proxy starts remote session to target server.  Recording begins.
 
 1. End user system via the protocol handler does one of two things:
 
@@ -246,7 +246,7 @@ User > Secret Server > Launcher > Endpoint System + Advanced Session Recording A
 
      This information is uploaded via HTTPS (configurable) and stored in the database.
 
-1. The destination system, via the ASRA, uploads keystroke and process (metadata) data by sending this information to the Web servers via HTTPS (TCP 443). 
+1. The destination system, via the ASRA, uploads keystroke and process (metadata) data by sending this information to the Web servers via HTTPS (TCP 443).
 
    > **Note:** Legacy ASR agents for on-premise deployments (prior to 10.7.000059) upload keystroke/process (metadata) by way of the response bus (RabbitMQ/MemoryMQ). This is no longer pictured in this diagram below.
 
@@ -272,7 +272,7 @@ User > Secret Server > Launcher > Endpoint System + Advanced Session Recording A
 
 - Session recording storage can be configured per site (separate file share servers), but the processing is still finalized from a Web server with session recording enabled. This means that data written from the Web server to the file share server may happen across different physical locations, which may add to the complexity of your networking requirements and may cause network saturation.
 
-- If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down.  
+- If your client connection cannot support the needed bandwidth, the session data is still transmitted, but it takes longer to process each session. The protocol handler retries sending recordings to the Web server five times over the course of an hour. If that fails, it stops until the machine or service is restarted. The protocol handler itself terminates its launched session after 10 seconds if SS becomes unreachable. In a scenario where the protocol handler has terminated because SS is down, it stores the video recording in session monitoring up to the point when SS went down.
 
 - Please see [Session Recording Requirements](../../session-recording/session-recording-requirements/index.md) for more information.
 
@@ -292,7 +292,7 @@ User > Endpoint System + Advanced Session Recording Agent
 
 > **Note:** As of the December 10th 2019 release, you can now choose from:
 > - Record keystrokes only
-> - Record video only 
+> - Record video only
 > - Do not record
 
 ### Flow
@@ -301,7 +301,7 @@ User > Endpoint System + Advanced Session Recording Agent
 
 1. User logs on the destination system. SS is not accessed. This is sometimes called "headless recording."
 
-1. The destination system, via the ASRA, uploads keystroke and process (metadata) data by sending this information to the Web servers via HTTPS (TCP 443). 
+1. The destination system, via the ASRA, uploads keystroke and process (metadata) data by sending this information to the Web servers via HTTPS (TCP 443).
 
    > **Note:** Legacy ASR agents for on-premise deployments (prior to 10.7.000059) upload keystroke/process (metadata) by way of the response bus (RabbitMQ/MemoryMQ). This is no longer pictured in this diagram below.
 

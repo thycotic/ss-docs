@@ -6,7 +6,7 @@
 
 ## Overview
 
-Secret Server has two categories of user interface (UI) "skins"—the "new UI" and the "classic UI." 
+Secret Server has two categories of user interface (UI) "skins"—the "new UI" and the "classic UI."
 
 > **Important:** The availability of these features is up to your SS admin. It is possible that you do not have access to the classic UI at all. At your SS admin's discretion, your SS can default to either UI when you first open it.
 
@@ -16,7 +16,7 @@ Settings and terminology for the two UIs are intertwined in in SS, so some clari
 
 - **Classic UI**: The original, utilitarian, "90s-looking" interface, which many still prefer. It is sometimes called Secret Server classic.
 
-- **New UI**: The refined, modern-looking interface with enhanced usability and aesthetics. 
+- **New UI**: The refined, modern-looking interface with enhanced usability and aesthetics.
 
 - **Theme** or **Classic Theme**: A color scheme (skin) for the classic UI. The "real" themes are Secret Server Classic - Blue, Secret Server Classic - Dark, Secret Server Classic - Default (Thycotic green), Secret Server Classic - Gray, and Secret Server Classic - Green. The new UI masquerading as a classic UI theme is called "Secret Server New" (see [Best Practices](#best-practices)).
 
@@ -38,7 +38,7 @@ It is easy to get befuddled about settings and terms in the two UIs because:
 
 To combat that we recommend:
 
-- Most importantly, just remember that themes are for the classic UI and color modes are for the new UI. They both refer to color (and icon) schemes (skins) for their respective interfaces. 
+- Most importantly, just remember that themes are for the classic UI and color modes are for the new UI. They both refer to color (and icon) schemes (skins) for their respective interfaces.
 
 - Pick one UI and stick with it. We recommend the new UI.
 
@@ -58,7 +58,7 @@ You can also control the ability for users to set themes at the role level using
 
 ## Procedures for Users
 
-> **Important:** The availability of these features is up to your SS admin. 
+> **Important:** The availability of these features is up to your SS admin.
 
 ### Switching to the New UI from the Classic UI
 
@@ -78,7 +78,7 @@ Click the user icon at the top right of any SS page and select **View in Classic
 
 1. Click the **Edit** button. The page becomes editable.
 
-1. Click the **My Theme** dropdown list to select the desired theme (skin). Do **not** select Secret Server New (see the note below). The default setting simply means you want to use your SS admin's choice, not yours. 
+1. Click the **My Theme** dropdown list to select the desired theme (skin). Do **not** select Secret Server New (see the note below). The default setting simply means you want to use your SS admin's choice, not yours.
 
 1. Leave the **Color Mode** dropdown list alone—it only applies to the new UI (see the note below).
 

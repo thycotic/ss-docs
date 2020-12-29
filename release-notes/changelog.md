@@ -28,6 +28,8 @@ Created the following topics from Salesforce articles (often including substanti
 - Secret Server Best Practices
 - Secret Server Offline Update File
 - Secret Server Slack Integration
+- Secure LDAP
+- Securing Traffic with HTTP Strict Transport Security
 - SQL Server Authentication Configuration
 - SQL Server Replication Best Practices
 - SSH Command Menus

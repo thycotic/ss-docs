@@ -40,7 +40,7 @@ Procedure:
 
 ## Task 2: Deleting the Virtual Directory
 
-If you installed SS as a virtual directory, the virtual directory must be deleted first. If SS is not configured as a virtual directory, skip this task. 
+If you installed SS as a virtual directory, the virtual directory must be deleted first. If SS is not configured as a virtual directory, skip this task.
 
 1. In the search text box in your **Start Menu**, type `Computer Management`.
 
@@ -50,7 +50,7 @@ If you installed SS as a virtual directory, the virtual directory must be delete
 
 1. Click to expand the **Services and Applications** node.
 
-1. Click the **Internet Information Services (IIS) Manager** node. 
+1. Click the **Internet Information Services (IIS) Manager** node.
 
 1. Click to expand the **Web Sites** subfolder.
 
@@ -70,7 +70,7 @@ If you installed SS as a virtual directory, the virtual directory must be delete
 
 > **Warning:** The `encryption.config` file is crucial to restoring any backup. Ensure this file is backed up if you may want to restore SS.
 
-1. Locate the directory where SS is was installed. 
+1. Locate the directory where SS is was installed.
 
 2. Click to select it.
 

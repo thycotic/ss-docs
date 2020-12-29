@@ -6,11 +6,11 @@
 
 ## Introduction
 
-This topic discusses best practices for hardening Secret Server distributed engine servers. 
+This topic discusses best practices for hardening Secret Server distributed engine servers.
 
-If attackers compromise one of the DE servers, they would have access to all critical DBs, applications, and network devices at the network level. DEs do not store any passwords, PII, or user data in any configuration files. 
+If attackers compromise one of the DE servers, they would have access to all critical DBs, applications, and network devices at the network level. DEs do not store any passwords, PII, or user data in any configuration files.
 
-> **Note:** Due to their intrinsic nature, some PowerShell script run by DEs may expose API usernames or passwords in the PowerShell log. 
+> **Note:** Due to their intrinsic nature, some PowerShell script run by DEs may expose API usernames or passwords in the PowerShell log.
 
 ## General Hardening Steps
 
@@ -39,7 +39,7 @@ For administrator and Remote Desktop user groups:
 
 ### Rename Default Accounts
 
-- Change the names of both the administrator and guest accounts to names that do not indicate their permissions. 
+- Change the names of both the administrator and guest accounts to names that do not indicate their permissions.
 - Create a new locked and unprivileged "administrator" user name as bait.
 
 ### Disable Services
@@ -82,7 +82,7 @@ Remove these:
 
 Ensure only the minimum roles and features that are required are defined on the DE Servers. Remove all unnecessary roles and features
 
-#### Roles 
+#### Roles
 
 ##### Application Server
 
@@ -144,7 +144,7 @@ Keep your server SSL/TLS settings up to date. Among other settings, the differen
 
 The following are recommended settings for Microsoft Group Policy Objects (GPO).
 
-**User  Configuration \> Policies \> Administrative Templates \> Control Panel/Personalization**  
+**User  Configuration \> Policies \> Administrative Templates \> Control Panel/Personalization**
 
 Vulnerability:
 
@@ -167,7 +167,7 @@ None
 
 []()
 
-**Computer  Configuration \> Policies \> Windows Settings \> Security Settings  \> Local Policies /Security Options**  
+**Computer  Configuration \> Policies \> Windows Settings \> Security Settings  \> Local Policies /Security Options**
 
 This setting enables advanced auditing in the operating system.
 
@@ -372,7 +372,7 @@ None
 
 []()
 
-**Computer  Configuration \> Policies \> Windows Settings \> Security Settings  \> Registry**  
+**Computer  Configuration \> Policies \> Windows Settings \> Security Settings  \> Registry**
 
 Auditing should be applied according to the following parameters:
 
@@ -387,7 +387,7 @@ Audit the following registry keys:
 - `HKLM\SYSTEM`
 - `HKLM\SOFTWARE`
 
-**Computer  Configuration \> Policies \> Windows Settings \> Security Settings  \> File System**  
+**Computer  Configuration \> Policies \> Windows Settings \> Security Settings  \> File System**
 
 Vulnerability:
 
@@ -516,7 +516,7 @@ None
 
 []()
 
-**Computer Configuration  \> Policies \> Windows Settings \> Security Settings \> User  Rights Assignment**  
+**Computer Configuration  \> Policies \> Windows Settings \> Security Settings \> User  Rights Assignment**
 
 | Policy                                                       | Recommended Value                                            | Comment                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
