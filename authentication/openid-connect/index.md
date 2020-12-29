@@ -33,35 +33,35 @@ Secret Server implements OpenID Connect authorization code flow, allowing any st
 ### Task One: Acquire and Configure an OpenID Connect Provider
 
 1. Follow your OpenID Connect provider’s setup instructions for configuring a new identity client.
-   
+ 
 1. Gather the configuration data from the provider. To configure an OpenID Connect login provider, the provider must supply these:
-   
-   - **Provider URL**: An HTTPS URL, acting as an authentication endpoint. SS expects the provider URL to be the “issuer” URL of the provider. For example, if the OpenID Connect configuration for the provider is accessible at 
-   
+ 
+   - **Provider URL**: An HTTPS URL, acting as an authentication endpoint. SS expects the provider URL to be the “issuer” URL of the provider. For example, if the OpenID Connect configuration for the provider is accessible at
+ 
      `https://example.com/.well-known/openid-configuration`,
-   
+ 
      then the URL used in the SS configuration should be
-   
+ 
      `https://example.com`.
    - **Client ID**: The ID portion of the credentials used to interact with the provider.
    - **Client Secret**: The password portion of the credentials used to interact with the provider.
-   
+ 
    The process for determining this information varies by provider and you can usually find it by following the provider-specific documentation for configuring an OpenID Connect client.
-   
+ 
 1. Configure the provider with the SS Redirect URI, as shown below, when configuring OpenID Connect integration in SS. It is usually `https://YourWebServer/SecretServer/signin-oidc`. The Secret Server Redirect URI value must be added to the provider’s configuration, so that the SS instance can perform the authentication handshake. This process varies by provider, but it is usually known as a post-login redirect URI or callback URI.
 
 ### Task Two: Configure Secret Server
 
 1. Locate the SS OpenID Connect configuration at **Admin \> Configuration \> Login**:
-   
+ 
    ![](images/image-20191203093420876.png)
-   
+ 
 1.  Click to select the **Enable OpenID Connect Integration** check box.
 
 1.   Fill in the other values using the what you gathered earlier.
 
      > **Note:** The two Thycotic One options are not relevant unless you use Thycotic One as your OpenID Connect provider. They have no effect for other providers.
-   
+ 
 1. Click the **Save** button.
 
 ### Task Three: Matching External Accounts to Secret Server Users

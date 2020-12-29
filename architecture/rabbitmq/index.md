@@ -24,7 +24,7 @@
 
 ### Requirements
 
-- Cross-data-center communication between DEs and RabbitMQ 
+- Cross-data-center communication between DEs and RabbitMQ
 
 - Does not require the creation of RabbitMQ policies, which are based on input from Professional Services.
 
@@ -55,7 +55,7 @@
 
 ### Requirements
 
-- Cross-data-center communication between DEs and RabbitMQ. 
+- Cross-data-center communication between DEs and RabbitMQ.
 
 - Does not require the creation of RabbitMQ policies, which are based on input from Professional Services.
 
@@ -79,7 +79,7 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ load balancer configuration only sends traffic to only node one unless it is down, then then it sends traffic to node two. Communicates by TCP port 5671 or 5672 (do not use if using TLS) . This provides localized high availability for patching and more. 
+- RabbitMQ load balancer configuration only sends traffic to only node one unless it is down, then then it sends traffic to node two. Communicates by TCP port 5671 or 5672 (do not use if using TLS) . This provides localized high availability for patching and more.
 
 - Singular nodes built as part of a load balancer configuration between multiple data centers is also a design possibility with the same type of load balancer configuration mentioned above. Do so will lose localized HA of RabbitMQ.
 
@@ -111,7 +111,7 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ traffic is set to round-robin through load balancers to RabbitMQ nodes in cluster. Communicates by TCP port 5671 or 5672 (do not use if using TLS).  
+- RabbitMQ traffic is set to round-robin through load balancers to RabbitMQ nodes in cluster. Communicates by TCP port 5671 or 5672 (do not use if using TLS).
 
 - All Sites connect to one site connector in Secret Server (RabbitMQ FQDN).
 
@@ -139,9 +139,9 @@
 
 - Distributed engines communicate to SS over callback ports (typically TCP 443, which is not shown in the diagram).
 
-- RabbitMQ traffic for each local load balancer configuration is set to round-robin traffic through load balancer to RabbitMQ nodes in each respective cluster. Communicates by TCP port 5671 or 5672 (do not use if using TLS). 
+- RabbitMQ traffic for each local load balancer configuration is set to round-robin traffic through load balancer to RabbitMQ nodes in each respective cluster. Communicates by TCP port 5671 or 5672 (do not use if using TLS).
 
-- Two site connectors configured in SS. This is a good design for manual failover between the primary and disaster recovery site but will require manual changes within SS for full functionality to resume in DR. The distributed engines global configuration has only the option for one response bus. This implies that traffic may be sent to one RabbitMQ cluster but will be processed via response by the primary data center RabbitMQ cluster.  
+- Two site connectors configured in SS. This is a good design for manual failover between the primary and disaster recovery site but will require manual changes within SS for full functionality to resume in DR. The distributed engines global configuration has only the option for one response bus. This implies that traffic may be sent to one RabbitMQ cluster but will be processed via response by the primary data center RabbitMQ cluster.
 
 - The dotted line traffic for the DR distributed engines back to the RabbitMQ cluster indicates the down primary data center being down and the DR data center being online. In this case, this traffic would become active If the primary site is down. Any functions or secrets in SS assigned explicitly to that site connector will not function without reassigning those functions to the other site connector and RabbitMQ cluster.
 
@@ -177,7 +177,7 @@
 
 - This design is best suited for true DR situations where we assume when the primary location is down or offline that the entire data center is also.
 
-- If the primary location is only partially down (RabbitMQ only is offline), it is possible secrets or features in SS assigned to that specific site connector will not function correctly. 
+- If the primary location is only partially down (RabbitMQ only is offline), it is possible secrets or features in SS assigned to that specific site connector will not function correctly.
 
 Site connector options:
 

@@ -4,7 +4,7 @@
 
 # Secret Server Slack Integration
 
-Secret Server now integrates with Slack, allowing for notifications and workflow handling. This includes approval requests, recently used secret notifications, and launching secrets. 
+Secret Server now integrates with Slack, allowing for notifications and workflow handling. This includes approval requests, recently used secret notifications, and launching secrets.
 
 ## Prerequisites
 
@@ -33,7 +33,7 @@ Setup the Slack app within the Slack API Interface:
 
 2. Scroll down to the **App Credentials** section.
 
-2. Record the **App ID** and **Signing Secret** to add them to the SS configuration. 
+2. Record the **App ID** and **Signing Secret** to add them to the SS configuration.
 
 2. Scroll down to the **Display Information** section.
 
@@ -87,7 +87,7 @@ Setup the Slack app within the Slack API Interface:
 
 2. Click **Install App** in the left menu.
 
-2. Install the app into one of your workspace channels. #general is fine as the Secret Server Bot does not send messages to any channels— Slack just needs this association. 
+2. Install the app into one of your workspace channels. #general is fine as the Secret Server Bot does not send messages to any channels— Slack just needs this association.
 
 2. Copy the **Bot User OAuth Access Token** into the Secret Server configuration.
 
@@ -123,11 +123,11 @@ From the Home tab you can view access requests, cancel your own requests, or app
 
 You can click on the name of a recent secret to go to it, or you can launch the secret directly from Slack. Launching from Slack supports multiple launchers, and user prompts.
 
-![image-20201201141955084](images/image-20201201141955084.png) 
+![image-20201201141955084](images/image-20201201141955084.png)
 
 ### Searching for Secrets
 
-From any conversation you can click the lightning bolt shortcut button (assuming it is enabled) and select **Search Secrets**. 
+From any conversation you can click the lightning bolt shortcut button (assuming it is enabled) and select **Search Secrets**.
 
 ![image-20201201142421329](images/image-20201201142421329.png)
 
@@ -135,7 +135,7 @@ From any conversation you can click the lightning bolt shortcut button (assuming
 
 ### Processing Approval Messages
 
-If a new access request is made by a user in Secret Server and you are an approver, you are sent a message by Secret Server Bot, which you can immediately approve or deny. 
+If a new access request is made by a user in Secret Server and you are an approver, you are sent a message by Secret Server Bot, which you can immediately approve or deny.
 
 ![image-20201201143206852](images/image-20201201143206852.png)
 
@@ -148,12 +148,12 @@ The requesting user receives messages telling them if the request was approved o
 
 Approve:
 
-![image-20201201143551618](images/image-20201201143551618.png) 
+![image-20201201143551618](images/image-20201201143551618.png)
 
 Deny:
 
-![image-20201201143638123](images/image-20201201143638123.png) 
+![image-20201201143638123](images/image-20201201143638123.png)
 
 If an approval was already approve before you could approve it, clicking approve or deny immediately changes the message to explain its current state:
 
-![image-20201201143857159](images/image-20201201143857159.png) 
+![image-20201201143857159](images/image-20201201143857159.png)

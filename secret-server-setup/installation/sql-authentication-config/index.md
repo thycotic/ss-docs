@@ -8,7 +8,7 @@ SQL Authentication requires:
 
 - Creating a new SQL account
 
-- Enabling mixed mode 
+- Enabling mixed mode
 
 - Enabling named pipes and SQL Browser a non-local SQL Server
 

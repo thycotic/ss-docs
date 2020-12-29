@@ -13,6 +13,7 @@ Secret key rotation is a somewhat similar process to RPC by which the encryption
 > **Note:** Secret key rotation requires the Rotate Encryption Keys permission.
 
 1. Go to **Admin \> Configuration \> Security.**
+
 1. In the **Key Rotation** section, click the **Rotate Secret Keys** button.
 
 Secret key rotation begins as soon as SS enters maintenance mode. Because maintenance mode disables various functionality (such as secrets cannot be updated), the timing of secret key rotation merits consideration of SS processing time.  We recommend running secret key rotation during off-peak or non-business hours.

@@ -23,23 +23,23 @@
 
 1. To restrict the visible sites:
 
-  1. Click the **Sites** button on the left. The Sites page appears
+   1. Click the **Sites** button on the left. The Sites page appears
 
      ![1558127999023](images/1558127999023.png)
 
-  1. Click the **Edit** button. The page becomes editable:
+   1. Click the **Edit** button. The page becomes editable:
 
      ![1558128008840](images/1558128008840.png)
 
-  1. Click to select or deselect the **Should Restrict Sites** check box. If you enabled it, a Site dropdown list appears:
+   1. Click to select or deselect the **Should Restrict Sites** check box. If you enabled it, a Site dropdown list appears:
 
      ![1558128018662](images/1558128018662.png)
 
-  1. Click the **Site** list to select a site to restrict the team to. The selected site appears in the Site table:
+   1. Click the **Site** list to select a site to restrict the team to. The selected site appears in the Site table:
 
      ![1558128033283](images/1558128033283.png)
 
-  1. Click the **Save** button.
+   1. Click the **Save** button.
 
 1. To edit the team's member users or groups:
 

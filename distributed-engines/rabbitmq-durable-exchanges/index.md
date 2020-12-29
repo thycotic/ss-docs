@@ -34,10 +34,10 @@ To enjoy the benefits of the durable exchanges, you must first eliminate any leg
 
 - Delete the exchanges manually:
 
-  1. Click to select each SS non-durable exchange, including distributed engine ones.
-  1. Scroll to the bottom of the window.
-  1. Click the **Delete** button.
-  1. Restart all of the SS instances and distributed engines to recreate the exchanges and connections.
+   1. Click to select each SS non-durable exchange, including distributed engine ones.
+   1. Scroll to the bottom of the window.
+   1. Click the **Delete** button.
+   1. Restart all of the SS instances and distributed engines to recreate the exchanges and connections.
 
 ## Creating Durable RabbitMQ Exchanges with a PowerShell Script
 

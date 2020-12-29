@@ -6,11 +6,11 @@
 
 ## Overview
 
-Secret Server (SS) SQL Server replication is a set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency. 
+Secret Server (SS) SQL Server replication is a set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency.
 
 > **Important:** This topic is for information and planning only—we *strongly* recommend contacting [Thycotic Technical Support](../../support/index.md) before implementing any setup or strategy discussed here.
 
-> **Note:** SS uses merge replication. The only version validated is pull-based merge replication. Push based replication has not been validated. 
+> **Note:** SS uses merge replication. The only version validated is pull-based merge replication. Push based replication has not been validated.
 
 ## SQL Server Replication
 
@@ -20,7 +20,7 @@ Secret Server (SS) SQL Server replication is a set of technologies for copying a
 
 ### Benefits of Replication
 
-Enabling SQL Server replication allows a database and application to be hosted closer together and this allows for the mitigation of network latency and outages. 
+Enabling SQL Server replication allows a database and application to be hosted closer together and this allows for the mitigation of network latency and outages.
 - Decrease application server to database network latency
 
 - Resolve issues with unreliable network connectivity
@@ -29,7 +29,7 @@ Enabling SQL Server replication allows a database and application to be hosted c
 
 - Works across large distances
 
-In a typical web-clustered version of SS, all application servers access a centralized database. In the event of a network outage, any users on affected application servers are not be able to use SS until network access was restored. In addition, poorly performing networks can introduce latency that may decrease the responsiveness of SS. This technology provides additional options when designing the network topology behind SS that can help alleviate these issues. 
+In a typical web-clustered version of SS, all application servers access a centralized database. In the event of a network outage, any users on affected application servers are not be able to use SS until network access was restored. In addition, poorly performing networks can introduce latency that may decrease the responsiveness of SS. This technology provides additional options when designing the network topology behind SS that can help alleviate these issues.
 
 #### High Availability
 
@@ -45,7 +45,7 @@ This is the process through which SQL Server replication integrates changes from
 
 #### Data Conflicts
 
-Enabling SQL Server replication introduces the possibility of data conflicts occurring in the SS environment. This can happen when two people in different regions attempt to update the same set of data. Due to the disconnected nature of the technology, the system is unaware of this conflict until a data synchronization occurs. During synchronization, SQL Server attempts to resolve any conflicts based on a defined set of parameters. SS provides a setup script to help define optimal parameters for each article (table, view, and stored procedure) in the SS database. 
+Enabling SQL Server replication introduces the possibility of data conflicts occurring in the SS environment. This can happen when two people in different regions attempt to update the same set of data. Due to the disconnected nature of the technology, the system is unaware of this conflict until a data synchronization occurs. During synchronization, SQL Server attempts to resolve any conflicts based on a defined set of parameters. SS provides a setup script to help define optimal parameters for each article (table, view, and stored procedure) in the SS database.
 
 #### SQL Server Replication Monitor and Conflict Viewer
 
@@ -103,7 +103,7 @@ It is important to note that there is a delay in data synchronization between da
 
 In the event of a network outage, a load balancer could be configured to fail over to the subscriber nodes. The data on the subscriber would be as up to date as the last synchronization, and when network connectivity is restored all data activity will be synchronized again. Obviously, if the issues of network latency or disconnects occur too frequently, this may not be a workable solution.
 
-### Secret Server Distributed Engine 
+### Secret Server Distributed Engine
 
 You can add SS distributed engines to different network segments, but you must still be able to call back to a SS Web application server that is connected to a publisher database node. This helps to ensure that heartbeats and password changes occur with the most up to date dataset.
 
@@ -125,9 +125,9 @@ Keep in mind that this is a disconnected technology, so there are required decis
 
 We recommend setting up two publications for SS:
 
-- Events: These are things that need to occur on a timely schedule, such as updating secrets. The events publication should be set to synchronize every minute. This means that if a secret were created in one region, it would not appear in another region for one minute. By default, this publication is called *SSPubEvents*. 
+- Events: These are things that need to occur on a timely schedule, such as updating secrets. The events publication should be set to synchronize every minute. This means that if a secret were created in one region, it would not appear in another region for one minute. By default, this publication is called *SSPubEvents*.
 
-- Logs: Information from each audit log is available on its server. We do not recommend setting log synchronization to less than hour. If this happens too frequently, the database could create deadlocks by constantly updating large sets of data. Once the logs merge, the events will appear in the order in which they occur and show on the server on which they took place. By default, this publication is called *SSPubLogs*. 
+- Logs: Information from each audit log is available on its server. We do not recommend setting log synchronization to less than hour. If this happens too frequently, the database could create deadlocks by constantly updating large sets of data. Once the logs merge, the events will appear in the order in which they occur and show on the server on which they took place. By default, this publication is called *SSPubLogs*.
 
 ### Tracking Level and Resolvers
 
@@ -154,7 +154,7 @@ As an example, if the same field changed on two different servers, resulting in 
 
 ### Operational Latency
 
-Give consideration to how your SS data is setup and managed. This is most easily described by an example where a manager uses a SS node in Europe and their employee works on a node in Australia. Due to network latency, the organization has changed the default event log synchronization interval from every minute to every five minutes. The employee requests access to a secret in Australia, but due to the synchronization window, the manager is not alerted until five minutes later because the manager is using the server in Europe. You can mitigate this issue by having operational groups work on data for their region or decreasing the synchronization window. 
+Give consideration to how your SS data is setup and managed. This is most easily described by an example where a manager uses a SS node in Europe and their employee works on a node in Australia. Due to network latency, the organization has changed the default event log synchronization interval from every minute to every five minutes. The employee requests access to a secret in Australia, but due to the synchronization window, the manager is not alerted until five minutes later because the manager is using the server in Europe. You can mitigate this issue by having operational groups work on data for their region or decreasing the synchronization window.
 
 Options to manage data latency if data conflicts occur regularly:
 
@@ -191,46 +191,46 @@ There are a multitude of configuration options for SQL Server replication. At a 
 1. Install SS
 
 1. Enable SS Clustering. For more information, see the [Secret Server: Server Clustering Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Server-Clustering).
-  
-1. Setup a SQL Server replication distributor: 
+ 
+1. Setup a SQL Server replication distributor:
 
   >**Note:** This can run on the same database as the publication database or on a separate one on another server.
 
-  1. This can be done from the SQL Server Management Studio by right clicking on the **Replication** node.
-  
-  1. Review what settings are appropriate for the distributor setup with your on-premise database group or with a database consultant.
+   1. This can be done from the SQL Server Management Studio by right clicking on the **Replication** node.
+ 
+   1. Review what settings are appropriate for the distributor setup with your on-premise database group or with a database consultant.
 
-1. Download the SQL publication script. 
-  
-  1. In SS select **ADMIN \> Nodes \> SQL Server Replication \>Get SQL Publication Script**.
-  
-  1. Review this script and update the variables according to your environment.
+1. Download the SQL publication script.
+ 
+   1. In SS select **ADMIN \> Nodes \> SQL Server Replication \>Get SQL Publication Script**.
+ 
+   1. Review this script and update the variables according to your environment.
 
   > **Note:** Advanced users can use the article list on that same page to configure SQL replication differently than this script to suit your environment.
 
 1. Run this script on the SS Database. A DBA with administrative privileges is needed to run this. Please consult with your on-premise database group or review your configuration with a database consultant.
 
 1. Create snapshots for each publication:
-  
-  1. Open SQL Server Management Studio
-  
-  1. Right click on each publication under **Replication \> Local
+ 
+   1. Open SQL Server Management Studio
+ 
+   1. Right click on each publication under **Replication \> Local
  Publications**
-  
-  1. Select **View Snapshot Agent Status**.
-  
-  1. Click **Start**
-  
-1. Download the SQL subscriber script: 
-  1. In SS select **ADMIN \> Nodes \> SQL Server Replication \>Get SQL Subscriber Script**.
-  
-  2. Review this script and update the variables to match your environment
+ 
+   1. Select **View Snapshot Agent Status**.
+ 
+   1. Click **Start**
+ 
+1. Download the SQL subscriber script:
+   1. In SS select **ADMIN \> Nodes \> SQL Server Replication \>Get SQL Subscriber Script**.
+ 
+   2. Review this script and update the variables to match your environment
 
 1. Create a new database on the database server you intend to be your subscriber. Ensure the script uses this database and machine name. Set up permissions for the user or network account that SS uses to connect to this database.
 
 1. Run the subscriber script on the publication database first and then on the subscriber database. If your variables are set properly, it will execute the appropriate part of the script.
 
-1. Expand the **SQL Server Jobs** on the subscriber, and you should see two jobs named for each publication. 
+1. Expand the **SQL Server Jobs** on the subscriber, and you should see two jobs named for each publication.
 
 1. Right click these jobs to start them. After they complete, your subscriber database should have replicated the schema objects from the publication.
 
@@ -250,7 +250,7 @@ To see the error message, it is easiest to right click on the job and choose to 
 
 Certain operations such as upgrading SS, adding or removing DoubleLocks from secrets, and enabling or disabling HSM cannot be performed while SQL Server replication is enabled. In order to perform these operations you must remove SQL Server replication. When you are done with the action that required you to remove replication you can install and configure it again by repeating the previous instructions.
 
-You only need to remove replication from the Publisher and all Subscribers. The Replication Distributer does not need to be removed. These are the steps to remove SQL Server replication from your publisher and subscriber databases. 
+You only need to remove replication from the Publisher and all Subscribers. The Replication Distributer does not need to be removed. These are the steps to remove SQL Server replication from your publisher and subscriber databases.
 
 ### On Each Subscriber
 
@@ -270,7 +270,7 @@ You only need to remove replication from the Publisher and all Subscribers. The 
 
 1. The script contains sections to be run on both the subscriber and the publisher. Run the sections on the subscriber by uncommenting them and commenting those for the publisher.
 
-1. Copy the script to a query window on the publisher server. 
+1. Copy the script to a query window on the publisher server.
 
 1. The script contains sections to be run on both the subscriber and the publisher. Run the sections on the publisher by uncommenting them and commenting those for the subscriber.
 
@@ -279,15 +279,23 @@ You only need to remove replication from the Publisher and all Subscribers. The 
 ### On the Publisher
 
 1. Stop the websites of all nodes using the publisher database.
+
 1. On the publisher, go to **Replication**, right-click **Local Publications** and choose **Generate Scripts...**
+
 1. In the **Generate SQL Script** dialog **check Publications in the**
  **following data sources** and select the SS database.
 1. Click to deselect the **Distributor Properties** check box.
+
 1. Select **To drop or disable the components**.
+
 1. Click **Generate Script \> Open in new query window**.
+
 1. Click **Close** to close the dialog once the script is created.
+
 1. Run the script.
+
 1. Perform any maintenance actions needed on the subscriber database and nodes.
+
 1. After all maintenance tasks are done, restore replication as described in [Installing and Configuring SQL Server Replication](#installing-and-configuring-sql-server-replication).
 
 ## Managing SQL Server Replication
@@ -333,20 +341,20 @@ The **Web Server Nodes** page now includes a column that lists the database serv
 
 New versions of SS may issue schema changes including indexes, column changes, and views. In some cases, SQL merge replication will not automatically replicate these schema changes. For this reason, we recommend removing any publications and subscriptions targeting the SS database, redirecting users to the web server at the primary site before performing any upgrade, and recreating the publication and subscriptions from new versions of the replication scripts.
 
-In the following scenario, there are SS web servers installed at a site in Australia, the U.S., and the U.K. The U.K. is the publisher node and Australia and U.S. nodes are the subscribers. 
+In the following scenario, there are SS web servers installed at a site in Australia, the U.S., and the U.K. The U.K. is the publisher node and Australia and U.S. nodes are the subscribers.
 
 1. Redirect all users to the U.K. SS URL.
 
 1. Stop IIS at the Australia and U.S. sites.
 
 1. Manually force a synchronization between the Australia subscriber and the U.K:
-  
+ 
     1. Open SQL Server Management Studio and connect to the Australia  subscriber database server.
-    
+ 
     1. Go to **Replication \> Local Subscriptions**.
-    
+ 
     1. Right-click on one of the SS subscriptions (if you used the scripts provided by SS, they are called *SSPubLogs* and *SSPubEvents*) and select **View Synchronization Status**.
-    
+ 
     1. Click the **Start** button to force a synchronization.
 
 1. Repeat sub-steps 3 and 4 for all SS subscriptions.
@@ -354,26 +362,38 @@ In the following scenario, there are SS web servers installed at a site in Austr
 1. Repeat sub-step 3 for the U.S. subscriber database.
 
 1. Resolve any replication conflicts:
-  
+ 
     1. Open SQL Server Management Studio and connect to the UK publisher database server.
 
     1. Go to **Replication \> Local Publications**.
-    
+ 
     1. Right-click on one of the SS publications (if you used the scripts provided by SS they are called SSPubLogs and SSPubEvents) and select **View Conflicts**.
-    
+ 
     1. Examine and resolve any unresolved conflicts.
 11. Generate the script to remove replication on the subscriber databases as specified above.
+
 12. Run it to remove replication.
+
 9. Generate the script to remove replication on the publisher database as specified above.
+
 14. Run it to remove replication.
+
 15. Restart IIS on the SS web server in the U.K.
+
 16. Run the SS web upgrade wizard.
+
 17. Copy the website application directory to the web servers in Australia and the U.S.
+
 14. Use the scripts generated from the SS UI to recreate replication on the publisher.
+
 19. Push a snapshot to the Australia and U.S. subscriber databases.
+
 20. Recreate replication at the subscribers.
+
 21. Restart the jobs on the subscriber databases as described above.
+
 22. Start IIS on the Australia and U.S. web servers.
+
 19. Change redirection rules for Australia and U.S. users so they access the local Web server as normal.
 
 ## Other Information about SQL Server Replication

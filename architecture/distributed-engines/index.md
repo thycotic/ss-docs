@@ -6,9 +6,9 @@
 
 > **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services Solutions Architects.
 
-This reference architecture is our best practice architecture for Secret Server (SS) Distributed Engines (DEs). The two most common use cases are: 
+This reference architecture is our best practice architecture for Secret Server (SS) Distributed Engines (DEs). The two most common use cases are:
 
-- Distributing work across firewalled networks using the fewest ports possible to help ensure a better network security model 
+- Distributing work across firewalled networks using the fewest ports possible to help ensure a better network security model
 
 - Separating work tasks away from the Web servers and placing the processing work on other dedicated servers within the Thycotic infrastructure to improve overall performance
 
@@ -75,7 +75,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 - Two DEs for HA of local site, which is included with all licensing models.
 
-- Distributed Engine licenses required for this design: 
+- Distributed Engine licenses required for this design:
 
   - Three DE site licenses added (for DMZ, secondary, and cloud Locations), one DE included per site.
 
@@ -142,7 +142,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 - Local site for AD or LDAP, SMTP, SIEM, or RADIUS integration.
 
-- Distributed Engine licenses required for this design: 
+- Distributed Engine licenses required for this design:
 
   - Two DE site licenses added (for secret and discovery tasks), one DE included per site.
 
@@ -309,7 +309,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ### Overview
 
-- Distributed Engine licenses required for this design: 
+- Distributed Engine licenses required for this design:
 
   - Two DE site licenses added (for secret and discovery tasks), one DE included per site.
 
@@ -367,7 +367,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ### Overview
 
-- Distributed Engine licenses required for this design: 
+- Distributed Engine licenses required for this design:
 
   - Five DE site licenses added (for primary secret and discovery tasks, DMZ site, and cloud secret and discovery tasks), one DE included per site.
 
