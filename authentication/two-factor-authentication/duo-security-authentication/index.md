@@ -7,7 +7,7 @@
 > **Note:** Using this method of two-factor authentication requires that you have an active account for Duo Security.
 
 > **Note:** SS supports using Duo Security as a second factor of authentication. See below for setup instructions.
->
+
 > Note:  For more information on Duo and Secret Server, see the [Thycotic Secret Server and Duo](https://www.duosecurity.com/docs/thycotic) page.
 
 ## Task 1: Create a Duo Application Representing Your Secret Server (Admin)

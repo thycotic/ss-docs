@@ -205,11 +205,11 @@ Allows a user to enable the "Expose for Display" setting of a Secret template  f
 
 <!--**Administer Thycotic One**-->
 
-<!--Allows a user to administer Thycotic One login settings on the Configuration window's Login tab.--> 
+<!--Allows a user to administer Thycotic One login settings on the Configuration window's Login tab.-->
 
 **Administer Users**
 
-Allows a user to create, disable, and edit users in the system. 
+Allows a user to create, disable, and edit users in the system.
 
 > **Note:** This permission also allows a user to create and edit SDK/CLI rules.
 
@@ -271,7 +271,7 @@ Allows a user to force a Secret that is checked out by another user to be checke
 
 <!--**No Teams-related Permissions**-->
 
-<!--Users can only view other users within their team.--> 
+<!--Users can only view other users within their team.-->
 
 **Own Group**
 

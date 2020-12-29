@@ -76,32 +76,51 @@ If creating a new template:
 How to setup the Oracle Account secret template to work with Oracle connecting as SYS in SysDBA:
 
 1. Go to **Admin \> Secret Templates**.
+
 1. Set **Oracle Account** as the type.
+
 1. Click the **Edit** button. The Secret Template Designer page appears.
+
 1. Click the **Copy Secret Template** button. The Name New Secret Template popup appears.
+
 1. Type the name in the **Name** text box.
+
 1. Click the **OK** button.
+
 1. Click the **Continue** button. The Secret Template Designer for the new template appears.
+
 1. Click the **Configure Password Changing** button. The Secret Template Edit Password Changing page appears.
+
 1. Click the **Edit** button.
+
 1. Select **Oracle Account (AS SYS)** in the **Password Type to Use** dropdown list.
+
 1. Click the **Save** button.
+
 1. Create a secret based on the new template to test the template.
 
 ### SQL Windows Authentication Account Secret Template and Launcher
 
-This instruction creates a new Active Directory template that is specifically for SQL. 
+This instruction creates a new Active Directory template that is specifically for SQL.
 
 > **Note:** You can copy the existing AD template that you have. However, if you copy an existing template that has launchers attached to it, you may need to delete those launchers on the newly created template.
 
 1. Go to **Admin \> Secret Templates**.
+
 1. Set **Active Directory** as the type.
+
 1. Click the **Edit** button. The Secret Template Designer page appears.
+
 1. Click the **Copy Secret Template** button. The Name New Secret Template popup appears.
+
 1. Type the name in the **Name** text box.
+
 1. Click the **OK** button.
+
 1. Click the **Continue** button. The Secret Template Designer for the new template appears.
+
 1. If necessary, create a field called **Server**.
+
 1. [Create a new launcher](../../../secret-launchers/custom-launchers/creating-custom-launchers/index.md), adding the following parameters for Windows settings:
    - Name: SQL Server Launcher - Windows Authentication
    - Active: Yes

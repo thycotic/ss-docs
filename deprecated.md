@@ -7,7 +7,7 @@
 
 One of two things probably brought you here:
 
-- The article that sent you here was marked as *deprecated*. 
+- The article that sent you here was marked as *deprecated*.
 
 - A Secret Server page had a hyperlink to a nonexistent article, so you were either redirected or directed here.
 

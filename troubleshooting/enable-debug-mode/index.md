@@ -36,7 +36,7 @@ You can expand distributed engine for SS logging to include errors for troublesh
 
 1. Reproduce or investigate the issue using the logs. You can also include them with your Thycotic support case if needed.
 
-> **Note:** On occasion, you may be instructed by support to enable the VERBOSE mode to capture additional details for troubleshooting. This can be done by replacing "INFO" or "DEBUG" with "VERBOSE" instead.  
+> **Note:** On occasion, you may be instructed by support to enable the VERBOSE mode to capture additional details for troubleshooting. This can be done by replacing "INFO" or "DEBUG" with "VERBOSE" instead.
 
 > **Important:** Enabling verbose mode creates very detailed log information, which creates a large number of log files. These files can accumulate and quickly consume available resources on the machine. Therefore, it should only be turned on during the troubleshooting process and immediately turned off afterward in order to prevent performance issues.
 

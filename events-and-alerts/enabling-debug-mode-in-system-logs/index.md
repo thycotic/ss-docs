@@ -10,7 +10,7 @@ This topic discusses enabling DEBUG mode for application system logs for trouble
 
 You can expand Secret Server (SS) logging capability to locate additional information regarding an error or to help with troubleshooting an issue.
 
-> **Note:** To enable DEBUG logging for distributed engine log files, see [Enabling Debug Mode in Distributed Engine Log Files](../enabling-debug-mode-in-distributed-engine-logs/index.md). 
+> **Note:** To enable DEBUG logging for distributed engine log files, see [Enabling Debug Mode in Distributed Engine Log Files](../enabling-debug-mode-in-distributed-engine-logs/index.md).
 
 ## Procedure
 
@@ -38,7 +38,7 @@ How to enable DEBUG logging mode:
 
 1. Comment out the entire line by adding a `<!--` and `-->` around it.
 
-1. Restart IIS to apply the log configuration change. 
+1. Restart IIS to apply the log configuration change.
 
    > **Note:** This restarts all websites hosted under IIS.
 

@@ -43,7 +43,7 @@ To configure pushing secrets to DSV:
 
       - E.U. region: `eu`
 
-      - APAC region: `au` 
+      - APAC region: `au`
 
    1. Click the **Site** dropdown list to select your SS site.
 
