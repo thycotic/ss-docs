@@ -39,13 +39,14 @@ Security is a process—not a product. Take a look at the [Security Hardening Gu
 
 ## Terminology
 
-Throughout this topic, certain terms are used to refer to specific features or concepts within SS. 
+Throughout this topic, certain terms are used to refer to specific features or concepts within SS.
 
 #### Administrator
 
 Access to all the features within SS can be granted to users by creating and assigning different roles. Administrator is one of the default roles that comes installed with SS. By default, this role contains all role permissions, but it can be customized as well. In this guide, when "administrator" is used in the context of a SS user, it will be referring to the users who generally have most permissions and manage the system. Administrators have control over the global security and configuration settings.
 
-> **Note:** Administrators in SS do *not* automatically have access to all data stored in the system—access to data  is still controlled by explicit permissions on that data.  
+> **Note:** Administrators in SS do **not** automatically have access to all data stored in the system—access to data  is still controlled by explicit permissions on that data.
+=======
 
 #### Secret
 
@@ -53,7 +54,7 @@ A secret is any sensitive piece of information (typically a password) that you w
 
 ## Know Your Edition
 
-As you read through this guide, some features may be referenced that are only available in certain editions of SS. To get an idea of what’s available, you can reference the [main sales page](#https://thycotic.com/products/secret-server/) page online. 
+As you read through this guide, some features may be referenced that are only available in certain editions of SS. To get an idea of what’s available, you can reference the [main sales page](#https://thycotic.com/products/secret-server/) page online.
 
 ## Privileged Account Management (PAM) Strategy
 
@@ -132,7 +133,7 @@ To implement this in SS, each account is stored as its own AD account secret. On
 
 A benefit of this strategy is that there isn’t conflict with multiple users trying to use the same account for access to one machine. This strategy provides great accountability – the security team knows the exact user accessing an account and the machine being accessed. The password is not shared among multiple users, and all privileged access is audited by SS.
 
-A pitfall of this strategy can be that there is more management of permissions required in AD. While machines could be access or deny listed to force users to use the SS launcher, thus controlling machine access through SS, this can be tedious. 
+A pitfall of this strategy can be that there is more management of permissions required in AD. While machines could be access or deny listed to force users to use the SS launcher, thus controlling machine access through SS, this can be tedious.
 
 It is more secure, less work, and simpler to organize permissions for access to domain resources in AD. This strategy works best for organizations that already use AD heavily to control permissions of individual privileged users to domain resources. Ongoing maintenance will rely on updating permissions to resources in AD and ensuring that all new individuals’ privileged accounts are being added for management under SS.
 
@@ -198,7 +199,7 @@ Protect the tool you’re using to secure your privileged accounts by adding a s
 
 Roles control which features of SS a user is able to use, view, or administer. Existing roles can be customized, and new roles can be created as needed. SS comes with several roles by default, including administrator, user, and read only. You should review the default roles and decide whether your organization needs further roles for various purposes such as third-party consultants or auditors.
 
-> **Note:** Users with the default administrator role  (which contains all role permissions available) do **not** automatically have  access to all data stored in your SS. secrets are only visible to  a user based on the explicit secret permissions assigned to them.  
+> **Note:** Users with the default administrator role  (which contains all role permissions available) do **not** automatically have  access to all data stored in your SS. secrets are only visible to  a user based on the explicit secret permissions assigned to them.
 
 We strongly recommend pulling one or both role permissions pertaining to unlimited administration mode out of the default administrator role. Unlimited administrator mode is a “break-the-glass” feature that allows a user to view all secrets in SS. By splitting the unlimited administration permissions into separate roles, it ensures no one user can both turn on the feature and operate as the unlimited administrator. For more information about how unlimited administration mode works and how to effectively control the relevant role permissions, see the [Security Hardening Guide](../security-hardening/security-hardening-guide/index.md).
 
@@ -272,9 +273,9 @@ Information Technology (view)
 
 ​		SQL Server (view/edit)
 
-> **Note:**  A user cannot see the full  folder structure unless they have view permissions on all the parent folders  of a particular folder. For example, a user with view on the Oracle folder,  would also need view on Database, Technical Services, and Information  Technology to  see the full folder path.  
+> **Note:**  A user cannot see the full  folder structure unless they have view permissions on all the parent folders  of a particular folder. For example, a user with view on the Oracle folder,  would also need view on Database, Technical Services, and Information  Technology to  see the full folder path.
 
-There are settings under **Admin** \> **Configuration** \> **Folders** to control whether inheritance on folders and secrets should be turned on and also whether users should always see all folders. There are many ways to configure this for your organization. 
+There are settings under **Admin** \> **Configuration** \> **Folders** to control whether inheritance on folders and secrets should be turned on and also whether users should always see all folders. There are many ways to configure this for your organization.
 
 The most common approach is:
 
@@ -340,7 +341,7 @@ Many times, giving an employee access to a resource through SS does not require 
 
 - There will be no copy-to-clipboard, field history, or unmask icons next to the field
 
-Note: Users with edit permissions to a secret with "hide launcher password" enabled can still view the password when editing the secret. To prevent all possible access  to the password, limit users to view permission only.  
+Note: Users with edit permissions to a secret with "hide launcher password" enabled can still view the password when editing the secret. To prevent all possible access  to the password, limit users to view permission only.
 
 This can be a key way to reduce exposure of your privileged account passwords. Hiding launcher passwords can be enabled for secrets under the Security tab of a secret or by applying a secret policy. You can also remove the ability for a user to see the password for any secret with a launcher by removing the "view launcher password" permission from their role.
 
@@ -376,7 +377,7 @@ There are times when users need to be able to access a password directly, but yo
 
 Domain administrator accounts are a great example of a case in which using check out to change the password every time it is used can be extremely beneficial. This ensures that users are not copying the password to Notepad or writing it down for later use and also invalidates the hash that was stored on the remote machine after a remote desktop session.
 
-Check out can be turned on under the Security tab for an individual secret, but can also be applied via a secret policy. 
+Check out can be turned on under the Security tab for an individual secret, but can also be applied via a secret policy.
 
 ### Session Monitoring
 
@@ -410,7 +411,7 @@ These settings are typically sufficient for most organizations to use out-of-box
 
 ### Naming Patterns
 
-SS supports enforcement of naming patterns for secret names. Naming patterns allow you to maintain consistency for secret names and can help ease both browsing and grouping secrets by name. Naming patterns use regular expressions and allow you to enter a descriptive error message to describe your naming standard to users. The most common naming standard used is RESOURCE\ACCOUNT (for example, server0001\administrator). You can find this setting by clicking Edit from the template designer page. 
+SS supports enforcement of naming patterns for secret names. Naming patterns allow you to maintain consistency for secret names and can help ease both browsing and grouping secrets by name. Naming patterns use regular expressions and allow you to enter a descriptive error message to describe your naming standard to users. The most common naming standard used is RESOURCE\ACCOUNT (for example, server0001\administrator). You can find this setting by clicking Edit from the template designer page.
 
 ### Password Requirements
 

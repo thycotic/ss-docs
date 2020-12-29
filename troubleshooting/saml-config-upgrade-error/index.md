@@ -10,8 +10,10 @@
 
 Changes to the `saml.config` were introduced in Secret Server 10.2. SS should automatically convert the existing `saml.config` to the latest format. If it does not:
 
-1. Ensure that the application pool has write access to the `saml.config` file.     
+1. Ensure that the application pool has write access to the `saml.config` file.
+
 1. Restart the applicationpool in IIS and try to log in again.
+
 1. If SS is running in a clustered environment:
    1. Copy the `saml.config` from the Web node that was upgraded to the remaining web nodes.
    1. Restart their application pools in IIS.
@@ -26,7 +28,7 @@ If that does not resolve the issue or SS is not running in a clustered environme
 
 If the `saml.config` is not loading properly, there are a few possibilities:
 
-- The `saml.config` file is invalid. Ensure that it contains valid XML. Element and attribute names are case sensitive. Ensure      that the elements and attributes names and value are valid for SAML configuration. 
+- The `saml.config` file is invalid. Ensure that it contains valid XML. Element and attribute names are case sensitive. Ensure      that the elements and attributes names and value are valid for SAML configuration.
 
   **Note:** See the `saml.config.template` file in SS's root folder for guidance on which elements and attributes  can be used.
 

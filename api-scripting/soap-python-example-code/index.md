@@ -36,7 +36,7 @@ class SecretServer
       username: username,
       password: password,
       organization: "",
-      domain: domain 
+      domain: domain
     })
 
     @@token = response.to_hash[:authenticate_response][:authenticate_result][:token]
@@ -54,8 +54,8 @@ class SecretServer
   end
 
   def GetSecret(secretId)
-	thesame = lambda { |key| key }	
-    
+	thesame = lambda { |key| key }
+ 
     client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1, convert_request_keys_to: :none) #, convert_response_tags_to: thesame)
     response = client.call(:get_secret, message: {
       token: @@token,
@@ -72,7 +72,7 @@ class SecretServer
 
     response = client.call(:update_secret, xml: fixedXml)
     return response
-  end  
+  end
 
   def WhoAmI
     client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1)
@@ -134,7 +134,7 @@ puts "### UpdateSecret ###"
 updateSoapPackage = '<?xml version="1.0" encoding="utf-8"?>
 <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd="http://www.w3.org/2001/XMLSchema"" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">;
   <soap:Body>
-    <UpdateSecret xmlns="urn:thesecretserver.com">    
+    <UpdateSecret xmlns="urn:thesecretserver.com">
 		<token></token>
 		<secret></secret>
 	</UpdateSecret>

@@ -696,9 +696,9 @@ There are three requirements for enabling Public SSH Keys:
 
 ### Creating SSH Key Pairs
 
-An SSH key pair consists of a private key and a public key. Only the public key is stored in the user’s settings—the private key downloaded during generation is **not** saved inside SS and should only be available to the user, to remain secure. 
+An SSH key pair consists of a private key and a public key. Only the public key is stored in the user’s settings—the private key downloaded during generation is **not** saved inside SS and should only be available to the user, to remain secure.
 
-During terminal login, if the user provides a private key for authentication, SS validates the provided private key against the user’s available (and enabled) saved public keys. If a key pair match is found, the authentication succeeds (or the next required authentication step, for example a password prompt, is shown). 
+During terminal login, if the user provides a private key for authentication, SS validates the provided private key against the user’s available (and enabled) saved public keys. If a key pair match is found, the authentication succeeds (or the next required authentication step, for example a password prompt, is shown).
 
 For security reasons, only users can create their own SSH key pairs. However, SS Administrators can deactivate any user’s public SSH keys as follows:
 

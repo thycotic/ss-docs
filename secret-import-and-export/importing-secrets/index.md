@@ -41,7 +41,7 @@ SS's importation feature simplifies integration with legacy systems and allows u
 
 1. If you are happy with what you see, click the **Yes, Import these Secrets** button.
 
-## Importing Secrets with XML 
+## Importing Secrets with XML
 
 Advanced XML importation adds folders, secret templates, and secrets based on an XML file. Permissions can be specified on the folders and secrets or the default is to inherit permissions. This import can only be done by administrators with proper role permissions.
 

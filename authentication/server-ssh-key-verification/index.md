@@ -10,9 +10,12 @@ Host SSH key verification is supported for use with heartbeat, proxied launchers
 
 To configure host SSH key verification:
 
-1. go to Secret Templates and add a field for the host's SSH key digest.  
+1. go to Secret Templates and add a field for the host's SSH key digest.
+
 1. Click **Configure Extended Mappings**.
-1. Add a "Server SSH Key" mapping to your newly created SSH key digest field.  
+
+1. Add a "Server SSH Key" mapping to your newly created SSH key digest field.
+
 1. On your secrets, add the SSH Key digest of the hosts to your digest field. Verification takes effect the next time you connect to the host.
 
 ## Heartbeat

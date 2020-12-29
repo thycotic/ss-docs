@@ -419,11 +419,11 @@ Added federation and clustering support for RabbitMQ Helper:
 - Added a new setting for configuring the SSH RPC timeout interval to all applicable SSH secret template settings pages. Prior to this fix, users were not notified when a group name exceeded the maximum character length and instead experienced a web session hang.
 
 - Added a setting to discovery that can check whether IIS is installed before scanning for application pools. To enable the "Verify IIS is Installed" setting:
-  1. Navigate to Admin > Discovery.
-  1. Click the Edit Discovery Sources button.
-  1. Click the link for the desired source. Its page appears.
-  1. Scroll down to the Find Dependencies section.
-  1. Click the edit (pencil) icon next to the Application Pool Scanner entry.
+   1. Navigate to Admin > Discovery.
+   1. Click the Edit Discovery Sources button.
+   1. Click the link for the desired source. Its page appears.
+   1. Scroll down to the Find Dependencies section.
+   1. Click the edit (pencil) icon next to the Application Pool Scanner entry.
 
   In extensible discovery, scanners are setup to run in consecutive order across many organizational units within large environments. This setting was added to allow SS to skip the process of scanning for application pools whenever a machine does not have IIS already installed to enhance performance and cut down on run times.
 - Added support for a RADIUS challenge in web services. SS will now return a "RadiusUSAccessChallenge" error if an additional prompt is needed. To use this functionality, on-premises SS needs to connect to the same node on both authentication calls. Previously, SS could only handle a single request from the RADIUS authentication process. This enhancement uses caching, so authenticating scripts need to hit the same web node to use a challenge authentication. This fails when using REST + SS On-Prem + Load Balancing + RADIUS Challenge Authentication combined. The workaround is to hardcode REST scripts by IP or FQDN.

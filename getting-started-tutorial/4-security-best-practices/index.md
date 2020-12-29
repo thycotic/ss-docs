@@ -14,13 +14,13 @@ Even if you plan to [integrate with Active Directory](../../directory-services/a
 
 - Enable the **Allow Users to Reset Forgotten Passwords** setting to provide a way of resetting the password if account is locked out or if the password is forgotten:
 
-  1. Select **Admin \> Configuration**. The Configuration page appears.
+   1. Select **Admin \> Configuration**. The Configuration page appears.
 
-  1. Click the **Local User Passwords** tab to locate the setting.
+   1. Click the **Local User Passwords** tab to locate the setting.
 
-  1. Click the **Edit** button to edit the setting.
+   1. Click the **Edit** button to edit the setting.
 
-  1. Click the **Save** button when finished.
+   1. Click the **Save** button when finished.
 
 > **Note:** This requires having an [SMTP server configured](https://updates.thycotic.net/links.ashx?VerifySMTPConnection) (KB).
 

@@ -89,17 +89,17 @@ Recommended for organizations deploying discovery, session recording,or increase
 
 - Secret Server (SS) requires the application pool to have the “load user profile” setting enabled. Secret Server will report a critical alert to notify admins if this setting is not enabled.
 
-- Supported Web browsers: 
+- Supported Web browsers:
 
   - Google Chrome
-  
+ 
   - Mozilla Firefox
-  
+ 
   - Microsoft Edge. Edge Chromium only. Legacy Microsoft Edge is not supported.
-  
+ 
   - Safari
-  
+ 
   - Microsoft Internet Explorer 11. Support for Internet Explorer 11 will end on 31 August 2021.
 
-  
+ 
 
