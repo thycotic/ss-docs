@@ -46,6 +46,7 @@ Throughout this topic, certain terms are used to refer to specific features or c
 Access to all the features within SS can be granted to users by creating and assigning different roles. Administrator is one of the default roles that comes installed with SS. By default, this role contains all role permissions, but it can be customized as well. In this guide, when "administrator" is used in the context of a SS user, it will be referring to the users who generally have most permissions and manage the system. Administrators have control over the global security and configuration settings.
 
 > **Note:** Administrators in SS do **not** automatically have access to all data stored in the system—access to data  is still controlled by explicit permissions on that data.
+=======
 
 #### Secret
 
