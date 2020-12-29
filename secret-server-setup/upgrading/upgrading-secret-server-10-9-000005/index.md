@@ -10,13 +10,13 @@ This upgrade of Secret Server (SS) is a two-step process where you first upgrade
 
 > **Important:** Upgrading to Secret Server version 10.0.000000 and above requires configuring integrated pipeline mode on the Secret Server Application Pool. Please  see [Manual IIS Installation](http://updates.thycotic.net/link.ashx?IisPiplineIntegratedKnowledgeBase) for details on configuring integrated pipeline mode in IIS. If using  Integrated Windows Authentication you will also need to update IIS  authentication settings as detailed in [Configuring Integrated Windows Authentication](../../../authentication/integrated-windows-authentication/configuring-iwa/index.md). If you are at version 9.1.000000 and below, you will need to first  upgrade to 9.1.000001 before you can upgrade to 10.0.000000 and above.
 
-> **Important:** If you have Privilege Manager installed, the  Secret Server upgrade process will begin an upgrade for Privilege  Manager as well. 
+> **Important:** If you have Privilege Manager installed, the  Secret Server upgrade process will begin an upgrade for Privilege  Manager as well.
 
 > **Important:** The ***existing* MS SQL database must be version 2012 or later for this upgrade**. Otherwise, if the upgrade fails and you attempt to roll it back, the previous installation will not work.
 
-## How Upgrades Work 
+## How Upgrades Work
 
-Secret Server periodically polls the update server to detect new updates. If the "Allow Automatic Checks for Software Updates" option is enabled in the Admin \> Configuration menu, you will see the "An update is available (xx.x.xxxxxx)" link after logging in with an administrator account.  The steps below can be used to  perform an upgrade for versions 7.1.000015 and higher. If you have an  older version of SS, please contact Thycotic technical  support for assistance. 
+Secret Server periodically polls the update server to detect new updates. If the "Allow Automatic Checks for Software Updates" option is enabled in the Admin \> Configuration menu, you will see the "An update is available (xx.x.xxxxxx)" link after logging in with an administrator account.  The steps below can be used to  perform an upgrade for versions 7.1.000015 and higher. If you have an  older version of SS, please contact Thycotic technical  support for assistance.
 
 ## Before You Begin
 
@@ -39,29 +39,29 @@ Secret Server periodically polls the update server to detect new updates. If the
 1. Download the two zip files (`Version_10_9_000005.zip` and `Version_10_9_000033.zip`), which contain the installs, using the link at the top of the page.
 
 1. Click the **Enable Maintenance Mode** button to enter maintenance mode.
-   
+ 
 1. Backup your SS application folder.
-   
+ 
    > **Important:** All your data is encrypted the `encryption.config` file in your SS application folder. **Your data cannot be decrypted without it**. Thus, it is critical that you make a backup of the application folder and its contents before proceeding.
-   
+ 
 1. Backup the database named SecretServer at the IP address listed.
-   
-1. When finished backing up both, click to select the **The Secret Server database and application folder have been backed up** check box. 
-   
+ 
+1. When finished backing up both, click to select the **The Secret Server database and application folder have been backed up** check box.
+ 
 1. Click the **Continue** button. The download page appears:
-   
+ 
    ![image-20201207111643920](images/image-20201207111643920.png)
-   
+ 
 1. Click the **Advanced (not required)** link. The section appears:
-   
+ 
    ![image-20201207111920627](images/image-20201207111920627.png)
-   
+ 
 1. Click the **Choose File** button and locate the `Version_10_9_000005.zip` file you downloaded.
-   
+ 
 1. Click the **Upload Upgrade** button. The file uploads, which can take several minutes. When the upload is complete the 10.9.000005 version appears:
-   
+ 
    ![image-20201207113011115](images/image-20201207113011115.png)
-   
+ 
 1. Click the **Install this Version** button. The Install Secret Server Upgrade page appears:
 
     ![image-20201207113350907](images/image-20201207113350907.png)
@@ -78,6 +78,6 @@ Secret Server periodically polls the update server to detect new updates. If the
 
 1. If you intend to use Web clustering, proceed to [Upgrading Secret Server with Web Clustering](../upgrading-with-web-clustering/index.md).
 
-1. Repeat the install procedure using the `Version_10_9_000033.zip` file you downloaded. 
+1. Repeat the install procedure using the `Version_10_9_000033.zip` file you downloaded.
 
 1. Once again, if you intend to use Web clustering, proceed to [Upgrading Secret Server with Web Clustering](../upgrading-with-web-clustering/index.md).

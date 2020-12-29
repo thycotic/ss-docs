@@ -127,7 +127,7 @@
 
 - If no global load balancers exist due to costs or infrastructure missing, local load balancers can be used for all Web server nodes, but DNS change may be required if primary location goes offline.
 
-- Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single-node unplanned failures. A cloud witness is recommended. 
+- Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single-node unplanned failures. A cloud witness is recommended.
 
 - [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
@@ -137,11 +137,11 @@
 
 - ss.company.com: 443 (load balancer).
 
-- rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer). 
+- rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer).
 
-- ss-a.company.com: 443. 
+- ss-a.company.com: 443.
 
-- ss-b.company.com: 443 (two virtual IPs, local load balancer) 
+- ss-b.company.com: 443 (two virtual IPs, local load balancer)
 
 - rmq-a.company.com: 5671 or 5672 (load balancer).
 
@@ -163,7 +163,7 @@
 
 > **Note:** The reference number for this diagram is B1.
 
-**Figure:** Minimal Multi-Site Enterprise Deployment 
+**Figure:** Minimal Multi-Site Enterprise Deployment
 
 ![image-20200923082534021](images/image-20200923082534021.png)
 
@@ -183,7 +183,7 @@
 
 - No secondary SQL node at primary site for "planned" Failover. Secondary SQL node in DR site for planned or unplanned failover.
 
-- Multiple site connector design intended for RabbitMQ. All distributed engines communicate to one local load balancer/RMQ cluster for its response bus. There is two site connectors, one for each respective location. 
+- Multiple site connector design intended for RabbitMQ. All distributed engines communicate to one local load balancer/RMQ cluster for its response bus. There is two site connectors, one for each respective location.
 
 - Global load balancers are unavailable, thus requiring a manual failover process/DNS change for Web traffic to the DR site. Additional application specific changes will be needed for full functionality to resume in DR site:
 
@@ -201,7 +201,7 @@
 
 - DNS change may be required if primary location off offline.
 
-- Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single-node unplanned failures. A cloud witness is recommended. 
+- Configuring a file share witness for SQL quorum voting is required for SQL to stay online during single-node unplanned failures. A cloud witness is recommended.
 
 - [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
@@ -211,11 +211,11 @@
 
 - ss.company.com: 443 (load balancer).
 
-- rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer). 
+- rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer).
 
-- ss-a.company.com: 443. 
+- ss-a.company.com: 443.
 
-- ss-b.company.com: 443 (two virtual IPs, local load balancer) 
+- ss-b.company.com: 443 (two virtual IPs, local load balancer)
 
 - rmq-a.company.com: 5671 or 5672 (load balancer).
 
@@ -271,11 +271,11 @@
 
 - ss.company.com: 443 (load balancer).
 
-- rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer). 
+- rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer).
 
-- ss-a.company.com: 443. 
+- ss-a.company.com: 443.
 
-- ss-b.company.com: 443 (two virtual IPs, local load balancer) 
+- ss-b.company.com: 443 (two virtual IPs, local load balancer)
 
 - rmq-a.company.com: 5671 or 5672 (load balancer).
 
@@ -311,7 +311,7 @@
 
 - Can accommodate manual failover only with asynchronous replication (30 ms or more latency between SQL DB nodes).
 
-- Singular site connector using only the local site. The local site comes with two distributed engines now. The distributed engine layer can be online/active but cross-data-center communication may occur (as depicted). It can alternatively be marked as yellow as other layers. 
+- Singular site connector using only the local site. The local site comes with two distributed engines now. The distributed engine layer can be online/active but cross-data-center communication may occur (as depicted). It can alternatively be marked as yellow as other layers.
 
 - Global load balancers are unavailable, thus requiring a manual failover process/DNS change for Web traffic to the DR site. Additional application specific changes will be needed for full functionality to resume in DR site:
 
@@ -339,7 +339,7 @@
 
 - ss.company.com: 443 (load balancer).
 
-- rmq.company.com: 5671 or 5672 (load balancer). 
+- rmq.company.com: 5671 or 5672 (load balancer).
 
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). ss-aoag.company.com computer object/virtual IP.
 
@@ -365,7 +365,7 @@
 
 - DR site can act as permanent secondary site for long term use.
 
-- DR site acts as temporary site only when there is no intention of long-term use. 
+- DR site acts as temporary site only when there is no intention of long-term use.
 
 - Equivalent infrastructure at two sites.
 
@@ -395,11 +395,11 @@
 
 - ss.company.com: 443 (load balancer).
 
-- rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer). 
+- rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer).
 
-- ss-a.company.com: 443. 
+- ss-a.company.com: 443.
 
-- ss-b.company.com: 443 (two virtual IPs, local load balancer) 
+- ss-b.company.com: 443 (two virtual IPs, local load balancer)
 
 - rmq-a.company.com: 5671 or 5672 (load balancer).
 

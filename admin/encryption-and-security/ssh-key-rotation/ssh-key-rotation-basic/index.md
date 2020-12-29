@@ -3,7 +3,7 @@
 [priority]: # (1000)
 [display]: # (all)
 
-# Basic SSH Key Rotation 
+# Basic SSH Key Rotation
 
 This topic is a tutorial on how to quickly get started using SSH key rotation to change a Unix account's public and private key and automatically update a remote machine using Remote Password Changing (RPC).
 

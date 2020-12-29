@@ -69,4 +69,4 @@ If you do not have access to another installation of SS or you are upgrading fro
 - [8.4.000003 or earlier](https://updates.thycotic.net/secretserver/getlatestversion.aspx)
 - [8.4.000004 to 9.1.000000](https://updates.thycotic.net/secretserver/getlatestversion.aspx?myv=9.1.000000)
 - [9.1.000001 to 10.9.000003](https://updates.thycotic.net/secretserver/Version_10_9_000005.zip)
-- [10.9.000005 or later](https://updates.thycotic.net/secretserver/getlatestversion.aspx?alwayslatest=true) 
+- [10.9.000005 or later](https://updates.thycotic.net/secretserver/getlatestversion.aspx?alwayslatest=true)

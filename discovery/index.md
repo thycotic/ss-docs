@@ -88,7 +88,7 @@ This is the method that is used for local account discovery for all versions of 
 
 ### Windows Management Instrumentation (WMI)
 
-This method uses the WMI technology to query the Windows computer.  In some environments, this method can be faster than the Remote Procedure Call.  It does, however, require having the proper permissions and network configuration setup correctly for WMI to run.  
+This method uses the WMI technology to query the Windows computer.  In some environments, this method can be faster than the Remote Procedure Call.  It does, however, require having the proper permissions and network configuration setup correctly for WMI to run.
 
 ### Attempt WMI First, and Failover to RPC if Needed
 

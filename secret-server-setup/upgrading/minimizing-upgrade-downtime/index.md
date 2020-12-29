@@ -6,7 +6,7 @@
 
 ## Introduction
 
-Large enterprise Secret Server (SS) customers with clustered environments often have a strong interest in minimizing downtime during their upgrade process. This document details our recommendations for accomplishing that. 
+Large enterprise Secret Server (SS) customers with clustered environments often have a strong interest in minimizing downtime during their upgrade process. This document details our recommendations for accomplishing that.
 
 > **Note:** This strategy may require close coordination between networking, server administration, and SQL DBA teams. We recommend they are available at the same time during the upgrade to minimize downtime. This procedure works best for those upgrading from the prior most recent version of SS.
 
@@ -71,7 +71,7 @@ The upgrade procedure requires that you do these steps outside of the SS install
 
 >  **Note:** See [Maintenance Mode FAQ](../../../admin/maintenance-mode/index.md) for more on maintenance mode.
 
-14. Start IIS on Target Web Server A. Wait until the site fully loads. This may take some time. 
+14. Start IIS on Target Web Server A. Wait until the site fully loads. This may take some time.
 
 > **Note:** Once the site loads, when you locally access that web server, you will see a SS error message saying your database does not match your SS. You can ignore that and click the Continue button.
 
@@ -101,11 +101,11 @@ The upgrade procedure requires that you do these steps outside of the SS install
 
 #### Introduction
 
-The manual rolling upgrade provides a way to upgrade SS with little to no downtime. That is, users will continue to have secret access during the upgrade. 
+The manual rolling upgrade provides a way to upgrade SS with little to no downtime. That is, users will continue to have secret access during the upgrade.
 
-> **Note:** This procedure only applies to clustered (multiple Web node) SS environments environment.  
+> **Note:** This procedure only applies to clustered (multiple Web node) SS environments environment.
 
-#### Prerequisites  
+#### Prerequisites
 
 The administrator role needs the following permissions:
 
@@ -135,9 +135,9 @@ In addition, the role:
 
    ![image-20191125140741060](images/image-20191125140741060.png)
 
-1. **Important:** Click to select the **Do not put Secret Server in Maintenance Mode during the upgrade process** check box. 
+1. **Important:** Click to select the **Do not put Secret Server in Maintenance Mode during the upgrade process** check box.
 
-1. Backup the SS application folder. 
+1. Backup the SS application folder.
 
    > **Important:** Ensure the encryption.config file is backed up. It is located at `c:\inetpub\wwwroot\SecretServer\encryption.config`.
 
@@ -151,7 +151,7 @@ In addition, the role:
 
    ![1567525047708](images/1567525047708.png)
 
-1. Click the **Choose File** button, and select the zip file you downloaded earlier to upgrade to. 
+1. Click the **Choose File** button, and select the zip file you downloaded earlier to upgrade to.
 
 1. Click the **Upload Upgrade File** button. The new version appears as available for installation:
 
@@ -162,11 +162,11 @@ In addition, the role:
 ##### Task Two: Verifying SQL Changes (Wizard Step One)
 
 1. Click the **Next** Button. The Verify SQL Deltas tab appears:
-  
+ 
    ![](images/1567530109680.png)
-  
+ 
    >  **Note**: Clicking the "Cancel Manual Rolling Upgrade" link, at any time, will take you to the Install Secret Server Upgrade page.
-  
+ 
 1. Click the **Verify SQL Deltas** button. This tests the prospective changes to see if errors result. If errors result, please contact Thycotic Technical Support. If the verification succeeds:
 
    ![](images/1567530451567.png)
@@ -174,13 +174,13 @@ In addition, the role:
 ##### Task Three: Generating the Upgrade File (Wizard Step Two)
 
 1. Click the **Next** button. The Generate Upgrade File tab appears:
-   
+ 
    ![image-20191125141217466](images/image-20191125141217466.png)
-   
+ 
 1. Click the **Download Application Zip File** button. This generates a zip file with only the changed files needed to upgrade the application files on the Web server nodes.
 
    > **Note:** This may take a few minutes to generate and download.
-   
+ 
    ![image-20191125141601535](images/image-20191125141601535.png)
 
 ##### Task Four: Generating the SQL Script (Wizard Step Three)
@@ -190,9 +190,9 @@ In addition, the role:
    ![1567530833082](images/1567530833082.png)
 
 1. Click the **Generate SQL Script** button. This generates script file with all the database changes needed to upgrade the database. When finished:
-   
+ 
    ![1567530997742](images/1567530997742.png)
-   
+ 
    The wizard proceeds to step four:
 
 ##### Task Five: Backing up and Staging (Wizard Step Four)
@@ -205,10 +205,10 @@ In addition, the role:
 
 1. Click the **Disable Maintenance Mode** button.
 
-1. Restore SS files to the staging location: 
+1. Restore SS files to the staging location:
 
-   1. Copy the backup zip file to the staging location. 
-   1. Unzip the backup file. 
+   1. Copy the backup zip file to the staging location.
+   1. Unzip the backup file.
    1. Copy the files to the web application folder.
 
 1. Restore the SS database to a staging database:
@@ -231,9 +231,9 @@ In addition, the role:
 1. Log on the upgraded staging SS to verify the upgrade was successful.
 
 1. (Optional) Delete the restored staging location and database.
-   
-   > **Important:** Keep the backup files till you verify the upgrade was successful. You may need them if an issue develops. 
-   
+ 
+   > **Important:** Keep the backup files till you verify the upgrade was successful. You may need them if an issue develops.
+ 
 1. Click to select the **Staging Test Successful** check box to confirm your staging upgrade was successful. This is your confirmation that there were no errors before performing the actual upgrade in your production environment. The confirmation is recorded.
 
 ##### Task Six: Starting Upgrade Mode (Wizard Step Five)
@@ -254,7 +254,7 @@ In addition, the role:
 
    ![image-20191125150639306](images/image-20191125150639306.png)
 
-   
+ 
 
 ##### Task Seven: Upgrading Web Nodes (Wizard Step Six)
 
@@ -293,13 +293,13 @@ To upgrade Web nodes:
    1. Log onto the node to ensure the site correctly loads and logs on.
 
 1. On the load balancer, enable the group A nodes to return them to the pool, restoring the original configuration and returning traffic to all nodes.
-   
+ 
 1. Click to select the **Upgrade Successful** check box.
-   
+ 
 1. Click the **Next** button. The Finish tab appears:
 
    ![image-20191125150852514](images/image-20191125150852514.png)
-   
+ 
 
 ##### Task Eight: Finishing up (Wizard Step Seven)
 
@@ -308,7 +308,7 @@ To upgrade Web nodes:
 1. Click the **Disable** button. The popup disappears, and a completion message appears:
 
    ![image-20191125151058172](images/image-20191125151058172.png)
-   
+ 
 
 ## Troubleshooting and Notes
 
@@ -317,8 +317,11 @@ To upgrade Web nodes:
 If you encounter errors at any step of the upgrade, rollback to the previous SS version:
 
 1. Restore the database from the backup.
+
 1. Restore the application files from the backup files to the Web application folder on all nodes.
+
 1. On the load balancer, restore the original configuration, sending traffic to all nodes.
+
 1. For assistance, contact us at the [Thycotic Support Website](https://thycotic.force.com/support/s/download-onprem).
 
 ### Version Guard
