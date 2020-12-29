@@ -10,15 +10,13 @@ This topic discusses enabling DEBUG mode for distributed engine logs for trouble
 
 You can expand Secret Server (SS) logging capability to locate additional information regarding an error or to help with troubleshooting an issue.
 
-> **Note:** To enable DEBUG logging for distributed engine log files, see [Enabling Debug Mode in Distributed Engine Log Files](../enabling-debug-mode-in-distributed-engine-logs/index.md).
-
 ## Procedure
 
 How to enable DEBUG logging mode:
 
 1. Log in as an administrator on the distributed engine server.
 
-1. Locate the `Thycotic.DistributedEngine.Service.exe.config` file. This file can be found in the `C:\Program Files\Thycotic Software Ltd\Distributed Engine` directory.
+1. Locate the `Thycotic.DistributedEngine.Service.exe.config` in the `C:\Program Files\Thycotic Software Ltd\Distributed Engine` directory.
 
 1.  Open the file in a text editor.
 
