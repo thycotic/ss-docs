@@ -18,9 +18,7 @@ How to enable DEBUG logging mode:
 
 1. Log in as an administrator on the application server.
 
-1. Locate the `web-log4net.config` file. This file can be found in the web application's root directory. If you cannot locate your web application directory, see [How to: Find the Web Application Root](https://msdn.microsoft.com/en-us/library/office/ms474356(v=office.14).aspx). SS is typically located in the `*C:\inetpub\wwwroot\` directory; however, this is configurable so the location may be different in your environment For example:
-
-   ![image-20201102111039821](../enabling-debug-mode-in-system-log-files/images/image-20201102111039821.png)
+1. Locate the `web-log4net.config` file. This file can be found in the web application's root directory. If you cannot locate your web application directory, see [How to: Find the Web Application Root](https://msdn.microsoft.com/en-us/library/office/ms474356(v=office.14).aspx). SS is typically located in the `*C:\inetpub\wwwroot\` directory; however, this is configurable so the location may be different in your environment. 
 
 1.  Open the file in a text editor.
 
@@ -28,9 +26,7 @@ How to enable DEBUG logging mode:
 
 1. Type in `log4net` and press **\<Enter\>** to locate that section, which is usually at the top.
 
-1. Locate the commented out  `<level value="DEBUG" />` line:
-
-   ![image-20201102111605772](../enabling-debug-mode-in-system-log-files/images/image-20201102111605772.png)
+1. Locate the commented out  `<level value="DEBUG" />` line.
 
 1. Uncomment the line by removing the `<!--` and `-->`.
 
