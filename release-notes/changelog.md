@@ -1,7 +1,7 @@
-[title]: # (Documentation Change Log)
-[tags]: # (Release Notes,documentation)
+[title]: # "Documentation Change Log"
+[tags]: # "Release Notes,documentation"
 [priority]: #
-[display]: # (search,content,print)
+[display]: # "search,content,print"
 
 # Documentation Change Log
 
@@ -17,6 +17,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Custom SSH Key Rotation
 - Enabling Debug Mode in Distributed Engine Log Files
 - Enabling Debug Mode in System Log Files
+- FIDO2 (YubiKey) Two-Factor Authentication Configuration
 - Hardware Security Modules
 - Minimum Permissions for Active Directory Remote Password Changing
 - Moving the Microsoft SQL Server Database to Another Machine

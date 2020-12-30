@@ -14,8 +14,6 @@ Integrated Windows Authentication (IWA) allows users to log into SS automaticall
 
 > **Note:** [Secure LDAP](http://support.thycotic.com/KB/a258/using-secure-ldap.aspx) only works with Integrated Windows Authentication in Server 2008 R2 and later.
 
-> **Important**: Customers using the IWA need to perform a workaround when upgrading to SS 10.6 with a distributed engine. Please see “[Task 4: Configuring Distributed Engines](https://thycotic.force.com/support/s/article/Setting-Up-Integrated-Windows-Authentication-in-Secret-Server-10-0#_Ref1656225).”
-
 ## Setting Up Windows Authentication
 
 ### Task 1: Configuring Secret Server
@@ -237,7 +235,7 @@ If you are using client certificates, configure the following in IIS for launche
 
 ### Error "403 Forbidden" Message Is Displayed When Logging in
 
-See the KB article [Integrated Windows Authentication Problem after Upgrading to Secret Server 10](https://thycotic.force.com/support/s/article/ka037000000HtzSAAS/Integrated-Windows-Authentication-problem-after-upgrading-to-10)+.
+See [Integrated Windows Authentication Problem after Upgrading to Secret Server 10](https://thycotic.force.com/support/s/article/ka037000000HtzSAAS/Integrated-Windows-Authentication-problem-after-upgrading-to-10+) (KBA).
 
 ### AD User Prompted for Credentials Even Though IWA Is Active
 

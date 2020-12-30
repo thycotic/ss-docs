@@ -52,10 +52,8 @@ To access the guides:
 
  Example Scripts:
 
-- [PowerShell Examples](https://thycotic.force.com/support/s/article/REST-API-PowerShell-Scripts-Getting-Started)
+- [PowerShell Examples](../../api-scripting/rest-api-powershell-examples/index.md)
 
-- [Java Examples](https://updates.thycotic.net/links.ashx?RESTJavaExamples)
+- [Perl Examples](../../api-scripting/soap-perl-example-code/index.md)
 
-- [Perl Examples](https://thycotic.force.com/support/s/article/REST-API-Perl-Scripts)
-
-> **Note:** For REST API Client Generation (Advanced), please see [REST API Client Generation with OpenAPI Swagger](https://docs.thycotic.com/ss/10.8.0/api-scripting/rest-api-client-generation/index.md#rest_api_client_generation_with_openapi_swagger)
+> **Note:** For REST API Client Generation (Advanced), please see [REST API Client Generation with OpenAPI Swagger](../../api-scripting/rest-api-client-generation/index.md)

@@ -30,38 +30,38 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 
 ### Getting Started
 
-- [End User Guide](https://docs.thycotic.com/ss/10.8.0/secret-server-end-user-guide) (for non-technical users)
+- [End User Guide](./secret-server-end-user-guide/index.md) (for non-technical users)
 
-- [Getting Started Tutorial](https://docs.thycotic.com/ss/10.8.0/getting-started-tutorial) (for technical users)
+- [Getting Started Tutorial](./getting-started-tutorial/index.md) (for technical users)
 
-- [Installation Guides](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/installation)
+- [Installation Guides](./secret-server-setup/installation/index.md)
 
-- [System Requirements](https://docs.thycotic.com/ss/10.8.0/secret-server-setup/system-requirements)
+- [System Requirements](./secret-server-setup/system-requirements/index.md)
 
 ### Best Practices
 
-- [Best Practices](https://thycotic.force.com/support/s/article/Best-Practices-Secret-Server)
+- [Best Practices](./best-practices/index.md)
 
 - [Discovery Best Practices](./discovery/discovery-best-practices/index.md)
 
-- [High Availability and Disaster Recovery](https://thycotic.force.com/support/s/article/Secret-Server-HADR)
+- [High Availability and Disaster Recovery](https://updates.thycotic.net/secretserver/documents/SS_DRGuide.pdf) (PDF)
 
-- [Secret Server Government Edition—Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf)
+- [Secret Server Government Edition—Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf) (PDF)
 
-- [Security Hardening Guide](https://docs.thycotic.com/ss/10.8.0/security-hardening)
+- [Security Hardening Guide](./security-hardening/security-hardening-guide/index.md)
 
 ### Security Whitepapers
-- [Distributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf)
+- [Distributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf) (PDF)
 
-- [Launcher Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_Launcher.pdf)
+- [Launcher Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_Launcher.pdf) (PDF)
 
-- [Meltdown and Spectre Security Information](https://updates.thycotic.net/secretserver/documents/SS_Sec_MeltdownAndSpectre.pdf)
+- [Meltdown and Spectre Security Information](https://updates.thycotic.net/secretserver/documents/SS_Sec_MeltdownAndSpectre.pdf) (PDF)
 
-- [\*nix Management](https://updates.thycotic.net/secretserver/documents/SS_Sec_nixManagement.pdf)
+- [\*nix Management](https://updates.thycotic.net/secretserver/documents/SS_Sec_nixManagement.pdf) (PDF)
 
-- [Security Model](https://updates.thycotic.net/secretserver/documents/SS_Security_Model.pdf)
+- [Security Model](https://updates.thycotic.net/secretserver/documents/SS_Security_Model.pdf) (PDF)
 
-- [Web Services Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_WebServices.pdf)
+- [Web Services Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_WebServices.pdf) (PDF)
 
 ## Help
 
@@ -75,35 +75,32 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 
 ### Download Secret Server
 
-[Download Secret Server](https://thycotic.force.com/support/s/download-onprem)
+[Product Downloads](https://thycotic.force.com/support/s/product-download)
 
 ### Integration Guides
 
 #### Current
 
-[Integration Guides](https://docs.thycotic.com/ssi)
+- [Integration Guides](https://docs.thycotic.com/ssi)
+
+- [HSM](./security-hardening/hsm-integration/index.md)
+
+- [SecureLink](https://www.securelink.com/thycotic-integration/)
+
+- [SCIM Connector](https://docs.thycotic.com/scim/2.5.0/index.md)
+
+- [Syslog](./events-and-alerts/secure-syslog-cef/index.md)
 
 #### Legacy
-
-- [ConnectWise](https://thycotic.force.com/support/s/article/ConnectWise-Integration)
-
-- [Devolutions](https://docs.thycotic.com/ssi/1.0.0/devolutions)
 
 - [F5 BIG-IP](https://thycotic.force.com/support/s/article/F5-BIG-IP-Integration)
 
 - [HP ArcSight](https://thycotic.force.com/support/s/article/HP-ArcSight-Integration)
 
-- [HSM](https://thycotic.force.com/support/s/article/HSM-Integration)
-
 - [IBM Verify](https://thycotic.force.com/support/s/article/IBM-Verify-Gateway-Integration)
 
 - [OpenID Connect](https://thycotic.force.com/support/s/article/OpenID-Connect-Integration)
 
-- [SCIM Connector](https://thycotic.force.com/support/s/article/SS-INST-EXT-SCIM-Connector)
-
-- [SecureLink](https://www.securelink.com/thycotic-integration/)
-
-- [Syslog](https://thycotic.force.com/support/s/article/Syslog-Events-Secret-Server)
 
 ### Release Notes
 
