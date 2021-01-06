@@ -21,7 +21,7 @@ This topic is a one-stop resource for Secret Server developers. It points to TDP
 
 - [Creating and Using PowerShell Scripts](../api-scripting/creating-using-powershell-scripts/index.md)
 
-- [Creating and Using SSH Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SSH-Scripts) (KBA)
+- [Creating and Using SSH Scripts](../api-scripting/creating-using-ssh-scripts/index.md)
 
 - [Creating and Using SQL Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SQL-Scripts) (KBA)
 

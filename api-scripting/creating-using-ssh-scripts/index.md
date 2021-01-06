@@ -1,11 +1,7 @@
-[title]: # "Creating and Using SSH Scripts"
-[tags]: # "API,Scripting,SSH"
-[priority]: # "1000"
-
+[title]: # (Creating and Using SSH Scripts)[tags]: # (API,Scripting,SSH)[priority]: # (1000)
 # Creating and Using SSH Scripts
 
 SSH scripts can be used in Secret Server (SS) to automate specific tasks.  An SSH script can be configured as a dependency of a secret and run after the password is successfully changed on the secret.
- 
 
 ## Creating an SSH Script
 

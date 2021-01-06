@@ -28,7 +28,7 @@ To access the guides:
 
 ### Current Version
 
-[Secret Server 10.9.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.9/index.html)
+[Secret Server 10.9.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.9.33/index.html)
 
 ### Legacy Documentation
 
