@@ -253,7 +253,7 @@ This integration is supported when the two applications are installed on the sam
 
 - For SQL to stay online during single-node unplanned failures, you must configure a file-share witness for SQL quorum voting. We recommend a cloud witness.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
@@ -298,7 +298,7 @@ This integration is supported when the two applications are installed on the sam
 
 - For SQL to stay online during single-node unplanned failures, you must configure a file-share witness for SQL quorum voting. We recommend a cloud witness.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 

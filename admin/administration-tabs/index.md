@@ -238,7 +238,7 @@ The Login tab contains the following options:
 
 The Security tab contains the following configuration options:
 
-- **Additional Certificate Chain Policy Options:** Valid values for certificate chain policy options are any of the values in the Microsoft enumerations [listed here](https://thycotic.force.com/support/s/article/SS-What-are-X509-Certificate-Chain-Policy-Options).
+- **Additional Certificate Chain Policy Options:** Valid values for certificate chain policy options are any of the values in the Microsoft enumerations [listed here](../../authentication/x509-certificate/index.md).
 
 - **Allow HTTP Get:** Allows the HTTP Get verb for Web services. This allows REST-style calls to many Web service methods but reduces security.
 
@@ -274,7 +274,7 @@ The Security tab contains the following configuration options:
 
 ## SAML Tab
 
-See [SAML 2.0 Configuration Guide](https://thycotic.force.com/support/s/article/SS-SAML-Config-Guide).
+See [Configuring SAML Single Sign-on](../../authentication/configuring-saml-sso/index.md).
 
 ## Session Recording Tab
 
