@@ -17,13 +17,11 @@ This topic is a one-stop resource for Secret Server developers. It points to TDP
 
 ## General Scripting
 
-- [Accessing Secret Server—PowerShell](https://thycotic.force.com/support/s/article/Accessing-Secret-Server-programmatically-PowerShell-script) (KBA)
-
-- [Configure CredSSP for use with PowerShell](https://thycotic.force.com/support/s/article/Configuring-CredSSP-for-use-with-WinRM-PowerShell)
+- [Configure CredSSP for use with PowerShell](../authentication/configuring-credssp-for-winrm-with-powershell/index.md)
 
 - [Creating and Using PowerShell Scripts](../api-scripting/creating-using-powershell-scripts/index.md)
 
-- [Creating and Using SSH Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SSH-Scripts) (KBA)
+- [Creating and Using SSH Scripts](../api-scripting/creating-using-ssh-scripts/index.md)
 
 - [Creating and Using SQL Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SQL-Scripts) (KBA)
 
