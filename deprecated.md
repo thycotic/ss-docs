@@ -1,7 +1,7 @@
 [title]: # (Deprecated Article or Topic)
-[tags]: #
+[tags]: # (deprecated)
 [priority]: # (1000)
-[display]:  #  "content"
+[display]: # (content,search)
 
 # Deprecated or Missing Article or Topic
 
