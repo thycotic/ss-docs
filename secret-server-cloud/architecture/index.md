@@ -69,7 +69,7 @@ IP addresses for all regions: 45.60.38.37, 45.60.40.37, 45.60.32.37, 45.60.34.37
 
 IP Address allowlisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
 
-Edge nodes for all regions: [Microsoft Edge Node List](https://docs.microsoft.com/en-us/rest/api/cdn/edgenodes/list).
+Edge nodes for all regions: [Microsoft Edge Node List](https://docs.microsoft.com/en-us/rest/api/cdn/edgenodes/list). The edge node type or name is "Standard_Verizon."
 
 ### 4: RADIUS
 
@@ -87,38 +87,13 @@ If external clients must be able to connect to internal SSH or RDP endpoints, an
 
 ### 6: Certificate CRLs
 
-Allowlisting is not necessary unless outbound firewall rules are in place. If allowlisting is necessary, access to CRL distribution points is necessary.
+Allowlisting is not necessary unless outbound firewall rules are in place. If it is necessary, access to CRLs for OSCP endpoints may be required. CRL and OSCP endpoints may differ from customer to customer. To determine the endpoints, review the certificates presented by the:
 
-secretservercloud.com:
+- Web application firewall
+- Customer service bus
+- Engine response service bus
+- CDN for DE updates
+ 
+>**Note:** Obtaining and reviewing certificates is not within the scope of this document, but you can find resources online, such as [OCSP & CRL and Revoked SSL Certificates](https://www.digicert.com/kb/util/utility-test-ocsp-and-crl-access-from-a-server.htm), which is not owned or maintained by Thycotic.
 
-- `http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl` (Web server)
-
-- `http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%205.crl` (service bus)
-
-- `http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%205.crl` (service bus)
-
-secretservercloud.com.au:
-
-- `http://crl.comodoca.com/COMODORSADomainValidationSecureServerCA.crl` (Web server)
-
-- `http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%204.crl` (service bus)
-
-- `http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%204.crl` (service bus)
-
-secretservercloud.eu:
-
-- `http://crl.comodoca.com/COMODORSADomainValidationSecureServerCA.crl` (Web server)
-
-- `ldap://directory.d-trust.net/CN=D-TRUST%20SSL%20Class%203%20CA%201%202009,O=DTrust%20GmbH,C=DE?certificaterevocationlist` (service bus)
-
-- `http://crl.d-trust.net/crl/d-trust_ssl_class_3_ca_1_2009.der.crl` (service bus)
-
-- `http://cdn.d-trust-cloudcrl.net/crl/d-trust_ssl_class_3_ca_1_2009.crl` (service bus)
-
- secretservercloud.com.sg:
-
-- `http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl` (Web server)
-
-- `http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%202.crl` (service bus)
-
-- `http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%202.crl` (service bus)
+v
