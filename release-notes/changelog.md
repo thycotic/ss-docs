@@ -1,8 +1,5 @@
-[title]: # (Documentation Change Log)
-[tags]: # (Release Notes,documentation)
-[priority]: #
+[title]: # (Documentation Change Log)[tags]: # (Release Notes,documentation)[priority]: #
 [display]: # (search,content,print)
-
 # Documentation Change Log
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
@@ -17,6 +14,7 @@ Created the following topics from Salesforce articles (often including substanti
 - Custom SSH Key Rotation
 - Enabling Debug Mode in Distributed Engine Log Files
 - Enabling Debug Mode in System Log Files
+- FIDO2 (YubiKey) Two-Factor Authentication Configuration
 - Hardware Security Modules
 - Minimum Permissions for Active Directory Remote Password Changing
 - Moving the Microsoft SQL Server Database to Another Machine
