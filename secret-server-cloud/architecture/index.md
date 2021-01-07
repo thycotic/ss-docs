@@ -87,7 +87,7 @@ If external clients must be able to connect to internal SSH or RDP endpoints, an
 
 ### 6: Certificate CRLs
 
-Allowlisting is not necessary unless outbound firewall rules are in place. If it is necessary, access to CRLs for OSCP endpoints may be required. CRL and OSCP endpoints may differ from customer to customer. To determine the endpoints, review the certificates presented by the:
+Allowlisting is not necessary unless outbound firewall rules are in place. If it is necessary, access to CRLs or OSCP endpoints may be required. CRL and OSCP endpoints may differ from customer to customer. To determine the endpoints, review the certificates presented by the:
 
 - Web application firewall
 - Customer service bus
