@@ -22,10 +22,12 @@ This article lists ports typically used in Secret Server. Please note the follow
 
 | Type of Traffic  | Port Number      |
 | ---------------- | ---------------- |
-| LDAPS            | TCP/636, UDP/636 |
-| LDAP             | TCP/389, UDP/389 |
 | Kerberos         | TCP/88, UDP/88   |
+| LDAP             | TCP/389, UDP/389 |
+| LDAPS            | TCP/636, UDP/636 |
 | SMB/Microsoft-DS | TCP445, UDP/445  |
+
+>**Note:** For LDAPS to work the LDAP port (636) must also be open.
 
 **Table:** Discovery Ports
 

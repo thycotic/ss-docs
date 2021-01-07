@@ -190,8 +190,8 @@ There are a multitude of configuration options for SQL Server replication. At a 
 
 1. Install SS
 
-1. Enable SS Clustering. For more information, see the [Secret Server: Server Clustering Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-Server-Clustering).
- 
+1. Enable SS Clustering. For more information, see the [Secret Server: Server Clustering Administration Guide](../../networking/secret-server-clustering/index.md).
+
 1. Setup a SQL Server replication distributor:
 
   >**Note:** This can run on the same database as the publication database or on a separate one on another server.
