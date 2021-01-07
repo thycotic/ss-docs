@@ -14,7 +14,7 @@
 
 **Figure:** Secret Server Cloud Hybrid Multi-Tenant Architecture
 
-![image-20200522120219066](images/image-20200522120219066.png)
+![image-20210106095743761](images/image-20210106095743761.png)
 
 > **Note:** Arrows indicate the direction of initial connection.
 
@@ -28,7 +28,7 @@ See the [Details for All Architectures](#Details-for-All-Architectures) section 
 
 **Figure:** Secret Server Cloud Distributed Engine Multi-Site Example Architecture
 
-![image-20200904111444011](images/image-20200904111444011.png)
+![image-20210106095339756](images/image-20210106095339756.png)
 
 >**Note:** This design is fully supported by Thycotic.
 
@@ -57,31 +57,29 @@ See the [Details for All Architectures](#Details-for-All-Architectures) section 
 
 ### 1: Service Buses
 
-IP Address allowlisting is not necessary unless outbound firewall rules are in place. If IP allowlisting is necessary, please open a ticket with [Thycotic Support](../../support/index.md) to use your customer-specific service bus host names.
+IP Address allowlisting is not necessary unless outbound firewall rules are in place. If IP allowlisting is necessary, please contact [Thycotic Support](../../support/index.md) to obtain the shared engine response service bus and your dedicated customer service bus hostnames.  The TCP port requirement is based on the transport type configured in the distributed engine settings.  The default is Web sockets, which requires TCP 443.
 
 ### 2: Web Application Firewall (WAF)
 
 IP Address allowlisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
 
-IP addresses for all regions: 45.60.38.37, 45.60.40.37, 45.60.32.37, 45.60.34.37, 45.60.36.37, 45.60.104.37
+IP addresses for all regions: 45.60.38.37, 45.60.40.37, 45.60.32.37, 45.60.34.37, 45.60.36.37, and 45.60.104.37.
 
 ### 3: Content Delivery Network (CDN)
 
 IP Address allowlisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
 
-Edge nodes for all regions: [Microsoft Edge Node List](https://docs.microsoft.com/en-us/rest/api/cdn/edgenodes/list).
+Edge nodes for all regions: [Microsoft Edge Node List](https://docs.microsoft.com/en-us/rest/api/cdn/edgenodes/list). The edge node type or name is "Standard_Verizon."
 
 ### 4: RADIUS
 
-Inbound allowlisting is necessary if RADIUS authentication is configured. Port 1812 needs to be open for inbound connection on the RADIUS server. The RADIUS server could either be publicly accessible or have port forwarding configured for Secret Server Cloud to reach it. IP addresses:
+Inbound allowlisting is necessary if RADIUS authentication is configured. IP addresses:
 
 - secretservercloud.com: 40.76.197.147, 40.121.181.52
-
 - secretservercloud.com.au: 20.36.47.199, 20.36.45.106
-
-- secretservercloud.eu: 51.4.141.94, 51.4.194.120
-
+- secretservercloud.eu: 51.116.228.208, 51.116.228.152
 - secretservercloud.com.sg: 137.116.141.200, 137.116.143.17
+- secretservercloud.ca 13.88.237.67, 52.228.62.157
 
 ### 5: Distributed Engine (DE)
 
@@ -89,38 +87,13 @@ If external clients must be able to connect to internal SSH or RDP endpoints, an
 
 ### 6: Certificate CRLs
 
-Allowlisting is not necessary unless outbound firewall rules are in place. If allowlisting is necessary, access to CRL distribution points is necessary.
+Allowlisting is not necessary unless outbound firewall rules are in place. If it is necessary, access to CRLs or OSCP endpoints may be required. CRL and OSCP endpoints may differ from customer to customer. To determine the endpoints, review the certificates presented by the:
 
-secretservercloud.com:
+- Web application firewall
+- Customer service bus
+- Engine response service bus
+- CDN for DE updates
+ 
+>**Note:** Obtaining and reviewing certificates is not within the scope of this document, but you can find resources online, such as [OCSP & CRL and Revoked SSL Certificates](https://www.digicert.com/kb/util/utility-test-ocsp-and-crl-access-from-a-server.htm), which is not owned or maintained by Thycotic.
 
-- `http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl` (Web server)
-
-- `http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%205.crl` (service bus)
-
-- `http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%205.crl` (service bus)
-
-secretservercloud.com.au:
-
-- `http://crl.comodoca.com/COMODORSADomainValidationSecureServerCA.crl` (Web server)
-
-- `http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%204.crl` (service bus)
-
-- `http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%204.crl` (service bus)
-
-secretservercloud.eu:
-
-- `http://crl.comodoca.com/COMODORSADomainValidationSecureServerCA.crl` (Web server)
-
-- `ldap://directory.d-trust.net/CN=D-TRUST%20SSL%20Class%203%20CA%201%202009,O=DTrust%20GmbH,C=DE?certificaterevocationlist` (service bus)
-
-- `http://crl.d-trust.net/crl/d-trust_ssl_class_3_ca_1_2009.der.crl` (service bus)
-
-- `http://cdn.d-trust-cloudcrl.net/crl/d-trust_ssl_class_3_ca_1_2009.crl` (service bus)
-
- secretservercloud.com.sg:
-
-- `http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl` (Web server)
-
-- `http://mscrl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%202.crl` (service bus)
-
-- `http://crl.microsoft.com/pki/mscorp/crl/Microsoft%20IT%20TLS%20CA%202.crl` (service bus)
+v
