@@ -233,11 +233,7 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
 
 1. Click the **Finish** button.
 
-<<<<<<< HEAD
-### Viewing Discovery Scanners for the GCP Discovery Source
-=======
 ## Viewing Discovery Scanners for the GCP Discovery Source
->>>>>>> 07322cc25c4654d1326e4e3d2f2f711b8ba90db7
 
 To view these scanners:
 
