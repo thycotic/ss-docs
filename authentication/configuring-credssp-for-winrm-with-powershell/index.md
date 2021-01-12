@@ -68,11 +68,11 @@ You can alternatively configure CredSSP and the credential delegation to occur f
 
 1. Go to **Admin \> Distributed Engine**. The Distribute Engine Configuration page appears:
 
-   ![image-20201204162936743](../../../../../Thycotic Files/Repos/Thycotic.SecretServer.Docs/secret-server-setup/upgrading/net-4-8-upgrade/images/image-20201204162936743.png)
+   ![image-20201204162936743](images/image-20201204162936743.png)
 
 1. Click the site panel button for the desired DE. The panel expands, displaying the DEs for that site:
 
-   ![image-20201204163347290](../../../../../Thycotic Files/Repos/Thycotic.SecretServer.Docs/secret-server-setup/upgrading/net-4-8-upgrade/images/image-20201204163347290.png)
+   ![image-20201204163347290](images/image-20201204163347290.png)
 
 1. Click the site name link at the top of the panel. The site's page appears:
 
