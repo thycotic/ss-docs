@@ -111,7 +111,7 @@ Procedure:
 
    > **Note:** Some of the command sets run by the "Verify Passwords Changed Test Action" button are empty. In that case, the test authenticates with the provided username and password, and if that is successful, so is the heartbeat. That is, the heartbeat uses the secret's own account (`$USERNAME`) and value to connect, rather than those of an associated secret.
 
-   > **Note:** If the RPC is set up to use an associated secret but the secret does not have one, the secret fails to rotate and throws an error.
+   > **Note:** If the RPC is set up to use an associated secret but the secret does not  have one, the secret fails to rotate and throws an error.
 
    > **Note:** For more on how SS interprets what values to supply your custom script from the secrets involved, see [Editing Custom Commands](../../remote-password-changing/custom-password-changers/editing-custom-commands/index.md) and the [Remote Password Changing Guide](https://thycotic.force.com/support/s/article/SS-Remote-Password-Changing-Guide) (KBA).
 
