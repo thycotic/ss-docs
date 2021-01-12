@@ -1,7 +1,7 @@
 [title]: # (Troubleshooting Heartbeat and RPC Connection Errors for Linux Secrets)
 [tags]: # (troubleshooting, workaround, rpc, heartbeat, linux)
 [priority]: # (1000)
-[display]: # (none)
+[display]: # (all)
 
 # Troubleshooting Heartbeat and RPC Errors for Linux Secrets
 
