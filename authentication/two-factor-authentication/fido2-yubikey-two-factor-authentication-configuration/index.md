@@ -1,4 +1,6 @@
-[title]: # (FIDO2/YubiKey Two-Factor Authentication Configuration)[tags]: # (Authentication, Credentials, 2FA)[priority]: #
+[title]: # (FIDO2/YubiKey Two-Factor Authentication Configuration)
+[tags]: # (Authentication, Credentials, 2FA)
+[priority]: #
 
 # FIDO2 (YubiKey) Two-Factor Authentication Configuration
 
