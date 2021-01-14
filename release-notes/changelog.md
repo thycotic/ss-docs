@@ -1,8 +1,22 @@
-[title]: # (Documentation Change Log)[tags]: # (Release Notes,documentation)[priority]: #
+[title]: # (Documentation Change Log)
+[tags]: # (Release Notes,documentation)
+[priority]: #
 [display]: # (search,content,print)
 # Documentation Change Log
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
+
+## January to June 2021
+
+Created or made significant changes to these topics:
+
+- Secret Server Cloud Architecture
+- Securing IIS Server
+- Troubleshooting SSH Issues
+
+Created the following topics from Salesforce articles (often including substantial rewrite):
+
+None
 
 ## August to  December 2020
 
