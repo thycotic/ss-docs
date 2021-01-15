@@ -10,7 +10,7 @@ This topic discusses resolving the "The specified domain is not a valid domain" 
 
 1. Verify that you are entering the fully qualified domain name in the domain field and that the domain username and password fields are correct.
 
-1. Ensure that the ports used for LDAP (389) or LDAPS (636) are open. For more information about the ports used by Secret Server, see [Ports Used by Secret Server](../../networking/secret-server-ports/index.md).
+1. Ensure that the ports used for LDAP (389) or LDAPS (389 and 636) are open. For more information about the ports used by Secret Server, see [Ports Used by Secret Server](../../networking/secret-server-ports/index.md).
 
 1. Ensure that your server is connecting to the correct DNS server:
 
