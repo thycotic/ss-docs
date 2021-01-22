@@ -27,7 +27,9 @@ This article lists ports typically used in Secret Server. Please note the follow
 | LDAPS            | TCP/636, UDP/636 |
 | SMB/Microsoft-DS | TCP445, UDP/445  |
 
->**Note:** For LDAPS to work the LDAP port (636) must also be open.
+[]()
+
+>**Note:** For LDAPS to work the LDAP port (389) must also be open.
 
 **Table:** Discovery Ports
 
@@ -37,6 +39,8 @@ This article lists ports typically used in Secret Server. Please note the follow
 | SMB/Microsoft-DS       | TCP/445, UDP/445                 |
 | RPC Endpoint Mapper    | TCP/135                          |
 | SSH                    | TCP/22                           |
+
+[]()
 
 **Table:** Remote Password Changing Ports
 
@@ -54,6 +58,8 @@ This article lists ports typically used in Secret Server. Please note the follow
 | Kerberos Password Change                                 | TCP/464, UDP/464                 |
 | Windows Privileged Account (WinNT ADSI Service Provider) | TCP/139                          |
 
+[]()
+
 **Table:** Web Server Incoming Ports
 
 | Type of Traffic | Port Number |
@@ -61,11 +67,15 @@ This article lists ports typically used in Secret Server. Please note the follow
 | HTTP            | TCP/80      |
 | HTTPS           | TCP/443     |
 
+[]()
+
 **Table:** Database Server Incoming Ports
 
 | Type of Traffic | Port Number        |
 | --------------- | ------------------ |
 | SQL Connection  | TCP/1433, UDP/1434 |
+
+[]()
 
 **Table:** Email Ports
 
@@ -73,17 +83,23 @@ This article lists ports typically used in Secret Server. Please note the follow
 | --------------- | ----------- |
 | SMTP            | TCP/25      |
 
+[]()
+
 **Table:** RADIUS Server Ports
 
 | Type of Traffic       | Port Number |
 | --------------------- | ----------- |
 | RADIUS Authentication | TCP/1812    |
 
+[]()
+
 **Table:** Syslog Ports
 
 | Type of Traffic | Port Number      |
 | --------------- | ---------------- |
 | Syslog          | TCP/514, UDP/514 |
+
+[]()
 
 **Table:** Internal Site Connector Ports
 
@@ -92,6 +108,8 @@ This article lists ports typically used in Secret Server. Please note the follow
 | RabbitMQ        | TCP/5672 (non-SSL), TCP/5671 (SSL) |
 | MemoryMQ        | TCP/8672 (non-SSL), TCP/8671 (SSL) |
 
+[]()
+
 **Table:** RabbitMQ Clustering Ports
 
 | Type of Traffic                                          | Port Number                    |
@@ -99,6 +117,8 @@ This article lists ports typically used in Secret Server. Please note the follow
 | EPMD                                                     | TCP/4369                       |
 | Inter-node Communication                                 | TCP/25672                      |
 | Inter-node Communication                                 | TCP/44002                      |
+
+[]()
 
 ## Related Articles and Resources
 
