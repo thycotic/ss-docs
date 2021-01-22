@@ -90,6 +90,7 @@ This article lists ports typically used in Secret Server. Please note the follow
 | Type of Traffic       | Port Number |
 | --------------------- | ----------- |
 | RADIUS Authentication | TCP/1812    |
+
 []()
 
 **Table:** Syslog Ports
