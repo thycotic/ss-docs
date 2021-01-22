@@ -27,7 +27,7 @@ This article lists ports typically used in Secret Server. Please note the follow
 | LDAPS            | TCP/636, UDP/636 |
 | SMB/Microsoft-DS | TCP445, UDP/445  |
 
->**Note:** For LDAPS to work the LDAP port (636) must also be open.
+>**Note:** For LDAPS to work the LDAP port (389) must also be open.
 
 **Table:** Discovery Ports
 
