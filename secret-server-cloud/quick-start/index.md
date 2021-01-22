@@ -26,7 +26,7 @@ This section walks you through an initial configuration of your cloud instance. 
 A distributed Engine server is required to communicate with SSC. Distributed engine server recommended specifications:
 
 - Windows Server 2012 or Above
-- CPU: Dual-core 2 GHz (minimum)
+- CPU: 4-core 2 GHz (minimum)
 - Memory: 4 GB of RAM (minimum)
 
 ### Engine Connectivity
