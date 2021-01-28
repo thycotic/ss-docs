@@ -1,6 +1,6 @@
-[title]: # (Discovery)
-[tags]: # (Discovery)
-[priority]: # (1000)
+[title]: # "Discovery"
+[tags]: # "Discovery"
+[priority]: # "1000"
 
 # Discovery
 
@@ -26,7 +26,7 @@ First, discovery has several terms that need defining:
 
 ##### Discovery Source
 
-A named collective, ordered system that conducts discovery. There are four broad types: Active Directory, Amazon Web Services, Unix, and VMware ESX\ESXi.
+A named collective, ordered system that conducts discovery. There are five broad types: Active Directory, Amazon Web Services, Unix, VMware ESX\ESXi, and Google Cloud Platform.
 
 Configuring discovery is defining the parameters of the discovery source, once the general type is chosen.
 
