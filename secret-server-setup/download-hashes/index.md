@@ -58,12 +58,6 @@ Version_10_9_000002.zip:
 
 - SHA256 = 4d5365b93670d33f3c9b9f02573c0b53e971943a1e35adf1950750e69821ee41
 
-## Earlier Versions
-
-Below are the hashes for the step-upgrade version. When upgrading from a version prior to 8.4.000004, the upgrade process will upgrade Secret Server to 8.4.000004.
-
-If Secret Server is version 8.4.000004 to 9.1.000000 the upgrade process will upgrade to 9.1.000001 and from there Secret Server can be upgraded to the latest release.
-
 ### 10.9.000002
 
 The following are the download hashes for the combined installation files of Secret Server and Privilege Manager as of Secret Server version 10.9.000002.
