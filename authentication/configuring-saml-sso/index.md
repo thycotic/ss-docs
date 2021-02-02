@@ -1,6 +1,7 @@
 [title]: # (Configuring SAML Single Sign-on)
 [tags]: # (authentication,SAML,SSO)
 [priority]: # (1000)
+[display]: # (all)
 
 # Configuring SAML Single Sign-on
 
