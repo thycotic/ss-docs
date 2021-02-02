@@ -1,12 +1,10 @@
-[title]: # (VMware ESX/ESXi Account Discovery)
-[tags]: # (Account Discovery, VM)
-[priority]: # (1000)
+[title]: # "VMware ESX/ESXi Account Discovery and RPC Configuration"
+[tags]: # "Discovery, VMware, ESX/ESXi, rpc"
+[priority]: # "1000"
 
-# VMware ESX/ESXi Account Discovery and RPC
+# VMware ESX/ESXi Account Discovery and RPC Configuration
 
-> **Note:** Please see the [Discovery Topic](../index.md) for a comprehensive guide to configuring and using discovery.
-
-> Note: This topic is for Secret Server 10.6 and later. For earlier versions, see [VMware ESX/ESXi Password Changing & Discovery 10.5 and prior](https://thycotic.force.com/support/s/article/SS-NTC-EXT-VMware-ESX-ESXi-Password-Changing-10-6) (KBA).
+> **Note:** Please see the [Discovery Topic](../../index.md) for a comprehensive guide to configuring and using discovery.
 
 ## Overview
 
@@ -26,19 +24,19 @@ Secret Server searches the machine’s Windows path PATH for the VMWare SDK, the
 
 1. Add `C:\Program Files\WindowsPowerShell\Modules\VMware.Vim\[version]\net45` to the PATH using the system panel (sysdm.cpl).
 
-2. From the **System Properties** dialog, select **Advanced** tab
+1. From the **System Properties** dialog, select **Advanced** tab
 
-2. Click **Environment Variables…**
+1. Click **Environment Variables…**
 
-3. Under the **System Variables** section, highlight **Path** then **Edit**. The Edit Environment Variable dialog box appears:
+1. Under the **System Variables** section, highlight **Path** then **Edit**. The Edit Environment Variable dialog box appears:
 
    ![User-added image](images/clip_image002.png)
 
-4. Click the **New** button
+1. Click the **New** button
 
-4. Type `C:\Program Files\WindowsPowerShell\Modules\VMware.Vim\[version]\net45`, similar to the example above:
+1. Type `C:\Program Files\WindowsPowerShell\Modules\VMware.Vim\[version]\net45`, similar to the example above:
 
-4. Click the **OK** button when done.
+1. Click the **OK** button when done.
 
 ## Download Locations
 

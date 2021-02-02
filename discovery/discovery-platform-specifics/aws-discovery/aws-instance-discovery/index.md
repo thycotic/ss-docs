@@ -1,8 +1,8 @@
 
 
-[title]: # (AWS Instance Discovery)
-[tags]: # (AWS, Instance Discovery)
-[priority]: # (1000)
+[title]: # "AWS Instance Discovery"
+[tags]: # "AWS, Instance Discovery"
+[priority]: # "1000"
 
 # AWS Instance Discovery
 

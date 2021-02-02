@@ -1,6 +1,6 @@
-[title]: # (Configuring SAML Single Sign-on)
-[tags]: # (authentication,SAML,SSO)
-[priority]: # (1000)
+[title]: # "Configuring SAML Single Sign-on"
+[tags]: # "authentication,SAML,SSO"
+[priority]: # "1000"
 
 # Configuring SAML Single Sign-on
 
@@ -95,7 +95,17 @@ The “Administer Configuration SAML” role permission is required to use SAML 
    ![image-20200610152423326](images/image-20200610152423326.png)
 
 1. Click the **Upload Certificate** button to upload the certificate used for SS's HTTPS configuration.
-
+   
+   What type of certificate can be used?
+   
+   - The uploaded SAML certificate requires a `.pfx` file format.
+   
+   - For on-premises instances: The uploaded certificate should match the one used for SS's HTTPS configuration, **or** it can be created as a self-signed certificate using the PowerShell script [here](https://github.com/thycotic/extrabits/blob/master/Generate-Cert.ps1).
+   
+   - For Secret Server Cloud users: Generate your own certificate using the same PowerShell script.
+   
+      > **Note:** Run the referenced PowerShell script as an administrator on a machine with .NET 4.5 or above and replace the variables in the script as directed. Your certificate is created in the directory from which you run the script. The subject name on the certificate is irrelevant, though for on-premises instances it typically matches the URL of the instance.
+   
 1. Locate your certificate `.pfx` file and select it.
 
 1. Click the **Open** button. The new certificate appears.

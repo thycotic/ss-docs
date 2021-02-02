@@ -1,0 +1,1 @@
+Discovery rules will automatically create Secrets or send emails when local accounts that match the rule criteria are discovered.
