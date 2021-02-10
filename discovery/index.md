@@ -1,6 +1,6 @@
-[title]: # "Discovery"
-[tags]: # "Discovery"
-[priority]: # "1000"
+[title]: # (Discovery)
+[tags]: # (Discovery)
+[priority]: # (1000)
 
 # Discovery
 

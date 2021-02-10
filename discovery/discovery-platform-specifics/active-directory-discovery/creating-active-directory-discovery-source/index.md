@@ -1,6 +1,6 @@
-[title]: # "Creating an Active Directory Discovery Source"
-[tags]: # "discovery,active directory,discovery source"
-[priority]: # "1000"
+[title]: # (Creating an Active Directory Discovery Source)
+[tags]: # (discovery,active directory,discovery source)
+[priority]: # (1000)
 
 # Creating an Active Directory Discovery Source
 

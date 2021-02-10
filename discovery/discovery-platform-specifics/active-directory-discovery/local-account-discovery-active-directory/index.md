@@ -1,6 +1,6 @@
-[title]: # "Active Directory Local Account Discovery Methods"
-[tags]: # "discovery,active directory,local accounts"
-[priority]: # "1000"
+[title]: # (Active Directory Local Account Discovery Methods)
+[tags]: # (discovery,active directory,local accounts)
+[priority]: # (1000)
 
 # Active Directory Local Account Discovery Methods
 

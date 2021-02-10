@@ -1,6 +1,6 @@
-[title]: # "Creating a Unix Discovery Source"
-[tags]: # "discovery,unix,discovery source"
-[priority]: # "1000"
+[title]: # (Creating a Unix Discovery Source)
+[tags]: # (discovery,unix,discovery source)
+[priority]: # (1000)
 
 # Creating a Unix Discovery Source
 

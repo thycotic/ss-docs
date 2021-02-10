@@ -1,6 +1,6 @@
-[title]: # "Extensible Discovery"
-[tags]: # "Discovery,extensible discovery"
-[priority]: # "1000"
+[title]: # (Extensible Discovery)
+[tags]: # (Discovery,extensible discovery)
+[priority]: # (1000)
 
 # Extensible Discovery
 

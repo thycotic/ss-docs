@@ -1,6 +1,6 @@
-[title]: # "Running Active Directory Discovery"
-[tags]: # "discovery,active directory"
-[priority]: # "1000"
+[title]: # (Running Active Directory Discovery)
+[tags]: # (discovery,active directory)
+[priority]: # (1000)
 
 # Running and Interpreting Active Directory Discovery
 

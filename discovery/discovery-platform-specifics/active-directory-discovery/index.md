@@ -1,6 +1,6 @@
-[title]: # "Active Directory Discovery"
-[tags]: # "discovery,active directory"
-[priority]: # "1000"
+[title]: # (Active Directory Discovery)
+[tags]: # (discovery,active directory)
+[priority]: # (1000)
 
 # Active Directory Discovery
 

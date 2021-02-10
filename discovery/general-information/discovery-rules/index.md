@@ -1,6 +1,6 @@
-[title]: # "Creating Discovery Rules"
-[tags]: # "Discovery, sites, distributed engine"
-[priority]: # "1020"
+[title]: # (Creating Discovery Rules)
+[tags]: # (Discovery, sites, distributed engine)
+[priority]: # (1020)
 
 # Creating Discovery Rules
 

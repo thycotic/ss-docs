@@ -1,6 +1,6 @@
-[title]: # "Discovery Sources, Scanners, and Templates"
-[tags]: # "discovery,discovery scanner,discovery source,discovery scanner"
-[priority]: # "1000"
+[title]: # (Discovery Sources, Scanners, and Templates)
+[tags]: # (discovery,discovery scanner,discovery source,discovery scanner)
+[priority]: # (1000)
 
 # Introduction to Discovery Sources, Scanners, and Templates
 
