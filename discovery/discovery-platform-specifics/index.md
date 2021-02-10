@@ -1,6 +1,6 @@
-[title]: # "Discovery Platform Specifics"
-[tags]: # "Discovery"
-[priority]: # "1000"
+[title]: # (Discovery Platform Specifics)
+[tags]: # (Discovery)
+[priority]: # (1000)
 
 # Discovery Platform Specifics
 

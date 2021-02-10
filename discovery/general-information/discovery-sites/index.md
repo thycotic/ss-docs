@@ -1,6 +1,6 @@
-[title]: # "Discovery and Sites"
-[tags]: # "Discovery, sites, distributed engine"
-[priority]: # "1020"
+[title]: # (Discovery and Sites)
+[tags]: # (Discovery, sites, distributed engine)
+[priority]: # (1020)
 
 ## Discovery and Sites—Where Does Secret Server Run Discovery Scans?
 

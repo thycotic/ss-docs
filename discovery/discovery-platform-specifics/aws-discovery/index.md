@@ -1,6 +1,6 @@
-[title]: # "AWS Account Discovery"
-[tags]: # "AWS, Account Discovery"
-[priority]: # "1000"
+[title]: # (AWS Account Discovery)
+[tags]: # (AWS, Account Discovery)
+[priority]: # (1000)
 
 # AWS Account Discovery
 

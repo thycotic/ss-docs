@@ -6,11 +6,19 @@
 
 > **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
-Discovery is the process where SS scans an environment to find accounts and associated resources called *dependencies*. Once accounts are found, they can be used to create new secrets in SS. Users with the “administer discovery” role permission can either manually import accounts or can create an automated process, called a *discovery rule*, to do so. Using discovery does not stop users from manually creating their own secrets.
+Discovery is the process where SS scans an environment to find accounts and associated resources called *dependencies*. Once accounts are found, they can be used to create new secrets in SS. Users with the “administer discovery” role permission can either manually import accounts or can create an automated process to do so. Using discovery does not stop users from manually creating their own secrets.
 
 Some typical accounts that discovery can find include Windows local admin, Windows domain, and Unix non-daemon. Some typical dependencies discovery can scan for include scheduled tasks running as a domain user, application pools running as a domain user, and services running as a domain user.
 
-> **Note:** Account and dependency types not supported out-of-the-box in SS can still be discovered by writing PowerShell scripts that can be run as custom scanners. See [Extensible Discovery](#extensible-discovery).
+> **Note:** Account and dependency types not supported out-of-the-box in SS can still be discovered by writing PowerShell scripts that you can run as custom scanners. See [Extensible Discovery](#extensible-discovery).
+
+## In a Hurry?
+
+We suggest reading (in order): 
+
+- [How Discovery Works](./how-discovery-works/index.md)
+- [Introduction to Discovery Sources, Scanners, and Templates](./general-information/discovery-sources-scanners-templates/index.md)
+- [Running and Interpreting Active Directory Discovery](./discovery-platform-specifics/active-directory-discovery/running-active-directory-discovery/index.md)
 
 ## Discovery Benefits
 
@@ -24,23 +32,27 @@ When SS is configured to discover new accounts, it provides added protection by 
 
 ## Discovery Types
 
-### AD discovery
+### Active Directory Discovery
 
-SS AD discovery scans for AD machines, AD user accounts, local Windows accounts, and dependencies on an AD domain. First, SS discovers machines from your domain. Next, SS scans each machine for local Windows accounts and dependencies. By default, SS scans for local accounts, domain accounts, scheduled tasks, Windows services, and IIS application pools. You can discover additional accounts and dependencies by creating PowerShell scanners. PowerShell scanners are an advanced topic described in the **Extensible Discovery** section.
+SS AD discovery scans for AD machines, AD user accounts, local Windows accounts, and dependencies on an AD domain. First, SS discovers machines from your domain. Next, SS scans each machine for local Windows accounts and dependencies. By default, SS scans for local accounts, domain accounts, scheduled tasks, Windows services, and IIS application pools. You can discover additional accounts and dependencies by creating PowerShell scanners. PowerShell scanners are an advanced topic described in the [Extensible Discovery](./extensible-discovery/index.md) section.
 
 ### ESX/ESXi Discovery
 
 SS provides a wizard to help configure ESX/ESXi discovery. You name the discovery Source, define the host ranges of the desired IP addresses, and choose a secret to use as credentials when scanning. 
 
-**Note:** SS provides a "Generic Discovery—Only Credentials" secret type that stores a simple username and password pair for Unix or ESX/ESXi discovery. It is intended only for discovery and is incapable of RPC.
+> **Note:** SS provides a "Generic Discovery—Only Credentials" secret type that stores a simple username and password pair for Unix or ESX/ESXi discovery. It is intended only for discovery and is incapable of RPC.
 
 ### AWS Discovery
 
-Already in Homer.
+SS can scan Amazon Web Services (AWS) for accounts that can access the cloud resource. Two types of secrets can be discovered and managed through SS:
+
+- AWS Access Key: Keys used for programmatic integration with AWS.
+
+- AWS Console Account: User login accounts for AWS.
 
 ### Google Cloud Platform Discovery
 
-Already in Homer.
+SS can manage Google Cloud Platform (GCP) service accounts and VM instances. This feature allows users to run discovery to pull and manage VM Instances, as well as import and manage GCP service accounts.
 
 ### Unix Discovery
 
@@ -48,24 +60,11 @@ SS provides a wizard to help configure Unix discovery. You name the discovery So
 
 By default, the "Find Non-Daemon Users (Basic Unix)**"** command set is used first. If a built-in account is discovered, you must modify the discovery source to use the "Find All Users (Basic Unix)" command set. You can create new command sets by clicking the Configure tab on the Discovery Sources page.
 
+### Extensible Discovery
+
+You can customize discovery by changing parts of it to use PowerShell. The information a discovery scanner outputs is defined by its scanner template. For standard templates, the input and output information types are fixed. Extensible discovery allows you to customize or replace the unmanaged account, IP address and OU, account, and dependency discovery steps above. Extensible discovery does still have limitations on what information is passed between discovery scanners. For more information, see [Extensible Discovery](./extensible-discovery/index.md).
+
 ## Discovery Performance
 
 Please see our [Discovery Best Practices Guide](./discovery-best-practices/index.md) to learn about optimizing discovery performance.
 
-## Local Account Discovery Method for Active Directory
-
-### Remote Procedure Call (RPC)
-
-This is the method that is used for local account discovery for all versions of Secret Server prior to release 8.6.000000 and is the default for all upgrades and fresh installations.  It uses the same technology as the Windows remote password changing in Secret Server and is the most dependable and proven of the options.  It can, however, be slower in some environments when scanning computers over a WAN.
-
-### Windows Management Instrumentation (WMI)
-
-This method uses the WMI technology to query the Windows computer.  In some environments, this method can be faster than the Remote Procedure Call.  It does, however, require having the proper permissions and network configuration setup correctly for WMI to run.
-
-### Attempt WMI First, and Failover to RPC if Needed
-
-This option attempts to use the WMI method first, and if that fails to work correctly, it attempts the RPC method for local account discovery.  This option is potentially slower because it has the possibility of performing two separate scans for each computer.
-
-## Extensible Discovery
-
-You can customize discovery by changing parts of it to use PowerShell. The information a discovery scanner outputs is defined by its scanner template. For standard templates, the input and output information types are fixed. Extensible discovery allows you to customize or replace the unmanaged account, IP address and OU, account, and dependency discovery steps above. Extensible discovery does still have limitations on what information is passed between discovery scanners. For more information, see the [Extensible Discovery Overview](https://thycotic.force.com/support/s/article/Scriptable-Discovery-Overview) (KBA).

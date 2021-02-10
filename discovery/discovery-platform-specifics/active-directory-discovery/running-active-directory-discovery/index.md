@@ -2,8 +2,6 @@
 [tags]: # "discovery,active directory"
 [priority]: # "1000"
 
-
-
 # Running and Interpreting Active Directory Discovery
 
 This topic discusses how to configure, run, and interpret discovery scans on Active Directory systems. After the initial configuration, normally the discovery source is set to active, which runs the follow-on tasks automatically. You can also manually run ether a discovery (locate computers on the domain) or computer (inspect the individual computers) scan.
@@ -13,7 +11,7 @@ This topic discusses how to configure, run, and interpret discovery scans on Act
 Running a discovery on an Active Directory system is easy, assuming everything was configured correctly. To that end, follow these instructions first:
 
 - [Setting Permissions for Active Directory Scans](../permissions-active-directory-discovery/index.md)
-- [Creating Active Directory Discovery Sources](../creating-active-directory-source/index.md)
+- [Creating Active Directory Discovery Sources](../creating-active-directory-discovery-source/index.md)
 - [Enabling Specific OU Domain Discovery](../../../general-information/enabling-specific-ou-domain-discovery/index.md) (optional)
 
 ## Step Two: Discovery Scan
@@ -44,7 +42,7 @@ Once the computers in the desired AD domain or OU are discovered, a computer sca
 
 To run a manual computer scan, on the **Admin** menu, click the **Run Discovery Now** button and select **Run Computer Scan**.
 
-## Step Four: Viewing Discovery Results and Creating Credential Secrets
+## Step Four: Viewing Discovery Results
 
 ### Browsing Discovery Results
 
@@ -76,7 +74,7 @@ To use advanced search settings, click the **Advanced** link beside the search f
 
 Select an option in the **Search By** menu to narrow the search results to match an account, computer, operating system, or rule.
 
-> **Note:** "Rule" only appears in the list box if discovery rules exist for local accounts. When you select it, another menu appears for selecting a rule. ==For more information about creating and searching with rules, see== [discovery Rules](#_Discovery_Rules).
+> **Note:** "Rule" only appears in the list box if discovery rules exist for local accounts. When you select it, another menu appears for selecting a rule. For more information about creating and searching with rules, see [Discovery Rules](../../../general-information/discovery-rules/index.md).
 
 Click the **Account Status** dropdown list to select accounts managed or unmanaged by SS.
 
@@ -90,24 +88,24 @@ The table below describes the contents of each column:
 
 | Column             | Description                                                  | Account Type  (Local,  Service) |
 | ------------------ | ------------------------------------------------------------ | ------------------------------- |
-| **Computer**       | Computer  name of the machine scanned. This is obtained from AD during the  first part of the discovery process. | Both                            |
 | **Account**        | Username of discovered account.                              | Both                            |
-| **Secret**         | If a secret name appears here, a credential secret already exists for the account listed in the account column. Otherwise, this column is blank. | Both                            |
-| **Last Scanned**   | Last  date that the machine was scanned by discovery.        | Both                            |
-| **Status**         | Indicates that an account is managed by SS, connectivity issues, or no accounts detected. ==For more information about error messages==, see [Discovery Error Messages](https://updates.thycotic.net/links.ashx?DiscoveryErrors). | Both                            |
-| **Org Unit**       | Organizational Unit the machine is joined to. This information is obtained from AD during the first part of the discovery process. | Local                           |
+| **Computer**       | Computer  name of the machine scanned. This is obtained from AD during the  first part of the discovery process. | Both                            |
 | **Last Connected** | Last date a user logged into the machine.                    | Local                           |
+| **Last Scanned**   | Last  date that the machine was scanned by discovery.        | Both                            |
+| **Org Unit**       | Organizational Unit the machine is joined to. This information is obtained from AD during the first part of the discovery process. | Local                           |
+| **Secret**         | If a secret name appears here, a credential secret already exists for the account listed in the account column. Otherwise, this column is blank. | Both                            |
 | **Service Name**   | Name of  a discovered dependency.                            | Service                         |
+| **Status**         | Indicates that an account is managed by SS, connectivity issues, or no accounts detected. For more information about error messages, see [Discovery Error Messages](../../../general-information/discovery-error-messages/index.md). | Both                            |
 | **Type**           | Discovered dependency type icon. See the following table.    | Service                         |
 
 Service account dependency types identified in the **Type** column:
 
 **Table:** Service Account Dependency Types
 
-| *Type*               | *Icon*                                                       | *Service Name*            |
+| Type                 | Icon                                                         | Service Name              |
 | -------------------- | ------------------------------------------------------------ | ------------------------- |
-| **Windows Service**  | ![image-20210201111442318](images/image-20210201111442318.png) | Service name              |
 | **Application Pool** | ![image-20210201111500478](images/image-20210201111500478.png) | IIS application pool name |
 | **Scheduled Task**   | ![image-20210201111516978](images/image-20210201111516978.png) | Scheduled task name       |
+| **Windows Service**  | ![image-20210201111442318](images/image-20210201111442318.png) | Service name              |
 
-> **Note**  To correctly identify and import IIS application pools for IIS 7 or higher, SS requires a trust relationship between the scanned domain and domain that the SS Web server is joined to. For further details, see [Application Pool Configuration for discovery](https://updates.thycotic.net/links.ashx?DiscoveryAppPoolConfig).
+> **Note**  To correctly identify and import IIS application pools for IIS 7 or higher, SS requires a trust relationship between the scanned domain and domain that the SS Web server is joined to. 

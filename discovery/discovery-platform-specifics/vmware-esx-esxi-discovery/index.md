@@ -1,6 +1,6 @@
-[title]: # "VMware ESX/ESXi Account Discovery"
-[tags]: # "Discovery, VMware, ESX/ESXi, rpc"
-[priority]: # "1000"
+[title]: # (VMware ESX/ESXi Account Discovery)
+[tags]: # (Discovery, VMware, ESX/ESXi, rpc)
+[priority]: # (1000)
 
 # VMware ESX/ESXi Account Discovery 
 

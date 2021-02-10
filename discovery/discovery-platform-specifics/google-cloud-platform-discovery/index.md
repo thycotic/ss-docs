@@ -1,7 +1,7 @@
-[title]: # "Google Cloud Platform Discovery and Service Accounts"
-[tags]: # "GCP, discovery, service account, google cloud platform"
-[priority]: # "1000"
-[display]: # "all"
+[title]: # (Google Cloud Platform Discovery and Service Accounts)
+[tags]: # (GCP, discovery, service account, google cloud platform)
+[priority]: # (1000)
+[display]: # (all)
 
 # Google Cloud Platform Discovery and Service Accounts
 

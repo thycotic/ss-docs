@@ -1,6 +1,6 @@
-[title]: # "Creating an ESX/ESXi Discovery"
-[tags]: # "discovery,esx/esxi,discovery source"
-[priority]: # "1000"
+[title]: # (Creating an ESX/ESXi Discovery)
+[tags]: # (discovery,esx/esxi,discovery source)
+[priority]: # (1000)
 
 # Creating an ESX/ESXi Discovery Source
 

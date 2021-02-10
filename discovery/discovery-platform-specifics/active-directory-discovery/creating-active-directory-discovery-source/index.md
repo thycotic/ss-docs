@@ -6,9 +6,9 @@
 
 Discovery sources define a set of discovery operations. You must create one based on the built-in types prior to running discovery. To do so for AD:
 
-**Note:** Adding a new domain as a discovery source also adds it as a synchronization source and vice versa.
+> **Note:** Adding a new domain as a discovery source also adds it as a synchronization source and vice versa.
 
-**Note:** If you add a domain as an AD synchronization source within SS but discovery was not initially enabled, the domain is listed as an inactive discovery source. To see such a domain, on the Discovery Sources page, click to select the Show Inactive and Disabled check box.
+> **Note:** If you add a domain as an AD synchronization source within SS but discovery was not initially enabled, the domain is listed as an inactive discovery source. To see such a domain, on the Discovery Sources page, click to select the Show Inactive and Disabled check box.
 
 1.  Click **Admin \> Discovery**. The Discovery Sources tab of the Discovery page appears:
 
@@ -16,7 +16,7 @@ Discovery sources define a set of discovery operations. You must create one base
 
 1.  Note the list of existing discovery sources.
 
-   **Note:** If you upgraded from an earlier SS version and have created an AD domain within SS, a corresponding discovery source is displayed on this page. If discovery was not enabled on that domain, the discovery source Active column is not checked for that discovery source.
+   > **Note:** If you upgraded from an earlier SS version and have created an AD domain within SS, a corresponding discovery source is displayed on this page. If discovery was not enabled on that domain, the discovery source Active column is not checked for that discovery source.
 
 1.  Click the **Create Discovery Source** button. A dropdown list appears:
 
@@ -30,7 +30,7 @@ Discovery sources define a set of discovery operations. You must create one base
 
 1.  Ensure the **Active** check box is selected. This activates this discovery Source for scanning. Active discovery sources are scanned at the defined discovery interval defined. If you have multiple discovery sources, the discovery source with the most un-scanned computers is scanned first.
 
-1.  Next, you select a secret this is used as the credentials for discovery scanning. These credentials must have the proper rights to scan the remote machines. Click the **No Secret Selected** link. The Select Secret popup page appears:
+1.  Next, you select a secret this is used as the credentials for discovery scanning and AD synchronization. These credentials must have the proper rights to scan the remote machines. Click the **No Secret Selected** link. The Select Secret popup page appears:
 
    ![image-20210128134153370](images/image-20210128134153370.png)
 
