@@ -1,6 +1,6 @@
 [title]: # (How Discovery Works)
 [tags]: # (Discovery)
-[priority]: # (1010)
+[priority]: # (990)
 
 # How Discovery Works
 

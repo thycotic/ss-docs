@@ -1,6 +1,6 @@
 [title]: # (Extensible Discovery)
 [tags]: # (Discovery,extensible discovery)
-[priority]: # (1000)
+[priority]: # (1010)
 
 # Extensible Discovery
 
