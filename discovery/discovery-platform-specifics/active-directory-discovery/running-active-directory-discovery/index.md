@@ -1,4 +1,4 @@
-[title]: # (Running Active Directory Discovery)
+[title]: # (Running AD Discovery)
 [tags]: # (discovery,active directory)
 [priority]: # (1000)
 

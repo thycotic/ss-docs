@@ -1,3 +1,7 @@
+[title]: # (Permissions for AD Scans)
+[tags]: # (Discovery)
+[priority]: # (1000)
+
 # Setting Permissions for Active Directory Scans
 
 ## Local Windows Accounts

@@ -1,4 +1,4 @@
-[title]: # (Creating an Active Directory Discovery Source)
+[title]: # (Creating an AD Discovery Source)
 [tags]: # (discovery,active directory,discovery source)
 [priority]: # (1000)
 
@@ -10,23 +10,23 @@ Discovery sources define a set of discovery operations. You must create one base
 
 > **Note:** If you add a domain as an AD synchronization source within SS but discovery was not initially enabled, the domain is listed as an inactive discovery source. To see such a domain, on the Discovery Sources page, click to select the Show Inactive and Disabled check box.
 
-1.  Click **Admin \> Discovery**. The Discovery Sources tab of the Discovery page appears:
+1. Click **Admin \> Discovery**. The Discovery Sources tab of the Discovery page appears:
 
    ![image-20210128133932700](images/image-20210128133932700.png)
 
-1.  Note the list of existing discovery sources.
+1. Note the list of existing discovery sources.
 
    > **Note:** If you upgraded from an earlier SS version and have created an AD domain within SS, a corresponding discovery source is displayed on this page. If discovery was not enabled on that domain, the discovery source Active column is not checked for that discovery source.
 
-1.  Click the **Create Discovery Source** button. A dropdown list appears:
+1. Click the **Create Discovery Source** button. A dropdown list appears:
 
    ![image-20210128134026808](images/image-20210128134026808.png)
 
-1.  Click **Active Directory** to select that discovery source type. A Discovery Source page appears for that type:
+1. Click **Active Directory** to select that discovery source type. A Discovery Source page appears for that type:
 
    ![image-20210128134113383](images/image-20210128134113383.png)
 
-1.  Type the parameters for the discovery source name, FQDN, and friendly (human readable) name. The parameters with asterisks are required.
+1. Type the parameters for the discovery source name, FQDN, and friendly (human readable) name. The parameters with asterisks are required.
 
 1.  Ensure the **Active** check box is selected. This activates this discovery Source for scanning. Active discovery sources are scanned at the defined discovery interval defined. If you have multiple discovery sources, the discovery source with the most un-scanned computers is scanned first.
 
