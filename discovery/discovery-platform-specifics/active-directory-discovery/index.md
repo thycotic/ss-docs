@@ -8,9 +8,8 @@
 
 Secret Server queries AD domains to obtain a list of Organizational Units (OUs) and Windows computers on the domain. These OUs and computers are recorded in the SS database. SS then attempts to connect to each computer and query for the following:
 
-- **Local Accounts:** Local Windows accounts
-
 - **Domain Accounts:** AD user accounts
+- **IIS Application Pools:** IIS application pools run by AD accounts
+- **Local Accounts:** Local Windows accounts
 - **Windows Services:**  Windows services run by AD accounts
 - **Scheduled Tasks:** Windows scheduled tasks run by AD accounts
-- **IIS Application Pools:** IIS application pools run by AD accounts

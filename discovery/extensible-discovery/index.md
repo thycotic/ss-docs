@@ -377,8 +377,8 @@ Thus, our scan template must have fields to store the values of these three prop
     | DistinguishedName | \<None\>         |
     | Name              | HostRange        |
     | ObjectGUID        | \<None\>         |
-
-7. When done, click the **Save** button.
+[]()
+1. When done, click the **Save** button.
 
 #### Machines
 
@@ -415,7 +415,7 @@ Next, create the scan template to contain the output from our Machine Scanner sc
     | DistinguishedName | \<None\>           |
     | DNSHostName       | \<None\>           |
     | OperatingSystem   | OperatingSystem  |
-
+[]()
 7. Click the **Save** button.
 
 #### Local Accounts
@@ -450,7 +450,7 @@ The setup of these fields on the Local Account scan template is a bit different 
 | Name           | Username         |
 | Password       | Password         |
 | Resource       | Resource         |
-
+[]()
 7. Click the **Save** button.
 
 #### Dependencies Scan Template
@@ -494,7 +494,7 @@ Thus, our setup for this scan template will be:
 | Machine        | Machine          |
 | ServiceName    | ServiceName      |
 | Username       | Username         |
-
+[]()
 8. Click the **Save** button.
 
 ### Task Four: Setting up Discovery Scanners and Sources
@@ -565,6 +565,7 @@ To get started:
 | $[x]$Username | The username of the nth privileged account associated with the scanner ("x" represents n). Each scanner can have one or more privileged accounts associated  with it. Thus, if you need to use the username of the first privileged account in your script, you would pass in $[1]$Username. The second would be $[2]$Username and so forth. You can have as many privileged accounts as necessary. |
 | $[x]$Password | Similar to $[x]$Username, this is the password of the nth privileged account associated with the scanner. |
 | $[x]$Domain   | Similar to $[x]$Username, this is the  fully-qualified domain name of the nth privileged account associated with the  scanner. |
+[]()
 
 #### Machines
 
@@ -668,11 +669,7 @@ The final step is to create a discovery source and assign the discovery scanners
 
     > **Note:** If you upgraded from an earlier SS version and have created an AD domain within SS, a corresponding discovery source is displayed on this page. If discovery was not enabled on that domain, the discovery source Active column is not checked for that discovery source.
 
-1.  Click the **Create Discovery Source** button. A dropdown list appears:
-
-    ![image-20210128134026808](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134026808.png)
-
-1.  Click **Active Directory** to select that discovery source type. A Discovery Source page appears for that type:
+1.  Click the **Create Discovery Source** button and select **Active Directory** to choose that discovery source type. A Discovery Source page appears for that type:
 
     ![image-20210128134113383](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134113383.png)
 

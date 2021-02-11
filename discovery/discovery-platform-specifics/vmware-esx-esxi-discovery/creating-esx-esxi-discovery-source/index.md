@@ -1,4 +1,4 @@
-[title]: # (Creating an ESX/ESXi Discovery)
+[title]: # (Creating an ESX/ESXi Discovery Source)
 [tags]: # (discovery,esx/esxi,discovery source)
 [priority]: # (1000)
 
@@ -12,11 +12,7 @@ Discovery sources define a set of discovery operations. You must create one base
 
 1.  Note the list of existing discovery sources.
 
-1.  Click the **Create Discovery Source** button. A dropdown list appears:
-
-    ![image-20210128145539495](images/image-20210128145539495.png)
-
-1.  Click **VMware ESX/ESXi** to select that discovery source type. A Discovery Source page appears for that type:
+1.  Click the **Create Discovery Source** button and select **VMware ESX/ESXi** to choose that discovery source type. A Discovery Source page appears for that type:
 
     ![image-20210128145554540](images/image-20210128145554540.png)
 

@@ -8,11 +8,11 @@ This topic discusses how to configure, run, and interpret discovery scans on Act
 
 ## Step One: Discovery Configuration
 
-Running a discovery on an Active Directory system is easy, assuming everything was configured correctly. To that end, follow these instructions first:
+Running a discovery on an AD system is easy, assuming everything was configured correctly. To that end, follow these instructions first:
 
 - [Setting Permissions for Active Directory Scans](../permissions-active-directory-discovery/index.md)
 - [Creating Active Directory Discovery Sources](../creating-active-directory-discovery-source/index.md)
-- [Enabling Specific OU Domain Discovery](../../../general-information/enabling-specific-ou-domain-discovery/index.md) (optional)
+- [Enabling Specific OU Domain Discovery](../../../general-information/discovery-enabling-specific-ou-domain/index.md) (optional)
 
 ## Step Two: Discovery Scan
 
@@ -97,7 +97,7 @@ The table below describes the contents of each column:
 | **Service Name**   | Name of  a discovered dependency.                            | Service                         |
 | **Status**         | Indicates that an account is managed by SS, connectivity issues, or no accounts detected. For more information about error messages, see [Discovery Error Messages](../../../general-information/discovery-error-messages/index.md). | Both                            |
 | **Type**           | Discovered dependency type icon. See the following table.    | Service                         |
-
+[]()
 Service account dependency types identified in the **Type** column:
 
 **Table:** Service Account Dependency Types
@@ -107,5 +107,6 @@ Service account dependency types identified in the **Type** column:
 | **Application Pool** | ![image-20210201111500478](images/image-20210201111500478.png) | IIS application pool name |
 | **Scheduled Task**   | ![image-20210201111516978](images/image-20210201111516978.png) | Scheduled task name       |
 | **Windows Service**  | ![image-20210201111442318](images/image-20210201111442318.png) | Service name              |
+[]()
 
 > **Note**  To correctly identify and import IIS application pools for IIS 7 or higher, SS requires a trust relationship between the scanned domain and domain that the SS Web server is joined to. 

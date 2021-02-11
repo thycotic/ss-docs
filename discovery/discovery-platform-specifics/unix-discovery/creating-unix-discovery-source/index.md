@@ -14,11 +14,7 @@ Discovery sources define a set of discovery operations. You must create one base
 
 1.  Note the list of existing discovery sources.
 
-1.  Click the **Create Discovery Source** button. A dropdown list appears:
-
-    ![image-20210128141227686](images/image-20210128141227686.png)
-
-1.  Click **Unix** to select that discovery source type. A Discovery Source page appears for that type:
+1.  Click the **Create Discovery Source** button and select **Unix** to choose that discovery source type. A Discovery Source page appears for that type:
 
     ![image-20210128141237933](images/image-20210128141237933.png)
 
@@ -92,7 +88,7 @@ Discovery sources define a set of discovery operations. You must create one base
     | Unix Machine (Find Machines)         | Host Range       | Computer          |
     | Unix Non-Daemon User (Find Accounts) | Computer         | SSH Local Account |
     | None (Find Dependencies)             | None             | None              |
-
+    []()
     Notice that there is no dependency scanner defined, and it was not an option in the discovery source wizard used to create this scanner set, so if you want to discover dependencies,  you *have* to manually edit the scanner set.
 
     > **Note:** If no dependency scanners are available with an input template matching an output scan template from the previous step that has not already been used by another scanner in this step, you cannot add a dependency scanner. The output template must be unique for each scanner but the input template may be shared.

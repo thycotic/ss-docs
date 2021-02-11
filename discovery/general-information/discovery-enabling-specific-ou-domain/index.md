@@ -46,4 +46,4 @@
 
 1. Click the **Save** button.
 
-> **Note:** The ports required for Discovery are documented in [Secret Server Ports](https://updates.thycotic.net/links.ashx?SecretServerPorts) (KB).
+> **Note:** The ports required for Discovery are documented in [Secret Server Ports](../../../networking/secret-server-ports/index.md).

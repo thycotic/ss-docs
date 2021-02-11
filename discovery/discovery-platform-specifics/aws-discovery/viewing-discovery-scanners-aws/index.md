@@ -1,8 +1,8 @@
-[title]: # (Viewing Discovery Scanners for the AWS Discovery Source)
+[title]: # (Viewing AWS Discovery Source Scanners)
 [tags]: # (AWS, Account Discovery, scanner)
 [priority]: # (1000)
 
-# Viewing Discovery Scanners for the AWS Discovery Source
+# Viewing AWS Discovery Source Scanners
 
  To view these scanners:
 

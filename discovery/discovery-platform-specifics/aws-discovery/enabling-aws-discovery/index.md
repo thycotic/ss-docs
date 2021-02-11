@@ -7,9 +7,7 @@
 1. For SS to communicate with AWS, users with sufficient privileges need to create an access key for their account in AWS Identity and Access Management (IAM). The account used to do this requires the following permissions to discover users and access keys:
 
    - `iam:ListUsers`
-
    - `iam:GetLoginProfile`
-
    - `iam:ListAccessKeys`
 
    > **Note:** These permissions are limited to the resources the user is allowed to access.

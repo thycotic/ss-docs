@@ -18,11 +18,7 @@ Discovery sources define a set of discovery operations. You must create one base
 
    > **Note:** If you upgraded from an earlier SS version and have created an AD domain within SS, a corresponding discovery source is displayed on this page. If discovery was not enabled on that domain, the discovery source Active column is not checked for that discovery source.
 
-1. Click the **Create Discovery Source** button. A dropdown list appears:
-
-   ![image-20210128134026808](images/image-20210128134026808.png)
-
-1. Click **Active Directory** to select that discovery source type. A Discovery Source page appears for that type:
+1. Click the **Create Discovery Source** button and select **Active Directory** to choose that discovery source type. A Discovery Source page appears for that type:
 
    ![image-20210128134113383](images/image-20210128134113383.png)
 

@@ -1,9 +1,9 @@
-[title]: # (Google Cloud Platform Discovery and Service Accounts)
+[title]: # (Google Cloud Platform Discovery)
 [tags]: # (GCP, discovery, service account, google cloud platform)
 [priority]: # (1000)
 [display]: # (all)
 
-# Google Cloud Platform Discovery and Service Accounts
+# Google Cloud Platform Discovery
 
 ## Overview
 
@@ -105,7 +105,7 @@ Secret Server now has a build in GCP IAM Service Account Key template.
 
 > **Note:** To create a Secret using GCP IAM service account key template, you must have the service account’s JSON private key file from GCP (created earlier).
 
-Create a new secret (see [Creating Secrets](../../secret-management/procedures/creating-secrets/index.md) for details):
+Create a new secret (see [Creating Secrets](../../../secret-management/procedures/creating-secrets/index.md) for details):
 
 1. Click the **+** on the **Secrets** item on the main menu. The "Create New Secret" page appears:
 

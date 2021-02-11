@@ -12,7 +12,7 @@ Discovery is the process where SS scans an environment to find accounts and asso
 
 Some typical accounts that discovery can find include Windows local admin, Windows domain, and Unix non-daemon. Some typical dependencies discovery can scan for include scheduled tasks running as a domain user, application pools running as a domain user, and services running as a domain user.
 
-> **Note:** Account and dependency types not supported out-of-the-box in SS can still be discovered by writing PowerShell scripts that you can run as custom scanners. See [Extensible Discovery](#extensible-discovery).
+> **Note:** Account and dependency types not supported out-of-the-box in SS can still be discovered by writing PowerShell scripts that you can run as custom scanners. See [Extensible Discovery](./extensible-discovery/index.md).
 
 ## In a Hurry?
 
@@ -68,5 +68,5 @@ You can customize discovery by changing parts of it to use PowerShell. The infor
 
 ## Discovery Performance
 
-Please see our [Discovery Best Practices Guide](./discovery-best-practices/index.md) to learn about optimizing discovery performance.
+Please see our [Discovery Best Practices Guide](./general-information/discovery-best-practices/index.md) to learn about optimizing discovery performance.
 
