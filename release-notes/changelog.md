@@ -10,6 +10,7 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created or made significant changes to these topics:
 
+- Create an Azure Application Registration
 - Enabling Specific OU Domain Discovery
 - Secret Server Cloud Architecture
 - Securing IIS Server
