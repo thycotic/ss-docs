@@ -72,8 +72,4 @@ Allowlisting is not necessary unless outbound firewall rules are in place. If it
 - Engine response service bus
 - CDN for DE updates
 
-<<<<<<< HEAD:secret-server-cloud/architecture/index.md
 >**Note:** Obtaining and reviewing certificates is not within the scope of this document, but you can find resources online, such as [OCSP & CRL and Revoked SSL Certificates](https://www.digicert.com/kb/util/utility-test-ocsp-and-crl-access-from-a-server.htm), which is not owned or maintained by Thycotic.
-=======
->**Note:** Obtaining and reviewing certificates is not within the scope of this document, but you can find resources online, such as [OCSP & CRL and Revoked SSL Certificates](https://www.digicert.com/kb/util/utility-test-ocsp-and-crl-access-from-a-server.htm), which is not owned or maintained by Thycotic.
->>>>>>> 193cd5523ae0a812aed775a159aae8133cfa51a0:architecture/secret-server-cloud/customer-examples/index.md
