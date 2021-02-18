@@ -6,58 +6,21 @@
 
 > **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services support architects.
 
-## Hybrid Multi-Tenant Architecture
+> **Note:**  This, the standard SSC architecture, is "hybrid multi-tenant" because only the front-end is multi-tenant—it is shared with other customers. The databases, service busses, and storage accounts are single-tenant (dedicated to you).
 
-> **Note:**  This, the standard SSC architecture, is called "hybrid multi-tenant" because only the front-end is multi-tenant—it is shared with other customers. The databases, service busses, and storage accounts are single-tenant (dedicated to you).
+## Diagram
 
-### Diagram
+**Figure:** Secret Server Cloud Architecture
 
-**Figure:** Secret Server Cloud Hybrid Multi-Tenant Architecture
-
-![image-20210106095743761](images/image-20210106095743761.png)
+![image-20210211161118505](images/image-20210211161118505.png)
 
 > **Note:** Arrows indicate the direction of initial connection.
 
-### Details
-
-See the [Details for All Architectures](#Details-for-All-Architectures) section at the end of this topic.
-
-## Distributed Engine Multi-Site Example Architecture
-
-### Diagram
-
-**Figure:** Secret Server Cloud Distributed Engine Multi-Site Example Architecture
-
-![image-20210106095339756](images/image-20210106095339756.png)
-
->**Note:** This design is fully supported by Thycotic.
-
-> **Note:** Arrows indicate the direction of initial connection.
-
-> **Note:** Reference architecture requirements:
->
-> - Ports for accessing, managing and discovering end-points must have the required ports opened between the site DEs the appropriate devices. Please see [Ports Used by Secret Server](../../networking/secret-server-ports/index.md).
-> - All DE servers must run on Windows Server 2012 to 2019.
-> - Distributed Engines servers must have 4 cores and 4 GB RAM. We encourage increasing CPUs before RAM to improve DE efficiency.
-
-> **Note:** Your first distributed engines will likely be located in the primary datacenter and will
-> serve as the management zone for all other locations and domains. This includes:
->
-> - AD synchronization
-> - Account discovery
-> - Password changing and heartbeats
-> - SSH and RDP proxy
-> - Session recording
-
-### Details
-
-See the [Details for All Architectures](#Details-for-All-Architectures) section at the end of this topic.
-
-## Details for All Architectures
+## Details
 
 ### 1: Service Buses
 
-IP Address allowlisting is not necessary unless outbound firewall rules are in place. If IP allowlisting is necessary, please contact [Thycotic Support](../../support/index.md) to obtain the shared engine response service bus and your dedicated customer service bus hostnames.  The TCP port requirement is based on the transport type configured in the distributed engine settings.  The default is Web sockets, which requires TCP 443.
+IP Address allowlisting is not necessary unless outbound firewall rules are in place. If IP allowlisting is necessary, please contact [Thycotic Support](../../support/index.md) to obtain the shared engine response service bus and your dedicated customer service bus hostnames.  The TCP port requirement is based on the transport type configured in the distributed engine settings.  The default is Web sockets, which requires TCP 443. If the AMQP option is selected within the application, TCP 5671/5672 ports are also required.
 
 ### 2: Web Application Firewall (WAF)
 
@@ -93,5 +56,5 @@ Allowlisting is not necessary unless outbound firewall rules are in place. If it
 - Customer service bus
 - Engine response service bus
 - CDN for DE updates
- 
+
 >**Note:** Obtaining and reviewing certificates is not within the scope of this document, but you can find resources online, such as [OCSP & CRL and Revoked SSL Certificates](https://www.digicert.com/kb/util/utility-test-ocsp-and-crl-access-from-a-server.htm), which is not owned or maintained by Thycotic.
