@@ -6,4 +6,4 @@
 
 > **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
-This section contains information that is exclusive to Secret Server Cloud (SSC). Please see SSC architecture diagrams at [Secret Server Cloud Architecture](../architecture/secret-server-cloud/index.md) in the Architecture section.
+This section contains information that is exclusive to Secret Server Cloud.

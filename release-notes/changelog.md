@@ -10,15 +10,13 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created or made significant changes to these topics:
 
-- Create an Azure Application Registration
-- Enabling Specific OU Domain Discovery
 - Secret Server Cloud Architecture
 - Securing IIS Server
 - Troubleshooting SSH Issues
 
-Created the following topics from Salesforce articles or PDFs (often including substantial rewrite):
+Created the following topics from Salesforce articles (often including substantial rewrite):
 
-- Discovery Guide
+None
 
 ## August to  December 2020
 
