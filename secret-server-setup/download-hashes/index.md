@@ -6,19 +6,23 @@
 
 ## 10.9.000005/33 (Current Versions)
 
+### 10.9.000033
+
+>**Note:** Calculated on 2021-02-22 14:14:09-05:00.
+
 The following are the download hashes for the current version installation files of Secret Server.
 
 ThycoticSetup.exe:
 
-- SHA1 = d64257d3489d31e7af8554e2dd69d1b2dd8ca181
+- SHA1 = 3df5f61ceb50a5f1e84d1f76a5e0d5db05f99bc0
 
-- SHA256 = bd58ac1a0946ed4b3b8b7d5bf91eb5fe701b67a21ffd5532315dafbd6cce09e6
+- SHA256 = e67f06e0052a826196438c9c09178aa4d2391f731d8307ff21f68722fbbe868c
 
 Version_10_9_000033.zip
 
-- SHA1 = e9dda8a53e301a950f697e628d22d1aea485768b
+- SHA1 = 77c03a38f97a96e4412761bbd7ff40effd4d1c11
 
-- SHA256= ba85391275bbcc1e1e9ce2a53727de660b358a6fad35b61861cff1ab1d68e948
+- SHA256= 8e84238063d5093be73219d30758b339e7d371e2152187812977385c5bb89f42
 
 ### 10.9.000005
 
@@ -30,7 +34,7 @@ ThycoticSetup.exe:
 
 - SHA256 = 6ccb2e6a9b695a432a006a143ad7fa672a8191c5aba9556eb4cff59180d1f82c
 
-Version_10_9_000002.zip:
+Version_10_9_000005.zip:
 
 - SHA1 = e1f8f6dd8e8e43f81d4b30d9a6cabafe08c46023
 
@@ -44,15 +48,13 @@ If Secret Server is version 8.4.000004 to 9.1.000000 the upgrade process will up
 
 ### 10.9.000032
 
-The following are the download hashes for the second half of the combined "step upgrade" installation files of Secret Server.
-
 ThycoticSetup.exe:
 
 - SHA1 = 332006c38327bf5f48e4d687239fad3f7798849b
 
 - SHA256 = 173f3a796412684808c256341995c50713e6b61ddef4510f9471748d9fa29b98
 
-Version_10_9_000002.zip:
+Version_10_9_000032.zip:
 
 - SHA1 = d03cad17517e5b5054b93086d992d34909182c39
 
