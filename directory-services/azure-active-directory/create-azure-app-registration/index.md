@@ -1,10 +1,13 @@
-[title]: # (Create an Azure Application Registration)
+[title]: # (Create an Azure App Registration)
 [tags]: # (Azure, Azure Active Directory)
 [priority]: # (1002)
 
-# Create an Azure Application Registration
+# Create Azure App Registration
 
 The steps provided can be used to create the App Registration required for configuring Azure Active Directory integration.
+
+
+> **Important:** This integration requires .NET Framework version 4.8 or later.
 
 ## Azure Portal Method
 
@@ -55,17 +58,33 @@ The steps provided can be used to create the App Registration required for confi
 ### Add API Permissions to the Application Registration
 
 1. Click **API Permissions** on the left panel in the **Manage** section. The API Permissions page appears.
+
 1. If any default permissions appear in the unlabeled configured permissions table, click the **…** button and select **Remove Permission**.
+
 1. Click the **Add a Permission** button. The Request API Permissions page appears.
+
 1. Click the **Microsoft Graph** panel button. A wizard begins.
+
 1. Click **Application Permissions** when asked **What type of permissions does your application require?** The **Select Permissions** section appears.
+
 1. In the search text box, type `Group`. A GroupMember section appears.
+
 1. Click to expand the section.
+
 1. Click to select the **GroupMember.Read.All** check box.
-1. In the search text box, type `User`. A User section appears.
-1. Click to expand the section.
-1. Click to select the **User.Read.All** check box.
+
+1. Repeat the process for the following application permissions:
+   - Group.Read.All
+   - GroupMember.Read.All
+   - Member.Read.Hidden
+   - User.Read.All
+   
+   and for the User.Read delegated permission. The result should look like this:
+
+   ![image-20210226134538965](images/image-20210226134538965.png)
+   
 1. Click the **Add Permissions** button. A prompt appears.
+
 1. Click the **Yes** button to grant consent to all accounts in the directory. You will receive a notification for "grant consent," and a green checkmark appears in the Status column on the Configure Permissions page.
 
 ## Script Method
