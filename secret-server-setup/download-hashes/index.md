@@ -10,7 +10,11 @@
 
 >**Note:** Calculated on 2021-02-22 14:14:09-05:00.
 
-The following are the download hashes for the current version installation files of Secret Server.
+#### Downloaded February 24th 2021 or Later
+
+The following are the download hashes for the current version installation files of Secret Server. This download hash is for the combined Secret Server and Privilege Manager version release on February 24, 2021.
+
+> **Note:** Calculated on 2021-02-22 14:14:09-05:00.
 
 ThycoticSetup.exe:
 
@@ -18,11 +22,29 @@ ThycoticSetup.exe:
 
 - SHA256 = e67f06e0052a826196438c9c09178aa4d2391f731d8307ff21f68722fbbe868c
 
-Version_10_9_000033.zip
+Version_10_9_000033.zip:
 
-- SHA1 = 77c03a38f97a96e4412761bbd7ff40effd4d1c11
+- SHA1 = e9dda8a53e301a950f697e628d22d1aea485768b
 
-- SHA256= 8e84238063d5093be73219d30758b339e7d371e2152187812977385c5bb89f42
+- SHA256 = ba85391275bbcc1e1e9ce2a53727de660b358a6fad35b61861cff1ab1d68e948
+
+#### Downloaded Before February 24th 2021
+
+For ThycoticSetup.exe downloaded before February 24th 2021, use the below hash for the installer:
+
+> **Note:** Calculated on 2020-12-12 16:07:09-05:00.
+
+ThycoticSetup.exe:
+
+- SHA1 = d64257d3489d31e7af8554e2dd69d1b2dd8ca181
+
+- SHA256 = bd58ac1a0946ed4b3b8b7d5bf91eb5fe701b67a21ffd5532315dafbd6cce09e6
+
+Version_10_9_000033.zip:
+
+- SHA1 = e9dda8a53e301a950f697e628d22d1aea485768b
+
+- SHA256 = ba85391275bbcc1e1e9ce2a53727de660b358a6fad35b61861cff1ab1d68e948
 
 ### 10.9.000005
 

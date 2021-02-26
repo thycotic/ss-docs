@@ -6,106 +6,91 @@
 
 The steps provided can be used to create the App Registration required for configuring Azure Active Directory integration.
 
-# Azure Portal
 
-### Create the App Registration
+> **Important:** This integration requires .NET Framework version 4.8 or later.
 
-1. Log in to the Azure Portal
-1. Switch to the intended Directory (_if needed_)
-1. Navigate to the **Azure Active Directory** blade
-1. Click **App registrations** on the left pane, under the Manage section
+## Azure Portal Method
 
-   ![App registrations icon from the portal](./images/appregistration_icon.png)
+### Create the Application Registration
 
-1. Click **New registration**
-1. In the **Register an application** blade enter the following:
+1. Log on the Azure Portal
 
-   | Field | Value |
-   | -------------- | ------------------- |
-   | Name | `Thycotic Secret Server` |
-   | Supported account types | Single Tenant (`Accounts in this organizational directory only`) |
-   | Redirect URI | (**Web**) `https://{Secret Server URL}/signin-oidc` |
+1. If needed, switch to the intended directory.
 
-   An example:
+1. Navigate to the **Azure Active Directory** blade.
 
-   ![sample app registration form](./images/appregistration_sample.png)
+1. Click **App registrations** on the left pane in the **Manage** section.
 
-1. Click the **Register** button
+1. Click the **New registration** button. The App Registrations page appears.
 
-   > **Note**: Once the App Registration is created, the Azure Portal will open the blade to this object.
+1. Type `Thycotic Secret Server` in the **Name** text box.
 
-1. In the blade for this App Registration, take note of the **Application (client) ID** and **Directory (tenant) ID**. These will be needed for Secret Server configuration.
+1. Click to select the **Accounts in the organizational directory only** selection button to choose single tenant.
 
-   ![app registration app and directory tenant id](./images/appregistration_ids.png)
+1. In the **Redirect URI (optional)** section, click to select **Web** in the dropdown list.
 
-### Add Client Secret to the App Registration
+1. Type `https://<Your Secret Server URL>/signin-oidc` in the text box to the right of the list.
 
-1. Navigate to the **Certificates & secrets** on the left panel under the Manage section
+1. Click the **Register** button. Once the app registration is created, the Azure portal opens the blade to this object.
 
-   ![Certs and secrets navigation](./images/appregistration_certnsecrets.png)
+1. In the blade for this app registration, take note of the **Application (client) ID** and **Directory (tenant) ID**. These will be needed for Secret Server configuration. For example:
 
-1. Under the **Client secrets** click **New client secret**
+    ![image-20210202112240332](images/image-20210202112240332.png)
 
-   ![new client secret navigation](./images/appregistration_certnsecrets_newclientsecret.png)
+### Add Client Secret to the Application Registration
 
-1. Add a description: `Secret Server`
-1. Set the Expires option desired
-   > **Note**: If the Client secret is set to expire, that Secret Server will have to be updated upon or before expiration for this integration to function correctly.
+1. Click **Certificates & secrets** on the left panel in the **Manage** section. The Certificates & Secrets page appears.
 
-1. Click **Add**
-1. Save the value displayed for the Secret Server configuration
+1. Go to the **Client Secrets** section.
 
-![secret value](./images/appregistration_certnsecrets_secretvalue.png)
+1. Click the **New Client Secret** button. The Add a Client Secret section appears.
 
-### Add API Permissions to the App Registration
+1. Type `Secret Server` in the **Description** text box.
 
-1. Navigate to **API permissions** on the left panel under the Manage section
+1. Click to select your desired expiration in the **Expires** selection button.
 
-   ![api permission navigation](./images/appregistration_api.png)
+   > **Note**: If the client secret is set to expire, SS must updated upon or before expiration for this integration to function correctly.
 
-1. Remove any default permissions that may exist (_click the `...` and select `Remove permission`_)
+1. Click the **Add** button. The client secret appears in the Client Secrets section.
 
-1. Click **Add a permission** under **Configured permissions** section
+1. Record the text string in the Value column for that secret.
 
-   ![add a permission](./images/appregistration_api_addperm.png)
+### Add API Permissions to the Application Registration
 
-1. In the **Request API permissions** panel, select **Microsoft Graph**
+1. Click **API Permissions** on the left panel in the **Manage** section. The API Permissions page appears.
 
-   ![select microsoft graph](./images/appregistration_api_requestperm.png)
+1. If any default permissions appear in the unlabeled configured permissions table, click the **…** button and select **Remove Permission**.
 
-1. Click **Application permissions** when asked, `What type of permissions does your application require?`
+1. Click the **Add a Permission** button. The Request API Permissions page appears.
 
-   ![microsoft graph app permission type](./images/appregistration_api_msgraphappperm.png)
+1. Click the **Microsoft Graph** panel button. A wizard begins.
 
-1. A **Select permissions** section will show up below.
+1. Click **Application Permissions** when asked **What type of permissions does your application require?** The **Select Permissions** section appears.
 
-1. Search for **Group**
-1. Expand **GroupMember** and **check** `GroupMember.Read.All`
+1. In the search text box, type `Group`. A GroupMember section appears.
 
-   ![select group.read.all](./images/appregistration_api_msgraphgroup_readall.png)
+1. Click to expand the section.
 
+1. Click to select the **GroupMember.Read.All** check box.
 
-1. Search for **User**
-1. Expand **User** and **check** `User.Read.All`
+1. Repeat the process for the following application permissions:
+   - Group.Read.All
+   - GroupMember.Read.All
+   - Member.Read.Hidden
+   - User.Read.All
+   
+   and for the User.Read delegated permission. The result should look like this:
 
-   ![select user.read.all](./images/appregistration_api_msgraphmember_userreadall.png)
+   ![image-20210226134538965](images/image-20210226134538965.png)
+   
+1. Click the **Add Permissions** button. A prompt appears.
 
-1. Click t **Add permissions** button to add the permissions
+1. Click the **Yes** button to grant consent to all accounts in the directory. You will receive a notification for "grant consent," and a green checkmark appears in the Status column on the Configure Permissions page.
 
-   ![grant admin consent](./images/appregistration_api_grantadminconsent.png)
+## Script Method
 
-1. Click **Yes** to the prompt to grant consent to _all accounts_ in the Directory
+The script below is provided as-is, and future use may require adjustment if Microsoft changes the AzureAD PowerShell module. 
 
-   ![grant admin consent prompt](./images/appregistration_api_grantadminconsent_prompt.png)
+At the time of writing, there is no command in the AzureAD module granting admin consent to the app. That step has to be performed via the Azure Portal.
 
-1. Once you receive the notification for _Grant consent_ you will **see the Status** change to green checks
-
-   ![grant admin consent green checks](./images/appregistration_api_grantadminconsent_green.png)
-
-# Script Method
-
-> **Note:** The below script is provided as-is, and future use may require adjusting based on Microsoft's changes with the AzureAD PowerShell module.
-
-The full script can be found [here](./scripts/azuread_sample.ps1).
-
-> **Note:** At the time of writing, there is no command in the AzureAD module that allows granting admin consent to the app. That step has to be performed via the Azure Portal.
+[Download the script](./scripts/azuread_sample.ps1)
