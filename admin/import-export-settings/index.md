@@ -2,7 +2,7 @@
 
 ## Overview
 
-Secret Server (SS) can now export and import SS settings as a JSON file. With this, you can more easily move settings from an existing SS environment to another. 
+Secret Server (SS) can now export and import SS settings as a JavaScript Object Notation (JSON) file. With this, you can more easily move settings from an existing SS environment to another. 
 
 ## Prerequisites
 
@@ -35,28 +35,17 @@ Importing from a JSON file:
 
 Some of the settings require additional permissions to export or import:
 
-**SAML**
+**Table:** Required Additional Permissions
 
-- Administer Configuration SAML
-
-**Security**
-
-- Administer Configuration Security
-
-**Session Recording**
-
-- Administer Configuration Session Recording
-
-**Login**
-
-- Two Factor
-  - Administer Configuration Two Factor
-- OpenID / Thycotic One
-  - Administer Thycotic One
-
-**SSH Commands**
-
-- Administer Ssh Menus
+| Setting             | Permission                                 |
+| ------------------- | ------------------------------------------ |
+| OpenID Log on       | Administer Thycotic One                    |
+| SAML                | Administer Configuration SAML              |
+| Security            | Administer Configuration Security          |
+| Session Recording   | Administer Configuration Session Recording |
+| SSH Commands        | Administer SSH Menus                       |
+| Thycotic One Log on | Administer Thycotic One                    |
+| Two Factor Log on   | Administer Configuration Two Factor        |
 
 ### Required Licenses
 
@@ -85,29 +74,51 @@ license required
   - EnableApprovalFromEmail
 - TicketSystems
 
-**Pro Edition**
+#### Pro Edition
 
 - SAML
 - Session Recording
 
-**Platinum Edition** (or Pro Edition and Unix SUPM) license required
+#### Platinum Edition 
+
+(or Pro Edition and Unix SUPM) license required
 
 - SSH Commands
 
-## Export
+## Procedures
 
-This features allows you to export pre-selected settings, which can be imported to other Secret Server environments for streamlined setup.
+### Exporting Settings
 
-To Export Secret Server Settings
+To export SS settings:
 
-1. Go to Admin menu, then select Export / Import (under Setup & System Maintenance)
-1. Click on Secret Server Settings tab
-1. Click Export button
+1. Go to **Admin \> All**.  The Admin page appears:
+
+   ![image-20210225141709284](images/image-20210225141709284.png)
+
+1. Click the **Setup & System Maintenance** button. A menu appears alongside the button:
+
+   ![image-20210225142002960](images/image-20210225142002960.png)
+
+1. Click the Export / Import menu item. The Secrets tab of the Export / Import page appears:
+
+   ![image-20210225142257671](images/image-20210225142257671.png)
+
+1. Click the **Secret Server Settings** tab:
+
+   ![image-20210225142447869](images/image-20210225142447869.png)
+
+1. Click the **Export** button. 
+
 1. Select the Setting Categories to export
+   
    1. Selecting Configuration will select all available categories
+   
 1. Click Export Secret Server Settings
+
 1. Enter your password
+
 1. Click Export
+   
    1. This will export a JSON file
 
 Export Secret Server Settings screen shots
@@ -150,7 +161,7 @@ To Import Secret Server Settings:
 
 Import Secret Server Settings screen shots
 
-![img](blob:https://thycotic.atlassian.net/3712fd55-b22a-4df4-a8bd-5a816793bd38#media-blob-url=true&id=8a3d5bec-98b2-4833-83d1-61fef0216622&collection=contentId-1973290633&contextId=1973290633&mimeType=image%2Fpng&name=image-20210219-145531.png&size=32145&width=1114&height=369)
+
 
 
 
@@ -170,7 +181,9 @@ Import Secret Server Settings screen shots
 
 Note: Some settings are unavailable in certain environments or if requiring a license or permission. 
 
-**Application Settings** - These settings correspond to the Application Settings section on the Configuration General page.
+### Application Settings
+
+ - These settings correspond to the Application Settings section on the Configuration General page.
 
 Settings unavailable in an on premise environment:
 
@@ -188,7 +201,9 @@ Settings unavailable in an IBM environment:
 
 - AllowSendTelemetry
 
-**Launcher Settings (Runtime)** - These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
+### Launcher Settings (Runtime)
+
+ - These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
 
 Launcher Deployment Type can be one of the following:
 
@@ -199,9 +214,13 @@ Settings unavailable in a cloud environment:
 
 - LauncherDeploymentType
 
-**Protocol Handler Settings (Install-Time)** - These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
+### Protocol Handler Settings (Install-Time) 
 
-**Permission Options** - These settings correspond to the Permission Options section on the Configuration General page.
+- These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
+
+### Permission Options
+
+ - These settings correspond to the Permission Options section on the Configuration General page.
 
 Default Secret Permissions can be one of the following:
 
@@ -262,9 +281,13 @@ Settings unavailable in a cloud environment:
 - SmtpPort
 - SmtpUseImplicitSSL
 
-**Ticket System** - These settings correspond to the Ticket System tab on the Configuration Ticket System page. To insert a new Ticket System, in the same instance the export file came from, the TicketSystemId must be set to 0, otherwise it will treat it as an update (see External Instance Id). Ticket System Name cannot match another already in the database.
+### Ticket System 
 
-**Session Recording** - These settings correspond to the Session Recording tab on the Configuration Session Record page.  Launcher must be enabled and a valid license for Session Monitoring is required to export and import this feature.
+- These settings correspond to the Ticket System tab on the Configuration Ticket System page. To insert a new Ticket System, in the same instance the export file came from, the TicketSystemId must be set to 0, otherwise it will treat it as an update (see External Instance Id). Ticket System Name cannot match another already in the database.
+
+### Session Recording
+
+ - These settings correspond to the Session Recording tab on the Configuration Session Record page.  Launcher must be enabled and a valid license for Session Monitoring is required to export and import this feature.
 
 Settings unavailable in a cloud environment:
 
@@ -280,19 +303,25 @@ To update SSHProxyRecordVideo or SSHProxyRecordKeyStrokes - SSH Proxy must be en
 
 To update RDPProxyRecordVideo or RDPProxyRecordKeyStrokes - RDP Proxy must be enabled
 
-**SAML** - These settings correspond to the SAML tab on the Configuration SAML page. To insert a new Identity Provider, in the same instance the export file came from, the IdentityProviderId must be set to 0, otherwise it will treat it as an update (see External Instance Id). The Identity Provider Name cannot match another already in the database.
+### SAML 
 
-**Licenses** - These settings correspond to the Licenses listed on the Licenses page.
+- These settings correspond to the SAML tab on the Configuration SAML page. To insert a new Identity Provider, in the same instance the export file came from, the IdentityProviderId must be set to 0, otherwise it will treat it as an update (see External Instance Id). The Identity Provider Name cannot match another already in the database.
 
-**SSH Commands** - These settings correspond to the SSH Command Restrictions, the SSH Commands, Allowed Command Menus and Blocked Command Lists.
+### Licenses
+
+ - These settings correspond to the Licenses listed on the Licenses page.
+
+### SSH Commands
+
+ - These settings correspond to the SSH Command Restrictions, the SSH Commands, Allowed Command Menus and Blocked Command Lists.
 
 ## Export JSON File
 
-**External Instance Id**
+### External Instance Id
 
 This corresponds to the instance the settings were exported from. If you change this id, then it will assume the export came from another database and will insert new records for the Ticket System or SAML (Identity Providers) categories. To add a new record in the same instance, set the id to 0 and it will be treated as a new item. (ex. TicketSystemId or IdentityProviderId)
 
-**Configuration Version**
+### Configuration Version
 
 This is the configuration version the settings were exported from. In there future when other settings are added, it will allow Secret Server to determine which settings are available and which are not in the database.
 
@@ -302,7 +331,7 @@ This is the configuration version the settings were exported from. In there futu
 
 In the UI, the exported JSON file can be easily modified and used as the import JSON file.  But for the API, the exported JSON will need to be added in the Data object. Then manually update the desired filter category load to true to import.
 
-**API Filter**
+### API Filter
 
 - **Load All** - If set to true, this will update all available Secret Server Settings. 
 - **General Load All** - If set to true, this will update all available General Settings (Application Settings, Launcher Settings, Protocol Handler Settings, Permission Options, User Experience, and User Interface)
@@ -339,13 +368,16 @@ When Secret Server Settings are exported or imported, an event will be logged.
 
 When Secret Server Settings are exported or imported, or any validation errors occur, a new log will show in the SS.log file.
 
-- **System logs / CEF examples:**
-  - USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)
-- **SS.log examples:**
-  - ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)
-  - ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import some settings due to the following reason(s): Security=Access Denied;Login=Insufficient permissions to edit Radius settings. (Radius),Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect),Insufficient permissions to edit Duo settings. (Duo);TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Access Denied
+### System logs / CEF examples:
 
-## Errors/Resolutions
+- USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)
+
+### SS.log examples:
+
+- ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)
+- ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import some settings due to the following reason(s): Security=Access Denied;Login=Insufficient permissions to edit Radius settings. (Radius),Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect),Insufficient permissions to edit Duo settings. (Duo);TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Access Denied
+
+## Errors and Resolutions
 
 | **Sample Error**                                             | **Resolutions**                                              |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
