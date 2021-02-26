@@ -48,7 +48,7 @@ The following is an example of standard debug output from PuTTY looks like the f
 
    `2016-01-07 12:23:57    Looking up host "192.168.1.60"`
 
-2. The client proceeds to make a TCP connection to the host: 
+2. The client proceeds to make a TCP connection to the host:
 
    `2016-01-07 12:23:57    Connecting to 192.168.1.60 port 22`
 

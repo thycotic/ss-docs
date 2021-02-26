@@ -66,27 +66,21 @@ Some scenarios requiring CredSSP:
 
 You can alternatively configure CredSSP and the credential delegation to occur from your distributed engines by changing this setting at the site level:
 
-1. Go to **Admin \> Distributed Engines**. The Distribute Engine Configuration page appears:
+1. Go to **Admin \> Distributed Engine**. The Distribute Engine Configuration page appears:
 
-   ![image-20200214104857088](images/image-20200214104857088.png)
+   ![image-20201204162936743](images/image-20201204162936743.png)
 
-1. Click the **Manage Sites** button. The Manage Sites page appears:
+1. Click the site panel button for the desired DE. The panel expands, displaying the DEs for that site:
 
-   ![image-20200506145400794](images/image-20200506145400794.png)
+   ![image-20201204163347290](images/image-20201204163347290.png)
 
-1. Click the **Site Name** link of the desired site. The Site View page for that site appears:
+1. Click the site name link at the top of the panel. The site's page appears:
 
-   ![image-20200506145630271](images/image-20200506145630271.png)
+   ![image-20201204164537621](images/image-20201204164537621.png)
 
-1. Click the **Edit** button. The Site Edit page appears:
+1. Scroll down to see the **Enable CredSSP Authentication for WinRM** listing in the **Advanced Site Configuration** section.
 
-   ![image-20200506145754403](images/image-20200506145754403.png)
-
-1. Click to select the **Enable CredSSP Authentication for WinRM** check box.
-
-1. Click the **Save** button.
-
-1. Log on to each of your distributed engines where CredSSP is enabled.
+1. If it is not enabled, log on to each of your distributed engines where CredSSP is enabled.
 
 1. Run Windows PowerShell as an administrator.
 

@@ -42,7 +42,7 @@ The steps below can be used to perform an upgrade for versions 7.1.000015 and hi
 
 1. Download the latest version .zip file by clicking the **Download Latest Version** button on the installer page. The file name will appear something like `Version_10_2_000000.zip`. Note where you save it.
 
-   > **Note:** You also can find the downloadable update files in our[ Secret Server Offline Update File KB here](https://thycotic.force.com/support/s/article/Secret-Server-Offline-Update-File) (KBA).
+   > **Note:** You also can find the downloadable update files [below](#Offline-Installation-Download-Files).
 
 1. Click the **Choose File** button to select the Secret Server .zip file you just downloaded.
 
@@ -62,3 +62,11 @@ The steps below can be used to perform an upgrade for versions 7.1.000015 and hi
 
 1. Click **Return to Home** to return to the dashboard.
 
+## Offline Installation Download Files
+
+If you do not have access to another installation of SS or you are upgrading from an earlier version, click one of the following links, depending on your *current* installed version:
+
+- [8.4.000003 or earlier](https://updates.thycotic.net/secretserver/getlatestversion.aspx)
+- [8.4.000004 to 9.1.000000](https://updates.thycotic.net/secretserver/getlatestversion.aspx?myv=9.1.000000)
+- [9.1.000001 to 10.9.000003](https://updates.thycotic.net/secretserver/Version_10_9_000005.zip)
+- [10.9.000005 or later](https://updates.thycotic.net/secretserver/getlatestversion.aspx?alwayslatest=true)

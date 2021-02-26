@@ -32,7 +32,7 @@ Depending on how your administrators configured SS, you can log on with either y
 
 1. In your browser, go to the URL for your organization's SS.
 
-   ![image-20200327132844211](images/image-20200327132844211.png)
+   ![image-20201204160609499](images/image-20201204160609499.png)
 
 2. On the login screen, enter your:
 
@@ -42,9 +42,7 @@ Depending on how your administrators configured SS, you can log on with either y
 
 3. Select the your domain from the **Domain** dropdown list. If you do not have an AD domain, select **Local** instead.
 
-4. (optional) Click to select the **Remember Me on This Computer** check box if you want to retain your username and domain on this computer.
-
-5. Click the **Login** button. If you have Duo two-factor authentication, this appears:
+4. Click the **Log In** button. If you have Duo two-factor authentication, this appears:
 
    ![image-20200327133313731](images/image-20200327133313731.png)
 

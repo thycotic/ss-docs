@@ -23,11 +23,11 @@ This section walks you through an initial configuration of your cloud instance. 
 
 ### System Requirements
 
-A distributed Engine server is required to communicate with SSC. Distributed engine server recommended specifications: 
+A distributed Engine server is required to communicate with SSC. Distributed engine server recommended specifications:
 
-- Windows Server 2012 or Above 
-- CPU: Dual-core 2 GHz (minimum) 
-- Memory: 4 GB of RAM (minimum) 
+- Windows Server 2012 or Above
+- CPU: 4-core 2 GHz (minimum)
+- Memory: 4 GB of RAM (minimum)
 
 ### Engine Connectivity
 
@@ -36,7 +36,7 @@ A distributed Engine server is required to communicate with SSC. Distributed eng
 - SSC’s multi-tenant front-end Web server
 - A shared service bus
 - A customer-specific service bus
-- A Content Delivery Network (CDN)  
+- A Content Delivery Network (CDN)
 
 The protocols and endpoint details are in the architecture diagram mentioned above.
 
@@ -48,11 +48,11 @@ After you sign up for a trial, you can choose your URL name and provision your i
 
 1. After you sign signed up for a SSC trial, you received an email from Thycotic Sales titled “Secret Server Cloud Trial.”  Click the **Cloud Portal** link in that email to begin your setup. The Setup Page appears in your browser.
 
-1. Choose your location in the **Cloud Environment** dropdown list. 
+1. Choose your location in the **Cloud Environment** dropdown list.
 
 1. Click the **Continue** button. The Thycotic One Portal appears.
 
-1. Create the password for your first user account with administrator credentials. This account will be assigned to the email address you entered to request the trial. 
+1. Create the password for your first user account with administrator credentials. This account will be assigned to the email address you entered to request the trial.
 
 1. After confirming the password, click the **Set Password and Login** button. The Thycotic log on page appears.
 
@@ -64,11 +64,11 @@ After you sign up for a trial, you can choose your URL name and provision your i
 
 1. Read the End User License Agreement.
 
-1. Click to select the check box to signify agreement. 
+1. Click to select the check box to signify agreement.
 
-1. From the dropdown, select **Yes** or **No** to signify your organization’s oversight of EU information. 
+1. From the dropdown, select **Yes** or **No** to signify your organization’s oversight of EU information.
 
-1. Click the **Accept** button. It may take several minutes for your new SSC to spin up. 
+1. Click the **Accept** button. It may take several minutes for your new SSC to spin up.
 
 1. When initialization is complete, click go to your SSC URL and click the **Login with Thycotic One** button. You are automatically redirected to your new SSC dashboard.
 
@@ -76,7 +76,7 @@ After you sign up for a trial, you can choose your URL name and provision your i
 
 All interaction between the SSC tenant and your on premises network uses our distributed engine service to communicate. The work tasks that distributed engine completes includes Active Directory authentication, password changing, and heartbeat. The machine where the engine is installed must be able to communicate outbound on ports 443 and 9354.
 
->  **Note:** For more information, see the [Distributed Engine Overview](https://updates.thycotic.net/links.ashx?EngineWhitePaper) (KBA). 
+>  **Note:** For more information, see the [Distributed Engine Overview](https://updates.thycotic.net/links.ashx?EngineWhitePaper) (KBA).
 
 To install the Distributed Engine:
 
@@ -84,7 +84,7 @@ To install the Distributed Engine:
 
 1. Click the **Download Engine Installer** button for either 64-bit or 32-bit.
 
-   >  **Note:** You can install distributed engine on your workstation or laptop for testing purposes, but for production installs, the distributed engine server should be installed on a server. SS uses the distributed engine to communicate with your domain, so if your machine is turned off, users cannot log on with their domain accounts, and heartbeat and remote password changing will fail. 
+   >  **Note:** You can install distributed engine on your workstation or laptop for testing purposes, but for production installs, the distributed engine server should be installed on a server. SS uses the distributed engine to communicate with your domain, so if your machine is turned off, users cannot log on with their domain accounts, and heartbeat and remote password changing will fail.
 
 1. Run setup.exe as an administrator to install the engine service. This will install into `Thycotic Software Ltd\Distributed Engine`.
 
@@ -92,7 +92,7 @@ To install the Distributed Engine:
 
 1. Click **Manage Sites**.
 
-1. Click **Manage New Engines**.  There should be a new engine available. 
+1. Click **Manage New Engines**.  There should be a new engine available.
 
 1. Click the **Assigned Site** dropdown list and select **Default**.
 
@@ -102,7 +102,7 @@ To install the Distributed Engine:
 
    1. Go to **Admin \> Distributed Engine \> Manage Sites**.
 
-   1. Click the Default site. 
+   1. Click the Default site.
 
    1. Click the **Validate Connectivity** button to test the communication between the engine and SS. It may take several minutes for the engine to register. If it does not immediately validate wait a few minutes and try again.
 
@@ -110,7 +110,7 @@ To install the Distributed Engine:
 
 Active Directory integration allows users to log in with their domain credentials. Connections to your domain are routed through the distributed engine service running in your network.
 
-1. On the dashboard, create a new Active Directory secret from the create secret widget in the upper right hand corner.  
+1. On the dashboard, create a new Active Directory secret from the create secret widget in the upper right hand corner.
 
    > **Note:** The domain account should be able to read users and groups from the domain you want to sync. For detailed information on the rights required, please see [Active Directory Rights for Synchronization Account](https://thycotic.force.com/support/s/article/Active-Directory-Rights-for-Synchronization-Account) (KB).
 
@@ -162,7 +162,7 @@ Heartbeat ensures the secrets you have stored have the correct password, and Rem
 
 1. Click the **Run Now** button in the **Remote Password Changing and Heartbeat Log** sections. This runs the heartbeat and RPC processes immediately.
 
-1. Go to the secret you created for domain synchronization in the previous section or create a new test secret to use. 
+1. Go to the secret you created for domain synchronization in the previous section or create a new test secret to use.
 
 1. A brand new secret’s **Last Heartbeat** status should be pending or processing. Once heartbeat completes you should one of these statuses:
 
@@ -174,7 +174,7 @@ Heartbeat ensures the secrets you have stored have the correct password, and Rem
 
    > **Note:** This will change the password on the target system.
 
-1. You can view the status of password changes and heartbeats in the log at **Admin \> Remote Password Changing.** 
+1. You can view the status of password changes and heartbeats in the log at **Admin \> Remote Password Changing.**
 
 ## Next Steps
 

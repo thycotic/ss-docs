@@ -4,6 +4,8 @@
 
 # Secret Server and Secret Server Cloud .NET Framework 4.8 Mandatory Upgrade
 
+>**Important:** This is a major part of the 10.9.000005/33 step upgrade. Please see [Upgrading to 10.9.000005/33](../upgrading-secret-server-10-9-000005/index.md).
+
 ## Introduction
 
 This topic explains the steps to prepare your environment for the December 2020 upgrade to Secret Server (SS) and Secret Server Cloud (SSC). These changes must be made before the December release is deployed. Secret Server Online is not affected by these changes.
@@ -145,15 +147,11 @@ To identify which servers in your environment are running Distributed Engines an
 
 1. In SS, go to **Admin > Distributed Engine**. The Distributed Engine Configuration page appears:
 
-    ![image-20201015135820974](images/image-20201015135820974.png)
+    ![image-20201204162936743](images/image-20201204162936743.png)
 
-1. Click the **Manage Sites** button. The Manage Sites page appears:
+1. Click the site panel button for the desired DE. The panel expands, displaying the DEs for that site:
 
-    ![image-20201015140958470](images/image-20201015140958470.png) 
-
-1. Click the name of the site you want to inspect in the **Site Name** column. The Site View page for that site appears:
-
-    ![image-20201015141855328](images/image-20201015141855328.png)
+    ![image-20201204163347290](images/image-20201204163347290.png)
 
 1. Note the servers in your environment that currently have distributed engines installed. These are the machines where you need to install the .NET 4.8 runtime.
 
@@ -175,9 +173,9 @@ The following components of SS and SSC are not affected by this change:
 
 - You can run the following command at a Windows PowerShell prompt to view currently installed .NET Framework version number:
   `(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").version`
-  
+ 
 - SS on-premises (not SSC)  displays the .NET framework version on the Admin \> Diagnostics page.  The version displayed is for the Web server being accessed. It does not include information about the .NET Framework version installed on any other server.
-  
+ 
   > **Important:** The version displayed on the Diagnostics page incorrectly identifies .NET Framework 4.8 as version 4.5.1 followed by a release number, such as 4.5.1.528040. If the release number is 528040 or higher, the framework version number is 4.8. If the release number is lower than 528040 or the release number is not displayed at all, the framework version is lower than 4.8 and an the mandatory update is required.
 
 ## Installing .NET Framework 4.8

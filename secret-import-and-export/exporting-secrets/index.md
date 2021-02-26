@@ -16,7 +16,7 @@ To export a secret, either CSV or XML:
 
    ![image-20200916134748114](images/image-20200916134748114.png)
 
-1. Click the folder icon to choose a folder to export. By default, all secrets are exported if a folder is not selected. 
+1. Click the folder icon to choose a folder to export. By default, all secrets are exported if a folder is not selected.
 
 1. Type your password in the **Password** text box. The administrative password must be entered, as it is a security measure to verify the permission of the user performing the export.
 

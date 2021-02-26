@@ -144,12 +144,12 @@ EP policy *targets* are SS folders, secret policies, or user groups that are the
 
 > **Important:** Tasks are powerful and can potentially do a lot of damage, so we highly recommend testing EPs in a safe environment before using them on production secrets.
 
-EP *tasks* are actions, which are triggered in an EP, assuming any filtering conditions are met. Tasks can edit secrets, move secrets, change permissions, send  notifications, and more. 
+EP *tasks* are actions, which are triggered in an EP, assuming any filtering conditions are met. Tasks can edit secrets, move secrets, change permissions, send  notifications, and more.
 
 Tasks run in order of their appearance on the Task tab of the Event Pipeline details page. To change the task running order, hover the mouse pointer over the one you want to move, and use  the anchor on the left of its card to drag the task to the order you want it to run. If a task fails, the follow-on tasks will not run.
 
 > **Note:** EP targets are *not* the receivers of task action. Those receivers are usually components of SS. The term *target* is instead used for the *subject* of an EP policy—the policy targets the secret in the policy or folder to trigger the EPs to process.
->
+
 > **Note:** To reference the additional secrets in the script's Args field for the update secret with a script task or run script, use `$[ADD:1]` before the token. For example:  `$[ADD:1]$USERNAME` to reference additional secret one and `$[ADD:2]$USERNAME` to reference additional secret two.)
 
 #### Secret Tasks
@@ -863,15 +863,12 @@ Fortunately, SS detects these loops and automatically deactivates the involved E
 
 **Configuration Advanced Settings**
 
-There are a few new Advanced Setting that can be used with EP polices.
+There are a few new Advanced Setting that can be used with EP polices:
 
 - **Event Pipeline Activity Log entries removed after (days)**: The EP activity log entries stay in the log for this many days. Default value: 90.
-
 - **Event Pipelines: Allow Confidential Secret Fields to be used in Scripts**: Allows confidential secret fields to be used in EP script, such as $password. Default value: False.
-
 - **Event Pipelines Infinite Loop Time (Minutes)**: If an EP executes the number of times specified in the infinite loop  threshold during the Infinite Loop Time period, it is marked as an infinite loop. Default Value: 5 (on premises), 20 (cloud).
-
 - **Event Pipelines Infinite Loop Threshold:** Number of times that an EP can execute within the infinite loop time on an individual item before it is considered to be an infinite loop. Default Value: 5.
-
 - **Event Pipelines Log Skipped Policies**: If true, the the pipeline activity log will log filtered policies runs. Default value: False.
 - **Event Pipelines Maximum Script Run Time (Minutes)**: Scripts ran by EP tasks are stopped after this many minutes. Default Value: 5 minutes.
+- **Heartbeat: Include UnableToConnect as Heartbeat Failure Event**: Adds the ability to trigger EPs on heartbeat UnableToConnect status. When toggled to true, this setting allows the user to include UnableToConnect as part of the heartbeat failure EPs. It defaults to false.

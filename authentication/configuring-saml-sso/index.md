@@ -8,7 +8,7 @@
 
 > **Note:** Secret Server does not support using SAML when Integrated Windows Authentication (IWA) is enabled.
 
-> **Note:** This topic applies to Secret Server 10.5 and later. For earlier versions, please see [Configuring SAML in Secret Server](https://thycotic.force.com/support/s/article/Configuring-SAML-in-Secret-Server) (KBA).
+> **Note:** This topic applies to Secret Server 10.5 and later. For earlier versions, please see [Configuring SAML in Secret Server](https://docs.thycotic.com/ss/10.8.0/authentication/configuring-saml-sso/index.md) (KBA).
 
 ## SAML Overview
 

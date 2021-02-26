@@ -8,11 +8,11 @@
 
 ## Secret Server and Privilege Manager Integration
 
-The benefits of Privilege Manager (PM) integration with Secret Server (SS) include: 
+The benefits of Privilege Manager (PM) integration with Secret Server (SS) include:
 
-- SS can be the authentication source for PM. This: 
+- SS can be the authentication source for PM. This:
 
-  - Adds SS MFA login options to PM log ons. 
+  - Adds SS MFA login options to PM log ons.
 
   - Gives one place for role assignments for both products.
 
@@ -22,11 +22,11 @@ When you use SS as the authentication source for PM, role permissions assigned i
 
 > **Note:** Without SS integration, the authentication sources for PM can be NTLM for the Web server or Azure AD.
 
-When using SS as a storage container for PM credentials: 
+When using SS as a storage container for PM credentials:
 
-- PM creates secrets for each local credential managed by PM. 
+- PM creates secrets for each local credential managed by PM.
 
-- PM creates secrets for each configuration credential stored in PM. This includes the credentials PM uses for foreign system integration, such as AD sync and ServiceNow. 
+- PM creates secrets for each configuration credential stored in PM. This includes the credentials PM uses for foreign system integration, such as AD sync and ServiceNow.
 
 - PM pulls any changes from secrets. PM only stores the credentials in SS to use SS workflow options and for users to view them.
 
@@ -36,17 +36,17 @@ This integration is supported when the two applications are installed on the sam
 
 ### Overview
 
-- Minimum-cost configuration with no shared storage requirement. 
+- Minimum-cost configuration with no shared storage requirement.
 
-- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster). 
+- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster).
 
-- Single-site design with no native DR capacity. DR can be provided by VM replication if subnets are spanning locations. Otherwise Re-IP + DNS changes may be necessary. 
+- Single-site design with no native DR capacity. DR can be provided by VM replication if subnets are spanning locations. Otherwise Re-IP + DNS changes may be necessary.
 
-- PM is installed on separate Web servers. 
+- PM is installed on separate Web servers.
 
-- PM can integrate with SS for authentication and credential storage. 
+- PM can integrate with SS for authentication and credential storage.
 
-- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database. 
+- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database.
 
   > **Note:** Due to SQL basic availability groups with the Standard Edition, you need to have multiple SQL instances and a separate AlwaysOn availability group configuration.
 
@@ -71,17 +71,17 @@ This integration is supported when the two applications are installed on the sam
 
 ### Overview
 
-- Minimum-cost HA configuration with no shared storage requirement. 
+- Minimum-cost HA configuration with no shared storage requirement.
 
-- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster). 
+- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster).
 
-- Single-site design with no native DR capacity. DR can be provided by VM replication if subnets are spanning locations. Otherwise Re-IP + DNS changes may be necessary. 
+- Single-site design with no native DR capacity. DR can be provided by VM replication if subnets are spanning locations. Otherwise Re-IP + DNS changes may be necessary.
 
-- PM is installed on separate Web servers. 
+- PM is installed on separate Web servers.
 
-- PM can integrate with SS for authentication and credential storage. 
+- PM can integrate with SS for authentication and credential storage.
 
-- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database. 
+- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database.
 
   > **Note:** Due to SQL basic availability groups with the Standard Edition, you need to have multiple SQL instances and a separate AlwaysOn availability group configuration.
 
@@ -108,19 +108,19 @@ This integration is supported when the two applications are installed on the sam
 
 ### Overview
 
-- Minimum-cost HA configuration with no shared storage requirement. 
+- Minimum-cost HA configuration with no shared storage requirement.
 
-- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster). 
+- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster).
 
-- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database. 
+- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database.
 
 - DR site acts as a temporary site only with no long-term use. Services in DR site being down can incur downtime.
 
-- PM is installed on separate Web servers. 
+- PM is installed on separate Web servers.
 
-- PM can integrate with SS for authentication and credential storage. 
+- PM can integrate with SS for authentication and credential storage.
 
-- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database. 
+- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database.
 
   > **Note:** Due to SQL basic availability groups with the Standard Edition, you need to have multiple SQL instances and a separate AlwaysOn availability group configuration.
 
@@ -142,25 +142,25 @@ This integration is supported when the two applications are installed on the sam
 
 ![image-20201001135416510](images/image-20201001135416510.png)
 
-### 
+###
 
 ## Multiple Site with Manual Failover and Separate RabbitMQ
 
 ### Overview
 
-- Minimum-cost HA configuration with no shared storage requirement. 
+- Minimum-cost HA configuration with no shared storage requirement.
 
-- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster). 
+- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster).
 
-- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database. 
+- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database.
 
 - DR site acts as a temporary site only with no long-term use. Services in DR site being down can incur downtime.
 
-- PM is installed on separate Web servers. 
+- PM is installed on separate Web servers.
 
-- PM can integrate with SS for authentication and credential storage. 
+- PM can integrate with SS for authentication and credential storage.
 
-- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database. 
+- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database.
 
   > **Note:** Due to SQL basic availability groups with the Standard Edition, you need to have multiple SQL instances and a separate AlwaysOn availability group configuration.
 
@@ -186,19 +186,19 @@ This integration is supported when the two applications are installed on the sam
 
 ###  Overview
 
-- Improved HA configuration with no shared storage requirement. 
+- Improved HA configuration with no shared storage requirement.
 
-- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster). 
+- RabbitMQ (for SS) is installed on the SS Web servers (typically in a cluster).
 
-- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database. 
+- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database.
 
 - DR site acts as a temporary site only with no long-term use. Services in DR site being down can incur downtime.
 
-- PM is installed on separate Web servers. 
+- PM is installed on separate Web servers.
 
-- PM can integrate with SS for authentication and credential storage. 
+- PM can integrate with SS for authentication and credential storage.
 
-- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database. 
+- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database.
 
   > **Note:** Due to SQL basic availability groups with the Standard Edition, you need to have multiple SQL instances and a separate AlwaysOn availability group configuration.
 
@@ -225,19 +225,19 @@ This integration is supported when the two applications are installed on the sam
 
 ###  Overview
 
-- Improved HA configuration with no shared storage requirement. 
+- Improved HA configuration with no shared storage requirement.
 
-- RabbitMQ (for SS) is installed on dedicated servers (typically in a cluster). 
+- RabbitMQ (for SS) is installed on dedicated servers (typically in a cluster).
 
-- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database. 
+- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database.
 
 - DR site acts as a temporary site only with no long-term use. Services in DR site being down can incur downtime.
 
-- PM is installed on separate Web servers. 
+- PM is installed on separate Web servers.
 
-- PM can integrate with SS for authentication and credential storage. 
+- PM can integrate with SS for authentication and credential storage.
 
-- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database. 
+- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database.
 
   > **Note:** Due to SQL basic availability groups with the Standard Edition, you need to have multiple SQL instances and a separate AlwaysOn availability group configuration.
 
@@ -253,7 +253,7 @@ This integration is supported when the two applications are installed on the sam
 
 - For SQL to stay online during single-node unplanned failures, you must configure a file-share witness for SQL quorum voting. We recommend a cloud witness.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
@@ -270,19 +270,19 @@ This integration is supported when the two applications are installed on the sam
 
 ###  Overview
 
-- Best HA configuration with no shared storage requirement. 
+- Best HA configuration with no shared storage requirement.
 
-- RabbitMQ (for SS) is installed on dedicated servers (typically in a cluster). 
+- RabbitMQ (for SS) is installed on dedicated servers (typically in a cluster).
 
-- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database. 
+- SQL AlwaysOn configurations are either synchronous or asynchronous for the SS database and asynchronous only for the PM database.
 
 - DR site acts as a temporary site only with no long-term use. Services in DR site being down can incur downtime.
 
-- PM is installed on separate Web servers. 
+- PM is installed on separate Web servers.
 
-- PM can integrate with SS for authentication and credential storage. 
+- PM can integrate with SS for authentication and credential storage.
 
-- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database. 
+- PM can reside on the same database servers as SS or on separate ones, but SS and PM should not share the same database.
 
   > **Note:** Due to SQL basic availability groups with the Standard Edition, you need to have multiple SQL instances and a separate AlwaysOn availability group configuration.
 
@@ -298,7 +298,7 @@ This integration is supported when the two applications are installed on the sam
 
 - For SQL to stay online during single-node unplanned failures, you must configure a file-share witness for SQL quorum voting. We recommend a cloud witness.
 
-- [Distributed Engine Ports](https://thycotic.force.com/support/s/article/Ports-used-by-Secret-Server).
+- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
 
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
