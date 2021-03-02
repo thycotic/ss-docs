@@ -1,3 +1,7 @@
+[title]: # (Importing and Exporting Secret Server Settings)
+[tags]: # (Administration, settings, importing, exporting, JSON)
+[priority]: # (1000)
+
 # Importing and Exporting Secret Server Settings
 
 ## Overview
@@ -53,37 +57,40 @@ Additional licenses may be required to import or export some settings.
 
 #### Advanced Auditing License 
 
-license required
+This license is required for these settings in the Application Settings category:
 
-- ApplicationSettings
-  - SyslogCefServer
-  - SyslogCefPort
-  - SyslogCefProtocol
-  - SyslogCefTimeZone
-  - SyslogCefLogSite
+- SyslogCefLogSite
+- SyslogCefPort
+- SyslogCefProtocol
+- SyslogCefServer
+- SyslogCefTimeZone
 
 #### Enterprise Edition
 
-> Note: this settings are also available with the Professional Edition and Approval Workflow Add-on licenses.
+> **Note:** this settings are also available with the Professional Edition and Approval Workflow Add-on licenses.
 
-- LauncherSettings
-  - CheckInSecretOnLastLauncherClose
-  - CloseLauncherOnCheckInSecret
-- PermissionOptions
-  - ForceSecretApproval
-  - EnableApprovalFromEmail
-- TicketSystems
+The Enterprise Edition license is required for these settings in the Launcher Settings category:
+
+- CheckInSecretOnLastLauncherClose
+- CloseLauncherOnCheckInSecret
+
+It is required for these settings in the Permission Options category:
+
+- EnableApprovalFromEmail
+- ForceSecretApproval
+
+It is required for the TicketSystems category.
 
 #### Pro Edition
+
+The Pro Edition license is required for these setting categories:
 
 - SAML
 - Session Recording
 
 #### Platinum Edition 
 
-(or Pro Edition and Unix SUPM) license required
-
-- SSH Commands
+The Platinum Edition license (or Pro Edition and Unix SUPM licenses) is required for the SSH Commands setting category.
 
 ## Procedures
 
@@ -99,7 +106,7 @@ To export SS settings:
 
    ![image-20210225142002960](images/image-20210225142002960.png)
 
-1. Click the Export / Import menu item. The Secrets tab of the Export / Import page appears:
+1. Click the **Export / Import** menu item. The Secrets tab of the Export / Import page appears:
 
    ![image-20210225142257671](images/image-20210225142257671.png)
 
@@ -107,284 +114,302 @@ To export SS settings:
 
    ![image-20210225142447869](images/image-20210225142447869.png)
 
-1. Click the **Export** button. 
+1. Click the **Export** button. The Settings Export page appears:
 
-1. Select the Setting Categories to export
+   ![image-20210301111827110](images/image-20210301111827110.png)
+
+1. Click to select the check boxes for the settings categories you wish to include. Clicking the **Configuration** check box selects all available categories.
    
-   1. Selecting Configuration will select all available categories
+   > **Note:** See the [Setting Category Reference](#setting-category-reference) section for details on the settings in each category.
    
-1. Click Export Secret Server Settings
+1. Click the **Export** Settings button. A Confirm Export popup appears:
 
-1. Enter your password
+   ![image-20210301112143188](images/image-20210301112143188.png)
 
-1. Click Export
-   
-   1. This will export a JSON file
+1. Click the **Passport** selection button to choose **Local Login** or **DoubleLock** if that applies.
 
-Export Secret Server Settings screen shots
+1. Type your password in the **Password** text box.
 
+1. Click the **Export** button. The JSON file appears in your browser's downloads:
 
+   ![image-20210301112708073](images/image-20210301112708073.png)
 
-
-
-
+> **Note:** This example is for the Vivaldi Chrome browser—yours will likely look different.
 
 
 
+### Importing Settings
 
+To Import SS settings:
 
+1. Go to **Admin \> All**.  The Admin page appears:
 
+   ![image-20210225141709284](images/image-20210225141709284.png)
 
+1. Click the **Setup & System Maintenance** button. A menu appears alongside the button:
 
+   ![image-20210225142002960](images/image-20210225142002960.png)
 
+1. Click the **Export / Import** menu item. The Secrets tab of the Export / Import page appears:
 
+   ![image-20210225142257671](images/image-20210225142257671.png)
 
-## Import
+1. Click the **Secret Server Settings** tab:
 
-This feature allows you to import settings from an existing Secret Server environment to aid in gaining congruently configured environments.
+   ![image-20210225142447869](images/image-20210225142447869.png)
 
-To Import Secret Server Settings:
+1. Click the **Import** button. The Settings Import page appears:
 
-1. Go to Admin menu, then select Export / Import (under Setup & System Maintenance)
-1. Click Import button
-1. In General, click Change to select a JSON file to import
-1. Select the Setting Categories to import
-   1. Selecting Configuration will select all available categories
-   1. Validations
-      1. Some categories will be unavailable to import, so the checkbox will be disabled and a message will show. Examples:
-         1. A Setting Category is not in the import JSON file
-         1. Do not have permissions to update
-         1. Do not have a license
-1. Click Export Secret Server Settings
-1. Enter your password
-1. Click Export
+   ![image-20210301114939294](images/image-20210301114939294.png)
 
-Import Secret Server Settings screen shots
+1. Click the **Change** link, and navigate to and select the JSON file you want to import. The name of the file you chose appears above the Change link:
 
+   ![image-20210301131012043](images/image-20210301131012043.png)
 
+1. Click to select the check boxes for the settings categories you wish to include. Clicking the **Configuration** check box selects all available categories.
 
+   > **Note:** Some settings may not allow you to select them, based on your permissions and licenses. Another possibility is the category was not included in the original export. Hover the mouse pointer over any of these settings to view a hint of what is likely causing it.
+   > **Note:** See the [Setting Category Reference](#setting-category-reference) section for details on the settings in each category.
 
+1. Click the **Import Settings** button. A Confirm Import popup appears:
 
+   ![image-20210301131759863](images/image-20210301131759863.png)
 
+1. Click the **Passport** selection button to choose **Local Login** or **DoubleLock** if that applies.
 
+1. Type your password in the **Password** text box.
 
+1. Click the **Import** button. An Import Summary popup appears:
 
+   ![image-20210301132056341](images/image-20210301132056341.png)
 
+1. Click the **OK** button. The importation appears in the log that you saw earlier on the Export / Import page.
 
+## Setting Category Reference
 
-
-
-
-## Setting Categories
-
-
+This section details what setting are contained in the following settings categories:
 
 Note: Some settings are unavailable in certain environments or if requiring a license or permission. 
 
 ### Application Settings
 
- - These settings correspond to the Application Settings section on the Configuration General page.
+These settings correspond to the Application Settings section on the Configuration General page.
 
-Settings unavailable in an on premise environment:
+This setting is unavailable in an on-premise environment:
 
 - DisplayDowntimeMessageToAdminsOnly 
 
-Settings unavailable in a cloud environment:
+These settings are unavailable in a cloud environment:
 
 - AllowSoftwareUpdateChecks
-- EnableKeepAliveThread 
-- WriteSyslogToEventLog 	
-- TmsRootUrl 	
 - CustomURL
+- EnableKeepAliveThread     
+- TmsRootUrl         
+- WriteSyslogToEventLog      
 
-Settings unavailable in an IBM environment:
+This setting is unavailable in an IBM environment:
 
 - AllowSendTelemetry
 
-### Launcher Settings (Runtime)
+### Advanced Settings 
 
- - These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
+These settings correspond to the Advanced Settings section on the Configuration Advanced page.Launcher Settings (Runtime)
 
-Launcher Deployment Type can be one of the following:
+These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
 
-- 0 - Click Once
-- 1 - Protocol Handler
+Launcher Deployment Type setting can be one of the following:
 
-Settings unavailable in a cloud environment:
+- 0: Click Once
+- 1: Protocol Handler
+
+This setting is unavailable in a cloud environment:
 
 - LauncherDeploymentType
 
-### Protocol Handler Settings (Install-Time) 
+### Email
 
-- These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
+These settings correspond to the Email tab on the Configuration Email page.
 
-### Permission Options
+These settings are unavailable in a cloud environment:
 
- - These settings correspond to the Permission Options section on the Configuration General page.
+- SmtpDomain
+- SmtpPassword
+- SmtpPort
+- SmtpServer
+- SmtpUseCredentials
+- SmtpUseImplicitSSL
+- SmtpUserName
+- SmtpUseSSL
 
-Default Secret Permissions can be one of the following:
+### Folder Settings
 
-- 0 - Secrets inherit permissions from folder
-- 1 - New Secrets copy permissions from folder
-- 2 - Only creator has permissions to new Secrets
+These settings correspond to the Folders tab on the Configuration Folders page.
 
-**User Experience** - These settings correspond to the User Experience section on the Configuration General page.
+### Licenses
 
-- Server Time Zones can be found in the server registry: Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
-- Default Date Formats can be found in the tbDateOptions table.
-- Default Time Formats can be found in the tbTimeOptions table.
-- Default New User Roles can be found in the tbRoles table
-- Application Language 
+These settings correspond to the licenses listed on the Licenses page.
 
-**User Interface** - These settings correspond to the User Interface section on the Configuration General page.
+### Local User Passwords
 
-Settings unavailable in an IBM environment:
+These settings correspond to the Local User Passwords tab on the Configuration Local User Passwords page.
 
-- AllowUserToSelectTheme
-- CustomLogoFullSize
-- CustomLogoCollapsed
+### Login
 
-**Advanced Settings** - These settings correspond to the Advanced Settings section on the Configuration Advanced page.
+These settings correspond to the Login tab on the Configuration Login page.
 
-**Login** - These settings correspond to the Login tab on the Configuration Login page.
-
-Settings unavailable in a cloud environment:
+These settings unavailable in a cloud environment:
 
 - CacheAdCredentials
 - TwoFactor.Radius.ClientPortRange
 
-**Folder Settings** - These settings correspond to the Folders tab on the Configuration Folders page.
+### Permission Options
 
-**Local User Passwords** - These settings correspond to the Local User Passwords tab on the Configuration Local User Passwords page.
+These settings correspond to the Permission Options section on the Configuration General page.
 
-**Security** - These settings correspond to the Security tab on the Configuration Security page.
+The Default Secret Permissions setting can be one of the following:
 
-Settings unavailable in a cloud environment:
+- 0: Secrets inherit permissions from folder
+- 1: New Secrets copy permissions from folder
+- 2: Only creator has permissions to new Secrets
 
-- ForceHttps
-- EnableHSTS
-- HSTSMaxAge
-- FipsEnabled
-- EnableDatabaseIntegrityMonitoring
-- DatabaseIntegrityMonitoringSymmetricKey
+### Protocol Handler Settings (Install-Time) 
 
-**Email** - These settings correspond to the Email tab on the Configuration Email page.
-
-Settings unavailable in a cloud environment:
-
-- SmtpServer
-- SmtpUseCredentials
-- SmtpUserName
-- SmtpPassword
-- SmtpDomain
-- SmtpUseSSL
-- SmtpPort
-- SmtpUseImplicitSSL
-
-### Ticket System 
-
-- These settings correspond to the Ticket System tab on the Configuration Ticket System page. To insert a new Ticket System, in the same instance the export file came from, the TicketSystemId must be set to 0, otherwise it will treat it as an update (see External Instance Id). Ticket System Name cannot match another already in the database.
-
-### Session Recording
-
- - These settings correspond to the Session Recording tab on the Configuration Session Record page.  Launcher must be enabled and a valid license for Session Monitoring is required to export and import this feature.
-
-Settings unavailable in a cloud environment:
-
-- EnableHardwareAcceleration
-- StoreInDatabase
-- EnableArchive
-- ArchiveLocationBySite
-- ArchivePath
-- DaysUntilArchive
-- VideoCodecId
-
-To update SSHProxyRecordVideo or SSHProxyRecordKeyStrokes - SSH Proxy must be enabled
-
-To update RDPProxyRecordVideo or RDPProxyRecordKeyStrokes - RDP Proxy must be enabled
+These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
 
 ### SAML 
 
-- These settings correspond to the SAML tab on the Configuration SAML page. To insert a new Identity Provider, in the same instance the export file came from, the IdentityProviderId must be set to 0, otherwise it will treat it as an update (see External Instance Id). The Identity Provider Name cannot match another already in the database.
+These settings correspond to the SAML tab on the Configuration SAML page. To insert a new identity provider, in the same instance the export file came from, the IdentityProviderId setting must be set to 0. Otherwise, it will treat it as an update (see External Instance Id). The identity provider name cannot match another already in the database.
 
-### Licenses
+### Security
 
- - These settings correspond to the Licenses listed on the Licenses page.
+These settings correspond to the Security tab on the Configuration Security page.
+
+These settings are unavailable in a cloud environment:
+
+- DatabaseIntegrityMonitoringSymmetricKey
+- EnableDatabaseIntegrityMonitoring
+- EnableHSTS
+- FipsEnabled
+- ForceHttps
+- HSTSMaxAge
+
+### Session Recording
+
+These settings correspond to the Session Recording tab on the Configuration Session Record page.  The launcher must be enabled, and a valid license for Session Monitoring is required to export and import this feature.
+
+These settings are unavailable in a cloud environment:
+
+- ArchiveLocationBySite
+- ArchivePath
+- DaysUntilArchive
+- EnableArchive
+- EnableHardwareAcceleration
+- StoreInDatabase
+- VideoCodecId
+
+To update SSHProxyRecordVideo or SSHProxyRecordKeyStrokes, SSH Proxy must be enabled.
+
+To update RDPProxyRecordVideo or RDPProxyRecordKeyStrokes, RDP Proxy must be enabled.
 
 ### SSH Commands
 
- - These settings correspond to the SSH Command Restrictions, the SSH Commands, Allowed Command Menus and Blocked Command Lists.
+These settings correspond to the SSH command restrictions, the SSH commands, allowed command menus, and blocked command lists.
 
-## Export JSON File
+### Ticket System 
 
-### External Instance Id
+These settings correspond to the Ticket System tab on the Configuration Ticket System page. To insert a new ticket system in the same instance the export file came from, the TicketSystemId must be set to 0. Otherwise, it will treat it as an update (see External Instance Id). The ticket system name cannot match another already in the database.
 
-This corresponds to the instance the settings were exported from. If you change this id, then it will assume the export came from another database and will insert new records for the Ticket System or SAML (Identity Providers) categories. To add a new record in the same instance, set the id to 0 and it will be treated as a new item. (ex. TicketSystemId or IdentityProviderId)
+### User Experience
+
+These settings correspond to the User Experience section on the Configuration General page.
+
+- Application Language 
+
+- Default Date Formats can be found in the tbDateOptions table.
+- Default Time Formats can be found in the tbTimeOptions table.
+- Default New User Roles can be found in the tbRoles table
+- Server Time Zones can be found in the server registry: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`
+
+### User Interface 
+
+These settings correspond to the User Interface section on the Configuration General page.
+
+These settings are unavailable in an IBM environment:
+
+- AllowUserToSelectTheme
+- CustomLogoCollapsed
+- CustomLogoFullSize
+
+## JSON Export File
+
+In addition to the setting categories, here are a few components of the JSON export file that you should be aware of.
+
+### External Instance ID
+
+`"externalInstanceId": "95931fb9-02b0-47a5-a59d-69d6543a192d",`
+
+The external instance ID is an identifier for the SS instance the settings were exported from. If you change this ID, SS will assume the export came from another database and will insert new records for the ticket system (TicketSystemId)  or SAML (Identity Providers—IdentityProviderId) categories. To add a new record in the same instance, set the ID to 0 and it will be treated as a new item.
 
 ### Configuration Version
 
-This is the configuration version the settings were exported from. In there future when other settings are added, it will allow Secret Server to determine which settings are available and which are not in the database.
+` "configurationVersion": "1.0.0",`
 
-## Import JSON File
+This is the configuration version the settings were exported from. In there future when other settings are added, it will help SS determine which settings are available and which are not in the database.
 
+## JSON Import File
 
+In the UI, the exported JSON file can be easily modified and used as the import JSON file. For the API, the exported JSON must be added to the data object. Then manually update the desired filter category load to true to import.
 
-In the UI, the exported JSON file can be easily modified and used as the import JSON file.  But for the API, the exported JSON will need to be added in the Data object. Then manually update the desired filter category load to true to import.
+## API Filter
 
-### API Filter
+***Need more here. I didn't see these in the JSON file. How are they used?*** 
 
 - **Load All** - If set to true, this will update all available Secret Server Settings. 
 - **General Load All** - If set to true, this will update all available General Settings (Application Settings, Launcher Settings, Protocol Handler Settings, Permission Options, User Experience, and User Interface)
 
-### Audits
+## Audits
 
+An audit is recorded for each setting category that was exported or imported by user. The individual setting audits can be viewed on the Configuration Audit page.
 
+**Figure:**  Audits on the Export / Import page:
 
-An audit will be recorded for each setting category that was exported or imported by user. The individual setting audits can be viewed on the Configuration Audit page.
+![image-20210302100746575](images/image-20210302100746575.png)
 
- Audits
+If there are errors, a system log entry will also be saved with details:
 
-![img](blob:https://thycotic.atlassian.net/f3e95cfa-59c3-4f24-bc31-e2882cd54963#media-blob-url=true&id=9bbe1c0a-517e-4d58-b71f-933999293584&collection=contentId-1973290633&contextId=1973290633&mimeType=image%2Fpng&name=image-20210218-155756.png&size=57212&width=1255&height=421)
+- Email
+- Login
+- Security
+- Ticket System
+- SAML - Completed with errors
 
-**Audit with errors:**
+## Events
 
+When SS settings are exported or imported, an SECRETSERVERSETTINGS event is  logged.
 
+## Logs
 
-If there are errors, a log will also be saved with more details.
+When Secret Server settings are exported or imported or validation errors occur, a new log entry will appear in the `SS.log` file.
 
-- Security, Login, Email, Ticket System, SAML - Completed with errors. Please check the System Log for details.
+### System Logs or CEF Example
 
-### Events
+***Not clear on how much, if any, the following are "insert here" variables. For instance, should USERNAME be substituted with a username? Does "(IsDefault)" literally appear in the log?***
 
+`USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)`
 
+### SS.log Examples
 
-When Secret Server Settings are exported or imported, an event will be logged.
-
-- **SECRETSERVERSETTINGS** - Event Type for the Secret Server Settings.
-
-### Logs
-
-
-
-When Secret Server Settings are exported or imported, or any validation errors occur, a new log will show in the SS.log file.
-
-### System logs / CEF examples:
-
-- USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)
-
-### SS.log examples:
-
-- ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)
-- ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import some settings due to the following reason(s): Security=Access Denied;Login=Insufficient permissions to edit Radius settings. (Radius),Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect),Insufficient permissions to edit Duo settings. (Duo);TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Access Denied
+- `ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)`
+- `ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import some settings due to the following reason(s): Security=Access Denied;Login=Insufficient permissions to edit Radius settings. (Radius),Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect),Insufficient permissions to edit Duo settings. (Duo);TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Access Denied`
 
 ## Errors and Resolutions
 
 | **Sample Error**                                             | **Resolutions**                                              |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | SAML=Access Denied                                           | Need Administer Configuration SAML permission to update SAML settings. |
-| SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId) | For the SAML, the IdentityProviderId provided in the import file was not found in the database. If intending to add a new one, set this to 0. |
-| TicketSystem=Only one ticket system can be default. (IsDefault) | For TicketSystem, the IsDefault is set to true when there is already one set to true in the database. If intending to set it to true, set the other one to false. |
-| Insufficient permissions to edit Radius settings. (Radius)Insufficient permissions to edit Duo settings. (Duo) | Need Administer Configuration Two Factor permission to update Radius or Duo settings. |
-| Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect) | Need Administer OpenID Connect permission to update OpenIdConnect settings. |
+| SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId) | For SAML, the IdentityProviderId provided in the import file was not found in the database. If intending to add a new one, set this to 0. |
+| TicketSystem=Only one ticket system can be default. (IsDefault) | For TicketSystem, IsDefault is set to true when there is already one set to true in the database. If intending to set it to true, set the other one to false. |
+| Insufficient permissions to edit Radius settings. (Radius) Insufficient permissions to edit Duo settings. (Duo) | Need Administer Configuration Two Factor permission to update Radius or Duo settings. |
+| Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect) | Need Administer OpenID Connect permission to update Open ID Connect settings. |
 
  
