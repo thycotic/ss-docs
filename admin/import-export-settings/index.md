@@ -136,8 +136,6 @@ To export SS settings:
 
 > **Note:** This example is for the Vivaldi Chrome browser—yours will likely look different.
 
-
-
 ### Importing Settings
 
 To Import SS settings:
@@ -317,7 +315,7 @@ These settings correspond to the SSH command restrictions, the SSH commands, all
 
 ### Ticket System 
 
-These settings correspond to the Ticket System tab on the Configuration Ticket System page. To insert a new ticket system in the same instance the export file came from, the TicketSystemId must be set to 0. Otherwise, it will treat it as an update (see External Instance Id). The ticket system name cannot match another already in the database.
+These settings correspond to the Ticket System tab on the Configuration Ticket System page. To insert a new ticket system in the same instance the export file came from, TicketSystemId must be set to 0. Otherwise, it will treat it as an update (see External Instance Id). The ticket system name cannot match another already in the database.
 
 ### User Experience
 
@@ -360,12 +358,57 @@ This is the configuration version the settings were exported from. In there futu
 
 In the UI, the exported JSON file can be easily modified and used as the import JSON file. For the API, the exported JSON must be added to the data object. Then manually update the desired filter category load to true to import.
 
-## API Filter
+## API Calls Filter
 
-***Need more here. I didn't see these in the JSON file. How are they used?*** 
+Secret Server has settings import/export endpoints for the API to manipulate. Opening Postman and going to **secretserversettings \> export \> GET Get Secret Server Settings**, you would see:
 
-- **Load All** - If set to true, this will update all available Secret Server Settings. 
-- **General Load All** - If set to true, this will update all available General Settings (Application Settings, Launcher Settings, Protocol Handler Settings, Permission Options, User Experience, and User Interface)
+![image-20210303143554262](images/image-20210303143554262.png)
+
+Looking at the query parameters for that endpoint, we see:
+
+![image-20210303144237643](images/image-20210303144237643.png)
+
+The keys are equivalent to those on the user interface or those in the JSON file.
+
+The `loadAll` key tells SS to update all the available settings. The `general.loadAll` key tells SS to update all the General category settings (those with the `general.` prefix). These include application settings, launcher settings, protocol handler settings, permission options, user experience settings, and user interface settings.
+
+> **Note:** At this time there is no equivalent to `general.loadAll` in the user interface. To accomplish the same thing, you have to select the top six categories, which sets `general.loadAll` in the background.
+
+If you click the **Body** tab below, you can see what JSON code represents the key you chose for the export:
+
+![image-20210303152723618](images/image-20210303152723618.png)
+
+When using the POST Import Secret Server Settings command, you will see a filter object at the bottom of the code stipulating what to update:
+
+![image-20210303153548179](images/image-20210303153548179.png)
+
+For example, if you set `general.loadAll` to `true`, only the general categories are updated, assuming the objects stipulated were sent with the request. Similarly, included objects that are disallowed by the filter are ignored.
+
+To make a GET call to update a single setting:
+
+1. Import the category it belongs to. For example, if you want to update `apiSessionTimeoutUnlimited` to `true`, you would copy the entire `applicationSettings` result (the category and all of its settings):
+
+   ![image-20210303155609358](images/image-20210303155609358.png)
+
+1. For the POST Import Secret Server Settings call, remove the settings in the data section, leaving the filter section as is:
+
+   ![image-20210303160126015](images/image-20210303160126015.png)
+
+1. Paste the settings you copied earlier in its place.
+
+1. Change the `apiSessionTimeoutUnlimited` setting to `true`:
+
+   ![image-20210303161622524](images/image-20210303161622524.png)
+
+1. Scroll down to the filter section and remove the filters you do not want to update. Alternatively, you can replace all the `<boolean>` settings with `false` for the filters you do not want.
+
+1. Click the **Send** button. If all goes well, Postman will return the updated category object:
+
+   ![image-20210303162625462](images/image-20210303162625462.png)
+
+1. If something went wrong, you will see an error section at the bottom of the results:
+
+   ![image-20210303162859125](images/image-20210303162859125.png)
 
 ## Audits
 
@@ -391,20 +434,20 @@ When SS settings are exported or imported, an SECRETSERVERSETTINGS event is  log
 
 When Secret Server settings are exported or imported or validation errors occur, a new log entry will appear in the `SS.log` file.
 
+> Note: `<USERName>` and `<USERID>` are replace with your values. The items in the parentheses are the errant category settings.
+
 ### System Logs or CEF Example
 
-***Not clear on how much, if any, the following are "insert here" variables. For instance, should USERNAME be substituted with a username? Does "(IsDefault)" literally appear in the log?***
-
-`USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)`
+`<USERNAME> (<USERID>) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)`
 
 ### SS.log Examples
 
-- `ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)`
-- `ERROR Thycotic.Logging.ILogWriter - USERNAME (USERID) - Secret Server Settings Import - Failed to import some settings due to the following reason(s): Security=Access Denied;Login=Insufficient permissions to edit Radius settings. (Radius),Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect),Insufficient permissions to edit Duo settings. (Duo);TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Access Denied`
+- `ERROR Thycotic.Logging.ILogWriter - <USERNAME> (<USERID>) - Secret Server Settings Import - Failed to import SAML for the following reason(s): TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId)`
+- `ERROR Thycotic.Logging.ILogWriter - <USERNAME> (<USERID>) - Secret Server Settings Import - Failed to import some settings due to the following reason(s): Security=Access Denied;Login=Insufficient permissions to edit Radius settings. (Radius),Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect),Insufficient permissions to edit Duo settings. (Duo);TicketSystem=Only one ticket system can be default. (IsDefault);SAML=Access Denied`
 
 ## Errors and Resolutions
 
-| **Sample Error**                                             | **Resolutions**                                              |
+| **Sample Error**                                             | **Resolution**                                               |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
 | SAML=Access Denied                                           | Need Administer Configuration SAML permission to update SAML settings. |
 | SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId) | For SAML, the IdentityProviderId provided in the import file was not found in the database. If intending to add a new one, set this to 0. |
