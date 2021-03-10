@@ -1,6 +1,6 @@
-[title]: # (Importing and Exporting Secret Server Settings)
-[tags]: # (Administration, settings, importing, exporting, JSON)
-[priority]: # (1000)
+[title]: # "Importing and Exporting Secret Server Settings"
+[tags]: # "Administration, settings, importing, exporting, JSON"
+[priority]: # "1000"
 
 # Importing and Exporting Secret Server Settings
 
@@ -211,7 +211,9 @@ This setting is unavailable in an IBM environment:
 
 ### Advanced Settings 
 
-These settings correspond to the Advanced Settings section on the Configuration Advanced page.Launcher Settings (Runtime)
+These settings correspond to the Advanced Settings section on the Configuration Advanced page.
+
+### Launcher Settings (Runtime)
 
 These settings correspond to the Launcher Settings (Runtime) section on the Configuration General page.
 
@@ -402,6 +404,18 @@ To make a GET call to update a single setting:
 
 1. Scroll down to the filter section and remove the filters you do not want to update. Alternatively, you can replace all the `<boolean>` settings with `false` for the filters you do not want.
 
+1. If you want to set a nullable field back to null, set the dirty flag and the value to null. For example:
+
+   ```json
+   "siteId": {
+   
+     "dirty": "true",
+   
+     "value": null
+   
+   }
+   ```
+
 1. Click the **Send** button. If all goes well, Postman will return the updated category object:
 
    ![image-20210303162625462](images/image-20210303162625462.png)
@@ -434,7 +448,7 @@ When SS settings are exported or imported, an SECRETSERVERSETTINGS event is  log
 
 When Secret Server settings are exported or imported or validation errors occur, a new log entry will appear in the `SS.log` file.
 
-> Note: `<USERName>` and `<USERID>` are replace with your values. The items in the parentheses are the errant category settings.
+> **Note:** `<USERName>` and `<USERID>` are replaced with your values. The items in the parentheses are the errant category settings.
 
 ### System Logs or CEF Example
 

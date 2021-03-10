@@ -1,6 +1,6 @@
-[title]: # (Secret Workflow Templates)
-[tags]: # (Workflow)
-[priority]: # (1000)
+[title]: # "Secret Workflow Templates"
+[tags]: # "Workflow"
+[priority]: # "1000"
 
 # Secret Workflow Templates
 
@@ -37,3 +37,22 @@ The following diagram is the entire process summarized:
 ## Workflow Versus Basic Access Requests
 
 In general, "simple access requests," the only type available to older versions of SS, are the same as a one-step stepped approval. The major exception is that with stepped requests, once a workflow access request has been approved, denied, or canceled, its status cannot be changed. In contrast, simple, non-workflow, access requests retain the original behavior of allowing a request to be approved after it has been denied or denied after it has been approved.
+
+## Workflow Step Timeout
+
+**Release notes**
+
+You can configure workflow steps to time out after a specified number of minutes. Workflow administrators can define approval workflows that notify a different set of users if a step in the workflow is not responded to within a specified time period. 
+
+Applications include:
+
+- Improving responsiveness to access requests on time-sensitive secrets by moving the request to another step if not responded to quickly.  
+- Overflowing to a different region so a secret can be accessed by users in different time zones with different sets of support personnel responding.
+
+Timed out access requests automatically advance to the next step in the workflow. The last step of the workflow cannot time out and must be approved to access the secret.
+
+You can apply multiple timeouts to create workflows that can cascade through multiple steps if the previous steps do not receive the required approvals. 
+
+Denying or canceling a request in any step stops the workflow and stops any time out to the next step.
+
+> **Important:** Once a workflow step times out, only the reviewers in the next step can approve the request. If you want reviewers from the initial step to respond after the initial request has timed out, add them to the reviewers of the next step.

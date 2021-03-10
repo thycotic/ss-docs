@@ -1,6 +1,6 @@
-[title]: # (Enabling Debug Mode in Distributed Engine Log Files)
-[tags]: # (Events, Alerts, debug mode, distributed engine, distributed engine logs)
-[priority]: # (1000)
+[title]: # "Enabling Debug Mode in Distributed Engine Log Files"
+[tags]: # "Events, Alerts, debug mode, distributed engine, distributed engine logs"
+[priority]: # "1000"
 
 # Enabling Debug Mode in Distributed Engine Log Files
 
@@ -22,9 +22,7 @@ How to enable DEBUG logging mode:
 
 1. Run a find (**\<Control\>+ \<F\>**) command.
 
-1. Type in `log4net` and press **\<Enter\>** to locate that section, which is usually at the top:
-
-   ![image-20201102142233090](images/image-20201102142233090.png)
+1. Type in `log4net` and press **\<Enter\>** to locate that section, which is usually at the top.
 
 1. Locate the two lines that contain "INFO"
 
