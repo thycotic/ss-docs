@@ -14,34 +14,33 @@ The new IP addresses and dates when the changes will occur are listed below for 
 
 For all customers using a domain ending in secretservercloud.com.au:
 
-- New IP addresses: 20.37.45.249, 20.37.51.128
+- New IP addresses: 20.37.251.37, 20.37.251.120
 - Change dates: 3 April 2021 or 10 April 2021
 
 ## Canada
 
 For all customers using a domain secretservercloud.ca:
 
-- New IP addresses: 52.228.122.166, 20.151.26.35
+- New IP addresses: 52.228.117.246, 52.228.113.119
 - Change dates: 27 March 2021 or 3 April 2021
 
 ## European Union
 
 For all customers using a domain ending in secretservercloud.eu:
 
-- New IP addresses: 20.52.210.231, 20.52.205.0
+- New IP addresses: 20.79.64.213, 20.79.65.3
 - Change dates: 24 April 2021 or 8 May 2021
 
 ## Southeast Asia
 
 For all customers using a domain ending in secretservercloud.com.sg:
 
-- New IP addresses: 20.197.116.166, 20.197.116.94
+- New IP addresses: 20.195.97.220, 20.195.98.154
 - Change dates: 27 March 2021 or 3 April 2021
 
 ## United States
 
 For all customers using a domain ending in secretservercloud.com:
 
-- New IP addresses: 40.76.153.156, 40.76.153.148
+- New IP addresses: 52.224.253.7, 52.224.253.4
 - Change dates: 17 April 2021 or 1 May 2021
-
