@@ -1,6 +1,6 @@
-[title]: # "SSC IP Change for March to May 2021"
-[tags]: # "Upgrade, IP change, secret server cloud"
-[priority]: # "1000"
+[title]: # (SSC IP Change for March to May 2021)
+[tags]: # (Upgrade, IP change, secret server cloud)
+[priority]: # (1000)
 
 # Secret Server Cloud IP Address Change for March to May 2021
 
@@ -39,7 +39,7 @@ If you use IP filtering, the following domains are affected:
 | Canada     | secretservercloud.ca     |
 | Europe     | secretservercloud.eu     |
 | Singapore  | secretservercloud.com.sg |
-
+[]()
 ### How Do I Verify My Domain Is Affected?
 
 Review the table above to see if any of those domains appear in your SSC URL. For example, if your domain were `https://acmewidgets.secretservercloud.eu` you would be affected.
@@ -97,12 +97,12 @@ Contact Thycotic technical support at any of the phone numbers below or by openi
 
 | Domain Name           | New Inbound IP Addresses for RADIUS | New Outbound Hostnames                                       | Change Date(s)             |
 | --------------------- | --------------------------------- | ------------------------------------------------------------ | -------------------------- |
-| secretservercloud.com | 52.224.253.7<br/>  52.224.253.4   | <ul><li>thycotic-ssc-us-er-sb-01-prod-b.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-us-er-sb-01-prod-g.servicebus.windows.net  (primary)</li>   </li>- thycotic-ssc-us-er-sb-02-prod-b.servicebus.windows.net  (dr)</li>  <li>thycotic-ssc-us-er-sb-02-prod-g.servicebus.windows.net  (dr)</li></ul> | 24 April 2021<br/>8 May 2021 |
+| secretservercloud.com | 52.224.253.7<br/>  52.224.253.4   | <ul><li>thycotic-ssc-us-er-sb-01-prod-b.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-us-er-sb-01-prod-g.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-us-er-sb-02-prod-b.servicebus.windows.net  (dr)</li>  <li>thycotic-ssc-us-er-sb-02-prod-g.servicebus.windows.net  (dr)</li></ul> | 24 April 2021<br/>8 May 2021 |
 | secretservercloud.com.au | 20.37.251.37<br/>  20.37.251.120                  | <ul><li>thycotic-ssc-au-er-sb-01-prod-b.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-au-er-sb-01-prod-g.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-au-er-sb-02-prod-b.servicebus.windows.net  (dr)</li>   <li>thycotic-ssc-au-er-sb-02-prod-g.servicebus.windows.net  (dr)</li></ul> | 10 April 2021              |
 | secretservercloud.ca     | 52.228.117.246<br/>  52.228.113.119               | <ul><li>thycotic-ssc-ca-er-sb-01-prod-b.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-ca-er-sb-01-prod-g.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-ca-er-sb-02-prod-b.servicebus.windows.net  (dr)</li>   <li>thycotic-ssc-ca-er-sb-02-prod-g.servicebus.windows.net  (dr)</li></ul> | 3 April 2020               |
 | secretservercloud.eu     | 20.79.64.213<br/>    20.79.65.3                   | <ul><li>thycotic-ssc-eu-er-sb-01-prod-b.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-eu-er-sb-01-prod-g.servicebus.windows.net  (primary)</li>   <li>thycotic-ssc-eu-er-sb-02-prod-b.servicebus.windows.net  (dr)</li>   <li>thycotic-ssc-eu-er-sb-02-prod-g.servicebus.windows.net  (dr)</li></ul> | 1 May 2021<br/>   15 May 2021 |
 | secretservercloud.com.sg | 20.195.97.220<br/>   20.195.98.154                | <ul><li>thycotic-ssc-sea-er-sb-01-prod-b.servicebus.windows.net  (primary)</li>           <li>thycotic-ssc-sea-er-sb-01-prod-g.servicebus.windows.net  (primary)</li>           <li>thycotic-ssc-sea-er-sb-02-prod-b.servicebus.windows.net (dr)</li>           thycotic-ssc-sea-er-sb-02-prod-g.servicebus.windows.net (dr)</li></ul> | 3 April 2021               |
-
+[]()
 > **Note:** The US and EU regions have two dates listed for changes because the upgrade work will be performed over two days. Please make any necessary changes before the earlier date.
 
 ### Old IP Addresses and Hostnames
