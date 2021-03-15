@@ -85,8 +85,7 @@ Contact Thycotic technical support at any of the phone numbers below or by openi
 
 ####  APAC
 
-* +61 3 8595 5827 (Australia)
-
+- +61 3 8595 5827 (Australia)
 - +63 2 231 3885 (Philippines)
 - +64 9-887 4015 (New Zealand)
 - +65 3157 0602 (Singapore)
