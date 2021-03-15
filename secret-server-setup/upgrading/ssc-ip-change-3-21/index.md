@@ -62,7 +62,7 @@ It is unlikely you will lose connectivity with SSC unless you use inbound or out
 
 Thycotic will update the SSC banner as we complete the IP address change. 
 
-### Who Do I Contact I Have Issues After the Change?
+### Who Do I Contact If I Have Issues After the Change?
 
 Contact Thycotic technical support at any of the phone numbers below or by opening a case using the [Support Portal](https://thycotic.force.com/support/s/login/). 
 
