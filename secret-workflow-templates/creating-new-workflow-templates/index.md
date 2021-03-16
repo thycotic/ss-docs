@@ -10,8 +10,6 @@
 
    ![image-20210310104043739](images/image-20210310104043739.png)
 
-   
-
 1. Click the **Create Workflow** button. The Create Workflow popup appears:
 
    ![image-20210310104150167](images/image-20210310104150167.png)
@@ -20,7 +18,7 @@
 
 1. Click the **Create Workflow** button. The Edit page for the new workflow template appears on the Designer tab.
 
-![image-20210310104355039](images/image-20210310104355039.png)
+   ![image-20210310104355039](images/image-20210310104355039.png)
 
 A new workflow template has only one empty step by default.
 
