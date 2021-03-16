@@ -14,13 +14,13 @@
 
    ![image-20210310104150167](images/image-20210310104150167.png)
 
-1. Type the workflow template's name and descriptions in their text boxes. Once you type the name, the Create Workflow  button becomes enabled.
+1. Type the workflow's name and descriptions in their text boxes. Once you type the name, the Create Workflow  button becomes enabled.
 
-1. Click the **Create Workflow** button. The Edit page for the new workflow template appears on the Designer tab.
+1. Click the **Create Workflow** button. The Edit page for the new workflow appears on the Designer tab.
 
    ![image-20210310104355039](images/image-20210310104355039.png)
 
-A new workflow template has only one empty step by default.
+A new workflow has only one empty step by default.
 
 ### **Task 2:** Set up the First Step
 
@@ -76,7 +76,7 @@ All workflows have at least two steps, otherwise a simple access request would s
 
 1. (Optional) Keep adding steps till satisfied.
 
-1. Click the **Save** button to create the access-request workflow template. The template exits editable mode:
+1. Click the **Save** button to create the access-request workflow. The template exits editable mode:
 
    ![1556292505118](images/1556292505118.png)
 
