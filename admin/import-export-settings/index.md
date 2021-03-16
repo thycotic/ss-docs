@@ -41,15 +41,16 @@ Some of the settings require additional permissions to export or import:
 
 **Table:** Required Additional Permissions
 
-| Setting             | Permission                                 |
-| ------------------- | ------------------------------------------ |
-| OpenID Log on       | Administer Thycotic One                    |
-| SAML                | Administer Configuration SAML              |
-| Security            | Administer Configuration Security          |
-| Session Recording   | Administer Configuration Session Recording |
-| SSH Commands        | Administer SSH Menus                       |
-| Thycotic One Log on | Administer Thycotic One                    |
-| Two Factor Log on   | Administer Configuration Two Factor        |
+| Setting | Permission |
+|--|--|
+| OpenID Log on | Administer Thycotic One |
+| SAML | Administer Configuration SAML |
+| Security | Administer Configuration Security |
+| Session Recording | Administer Configuration Session Recording |
+| SSH Commands | Administer SSH Menus |
+| Thycotic One Log on | Administer Thycotic One |
+| Two Factor Log on | Administer Configuration Two Factor |
+[]()
 
 ### Required Licenses
 
@@ -201,9 +202,9 @@ These settings are unavailable in a cloud environment:
 
 - AllowSoftwareUpdateChecks
 - CustomURL
-- EnableKeepAliveThread     
-- TmsRootUrl         
-- WriteSyslogToEventLog      
+- EnableKeepAliveThread
+- TmsRootUrl
+- WriteSyslogToEventLog
 
 This setting is unavailable in an IBM environment:
 
