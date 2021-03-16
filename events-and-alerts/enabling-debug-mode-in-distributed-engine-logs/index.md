@@ -1,6 +1,6 @@
-[title]: # "Enabling Debug Mode in Distributed Engine Log Files"
-[tags]: # "Events, Alerts, debug mode, distributed engine, distributed engine logs"
-[priority]: # "1000"
+[title]: # (Enabling Debug Mode in Distributed Engine Log Files)
+[tags]: # (Events, Alerts, debug mode, distributed engine, distributed engine logs)
+[priority]: # (1000)
 
 # Enabling Debug Mode in Distributed Engine Log Files
 

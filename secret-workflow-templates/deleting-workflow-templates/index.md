@@ -1,6 +1,6 @@
-[title]: # "Deleting Workflow Templates"
-[tags]: # "Workflow"
-[priority]: # "1000"
+[title]: # (Deleting Workflow Templates)
+[tags]: # (Workflow)
+[priority]: # (1000)
 
 # Deleting Workflow Templates
 

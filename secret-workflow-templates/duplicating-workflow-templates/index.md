@@ -1,6 +1,6 @@
-[title]: # "Duplicating Workflow Templates"
-[tags]: # "Workflow"
-[priority]: # "1000"
+[title]: # (Duplicating Workflow Templates)
+[tags]: # (Workflow)
+[priority]: # (1000)
 
 # Duplicating Workflow Templates
 

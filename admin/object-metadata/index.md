@@ -1,3 +1,7 @@
+[title]: # (Object Metadata)
+[tags]: # (Administration,metadata)
+[priority]: # (1000)
+
 # Secret Server Object Metadata
 
 ## Overview

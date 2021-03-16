@@ -1,6 +1,6 @@
-[title]: # "Accessing the Workflow Designer"
-[tags]: # "Workflow"
-[priority]: # "1000"
+[title]: # (Accessing the Workflow Designer)
+[tags]: # (Workflow)
+[priority]: # (1000)
 
 # Accessing the Workflow Designer
 

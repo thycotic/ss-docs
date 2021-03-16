@@ -1,6 +1,6 @@
-[title]: # "Internal Site Connector"
-[tags]: # "RabbitMQ, internal site connector, backbone bus"
-[priority]: # "1000"
+[title]: # (Internal Site Connector)
+[tags]: # (RabbitMQ, internal site connector, backbone bus)
+[priority]: # (1000)
 
 # Internal Site Connector
 

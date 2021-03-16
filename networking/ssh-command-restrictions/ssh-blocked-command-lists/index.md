@@ -119,12 +119,12 @@ You can apply SSH command restrictions to a secret policy for ease of management
 
 **Table:** Secret Policy Security Settings for SSH Command Restrictions
 
-| Section           | Item                                     | Setting             | Value                                 |
-| ----------------- | ---------------------------------------- | ------------------- | ------------------------------------- |
-| Security Settings | Enable Proxy                             | Enforced            | Checked                               |
-| Security Settings | Enable SSH Command Restrictions          | Enforced            | Checked                               |
-| Security Settings | SSH Command Restriction Type             | Enforced            | Blocked List                          |
-| Security Settings | SSH Command Blocklist for Secret Owners  | Enforced or Not Set | Desired Block Command List or Not Set |
+| Section | Item | Setting | Value |
+|--|--|--|--|
+| Security Settings | Enable Proxy | Enforced | Checked |
+| Security Settings | Enable SSH Command Restrictions | Enforced | Checked |
+| Security Settings | SSH Command Restriction Type | Enforced | Blocked List |
+| Security Settings | SSH Command Blocklist for Secret Owners | Enforced or Not Set | Desired Block Command List or Not Set |
 | Security Settings | SSH Command Blocklist for Secret Editors | Enforced or Not Set | Desired Block Command List or Not Set |
 | Security Settings | SSH Command Blocklist for Secret Viewers | Enforced or Not Set | Desired Block Command List or Not Set |
 

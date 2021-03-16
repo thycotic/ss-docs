@@ -1,6 +1,6 @@
-[title]: # "Editing Workflow Templates"
-[tags]: # "Workflow"
-[priority]: # "1000"
+[title]: # (Editing Workflow Templates)
+[tags]: # (Workflow)
+[priority]: # (1000)
 
 # Editing Workflow Templates
 
