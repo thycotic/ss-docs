@@ -1,6 +1,6 @@
-[title]: # (Internal Site Connector)
-[tags]: # (RabbitMQ, internal site connector, backbone bus)
-[priority]: # (1000)
+[title]: # "Internal Site Connector"
+[tags]: # "RabbitMQ, internal site connector, backbone bus"
+[priority]: # "1000"
 
 # Internal Site Connector
 
@@ -48,4 +48,4 @@ The following is a typical internal hosted bus operation (for a bulk operation):
 
 1. SS (on the same machine) processes the message.
 
-While the internal hosted bus is something we will constantly strive to improve, we recommend using RabbitMQ for a performance boost for those scalable operations. See [Installing RabbitMQ](../../secret-server-setup/installation/installing-rabbitmq/index.md) for more information.
+We continually improve the internal hosted bus but still recommend RabbitMQ for a scalable performance boost. See [Installing RabbitMQ](../../secret-server-setup/installation/installing-rabbitmq/index.md) for more information.

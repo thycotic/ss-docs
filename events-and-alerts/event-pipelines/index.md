@@ -1,5 +1,5 @@
-[title]: # (Event Pipelines)
-[tags]: # (Event Pipelines)
+[title]: # "Event Pipelines"
+[tags]: # "Event Pipelines"
 [priority]: #
 
 # Event Pipelines
@@ -572,6 +572,10 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 
 - Password Displayed
 
+- Pre-Check In
+
+  > **Note:** When using the Pre-Check In trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
+
 - Pre-Check Out
 
 - Secret Policy Change
@@ -673,6 +677,8 @@ To create a new EP:
 1. Click the **Create** button. The New Pipeline wizard appears on the Choose Triggers page.
 
 ##### Step Two: Add Triggers
+
+> **Note:** When using the Pre-Check In trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
 
 1. In the **Add Triggers** section, click the **+** button next to the triggers you desire. You can also search for a trigger by typing in the search text box. The selected triggers appear in the Selected Triggers list. Consider the following when selecting triggers:
 
