@@ -368,39 +368,35 @@ Secret Server has settings import/export endpoints for the API to manipulate. Op
 
 Looking at the query parameters for that endpoint, we see:
 
-![image-20210303144237643](images/image-20210303144237643.png)
+![image-20210316131850584](images/image-20210316131850584.png)
 
 The keys are equivalent to those on the user interface or those in the JSON file.
 
-The `loadAll` key tells SS to update all the available settings. The `general.loadAll` key tells SS to update all the General category settings (those with the `general.` prefix). These include application settings, launcher settings, protocol handler settings, permission options, user experience settings, and user interface settings.
-
-> **Note:** At this time there is no equivalent to `general.loadAll` in the user interface. To accomplish the same thing, you have to select the top six categories, which sets `general.loadAll` in the background.
+The `loadAll` key tells SS to update all the available settings. These include application settings, launcher settings, protocol handler settings, permission options, user experience settings, and user interface settings.
 
 If you click the **Body** tab below, you can see what JSON code represents the key you chose for the export:
 
-![image-20210303152723618](images/image-20210303152723618.png)
+![image-20210316132057512](images/image-20210316132057512.png)
 
 When using the POST Import Secret Server Settings command, you will see a filter object at the bottom of the code stipulating what to update:
 
-![image-20210303153548179](images/image-20210303153548179.png)
+![image-20210316132310262](images/image-20210316132310262.png)
 
-For example, if you set `general.loadAll` to `true`, only the general categories are updated, assuming the objects stipulated were sent with the request. Similarly, included objects that are disallowed by the filter are ignored.
+For example, if you set `loadApplicationSettings` to `true`, only the application settings are updated, assuming the objects stipulated were sent with the request. Similarly, included objects that are disallowed by the filter are ignored.
 
 To make a GET call to update a single setting:
 
-1. Import the category it belongs to. For example, if you want to update `apiSessionTimeoutUnlimited` to `true`, you would copy the entire `applicationSettings` result (the category and all of its settings):
-
-   ![image-20210303155609358](images/image-20210303155609358.png)
+1. Import the category it belongs to. For example, if you want to update `apiSessionTimeoutUnlimited` to `true`, you would copy the entire `applicationSettings` result (the category and all of its settings).
 
 1. For the POST Import Secret Server Settings call, remove the settings in the data section, leaving the filter section as is:
 
-   ![image-20210303160126015](images/image-20210303160126015.png)
+   ![image-20210316134108377](images/image-20210316134108377.png)
 
 1. Paste the settings you copied earlier in its place.
 
 1. Change the `apiSessionTimeoutUnlimited` setting to `true`:
 
-   ![image-20210303161622524](images/image-20210303161622524.png)
+   ![image-20210316134225542](images/image-20210316134225542.png)
 
 1. Scroll down to the filter section and remove the filters you do not want to update. Alternatively, you can replace all the `<boolean>` settings with `false` for the filters you do not want.
 
@@ -418,7 +414,9 @@ To make a GET call to update a single setting:
 
 1. Click the **Send** button. If all goes well, Postman will return the updated category object:
 
-   ![image-20210303162625462](images/image-20210303162625462.png)
+   ![image-20210316134359679](images/image-20210316134359679.png)
+
+   > **Note:** In this example, we copied the whole data object, but you do not have to. For a quick update, you can Import with just the settings you want to update. Anything not sent is ignored. This is the reason a nullable setting has to be explicitly set to null, along with setting the dirty flag—everything set to null is ignored, the same as if you did not send the setting at all.
 
 1. If something went wrong, you will see an error section at the bottom of the results:
 
