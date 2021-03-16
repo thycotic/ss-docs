@@ -1,8 +1,8 @@
-[title]: # (Understanding Workflow Template Design Best Practices)
+[title]: # (Understanding Workflow Design Best Practices)
 [tags]: # (Workflow)
 [priority]: # (1000)
 
-# Understanding Workflow Template Design Best Practices
+# Understanding Workflow Design Best Practices
 
 Consider the following when setting up an access-request workflow template:
 

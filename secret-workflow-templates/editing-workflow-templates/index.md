@@ -1,8 +1,8 @@
-[title]: # (Editing Workflow Templates)
+[title]: # (Editing Workflows)
 [tags]: # (Workflow)
 [priority]: # (1000)
 
-# Editing Workflow Templates
+# Editing Workflows
 
 To edit the template:
 

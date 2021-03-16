@@ -1,8 +1,8 @@
-[title]: # (Secret Workflow Templates)
+[title]: # (Secret Workflows)
 [tags]: # (Workflow)
 [priority]: # (1000)
 
-# Secret Workflow Templates
+# Secret Workflows
 
 > **Note:** Please click the table of contents on the left to see any sub-pages to this one. Click the table of contents on the right to see headings on this page.
 
@@ -11,9 +11,7 @@ Starting in 10.6, SS introduced _access-request_ _workflow templates_. These all
 With Access-Request Workflow Templates, you can:
 
 - Require that multiple people approve a request before access is granted
-
 - Require multiple workflow steps, each with different reviewers and number of required approvers, if desired.
-
 - Select "Owners" as a review group
 
 > **Note:** Access Requests already existed in SS, but with 10.6 they become much more powerful. Previously, if access requests enabled on a secret, requests were granted after a single reviewer approved the request. Now, approval workflows can require multiple approvers, and multiple approval levels.

@@ -1,8 +1,8 @@
-[title]: # (Deleting Workflow Templates)
+[title]: # (Deleting Workflows)
 [tags]: # (Workflow)
 [priority]: # (1000)
 
-# Deleting Workflow Templates
+# Deleting Workflows
 
 To delete a workflow template:
 

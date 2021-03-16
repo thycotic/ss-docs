@@ -2,7 +2,7 @@
 [tags]: # (Workflow)
 [priority]: # (1000)
 
-# Duplicating Workflow Templates
+# Duplicating Workflows
 
 If you need to create a new workflow template that is like one your already have, you can save time by copying the similar template and then making the any changes:
 
