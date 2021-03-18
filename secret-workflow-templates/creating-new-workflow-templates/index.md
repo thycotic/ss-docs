@@ -14,7 +14,7 @@
 
    ![image-20210310104150167](images/image-20210310104150167.png)
 
-1. Type the workflow's name and descriptions in their text boxes. Once you type the name, the Create Workflow  button becomes enabled.
+1. Type the workflow's name and description (optional) in their text boxes. Once you type the name, the Create Workflow  button becomes enabled.
 
 1. Click the **Create Workflow** button. The Edit page for the new workflow appears on the Designer tab.
 
@@ -47,12 +47,11 @@ A new workflow has only one empty step by default.
    ![image-20210310105925081](images/image-20210310105925081.png)
 
    > **Note:** 
-   >
    > - Timeout minutes must be a positive integer set to 1 or greater. 
    > - If a step is set to time out and then all following steps are deleted, the step will no longer time out because the last step in a workflow is not allowed to time out.
    > - Multiple steps can time out, so cascading timeouts are possible. That is, step one times out to step two and step two times out to step three.
 
-1. Replace the 0 in the **Skip step is not approved…** text box with the number of minutes for the desired timeout.
+1. Replace the 0 in the **Skip step if not approved…** text box with the number of minutes for the desired timeout.
 
 1. Click the **If approved** dropdown list to select what to do next:
 
@@ -64,17 +63,13 @@ A new workflow has only one empty step by default.
    - Advance to the next step in a linear fashion
    - Jump to another already defined step that is presented as an option in the list box.
 
-### Task 3: Complete the Second Step
+### **Task 3:** (Optional) Add More Steps
 
-All workflows have at least two steps, otherwise a simple access request would suffice, so a second step is provided for you below. Repeat the process as for step one.
-
-### **Task 4:** (Optional) Add More Steps
+>**Note:** There are situations where you might want to have only one workflow step, seemingly doing the same thing as a simple access request. Workflows provide options to require multiple approvers or have owners as approvers, which are not available to simple access requests.
 
 1. Click the **Insert a Step** button. A new step appears below the first two.
 
-1. Repeat the process as for steps one and two.
-
-1. (Optional) Keep adding steps till satisfied.
+1. Repeat the process as for earlier steps. Keep adding steps as needed.
 
 1. Click the **Save** button to create the access-request workflow. The template exits editable mode:
 
