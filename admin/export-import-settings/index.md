@@ -1,8 +1,8 @@
-[title]: # (Importing and Exporting Settings)
+[title]: # (Exporting and Importing Settings)
 [tags]: # (Administration, settings, importing, exporting, JSON)
 [priority]: # (1000)
 
-# Importing and Exporting Secret Server Settings
+# Exporting and Importing Secret Server Settings
 
 ## Overview
 

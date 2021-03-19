@@ -8,7 +8,7 @@
 
 ## Current
 
-- [Secret Server 10.9.000033](ss-rn-10-9-000033.md)
+- [Secret Server 10.11.00000x](ss-rn-10-11-00000x.md)
 
 - [Secret Server Cloud 2020-10-24 Supplement to 10.9.000002](ssc-rn-2020-10-24.md)
 
@@ -16,6 +16,7 @@
 
 ## Secret Server On-Premises Legacy
 
+- [Secret Server 10.9.000033](ss-rn-10-9-000033.md)
 - [Secret Server 10.9.000032](ss-rn-10-9-000005.md)
 - [Secret Server 10.9.000002](ss-rn-10-9-000002.md)
 - [Secret Server 10.9.000000](ss-rn-10-9-000000.md)
