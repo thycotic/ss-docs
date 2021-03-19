@@ -42,9 +42,11 @@ A new workflow has only one empty step by default.
 
 1. If you wish to have multiple approvers required on the step, type the minimum required in the **Number of approvers required** text box. Otherwise, leave it set to 1.
 
-1. If you want the step to time out, click to select the Step Times out check box. Another text box appears:
+1. If you want the step to time out, click to select the **Step Times out** check box. Another text box appears:
 
    ![image-20210310105925081](images/image-20210310105925081.png)
+
+>**Important:** This feature is part of the early release of Secret Server 10.11. The general release is not till April 12, 2021 (on-premises version) and April 12, 2021 (cloud version).
 
    > **Note:** 
    > - Timeout minutes must be a positive integer set to 1 or greater. 

@@ -4,6 +4,8 @@
 
 # Secret Server Object Metadata
 
+>**Important:** This feature is part of the early release of Secret Server 10.11. The general release is not till April 12, 2021 (on-premises version) and April 12, 2021 (cloud version).
+
 ## Overview
 
 Object metadata allows you to store extended information on several SS objects including users, groups, folders, dates, or secrets via the user interface or REST API. You can store most data types, including strings, Boolean values, numbers, dates, and users. You can combine this metadata into sections containing named fields of your defined types.

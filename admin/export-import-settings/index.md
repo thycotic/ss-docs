@@ -4,6 +4,8 @@
 
 # Exporting and Importing Secret Server Settings
 
+>**Important:** This feature is part of the early release of Secret Server 10.11. The general release is not till April 12, 2021 (on-premises version) and April 12, 2021 (cloud version).
+
 ## Overview
 
 Secret Server (SS) can now export and import SS settings as a JavaScript Object Notation (JSON) file. With this, you can more easily move settings from an existing SS environment to another. 

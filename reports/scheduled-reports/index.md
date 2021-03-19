@@ -33,6 +33,8 @@
       - HTML: Save the report as an HTML file.
       - CSV: Save the report as a comma separated value file for importation into a spreadsheet.
 
+   >**Important:** The CSV feature is part of the early release of Secret Server 10.11. The general release is not till April 12, 2021 (on-premises version) and April 12, 2021 (cloud version).
+
    1. Click to select the **Send Email** check box to have the report emailed to you at the reporting interval. An email section appears:
 
       ![image-20210310151950383](images/image-20210310151950383.png)
