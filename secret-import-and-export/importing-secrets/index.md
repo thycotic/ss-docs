@@ -8,17 +8,23 @@ SS's importation feature simplifies integration with legacy systems and allows u
 
 ## Importing CSV Data
 
-1. Go to **Admin \> See All**.
+1. Go to **Admin \> See All**. The admin menu appears:
 
-1. Click the **Import Secrets** link. The Import page appears:
+   ![image-20210322102126099](images/image-20210322102126099.png)
 
-   ![1557174549399](images/1557174549399.png)
+1. Hover the mouse pointer over the **Setup and System Maintenance** panel and select **Export / Import**. The Export / Import page appears:
+
+   ![image-20210322102513221](images/image-20210322102513221.png)
+
+1. Click the **Import** button on the **Secrets** tab. The Choose Secret Template page appears:
+
+   ![image-20210322102634150](images/image-20210322102634150.png)
 
 1. Click the **What type of Secret…** list box to select the type of secrets you intend to import.
 
 1. Click the **Continue** button. The Import Secrets page appears:
 
-   ![1557174816852](images/1557174816852.png)
+   ![image-20210322102829261](images/image-20210322102829261.png)
 
 1. Paste the secrets for importation from MS Excel or a CSV file directly into the text box in the **Import Secrets**  page. The order of the imported fields is based on the template selected. Consider the following:
 
@@ -33,11 +39,11 @@ SS's importation feature simplifies integration with legacy systems and allows u
 
 1. Click to select the **Allow Duplicate Secrets** check box if you wish to import a secret with the same name as an existing one.
 
-1. Click to select the **Import with Folder** check box if you included an additional field in the importation  text with a fully qualified folder name for the secret to be created in.
+1. Click to select the **Import with Folder** check box if you included an additional field in the importation text with a fully qualified folder name for the secret to be created in.
 
-1. Click the **Next** button. SS displays a preview:
+1. Click to select the **Import with TOTP Settings** check box if you want to include time-based one-time password settings in the import.
 
-   ![1557176230259](images/1557176230259.png)
+1. Click the **Next** button. SS displays a preview. 
 
 1. If you are happy with what you see, click the **Yes, Import these Secrets** button.
 
@@ -65,7 +71,7 @@ Advanced XML importation adds folders, secret templates, and secrets based on an
 
 1. Click the **Secrets without permissions** dropdown list to choose how you want secrets without permissions to get them assigned.
 
-1. Click the **Browse** button to chose the XML file.
+1. Click the **Browse** button to choose the XML file.
 
 1. Click the **Import XML** File button.
 
