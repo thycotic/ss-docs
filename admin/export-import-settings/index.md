@@ -4,7 +4,7 @@
 
 # Exporting and Importing Secret Server Settings
 
->**Important:** This feature is part of the early release of Secret Server 10.11. The general release is not till April 12, 2021 (on-premises version) and April 12, 2021 (cloud version).
+>**Important:** This feature is part of the early release of Secret Server 10.11. The general release is not till April 13, 2021 for the on-premises version and between April 3rd and May 15th 2021, depending on region, for the cloud version.
 
 ## Overview
 
