@@ -6,9 +6,46 @@
 
 ## Creating New Schedules for Reports
 
-1. To create a schedule for a report, click **Schedule** on the **Report View** page. The Custom Report Schedules page appears.
+1. To create a schedule for a report, click the **Schedules** tab on the **Report View** page:
 
-1. Click the **Create New** button.
+   ![image-20210310150121277](images/image-20210310150121277.png)
+
+1. Click the **Create Schedule** button. The Report Schedule page appears:
+
+   ![image-20210310150251467](images/image-20210310150251467.png)
+
+1. Configure the report settings as listed in [Editing Schedule Settings](#editing_schedule_settings)
+
+1. Click the **Save** button. The page for the new report schedule appears:
+
+   ![image-20210310150956735](images/image-20210310150956735.png)
+
+1. The report will now be saved for you, saving only one report at a time. If you want more saved or want it emailed to you according the the schedule:
+
+   1. Click the **Edit** link in the **Report Distribution** section. The section becomes editable:
+
+      ![image-20210310151248793](images/image-20210310151248793.png)
+
+   1. Either click to select the **Save All** check box or type a new number in the **Number of Saved Reports** text box. Remember, saving reports can use a lot of disk space.
+
+   1. Click the **Format** dropdown list to select the report format:
+
+      - HTML: Save the report as an HTML file.
+      - CSV: Save the report as a comma separated value file for importation into a spreadsheet.
+
+   >**Important:** The CSV feature is part of the early release of Secret Server 10.11. The general release is not till April 12, 2021 (on-premises version) and April 12, 2021 (cloud version).
+
+   1. Click to select the **Send Email** check box to have the report emailed to you at the reporting interval. An email section appears:
+
+      ![image-20210310151950383](images/image-20210310151950383.png)
+
+   1. Click the **All** dropdown list in the **Report Subscribers** section to choose the domain to look for users and groups.
+
+   1. Click the check boxes next to the users or groups you want to send the report to in the **Report Subscribers** section. You can also search for the same in the provided search box at the top of the section. The users or groups appear in the Selected Groups text box.
+
+   1. Type any additional email addresses in the **Additional Email Recipients** text box.
+
+   1. Click the **Save** button.
 
 ## Viewing Existing Report Schedules
 
