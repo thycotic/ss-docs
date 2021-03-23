@@ -2,6 +2,7 @@
 [tags]: # (Release Notes,documentation)
 [priority]: #
 [display]: # (search,content,print)
+
 # Documentation Change Log
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
@@ -16,6 +17,7 @@ Created or made significant changes to these topics:
 - Event Pipeline Pre-Checkout Trigger
 - Exporting and Importing Settings
 - Google Cloud Platform Discovery
+- Installing Secret Server via the Command Line
 - Object Metadata
 - Running Heartbeat and RPC for Office 365 Accounts with a PowerShell Module
 - Scheduled Reports
