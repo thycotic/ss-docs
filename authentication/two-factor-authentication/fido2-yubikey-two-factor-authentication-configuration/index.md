@@ -102,7 +102,7 @@ Resetting FIDO2 for both single and multiple users is very similar to enabling F
 
 ![img](images/clip_image019.jpg)
 
-> **Note:**   Microsoft Edge is not currently supported.
+>**Note:** Legacy Microsoft Edge is not supported. Edge Chromium, version 79 or higher, is required for FIDO2 support.
 
 2. The user inserts his or her FIDO2 device into a USB port on the computer.
 

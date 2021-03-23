@@ -2,6 +2,7 @@
 [tags]: # (Release Notes,documentation)
 [priority]: #
 [display]: # (search,content,print)
+
 # Documentation Change Log
 
 The following is a chronological list of significant documentation changes. Minor content alterations are not tracked.
@@ -10,11 +11,24 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created or made significant changes to these topics:
 
+- Configuring CredSSP for WinRM with PowerShell
 - Create an Azure Application Registration
 - Enabling Specific OU Domain Discovery
+- Event Pipeline Pre-Checkout Trigger
+- Exporting and Importing Settings
+- Google Cloud Platform Discovery
+- Installing Secret Server via the Command Line
+- Object Metadata
+- Running Heartbeat and RPC for Office 365 Accounts with a PowerShell Module
+- Scheduled Reports
 - Secret Server Cloud Architecture
+- Secret Server Cloud IP Address Change for March to May 2021
 - Securing IIS Server
+- Slack Integration
+- SSH Blocked Command Lists
+- Syncing with DevOps Secret Vault
 - Troubleshooting SSH Issues
+- Workflow Timeouts
 
 Created the following topics from Salesforce articles or PDFs (often including substantial rewrite):
 
