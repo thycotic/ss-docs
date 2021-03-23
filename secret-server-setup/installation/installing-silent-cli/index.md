@@ -27,7 +27,6 @@ Important considerations:
   `ThycoticSetup.exe -q -s PARAM1=some_string PARAM2=1234 CMDLINE=" PARAM3=""Something with a space"" PARAM 4=""Another value with spaces"" "`
 
   Note:
-
   - You can mix and match regular parameters (numerical values, or strings without spaces) with `CMDLINE`.
   - Any parameters sent inside of `CMDLINE` are treated as strings. Numerical parameters inside of `CMDLINE` are ignored.
 
@@ -49,6 +48,7 @@ As of SS 10.11, you can silently install all required prerequisites. These are t
 |--|:-:|--|--|
 | `InstallPreReqs` | Boolean | Yes | Triggers the prerequisites installation. Enable this to install prerequisites with no application. This overrides `InstallSecretServer=1` and `InstallPrivilegeManager=1`. |
 | `PRE_REQS_TO_INSTALL` | Comma separated list (see below) | Yes | Specifies which prerequisites to install. |
+[]()
 
 ### Prerequisites
 
@@ -63,6 +63,7 @@ As of SS 10.11, you can silently install all required prerequisites. These are t
 | `INSTALL_IIS_COMPS` | Yes | Installs various required IIS features. |
 | `INSTALL_NET_WCF` | Yes | Installs the WCF HTTP and TCP activation features. |
 | `INSTALL_NetFx48` | Yes | Installs .NET 4.8. This **requires a reboot.** |
+[]()
 
 ### Single-Line Example
 
@@ -94,6 +95,7 @@ If you need more control over configuring the website, you can create a site and
 | `SecretServerUserEmail` | String | None | The email address for `SecretServerUserName`. |
 | `SecretServerUserName` | String | None | The initial SS administrator user. If not set, once Secret Server is installed, the first person to visit the website will  be able to pick the details on the “Create Initial Administrator” page. |
 | `SecretServerUserPassword` | String | None | The password for `SecretServerUserName`. |
+[]()
 
 ### Privilege Manager Parameters
 
@@ -109,8 +111,7 @@ If you need more control over configuring the website, you can create a site and
 | `PrivilegeManagerDestinationFolderPath` | String | `C:\inetpub\wwwroot\TMS` | If you would  like to use a directory containing spaces, see above on using the `CMDLINE` parameter. |
 | `PrivilegeManagerLogFile` | String | None | Optional |
 | `PrivilegeManagerSiteName` | String | Default website | `CreateWebsite=1`  must also be set to customize this. |
-
-
+[]()
 
 ###  Required Database Parameters
 
@@ -129,6 +130,7 @@ If you need more control over configuring the website, you can create a site and
 | `DatabaseTrustServerCertificate` | Boolean | 0 | Only used if `DatabaseEnableSslEncryption=1` is set. Do not enable in production if you are using SSL encryption; certificate  trust validation is critical to security. `Certutil.exe` can be used to diagnose untrusted certificates.     When `TrustServerCertificate` is set to `true`, the  transport layer uses SSL to encrypt the channel and bypass walking the certificate chain to validate trust. If `TrustServerCertificate` is set to `true` and encryption is turned on, the encryption level specified on the server is used even if `Encrypt` is set to false. The connection fails  otherwise. |
 | `DatabaseUserName` | String | None | Database SQL login username. Ignored if using Windows authentication. |
 | `InstallSqlExpress` | Boolean | 0 | Whether or not to install the free SQL Express to use as a database server. If enabled, none of the other database parameters are used.  We only recommended this for testing. , do not use in production due to performance limits. |
+[]()
 
 ### Email Parameters
 
@@ -147,6 +149,7 @@ You can set email parameter either in the UI after installation or by using thes
 | EmailUseCustomPort | Boolean | 0 | Whether or not to use a custom port connecting to  the email server. |
 | EmailUserName | String (optional) | None | Username for SMTP credentials. Used if `EmailUseCredentials=1`. |
 | EmailUseSSL | Boolean | 0 | Whether or not to use SSL/TLS when connecting to the email server |
+[]()
 
 ### Single-Line Example
 
