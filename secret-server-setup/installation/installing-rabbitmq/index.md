@@ -16,7 +16,7 @@ RabbitMQ is an enterprise-ready alternative to MemoryMQ. While MemoryMQ is suffi
 
 ### RabbitMQ and Encryption
 
-All data sent from or read by Secret Server from RabbitMQ is encrypted. If you would like to add SSL despite the data already being encrypted, please follow the "Advanced installation of RabbitMQwith TLS" use case. Please note that Thycotic Support can help with non-SSL installations. For SSL installation, configuration, troubleshooting, and RabbitMQ clustering, please contact **[Thycotic Professional Services](mailto:psengagements@thycotic.com)** to learn more about our Professional Services rates.
+All data sent from or read by Secret Server from RabbitMQ is encrypted. If you would like to add SSL despite the data already being encrypted, please follow the "Advanced installation of RabbitMQ with TLS" use case. Please note that Thycotic Support can help with non-SSL installations. For SSL installation, configuration, troubleshooting, and RabbitMQ clustering, please contact [Thycotic Professional Services](https://thycotic.com/products/professional-services-training/) to learn more about our Professional Services rates.
 
 ## Prerequisites
 

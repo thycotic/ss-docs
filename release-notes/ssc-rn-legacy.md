@@ -339,7 +339,7 @@ SSC offers a new user interface (UI) with a redesigned left navigation panel and
 
 - Workflow Administrator–can administer workflow permissions.
 
-- Workflow Designer–can create new workflow templates.
+- Workflow Designer–can create new workflows.
 
 #### Advanced Session Recording
 
