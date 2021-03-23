@@ -13,7 +13,7 @@ When using SS for SSH password rotation, you may encounter errors when changing 
 
 To determine if the heartbeat issue is outside of SS:
 
-1. Go to the the secret which is failing Remote Password Changing in SS:
+1. Open the secret which is failing Remote Password Changing in SS.
 
    ![image-20201103105646813](images/image-20201103105646813.png)
 
@@ -93,7 +93,7 @@ Procedure:
 
 12. Click the **Cancel** button to return to the previous page:
 
-    ![image-20200924134208538](images/image-20200924134208538.png)
+    ![image-202009241342085381](images/image-20200924134208538.png)
 
 1. The **Verify Password Changed Commands Test Action** button tests the defined password-changed verification listed under it. When clicked, it uses the "Authenticate As" parameters to connect to the accounts and run the commands to test for a heartbeat and check that the account and password is valid.
 
@@ -143,7 +143,7 @@ Procedure:
 
 21. Similar to the last test, manually provide the input parameters. See [Step 2: Testing Heartbeat and RPC in Secret Server](#Step-2:-Testing-Heartbeat-and-RPC-in-Secret-Server) for a description of how to fill in the parameters.
 
-21. Click the **OK** button. The test connects with the "Authenticate As"’ accounts and runs the commands to change the password. A password rotation occurs, and more console output appears. Record any errors and output.
+21. Click the **OK** button. The test connects with the "Authenticate As" accounts and runs the commands to change the password. A password rotation occurs, and more console output appears. Record any errors and output.
 
 22. If the rotation did not occur, check the information that was presented to the changer from your secret. It is possible that the secret's data is involved in the issue.
 
