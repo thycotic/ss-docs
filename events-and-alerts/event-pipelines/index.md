@@ -1,6 +1,6 @@
 [title]: # (Event Pipelines)
 [tags]: # (Event Pipelines)
-[priority]: #
+[priority]: # (1000)
 
 # Event Pipelines
 
@@ -368,16 +368,16 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 
 **Table:** Event Setting Tokens with Filter Values
 
-| Token Name          | Purpose                                                      | Values |
-| ------------------- | ------------------------------------------------------------ | ------ |
-| $ByUser             | Username that initiated the event                            | Text   |
-| $ByUserDisplayName  | Display name of user that initiated event                    | Text   |
-| $ContainerName      | Folder name for the event                                    | Text   |
-| $EventAction        | Action that occurred on the event entity type. See list of triggers. | Text   |
-| $EventDetails       | Event notes. For heartbeats and RPC, this contains the status and any error message. | Text   |
-| $EventUserKnownAs   | Username for user that caused the event. If a domain account exists, then this appears as domain\username. | Text   |
-| $ItemId             | Secret ID for the event                                      | Text   |
-| $ItemNameForDisplay | Event secret name                                            | Text   |
+| Token Name | Purpose | Values |
+|--|--|--|
+| $ByUser | Username that initiated the event | Text |
+| $ByUserDisplayName | Display name of user that initiated event | Text |
+| $ContainerName | Folder name for the event | Text |
+| $EventAction | Action that occurred on the event entity type. See list of triggers. | Text |
+| $EventDetails | Event notes. For heartbeats and RPC, this contains the status and any error message. | Text |
+| $EventUserKnownAs | Username for user that caused the event. If a domain account exists, then this appears as domain\username. | Text |
+| $ItemId | Secret ID for the event | Text |
+| $ItemNameForDisplay | Event secret name | Text |
 
 []()
 
@@ -385,34 +385,34 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 
 **Table:** Secret Setting Tokens with Filter Values
 
-| Token Name                                            | Purpose                                              | Values                                                       |
-| ----------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ |
-| $Secret.Active                                        | Active                                               | Boolean                                                      |
-| $Secret.AutoChangeOnExpiration                        | Auto change on expiration                            | Boolean                                                      |
-| $Secret.ChangePasswordNow                             | Change password now                                  | Boolean                                                      |
-| $Secret.CheckOutChangePassword                        | Checkout change password                             | Boolean                                                      |
-| $Secret.CheckOutEnabled                               | Checkout enabled                                     | Boolean                                                      |
-| $Secret.EnableInheritPermissions                      | Enable inherit permissions                           | Boolean                                                      |
-| $Secret.EnableInheritSecretPolicy                     | Enable inherit secret policy                         | Boolean                                                      |
-| $Secret.Expired                                       | Expired                                              | Boolean                                                      |
-| $Secret.HideLauncherPassword                          | Hide launcher password                               | Boolean                                                      |
-| $Secret.IsDoubleLock                                  | Double lock                                          | Boolean                                                      |
-| $Secret.IsSessionRecordingEnabled                     | Session recording enabled                            | Boolean                                                      |
-| $Secret.IsSSHProxyEnabled                             | SSH proxy enabled                                    | Boolean                                                      |
-| $Secret.LastHeartBeatStatus                           | Status of last heartbeat                             | AccessDenied; AccountLockedOut; ArgumentError; Disabled; DnsMismatch; Failed; IncompatibleHost; Pending; Processing; Success; UnableToConnect;    UnableToValidateServerPublicKey; UnknownError |
-| $Secret.PasswordChangeFailed                          | Password change failed                               | Bolean                                                       |
-| $Secret.PasswordChangeOutOfSync                       | Password change out of sync                          | Boolean                                                      |
-| $Secret.PasswordChangeStatus                          | Password change status                               | None; Pending; Processing                                    |
-| $Secret.PasswordComplianceCode                        | Password compliance code                             | Pending; Pass; Fail                                          |
-| $Secret.RequireApprovalForAccess                      | Require approval for access                          | Boolean                                                      |
-| $Secret.RequireApprovalForAccessForEditors            | Require approval for access for editors              | Boolean                                                      |
-| $Secret.RequireApprovalForAccessForOwnersAndApprovers | Require approval for access for owners and approvers | Boolean                                                      |
-| $Secret.RequireViewComment                            | Require view comment                                 | Boolean                                                      |
-| $Secret.RestrictSshCommands                           | Restrict SSH commands                                | Boolean                                                      |
-| $Secret.RPCAttemptCount                               | RPC attempt count                                    | Boolean                                                      |
-| $Secret.SecretId                                      | Secret ID                                            | Text                                                         |
-| $Secret.SecretPolicyId                                | Secret policy ID                                     | Text                                                         |
-| $Secret.SecretTemplateName                            | Secret template name                                 | Text                                                         |
+| Token Name | Purpose | Values |
+|--|--|--|
+| $Secret.Active | Active | Boolean |
+| $Secret.AutoChangeOnExpiration | Auto change on expiration | Boolean |
+| $Secret.ChangePasswordNow | Change password now | Boolean |
+| $Secret.CheckOutChangePassword | Checkout change password | Boolean |
+| $Secret.CheckOutEnabled | Checkout enabled | Boolean |
+| $Secret.EnableInheritPermissions | Enable inherit permissions | Boolean |
+| $Secret.EnableInheritSecretPolicy | Enable inherit secret policy | Boolean |
+| $Secret.Expired | Expired | Boolean |
+| $Secret.HideLauncherPassword | Hide launcher password | Boolean |
+| $Secret.IsDoubleLock | Double lock | Boolean |
+| $Secret.IsSessionRecordingEnabled | Session recording enabled | Boolean |
+| $Secret.IsSSHProxyEnabled | SSH proxy enabled | Boolean |
+| $Secret.LastHeartBeatStatus | Status of last heartbeat | AccessDenied; AccountLockedOut; ArgumentError; Disabled; DnsMismatch; Failed; IncompatibleHost; Pending; Processing; Success; UnableToConnect;    UnableToValidateServerPublicKey; UnknownError |
+| $Secret.PasswordChangeFailed | Password change failed | Bolean |
+| $Secret.PasswordChangeOutOfSync | Password change out of sync | Boolean |
+| $Secret.PasswordChangeStatus | Password change status | None; Pending; Processing |
+| $Secret.PasswordComplianceCode | Password compliance code | Pending; Pass; Fail |
+| $Secret.RequireApprovalForAccess | Require approval for access | Boolean |
+| $Secret.RequireApprovalForAccessForEditors | Require approval for access for editors | Boolean |
+| $Secret.RequireApprovalForAccessForOwnersAndApprovers | Require approval for access for owners and approvers | Boolean |
+| $Secret.RequireViewComment | Require view comment | Boolean |
+| $Secret.RestrictSshCommands | Restrict SSH commands | Boolean |
+| $Secret.RPCAttemptCount | RPC attempt count | Boolean |
+| $Secret.SecretId | Secret ID | Text |
+| $Secret.SecretPolicyId | Secret policy ID | Text |
+| $Secret.SecretTemplateName | Secret template name | Text |
 
 []()
 
@@ -572,6 +572,10 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 
 - Password Displayed
 
+- Pre-Check In
+
+  > **Note:** When using the Pre-Check In trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
+
 - Pre-Check Out
 
 - Secret Policy Change
@@ -673,6 +677,10 @@ To create a new EP:
 1. Click the **Create** button. The New Pipeline wizard appears on the Choose Triggers page.
 
 ##### Step Two: Add Triggers
+
+>**Important:** The pre-check-in trigger is part of the early release of Secret Server 10.11. The general release is not till April 12, 2021 (on-premises version) and April 12, 2021 (cloud version).
+
+> **Note:** When using the pre-check-in trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
 
 1. In the **Add Triggers** section, click the **+** button next to the triggers you desire. You can also search for a trigger by typing in the search text box. The selected triggers appear in the Selected Triggers list. Consider the following when selecting triggers:
 
