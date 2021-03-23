@@ -48,9 +48,7 @@
 ## Secret Server Cloud Legacy
 
 - [Cloud Release December 21, 2019](ssc-rn-2019-12-21.md)
-
 - [Cloud Release September 21, 2019](ssc-rn-2019-09-21.md)
-
 - [Cloud Releases prior to September 21, 2019](ssc-rn-legacy.md)
 
 ## Documentation Releases
