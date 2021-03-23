@@ -10,7 +10,7 @@
 
 >**Important:** These notes cover the early release of 10.11. The general release is not till April 13, 2021 for the on-premises version and between April 3rd and May 15th 2021, depending on region, for the cloud version. If you are not part of the early release program, please use the [Secret Server 10.9.000033](ss-rn-10-9-000033.md) notes instead.
 
-- [Secret Server 10.11.000063](ss-rn-10-11-000063.md)
+- [Secret Server 10.9.000063](ss-rn-10-9-000063.md)
 - [Secret Server Cloud 2020-10-24 Supplement to 10.9.000002](ssc-rn-2020-10-24.md)
 
 >**Note:** The system requirements last changed with version 10.7.000000. See [that version's release notes](./ss-rn-10-7-000000.md) for details.

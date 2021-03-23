@@ -4,9 +4,9 @@
 
 # Secret Server Download Hashes
 
-## 10.11.000063 (Current Version)
+## 10.9.000063 (Current Version)
 
->**Important:** These hashes are for the early release of 10.11. The general release is not till April 13, 2021 for the on-premises version and between April 3rd and May 15th 2021, depending on region, for the cloud version.
+>**Important:** These hashes are for the early release of 10.11, which is 10.9.000063. The general release is not till April 13, 2021 for the on-premises version and between April 3rd and May 15th 2021, depending on region, for the cloud version.
 
 > **Note:** Calculated on 2021-03-22 16:43:23-04:00.
 
@@ -21,7 +21,6 @@ Version_10_9_000063.zip:
 - SHA1 = a6da7bdee1d5018f050b10317299c8993a6dd14a
 
 - SHA256 = 853de55ba231e37d2a8787e253cfd1037c9c8d3a89fa697cdd425a87c258481d
-
 
 ## Earlier Versions
 
