@@ -7,7 +7,6 @@
 The Secret Server proxy routes SSH and RDP sessions and helps protect the endpoint credentials. There are two configuration options for proxying:
 
 - Proxy through the SS Web application
-
 - Proxy through a distributed engine
 
 > **Note:** To learn more about RDP Proxying, please see [RDP Proxy Configuration](../rdp-proxy-configuration/index.md).
@@ -33,9 +32,7 @@ The Secret Server proxy routes SSH and RDP sessions and helps protect the endpoi
 ### Minimum Hardware
 
 - Intel 3.7 GHz Quad Core
-
 - 16 GB of RAM
-
 - 100 MB/s plus network capability
 
 ### Session Activity

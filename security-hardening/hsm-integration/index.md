@@ -19,7 +19,6 @@ To provide broad support for HSMs, SS supports any HSM that can be configured wi
 Each HSM must provide support for these algorithms through CNG:
 
 - **RSA 4096**: Support for RSA with 4096-bit keys is required. The HSM must also support RSA for encryption and decryption, in addition to signing.
-
 - **PKCS#1 v1.5 Padding**: The HSM must support PKCS#1 v1.5 padding for RSA encryption.
 
 Additionally, closely follow the requirements and recommendations of the HSM vendor for things such as minimum latency, redundancy, and operating environment.

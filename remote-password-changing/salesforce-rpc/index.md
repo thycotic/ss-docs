@@ -17,9 +17,7 @@ In cases where this is not set up correctly, you may see the follow error in the
 Please note:
 
 - Secret Server can only communicate to the following Salesforce default Login URLs: https://test.salesforce.com and https://login.salesforce.com.
-
 - Having the domain URL in the secret will not work and will throw this exception: `Login failed: INVALID_LOGIN: Invalid username, password, security token; or user locked out`. Only those two URLs work.
-
 - There are three required Salesforce configurations:
 
   - Go to **Setup \> Administration \> Users \> Profile**. Choose the user profile. Make sure that **Enabled API** is checked. This option is not available in all versions of Salesforce. Other versions  will not have this enabled by default. Please see this ["Enable API" not available](https://developer.salesforce.com/forums/?id=906F0000000BaW7IAK) article. If this setting is not enabled in salesforce you will get one of these errors: `ERROR: Secret 'Salesforce Test' (Id = 1063) on Site 'EARTH' returned (LoginFailed). Exception: Login failed: API_DISABLED_FOR_ORG: API is not enabled for this Organization` or `Partner,System.Web.Services.Protocols.SoapException: API_DISABLED_FOR_ORG: API is not enabled for this Organization or Partner`.

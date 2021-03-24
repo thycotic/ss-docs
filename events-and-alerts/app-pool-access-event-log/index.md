@@ -14,17 +14,12 @@ The follow permissions are required for the identity configured on the SS applic
 
 **HKEY_LOCAL_MACHINE \> SYSTEM \> CurrentControlSet \> Services \> EventLog**
 
-Applies to key and subkeys
-
-- Read permissions:
-
-  - Query Value
+Applies to key and subkeys$1   - Query Value
   - Enumerate Subkeys
   - Notify
   - Read Control
 
 - Set Value permission
-
 - Create Subkey permission
 
 **HKEY_LOCAL_MACHINE \> SYSTEM \> CurrentControlSet \> Services \> EventLog \> Security**
@@ -34,11 +29,8 @@ Applies to key and subkeys
 Read permissions:
 
 - Query Value
-
 - Enumerate Subkeys
-
 - Notify
-
 - Read Control
 
 **HKEY_LOCAL_MACHINE \> SYSTEM \> CurrentControlSet \> Services \> EventLog \> State**

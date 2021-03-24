@@ -29,11 +29,9 @@ SS's importation feature simplifies integration with legacy systems and allows u
 1. Paste the secrets for importation from MS Excel or a CSV file directly into the text box in the **Import Secrets**  page. The order of the imported fields is based on the template selected. Consider the following:
 
    - Do not include a header line. The field names are determined by the order, not a header line.
-
    - The fields **must** be in this order: `Secret Name`, `AccessKey`, `SecretKey`, `Username`, `SecretId`, and `Trigger`.
 
-   - Secret names must be included, but other text-entry fields can be blank unless the secret template indicates that the text-entry field is required
-
+   - Do not include a header line. The field names are determined by the order, not a header line.
    - Fields containing commas or tabs must be surrounded with double quotation marks
    - If you have to include double quotation marks inside your data, escape all of  them with a `\` character so the importer does not get confused.
 
@@ -84,9 +82,7 @@ The XML file should look like the example below, the comments are for explanatio
 #### Notes
 
 - Leaving the `<Permissions>` tag empty for a folder will cause that folder to inherit permissions from its parent folder.
-
 - Leaving the `<Permissions>` tag empty for a secret will cause it to inherit permissions from its folder.
-
 - To add a line-break within a Notes field use `##BR##`.
 
 > **Note:** Please do **not** edit the XML file with Windows Notepad. Use Notepad++, Visual Studio Code, or Atom to make your edits. Using Notepad increases you chances of importation failure.

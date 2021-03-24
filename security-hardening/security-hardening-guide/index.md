@@ -19,13 +19,9 @@ It is critical to secure your SS implementation. That needs to include a layered
 ### General
 
 - **Keep Windows up-to-date:** Microsoft regularly releases security patches that resolve vulnerabilities in Windows operating systems.
-
 - **Backup at least daily:** Consider your disaster recovery plan. Review the [Business Continuity and Disaster Recovery Planning](http://updates.thycotic.net/link.ashx?SSBusinessContinuity) KBA for more information.
-
 - **Review system log for errors:** Periodically check the system log (Admin > System Log) for recurring errors. Also do so after any upgrades.
-
-- **Whole-disk encryption:** Use whole disk encryption, such as [BitLocker](https://technet.microsoft.com/en-us/library/hh831507(v=ws.11).aspx?f=255&MSPPError=-2147217396), with a trusted platform module (TPM) to prevent those with physical access from removing disks to gain access to your SS application by circumventing OS and application authentication.
-
+- **Backup at least daily:** Consider your disaster recovery plan. Review the [Business Continuity and Disaster Recovery Planning](http://updates.thycotic.net/link.ashx?SSBusinessContinuity) KBA for more information.
 - **Security Hardening Standards:** Consider security hardening standards that apply to either the operating system  or applications, such as IIS or Microsoft SQL. Secret Server is  compatible with CIS Level 1 and CIS Level 2 hardening and has STIG  compatibility.
 
    > **Note:** Attaining full security-hardening standards compatibility is a Thycotic priority.
@@ -37,15 +33,10 @@ On Active Directory domain controllers, there is a set of unsafe default configu
 ### Database
 
 - **Limit access to your Secret Server database:** When you create your SS database, limit access to as few users as possible. We recommend you disable the "sa" account in the SQL instance that contains SS.
-
 - **Limit access to other databases:** When you create a database account for SS, you should ensure it only has access to the SS database.
-
 - **Use Windows Authentication for database access:** Windows authentication is much more secure than SQL authentication. See [Choose an Authentication Mode](http://updates.thycotic.net/link.ashx?UsingWindowsAuthenticationInSQLServer) (TechNet article) for details. To use Windows authentication in SS, you need to create a service account. See the [Using Windows Authentication to access SQL Server](http://updates.thycotic.net/link.ashx?SSWindowsAuthentication) KBA for details.
-
-- **Limit access to your database backups:** Database backups are critical for disaster recovery, but they also carry a risk if someone gains access. The SS database is encrypted, but you should still limit access to ensure maximum security. Limit access to database backups to as few users as possible.
-
+- **Limit access to other databases:** When you create a database account for SS, you should ensure it only has access to the SS database.
 - **Don't share a SQL instance with less secure databases:** Putting the database on a server with less-secure database instances can expose vulnerabilities. For example, an attacker could use SQL injection on another application to access your private SS database. If you intend to put SS on a shared SQL instance, ensure that the other databases are classified internally as sensitive as SS and have similar security controls in place.
-
 - **Review Microsoft's recommendations for SQL security:** See the [Securing SQL Server](https://updates.thycotic.net/links.ashx?SecuringSqlServer) article in Microsoft's documentation.
 
 > **Note:** SS also supports SQL Server Transparent Data Encryption ([TDE](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?redirectedfrom=MSDN&view=sql-server-ver15)) for further protection of the database files. This can have a slight performance impact on the environment and can increase the complexity of the database configuration. Please review this page for more information: [Transparent Data Encryption (TDE)](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/transparent-data-encryption?view=sql-server-ver15).
@@ -53,23 +44,16 @@ On Active Directory domain controllers, there is a set of unsafe default configu
 ### Application Server
 
 - **Use SSL (HTTPS):** We require using Secure Sockets Layer (SSL) encryption to ensure that all communication between the Web browser and SS is secure. We recommend you install a third-party certificate, domain certificate, or self-signed certificate on your website. For information on creating and installing a self-signed certificate, please see the [Installing a Self-Signed SSL/HTTPS Certificate](http://updates.thycotic.net/link.ashx?SSSelfSignedCertificate) KBA.
-
 - **Force SSL (HTTPS):** Even after you install an SSL certificate, users may still be able to access SS through regular HTTP. To that, enable the "Force HTTPS/SSL" option in SS at Admin \> Configuration on the **Security** tab.
-
 - **Limit access to your Secret Server directory**. This contains the SS encryption key, as well as the database connection information (these values are encrypted but remember "defense in depth." Try to grant access to as few users as possible).
-
-- **Limit logon rights to the application server**. Administrators accessing the Application Server directly could attempt to monitor memory in use on the server. SS does several things to protect application memory but the best safeguard is to limit access to the Application Server to as few users as possible.
-
+- **Force SSL (HTTPS):** Even after you install an SSL certificate, users may still be able to access SS through regular HTTP. To that, enable the "Force HTTPS/SSL" option in SS at Admin \> Configuration on the **Security** tab.
 - **Protect your encryption key**. The encryption key for SS is contained in the encryption.config file, which resides in your SS directory. This file is obfuscated and encrypted, but "defense in depth" would require limiting access to the file. [Using DPAPI to encrypt your encryption.config file](#_DPAPI_Encryption) is one option. This will use machine-specific encryption to encrypt the file. Make sure you back up the original file before enabling this option. To further protect the file, you can enable EFS encryption. EFS (Encrypting File System) is a Microsoft technology that allows a user or service account to encrypt files with login passwords. For more details, read [Protecting Your Encryption Key Using EFS](#protecting-your-encryption-key-using-efs) in this same article. The most secure option is to use a Hardware Security Module (HSM) to protect the SS encryption key. For more information see the [HSM Integration Guide](https://updates.thycotic.net/links.ashx?HSMIntegrationGuide).
 
 ### Application Settings
 
 - **Use doublelock for your most sensitive secrets:** DoubleLock is a feature in SS that allows secrets to be protected with additional AES256 encryption keys. Each user gets their own public and private key set when using doublelock. Their private key is protected by an additional password (user-specific, not a shared password) that each user must enter when using doublelock. DoubleLock protects from situations where you accidentally assign someone to the wrong AD group or an attacker gains full access to both your database and Web server - they still will not be able to access doublelocked secrets. For more information, refer to [Using DoubleLock](http://updates.thycotic.net/link.ashx?SSUsingDoubleLock) (KB).
-
 - **Secure the local admin account:** When you create the first user in SS, it is a privileged admin account that you can use when your domain is down. We recommend that you choose a non-obvious name for this account and protect it with a very strong password. This password should be stored in a physical safe with limited access (there is no need to use this account except in emergencies where other accounts are not working if AD is down or some other reason).
-
 - **Review activity reports:** It is a good practice to regularly review the activity and permissions reports. This can help find anomalies in secret permissions and login failures.
-
 - **Use event subscriptions or SIEM to notify of any security anomalies:** Use event subscriptions to send email alerts on various events in the system, and syslog can send events to a SIEM tool for correlation. For example, this could be used to notify administrators if there are failed login attempts or if certain secrets are viewed.
 
 ## Security Hardening Report
@@ -433,11 +417,8 @@ Thus, the access procedure is:
 Additional safeguards included:
 
 - Enabling or disabling "unlimited administration" mode is audited, and a comment should be provided each time it is enabled.
-
 - When "unlimited administration" mode is enabled, a banner appears at the top of every SS page notifying users that their secrets can currently be viewed by an unlimited administrator.
-
 - Event subscription notifications should be set up to send an email to a specified user, group of users, or other email address whenever "unlimited administration" mode is enabled or disabled.
-
 - All actions that are normally audited, such as secret views, edits, or permissions changes, are still audited while "unlimited administration" mode is enabled.
 
 ## Encryption
@@ -459,11 +440,8 @@ To turn on DPAPI encryption of the file, select **Configuration** from the **Adm
 You can use DPAPI while clustering is enabled for SS, however there are a few things to take into consideration:
 
 - Backup the encryption key before using this option, otherwise disaster recovery could prove impossible, should the server fail.
-
 - You must initially transfer the un-encrypted key that DPAPI will encrypt to each SS node.
-
 - You must enable DPAPI for SS by accessing each server locally (browse to SS while on the server it is installed on, and then enable DPAPI encryption).
-
 - During upgrades, to avoid turning off DPAPI, you can copy all files over to secondary nodes *except* for  `database.config` and `encryption.config`.
 
 For more information about clustering SS, see [Setting up Clustering](http://support.thycotic.com/kb/a159/setting-up-clustering.aspx) (KBA).
@@ -609,10 +587,7 @@ By default, SS only allows Cross-Origin Resource Sharing (CORS) to unauthenticat
 ## Additional Resources
 
 - [Secret Server – Security Hardening webinar](http://thycotic.com/community/webinars/past-webinars/)
-
 - [Thycotic Knowledge Base](https://thycotic.force.com/support/)
-
 - [Secret Server Best Practices Guide](https://thycotic.force.com/support/s/article/Best-Practices-Secret-Server)
-
 - [Thycotic.com](http://www.thycotic.com)
 

@@ -85,6 +85,5 @@ When upgrading, after the initial cluster configuration, you do not need to copy
  Two errors that may arise:
 
 - Encryption configs don't match: See [Encryption key doesn't match error](https://thycotic.force.com/support/s/article/Encryption-key-doesnt-match-error?r=3&ui-force-components-controllers-recordGlobalValueProvider.RecordGvp.getRecord=1) (KBA).
-
 - Version does not match: If a secondary node is not properly updated from the primary node after an upgrade, that node will not run because the application version does not match the database. The solution is to copy the application folder (minus the `database.config` or `encryption.config` files) to replace the files on the secondary server.
 

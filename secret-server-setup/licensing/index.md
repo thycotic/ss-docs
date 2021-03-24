@@ -9,7 +9,6 @@
 SS's licensing model allows for scalability and enhanced core functionality in the form of edition enhancements (Professional, Premium Edition) and user packs. Licenses can be purchased for these items as follows:
 
 - **Users:** SS ships with one free single user. Additional user licenses can be purchased through <https://thycotic.com> to expand an installation.
-
 - **Support:** Support licenses allow installed instances of SS to receive all software updates. The number of support licenses and user licenses must be equivalent in order to be eligible for upgrades.
 
 > **Note:** Users must be supported in order to receive technical assistance from the SS support team.
@@ -19,9 +18,7 @@ After installation, the first thing we recommend doing is entering your licenses
 For the Express edition, you have one license to enter. For Professional edition and higher, you have, at minimum:
 
 - An edition license
-
 - A user license
-
 - A support license.
 
 If you purchased additional licenses for sites or distributed engines, you may have more licenses to add.
@@ -67,11 +64,7 @@ If you previously had evaluation licenses and recently purchased SS, you need to
 If you fail to activate, your system is be placed in limited mode, which prevents the following actions:
 
 - AD sync
-
 - Creating and editing secrets
-
 - Importing secrets
-
-- Manual RPC
-
+- Creating and editing secrets
 - Web services (mobile applications)

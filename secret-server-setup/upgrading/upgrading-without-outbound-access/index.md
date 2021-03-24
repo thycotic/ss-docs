@@ -15,9 +15,7 @@
 Secret Server periodically polls our update server to detect updates. If your Secret Server is on an internal network that has no outbound access or goes through a proxy, Secret Server will not be able to perform updates automatically, therefore, outbound access to the below connections on your firewall is needed if you want to perform updates automatically:
 
 - `d36zgw9sidnotm.cloudfront.net:443`
-
 - `updates.thycotic.net:443`
-
 - `updates.thycotic.net:80`
 
 The steps below can be used to perform an upgrade for versions 7.1.000015 and higher. If you have an older version of Secret Server, please contact Thycotic technical support for assistance.

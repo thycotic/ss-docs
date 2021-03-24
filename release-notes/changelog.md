@@ -208,9 +208,6 @@ Created the following topics from Salesforce articles (often including substanti
 Made significant changes to:
 
 - Document Conventions: Added Capitalization section.
-
 - Home page: Incorporated all components from the legacy home page, added other, and generally cleaned up.
-
 - Secret Server Software Development Kit for DevOps: Added introductory material from Support.
-
 - Release Notes: Added material for 10.8.00004.

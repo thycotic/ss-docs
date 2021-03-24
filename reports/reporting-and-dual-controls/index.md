@@ -13,9 +13,6 @@ When enabled a user in the approver group must enter in their credentials before
 Once the approver has entered their credentials, the resource can be accessed. The following resources can have dual control applied.
 
 - **Access Report:** Protects any report from the General tab of the Reports view.
-
 - **Access User Audit Report:** Protects the user audit report for any user.
-
 - **Create Report**: Requires dual control for anytime a user creates a custom report.
-
 - **Secret Session Access:** Requires dual control for any recorded or live sessions for a secret

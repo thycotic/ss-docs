@@ -45,18 +45,13 @@ Session Connector is downloaded separately from SS. Go to [Session Connector Dow
 ### Task 1: Reviewing RDS Server Prerequisites
 
 - Each RDS server should be a 64-bit installation of Windows Server 2012, 2016 or 2019.
-
 - You **MUST** have access to the console session (non-RDP) to install the SSSC integration. This is in case of any of any errors during installation, which may disable RDP access to the server.
-
 - Each RDS server must be domain joined. Configuration of the RDS feature requires being logged in as a domain user.
-
 - Each RDS server needs to have a recent version of the C++ redistributable installed (v14.26.28720 or higher, May 2020):
 
    - Download: https://aka.ms/vs/16/release/vc_redist.x64.exe
-
    - More info: [The latest supported Visual C++ downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
 - Each RDS server needs to have a credential available to manage temporary users.  This credential should be able to create and delete local users and add users to the Remote Desktop Users group. If you plan to use one or more load-balanced clusters of RDS servers, this credential should be a domain user and will be used for all servers inside of a cluster. We recommend one domain user per cluster. This credential will be referred to as the **RDS Credential**
-
 - Each RDS server needs to have the RDS Session Host Windows feature installed. See the next section.
 
 ### Task 2: Setting up RDS Services
@@ -349,15 +344,12 @@ You must create a custom launcher for each combination of and RDS server cluster
 1. Type or set the parameters as follows:
 
    - **Launcher Type:** Session Connector Launcher. This launcher type will not be visible until the Configuration Advanced Setting is enabled.
-
    - **Active:** Ensure this is selected.
 
-   - **Record Keystrokes:** Check to record keystrokes in addition to video on related secrets with session monitoring enabled.
-
+   - **Launcher Type:** Session Connector Launcher. This launcher type will not be visible until the Configuration Advanced Setting is enabled.
    - **Child Launcher Type:** Click to select the launcher type, such as Remote Desktop or PuTTY. This is the real launcher type that runs on the RDS server to connect to the secret.
 
-   - **RDS Server Hostname:** IP or hostname for the RDS server or cluster.
-
+   - **Launcher Type:** Session Connector Launcher. This launcher type will not be visible until the Configuration Advanced Setting is enabled.
    - **RDS Server Port:** Type the port. The default RDP port is TCP 3389.
 
    - **RDS Server Credentials:** Click the **RDS Credentials** link to pick the Secret configured above for credentials that can create and delete local users. If RDS Server Hostname points to a cluster, all servers must be able to use these credentials.

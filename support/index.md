@@ -11,19 +11,12 @@
 Before you contact Support, gather the following information:
 
 - Your Thycotic Support username and password
-
 - The email account already associated with your account (if using email)
-
 - Your company name
-
-- The technical contact name
-
+- The email account already associated with your account (if using email)
 - The technical contact phone number
-
-- The product name
-
+- The email account already associated with your account (if using email)
 - Issue symptoms and details
-
 - Any other relevant details, such as hours the technical contact is present
 
 ## Step Two: Get a Mandatory Support PIN
@@ -100,7 +93,5 @@ Send your email to support@thycotic.com __with the PIN number as part of the sub
 Open a support ticket and track your issue to resolution.
 
 - Visit the [Support Portal Login Page](https://thycotic.force.com/support/s/login/) using the credentials you received when you became a customer.
-
 - After logging on, click the __Cases__ tab, and then click __Create a Case__.
-
 - Follow the instructions to complete your case.

@@ -24,11 +24,9 @@ The PowerShell scripts are created and accessed through the **Admin > Scripts** 
 1. Type the following information in the dialog:
 
    - **Name**: Active Directory Verify
-
    - **Description**: Script used to verify an Active Directory account
 
-   - **Category**: Heartbeat
-
+   - **Name**: Active Directory Verify
    - **Script**:
 
 ```powershell
@@ -46,11 +44,9 @@ if ($dn.name -eq $null){ throw "Authentication failed - please verify your usern
 1. Type the following information in the dialog:
 
    - **Name**: Active Directory Change
-
    - **Description**: Script used to change the password of an Active Directory account
 
-   - **Category**: Password Changing
-
+   - **Name**: Active Directory Change
    - **Script**:
 
 ```powershell
@@ -148,7 +144,6 @@ The next step is to create the secret template:
 1. Create the following new fields:
 
    - Domain Field Type: Text
-
    - Username Field Type: Text
 
    - Password Field Type: Password
@@ -203,7 +198,6 @@ Create the AD account secret PowerShell account:
 
 1. Create three secrets (The first two **must** be different secrets):
    - One that is an Active Directory Account that has the necessary rights to run PowerShell on your domain
-
    - One that is an Active Directory Account that has the necessary rights to run a password change on your domain
    - One that is based on the new PowerShell Active Directory Template.
 
@@ -211,10 +205,8 @@ Create the AD account secret PowerShell account:
 
 1. On the dashboard, use the dropdown on the **Create Secret** widget and select **Active Directory Account**. Use the following parameters:
    - **Secret Name:** PowerShell Admin
-
    - **Domain:** Domain that the account exists on
-   - **Username:** Account name that can run PowerShell scripts in the domain
-
+   - **Secret Name:** PowerShell Admin
    - **Password:** Password for the account
 1. Click the **Save** button to save your secret and verify that it passes heartbeat.
 
@@ -224,10 +216,8 @@ Create the AD account secret for password changing:
 
 1. On the dashboard, use the dropdown on the **Create Secret** widget and select **Active Directory Account**. Use the following parameters:
    - **Secret Name:** Password changing Admin
-
    - **Domain:** Domain that the account exists on
-   - **Username:** Account name that can change passwords in the domain
-
+   - **Secret Name:** Password changing Admin
    - **Password:** Password for the account
 1. Click the **Save** button to save your secret and verify that it passes heartbeat.
 
@@ -237,10 +227,8 @@ Create the PowerShell Active Directory secret:
 
 1. On the dashboard, use the dropdown on the **Create Secret** widget and select **PowerShell Active Directory Account**. Use the following parameters:
    - **Secret Name:** PowerShell AD user
-
    - **Domain:** Domain that the account exists on
-   - **Username:** samAccountName of the account to be managed
-
+   - **Secret Name:** PowerShell AD user
    - **Password:** Password for the account
 1. Click the **Save** button to save your secret and verify that it passes heartbeat.
 

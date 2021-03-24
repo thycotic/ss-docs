@@ -49,7 +49,6 @@ SS can now scan for instance resources in AWS. You can add this ability in the s
 1. Click to select the check boxes for the scanners you desire:
 
    - **AWS Windows Machine Scanner**: This is a machine scanner that scans each region and pulls all of the AWS Windows OS VM instances.
-
    - **AWS Machine (Non-Windows) Scanner**: This is a machine scanner that scans each region and pulls all of the AWS Non-Windows OS VM instances.
 
 1. Click the **Next** button. The Credential Secrets page appears:

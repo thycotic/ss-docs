@@ -29,22 +29,15 @@ The secret needs to have Require Comment or Requires Approval for Access enabled
 ### Configurable Settings
 
 - **Auditing:** The ticket number appears in the audit log and can be queried in reports. If the **View Ticket URL** has been set, the log shows the ticket number as a hyperlink linking to the external ticket system. See the next bullet for more.
-
 - **View Ticket URL Template:** The format of the URL to be used for viewing the ticket. This is placed in the audit log so you can easily view the corresponding ticket from SS. The Ticket URL Format field can be edited on the "Ticketing System Integration" tab of the configuration page. In this field, the \$TICKETID parameter will be replaced by the ticket number that is entered by the user. For example, if you specify the template as `http://myticketingsystem/ticket.aspx?ticketid=$TICKETID`, and a user enters 5125-242 as the ticket number, a link will appear in the audit log to `http://myticketingsystem/ticket.aspx?ticketid=5125-242`.
-
 - **Ticket Number and Reason Options:** This option allows fine-grained control of what the user must enter when Require Comment is enabled and ticket system integration is turned on.
   - **Reason Only Required:** Ticket number is optional, reason is required.
-
-  - **Both Required:** Ticket number and reason are required.
-
-  - **Ticket Number or Reason Required**: Either ticket number or reason must be entered.
-
-  - **Ticket Number Only Required**: Ticket number is required, reason is optional.
+   - **Both Required:** Ticket number and reason are required.
+  - **Reason Only Required:** Ticket number is optional, reason is required.
+   - **Ticket Number Only Required**: Ticket number is required, reason is optional.
 
 - **Ticket Number Format Pattern (Regex):** A regular expression to use for validating the ticket number entered. This can help prevent typos in the number. For details on creating this expression, see the [Setting a Ticket Pattern Regex](#setting-a-ticket-pattern-regex).
-
 - **Ticket Number Label:** The text that displays next to the Ticket Number box on the Comment or Request Access page.
-
 - **Ticket Number Validation Error Message:** The error message to display to the user when their entered ticket number fails the validation pattern regex.
 
 ### Setting a Ticket Pattern Regex

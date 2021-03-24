@@ -13,27 +13,16 @@ These messages are generated and placed on the internal site connector, or backb
 The internal site connector receives and processes messages as a result of numerous actions:
 
 - Bulk Operations
-
 - Generate Password
-
 - Secret Import (CSV and XML)
-
-- Run Heartbeat Now
-
+- Generate Password
 - Run Heartbeat (Scheduled)
-
-- Run Password Change Now
-
+- Generate Password
 - Run Password Change (Scheduled)
-
-- Run Discovery Now
-
+- Generate Password
 - Run Discovery (Scheduled)
-
-- Run AD Sync Now
-
+- Generate Password
 - Run AD Sync (Scheduled)
-
 - Elements of Session Recording
 
 The internal site connector, using the internal hosted bus, is adequate for bulk operations, heartbeat, discovery, and the like, but some SS features, such as a clustered Web server node configuration or session recording, require a scalable messaging solution to boost processing performance. Our choice is [RabbitMQ](https://www.rabbitmq.com/features.html), which is an intermediary messaging broker that can handle large-scale message processing.

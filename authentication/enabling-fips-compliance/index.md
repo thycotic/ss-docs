@@ -61,5 +61,4 @@ Run `iisreset` from the Windows command prompt. IIS resets.
 ## Related Information
 
 - [NIST Cryptographic Module Validation Program Information](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/140val-all.htm#1892)
-
 - [FIPS information for Windows](https://technet.microsoft.com/en-us/library/cc750357.aspx)

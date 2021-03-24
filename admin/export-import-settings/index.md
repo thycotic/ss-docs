@@ -327,7 +327,6 @@ These settings correspond to the Ticket System tab on the Configuration Ticket S
 These settings correspond to the User Experience section on the Configuration General page.
 
 - Application Language 
-
 - Default Date Formats can be found in the tbDateOptions table.
 - Default Time Formats can be found in the tbTimeOptions table.
 - Default New User Roles can be found in the tbRoles table
