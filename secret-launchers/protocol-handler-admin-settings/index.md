@@ -31,9 +31,7 @@ This setting ensures protocol handler will never auto-update itself, even if tol
 Why use GPOs instead of SS?
 
 - GPOs are more resilient, as Windows reapplies settings if they are deleted from the registry. Settings applied through SS have no such resilience.
-
 - GPOs are centrally managed along with other settings for machines in your domain.
-
 - For security reasons, SS's configuration can only be applied during the initial installation of SS. If you change these settings within SS, users must reinstall the program before they will be applied. GPOs do not have this restriction.
 
 ### Configuring GPOs

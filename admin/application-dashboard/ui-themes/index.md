@@ -15,13 +15,9 @@ Secret Server has two categories of user interface (UI) "skins"—the "new UI" a
 Settings and terminology for the two UIs are intertwined in in SS, so some clarification is in order—some definitions:
 
 - **Classic UI**: The original, utilitarian, "90s-looking" interface, which many still prefer. It is sometimes called Secret Server classic.
-
 - **New UI**: The refined, modern-looking interface with enhanced usability and aesthetics.
-
 - **Theme** or **Classic Theme**: A color scheme (skin) for the classic UI. The "real" themes are Secret Server Classic - Blue, Secret Server Classic - Dark, Secret Server Classic - Default (Thycotic green), Secret Server Classic - Gray, and Secret Server Classic - Green. The new UI masquerading as a classic UI theme is called "Secret Server New" (see [Best Practices](#best-practices)).
-
-- **Color Mode**: A color scheme (skin) for the new UI. The color modes are System Default, Light, and Dark. System default means whatever color was chosen on your system for the Windows application default.
-
+- **New UI**: The refined, modern-looking interface with enhanced usability and aesthetics.
 - **Secret Server Classic:** An alternate name for the classic UI. This appears at times in SS.
 
 ### Best Practices
@@ -31,17 +27,13 @@ Settings and terminology for the two UIs are intertwined in in SS, so some clari
 It is easy to get befuddled about settings and terms in the two UIs because:
 
 - Two different terms are used to denote essentially the same thing—*themes* and *color mode*. The former is used for the classic UI and the latter for the new UI.
-
 - You can configure settings for the new UI while in the classic UI. That is, you can set the default color mode while in the classic UI, which does not use color modes. Presumably, this was intended to make it easier to switch back and forth between the two UIs. It also makes it easier to confuse which setting goes with which UI.
-
 - The "My Theme" dropdown list in the "Edit My Preferences" section of the classic UI lists the new UI as one of the themes, which it is not—it is an entirely new UI. This means that *can* use that dropdown to set your default UI to the new UI and switch to it right away (as soon as you click the Save button), but we suggest avoiding that. The dropdown's stated purpose is setting the theme for the classic UI. We recommend not using it to switch from the class UI to the new UI or to set the new UI color mode—do that from the new UI.
 
 To combat that we recommend:
 
 - Most importantly, just remember that themes are for the classic UI and color modes are for the new UI. They both refer to color (and icon) schemes (skins) for their respective interfaces.
-
 - Pick one UI and stick with it. We recommend the new UI.
-
 - If you want to use the classic UI, set your user default theme right after reading this, while this topic is fresh in your mind, and then leave it be.
 
 #### For Admins
@@ -51,7 +43,6 @@ You can set the default theme for new users. With the correct settings chosen by
 We recommend encouraging your users to use the new UI. As an admin, you can limit your users using two settings on the **Admin > Configuration** page:
 
 - **Enable New User Interface As Default for New Users** check box.
-
 - **Allow Users to Select Classic Theme** check box.
 
 You can also control the ability for users to set themes at the role level using the "Allow User to Select Themes" role permission.

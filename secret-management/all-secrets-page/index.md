@@ -13,41 +13,22 @@ Click the root **Secrets** folder in the left menu to see the All Secrets Page.
 You can customize which columns are displayed by clicking the ![image-20200814112939180](images/image-20200814112939180.png) on the right side of the title bar. The sortable columns available are (the ones displayed by default are bolded):
 
 - Auto Change Enabled
-
 - Checked Out
-
 - Checkout Enabled
-
-- Created
-
+- Checked Out
 - Days until Expiration
-
-- Deleted
-
+- Checked Out
 - DoubleLock Enabled
-
-- **Folder**
-
+- Checked Out
 - **Heartbeat**
-
-- Hide Password
-
+- Checked Out
 - Inherits Permissions
-
-- **Last Accessed**
-
+- Checked Out
 - Machine
-
-- **Name**
-
+- Checked Out
 - Notes
-
-- **Out of Sync**
-
+- Checked Out
 - Requires Approval
-
-- Requires Comment
-
+- Checked Out
 - **Secret Template**
-
 - Username

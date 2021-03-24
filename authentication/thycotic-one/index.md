@@ -57,17 +57,11 @@ When editing the options in SS Cloud, you’ll see something like this:
 Here are the available options:
 
 - **Enable Thycotic One Integration:** Turn on to enable Thycotic One functionality. Turn off to completely disable Thycotic One logins and synchronization. Make sure you have an admin account with a working local password.
-
 - **Secret Server Redirect URI:** For informational purposes, this shows the page address to which you are redirected after you have logged in with Thycotic One.
-
 - **Thycotic One Server URL:** The Thycotic One server you have connected to. There is one separate Thycotic One instance in each SS Cloud region.
-
-- **Client ID:** The client ID portion of the Thycotic One server credentials.
-
+- **Secret Server Redirect URI:** For informational purposes, this shows the page address to which you are redirected after you have logged in with Thycotic One.
 - **Client Secret:** Not shown, the client password portion of the credentials.
-
-- **Add New Users to Thycotic One:** When checked, SS accounts will be synchronized with Thycotic One. Adding a user will send them a welcome email, where they can set up their Thycotic One account password and log into SS. When unchecked, users will not be synchronized and no email will be sent. New users will not be able to log in with Thycotic One, unless you click **Sync Now** on the **Admin** > **Configuration** > **Login** page, which will synchronize all active users.
-
+- **Secret Server Redirect URI:** For informational purposes, this shows the page address to which you are redirected after you have logged in with Thycotic One.
 - **Use Thycotic One authentication as the default:** When checked, Thycotic One authentication is used for the REST and SOAP APIs and mobile apps. Users who have logged in with Thycotic One use their Thycotic One account passwords for those activities, rather than their local SS account passwords. When unchecked, they will use their local SS account passwords for those activities.
 
 In Cloud, the server URL, client ID, and client secret cannot be edited—they are set up for you when the instance is provisioned and cannot be changed.

@@ -52,9 +52,7 @@ The output should reflect the newly configured listener with **Enabled : true**
   `(Get-PSSessionConfiguration -Name Microsoft.PowerShell).Permission`
 
 - Sessions are launched by SS under the user's context, which means all the same security controls and policies apply within the session.
-
 - See [Investigating PowerShell Attacks](https://www.fireeye.com/content/dam/fireeye-www/global/en/solutions/pdfs/wp-lazanciyan-investigating-powershell-attacks.pdf) by FireEye for additional security considerations.
-
 - Your environment may already be configured for WinRM. If your server is already configured for WinRM but it is not using the default configuration, you can change the URI to use a custom port or URLPrefix.
 
 ## Configuration (Standalone)

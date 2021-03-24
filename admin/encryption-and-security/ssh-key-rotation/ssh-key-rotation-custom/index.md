@@ -19,17 +19,13 @@ To use our default SSH key rotation commands, the following minimum requirements
 
 - SSH key logins should be enabled on the target using keys in OpenSSH format. A secret can be created with keys in PuTTY format but they will be converted to OpenSSH when the key is rotated.
 - Public keys should be stored in `[~userhome]/.ssh/authorized_keys` (not `authorized_keys2`).
-
 - Grep and Sed should be installed on the target.
-
 - If doing a privileged SSH key rotation, where a privileged user sets the key for another user, the privileged user must have sudo permissions that do not prompt for a password and the permissions to edit the user’s `authorized_keys` file with sudo.
 
 The default command sets have been tested in the following Linux environments:
 
 - CentOS Linux release 7.0.1406
-
 - FreeBSD bsdRadiusServer 9.3-RELEASE-p5 i386
-
 - Linux ubuntu 3.13.0-32-generic
 
 If a system does not meet these requirements or has a different configuration than the tested Linux environments, it may still be possible to do key rotation by modifying the key rotation command sets. The command sets that may need to be edited and the process for doing so are described later in this topic.
@@ -39,13 +35,11 @@ If a system does not meet these requirements or has a different configuration th
 Secret Server includes two secret templates for SSH key rotation: **Unix Account (SSH Key Rotation)** and **Unix Account (Privileged Account SSH Key Rotation)**. The first template changes the password and key on the account using the account's credentials. Use this template if both of the following conditions apply:
 
 - The account is able to change its own password and modify its own `authorized_keys` file.
-
 - The account password and key should only be changed by SS, which will always have the current password and keys.
 
 **Unix Account (Privileged Account SSH Key Rotation)** uses an additional secret to provide the credentials for the connection that performs the password change and key rotation commands. You should use this template if either of the following conditions apply:
 
 - The account is not able to change its own password or modify its own `authorized_keys` file.
-
 - The account password and key may be changed outside of SS, and SS may not have the current account credentials. A privileged account that is able to change the password and `authorized_keys` files of other users will still be able to change the account credentials.
 
 ## Creating a New SSH Key Rotation Secret
@@ -97,15 +91,10 @@ To edit a template, go to **Admin \> Secret Templates**, choose the template you
 You can add, remove, or edit any fields you like, but if you change or replace any of the following fields you will need to update the password changer mapping for the template:
 
 - Machine
-
 - Username
-
 - Password
-
 - Private Key
-
 - Private Key Passphrase
-
 - Public Key
 
 > **Note:** Private key and public key must remain field type "File".
@@ -206,11 +195,8 @@ This will pass the credentials from the first associated secret when prompted by
 ## Troubleshooting
 
 - The SSH Password Changers are targeted to OpenSSH. If using a different SSH library or if the user keys are not in the users `/.ssh/authorized_keys` file you can check the commands used and modify them as appropriate under **Admin \> Remote Password Changing** and clicking **Configure Password Changers**. The password changers used are **SSH Key Rotation** and **SSH Key Rotation Privileged Account**.
-
 - Errors are logged to **Admin \> Remote Password Changing**. Additional logs can be found in the Secret Server directory in the log subfolder. For example: `C:\inetpub\wwwroot\secretserver\log`.
-
 - A change was made to how SSH script variables are named in order to differentiate them from tokens when testing command sets on the Configure Password Changers page. Non-token script variables should begin with an underscore. Anything in the script beginning with a dollar sign not followed by an underscore will be treated as a token and displayed as a field in the test dialog. For example
-
 - - `$USERNAME`  – References the username from the Secret.
   - `$[1]$USERNAME`  – References the username from the first linked Secret.
   - `$_USERNAME`  – References a bash variable defined in the script.

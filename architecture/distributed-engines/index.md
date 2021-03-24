@@ -9,7 +9,6 @@
 This reference architecture is our best practice architecture for Secret Server (SS) Distributed Engines (DEs). The two most common use cases are:
 
 - Distributing work across firewalled networks using the fewest ports possible to help ensure a better network security model
-
 - Separating work tasks away from the Web servers and placing the processing work on other dedicated servers within the Thycotic infrastructure to improve overall performance
 
 Both of these use cases are covered with minimal and best high-availability solutions. The final reference architecture in this collection combines both uses cases with a high availability solution.
@@ -26,29 +25,19 @@ Both of these use cases are covered with minimal and best high-availability solu
 #### General
 
 - SQL Server Standard Edition with basic availability group configuration.
-
 - SQL Server 2012 R2+.
-
 - Use Windows authentication for SQL Server.
-
-- You can use local load balancers for Web server nodes.
-
+- SQL Server 2012 R2+.
 - We require a file-share witness for SQL quorum voting for SQL to stay online during single-node unplanned failures.
-
-- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
-
+- SQL Server 2012 R2+.
 - [Distributed Engine Proxy Configuration](../../networking/ssh-proxy-configuration/index.md).
-
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
 #### Virtual IP or Computer
 
 - ss.company.com: 443 (load balancer)
-
 - ss.company.com: 5671 or 5672 (load balancer)
-
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP.
-
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
@@ -68,13 +57,9 @@ Both of these use cases are covered with minimal and best high-availability solu
 ### Overview
 
 - Minimum-cost HA configuration.
-
 - No shared storage requirement.
-
 - RabbitMQ installed on separate dedicated servers.
-
-- Two DEs for HA of local site, which is included with all licensing models.
-
+- No shared storage requirement.
 - Distributed Engine licenses required for this design:
 
   - Three DE site licenses added (for DMZ, secondary, and cloud Locations), one DE included per site.
@@ -91,29 +76,19 @@ Both of these use cases are covered with minimal and best high-availability solu
 #### General
 
 - SQL Server Standard Edition with basic availability group configuration.
-
 - SQL Server 2012 R2+.
-
 - Use Windows authentication for SQL Server.
-
-- You can use local load balancers for Web server nodes.
-
+- SQL Server 2012 R2+.
 - We require a file-share witness for SQL quorum voting for SQL to stay online during single-node unplanned failures.
-
-- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
-
+- SQL Server 2012 R2+.
 - [Distributed Engine Proxy Configuration](../../networking/ssh-proxy-configuration/index.md).
-
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
 #### Virtual IP or Computer
 
 - ss.company.com: 443 (load balancer)
-
 - ss.company.com: 5671 or 5672 (load balancer)
-
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP.
-
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
@@ -133,15 +108,10 @@ Both of these use cases are covered with minimal and best high-availability solu
 ### Overview
 
 - Minimum-cost HA configuration.
-
 - No shared storage requirement.
-
 - RabbitMQ installed on separate dedicated servers.
-
-- Two DEs for HA of local site, which is included with all licensing models.
-
+- No shared storage requirement.
 - Local site for AD or LDAP, SMTP, SIEM, or RADIUS integration.
-
 - Distributed Engine licenses required for this design:
 
   - Two DE site licenses added (for secret and discovery tasks), one DE included per site.
@@ -149,7 +119,6 @@ Both of these use cases are covered with minimal and best high-availability solu
   - One DE per site license added, which allows for second DE in each DE site for HA.
 
 - Single-site design with no native DR capacity. DR can be provided by VM replication if subnets are spanning locations, otherwise re-IP + DNS changes may be necessary.
-
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
 
 > **Note:** Please see [Secret Server Example Architectures](../secret-server-example-architectures/index.md) for additional design variations.
@@ -159,29 +128,19 @@ Both of these use cases are covered with minimal and best high-availability solu
 #### General
 
 - SQL Server Standard Edition with basic availability group configuration.
-
 - SQL Server 2012 R2+.
-
 - Use Windows authentication for SQL Server.
-
-- You can use local load balancers for Web server nodes.
-
+- SQL Server 2012 R2+.
 - We require a file-share witness for SQL quorum voting for SQL to stay online during single-node unplanned failures.
-
-- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
-
+- SQL Server 2012 R2+.
 - [Distributed Engine Proxy Configuration](../../networking/ssh-proxy-configuration/index.md).
-
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
 #### Virtual IP or Computer
 
 - ss.company.com: 443 (load balancer)
-
 - ss.company.com: 5671 or 5672 (load balancer)
-
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP.
-
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
@@ -209,31 +168,20 @@ Both of these use cases are covered with minimal and best high-availability solu
 #### General
 
 - SQL Server Standard Edition with basic availability group configuration.
-
 - SQL Server 2012 R2+.
-
 - Use Windows authentication for SQL Server.
-
-- Global and local load balancers.
-
+- SQL Server 2012 R2+.
 - We require a file-share witness for SQL quorum voting for SQL to stay online during single-node unplanned failures.
-
-- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
-
+- SQL Server 2012 R2+.
 - [Distributed Engine Proxy Configuration](../../networking/ssh-proxy-configuration/index.md).
-
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
 #### Virtual IP or Computer
 
 - ss.company.com: 443 and rmq.company.com: 5671 or 5672 (two virtual IPs—global load balancer).
-
 - ss-a.company.com: 443 and ss-b.company.com:443 (two virtual IPs—local load balancer).
-
 - rmq-a.company.com: 5671 or 5672 (load balancer) and rmq-b.company.com: 5671 or 5672 (two virtual IPs—local load balancer).
-
-- ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP. May require two virtual IP addresses.
-
+- ss-a.company.com: 443 and ss-b.company.com:443 (two virtual IPs—local load balancer).
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
@@ -266,31 +214,20 @@ Both of these use cases are covered with minimal and best high-availability solu
 #### General
 
 - SQL Server Enterprise Edition with availability group configuration.
-
 - SQL Server 2012 R2+.
-
 - Use Windows authentication for SQL Server.
-
-- Global and local load balancers.
-
+- SQL Server 2012 R2+.
 - We require a file-share witness for SQL quorum voting for SQL to stay online during single-node unplanned failures.
-
-- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
-
+- SQL Server 2012 R2+.
 - [Distributed Engine Proxy Configuration](../../networking/ssh-proxy-configuration/index.md).
-
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
 #### Virtual IP or Computer
 
 - ss.company.com: 443 and rmq.company.com: 5671 or 5672 (two virtual IPs—global load balancer).
-
 - ss-a.company.com: 443 and ss-b.company.com: 443 (two virtual IPs—local load balancer).
-
 - rmq-a.company.com: 5671 or 5672 (load balancer) and rmq-b.company.com: 5671 or 5672 (two virtual IPs—local load balancer).
-
-- ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP. May require two virtual IP addresses.
-
+- ss-a.company.com: 443 and ss-b.company.com: 443 (two virtual IPs—local load balancer).
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
@@ -324,31 +261,20 @@ Both of these use cases are covered with minimal and best high-availability solu
 #### General
 
 - SQL Server Enterprise Edition with availability group configuration.
-
 - SQL Server 2012 R2+.
-
 - Use Windows authentication for SQL Server.
-
-- Global and local load balancers.
-
+- SQL Server 2012 R2+.
 - We recommend a file-share witness for SQL quorum voting. We recommend a cloud witness or DFSR share for witness configuration. This can handle the failure of both SQL Server nodes in the primary location.
-
-- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
-
+- SQL Server 2012 R2+.
 - [Distributed Engine Proxy Configuration](../../networking/ssh-proxy-configuration/index.md).
-
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
 #### Virtual IP or Computer
 
 - ss.company.com: 443 and rmq.company.com: 5671 or 5672 (two virtual IPs—global load balancer).
-
 - ss-a.company.com: 443 and ss-b.company.com: 443 (two virtual IPs—local load balancer).
-
 - rmq-a.company.com: 5671 or 5672 (load balancer) and rmq-b.company.com: 5671 or 5672 (two virtual IPs—local load balancer).
-
-- ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP. May require two virtual IP addresses.
-
+- ss-a.company.com: 443 and ss-b.company.com: 443 (two virtual IPs—local load balancer).
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
@@ -381,31 +307,20 @@ Both of these use cases are covered with minimal and best high-availability solu
 #### General
 
 - SQL Server Enterprise Edition with availability group configuration.
-
 - SQL Server 2012 R2+.
-
 - Use Windows authentication for SQL Server.
-
-- Global and local load balancers.
-
+- SQL Server 2012 R2+.
 - We recommend a file-share witness for SQL quorum voting. We recommend a cloud witness or DFSR share for witness configuration. This can handle the failure of both SQL Server nodes in the primary location.
-
-- [Distributed Engine Ports](../../networking/secret-server-ports/index.md).
-
+- SQL Server 2012 R2+.
 - [Distributed Engine Proxy Configuration](../../networking/ssh-proxy-configuration/index.md).
-
 - [SQL Quorum Ports](http://dsfnet.blogspot.com/2013/04/windows-server-clustering-sql-server.html).
 
 #### Virtual IP or Computer
 
 - ss.company.com: 443 and rmq.company.com: 5671 or 5672 (two virtual IPs—global load balancer).
-
 - ss-a.company.com: 443 and ss-b.company.com: 443 (two virtual IPs—local load balancer).
-
 - rmq-a.company.com: 5671 or 5672 (load balancer) and rmq-b.company.com: 5671 or 5672 (two virtual IPs—local load balancer).
-
-- ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP. May require two virtual IP addresses.
-
+- ss-a.company.com: 443 and ss-b.company.com: 443 (two virtual IPs—local load balancer).
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP

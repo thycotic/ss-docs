@@ -13,7 +13,6 @@ Password changing, privileged password changing, and running heartbeats are avai
 During password changing, you can disable or remove old keys through settings available in the advanced configuration:
 
 - `<add key="ShouldDeletePreviousKey" value="true" />`
-
 - `<add key="ShouldInactivatePreviousKey" value="true" />`
 
 > **Important:**  Altering advanced settings can significantly impact the performance and behavior of SS, so there is no direct link anywhere in SS to the Advanced Settings page. If you need to change any advanced setting (as mentioned in this guide), please contact Thycotic Technical Support.
@@ -37,21 +36,15 @@ In addition, an Amazon IAM key secret must be associated with an Amazon IAM cons
 Privileged Permissions: (those the AWS account needs to change another users' access keys):
 
 - `iam:DeleteAccessKey` on resource `arn:aws:iam::<account>:user/<otherUserName>`
-
 - `iam:UpdateAccessKey` on resource `arn:aws:iam::<account>:user/<otherUserName>`
-
 - `iam:CreateAccessKey` on resource `arn:aws:iam::<account>:user/<otherUserName>`
-
 - `iam:ListAccessKeys` on resource `arn:aws:iam::<account>:user/<otherUserName>`
 
 Basic Permissions (those the AWS account needs to change its own access keys):
 
 - `iam:DeleteAccessKey` on resource `arn:aws:iam::<account>:user/${aws:username}`
-
 - `iam:UpdateAccessKey` on resource `arn:aws:iam::<account>:user/${aws:username}`
-
 - `iam:CreateAccessKey` on resource `arn:aws:iam::<account>:user/${aws:username}`
-
 - `iam:ListAccessKeys` on resource `arn:aws:iam::<account>:user/${aws:username}`
 
 ## Permissions Required for Changing the Amazon IAM Console Password
@@ -61,5 +54,4 @@ Basic Permissions (those the AWS account needs to change its own access keys):
 The permissions are:
 
 - Privileged Permission: `iam:UpdateLoginProfile` on `resouce arn:aws:iam::account>:user/<otherUserName>`
-
 - Basic Permission: `iam:ChangePassword` on resource `arn:aws:iam::<account>:user/${aws:username}`

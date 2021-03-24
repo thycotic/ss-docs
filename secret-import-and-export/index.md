@@ -11,7 +11,6 @@
 Secrets are imported or exported as a comma-separated-value (CSV) file or as XML:
 
 - The CSV file is easily read and edited in Excel or other spreadsheet application. The file is grouped by secret template and each cluster of secrets has a header row that contains the template text-entry field names followed by all exported secrets based on that template.
-
 - The XML file is useful for migrating data from one SS installation to another or even from a third-party application to SS.
 
 Secrets are exported in the exact same structure as a secret Import.
@@ -19,9 +18,7 @@ Secrets are exported in the exact same structure as a secret Import.
 This topic has three subtopics:
 
 - [Exporting Secrets](./exporting-secrets/index.md)
-
 - [Importing Secrets](./importing-secrets/index.md)
-
 - [Secret Server Migration Tool](./secret-server-migration-tool/index.md)
 
 ## What Gets Imported or Exported
@@ -29,9 +26,7 @@ This topic has three subtopics:
 Import and export include:
 
 - Folders (and their permissions)
-
 - Secret templates
-
 - Secrets (and their permissions)
 
 The import or export does **not** include users, groups, launchers, configuration, and others.
@@ -43,31 +38,20 @@ The import or export does **not** include users, groups, launchers, configuratio
 The following secret template settings **are** transferred with the export or import:
 
 - Edit requires
-
 - Field slug names
-
 - Hide on view
-
-- Is required?
-
+- Field slug names
 - Keep secret name history
-
-- One-time password settings
-
+- Field slug names
 - Secret template icons
-
-- Type descriptions
-
+- Field slug names
 - Validate password requirements on create or edit
 
 The following secret template settings are **not** transferred:
 
 - Associated secrets
-
 - Launcher settings
-
 - Password changing settings
-
 - Session recording enabled
 
 ## Migrating to and from Secret Server Cloud

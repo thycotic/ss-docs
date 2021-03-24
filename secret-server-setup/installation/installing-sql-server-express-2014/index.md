@@ -13,9 +13,7 @@ SQL Express is a free edition of SQL and is available for use with Thycotic prod
 At the completion of this article you will have:
 
 - Installed a basic stand-alone instance of SQL Server 2014 Express with the minimum features necessary for SQL Server. This includes SQL Server Management Studio and other tools.
-
 - Created a database in SQL for your Thycotic product
-
 - Created a new SQL Server user login for your SQL database
 
 > **Note:** This document uses Thycotic's Secret Server product as example in the instructions, but the same steps apply for Privilege Manager advanced installs.

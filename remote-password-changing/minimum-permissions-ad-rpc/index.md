@@ -9,15 +9,10 @@
 Secret Server requires proper permissions to perform remote password changing. The privileged secret used for remote password changing of an Active Directory (AD) account secret must have the following minimum permissions:
 
 - Change password
-
 - Reset password
-
 - Write lockoutTime
-
-- Write pwdLastSet
-
+- Reset password
 - Write UserAccountControl
-
 - Read all properties on CN=System,CN=Password Settings Container and all child containers or objects, or read all properties on any other fine-grained password policy objects (this is completed through ADSIedit).
 
 ## Setting Permissions

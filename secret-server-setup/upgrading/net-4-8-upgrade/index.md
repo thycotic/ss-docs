@@ -46,7 +46,6 @@ The web node components of SSC are managed directly by Thycotic.
 **Products**
 
 - Secret Server
-
 - Secret Server Cloud
 
 **Required Action**
@@ -56,7 +55,6 @@ Installing .NET Framework 4.8 on servers running web nodes.
 **Impact of Inaction**
 
 - SS upgrade will request confirmation before upgrading if any connected distributed engines do not have .NET Framework 4.8 installed. Any distributed engines which do not have .NET framework 4.8 installed will fail to upgrade.
-
 - SSC will be upgraded whether or not distributed engines have .NET Framework 4.8 installed. Any distributed engines which do not have .NET framework 4.8 installed will fail to upgrade.
 
 **Notes**
@@ -68,15 +66,12 @@ Installing .NET Framework 4.8 after the upgrade will allow a distributed engine 
 **Products**
 
 - Secret Server
-
 - Secret Server Cloud
 
 **Required Action**
 
 - New installations of the protocol handler on Windows systems after the December release will require .NET Framework 4.8 installed.
-
 - Fully patched Windows 10 systems should already have the framework in place.
-
 - Customers with existing deployments of protocol handler have two options:
 
   - Ensure that .NET Framework 4.8 is installed on all endpoints using protocol handler before the SS or SSC update.
@@ -102,7 +97,6 @@ None.
 **Products**
 
 - Secret Server
-
 - Secret Server Cloud
 
 **Required Action**
@@ -122,7 +116,6 @@ None.
 **Products**
 
 - Secret Server
-
 - Secret Server Cloud
 
 **Required Action**
@@ -168,9 +161,7 @@ The following components of SS and SSC are not affected by this change:
 ## Determining Your .NET Framework Version
 
 - Microsoft provides several methods to determine the installed versions of .NET Framework. Please see [How to: Determine which .NET Framework versions are installed](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed).
-
 - See [.NET Framework versions and dependencies](https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies) for additional Microsoft .NET Framework version information.
-
 - You can run the following command at a Windows PowerShell prompt to view currently installed .NET Framework version number:
   `(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").version`
  
@@ -181,7 +172,5 @@ The following components of SS and SSC are not affected by this change:
 ## Installing .NET Framework 4.8
 
 - Microsoft .NET Framework 4.8 is available as a recommended update for customers using Windows Update, Windows Server Update Services (WSUS), and Microsoft Update (MU) Catalog. Please see [.NET Framework 4.8 is available on Windows Update, WSUS and MU Catalog](https://devblogs.microsoft.com/dotnet/net-framework-4-8-is-available-on-windows-update-wsus-and-mu-catalog/).
-
 - Microsoft provides a Web installer for .NET Framework 4.8. Please see [Download .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48).
-
 - Microsoft also provides an offline installer package for .NET Framework 4.8. Please see [Microsoft .NET Framework 4.8 offline installer for Windows](https://support.microsoft.com/en-us/help/4503548/microsoft-net-framework-4-8-offline-installer-for-windows).

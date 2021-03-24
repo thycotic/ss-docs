@@ -11,23 +11,16 @@ This document discusses using an SSH terminal with Thycotic Secret Server (SS).
 ## Feature Summary
 
 - Connect using SSH to a terminal hostname and port to log in to terminal and run commands
-
 - Display custom terminal banner after successful connection
-
 - Display available commands on successful login (display again with `man` command)
-
-- Log in to the terminal as a SS user (SSH Proxy must be enabled)
-
+- Display custom terminal banner after successful connection
 - Can set an inactivity timeout. Can be set to *disabled* or with a two-minute minimum.
-
 - Start a terminal connection and launch in a single line. For example:
 
   `ssh <user>@<ss_ip> -t launch <secret_id>`
 
 - Use two-factor authentication (2FA) for access (optional)
-
 - Use the SSH terminal interface to SS for viewing and launching secrets
-
 - Use these commands:
 
   - `Man` command to display detailed command description
@@ -36,7 +29,6 @@ This document discusses using an SSH terminal with Thycotic Secret Server (SS).
   - `Launch` command to begin a Proxy launch session with specified secret ID
 
 - Use up and down keystrokes for command history
-
 - Supports custom SSH command menus and session recording logging
 
 ## Requirements
@@ -44,7 +36,6 @@ This document discusses using an SSH terminal with Thycotic Secret Server (SS).
 ### System Requirements
 
 - Secret Server 10.7.000000
-
 - Secret Server **Professional** or **Platinum** Edition license
 
 ### Recommended
@@ -56,11 +47,8 @@ This document discusses using an SSH terminal with Thycotic Secret Server (SS).
 Admin:
 
 - Administer Configuration
-
 - Administer Proxying Configuration
-
 - View Configuration
-
 - View Proxying Configuration
 
 User: View Secret
@@ -277,63 +265,34 @@ Ignore subfolders in the search. Subfolders are included by default.
 ID of the secret field to limit the search to. Potential fields, which vary by secret template, can include the following examples:
 
 - Address1
-
 - Address2
-
 - Address3
-
-- Blog
-
+- Address2
 - CardType
-
-- City
-
+- Address2
 - Combination
-
-- Contact Number
-
+- Address2
 - Country
-
-- Email Address
-
+- Address2
 - ExpirationDate
-
-- Fax
-
+- Address2
 - First Name
-
-- FullName
-
+- Address2
 - Home Phone
-
-- Last Name
-
+- Address2
 - Machine
-
-- Mobile Phone
-
+- Address2
 - Notes
-
-- Number
-
+- Address2
 - Password
-
-- Pin
-
+- Address2
 - PinCode
-
-- Server
-
+- Address2
 - SSN
-
-- State
-
+- Address2
 - Username
-
-- Website
-
+- Address2
 - Work Phone
-
 - Zip
 
 > **Note:** These fields match those on the REST API endpoint.
@@ -385,9 +344,7 @@ Find a list of secrets matching “admin” in any field. Return 25 results, whi
 #### Description
 
 - Displays information on a secret. The available information depends on the secret's template. *cat* is short for *concatenate*.
-
 - Catches access errors, such as “comment required” or “requires approval”, and displays them on the terminal
-
 - Audits "view" comments.
 
 
@@ -443,11 +400,8 @@ Add an "access request" comment to the secret with the ID 26. Assign the request
 #### Description
 
 - Creates a proxy connection to the machine
-
 - Secret must have proxy enabled
-
 - Supports launch from secrets with private keys
-
 - Audits launches
 
 
@@ -676,7 +630,6 @@ SSH key pairs allow users to authenticate to SS terminal without using a passwor
 ### Limitations
 
 - Currently users can only authenticate to SS using SSH keys by using SS’s SSH terminal.
-
 - Only PuTTY and OpenSSH keys can be generated.
 
 
@@ -685,9 +638,7 @@ SSH key pairs allow users to authenticate to SS terminal without using a passwor
 There are three requirements for enabling Public SSH Keys:
 
 - SSH Proxy is enabled in SS.
-
 - SSH Terminal is enabled in SS.
-
 - SSH key integration is enabled in SS’s Configuration \> Login settings. To do so:
     1. **Unix  Authentication Method**: choose **Public Key only**, **Password or  Public Key** or **Password and Public Key** to enable SSH key pair authentication.
 1. Once done, the admin can also set an optional expiration time frame for the public SSH keys, which applies to all users.

@@ -59,15 +59,10 @@ Depending on how your administrators configured SS, you can log on with either y
 _Secrets_ are individually named packets of sensitive information, such as passwords. Secrets address a broad spectrum of secure data, each type represented and created by a _secret template_ that defines the parameters of all secrets based on it. Secrets are very powerful and provide many ways of controlling and protecting their data, such as:
 
 - Ensuring passwords are long, complex, and frequently changed.
-
 - Relieving users of having to remember numerous complex passwords or when to change them. You only need to remember your password to access SS. All of your secret passwords are managed for you.
-
 - Automatically changing passwords at set intervals with no user intervention.
-
-- Defining who has access to the secret.
-
+- Relieving users of having to remember numerous complex passwords or when to change them. You only need to remember your password to access SS. All of your secret passwords are managed for you.
 - Ensuring the person accessing SS or a secret is indeed you.
-
 - Recording who actually accessed a secret.
 
 All secret text-entry field information is securely encrypted before being stored in the database, including a detailed audit trail for access and history.
@@ -75,13 +70,9 @@ All secret text-entry field information is securely encrypted before being store
 Some important basic information about secrets:
 
 - [Viewing Secrets](../secret-management/procedures/viewing-secrets/index.md) (includes checking expiration and history)
-
 - [Creating Secrets](../secret-management/procedures/creating-secrets/index.md)
-
 - [Secret Configuration Options](../secret-management/secret-configuration-options/index.md)
-
-- [Editing Secrets](../secret-management/procedures/editing-secrets/index.md) (includes manually changing passwords, instead of waiting for expiration)
-
+- [Creating Secrets](../secret-management/procedures/creating-secrets/index.md)
 - [Deleting and Undeleting Secrets](../secret-management/procedures/deleting-and-undeleting-secrets/index.md)
 
 ## Secret Folders
@@ -89,7 +80,6 @@ Some important basic information about secrets:
 *Secret folders* allow you to create containers of secrets based on your needs. They help organize your customers, computers, regions, and branch offices, to name a few. Folders can be nested within other folders to create sub-categories for each set of classifications. Secrets can be assigned to these folders and sub-folders. Folders allow you to customize permissions at the folder level, and all secrets within can inherit the folder's permissions. Setting permissions at the folder level ensures future secrets placed in that folder have the same permissions, simplifying management across users and groups.
 
 - [Creating Folders](../secret-folders/managing-folders/creating-folders/index.md)
-
 - [Adding and Moving Secrets Between Folders](../secret-folders/managing-folders/adding-and-moving-secrets-between-folders/index.md)
 
 ## Using Secrets on Websites (Web Password Filler)

@@ -9,11 +9,8 @@
 This article lists ports typically used in Secret Server. Please note the following:
 
 - The RPC Dynamic Port ranges are a range of ports utilized by Microsoft’s Remote Procedure Call (RPC) functionality. This port range varies by operating system. For Windows Server 2008 or greater, this port range is 49152 to 65535 and this entire port range must be open for RPC technology to work. The RPC range is needed to perform Remote Password Changing since Secret Server will need to connect to the computer using DCOM protocol.
-
 - The range can vary separately for Exchange servers. For more information about changing the RPC port range, see the related Microsoft’s Knowledge Base article on how to configure RPC dynamic port allocation to work with firewalls.
-
 - To see your ipv4 dynamic range on a given machine, type `netsh int ipv4 show dynamicport tcp` in the command line.
-
 - To specify a specific port on your environment that Secret Server will communicate to, see the related article on enabling WMI ports on Windows client machines
 
 ## Port Listing

@@ -24,7 +24,6 @@ Applies to key and subkeys
   - Read Control
 
 - Set Value permission
-
 - Create Subkey permission
 
 **HKEY_LOCAL_MACHINE \> SYSTEM \> CurrentControlSet \> Services \> EventLog \> Security**
@@ -34,11 +33,8 @@ Applies to key and subkeys
 Read permissions:
 
 - Query Value
-
 - Enumerate Subkeys
-
 - Notify
-
 - Read Control
 
 **HKEY_LOCAL_MACHINE \> SYSTEM \> CurrentControlSet \> Services \> EventLog \> State**

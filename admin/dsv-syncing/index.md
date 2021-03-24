@@ -138,7 +138,6 @@ Use a POST to `/api/v1/devops-secrets-vault/sync` to manually trigger a push to 
 List DSV tenants registered to SS by running a GET to `/api/v1/devops-secrets-vault/tenant`. Query parameters accepted:
 
 - `filter.nameSearch=`
-
 - `filter.includeInactive=`
 
 ### Getting a DevOps Secret Vault Tenant’s Details
@@ -155,9 +154,7 @@ View a list of secret sync statuses by running a GET to
 `/api/v1/devops-secrets-vault/sync/status`. Query parameters accepted:
 
 - `filter.secretId=`
-
 - `filter.includeInactive=`
-
 - `filter.tenantId=`
 
  

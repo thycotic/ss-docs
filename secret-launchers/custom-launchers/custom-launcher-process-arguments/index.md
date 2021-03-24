@@ -7,11 +7,8 @@
 Custom launcher process arguments can use a combination of parameters from:
 
 - A field value from the secret.
-
 - A field value from a linked secret.
-
 - User input obtained from a prompt prior to launching.
-
 - `$Host` and `$Port` (for use with a proxied SSH process)
 
 > **Note:** For more information, see the [Dependency Token List](../../../api-scripting/dependency-tokens/index.md).

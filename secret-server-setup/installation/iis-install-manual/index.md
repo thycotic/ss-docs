@@ -13,9 +13,7 @@ Thycotic products recommend the following roles and features to be installed on 
 ### Roles
 
 - Web Server (IIS)
-
 - Web Server (IIS)\Web Server
-
 - Web Server (IIS)\Web Server\Common HTTP Features
 
   - Default Document

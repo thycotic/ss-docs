@@ -11,9 +11,7 @@ In some cases, a PowerShell script may need to access resources outside of a Sec
 Some scenarios requiring CredSSP:
 
 - The script needs to query or update a value in Active Directory.
-
 - The script needs to query or update a value in a SQL Server instance.
-
 - The script is used as part of extensible discovery for locating accounts or machines on a different domain or non-domain joined environment.
 
 ## Enabling CredSSP for WinRM in Secret Server

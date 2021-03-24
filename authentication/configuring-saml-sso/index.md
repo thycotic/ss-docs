@@ -123,11 +123,8 @@ IDP setup varies by provider. Click one of the following links for instructions 
 > **Note:** You must be logged in to access these links.
 
 - [How To Set Up Okta For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OKTA-for-SAML) (KBA)
-
 - [How To Set Up OneLogin For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OneLogin-for-SAML) (KBA)
-
 - [How To Set Up Azure AD For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-Azure-AD-for-SAML) (KBA)
-
 - [How To Set Up ADFS For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-ADFS-for-SAML) (KBA)
 
 > **Note:** The username returned from the IDP to SS within the SAML Response/Assertion's subject statement must match the desired format. The format of the username passed depends upon how the user was created within SS.

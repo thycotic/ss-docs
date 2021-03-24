@@ -15,13 +15,9 @@ Basic usage:
 Important considerations:
 
 - Always pass `-q -s` to `ThycoticSetup.exe` and then pass in your parameters or switches.
-
 - There are two stages to the installer. The first (optional) stage is to install the prerequisites such as IIS and .NET 4.8. Then in a second stage, once all required pre-reqs are present, you can install Secret Server (SS) or Privilege Manager (PM).
-
 - The installer UI performs additional validation steps, such as testing the database connection information, that a silent CLI one does not. Thus, this install can fail if you provide incorrect settings.
-
-- The installer checks to see if SS and PM are already installed by default. It will install them if either is not found. If you would like to specify which applications to install, you must use the `/nodetect` switch to avoid the automatic detection, so the `InstallSecretServer` and `InstallPrivilegeManager` settings are respected.
-
+- There are two stages to the installer. The first (optional) stage is to install the prerequisites such as IIS and .NET 4.8. Then in a second stage, once all required pre-reqs are present, you can install Secret Server (SS) or Privilege Manager (PM).
 - Due to how MSI installers work, if you need to pass in parameters that contain spaces, use the special `CMDLINE` parameter, using extra double quotes to delineate each parameter. For instance:
 
   `ThycoticSetup.exe -q -s PARAM1=some_string PARAM2=1234 CMDLINE=" PARAM3=""Something with a space"" PARAM 4=""Another value with spaces"" "`
@@ -31,7 +27,6 @@ Important considerations:
   - Any parameters sent inside of `CMDLINE` are treated as strings. Numerical parameters inside of `CMDLINE` are ignored.
 
 - Be aware of how you call `ThycoticSetup.exe` and what special characters need escaping in your shell. This includes passwords containing symbols. What is required is shell dependent. For example, running the installer from PowerShell (or a .ps1 script) rather than an older command prompt (or a .bat file) would require escaping a different set of special symbols.
-
 - We recommend using the `/l <logfile>` option to create a log file, which you can use to verify your parameters are correctly passed to the installer. This is especially useful when using `CMDLINE` for parameters with spaces, which is prone to mistakes. 
 
   > **Note:** For security, parameters involving passwords are not logged.

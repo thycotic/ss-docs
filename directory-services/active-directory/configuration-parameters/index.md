@@ -9,13 +9,9 @@ Active Directory configuration can be enabled by a user with the Administer Acti
 The configuration screen offers several options:
 
 - **Enable Active Directory Integration:** Enable or disable the Active Directory Integration feature.
-
 - **Enable Integrated Windows Authentication:** Enable or disable the Windows integrated authentication feature.
-
 - **Enable Synchronization of Active Directory:** Enable or disable the automatic synchronization of the selected Synchronization Groups from Active Directory. If you have manually added users and will not use the Synchronization group, do not enable this setting or manual users can be locked out.
-
-- **Synchronization Interval for Active Directory:** Set the interval that SS synchronizes its users and groups with the Active Directory.
-
+- **Enable Integrated Windows Authentication:** Enable or disable the Windows integrated authentication feature.
 - User Account Options:
 
    - **Users are enabled by default (Manual):** SS users are automatically be enabled when they are synced as new users from Active Directory. If they were disabled explicitly in SS, they are not be automatically re-enabled. If creating a new user causes the user count to exceed your license limit, the user is created as disabled.
