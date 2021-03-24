@@ -15,39 +15,24 @@ To edit the custom commands, click on the **Edit** Commands button. This sets th
 Prepend a `$` to any text-entry field name to access that field. For example, to echo the notes value for a secret, you would use this command: `echo $Notes`.  Commonly accessed fields include:
 
 - `$USERNAME` The username text-entry field mapped in RPC on the secret template.
-
 - `$CURRENTPASSWORD` The password text-entry field mapped in RPC on the secret template.
-
 - `$NEWPASSWORD` The next password (filled in Next Password textbox or auto-generated).
-
-- `$PRIVATEKEY` The private key text-entry field mapped in RPC on the secret template.
-
+- `$CURRENTPASSWORD` The password text-entry field mapped in RPC on the secret template.
 - `$NEWPRIVATEKEY` The next private key (filled in Next Private Key text box or auto-generated).
-
-- `$CURRENTPUBLICKEY` The public key text-entry field mapped in RPC on the secret template.
-
+- `$CURRENTPASSWORD` The password text-entry field mapped in RPC on the secret template.
 - `$NEWPUBLICKEY` The next public key (generated from the next private key).
-
-- `$PASSPHRASE` The passphrase text-entry field mapped in RPC on the secret template.
-
+- `$CURRENTPASSWORD` The password text-entry field mapped in RPC on the secret template.
 - `$NEWPASSPHRASE` The next passphrase (filled in Next Private Key Passphrase text box or auto-generated).
 
 ## Associated Reset Secrets
 
 - `$[1]$` Adding this prefix to any text-entry field targets the associated reset secret with order 1.
-
 - `$[1]$USERNAME` The mapped username of the associated secret, identified by order. Can also reference any other property on the associated secret. Common examples include:
-
 - `$[1]$PASSWORD`
-
-- `$[1]$CURRENTPASSWORD`
-
+- `$[1]$USERNAME` The mapped username of the associated secret, identified by order. Can also reference any other property on the associated secret. Common examples include:
 - `$[1]$PRIVATE KEY`
-
-- `$[1]$PRIVATE KEY PASSPHRASE`
-
+- `$[1]$USERNAME` The mapped username of the associated secret, identified by order. Can also reference any other property on the associated secret. Common examples include:
 - `$[SID:105]` Adding this prefix to any text-entry field targets the associated reset secret with a secret Id of 105.
-
 - `$[SID:105]$USERNAME` The mapped username of the associated secret, identified by secret id. Like referencing an associated secret by order, referencing by secret id can also access any text-entry field on the secret by name.
 
 > **Note:** Both the mapped text-entry fields and secret text-entry field names can be used.
@@ -55,9 +40,7 @@ Prepend a `$` to any text-entry field name to access that field. For example, to
 ## Check-Result Commands
 
 - `$$CHECKCONTAINS <text>` Checks that the response from last command contains `<text>`.
-
 - `$$CHECKFOR <text>` Checks that the response from the last command equals `<text>`.
-
 - `$$CHECKNOTCONTAINS <text>` Checks that the response from last command does not contain `<text>`.
 
 > **Note:** If these conditions are not met the process fails and immediately returns a result.

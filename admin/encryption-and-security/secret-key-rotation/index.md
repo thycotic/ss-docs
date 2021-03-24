@@ -25,9 +25,7 @@ Note: To learn more about maintenance mode, see the [Maintenance Mode FAQ](../..
 Maintenance mode takes five minutes to enable before secret key rotation is started. The processing time for secret key rotation varies greatly, depending on the following factors:
 
 - Total number of secrets
-
 - Total number of secrets with file attachments and the size of those file attachments
-
 - Hardware configuration:
   - Number of CPUs and cores
   - Memory size

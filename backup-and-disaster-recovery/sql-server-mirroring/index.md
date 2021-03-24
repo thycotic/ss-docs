@@ -7,9 +7,7 @@
 This topic describes the process of configuring Secret Server (SS) and SQL Server for a high-availability environment using Mirroring. The contents of this paper include:
 
 - Configuring SQL Server 2016 for database mirroring with a failover partner and a witness
-
 - The encryption used between the primary database and the mirror database
-
 - Configuring SS to use mirroring to achieve high availability
 
 > **Note:** This topic uses SQL Server 2016, but it is very similar to earlier versions.
@@ -19,9 +17,7 @@ This topic describes the process of configuring Secret Server (SS) and SQL Serve
 Three different SQL Server instances are required to implement this scenario:
 
 - **Primary database:** The main application database
-
 - **Mirror database:**  Replicates all of the data on the primary database in a transactional manner
-
 - **Witness database:** Monitors the health of the primary and mirror databases and initiates failover if necessary
 
 In the setup described here, mirroring operates in synchronous mode, which means that a transaction does not commit on the primary database until it has committed on the mirror.

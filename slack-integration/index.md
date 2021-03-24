@@ -11,7 +11,6 @@ Secret Server now integrates with Slack, allowing for notifications and workflow
 To use Slack integration, you must:
 
 - Have the custom URL configuration options set, can be an internal or external domain.
-
 - Have an external domain name with DNS and routing to your Secret Server instance, which can be anything. We use this in the Slack configuration pages below.
 - Be an owner of your company’s Slack installation to continue. This is very important.
 

@@ -13,7 +13,6 @@ Like the built in launchers, custom launchers run on the users machine not on th
 There are three types of custom launchers to choose from:
 
 - **Process:** Launch a process on the client machine that connects directly to the target system from the client.
-
 - **Proxied SSH Process:** Launch a process on the client machine that proxies its connection to the target system through SS. This applies to an SSH client other than PuTTY (which is a built-in launcher), for example, SecureCRT.
 
     > **Note:** See [Configuring SSH Proxies for Launchers](../launcher-configuration-and-support/configuring-ssh-proxies-for-launchers/index.md).

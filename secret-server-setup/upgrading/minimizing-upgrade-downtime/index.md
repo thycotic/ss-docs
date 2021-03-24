@@ -25,11 +25,8 @@ We recommend that you have a QA or test environment mirroring your production en
 The upgrade procedure requires that you do these steps outside of the SS install.
 
 - Download the upgrade package (step 1)
-
 - Backup your database (step 2)
-
 - Obtain the database upgrade script from support (step 4)
-
 - Backup any customized web.config or web-appsettings.config files (step 10)
 
 #### Procedure
@@ -110,19 +107,14 @@ The manual rolling upgrade provides a way to upgrade SS with little to no downti
 The administrator role needs the following permissions:
 
 - Administer Configuration
-
 - Administer Nodes
-
 - Administer Backup
 
 In addition, the role:
 
 - Needs a database login with permission to change the database
-
 - Requires access with permission to update files on web servers
-
 - Must go through the current upgrade process
-
 - Must not turn on maintenance mode until needed
 
 #### Procedure
@@ -345,16 +337,10 @@ There is a new setting called "Manual Upgrade: Allow version mismatch while in M
 To support the manual rolling upgrade, there is a new audit type—ManualUpgrade. Its audits are stored in the tbAudit table and record the following actions:
 
 - CANCEL
-
 - COMPLETED
-
 - GENERATE DB SCRIPT
-
-- GENERATE UPGRADE ZIP
-
+- COMPLETED
 - STAGING TEST
-
-- STARTED
-
+- COMPLETED
 - VERIFY DELTAS
 

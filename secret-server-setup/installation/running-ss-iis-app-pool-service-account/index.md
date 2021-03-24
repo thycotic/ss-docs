@@ -122,7 +122,6 @@ Grant access:
  Following the steps below, you give the service account "Modify" access to **two** folders:
 
 - `C:\Windows\TEMP`
-
 - The folder where your Thycotic product’s application files are located, such as  `C:\inetpub\wwwroot\SecretServer`
 
 Procedure (for each folder):
@@ -164,7 +163,6 @@ Procedure (for each folder):
 The following settings are required for Thycotic Secret Server to function:
 
 - “Log on as a batch job”
-
 - “Impersonate a client after authentication”
 
 You can adjust these settings either at the **Domain** level using group policy or locally on your IIS Web server using the Local Security Policy Console. See [User Rights Assignment](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-rights-assignment) to learn more.

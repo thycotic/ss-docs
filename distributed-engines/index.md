@@ -19,9 +19,7 @@ You can install a DE in a remote site and allow it to operate many functions. Co
 DEs support heartbeat, Remote Password Changing (RPC), and discovery. A DE is composed of site connectors, sites, and engines:
 
 - An **engine** is a Windows service that does the actual work, such as password changing, heartbeat, Discovery, and more. Each engine belongs to a site.
-
 - A **site** can be thought of as a bucket of work items for a particular network area. Each engine is assigned to a single site, but each site can include multiple engines, significantly increasing throughput.
-
 - A **site connector** is a Windows service that holds the work items for a number of sites. The site connector can be either [RabbitMQ](https://www.rabbitmq.com/) or MemoryMQ (a built-in service developed by Thycotic). Each site can only be assigned to a single site connector, but you can have multiple site connectors running on separate machines, each storing work items for multiple sites. Those sites, in turn, distribute the work items among multiple engines. The ability to add new Site Connectors, Sites, and Engines as needed makes Distributed Engine a highly-scalable solution.
 
 > **Note:** For the highest scalability and reliability, Thycotic recommends using RabbitMQ. MemoryMQ is an easier but less capable alternative for customers who do not need many engines or sites.
@@ -41,16 +39,12 @@ DEs have two configurable ports: one for connecting to the site connector, and o
 Default ports:
 
 - RabbitMQ: 5672 (non-SSL), 5671 (SSL)
-
 - MemoryMQ: 8672 (non-SSL), 8671 (SSL)
-
 - Secret Server: existing IP address bindings or custom port over TCP. We reserve one port for legacy upgrades, usually port 9999.
-
 - Secret Server Cloud:
 
     - 443 (Web sockets—the default)
-
-    - 5671 and 5672 (AMQP)
+   - 5671 and 5672 (AMQP)
 
     >**Note:** These ports are used for outbound traffic for engines to communicate with SSC instances. They are set by the "Azure ServiceBus Transport Type" global engine setting.
 
@@ -59,13 +53,9 @@ Default ports:
  Distributed engines have multiple security layers:
 
 - Engines must be approved within SS before they will be given access to a site.
-
 - Work items are encrypted with a site-specific symmetric key prior to sending them to the site connector.
-
 - Communication to the site connector supports SSL and TLS.
-
-- Direct communication from engine to SS uses a public-private key exchange.
-
+- Work items are encrypted with a site-specific symmetric key prior to sending them to the site connector.
 - The engine configuration file is DPAPI encrypted.
 
 For more information about DE security, see the [Distributed Engine Security Guide](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf).
@@ -97,7 +87,6 @@ Below is a summary of the steps required to configure DEs:
 1. Configure and Install the site connector.
 
    - If you plan to use RabbitMQ (recommended), follow the instructions [here](https://thycotic.force.com/support/s/article/How-to-install-RabbitMq). You can find general information on using RabbitMQ Helper to install RabbitMQ can be found in [Thycotic’s GitHub Repository](https://thycotic.github.io/rabbitmq-helper/)
-
    - If you plan to use MemoryMQ, create the site connector record within SS then click the **Download Site Connector Installer** button to get the MSI. Run the MSI on the desired host.
 
 1. Setup sites.

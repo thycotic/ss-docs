@@ -18,95 +18,50 @@ Secret Server includes many pre-configured password changers that are used by Re
  The followings are the current built-in password changers:
 
 -  Active Directory Account
-
 -  Amazon IAM Console Password Privileged Account
-
 -  Amazon IAM Key
-
--  Blue Coat Account Custom (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  Blue Coat Enable Password Custom (SSH)
-
--  Cisco Account Custom (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  Cisco Account Custom (Telnet)
-
--  Cisco Enable Secret Custom (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  Cisco Enable Secret Custom (Telnet)
-
--  ESX/ESXi (API)
-
+-  Amazon IAM Console Password Privileged Account
 -  F5 BIG-IP Root Account (SSH)
-
--  Generic Discovery-Only Credentials
-
+-  Amazon IAM Console Password Privileged Account
 -  Generic ODBC (DataSource)
-
--  HP iLO Account Custom (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  IBM iSeries Mainframe
-
--  Juniper Account Custom (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  LDAP (Active Directory)
-
--  LDAP (DSEE)
-
+-  Amazon IAM Console Password Privileged Account
 -  LDAP (OpendLDAP)
-
--  MySQL Account
-
+-  Amazon IAM Console Password Privileged Account
 -  Office365 *
-
--  Oracle Account
-
+-  Amazon IAM Console Password Privileged Account
 -  Oracle Account (AS SYS)
-
--  Oracle Account (DataSource)
-
+-  Amazon IAM Console Password Privileged Account
 -  PostgreSQL Account (x64)
-
--  PowerShell Script **
-
+-  Amazon IAM Console Password Privileged Account
 -  SAP Account **
-
--  SonicWall NSA Web Admin Account
-
+-  Amazon IAM Console Password Privileged Account
 -  SonicWall NSA Web Local User Account
-
--  SQL Server Account
-
+-  Amazon IAM Console Password Privileged Account
 -  SSH Key Rotation **
-
--  SSH Key Rotation (No Password) **
-
+-  Amazon IAM Console Password Privileged Account
 -  SSH Key Rotation Privileged Account **
-
--  SSH Key Rotation Privileged Account (No Password) **
-
+-  Amazon IAM Console Password Privileged Account
 -  Sybase Account
-
--  Unix Account (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  Unix Account (Telnet)
-
--  Unix Account Custom (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  Unix Account Custom (Telnet)
-
--  Unix Account SU Takeover (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  Unix Account SUDO Takeover (SSH)
-
--  Unix Root Account Custom (SSH)
-
+-  Amazon IAM Console Password Privileged Account
 -  WatchGuard Custom (SSH)
-
--  Web User Account (built-in support for AWS, Google, Salesforce)
-
+-  Amazon IAM Console Password Privileged Account
 -  Windows Account
-
 -  z/OS Mainframe
 
 \* Does not require an Advanced Scripting Add-On License. Will require PowerShell installation.
@@ -116,11 +71,7 @@ Secret Server includes many pre-configured password changers that are used by Re
 Other platforms that SS can change passwords on include:
 
 -  AS/400
-
 -  Linux / Mac
-
 -  Check Point
-
--  Enterasys
-
+-  Linux / Mac
 -  Dell DRAC

@@ -13,7 +13,6 @@ Secret Server Cloud (SSC) is a scalable, multi-tenant cloud platform that provid
 For documentation purposes, SSC is the same as the corresponding on-premise edition. However, there are some feature differences:
 
 - **Site Connectors:** On-premise versions can use multiple site connectors to manage engine connections, such as RabbitMQ or MemoryMQ. The cloud version manages this for you as an Azure service and is not configurable.
-
 - **CRM Integration:** On-premise versions can integrate with CRMs via direct database connections or the ConnectWise API. This is not currently available in SSC.
 
 ## Getting Started
@@ -179,13 +178,9 @@ Heartbeat ensures the secrets you have stored have the correct password, and Rem
 ## Next Steps
 
 - Add another user to the Administrator role in SS. This allows you to have another administrator besides the initial user account created. To assign roles, go to **Admin \> Roles** and click the **Assign Roles** button.
-
 - Add a folder and share it with the group you synchronized from Active Directory. Create and edit folders from the Folder Tree View on your Dashboard.
-
 - Create a secret in that folder for other users to see. When creating a secret, you can click the **Folder** link to save it to another folder.
-
-- Have other users log on. Any users synchronized to SS through the domain synchronization can log on with their domain credentials.
-
+- Add a folder and share it with the group you synchronized from Active Directory. Create and edit folders from the Folder Tree View on your Dashboard.
 - Enable Google two-factor authentication by going to **Admin \> Users**, editing the specific user, and assigning a two-factor option.
 
 ## Troubleshooting and Resources
@@ -207,5 +202,4 @@ This can occur when SS was not able to complete a round trip with the installed 
 #### Support Resources
 
 - The support portal has many knowledge base articles and is located at: https://thycotic.force.com/support/s/
-
 - The SS documentation and more information on distributed engine is available at: https://thycotic.force.com/support/s/documents.

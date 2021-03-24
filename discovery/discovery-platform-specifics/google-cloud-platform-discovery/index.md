@@ -214,11 +214,9 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
    > **Note:** In the future, we may add an Instance Local Account and a Service Account Dependency scanner.
 
    - **GCP Project Scanner**: This is a host range scanner that scans the GCP and pulls all of the projects that the provided GCP service account secret has access to.
-
    - **GCP Windows Instance Scanner**: This is a machine scanner that scans each project and pulls all of the GCP Windows OS VM instances.
 
-   - **GCP (Non-Windows) Instance Scanner**: This is a machine scanner that scans each project and pulls all of the GCP Non-Windows OS VM instances.
-
+   - **GCP Project Scanner**: This is a host range scanner that scans the GCP and pulls all of the projects that the provided GCP service account secret has access to.
    - **GCP Service Account Scanner**: This is an account scanner that scans each project and pull all of the GCP Service accounts.
 
 1. Click the **Next** button. The Credential Secrets page appears:
@@ -250,11 +248,8 @@ To view these scanners:
 This option is only available for the instance scanners. The Custom Filter Setting can be used to include or exclude instances using a filter expression on the name, label, or any other field allowed by GCP. The filter must:
 
 - Be a string, number, or Boolean value
-
 - Use these comparison operators: =, \!=, \>, or \<
-
 - Use parentheses ( ) around each filter
-
 - Combine different filters using AND or OR (all caps). For example: `(name="instanceName") AND (labels.key="value")`
 
 > **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
@@ -316,7 +311,6 @@ To Import a Service Account
 1. For key rotation, click one of two selection button options to choose a secret for future key rotations. Either option would need the permissions mentioned above. When the password for the chosen secret are changed in the future, SS will use one of these two options:
 
    - **Use Secret Credentials**: Use the imported service account to rotate itself, and it has permissions to rotate keys.
-
    - **Use Privileged Account**: Use another service account that has permissions to rotate keys
 
 1. Click the **Finish** button.
@@ -328,9 +322,7 @@ To Import a Service Account
 To make API calls to GCP, you need to enable the following APIs to use GCP discovery in SS. More information can be found on the [GCP Getting Started](https://cloud.google.com/apis/docs/getting-started) page. The APIs are:
 
 - **Cloud Resource Manager API**: Used for managing GCP resource containers, such as Projects.
-
 - **Compute Engine API**: Used for managing GCP instances (virtual machines).
-
 - **Identity and Access Management (IAM) API**: Used for managing identity and access control for GCP resources, such as service accounts.
 
 ### Enabling GCP APIs

@@ -11,11 +11,8 @@ Sharing passwords is crucial for information technology teams. Due to the sensit
 There are three permission levels to choose from when sharing secrets with another user or group:
 
 - **View:** User may see all secret data, such as username and password, and metadata, such as permissions, auditing, history, and security settings.
-
 - **Edit:** User may edit the secret data. Also allows users to move the secret to another folder unless the Inherit Permissions from Folder setting is turned on, in which case the user needs Owner permissions to move the secret.
-
 - **List:** User may see the secret in a list, such as a list returned by running a search, but not to view any more details about a secret or edit it.
-
 - **Owner:** User may change all the secret's metadata.
 
 > **Note:** Password text-entry fields are not visible if a secret has a launcher and the Hide Launcher Password setting is on or the user does not have the View Launcher Password role permission.

@@ -25,17 +25,13 @@ The settings below might make discovery more efficient, regardless an organizati
 Port scanning for discovery has three configurations or controls:
 
 - Port Scan Enable: Whether to port scan at all. Defaults to unchecked.
-
 - Port Scan Timeout: How long (in seconds) the port scan will try before giving up. Defaults to 30.
-
 - Port Scan List: A comma-delimited list of ports to scan. These depend on the configuration of the systems you will scan. Defaults to NetBIOS (135) and Active Directory services (445).
 
 Examples of scanners that have a port-scanning timeout option for Active Directory include:
 
 - Windows local accounts
-
 - Active Directory user accounts
-
 - All dependency scanners
 
 #### Accessing Port Scanning
@@ -69,7 +65,6 @@ Thus, 8.75 hours (525 ÷ 60) of timeout are possible and enabling discovery port
 Currently, you cannot set when discovery runs via a control or setting. You can, however, approximately set when it runs by disabling and enabling it at the desired time. It runs daily around the same time as when it was first enabled and then again according to whatever the [discovery scan offset hours](#discovery-scan-offset-hours) interval was set to. If you are running discovery once per day, we suggest:
 
 - Choosing a start time outside your normal business hours, such as midnight.
-
 - First running several ad-hoc discoveries when your network traffic normally drops at the end of the day. Record how long each discovery process takes. Remember, this can vary greatly if a lot of machines are down, which is why we suggest conducting more than one discovery.
 
    > **Note:** It might be fun to run one test with discovery port scanning disabled, just to see the difference.
@@ -87,11 +82,8 @@ For example, if your tested average discovery time was four hours and your netwo
 The settings are:
 
 - Synchronization Interval for Discovery: How often you want the regular discover scan to occur.
-
 - Ignore Cluster Node Objects: A check box that tells SS to not run discovery on machines identified as “msclustervirtualserver.” Do not change this setting.
-
 - Engine AD Discovery Batch Size: A legacy setting that should always be set to 1.
-
 - See [Discovery Scan Offset Hours](#discovery-scan-offset-hours) for a discussion of the last setting.
 
 > **Note:** There is another “Discovery Batch Size” setting on the Advance Settings page, which is usually only available to Thycotic Customer Support. This setting, too, is legacy, and should not be set.

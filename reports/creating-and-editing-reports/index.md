@@ -79,5 +79,4 @@ Database paging allows the database to load large reports more quickly. We recom
 Example queries:
 
 - Works using database paging: `SELECT * FROM tbSecret WHERE NAME LIKE 'Test%'`
-
 - Does not work using database paging: `SELECT TOP 10 * FROM tbSecret WHERE SecretName LIKE 'Test%'`

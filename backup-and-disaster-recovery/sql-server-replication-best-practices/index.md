@@ -22,11 +22,8 @@ Secret Server (SS) SQL Server replication is a set of technologies for copying a
 
 Enabling SQL Server replication allows a database and application to be hosted closer together and this allows for the mitigation of network latency and outages.
 - Decrease application server to database network latency
-
 - Resolve issues with unreliable network connectivity
-
 - Allows for distribution of workload in a scale out fashion
-
 - Works across large distances
 
 In a typical web-clustered version of SS, all application servers access a centralized database. In the event of a network outage, any users on affected application servers are not be able to use SS until network access was restored. In addition, poorly performing networks can introduce latency that may decrease the responsiveness of SS. This technology provides additional options when designing the network topology behind SS that can help alleviate these issues.
@@ -116,9 +113,7 @@ You can add SS distributed engines to different network segments, but you must s
 Keep in mind that this is a disconnected technology, so there are required decisions when setting it up:
 
 - How often should synchronization occur?
-
 - Should any resolvers override the provided defaults?
-
 - Are there any operational considerations based on the type of secret data?
 
 ### Publications
@@ -126,7 +121,6 @@ Keep in mind that this is a disconnected technology, so there are required decis
 We recommend setting up two publications for SS:
 
 - Events: These are things that need to occur on a timely schedule, such as updating secrets. The events publication should be set to synchronize every minute. This means that if a secret were created in one region, it would not appear in another region for one minute. By default, this publication is called *SSPubEvents*.
-
 - Logs: Information from each audit log is available on its server. We do not recommend setting log synchronization to less than hour. If this happens too frequently, the database could create deadlocks by constantly updating large sets of data. Once the logs merge, the events will appear in the order in which they occur and show on the server on which they took place. By default, this publication is called *SSPubLogs*.
 
 ### Tracking Level and Resolvers
@@ -159,7 +153,6 @@ Give consideration to how your SS data is setup and managed. This is most easily
 Options to manage data latency if data conflicts occur regularly:
 
 - Distribution of duties: Only update secret templates on the main node.
-
 - Distribution of data: Only edit secret data by region. For example, create
  a folder for Europe and one for Australia to segment the data. Only edit
  items in each folder when in the appropriate region.

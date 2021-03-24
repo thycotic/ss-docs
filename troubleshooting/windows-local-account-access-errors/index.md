@@ -19,7 +19,6 @@ On most systems, the Administrators group on the local machine is part of the â€
 For heartbeat to work correctly, make sure that the local or authenticated users are:
 
 - *Not* in the "Deny access to this computer from the network" security policy
-
 - *In* the "Access this computer from the network" security policy
 
 ## Remediation Options

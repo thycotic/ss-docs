@@ -17,15 +17,12 @@ If attackers compromise one of the DE servers, they would have access to all cri
 ### Restrict RDP Connections
 
 - Limit RDP connections to all PAM Server,  except for PAM admins and some users from the hosting team.
-
 - If there is no firewall segmentation in LAN network, you can accomplish this with the Windows OS firewall.
 
 ### Restrict Incoming Port Access to All DE Servers
 
 - Allow only RDP port access from some internal IPs.
-
 - Allow a SSH proxy port coming from the user's LAN.
-
 - Block all other incoming ports.
 
 ### Remove Unnecessary User Groups
@@ -33,7 +30,6 @@ If attackers compromise one of the DE servers, they would have access to all cri
 For administrator and Remote Desktop user groups:
 
 - Remove default domain admins, administrator and some common groups.
-
 -  Create one group that is going to have access these servers.
 - Disable the built-in local administrator user.
 
@@ -47,17 +43,11 @@ For administrator and Remote Desktop user groups:
 Disable these services:
 
 - Routing and remote access
-
 - Smart card
-
 - Smart card removal policy
-
-- SNMP trap
-
+- Smart card
 - Special administration console helper
-
-- Windows error reporting service
-
+- Smart card
 - WinHTTP Web proxy auto-discovery service
 
 ### Restrict Network Protocols
@@ -65,17 +55,13 @@ Disable these services:
 Keep these:
 
 - Client for Microsoft network
-
 - File and printer sharing for Microsoft network
-
 - Internet protocol version 4 (TCP/IPv4)
 
 Remove these:
 
 - QoS packet scheduler
-
 - Link-layer topology discovery mapper IO driver
-
 - Link-layer topology discovery responder
 
 ### Validate Server Roles
