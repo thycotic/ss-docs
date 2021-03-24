@@ -28,7 +28,6 @@ Due to the sensitive nature of SS logs, we strongly recommend using Secure TCP.
 ### Compatible Audit Servers
 
 - syslog-ng
-
 - Any Audit server that accepts TLS encrypted messages using the BSD syslog protocol
 
 ### Configuring an External Audit Server

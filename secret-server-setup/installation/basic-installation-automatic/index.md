@@ -29,11 +29,8 @@ If this is the first time you are installing Secret Server, please take the time
 ### System Requirements Overview
 
 - Windows Server 2016 operating system
-
 - Microsoft SQL Server 2008 or greater (any edition)
-
 - Microsoft Internet Information Services (IIS)
-
 - Microsoft .NET Framework 4.6
 
 > **Note:**  Windows Server 2016 and Windows 10 come with the .NET Framework 4.6 already installed.
@@ -43,7 +40,6 @@ If this is the first time you are installing Secret Server, please take the time
 We suggest you:
 
 - Use an SSL certificate for Secret Server.
-
 - Run [Microsoft Update](http://update.microsoft.com/) on your server to make sure all components are up to date.
 
 ## Procedure

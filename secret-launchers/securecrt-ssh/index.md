@@ -19,7 +19,6 @@ The following instructions describe how to set up a custom launcher using Secure
 4. Click the **Launcher Type** list box and select one of the following:
 
    - **Process:** If you would like to use secret credentials to connect directly to the remote host.
-
    - **Proxied SSH Process:** If you have SSH Proxy enabled. This will prevent Secret credentials from being passed to the client by connecting to Secret Server's proxy to interact with the remote host.
 
 5. Type the name `Secure CRT Proxied Process` in the **Launcher Name** text box.

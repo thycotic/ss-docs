@@ -11,41 +11,23 @@ On the main menu, there is a **Secrets** folder tree. When you click on the root
 You can display additional columns on the grid by clicking the ![1567717023376](images/1567717023376.png)icon. This data can be either secret metadata or template text-entry fields that have been set to be available for viewing. To select additional columns to display, click the **Advanced** link and then the **Column Selection** link. You can display the following metadata fields:
 
 - Auto Change Enabled
-
 - Checked out
-
 - Checkout Enabled
-
-- Created
-
+- Checked out
 - Days until Expiration
-
-- Deleted
-
+- Checked out
 - Double Lock Enabled
-
-- Expiration Field Changed
-
+- Checked out
 - Folder
-
-- Inherits Permissions
-
+- Checked out
 - Heartbeat
-
-- Hide Password
-
+- Checked out
 - Last Accessed
-
-- Machine
-
+- Checked out
 - Notes
-
-- Requires Approval
-
+- Checked out
 - Requires Comment
-
-- Secret Template
-
+- Checked out
 - Username
 
 ## Filtering Search Results

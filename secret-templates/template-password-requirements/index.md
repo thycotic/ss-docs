@@ -41,11 +41,9 @@ To create a new password requirement:
 1. Click to select the desired password no-no check boxes in the Password Validation section. The options are:
 
    - **Prevent Username in Password**: Do not allow the username to be part of the password.
-
    - **Prevent Common Dictionary Words**: Do not allow everyday English words in the password.
 
-   - **Prevent Spatial Terms in Password**: Do not allow strings of characters based their order on the keyboard, such as `qwerty` or `asdfg`.
-
+   - **Prevent Username in Password**: Do not allow the username to be part of the password.
    - **Prevent Sequences in Password**: Do not allow strings of characters based on their order in the character set, such as `abcd` or `5678`.
 
 1. Create rules for the password requirement:

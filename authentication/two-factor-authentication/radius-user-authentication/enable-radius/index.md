@@ -19,13 +19,11 @@ To configure RADIUS for the SS instance:
 1. Type the following:
 
    - **RADIUS Server IP** (IP address to your RADIUS Server)
-
    - **RADIUS Client Port** (default 1812)
 
    > **Note:** If your RADIUS server runs on the same machine as SS, the client and server ports must be different.
 
    - **RADIUS Server Port** (default 1812 for RSA and 1812 for AuthAnvil).
-
    - **RADIUS Shared Secret**, which must match chosen RADIUS shared secret on your RADIUS Server. (Shared Secret is a RADIUS term and not related to any Secret Server secret.)
    - **RADIUS Login Explanation** (custom message or instruction). Defaults to “Please enter your RADIUS passcode.”
 

@@ -19,17 +19,11 @@ Before installing SS, be sure to take a look at the [system requirements](../sec
 Once SS is installed, see the  [End User Guide](../secret-server-end-user-guide/index.md) to begin setting up SS right away. This covers:
 
 - Adding your licenses
-
 - Basic security settings
-
 - Configuring automatic backups
-
-- Creating a secret
-
+- Basic security settings
 - Heartbeat
-
-- Remote Password Changing
-
+- Basic security settings
 - Setting up access for local and AD users
 
 
@@ -67,36 +61,24 @@ Consider all the types of sensitive data your team needs to be securely stored a
 To get started, think through these key accounts and principles:
 
 - All shared privileged accounts: these are accounts that don’t identify an individual (for example: administrator, root, enable, service accounts). All of these should have randomized passwords that are changed frequently.
-
 - Do your users have individual privileged accounts? Maybe each user has—separate AD account for domain admin rights?
-
 - Every password in your organization should be different.
-
-- What passwords could an employee walk off with, should they ever quit or be fired?
-
+- Do your users have individual privileged accounts? Maybe each user has—separate AD account for domain admin rights?
 - What passwords could be needed in an emergency, outside of regular business hours, or when someone is on vacation?
 
 Typical account passwords and sensitive data being stored in SS:
 
 - Windows local administrator accounts
-
 - UNIX, Linux, Mac root, and local user accounts
-
 - AD domain administrator accounts
 
 
 - AD service accounts
-
 - Database accounts (such as MS SQL, Oracle, and MySQL)
-
 - Network equipment passwords (such as router, switches, firewalls, phones, and appliances)
-
-- Application passwords (such as SAP and custom apps)
-
+- Database accounts (such as MS SQL, Oracle, and MySQL)
 - Website passwords (cloud services, DNS, Amazon AWS, vendors)
-
-- Sensitive files (such as private key files, SSL certificates, and network documentation information)
-
+- Database accounts (such as MS SQL, Oracle, and MySQL)
 - Software license keys, serial numbers, personnel data, Wi-Fi passwords
 
 ### Who Accesses Secret Server?
@@ -116,9 +98,7 @@ It’s unlikely that all your accounts will have the same [password complexity r
 While transitioning to using a new tool for managing your passwords, it is important to take into account how accounts are currently used in your environment. The following questions can help evaluate this:
 
 - Do some of your users have their own, individual AD domain admin accounts, or are there only a few shared domain accounts?
-
 - Do users use local administrator accounts or privileged domain accounts for admin access to systems?
-
 - Are permissions to resources (such as servers and applications) controlled using AD group policy?
 
 ### Define Your Core PAM Strategy
@@ -170,9 +150,7 @@ AD accounts can be added for access to SS either manually (one by one) or by AD 
 We recommend using one of these options:
 
 - Only local users and groups (best security)
-
 - Only AD users and groups (most convenient)
-
 - A hybrid of AD users and local groups (balance of security and convenience)
 
 You  need to choose an option that provides the levels of security and convenience that are acceptable for your organization. Using the AD accounts option is easy for user maintenance, but it limits the security of SS to the level of security of your AD. This may be fine—just be sure to consider the question of domain admin access to AD in combination with SS permissions.
@@ -302,9 +280,7 @@ This section of the document discusses some key best practices around using SS�
 While it may be tempting to immediately get started using discovery to get your accounts under control, there are a few things you can do ahead of time to make the enforcement of your organization’s password policies more streamlined:
 
 - Know which secret template you want to import accounts to. This can effect password changing and Launcher settings that are applied to your imported accounts.
-
 - Have a folder structure established so you have folders appropriated for each type or category of discovered accounts.
-
 - Apply a secret policy to the folders you import to.
 
 Having these settings in place can save you the considerable amount of time it could take to have to re-organize all of your accounts and policies post-import.
@@ -338,7 +314,6 @@ Often you will have situations in which you want users to have access to account
 Many times, giving an employee access to a resource through SS does not require that he or she have access to the actual password for the account used. As long as the application a user needs can be started by the launcher, there is no reason the user needs to copy/paste or type the password. The hide launcher password setting implements the following:
 
 - Users with access to the secret will see only asterisks (\*\*\*\*) in the password field
-
 - There will be no copy-to-clipboard, field history, or unmask icons next to the field
 
 Note: Users with edit permissions to a secret with "hide launcher password" enabled can still view the password when editing the secret. To prevent all possible access  to the password, limit users to view permission only.
@@ -350,9 +325,7 @@ This can be a key way to reduce exposure of your privileged account passwords. H
 The "requires approval for access" setting is typically employed in the following cases:
 
 - When a user should be required to request access to a secret for a certain time period
-
 - When an administrator would like to approve a user’s access to a secret in advance for a time in the future (such as a maintenance period outside normal business hours)
-
 - When a group of administrators would not like anyone to access a secret without the approval of another administrator
 
 
@@ -367,11 +340,8 @@ There are times when users need to be able to access a password directly, but yo
 "Check out" is a security setting that means:
 
 - Only one user at a time has access to a secret
-
 - A user can only access the secret for a predetermined check out interval, such as 30 minutes
-
 - At the end of a check out interval (check in), or when a user manually checks in the account before the time is up, the secret is available for check out by another user
-
 - When enabled, the password can also be changed automatically upon check in
 
 

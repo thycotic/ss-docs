@@ -29,9 +29,7 @@ Folder structure defines how folders are named under the client's folder. By def
 The supported folder structure tokens are:
 
 - **$COMPANYINITIAL:** First letter of company name. Use to organize companies into subfolders of A, B, C, and the like.
-
 - **$STATUS:** Company status, such as active, inactive, or not-approved.
-
 - **$TYPE:** Company type, such as competition, customer, partner, prospect, suspect, or vendor.
 
 When configured, save and scroll down to the bottom and click **Synchronize Now** to run the synchronization

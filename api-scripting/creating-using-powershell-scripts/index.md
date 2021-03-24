@@ -13,7 +13,6 @@ You can use PowerShell scripts in Secret Server to automate specific tasks. Thes
 1. Develop your script. See:
 
    - [REST API PowerShell Script Examples](../rest-api-powershell-examples/index.md)
-
    - [Using Secret Fields in Scripts](../using-secret-fields-scripts/index.md)
 
    - [Dependency Token List](../dependency-tokens/index.md)

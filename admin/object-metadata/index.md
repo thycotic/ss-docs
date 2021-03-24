@@ -102,6 +102,5 @@ There are many ways to use SS object metadata. You could:
 How your organization uses object metadata requires some forethought, including:
 
 - Will you allow anyone to add metadata or only a specific set of individuals? This is controlled by applying the above mentioned role.
-
 - How do want to standardize the naming of sections and fields? One user might call the same field *business owner* and another might call it *subject expert* if you do not establish the field nomenclature up front.
 - Do you want to create a "public" field section that is available to all users to edit, even those with read only permission on the object?

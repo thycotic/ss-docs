@@ -23,11 +23,8 @@ For testing of high availability for the SQL Server, you can use either existing
 ### Checklist
 
 - Windows Server 2012 or newer (recommended) (one server, minimum)
-
 - SQL Server (one instance, minimum)
-
 - Application server prerequisites
-
 - SSL certificate
 
 ### SQL Server
@@ -73,15 +70,10 @@ We recommend having a few test accounts available to represent the types of acco
 To test email notifications, which can be used for event subscription notifications or requests for approval to passwords, you need configuration information for the company SMTP server:
 
 - Service account to run the application and connect to SQL
-
 - Domain (test or production)
-
 - Domain account to be used for AD sync and discovery
-
-- Test machines (if testing discovery)
-
+- Domain (test or production)
 - Test accounts
-
 - SMTP server settings
 
 ### SSL Certificate
