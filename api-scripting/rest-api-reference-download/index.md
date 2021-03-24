@@ -17,7 +17,6 @@ To access the guides:
 1. On the Secret Server REST API page of your instance, click the link for one of the three guides:
 
    - **Documentation for REST API using bearer token authentication:** Hyperlinked documentation for REST API access using token authentication.
-
    - **Documentation for token authentication:** Instructions for getting an authentication token.
 
    - **Documentation for REST API using Windows integrated authentication:** Hyperlinked documentation for REST API access using Integrated Windows Authentication (IWA).
@@ -33,19 +32,12 @@ To access the guides:
 ### Legacy Documentation
 
 - [Secret Server 10.8.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.8/index.html)
-
 - [Secret Server 10.7.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.7/index.html)
-
 - [Secret Server 10.6.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.6/index.html)
-
 - [Secret Server 10.5.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.5/index.html)
-
 - [Secret Server 10.4.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.4/index.html)
-
 - [Secret Server 10.3.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.3/index.html)
-
 - [Secret Server 10.2.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.2/index.html)
-
 - [Secret Server 10.1.000000 REST API Guide](https://updates.thycotic.net/secretserver/restapiguide/10.1/index.html)
 
 ## Downloading Example Scripts
@@ -53,7 +45,6 @@ To access the guides:
  Example Scripts:
 
 - [PowerShell Examples](../../api-scripting/rest-api-powershell-examples/index.md)
-
 - [Perl Examples](../../api-scripting/soap-perl-example-code/index.md)
 
 > **Note:** For REST API Client Generation (Advanced), please see [REST API Client Generation with OpenAPI Swagger](../../api-scripting/rest-api-client-generation/index.md)

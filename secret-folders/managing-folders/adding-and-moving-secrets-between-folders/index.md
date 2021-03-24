@@ -7,7 +7,6 @@
 1. Consider the following before moving a secret between folders:
 
    - To add or move a secret to a folder, you must have Edit permission on that folder (either direct or through inheritance).
-
    - To move a secret from a folder, you must have Edit permission on that secret. If the secret has the "Inherit Permissions from folder" setting enabled, then you must have Owner permission to move that secret to a new folder.
 
    - When a secret is moved to a folder, it automatically gets the "Inherit Permissions from folder" setting even if it had specific permissions before the move.

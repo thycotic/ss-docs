@@ -33,11 +33,8 @@ Available legacy codecs:
 >**Note**: On Windows Server 2008 and above, you can install Window Media Player by adding "Desktop Experience" from the features of Server Manager.
 
 - Microsoft Video 1 (testing only): Microsoft Video 1 is deprecated in favor of Microsoft Video 9 and should not be used for production. Microsoft Video 1  does not support browser-based playback of sessions.
-
 - Microsoft Video 9: High compression level and quality. Requires Windows Media Player. This option produces comparable video sizes to Xvid for moderate activity in an RDP session.
-
 - VP8:  High compression level and quality. VP8 is bundled with SS. This option produces comparable sized video to Xvid for moderate activity in an RDP session.
-
 - Xvid:  Provides similar quality and compression to DivX and is freely available. This option produces approximately 20 MBs of video for 1 hour of moderate activity in an RDP session. See https://www.xvid.com/
 
 ### Enabling Session Recording on Secrets
@@ -164,7 +161,6 @@ If enabled, when processing H.264/MP4 files, this setting makes SS attempt to us
 This configuration includes:
 
 - **Database**:  Stores the information from a recorded session as encrypted data to your database.
-
 - **Disk**:  Stores the recorded session as a video file directly to the specified folder path.
 
 #### Archive Location Dependent on Site
@@ -194,9 +190,7 @@ After the specified number of days have passed, all recorded videos in your data
 #### Setting Notes
 
 - To use "Save Videos to Disk" or "Archive to Disk," the Application Pool service account must have write permission to the specified file path.
-
 - To delete videos from the archive path, the Application Pool service account must have "modify" permissions.
-
 - After saving a change to **Configuration** **>** **Session Recording**, the configurations for "Save Videos To Disk" and "Enable Deleting" will immediately be applied to all existing session recordings.
 
 #### Using Network Share Path
@@ -206,7 +200,6 @@ In a clustered environment SS needs to use a network path when saving the files 
 To archive or save to a file path that is a network share, instead of a local folder:
 
 - The SServer IIS application pool must be running as a service account. See [Running Secret Server IIS Application Pool with a Service Account](https://thycotic.force.com/support/s/article/Running-Secret-Server-IIS-Application-Pool-with-a-Service-Account) .
-
 - You must grant access to the network share (using Windows ACLs) to the account running the SS IIS application pool.
 
  '

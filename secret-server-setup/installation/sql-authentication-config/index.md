@@ -7,9 +7,7 @@
 SQL Authentication requires:
 
 - Creating a new SQL account
-
 - Enabling mixed mode
-
 - Enabling named pipes and SQL Browser a non-local SQL Server
 
 > **Note:** For instructions on Creating the SQL account or Installing SQL Server see [Installing and Configuring SQL Server](../installing-sql-server/index.md) article.
@@ -41,7 +39,6 @@ SQL Authentication requires:
 1. Enable the following:
 
    - Shared memory
-
    - Named pipes
 
    - TCP/IP

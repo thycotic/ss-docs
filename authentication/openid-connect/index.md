@@ -69,7 +69,6 @@ Secret Server implements OpenID Connect authorization code flow, allowing any st
 Ensure a matching user already exists in SS, which is required when logging on an OpenID Connect account. OpenID provides for no user list synchronization or on-the-fly account creation. Users are matched according to the claims provided in their authentication ticket. Matching occurs using the following criteria:
 
 - If the name identifier value matches an active user that has already logged in with OpenID Connect, then this user will be logged on.
-
 - If not, then if the email or UPN values match an existing, unique, active SS user, then this user will be logged on.
 
 Otherwise, the login attempt will fail, and information about the failure will be added to the system log.
