@@ -79,13 +79,9 @@ Recommended for organizations deploying discovery, session recording,or increase
 - Supported Web browsers:
 
   - Google Chrome
- 
   - Mozilla Firefox
- 
   - Microsoft Edge. Edge Chromium only. Legacy Microsoft Edge is not supported.
- 
   - Safari
- 
   - Microsoft Internet Explorer 11. Support for Internet Explorer 11 will end on 31 August 2021.
 
  
