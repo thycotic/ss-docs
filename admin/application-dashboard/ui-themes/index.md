@@ -116,11 +116,9 @@ This is a procedure for admin users that determines what all newly created users
 1. Click the **Select Default Classic Theme** dropdown list to select the theme. Your choices are:
 
    - Secret Server Classic - Blue
-
    - Secret Server Classic - Dark
 
-   - Secret Server Classic - Default
-
+   - Secret Server Classic - Blue
    - Secret Server Classic - Gray
 
    - Secret Server Classic - Green

@@ -18,20 +18,16 @@ See [Enable-PSRemoting](https://docs.microsoft.com/en-us/powershell/module/micro
 
 This command perform the following steps:
 
-- Runs the [Set-WSManQuickConfig](http://go.microsoft.com/fwlink/?LinkID=141463) cmdlet, which performs the following tasks:
-
+   - Starts the WinRM service
    - Starts the WinRM service
 
-   - Sets the startup type on the WinRM service to Automatic
-
+   - Starts the WinRM service
    - Creates a listener to accept requests on any IP address
 
-   - Enables a firewall exception for WS-Management communications
-
+   - Starts the WinRM service
    - Registers the Microsoft.PowerShell and Microsoft.PowerShell.Workflow session configurations, if it they are not already registered
    - Registers the Microsoft.PowerShell32 session configuration on 64-bit computers, if it is not already registered
    - Enables all session configurations
-
    - Changes the security descriptor of all session configurations to allow remote access.
 
 - Restarts the WinRM service to make the preceding changes effective.

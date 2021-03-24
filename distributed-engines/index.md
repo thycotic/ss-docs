@@ -44,8 +44,7 @@ Default ports:
 - Secret Server Cloud:
 
     - 443 (Web sockets—the default)
-
-    - 5671 and 5672 (AMQP)
+   - 5671 and 5672 (AMQP)
 
     >**Note:** These ports are used for outbound traffic for engines to communicate with SSC instances. They are set by the "Azure ServiceBus Transport Type" global engine setting.
 
@@ -88,7 +87,6 @@ Below is a summary of the steps required to configure DEs:
 1. Configure and Install the site connector.
 
    - If you plan to use RabbitMQ (recommended), follow the instructions [here](https://thycotic.force.com/support/s/article/How-to-install-RabbitMq). You can find general information on using RabbitMQ Helper to install RabbitMQ can be found in [Thycotic’s GitHub Repository](https://thycotic.github.io/rabbitmq-helper/)
-
    - If you plan to use MemoryMQ, create the site connector record within SS then click the **Download Site Connector Installer** button to get the MSI. Run the MSI on the desired host.
 
 1. Setup sites.

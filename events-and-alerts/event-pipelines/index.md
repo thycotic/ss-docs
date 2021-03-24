@@ -463,11 +463,9 @@ To create a new EP:
 1. In the **Add Triggers** section, click the **+** button next to the triggers you desire. You can also search for a trigger by typing in the search text box. The selected triggers appear in the Selected Triggers list. Consider the following when selecting triggers:
 
    - Currently triggers are centralized around events that are linked to a secret.
-
    - You can add multiple triggers.
 
-   - You can limit when the EP runs by adding filters.
-
+   - Currently triggers are centralized around events that are linked to a secret.
    - Multiple triggers are logically ORed (not XORed) together. Each trigger is considered individually, and only one needs to apply for the EP to run—if concurrent triggers do not apply, it does not matter. If multiple triggers do apply, the EP will only run once per EP policy.
 
 1. Click the **Next** button. The Choose Filters page of the wizard appears.
@@ -477,7 +475,6 @@ To create a new EP:
 1. Use the exact same method to add filters to the EP. All filters present a popup page for you to provide additional information when you click on them. Consider the following when selecting filters:
 
    - Whereas triggers focused on secrets, filters can access secret and user information.
-
    - Because the same filter can differ by its settings, you can add the same filter multiple times to an EP.
    - Filters are logically ANDed together—all filters apply at once and all matter.
 
@@ -589,7 +586,6 @@ To control if an EP policies is available, you can toggle the EP policy's active
 
 1. Click the **Add Policy** button, and you will be presented with the following options:
    - **Create New Policy:** Click the selection button, and type a name in the **Policy Name** text box, and optionally type a description in the **Policy Description** text box.
-
    - **Import Policy:** Import an exported EP policy in JSON format. This can be a policy exported from a separate SS instance. Click the selection button, and paste the JSON payload in the **Add Policy** text box, click the **Create** button.
    - **Duplicate Selected Policy:** Copy an existing EP policy. Click the selection button, and then click the **Create** button.
 

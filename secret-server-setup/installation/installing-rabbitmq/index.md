@@ -41,8 +41,7 @@ RabbitMQ requires:
 - The PFX certificate should have:
 
   - A name that matches the RabbitMQ Fully qualified machine name
-
-  - If you plan on making a RabbitMQ cluster, add DNS names (SANs) to your certificate
+   - If you plan on making a RabbitMQ cluster, add DNS names (SANs) to your certificate
 
   - Your certificate must be an RSA certificate. CNG is not supported and will cause the installation to fail.
 

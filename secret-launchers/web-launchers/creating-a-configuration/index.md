@@ -6,14 +6,11 @@
 
 When configuring the Web Launcher:
 
-- **Entering the Login URL:** SS needs to know the exact URL used to login to be able to figure out the controls and perform the automatic login. Some example login URLs:
+  - `https://login.yahoo.com/config/login`
+   - `https://login.yahoo.com/config/login`
 
   - `https://login.yahoo.com/config/login`
-
-
-  - `https://MyServer/Billing/login.aspx`
-
-  - `https://firewall07/login/`
+   - `https://firewall07/login/`
 
 > **Note:** The Login URL is typically a secure site with a prefix of `https://`. If allowed to access the site, SS automatically detects if https should be used to ensure the credentials are passed securely.
 

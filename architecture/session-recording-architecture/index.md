@@ -37,7 +37,6 @@ Visual, video is created for video playback.
 1. End user system via the protocol handler does one of two things:
 
    - RDP/SSH launchers: Uploads either recorded video segments every second.
-
    - Mac Launchers: Takes screenshots every second.
 
      This information is uploaded via HTTPS (configurable) and stored in the database.
@@ -104,7 +103,6 @@ User > Secret Server > Launcher > Secret Server/DE Proxy > Endpoint System
 1. End user system via the protocol handler does one of two things:
 
    - RDP/SSH launchers: Uploads either recorded video segments every second.
-
    - Mac Launchers: Takes screenshots every second.
 
      This information is uploaded via HTTPS (configurable) and stored in the database.
@@ -232,7 +230,6 @@ User > Secret Server > Launcher > Endpoint System + Advanced Session Recording A
 1. End user system via the protocol handler does one of two things:
 
    - RDP/SSH launchers: Uploads either recorded video segments every second.
-
    - Mac Launchers: Takes screenshots every second.
 
      This information is uploaded via HTTPS (configurable) and stored in the database.

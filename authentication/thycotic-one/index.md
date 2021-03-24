@@ -99,11 +99,10 @@ To generate a credential for use in an on-premise SS instance, follow the steps 
 1. The available fields are as follows:
 
     - **Name:** A description of the application using this credential, for informational purposes.
+   - **Post-Login Redirect URIs:** A list of valid URIs that will be allowed to authenticate with this credential. The value of “Secret Server Redirect URI” from your on-premise instance should go here. If users access your instance with more than one URI, you may want to add all of them here by clicking the **+** button to create additional fields. Unless an application supplies a URI that is an exact match to one of these, Thycotic One will not complete the authentication.
 
-    - **Post-Login Redirect URIs:** A list of valid URIs that will be allowed to authenticate with this credential. The value of “Secret Server Redirect URI” from your on-premise instance should go here. If users access your instance with more than one URI, you may want to add all of them here by clicking the **+** button to create additional fields. Unless an application supplies a URI that is an exact match to one of these, Thycotic One will not complete the authentication.
-    - **Post-Logout Redirect URIs:** SS does not support this feature, so this may be left blank.
-
-    - **Credentials:** The fields in this area contain the values you need to put into the Thycotic One configuration in SS. Copy and paste them into the corresponding fields.
+    - **Name:** A description of the application using this credential, for informational purposes.
+   - **Credentials:** The fields in this area contain the values you need to put into the Thycotic One configuration in SS. Copy and paste them into the corresponding fields.
 
 1. Once you capture all the values, click **Save**, and then save the configuration in SS as well. Your instance is now fully integrated with Thycotic One. If you selected the synchronization option, SS will immediately sync your active users with Thycotic One, and they’ll receive welcome emails describing how to continue the process.
 

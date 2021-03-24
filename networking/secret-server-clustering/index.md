@@ -155,8 +155,7 @@ To see the current state of these jobs, such as the last time they ran and how l
 1. Configure the worker roles for the cluster:
 
     - Each server node can optionally run the background worker, engine worker, and session recording worker roles.
-
-    - At least one instance of **each** type of those roles must be active in the cluster for the clustered SS application to function.
+   - At least one instance of **each** type of those roles must be active in the cluster for the clustered SS application to function.
     - You may run more than one instance of each role as desired to improve the performance of the clustered SS application.
 > **Note:** For more information on what the various roles do, please see the [Worker Roles](#worker-roles) section.
 
@@ -183,8 +182,7 @@ SS has a built-in Web installer. That installer is a series of pages inside SS f
 1. Before you start:
 
     - Ensure that you have account credentials information and access for the server hosting SS and the SQL Server instance hosting your SS database.
-
-    - Have a recent backup of the application files and database available.
+   - Have a recent backup of the application files and database available.
 
     - Stop the application pools on all of the servers except the one that you have chosen to upgrade.
 

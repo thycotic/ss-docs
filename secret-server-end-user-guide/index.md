@@ -37,7 +37,6 @@ Depending on how your administrators configured SS, you can log on with either y
 2. On the login screen, enter your:
 
    - Active Directory username (or local one if you do not have one)
-
    - Active Directory password (or local one if you do not have one)
 
 3. Select the your domain from the **Domain** dropdown list. If you do not have an AD domain, select **Local** instead.

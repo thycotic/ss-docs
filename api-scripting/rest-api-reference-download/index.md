@@ -17,7 +17,6 @@ To access the guides:
 1. On the Secret Server REST API page of your instance, click the link for one of the three guides:
 
    - **Documentation for REST API using bearer token authentication:** Hyperlinked documentation for REST API access using token authentication.
-
    - **Documentation for token authentication:** Instructions for getting an authentication token.
 
    - **Documentation for REST API using Windows integrated authentication:** Hyperlinked documentation for REST API access using Integrated Windows Authentication (IWA).

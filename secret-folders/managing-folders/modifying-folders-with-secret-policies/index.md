@@ -21,7 +21,6 @@ To create a new secret policy:
 1. Click the Setting dropdown list, and choose the policy's settings for each relevant section. Aside from `< Not Set >`, which means that the setting is not applied, there are two options:
 
    - **Default:** The policy is applied to all secrets in the folder initially, but it **is** possible to manually change the applied secret settings as well.
-
    - **Enforced:** The policy is applied to all secrets in the folder initially, and it **is not** possible to change those applied settings on secrets in that folder.
 
 1. Click to select the **Value** check box in that row to apply the setting. Applying the setting may enable configuration of related settings in the grid. For example, enabling Auto Change causes the Auto Change Schedule to be available for configuration:

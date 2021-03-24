@@ -177,12 +177,7 @@ Enhancements:
 - 164130 - Added a "next password reveal" audit for secrets that are manually updated with a next password.
 - 144344 - Converted active templates to new UI.
 
-## Bug Fixes
-
-- 51027 - Fix an issue to Web Password Filler to have the URL encoding match what is configured in the secret. Issue related to handling of ampersands contained in the launcher URL.
-
-
-- 127410 - Fixed an issue where request access emails did not send to some approvers.
+## Bug Fixes$1   - 127410 - Fixed an issue where request access emails did not send to some approvers.
 - 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
 - 140009 - Fixed an issue where copying custom reports sometimes did not allow a user to save.
 - 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.

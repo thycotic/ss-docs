@@ -32,8 +32,7 @@
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
+   - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -70,8 +69,7 @@
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
+   - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -115,11 +113,7 @@
 
 
   - ss-aoag.company.com computer object/virtual IP.
-  - Two virtual IP addresses may be required as part of this configuration .
-
-- Windows failover cluster object (created as part of Windows failover clustering configuration):
-
-  - Computer object/virtual IP.
+  - Two virtual IP addresses may be required as part of this configuration .$1   - Computer object/virtual IP.
 
   - Two additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster representing both networks at each respective site.
 
@@ -145,8 +139,7 @@
 - Global load balancers are unavailable, thus requiring a manual failover process/DNS change for Web traffic to the DR site. Additional application specific changes will be needed for full functionality to resume in DR site:
 
   - Change the internal site connector to the DR site connector.
-
-  - Change the response bus to the DR site connector.
+   - Change the response bus to the DR site connector.
 
 - Design assumes the Web server in the DR location is joined to the cluster and is online so that work is also being generated from Web servers in the DR location. If server is online and has roles configured, cross-data-center RabbitMQ communication may occur. Work may be generated at either location's Web servers and is placed on either site connector, based on how secrets are configured.
 
@@ -172,8 +165,7 @@
 - Windows failover cluster object (created as part of Windows failover clustering configuration):
 
   - Computer object/virtual IP.
-
-  - One additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster.
+   - One additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -215,8 +207,7 @@
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration):
 
   -  ss-aoag.company.com computer object/virtual IP.
-
-  - Two virtual IP addresses may be required as part of this configuration.
+   - Two virtual IP addresses may be required as part of this configuration.
 
 - Windows failover cluster object (created as part of Windows failover clustering configuration):
   - Computer object/virtual IP.
@@ -242,8 +233,7 @@
 - Global load balancers are unavailable, thus requiring a manual failover process/DNS change for Web traffic to the DR site. Additional application specific changes will be needed for full functionality to resume in DR site:
 
   - Change the internal site connector to the DR site connector.
-
-  - Change the response bus to the DR site connector.
+   - Change the response bus to the DR site connector.
 
 - Design assumes the Web server in DR location is joined to the cluster but is shut down (marked in yellow) so that no work is being generated from the Web servers in the DR location. If server is online and has roles configured, cross-data-center RabbitMQ communication may occur. The RabbitMQ layer is also marked as yellow, indicative of the server being built/online but the RabbitMQ service shut down.
 
@@ -265,8 +255,7 @@
 - Windows failover cluster object (created as part of Windows failover clustering configuration):
 
   - Computer object/virtual IP.
-
-  - One additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster.
+   - One additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -310,12 +299,10 @@
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration):
 
   -  ss-aoag.company.com computer object/virtual IP.
+   - Two virtual IP addresses may be required as part of this configuration.
 
-  - Two virtual IP addresses may be required as part of this configuration.
-
-- Windows failover cluster object (created as part of Windows failover clustering configuration):
-
-  - Computer object/virtual IP.
+  -  ss-aoag.company.com computer object/virtual IP.
+   - Computer object/virtual IP.
 
   - Two additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster.
 

@@ -7,11 +7,7 @@
 
 ## Release Notes 7.9.000004
 
-Main Focus: Security Update
-
-- Fixed issue with launchers and Secret Check Out.
-
-  - (This was reported by a customer – the issue was confirmed, fixed and released within 24 hours by the Secret Server team.)
+Main Focus: Security Update$1   - (This was reported by a customer – the issue was confirmed, fixed and released within 24 hours by the Secret Server team.)
 
 ## Release Notes 7.9.000003
 
@@ -31,22 +27,16 @@ Main Focus: Layout and Bug Fixes
 
 ## Release Notes 7.9.000000
 
-### Main Focus: Automatic Import of Local Accounts
-
-- Secret Server Discovery now includes automatically creating Secrets when Local Accounts are found using "rules" (Enterprise Plus Edition)
-
-  - Administrators can specify users that should be alerted when Local Accounts are discovered.
+### Main Focus: Automatic Import of Local Accounts$1   - Administrators can specify users that should be alerted when Local Accounts are discovered.
 
   - Administrators can create search rules to create Secrets when Local Accounts are discovered.
 - Service Account Discovery for all Service Accounts (Enterprise Edition)
 
   - Secret Server will scan machines on the domain and retrieve Windows Services that run under a domain service Account.
+   - Administrators can manually import these as Secrets with Dependencies, or if the Secret already exists, import the Windows Service as a Dependency.
 
-  - Administrators can manually import these as Secrets with Dependencies, or if the Secret already exists, import the Windows Service as a Dependency.
-
-- Linked Accounts for Custom Launchers
-
-  - If a Secret Template is tied to a custom launcher, the owner can link other Secrets to either run the custom process, or to use for command line parameters.
+  - Secret Server will scan machines on the domain and retrieve Windows Services that run under a domain service Account.
+   - If a Secret Template is tied to a custom launcher, the owner can link other Secrets to either run the custom process, or to use for command line parameters.
 
 - Added bulk operations for "Hide Launcher Password".
 - When Unlimited Administrator is turned on, a banner is displayed on the dashboard warning users that it is on.
@@ -76,13 +66,11 @@ Main Focus: Security/Bug Fixed
 
 Main Focus: Scheduled Reports
 
-- Added scheduled reports
+  - Administrators can now set up Report generation on specific schedules.
+   - Administrators can now set up Report generation on specific schedules.
 
   - Administrators can now set up Report generation on specific schedules.
-
-  - Reports can be emailed to a subscription list.
-
-  - Reports can be set as "Health Checks" that will only be delivered if the conditions of the Report are met.
+   - Reports can be set as "Health Checks" that will only be delivered if the conditions of the Report are met.
 
 - Added #STARTWEEK and #ENDWEEK as dynamic Report parameters.
 - Updated Active Directory Synchronization to make adding synchronization Groups in large Domains easier.
@@ -91,8 +79,7 @@ Main Focus: Scheduled Reports
 - Improved inactivity timeout
 
   - If a tab is closed but not the browser, inactivity timeout will now work.
-
-  - If multiple tabs are open for Secret Server, being active on any tab will prevent inactivity timeout from occurring (Except for IE).
+   - If multiple tabs are open for Secret Server, being active on any tab will prevent inactivity timeout from occurring (Except for IE).
 
   - If inactivity timeout occurs, all open Secret Server tabs will be redirected to the logout page (Except for IE). Bug Fixes
 
@@ -112,8 +99,7 @@ Main Focus: Scheduled Reports
 - Added new Bulk Operations
 
   - Disable AutoChange
-
-  - Disable Comment On View
+   - Disable Comment On View
 
   - Undelete
 
@@ -177,32 +163,25 @@ Main Focus: SonicWALL Integration and SSH
 - New Bulk Operations
 
   - Change Check Out Status.
+   - Convert Secret Template.
 
-  - Convert Secret Template.
+  - Change Check Out Status.
+   - Secret Status to show whether a Secret is checked out.
 
-- New Web Service API methods
+  - Change Check Out Status.
+   - Enable Check Out.
 
-  - Secret Status to show whether a Secret is checked out.
+  - Change Check Out Status.
+   - Get Secret Audit.
 
-  - Import XML to automate the advanced import.
+  - Change Check Out Status.
+   - Added new Reports for Discovery diagnostics.
 
-  - Enable Check Out.
+  - Change Check Out Status.
+   - Added Re-Scan button for each computer.
 
-  - Expire Now.
-
-  - Get Secret Audit.
-
-- Discovery
-
-  - Added new Reports for Discovery diagnostics.
-
-  - The Full Scan log is now stored per computer.
-
-  - Added Re-Scan button for each computer.
-
-- Ticket System Integration
-
-  - Administrators can enter a support system URL to navigate to Tickets
+  - Change Check Out Status.
+   - Administrators can enter a support system URL to navigate to Tickets
 from the Secret Audit.
 
   - Users can enter a ticket number for Require Comment and Approval for Access.
@@ -473,11 +452,7 @@ Main Focus : Bug Fixes and Usability
 
 ## Release Notes 7.4.000000
 
-### Features and Enhancements
-
-- New Enterprise Plus Edition
-
-  - Added SIEM integration using CEF and Syslog formats.
+### Features and Enhancements$1   - Added SIEM integration using CEF and Syslog formats.
 
   - Support for front end server clustering.
 
@@ -520,12 +495,10 @@ Main Focus : Bug Fixes and Usability
 - Added a new front end home page called Dashboard. For a movie preview click here
 
   - Multiple Customizable Tabs.
+   - Draggable Widgets.
 
-  - Draggable Widgets.
-
-  - Report Widgets.
-
-  - Expandable Secret View in search results.
+  - Multiple Customizable Tabs.
+   - Expandable Secret View in search results.
 
   - Streamlined Folder and Secret search.
 
@@ -560,11 +533,7 @@ Main Focus : Bug Fixes and Usability
 
 Main Focus: Event Subscriptions ("Custom Alerts") and Active Directory Synchronization Performance
 
-### Features and Enhancements
-
-- Event Subscription feature:
-
-  - Users can receive email alerts for custom event subscriptions.
+### Features and Enhancements$1   - Users can receive email alerts for custom event subscriptions.
 
   - Subscription events include: Unlimited Administration Mode toggle, Secret Edit/Add/View, Role and Group Assignment changes, Secret Expiration, Configuration changes, and many more.
 
@@ -704,12 +673,10 @@ Main Focus: Custom reports, support for RADIUS, and more
 - Reporting
 
   - Reports page allows administrators to view standard reports, or to create reports with SQL and charting options. Reports can use a variety of 2D or 3D charts.
+   - Reports can be displayed with all their associated data points (grid).
 
-  - Reports can be displayed with all their associated data points (grid).
-
-  - Reports can be placed into categories, and these categories and their reports can be organized using drag and drop.
-
-  - Reports can have rows with different colors based on data values
+  - Reports page allows administrators to view standard reports, or to create reports with SQL and charting options. Reports can use a variety of 2D or 3D charts.
+   - Reports can have rows with different colors based on data values
 
   - Reports can be created using parameters such as start date, end date, and user ID.
 

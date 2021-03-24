@@ -96,13 +96,9 @@
 
   - New session monitoring agent records additional data from the RDP sessions including process activity, keystrokes, and more.
   - The Monitoring agent adds support for recording remote sessions on servers that were not launched directly from Secret Server.
-
-  - Updated the session search UI to support cross session searching for data within the session and additional filtering options
-
-
-  - Updated the session playback UI to support in browser playback and activity points in the session
-
-  - Performance enhancements to session processing speed
+   - Updated the session search UI to support cross session searching for data within the session and additional filtering options
+  - The Monitoring agent adds support for recording remote sessions on servers that were not launched directly from Secret Server.
+   - Performance enhancements to session processing speed
 
 >**NOTE:** For more information, please see [Configuring Session Recording](https://thycotic.force.com/support/s/article/ka0370000005RPOAA2/Configuring-Session-Recording)
 

@@ -32,7 +32,6 @@ We do not support configurations where using different attributes yield users wi
 1. Create a secret in SS of type **OpenLDAP Account**. This sync secret is used to synchronize users and groups. It requires permission to search and view the attributes of the users and groups. If you plan on using SS discovery, the account will also need permissions to scan computers on the network for accounts. Complete these parameters:
 
    - Domain. Example: `ldap.omega.thycotic.com`
-
    - Username. Example: `cn=ldap,dc=omegaldap,dc=local`
 
    - Password
@@ -56,7 +55,6 @@ We do not support configurations where using different attributes yield users wi
 1. Click the **Authentication** dropdown list to select either the **Basic** or **Anonymous** authentication method.
 
    - Basic  authentication requires that valid credentials are assigned as the sync secret. Those credentials are used to authenticate to the OpenLDAP system on each sync.
-
    - Anonymous authentication does not require valid credentials and removes the Synchronization Secret section. Instead, it exposes a User Authentication field.
 
    > **Note:** The Kerberos authentication method probably works but has not been test by Thycotic.
@@ -69,7 +67,6 @@ We do not support configurations where using different attributes yield users wi
 1. Anonymous authentication: Click the **User Authentication** list to select **Basic** or **No Authentication**. This sets which authentication method to use when users who are synced anonymously try to authenticate:
 
    - Basic authentication requires valid OpenLDAP account credentials.
-
    - No authentication is for when customers want users synced from OpenLDAP but use authentication through another service, such as SAML. We do *not* support anonymous authentication for security reasons.
 
 1. Click to select the **Use LDAPS** check box if you intend to use secure LDAP.

@@ -55,11 +55,9 @@ By default, these two audit-data retention roles are not assigned to users. An a
 1. Notice that each policy lists:
 
    - The enabled status (editable)
-
    - The maximum age audits are allowed to remain (editable)
 
-   - The last time the policy ran
-
+   - The enabled status (editable)
    - The last time the policy finished running
 
    - All the audit data tables that the policy covers

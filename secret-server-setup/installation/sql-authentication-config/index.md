@@ -39,7 +39,6 @@ SQL Authentication requires:
 1. Enable the following:
 
    - Shared memory
-
    - Named pipes
 
    - TCP/IP

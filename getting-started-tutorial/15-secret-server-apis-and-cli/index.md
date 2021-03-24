@@ -21,35 +21,28 @@ Both APIs, the .NET framework, and the CLI support:
 
 SDK Documentation:
 
--  [Secret Server SDK Guide](../../api-scripting/sdk-cli/index.md): Includes these topics:
-
+   - SS configuration
    - SS configuration
 
-   - Roles and permissions
-
+   - SS configuration
    - SDK client installation
 
-   - Connecting to SS
-
+   - SS configuration
    - SDK client caching
 
    - Examples
 -  [Secret Server SDK Downloads](../../api-scripting/sdk-downloads/index.md): Includes these topics:
 
    - SDK downloads
-
    - Download
 
-   - SDK release notes
-
+   - SDK downloads
    - NuGet packages
 
--  [SDK Integration Document](https://github.com/thycotic/sdk-documentation): Includes these topics:
-
+   - SDK downloads
    - Integrating using C#
 
-   - Integrating using the `web.config` file
-
+   - SDK downloads
    - Methods of the SecretServerClient() class
 
 REST API Documentation:

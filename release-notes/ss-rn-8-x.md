@@ -49,11 +49,7 @@ _Release Date: 1/13/2016_
   - When target systems disallow certain characters, users can now set a rule for which characters a generated password is allowed to start with.
 
 - Dates are now stored in UTC format
-  - Customers with servers in different time zones no longer need to set the servers to use the same timezone or UTC time. Existing dates in the database will be retrofitted to UTC if the web server is not already in UTC time.
-
-- Installer updates<br>
-
-  - Improved installer to pre-configure IIS and .NETfor fresh installation
+  - Customers with servers in different time zones no longer need to set the servers to use the same timezone or UTC time. Existing dates in the database will be retrofitted to UTC if the web server is not already in UTC time.$1   - Improved installer to pre-configure IIS and .NETfor fresh installation
   - Added configuration wizard for the initial setup of Secret Server
   - New users will see a dashboard overlay highlighting key features.
 
@@ -136,11 +132,7 @@ _Release Date: 8/7/2015_
   - Distributed Engine is a NEW feature. All existing customers will receive unlimited Sites to replace our Agent feature. A Site can be assigned to a Secret or a Discovery Source.
   - Discovery can be run through the Sites to provide discovery on remote sites.
   - Customers using Agents will need to install an additional service. Review this KB and this KB prior to upgrade.  PLEASE NOTE: After upgrading, Secret Server will automatically upgrade all Agents to Sites. Agents will not be available after upgrading to 8.9.
-  - API Change: The web service method "AssignToAgent" has renamed to "AssignSite". Use the new method, or use Secret Policy to assign Sites to Secrets.
-
-- Distributed Engine – ENGINES<br>
-
-  - All existing customers will receive enhanced performance through our new Engine technology. Engines are installed on remote networks and are grouped by Site in Secret Server. The new Engines will provide improved performance for Heartbeat, Remote Password Changing, and Discovery. See this KB for additional information on configuration of Distributed Engine:Distributed Engine KB Overview.
+  - API Change: The web service method "AssignToAgent" has renamed to "AssignSite". Use the new method, or use Secret Policy to assign Sites to Secrets.$1   - All existing customers will receive enhanced performance through our new Engine technology. Engines are installed on remote networks and are grouped by Site in Secret Server. The new Engines will provide improved performance for Heartbeat, Remote Password Changing, and Discovery. See this KB for additional information on configuration of Distributed Engine:Distributed Engine KB Overview.
 
 - RDP Proxying
   - RDP Sessions can now be proxied through Secret Server.

@@ -41,8 +41,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
+   - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -63,8 +62,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Distributed Engine licenses required for this design:
 
   - Three DE site licenses added (for DMZ, secondary, and cloud Locations), one DE included per site.
-
-  - One DE per site license added, which allows for second DE in each DE site for HA.
+   - One DE per site license added, which allows for second DE in each DE site for HA.
 
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
 
@@ -92,8 +90,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
+   - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -115,8 +112,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Distributed Engine licenses required for this design:
 
   - Two DE site licenses added (for secret and discovery tasks), one DE included per site.
-
-  - One DE per site license added, which allows for second DE in each DE site for HA.
+   - One DE per site license added, which allows for second DE in each DE site for HA.
 
 - Single-site design with no native DR capacity. DR can be provided by VM replication if subnets are spanning locations, otherwise re-IP + DNS changes may be necessary.
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
@@ -144,8 +140,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
+   - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -185,8 +180,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
+   - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -202,8 +196,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 
   - Two DE site licenses added (for DMZ and cloud locations), one DE included per site.
-
-  - One DE per site license added, which allows for second DE in each DE site for HA and a third one for the local site (added to the primary location).
+   - One DE per site license added, which allows for second DE in each DE site for HA and a third one for the local site (added to the primary location).
 
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
 
@@ -231,8 +224,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - Two additional virtual IP addresses may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster, representing both networks at each site.
+   - Two additional virtual IP addresses may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster, representing both networks at each site.
 
 ### Diagram
 
@@ -244,11 +236,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ## Best HA Multi-Site Deployment with Distributed Engines for Separate Work Tasks
 
-### Overview
-
-- Distributed Engine licenses required for this design:
-
-  - Two DE site licenses added (for secret and discovery tasks), one DE included per site.
+### Overview$1   - Two DE site licenses added (for secret and discovery tasks), one DE included per site.
 
   - One DE per site license added, which allows for second DE in each DE site for HA and a third one for the local site (added to the primary location).
 
@@ -278,8 +266,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - Two additional virtual IP addresses may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster, representing both networks at each site.
+   - Two additional virtual IP addresses may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster, representing both networks at each site.
 
 ### Diagram
 
@@ -291,11 +278,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 
 ## Best HA Multi-Site Deployment with Distributed Engines for Additional Datacenters with Separate Work Tasks
 
-### Overview
-
-- Distributed Engine licenses required for this design:
-
-  - Five DE site licenses added (for primary secret and discovery tasks, DMZ site, and cloud secret and discovery tasks), one DE included per site.
+### Overview$1   - Five DE site licenses added (for primary secret and discovery tasks, DMZ site, and cloud secret and discovery tasks), one DE included per site.
 
   - Two DE per site licenses added, which allows for second DE in each DE site for HA and a third one for the local site (added to the primary and DR locations).
 - All DEs require callback communication to Web servers  (TCP 443) and to the RabbitMQ response bus (TCP 5672 or 5671). This is pictured with one set of distributed engines (local site) but is not pictured for other DEs to keep the diagram easier to interpret.
@@ -324,8 +307,7 @@ Both of these use cases are covered with minimal and best high-availability solu
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
 
   - Computer object or virtual IP
-
-  - Two additional virtual IP addresses may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster, representing both networks at each site.
+   - Two additional virtual IP addresses may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster, representing both networks at each site.
 
 ### Diagram
 

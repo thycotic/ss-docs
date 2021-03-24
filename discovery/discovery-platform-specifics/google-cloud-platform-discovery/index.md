@@ -214,11 +214,9 @@ Secret Server now has a built-in GCP discovery source wizard that creates the sc
    > **Note:** In the future, we may add an Instance Local Account and a Service Account Dependency scanner.
 
    - **GCP Project Scanner**: This is a host range scanner that scans the GCP and pulls all of the projects that the provided GCP service account secret has access to.
-
    - **GCP Windows Instance Scanner**: This is a machine scanner that scans each project and pulls all of the GCP Windows OS VM instances.
 
-   - **GCP (Non-Windows) Instance Scanner**: This is a machine scanner that scans each project and pulls all of the GCP Non-Windows OS VM instances.
-
+   - **GCP Project Scanner**: This is a host range scanner that scans the GCP and pulls all of the projects that the provided GCP service account secret has access to.
    - **GCP Service Account Scanner**: This is an account scanner that scans each project and pull all of the GCP Service accounts.
 
 1. Click the **Next** button. The Credential Secrets page appears:
@@ -313,7 +311,6 @@ To Import a Service Account
 1. For key rotation, click one of two selection button options to choose a secret for future key rotations. Either option would need the permissions mentioned above. When the password for the chosen secret are changed in the future, SS will use one of these two options:
 
    - **Use Secret Credentials**: Use the imported service account to rotate itself, and it has permissions to rotate keys.
-
    - **Use Privileged Account**: Use another service account that has permissions to rotate keys
 
 1. Click the **Finish** button.

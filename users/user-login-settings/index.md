@@ -19,8 +19,7 @@ The following settings are available under the **Administration > Configuration*
 - **Require Two Factor for these Login Types:** This setting specifies which types of login require two-factor authentication:
 
   - Website and Web service Log on
-
-  - Website log on only
+   - Website log on only
 
   - Web service log on only
 

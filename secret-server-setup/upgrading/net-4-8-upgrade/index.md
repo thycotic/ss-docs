@@ -75,8 +75,7 @@ Installing .NET Framework 4.8 after the upgrade will allow a distributed engine 
 - Customers with existing deployments of protocol handler have two options:
 
   - Ensure that .NET Framework 4.8 is installed on all endpoints using protocol handler before the SS or SSC update.
-
-  - Disable automatic updating of protocol handler:
+   - Disable automatic updating of protocol handler:
 
     1. Go to **Admin \> Configuration**.
 

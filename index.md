@@ -17,11 +17,8 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 - [Thycotic Documentation Portal](https://docs.thycotic.com/ss/): You are at the home page of the current Thycotic Document Portal for Secret Server. It contains:
 
   - Converted knowledge base articles. These are marked as *deprecated* in the legacy knowledge base.
-
   - Links to legacy knowledge bases article that have yet to be converted or retired
-
   - Links to legacy PDF documentation
-
   - New material
 
 - [Knowledge Base Articles](https://thycotic.force.com/support/s/topic/0TO370000008fpDGAQ/secret-server): Use the Search text box at the top of the page. This is the legacy platform that we are replacing with the Thycotic Documentation Portal (where you are right now). This portal does not yet contain all SS documentation. For now, there are many locations here where this online documentation links to legacy documentation.

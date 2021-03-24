@@ -158,12 +158,10 @@ Configure SS for communication with the SDK:
 1. On Linux systems, you must install libunwind as follows:
 
    - On Red Hat or Centos, run `sudo yum install libunwind libicu`
-
    - On Ubuntu, run `sudo apt-get install libunwind-dev`
 
 1. To confirm the SDK client tool is installed and working, run the help:
    - On Windows, run `tss --help`
-
    - On non-Windows systems, run `./tss --help`
 
 ### Task 3: Connecting to Secret Server

@@ -19,19 +19,16 @@ To configure this:
    The **SSH Proxy Settings** are:
 
     - **Enable Proxy:** Enable or disable SSH proxying.
-
-    - **Enable SSH Tunneling:** SSH Tunneling allows Remote Desktop Sessions to be proxied using the same proxy configuration settings.
+   - **Enable SSH Tunneling:** SSH Tunneling allows Remote Desktop Sessions to be proxied using the same proxy configuration settings.
 $1
 $2
    - **SSH Banner:** Users connecting through SS see this text banner on the SSH client.
-
    - **SSH Proxy Private Key:** The SS SSH private key, this can be generated using the **Generate New SSH Key** button.
 $1
 $2
    The **SSH Terminal Settings** are:
 
    - **Enable Inactivity Timeout:** Enable or disable closing the SSH terminal session if there is inactivity for a defined number of seconds. When enabled, a **Timeout (seconds)** text box appears.
-
    - **Enable Terminal:**  Enable or disable the SSH terminal.
 
    - **SSH Terminal Banner:** The text banner you want displayed when somebody opens an SSH terminal session.
@@ -45,22 +42,19 @@ $2
    The **Nodes** settings are:
 
     - **Machine Name:** The public host name of the node server.
-
-    - **SSH Public IP Address of Nodes:** The public IP that the client launcher connects to. In most cases, this can be the same as the SSH bind address;  however, there may be cases where the public IP or host differs from the private IP that SS should bind to, such as NAT or an Amazon EC2 instance.
+   - **SSH Public IP Address of Nodes:** The public IP that the client launcher connects to. In most cases, this can be the same as the SSH bind address;  however, there may be cases where the public IP or host differs from the private IP that SS should bind to, such as NAT or an Amazon EC2 instance.
 
     The **Sites** settings are:
 
     - **Proxy Enabled:** Enable or disable SSH proxying for a specific site.
-
-    - **Site Name:** Site name or ID.
+   - **Site Name:** Site name or ID.
 
     - **SSH Port:** The port SS listens on. The default is 22.
 
     The **Engines** settings are:
 
     - **Friendly Name:** Human readable site name or ID.
-
-    - **Hostname/IP Address:** The public hostname or IP that the client launcher connects to. In most cases this can be the same as the SSH Bind Address, however there may be cases where the public IP or host differs than the private IP that SS should bind to, such as NAT or an Amazon EC2 instance.
+   - **Hostname/IP Address:** The public hostname or IP that the client launcher connects to. In most cases this can be the same as the SSH Bind Address, however there may be cases where the public IP or host differs than the private IP that SS should bind to, such as NAT or an Amazon EC2 instance.
 
     - **SSH Bind Address:** The IP Address of the network adapter that the SS SSH listener should bind to. This should not be localhost or 127.0.0.1\. If you are not sure which bind IP Address to use, you may use 0.0.0.0, which binds to all IPv4 interfaces on the machine.
 

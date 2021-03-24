@@ -20,7 +20,6 @@ Secret Server (SS) contains an OpenAPI Swagger specification file that describes
 1. Suggested settings:
 
    - Namespace: SecretServerAuthentication
-
    - Inject HttpClient via constructor
 
    - Generate default values for properties
@@ -34,7 +33,6 @@ Secret Server (SS) contains an OpenAPI Swagger specification file that describes
 1. Suggested Settings:
 
    - Namespace: SecretServerRestClient
-
    - Inject HttpClient via constructor
 
    - Generate default values for properties

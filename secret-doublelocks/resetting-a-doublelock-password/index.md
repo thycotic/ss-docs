@@ -17,7 +17,6 @@ When users forget their doublelock passwords, there are multiple steps and consi
 1. At this stage, there are two possibilities:
 
    - You are the only one with access to the doublelocked secret: When you reset the doublelock password, the secret and its data is deleted. **This is permanent**.
-
    - Others have access to the secret via that doublelock: You can reset the doublelock, and you lose access to the secret, but it is not deleted. You must ask one of those others to re-assign you to the doublelock after you reset it.
 
 1. Type your main SS password in the **Login Password** text box.

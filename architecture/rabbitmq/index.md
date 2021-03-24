@@ -138,21 +138,18 @@
 - Options available for site connector creation or use:
 
   - Sites and site connectors are intended to be primarily location based.
-
-  - This design is best for situations where you want to localize RabbitMQ traffic and control traffic directly through the load balancer configurations.
+   - This design is best for situations where you want to localize RabbitMQ traffic and control traffic directly through the load balancer configurations.
 
 - This design is best suited for true DR situations where we assume when the primary location is down or offline that the entire data center is also.
 - If the primary location is only partially down (RabbitMQ only is offline), it is possible secrets or features in SS assigned to that specific site connector will not function correctly.
 
 Site connector options:
 
-- Three site connectors and three or more sites configured in SS to localize RabbitMQ traffic for each respective location-based RabbitMQ cluster:
+  - One site connector for the global load balancer URL (Used for all other locations/sites).
+   - One site connector for the global load balancer URL (Used for all other locations/sites).
 
   - One site connector for the global load balancer URL (Used for all other locations/sites).
-
-  - One site connector for primary site.
-
-  - One site connector for secondary (DR) site.
+   - One site connector for secondary (DR) site.
 
 - Other data center's distributed engines typically connect to the primary site RabbitMQ cluster global load balancer FQDN/VIP.
 - Alternatively, if traffic isolation is not as important, you can have one site connector and all sites point to it. Cross-data-center communication between DEs and all RabbitMQ clusters is required. A one-site connector design will eliminate application-side changes during failover.

@@ -8,11 +8,7 @@
 
 ## Secret Server and Privilege Manager Integration
 
-The benefits of Privilege Manager (PM) integration with Secret Server (SS) include:
-
-- SS can be the authentication source for PM. This:
-
-  - Adds SS MFA login options to PM log ons.
+The benefits of Privilege Manager (PM) integration with Secret Server (SS) include:$1   - Adds SS MFA login options to PM log ons.
 
   - Gives one place for role assignments for both products.
 

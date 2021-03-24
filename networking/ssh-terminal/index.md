@@ -149,7 +149,6 @@ SSH terminal is considered a Web service and can be used with two factor authent
 1. Go to **Admin \> Configuration \> Login \> Require Two Factor for these Login Types** and select one of these:
 
    - **Website and Web Service Login**
-
    - **Web Service Log on Only**
 
 1. Enable 2FA on the SS user by going to **Admin \> Users \> Select a user \> Edit \> Two Factor** and select the 2FA option.
@@ -484,7 +483,6 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
 1. To launch, the secret must be:
 
    - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
-
    - Shared with the terminal user
 
 1. Log in to the terminal with SS user credentials:
@@ -520,7 +518,6 @@ Submits an "access request" comment to the secret with ID 26 on the machine XYZ 
 1. To launch, the secret must be:
 
    - Enabled for proxy **(SS \> Secret \> Security \> Enable Proxy)**
-
    - Shared with the terminal user
 
 1. If the secret ID and connection string is known, you can log in and immediately launch the secret with the following command:
