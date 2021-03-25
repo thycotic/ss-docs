@@ -10,9 +10,43 @@ This document was written after helping many customers successfully deploy Secre
 
 Think of SS as a platform for your organization to store all of its passwords and sensitive data. This means that it can be configured to work in many different ways depending on your industry, compliance requirements, and ultimate end goals. The trick is to know your objectives and then match the capabilities and best practices to your situation.
 
+## Terminology
+
+Throughout this topic, certain terms are used to refer to specific features or concepts within SS. Some of these terms corresponds to explicit roles defined within SS that may be referenced, while others are broader terms that system administrators should be familiar with.
+
+### Administrator
+
+Access to all the features within SS can be granted to users by creating and assigning different roles. *Administrator* is one of the default roles that comes installed with SS. By default, this role contains all role permissions, but it can be customized as well. In this guide, when it is used in the context of a SS user, it is referring to the users who generally have most permissions and manage the system. Administrators have control over the global security and configuration settings.
+
+> **Note:** Administrators in SS do **not** automatically have access to all data stored in the system—access to data  is still controlled by explicit permissions on that data.
+
+### Basic User Role
+
+The basic user role is a default role that comes installed with SS. This role is a slimmed down version of the user role and primarily focuses on creating and modifying secrets, as well as limited “view” permissions. Users that have this role assigned to them also have their own personal folder.
+
+### Folder
+
+A folder in SS provides a hierarchical structure for organizing secrets. Some folders contain no secrets at all and may be used only to set permissions or policies on subfolders. Other folders may simply be a way to organize sub-folders that contain secrets. Folders are organized based on a “root” level folder structure, where “/” is the root level folder and any new folder created will be placed under that folder. Personal folders are unique and are created for each user, providing them the “personal folders” permission. Personal folders can contain sub-folders for the owner to organize their secrets. 
+
+### Role Based Access Control (RBAC)
+
+Secret Server role based access control (RBAC) is a mechanism that restricts system access to authorized users and defines what type of access a user has within the system. Often these roles correspond to features within the product and those features may give users greater privileges to make changes within the system. RBAC is a core SS feature. 
+
+### Secret
+
+A secret is any sensitive piece of information (typically a password) that you would like to manage within SS. Typical secrets include (but are not limited to) privileged passwords on routers, servers, applications, and devices. Files can also be stored in secrets allowing for storage of private key files, SSL certificates, license keys, network documentation, or even a Microsoft Word or Excel document.
+
+### Site
+
+A site is a logical work container that can tell SS which distributed engines should manage work associated with specific tasks. Sites are critical to ensuring that SS can manage remote network segments, alternate locations, or even DMZs. By default, SS comes with the "local" site. That site is unique as it is the only site that can be configured for "web processing” or “engine processing.” When the local site is configured for Web processing, the Web servers themselves act as distributed engines and are responsible for all engine work processing, in addition to the Web Server role specific work that they may be configured for. Any additional sites that are user created may only be configured for Engine processing. The “Local” site comes with two free engines under any licensing model that may be used. Any additional sites and engines must be licensed separately and will incur additional licensing costs.
+
+### User
+
+This is the default role for new users that are added to SS. By default, this role contains several permissions that enable new users to interact with SS. Many of these permissions are centered around creating and modifying secrets, as well as several “view” permissions to access audit information. Additionally, access to advanced secret options, assigning secret policies, and a few other advanced permissions are assigned to this role. It also gives each user their own personal folder that is accessible only by each individual user added to the system. Besides the owner, only the "unlimited administrator" role can access these folders.
+
 ## Installation
 
-Before installing SS, be sure to take a look at the [system requirements](../secret-server-setup/system-requirements/index.md). The process for installing SS is outlined in the [installation guides](../secret-server-setup/installation/index.md) matching the version of Windows Server you are using. If you have an active trial or have purchased SS licenses, you can find your licenses by logging into your account at [thycotic.com](http://www.thycotic.com/).
+Before installing SS, be sure to look at the [system requirements](../secret-server-setup/system-requirements/index.md). The process for installing SS is outlined in the [installation guides](../secret-server-setup/installation/index.md) matching the version of Windows Server you are using. If you have an active trial or have purchased SS licenses, you can find your licenses by logging into your account at [thycotic.com](http://www.thycotic.com/).
 
 ## Basic Configuration
 
@@ -26,24 +60,74 @@ Once SS is installed, see the  [End User Guide](../secret-server-end-user-guide/
 - Basic security settings
 - Setting up access for local and AD users
 
+## Advanced Configuration
+
+Secret Server's Advanced Configuration page is intentionally hidden from casual access. You have to enter a URL—the page is not accessible by clicking a link. The URL format is:
+
+`https://<server>.<subdomain>.<domain>/<ss install>/ConfigurationAdvanced.aspx`
+
+For example:
+
+`https://qa-test.acme-east.acmewidgets.com/acmesecretserver/ConfigurationAdvanced.aspx`
+
+The easiest way to get to the page is:
+
+1. Open your SS instance.
+
+1. Navigate to **Admin \> Configuration**. The (regular) Configuration page appears:
+
+   ![image-20210325115600894](images/image-20210325115600894.png)
+
+1. Look at the URL for the page. The file name is `ConfigurationGeneral.aspx`.
+
+1. Change the name to ConfigurationAdvance.aspx, leaving the rest of the URL as is.
+
+1. Press **\<Enter\>** the (advanced) Configuration page appears:
+
+   ![image-20210325120152448](images/image-20210325120152448.png)
+
+1. Note the scary warning at the top of the page. It is not kidding, but it is also not *completely* correct. There are a few settings that may be important to your initial deployment. **Do not change any settings not directly discussed here without contacting Thycotic Customer Service first**.
+
+1. The following settings might need adjustment:
+
+   - **IP Address Header:** If you are using a load balancer and multiple SS Web server nodes, it is important to set this to `X-Forwarded-For`. That way, user audits reflect individual user IP addresses and not your load balancer IP address.
+   - **Secret Computer Matcher Once Per Discovery:**  We mention this setting in the [Discovery Best Practices](../discovery/general-information/discovery-best-practices/index.md) topic, where we recommend setting it to `true` for for large environment discovery. Otherwise, the matcher runs every five hours, regardless of how often discovery is configured to run.
 
 ## Security Hardening
 
-Security is a process—not a product. Take a look at the [Security Hardening Guide](../security-hardening/security-hardening-guide/index.md) to ensure your implementation of SS has optimal security. The guide contains more in-depth recommendations for not only configuring the application in a secure manner, but also hardening the server or servers SS is hosted on.
+Security is a process—not a product. Take a look at the [Security Hardening Guide](../security-hardening/security-hardening-guide/index.md) to ensure your implementation of SS has optimal security. The guide contains more in-depth recommendations for not only configuring the application in a secure manner but also hardening the server or servers SS is hosted on.  That guide complements the information provided here. 
+<!--
+One of the most important areas for hardening within a Secret Server environment is protection of the encryption.config file that is created during an installation of Secret Server. After the product is installed, this file exists in the main \SecretServer\ directory. Out of all the files in that folder, this is the singular most important file. This file in an unencrypted state, along with a backup of your Secret Server database is all you need to get a Secret Server environment back up and running. For this reason, it is imperative that you protect this key appropriately. There are different ways to protect the encryption.config file and it partially depends on whether you have an on-premises installation or are leveraging Secret Server Cloud.
 
-## Terminology
+ 
 
-Throughout this topic, certain terms are used to refer to specific features or concepts within SS.
+If you are using an on-premise installation of Secret Server, our number one recommendation for protecting your encryption.config file is to use an HSM. When using an HSM, though, there are other things that you should be mindful of:
 
-#### Administrator
+·     Is the HSM highly available? 
 
-Access to all the features within SS can be granted to users by creating and assigning different roles. Administrator is one of the default roles that comes installed with SS. By default, this role contains all role permissions, but it can be customized as well. In this guide, when "administrator" is used in the context of a SS user, it will be referring to the users who generally have most permissions and manage the system. Administrators have control over the global security and configuration settings.
+·     Is the HSM capable of handling a high volume of access requests?
 
-> **Note:** Administrators in SS do **not** automatically have access to all data stored in the system—access to data  is still controlled by explicit permissions on that data.
+·     What methods do I have for retrieving the key from a backup if my HSM was to go down?
 
-#### Secret
+In the event of your HSM being unavailable or down and you do not have backups, there is nothing we can do to help recover your data. Careful consideration should be made when leveraging an HSM for protection of the encryption.config file.
 
-A secret is any sensitive piece of information (typically a password) that you would like to manage within SS. Typical secrets include (but are not limited to) privileged passwords on routers, servers, applications, and devices. Files can also be stored in secrets allowing for storage of private key files, SSL certificates, license keys, network documentation info, or even a Microsoft Word or Excel document.
+ 
+
+A second but less secure option for protecting the encryption.config file is to use DPAPI combined with EFS. DPAPI is a setting that is enabled on each individual Web Server within your Secret Server cluster. EFS adds an additional password to the encryption.config file. It is worth noting that both protection mechanisms can be compromised if an attacker were to log on interactively to Secret Servers Web Servers and become a local administrator. Careful consideration should be placed around securing remote access to Secret Server when leveraging DPAPI and EFS.
+
+ 
+
+An unencrypted copy of the encryption.config file is recommended for disaster recovery scenarios where we assume the Secret Server Web Server is irrecoverable. It is recommended to take a backup of this file immediately after installation (and before choosing to secure it with a HSM or DPAPI + EFS), and to store this file on one or more media devices such as a hardware encrypted USB drive. The device should then be placed in a secure location, such as a safe. Access to the device should go through a chain of custody process in the event of an emergency where the original file may need to be retrieved.
+
+ 
+
+If you are using Secret Server Cloud, there are two main methods for protecting your encryption.config file
+
+·     Thycotic owns your encryption.config file and is responsible for keeping it secure. Internal mechanisms are in place to ensure that Thycotic does not have access to your data without explicit consent/permission
+
+·     Customers can leverage configuring a connection to AWS KMS to protect the encryption.config file. The master key will be stored in AWS and under your complete control, inaccessible to Thycotic staff
+-->
+
 
 ## Know Your Edition
 
