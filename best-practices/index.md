@@ -110,9 +110,7 @@ You can view [reference architectures](../architecture/index.md) for SS. These r
 Consider some key questions about your SLA requirements for the application: 
 
 - What are the RPOs and RTOs for the application?
-
 - Is high availability or disaster recovery required? 
-
 - Are you going to purchase SS or SSC?
 
 Answering these helps determine what initial infrastructure is needed for your environment. You can then look at the reference architectures to help select a variation of the reference architecture that works best for your requirements. 
@@ -182,7 +180,6 @@ The areas mentioned below are often where we spend the most time with customers 
 - When using the "local" site for Web processing when also using sites with distributed engine processing, consider using engine processing for the local site too. In most cases, when using both Web and engine processing, you are using both a built-in message broker (MemoryMQ) with (RabbitMQ). 
 - Consider having dedicated systems for SS components, as proposed in our mid-range reference architectures. If using RabbitMQ, put it on a dedicated system that is not shared with the distributed engine service.
 - For environments that contain 75,000 to over 100,000 secrets where secret searches are noticeably slow, we strongly recommend running `SecretSearchPerformance.sql` against your SS database, which can be found in `C:\inetpub\wwwroot\SecretServer\Database\SqlServer\OptionalOptimizations`.
-
 - For large environments where discovery, RPC, and heartbeats will be used simultaneously, careful consider when to run discovery. Discovery can compete with RPC requests when both features are using the same site. For large environments, you may want to have a dedicated site and distributed engines for discovery and a separate dedicated site for secrets.
 
 ## Securing the encryption.config File
@@ -196,9 +193,7 @@ One of the most important areas for SS hardening is protecting the `encryption.c
 For an on-premise installation of Secret Server, we recommend protecting your `encryption.config` file with an HSM. When using an HSM, though, there are other things that you should be mindful of:
 
 - Is the HSM highly available? 
-
 - Is the HSM capable of handling a high volume of access requests?
-
 - What methods are available for retrieving the key from a backup if my HSM were to crash?
 
 > **Important:** If your HSM is down and you do not have backups, there is nothing we can do to help recover your data. Carefully consider the configuration of an HSM for protecting `encryption.config`.
@@ -212,7 +207,6 @@ We recommend storing an unencrypted copy of the `encryption.config` file for dis
 If you are using Secret Server Cloud, there are two main methods for protecting your `encryption.config` file:
 
 - Thycotic owns your `encryption.config` file and is responsible for keeping it secure. We put internal mechanisms in place to ensure that Thycotic does not have access to your data without your explicit permission.
-
 - You configure a connection to AWS KMS to protect the `encryption.config` file. The master key is stored in AWS and under your complete control, inaccessible to Thycotic staff
 
 ## Privileged Account Management Strategy
@@ -368,7 +362,7 @@ Business users are not permitted to manage privileged accounts, such as database
 
 Business users can:
 
-- Access secrets: They can create, update and delete their own secrets within SS. For example, A user signing up for an online service can use the password generator to create a strong password, store that password in SS, and use the Web Password Filler to log in later.                        
+- Access secrets: They can create, update and delete their own secrets within SS. For example, A user signing up for an online service can use the password generator to create a strong password, store that password in SS, and use the Web Password Filler to log in later. 
 
 - Request and approve access to secrets:  Non-privileged secrets may need approval workflows. Business users can request access to these secrets and can act as approvers. For example, if access to an organization’s social media accounts requires authorization from a member of the marketing team, a business user can request access to the secret, and another business user can approve access.
 - Share secrets with other users: Business users can share non-privileged secrets with other users of SS, whether or not they are business users.
@@ -457,20 +451,20 @@ The folder structure creates a hierarchy for organization and permissions. This 
 
 For example:
 
-— Customers
-— Human Resources
-— Information Technology
-—— Development Services
-——— Programmers
-—— Technical Services
-——— Database
-———— Oracle
-———— SQL Server
-——— Systems
-———— Network Infrastructure
-———— Unix
-———— Windows
-— Vendors
+— Customers<br/>
+— Human Resources<br/>
+— Information Technology<br/>
+—— Development Services<br/>
+——— Programmers<br/>
+—— Technical Services<br/>
+——— Database<br/>
+———— Oracle<br/>
+———— SQL Server<br/>
+——— Systems<br/>
+———— Network Infrastructure<br/>
+———— Unix<br/>
+———— Windows<br/>
+— Vendors<br/>
 
 The most typical configuration is to break out the folders based on the teams that need to use those folders with the most restrictive permissions at the deepest subfolders of the tree.
 
@@ -578,9 +572,7 @@ Simple approval workflows:
 Advanced approval workflows:
 
 - When requiring a multi-tier approval process that involves having more than one individual approve access to a secret
-
 - When requiring multiple workflow steps, each with different reviewers and a varied number of required approvers
-
 - When selecting “owners” as a review group
 
 This setting can be turned on under the Security tab for an individual secret, but can also be applied via a secret policy. When enabling "requires approval for access," remember that users will still need to have at least view permission to the secret to request access to it. Once access has been granted to the secret, they have whichever level of permission was assigned to them for the secret (view, edit or owner). The approvers of the secret are specified when enabling the setting, and these individuals will be able to modify the time that the requestor originally submitted their access request for or deny the request altogether.
@@ -636,12 +628,9 @@ It is important to review the available templates and decide which ones should b
 You can customize existing templates or create new templates if necessary. Many templates are included by default that cover common account types. For example, the AD Account template contains the following settings:
 
 - Domain, username, password, and notes fields
-
 - 30-day expiration period, applying to the password field
 - RDP launcher, requiring user input for computer to connect to
-
 - Password changing and heartbeat enabled
-
 - AD password changer, with default password requirements
 
 
