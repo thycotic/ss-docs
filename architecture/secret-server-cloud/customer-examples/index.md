@@ -1,16 +1,16 @@
-[title]: # (SSC Customer Example Architecture)
+[title]: # (SSC Customer Example Architectures)
 [tags]: # (Secret Server Cloud, Architecture,example)
 [priority]: # (1000)
 
-# Secret Server Cloud Customer Example Architecture
+# Secret Server Cloud Customer Example Architectures
 
 > **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services support architects.
 
-## Diagram
+## Multi-Site with ASR Agents Example Architecture
 
-**Figure:** SSC Customer Example Architecture
+**Figure:** Multi-site with ASR Agents Example Architecture
 
-![image-20210106095339756](images/image-20210106095339756.png)
+![image-20210212095301780](images/image-20210212095301780.png)
 
 >**Note:** This design is fully supported by Thycotic.
 
@@ -31,7 +31,7 @@
 > - SSH and RDP proxy
 > - Session recording
 
-## Details
+## Details for All Architectures
 
 ### 1: Service Buses
 

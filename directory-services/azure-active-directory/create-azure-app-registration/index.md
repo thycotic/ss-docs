@@ -1,10 +1,11 @@
-[title]: # (Create an Azure Application Registration)
+[title]: # (Create an Azure App Registration)
 [tags]: # (Azure, Azure Active Directory)
 [priority]: # (1002)
 
-# Create an Azure Application Registration
+# Create Azure App Registration
 
 The steps provided can be used to create the App Registration required for configuring Azure Active Directory integration.
+
 
 > **Important:** This integration requires .NET Framework version 4.8 or later.
 
