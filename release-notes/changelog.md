@@ -11,6 +11,7 @@ The following is a chronological list of significant documentation changes. Mino
 
 Created or made significant changes to these topics:
 
+- Best Practices
 - Configuring CredSSP for WinRM with PowerShell
 - Create an Azure Application Registration
 - Enabling Specific OU Domain Discovery

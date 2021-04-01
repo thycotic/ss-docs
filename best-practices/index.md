@@ -175,7 +175,6 @@ The areas mentioned below are often where we spend the most time with customers 
 
 - Ensure that you have a database maintenance plan in place for SS. It should be implemented or reviewed by your organization's DBAs. Adjusting the data retention settings is not enough and does not substitute for having a maintenance plan.
 - Ensure that RabbitMQ clustering configurations have work distribution policies in place. In most engagements, we use the [AutomaticSyncMode](https://thycotic.github.io/rabbitmq-helper/clustering/) policy.
-
 - When designing multi-site, single-instance SS implementations, be cautious when configuring Web servers and enabling roles on all Web server nodes when inter-location latency is high (50 ms or greater). 
 - When using the "local" site for Web processing when also using sites with distributed engine processing, consider using engine processing for the local site too. In most cases, when using both Web and engine processing, you are using both a built-in message broker (MemoryMQ) with (RabbitMQ). 
 - Consider having dedicated systems for SS components, as proposed in our mid-range reference architectures. If using RabbitMQ, put it on a dedicated system that is not shared with the distributed engine service.
@@ -354,8 +353,6 @@ This approach is more secure than using only AD groups and users, but  if Active
 
 ### Business Users
 
-#### What is a "Business User" in Secret Server?
-
 A *business user* is a non-IT user, such as sales team members, office managers, data entry clerks, and marketing team members. They are allowed to access and use SS for managing non-privileged accounts, including individual or team application accounts and credentials. Non-privileged accounts include email login, social media password,  productivity software credentials, and more.
 
 Business users are not permitted to manage privileged accounts, such as database server credentials, security appliance passwords, and cloud service root keys. Business users are also not permitted to administer SS.
@@ -470,11 +467,11 @@ The most typical configuration is to break out the folders based on the teams th
 
 For instance, an Oracle DBA might have the following permissions on the above folders:
 
-— Information Technology (view)
-—— Database (view)
-——— Oracle (view/edit/owner)
-——— SQL Server (view/edit)
-—— Technical Services (view)
+— Information Technology (view)<br/>
+—— Database (view)<br/>
+——— Oracle (view/edit/owner)<br/>
+——— SQL Server (view/edit)<br/>
+—— Technical Services (view)<br/>
 
 > **Note:**  If the "require view permission on a specific folder for visibility" setting (Admin \> Configuration \> Folders) is enabled, a user cannot see the full folder structure unless they have view permissions on all the parent folders of a folder. For example, a user with view on the Oracle folder in our example, would also need view on Database, Technical Services, and Information  Technology to see the full folder path.
 
