@@ -103,7 +103,7 @@ To add the permission In GCP:
 
 Secret Server now has a build in GCP IAM Service Account Key template.
 
-> **Note:** To create a Secret using GCP IAM service account key template, you must have the service account’s JSON private key file from GCP (created earlier).
+> **Note:** To create a Secret using GCP IAM service account key template, you must have the service account's JSON private key file from GCP (created earlier).
 
 Create a new secret (see [Creating Secrets](../../../secret-management/procedures/creating-secrets/index.md) for details):
 
@@ -258,7 +258,7 @@ Other useful filters:
 
 Status:
 
-`status=”StatusValue”`
+`status="StatusValue"`
 
 `StatusValue` can be `Running` or `Terminated`
 

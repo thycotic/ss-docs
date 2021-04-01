@@ -10,7 +10,7 @@ Secret Server allows the use of RADIUS two-factor authentication on top of the n
 
 To configure RADIUS for the SS instance:
 
-1. Log on SS with an account with “Administer Configuration” and “Administer RADIUS” permissions.
+1. Log on SS with an account with "Administer Configuration" and "Administer RADIUS" permissions.
 
 1. Navigate to **Administration menu** > **Configuration** > **Login**.
 
@@ -25,7 +25,7 @@ To configure RADIUS for the SS instance:
 
    - **RADIUS Server Port** (default 1812 for RSA and 1812 for AuthAnvil).
    - **RADIUS Shared Secret**, which must match chosen RADIUS shared secret on your RADIUS Server. (Shared Secret is a RADIUS term and not related to any Secret Server secret.)
-   - **RADIUS Login Explanation** (custom message or instruction). Defaults to “Please enter your RADIUS passcode.”
+   - **RADIUS Login Explanation** (custom message or instruction). Defaults to "Please enter your RADIUS passcode."
 
 1. Click the **Save** button.
 
@@ -39,7 +39,7 @@ To test RADIUS settings:
 
 2. After enabling RADIUS on SS, you must enable RADIUS two-factor authentication for each user:
 
-   1. Sign into an account with “Administer Configuration” and “Administer RADIUS” permissions.
+   1. Sign into an account with "Administer Configuration" and "Administer RADIUS" permissions.
 
    1. Navigate to **Administration** > **Users**. The Users page appears.
 

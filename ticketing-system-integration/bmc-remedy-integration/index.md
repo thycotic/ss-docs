@@ -94,4 +94,4 @@ When Secret Server calls the BMC Remedy SOAP-based web services, there are times
 
 1. Click the **Apply** button.
 
-1. Once enabled, you can click **View** from this window to see the log or navigate to the mid-tier server’s file system at the location specified. Details of the SOAP web service exception are written to the log file including a stack trace.
+1. Once enabled, you can click **View** from this window to see the log or navigate to the mid-tier server's file system at the location specified. Details of the SOAP web service exception are written to the log file including a stack trace.

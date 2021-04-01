@@ -10,7 +10,7 @@ Group Administrators can also set another group or user as the group owners for 
 
    ![image-20191209092814385](images/image-20191209092814385.png)
 
-1. Click the desired group in the list. The Group’s page appears:
+1. Click the desired group in the list. The Group's page appears:
 
    ![image-20191209095712928](images/image-20191209095712928.png)
 

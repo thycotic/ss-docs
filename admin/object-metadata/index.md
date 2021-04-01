@@ -10,7 +10,7 @@
 
 Object metadata allows you to store extended information on several SS objects including users, groups, folders, dates, or secrets via the user interface or REST API. You can store most data types, including strings, Boolean values, numbers, dates, and users. You can combine this metadata into sections containing named fields of your defined types.
 
-Unlike preexisting object fields, this metadata is flexible and dynamic. No coding, structural changes, or database schema changes are required. The only constraint is a role permission that controls who can add metadata fields or sections, which is granular down to the sections level on a given entity. For example, users that can view a user might be allowed to edit the values in the “public” metadata section and users that can edit a user might be allowed to edit all the sections for that user.
+Unlike preexisting object fields, this metadata is flexible and dynamic. No coding, structural changes, or database schema changes are required. The only constraint is a role permission that controls who can add metadata fields or sections, which is granular down to the sections level on a given entity. For example, users that can view a user might be allowed to edit the values in the "public" metadata section and users that can edit a user might be allowed to edit all the sections for that user.
 
 ## Features
 

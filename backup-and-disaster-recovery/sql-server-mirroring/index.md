@@ -58,7 +58,7 @@ To configure mirroring:
 
 1. Click the **Principal server instance** dropdown list to select the current (primary) server.
 
-1. Type a port number for connecting to the other servers in the **Listener port** text box. The port must be open for TCP communication on the machine’s firewall and on any network devices that restrict access to this machine.
+1. Type a port number for connecting to the other servers in the **Listener port** text box. The port must be open for TCP communication on the machine's firewall and on any network devices that restrict access to this machine.
 
 1. Click to select the **Encrypt data sent through this endpoint** check box. This enables RC4 encryption on data sent through this endpoint.
 
