@@ -33,7 +33,7 @@ The upgrade procedure requires that you do these steps outside of the SS install
 
 1. Download the latest version of Secret Server from the [Thycotic Support Website](https://thycotic.force.com/support/s/download-onprem).
 
-2. Perform a full backup of your SS database using the preferred backup method used by your company. For a quicker recovery procedure in case of disaster, we recommend creating a local SQL backup, engaging your SQL DBA team as needed. If you use an AlwaysOn configuration, perform the backup from your primary node. If desired, you can choose the option to do a “copy only” backup to avoid interrupting any log truncation performed by your enterprise backup tool.
+2. Perform a full backup of your SS database using the preferred backup method used by your company. For a quicker recovery procedure in case of disaster, we recommend creating a local SQL backup, engaging your SQL DBA team as needed. If you use an AlwaysOn configuration, perform the backup from your primary node. If desired, you can choose the option to do a "copy only" backup to avoid interrupting any log truncation performed by your enterprise backup tool.
 
 3. Restore the database onto a separate SQL server or separate instance within your environment. This restored backup is used to test the upgrade process. For this instruction, we call this server the "Test SQL Server."
 
@@ -193,7 +193,7 @@ In addition, the role:
 
 1. Click the **Enable Maintenance Mode** button.
 
-1. Back up SS: Type “backup” in the Admin search text box, and click the item that appears in the dropdown list to access the Backup Configuration page. Click the **Backup Now** button.
+1. Back up SS: Type "backup" in the Admin search text box, and click the item that appears in the dropdown list to access the Backup Configuration page. Click the **Backup Now** button.
 
 1. Click the **Disable Maintenance Mode** button.
 
@@ -216,7 +216,7 @@ In addition, the role:
 
 1. Go to **Admin \> Secret Nodes** to confirm the staging system is in maintenance mode.
 
-1. Copy the contents of the generated application Zip file to the staging location’s web application folder. Typically, this is `C:\inetpub\wwwroot\SecretServer`.
+1. Copy the contents of the generated application Zip file to the staging location's web application folder. Typically, this is `C:\inetpub\wwwroot\SecretServer`.
 
 1. Run the generated SQL script on the staging database.
 

@@ -14,7 +14,7 @@ This is often due to an overly-large database. The SS database  likely contains 
 
 **The process cannot access the file… because it is being used by another process**
 
-The cause of this message is typically multiple backup threads running simultaneously with all attempting to write to the same file. To fix this, open IIS Manager and ensure the “Maximum Worker Processes” setting for SS's  application pool is set to 1. If it is not, set the value to 1 and then  either recycle the application pool or perform an `iisreset`.
+The cause of this message is typically multiple backup threads running simultaneously with all attempting to write to the same file. To fix this, open IIS Manager and ensure the "Maximum Worker Processes" setting for SS's  application pool is set to 1. If it is not, set the value to 1 and then  either recycle the application pool or perform an `iisreset`.
 
 **Unable to complete backup. The following exception occurred: System.Threading.ThreadAbortException: Thread was being aborted**
 

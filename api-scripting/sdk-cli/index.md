@@ -16,7 +16,7 @@ There is also a .NET Core CLI SDK Client that uses the SDK .NET library. The SDK
 
 The .NET SDK library and the .NET Core CLI client both:
 
-- Automatically store the credentials and remote server in an encrypted file used to acquire an OAUTH token. The token is then used to make subsequent API calls. OAUTH tokens have an expiration time, which is configurable in the UI on the configuration page via the “Session Timeout for Webservices” value.
+- Automatically store the credentials and remote server in an encrypted file used to acquire an OAUTH token. The token is then used to make subsequent API calls. OAUTH tokens have an expiration time, which is configurable in the UI on the configuration page via the "Session Timeout for Webservices" value.
 - Get the contents of a secret.
 - Provide client-side caching (SDK client caching)
 
@@ -46,7 +46,7 @@ Secret Server exposes a REST API interface the is used by the SDK client. When t
 - secret retrieval
 - secret field retrieval
 
-> **Note:** We expect to expand the SDK’s capabilities over time to allow even greater access to the REST API.
+> **Note:** We expect to expand the SDK's capabilities over time to allow even greater access to the REST API.
 
 The SDK requires setup in two areas: SS configuration and SDK installation on the DevOps system.
 
@@ -221,15 +221,15 @@ To increase performance and reliability, you can configure the SDK client to cac
 - **Never** (0): With this default setting, the client never caches SS data. All data requests result in a query directly against the SSS instance. If the instance is unavailable, the requests fail.
 - **Server Then Cache** (1): With this setting, the client first attempts to retrieve the value from the server. If the server is unavailable, it checks to see if the same value has been previously fetched within a given period, and if so, it will returns the cached value. Use this setting to guard against losing the connection to SS.
 - **Cache Then Server** (2): With this setting, the client first checks to see if the same value has been previously fetched within a given period. If so, it returns the value without consulting the server. If not, it fetches, caches, and returns the value from the server. Use this setting for increased performance by reducing requests sent to SS.
-- **Cache Then Server Fallback on Expired Cache** (3): This strategy operates similarly to “Cache Then Server,” but if the server is unavailable and an expired value exists in the cache, the client returns that value as a last resort. Use this strategy for increased performance and reliability.
+- **Cache Then Server Fallback on Expired Cache** (3): This strategy operates similarly to "Cache Then Server," but if the server is unavailable and an expired value exists in the cache, the client returns that value as a last resort. Use this strategy for increased performance and reliability.
 
-All these cache strategies have a configurable age, in minutes, after which the value is considered expired and not used (except in “Cache Then Server Fallback” mode). Cache settings are set using the client application. See the examples below.
+All these cache strategies have a configurable age, in minutes, after which the value is considered expired and not used (except in "Cache Then Server Fallback" mode). Cache settings are set using the client application. See the examples below.
 
 ### Examples
 
 - Turn off caching: `tss cache --strategy 0`
-- Turn on “Cache Then Server” setting with a cache age of five minutes: `tss cache --strategy 2 --age 5`
+- Turn on "Cache Then Server" setting with a cache age of five minutes: `tss cache --strategy 2 --age 5`
 - Immediately clear all cached values: `tss cache --bust`
 - Show the current cache settings: `tss cache --current`
 
-> **Important:** Anytime you use a cached value, recent changes made to SS may not be applied, including changes to the value itself, permissions, or other access control settings. Examine your organization’s security policies and application requirements to determine the best cache settings to use.
+> **Important:** Anytime you use a cached value, recent changes made to SS may not be applied, including changes to the value itself, permissions, or other access control settings. Examine your organization's security policies and application requirements to determine the best cache settings to use.

@@ -96,7 +96,7 @@ Procedure:
 
    > **Note:** If choosing **Windows Mode** you will also need to  [run the IIS application pool as a service account](../running-ss-iis-app-pool-service-account/index.md) later in the installation process.
 
-1. If you selected mixed mode, which you almost certainly did, type your SQL Server system administrator (sa) account password in the **Enter password** and **Confirm password** text boxes. The password must meet Microsoft’s definition of a strong password. Click the **Help** button and search for “Database Engine Configuration - Account Provisioning” if you what to find out what that is. A 16 character mixture of lower and uppercase letters and numerals works fine.
+1. If you selected mixed mode, which you almost certainly did, type your SQL Server system administrator (sa) account password in the **Enter password** and **Confirm password** text boxes. The password must meet Microsoft's definition of a strong password. Click the **Help** button and search for "Database Engine Configuration - Account Provisioning" if you what to find out what that is. A 16 character mixture of lower and uppercase letters and numerals works fine.
 
 1. Your user account should already be shown in the **Specify SQL Server administrators** text box. If not, click the **Add Current User** button.
 

@@ -27,7 +27,7 @@ Even if you plan to [integrate with Active Directory](../../directory-services/a
 
 ## SSL (HTTPS) Best Practice
 
-We recommend requiring SSL access to SS. This requires setting up an SSL certificate for the website, preferably with a domain certificate. However, if you don’t have a certificate, see [Installing a Self-Signed Certificate](https://updates.thycotic.net/links.ashx?SSSelfSignedCertificate) (KB). Once you have your certificate:
+We recommend requiring SSL access to SS. This requires setting up an SSL certificate for the website, preferably with a domain certificate. However, if you don't have a certificate, see [Installing a Self-Signed Certificate](https://updates.thycotic.net/links.ashx?SSSelfSignedCertificate) (KB). Once you have your certificate:
 
 1. Configure the HTTPS binding for your SS website using the certificate you choose.
 

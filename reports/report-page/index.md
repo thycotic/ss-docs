@@ -42,7 +42,7 @@ The Security Hardening Tab configures aspects of SS to ensure security best prac
   >**Note:** For more information about how to secure your cookies, see [Secure ASP Session and Forms Authentication Cookies](http://updates.thycotic.net/link.ashx?SecureCookieSessions) (KB).
 
 - **Web Service HTTP Gets Allowed:** Web service HTTP get requests are allowed. Allowing HTTP GET requests allows REST-style calls to many SS Web service methods. This can be a security concern because simply clicking a link to the Web service, created by a malicious user, would cause it to be executed.
-- **Zero Information Disclosure Error Message:** Replace all error messages with a custom “contact your admin” message. Error messages can be very helpful when diagnosing installation and configuration issues. However, having errors displayed to a potential attacker can provide him or her with the critical information they need to perform a successful attack.
+- **Zero Information Disclosure Error Message:** Replace all error messages with a custom "contact your admin" message. Error messages can be very helpful when diagnosing installation and configuration issues. However, having errors displayed to a potential attacker can provide him or her with the critical information they need to perform a successful attack.
 
 ### Database Section
 

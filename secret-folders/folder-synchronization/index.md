@@ -44,4 +44,4 @@ Enter the SQL Server location, SQL database name, and the credential information
 
 ![image-20191203160414962](images/image-20191203160414962.png)
 
-“Days to Keep Operational Logs” sets the period to keep folder-synchronization-related logs that might contain PII. SS automatically deletes logs older than that (in days).
+"Days to Keep Operational Logs" sets the period to keep folder-synchronization-related logs that might contain PII. SS automatically deletes logs older than that (in days).

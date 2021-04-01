@@ -35,7 +35,7 @@ $2
 
    > **Note:** For details about connecting to SS with an SSH terminal, see the [SSH Terminal Administration Guide](https://thycotic.force.com/support/s/article/SS-ADM-EXT-SSH-Terminal).
 
-   > **Note:** To manipulate a secret via an SSH terminal, the secret’s proxy setting must be enabled, and the secret must be shared with the authenticated terminal user.
+   > **Note:** To manipulate a secret via an SSH terminal, the secret's proxy setting must be enabled, and the secret must be shared with the authenticated terminal user.
 
 1. Click the edit icon next to one of the machines in the **Nodes** section.
 

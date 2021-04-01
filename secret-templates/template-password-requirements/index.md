@@ -60,7 +60,7 @@ To create a new password requirement:
 
 1. Click the **Save** button.
 
-> **Note:** To set a custom password requirement for a specific secret, use the “Customize Password Requirement” in the Security tab of a secret.
+> **Note:** To set a custom password requirement for a specific secret, use the "Customize Password Requirement" in the Security tab of a secret.
 
 > **Note:** You can enable or disable the validation of manually entered passwords at the secret template level via the "Validate Password Requirements on Create" and "Validate Password Requirements on Edit" settings.
 

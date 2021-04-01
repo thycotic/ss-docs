@@ -31,11 +31,11 @@ The variables are:
 
 | Variable                    | User Action Returns            | Automated Task Returns |
 | --------------------------- | ------------------------------ | ---------------------- |
-| `$SECRETSERVERUSERID`       | Logged-on user’s ID            | -1                     |
-| `$SECRETSERVERUSERNAME`     | Logged-on user’s name          | “System”               |
-| `$SECRETSERVERDISPLAYNAME`  | Logged-on user’s display name  | “System”               |
-| `$SECRETSERVEREMAILADDRESS` | Logged-on user’s email address | Empty string           |
+| `$SECRETSERVERUSERID`       | Logged-on user's ID            | -1                     |
+| `$SECRETSERVERUSERNAME`     | Logged-on user's name          | "System"               |
+| `$SECRETSERVERDISPLAYNAME`  | Logged-on user's display name  | "System"               |
+| `$SECRETSERVEREMAILADDRESS` | Logged-on user's email address | Empty string           |
 
 []()
 
-> **Note:** You can find the regular “system” variables in the [Editing Custom Commands](../../remote-password-changing/custom-password-changers/editing-custom-commands/index.md) subsection of the Custom Password Changers section.
+> **Note:** You can find the regular "system" variables in the [Editing Custom Commands](../../remote-password-changing/custom-password-changers/editing-custom-commands/index.md) subsection of the Custom Password Changers section.

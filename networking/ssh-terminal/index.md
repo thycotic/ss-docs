@@ -126,7 +126,7 @@ SSH terminal can also run on each proxy-enabled distributed engine (DE) site.
 
 ## Increasing Maximum Concurrent Logins for Users
 
-Logging in to SSH terminal counts against the number of concurrent SS sessions a user is allowed. For example, if **Maximum concurrent logins per user** is set to “1” and the user john.smith is logged into the SS Web user interface, then john.smith logs into SSH terminal, his first Web session will end, and he will have to log in again to use the Web user interface.
+Logging in to SSH terminal counts against the number of concurrent SS sessions a user is allowed. For example, if **Maximum concurrent logins per user** is set to "1" and the user john.smith is logged into the SS Web user interface, then john.smith logs into SSH terminal, his first Web session will end, and he will have to log in again to use the Web user interface.
 
 To increase the maximum concurrent logins per user:
 
@@ -169,7 +169,7 @@ SSH terminal is considered a Web service and can be used with two factor authent
 
    Using keyboard-interactive authentication:
 
-   duouser@127.0.0.1’s password: `uewori#$%tdtd` **\<Enter\>**
+   duouser@127.0.0.1's password: `uewori#$%tdtd` **\<Enter\>**
 
    Using keyboard-interactive authentication:
 
@@ -183,13 +183,13 @@ When manipulating secrets containing special characters, such as single quotes a
 
 Example: To search for an item with a space in the name, put the name in single or double quotes:
 
-`search “My Secret”`  or `search 'My Secret'`
+`search "My Secret"`  or `search 'My Secret'`
 
 Example: To search for an item with a single quote embedded in the name, there are two options:
 
 - Encase the term in double quotes:
 
-   `search “Bob’s Secret”`
+   `search "Bob's Secret"`
 
 - Escape the single quote with a backslash:
 
@@ -324,7 +324,7 @@ Find a list of "favorite" secrets matching "jones" in any field Returns 25 resul
 
 `search admin -take 50`
 
-Outputs a list of secrets matching “admin”, up to 50 results.
+Outputs a list of secrets matching "admin", up to 50 results.
 
  `search Zardoz -take 50 - skip 50 -sf "Secret Name"`
 
@@ -332,7 +332,7 @@ Find a list of secrets with "Zardoz" in the "Secret Name" field. Return 50 resul
 
 `search admin -skip 25 -r`
 
-Find a list of secrets matching “admin” in any field. Return 25 results, which is the default. Skip the first 25 results. Ignore restricted secrets.
+Find a list of secrets matching "admin" in any field. Return 25 results, which is the default. Skip the first 25 results. Ignore restricted secrets.
 
 ### cat
 
@@ -343,7 +343,7 @@ Find a list of secrets matching “admin” in any field. Return 25 results, whi
 #### Description
 
 - Displays information on a secret. The available information depends on the secret's template. *cat* is short for *concatenate*.
-- Catches access errors, such as “comment required” or “requires approval”, and displays them on the terminal
+- Catches access errors, such as "comment required" or "requires approval", and displays them on the terminal
 - Audits "view" comments.
 
 
@@ -380,15 +380,15 @@ Display the contents of the secret with the ID 24. Only works after access is ap
 
 Alternate syntax. Display the contents of the secret with the ID 24.
 
-`cat -id 25 -comment “Viewing this secret”`
+`cat -id 25 -comment "Viewing this secret"`
 
 Add a "view" comment to, and then display the contents of the secret with the ID 25.
 
-`cat -id 26 -comment “Requesting view access to install software” -ticket 123 -ticketsystemid 2`
+`cat -id 26 -comment "Requesting view access to install software" -ticket 123 -ticketsystemid 2`
 
 Add an "access request" comment to the secret with the ID 26. Assign the request the ticket number 123 and the ticket system ID of 2 to that request.
 
-> **Note:** The most common secret restrictions are “requires view comment” or “requires access request.” The `-comment` parameter takes care of both of these because the underlying API call (`SecretAccessCreateArgs`) is agnostic.
+> **Note:** The most common secret restrictions are "requires view comment" or "requires access request." The `-comment` parameter takes care of both of these because the underlying API call (`SecretAccessCreateArgs`) is agnostic.
 
 ### launch
 
@@ -436,11 +436,11 @@ Begins the SSH proxy session with the secret with the ID 24 and the specified cr
 
 Alternate syntax. Begins the SSH proxy session with the secret with the ID 24 and the specified credentials and machine. Only works after access is approved.
 
-`launch -id 25 -comment “Launching this secret”`
+`launch -id 25 -comment "Launching this secret"`
 
 Submits a "view" comment to the secret with ID 25. Begins the SSH proxy session with secret credentials and machine.
 
-`launch -id 26 -machine XYZ -comment “Requesting view to launch temporary sudo account for the XYZ machine”`
+`launch -id 26 -machine XYZ -comment "Requesting view to launch temporary sudo account for the XYZ machine"`
 
 Submits an "access request" comment to the secret with ID 26 on the machine XYZ with the ticket number 123 and ticket system ID 2.
 
@@ -550,7 +550,7 @@ SS terminal can launch secrets with custom SSH Command restrictions. For detaile
 
 5. On the **Security** tab of a secret that can use a proxied SSH session, proxy must be enabled, as well as command menu restrictions. If **Allow Owners Unrestricted SSH Commands** is enabled, any user who is an owner of the secret has unrestricted use of the launched session. That is, that user is able to type in commands as in a normal SSH session. Additionally, other groups can be assigned the unrestricted role as well.
 
-6. In the following example, the “admin” group is unrestricted, and everyone who is not in that admin group is restricted to only being able to run the allowlisted commands that are specified in the user command menu created above.
+6. In the following example, the "admin" group is unrestricted, and everyone who is not in that admin group is restricted to only being able to run the allowlisted commands that are specified in the user command menu created above.
 
 
    ![1569425961920](images/1569425961920.png)
@@ -568,7 +568,7 @@ SS terminal can launch secrets with custom SSH Command restrictions. For detaile
 
    ![1569431038970](images/1569431038970.png)
 
-   The user simply enters the number of the command menu to see available commands or types “?” to display the options again:
+   The user simply enters the number of the command menu to see available commands or types "?" to display the options again:
 
    ![1569431232559](images/1569431232559.png)
 
@@ -626,7 +626,7 @@ SSH key pairs allow users to authenticate to SS terminal without using a passwor
 
 ### Limitations
 
-- Currently users can only authenticate to SS using SSH keys by using SS’s SSH terminal.
+- Currently users can only authenticate to SS using SSH keys by using SS's SSH terminal.
 - Only PuTTY and OpenSSH keys can be generated.
 
 
@@ -636,7 +636,7 @@ There are three requirements for enabling Public SSH Keys:
 
 - SSH Proxy is enabled in SS.
 - SSH Terminal is enabled in SS.
-- SSH key integration is enabled in SS’s Configuration \> Login settings. To do so:
+- SSH key integration is enabled in SS's Configuration \> Login settings. To do so:
     1. **Unix  Authentication Method**: choose **Public Key only**, **Password or  Public Key** or **Password and Public Key** to enable SSH key pair authentication.
 1. Once done, the admin can also set an optional expiration time frame for the public SSH keys, which applies to all users.
 
@@ -644,11 +644,11 @@ There are three requirements for enabling Public SSH Keys:
 
 ### Creating SSH Key Pairs
 
-An SSH key pair consists of a private key and a public key. Only the public key is stored in the user’s settings—the private key downloaded during generation is **not** saved inside SS and should only be available to the user, to remain secure.
+An SSH key pair consists of a private key and a public key. Only the public key is stored in the user's settings—the private key downloaded during generation is **not** saved inside SS and should only be available to the user, to remain secure.
 
-During terminal login, if the user provides a private key for authentication, SS validates the provided private key against the user’s available (and enabled) saved public keys. If a key pair match is found, the authentication succeeds (or the next required authentication step, for example a password prompt, is shown).
+During terminal login, if the user provides a private key for authentication, SS validates the provided private key against the user's available (and enabled) saved public keys. If a key pair match is found, the authentication succeeds (or the next required authentication step, for example a password prompt, is shown).
 
-For security reasons, only users can create their own SSH key pairs. However, SS Administrators can deactivate any user’s public SSH keys as follows:
+For security reasons, only users can create their own SSH key pairs. However, SS Administrators can deactivate any user's public SSH keys as follows:
 
 1. Navigate to the **Public SSH Keys** page using the main navigation at the top right of the page.
 
@@ -662,7 +662,7 @@ For security reasons, only users can create their own SSH key pairs. However, SS
 
 1. Locate the user in the dropdown list and select it.
 
-1. On the **General** tab click the **Administer Public SSH Keys** button. You can now deactivate the user’s public SSH keys.
+1. On the **General** tab click the **Administer Public SSH Keys** button. You can now deactivate the user's public SSH keys.
 
 ### Using SSH Keys for Authentication (PuTTY Example)
 

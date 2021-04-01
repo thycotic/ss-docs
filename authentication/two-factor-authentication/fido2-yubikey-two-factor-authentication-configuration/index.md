@@ -20,7 +20,7 @@ FIDO2 configuration follows these steps, which we cover in detail in this sectio
 
 1. Enable FIDO2 in your SS.
 
-2. Set up the user’s credentials.
+2. Set up the user's credentials.
 
 3. Distribute the FIDO2 device to the user.
 
@@ -116,11 +116,11 @@ Resetting FIDO2 for both single and multiple users is very similar to enabling F
 
 # Auditing and Security
 
-- Upon registration, a user’s FIDO2 Credential, the FIDO2 Public Key JSON string, and the FIDO2 Counter is stored in the User’s audit log.
-- Upon each successful FIDO2 authentication, the FIDO2 counter value is updated and noted in the User’s audit log.
+- Upon registration, a user's FIDO2 Credential, the FIDO2 Public Key JSON string, and the FIDO2 Counter is stored in the User's audit log.
+- Upon each successful FIDO2 authentication, the FIDO2 counter value is updated and noted in the User's audit log.
 
 # Troubleshooting and Issues
 
 - If the user encounters an error or does not fulfill the authentication before the process times out, the user is redirected back to the username and password log on screen where the process can be reattempted.
-- Authentication activities are logged in the user’s audit log. 
-- System errors are logged in the ss.log file in SS’s log directory.
+- Authentication activities are logged in the user's audit log. 
+- System errors are logged in the ss.log file in SS's log directory.

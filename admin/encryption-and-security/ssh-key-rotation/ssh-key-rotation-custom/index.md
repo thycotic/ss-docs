@@ -20,7 +20,7 @@ To use our default SSH key rotation commands, the following minimum requirements
 - SSH key logins should be enabled on the target using keys in OpenSSH format. A secret can be created with keys in PuTTY format but they will be converted to OpenSSH when the key is rotated.
 - Public keys should be stored in `[~userhome]/.ssh/authorized_keys` (not `authorized_keys2`).
 - Grep and Sed should be installed on the target.
-- If doing a privileged SSH key rotation, where a privileged user sets the key for another user, the privileged user must have sudo permissions that do not prompt for a password and the permissions to edit the user’s `authorized_keys` file with sudo.
+- If doing a privileged SSH key rotation, where a privileged user sets the key for another user, the privileged user must have sudo permissions that do not prompt for a password and the permissions to edit the user's `authorized_keys` file with sudo.
 
 The default command sets have been tested in the following Linux environments:
 

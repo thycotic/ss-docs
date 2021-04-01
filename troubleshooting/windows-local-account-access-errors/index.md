@@ -6,13 +6,13 @@
 
 ## Overview
 
-Beginning with Windows 10 version 1607 (Creator’s Update) and Windows Server 2016, the default GPO security descriptor denies users [remote access to Security Account Manager (SAM)](https://docs.microsoft.com/en-us/windows/device-security/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls) with non-domain credentials, and therefore prevents remote heartbeat and password changes made by otherwise-authenticated local user accounts. Affected Windows local account secrets return “Access Denied” on a heartbeat or remote password change.
+Beginning with Windows 10 version 1607 (Creator's Update) and Windows Server 2016, the default GPO security descriptor denies users [remote access to Security Account Manager (SAM)](https://docs.microsoft.com/en-us/windows/device-security/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls) with non-domain credentials, and therefore prevents remote heartbeat and password changes made by otherwise-authenticated local user accounts. Affected Windows local account secrets return "Access Denied" on a heartbeat or remote password change.
 
 This article provides a script and instructions to address these "access denied" errors. The script modifies the default local group policy remote SAM access security descriptor to allow all local users on a specified machine remote SAM access after authentication. This script requires elevated PowerShell permissions.
 
 > **Note:** Adding an account to the local computer's Administrators group does not solve the problem.
 
-On most systems, the Administrators group on the local machine is part of the “Network Access: Restrict clients allowed to make remote calls to SAM” security policy setting. Through testing, we determined that Windows currently treats this group as only the built-in administrator account for this configuration. Therefore, if you add another user to the Administrators group on the machine, that user will be unable to heartbeat since it is not the built-in administrator account. In addition, the built-in object, “Local account and a member of Administrators” does not allow a local account that is a member of Administrators to heartbeat for any account other than the built-in administrator account.
+On most systems, the Administrators group on the local machine is part of the "Network Access: Restrict clients allowed to make remote calls to SAM" security policy setting. Through testing, we determined that Windows currently treats this group as only the built-in administrator account for this configuration. Therefore, if you add another user to the Administrators group on the machine, that user will be unable to heartbeat since it is not the built-in administrator account. In addition, the built-in object, "Local account and a member of Administrators" does not allow a local account that is a member of Administrators to heartbeat for any account other than the built-in administrator account.
 
 ## Additional Requirements
 
@@ -27,9 +27,9 @@ For heartbeat to work correctly, make sure that the local or authenticated users
 
 **Option 2:** Adding a user individually to the security setting to allow the user to heartbeat successfully.
 
-**Option 3:** Modifying the Default GPO: Adding “allow authenticated or local users” to the security setting. This allows all local users or all users who are authenticated to the machine to bypass this setting. This does requires the PowerShell Script below. The drawback is that this allows all users to remotely access SAM, so long as they are authenticated.
+**Option 3:** Modifying the Default GPO: Adding "allow authenticated or local users" to the security setting. This allows all local users or all users who are authenticated to the machine to bypass this setting. This does requires the PowerShell Script below. The drawback is that this allows all users to remotely access SAM, so long as they are authenticated.
 
-**Option 4:** Create a heartbeat workaround for GPO “Network Access: Restrict Clients Allowed to Make Remote Calls to SAM.” This is addressed in the last section. This is for situations where the GPO needs to be completely bypassed.
+**Option 4:** Create a heartbeat workaround for GPO "Network Access: Restrict Clients Allowed to Make Remote Calls to SAM." This is addressed in the last section. This is for situations where the GPO needs to be completely bypassed.
 
 ## Option 3: Modifying the Default GPO
 
@@ -105,7 +105,7 @@ This example gives remote SAM access to all local users on the WINSERVER remote 
 
 4. Test the first script. Add the appropriate `args[]` as needed. Add arguments 0-4 with no quotes or commas. Spaces are the argument separator and are required.
 
-5. You should get a return of “True,” such as this:
+5. You should get a return of "True," such as this:
 
    ![img](images/clip_image002.jpg)
 
