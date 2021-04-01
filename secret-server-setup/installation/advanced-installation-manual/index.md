@@ -26,7 +26,7 @@ Go to the [download page](https://thycotic.force.com/support/s/download-onprem) 
 
 Open Internet Information Services (IIS) Manager* and create a new application pool:
 
-> **Note:** Our IIS installation sets the .NET trust level to “Full (internal), which may affect other applications on the server.
+> **Note:** Our IIS installation sets the .NET trust level to "Full (internal), which may affect other applications on the server.
 
 1. Right-click **Application Pools** and select **Add Application Pool\...**
 

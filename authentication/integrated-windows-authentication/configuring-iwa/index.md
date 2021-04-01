@@ -110,7 +110,7 @@ By default, a launcher will not work when using IWA, resulting in an HTTP 401: U
 
 1. Open IIS and browse to your SS application.
 
-1. Click the **>** to see the application’s folders:
+1. Click the **>** to see the application's folders:
 
    ![img](images/clip_image022.png)
 

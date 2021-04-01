@@ -18,7 +18,7 @@ You can configure the view ticket URL if you have a web based ticketing system t
 
 ### Ticket Number Validation Pattern (Regex)
 
-Before making a call to the PowerShell script you can have Secret Server validate the number matches a pattern. For example, your incident numbers might all be prefixed with “INC” and you want to ensure they enter this prefix. See [Setting a Ticket Pattern Regex](../index.md#setting-a-ticket-pattern-regex)).
+Before making a call to the PowerShell script you can have Secret Server validate the number matches a pattern. For example, your incident numbers might all be prefixed with "INC" and you want to ensure they enter this prefix. See [Setting a Ticket Pattern Regex](../index.md#setting-a-ticket-pattern-regex)).
 
 ### Ticket Number Validation Error Message
 

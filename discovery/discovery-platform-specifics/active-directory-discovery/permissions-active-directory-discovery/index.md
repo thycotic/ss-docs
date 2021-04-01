@@ -6,7 +6,7 @@
 
 ## Local Windows Accounts
 
-The scanning account needs the “Access This Computer From the Network” permission (and possibly one more) on the endpoint:
+The scanning account needs the "Access This Computer From the Network" permission (and possibly one more) on the endpoint:
 
 1. Open the local group policy editor (gpedit.msc).
 

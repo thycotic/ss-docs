@@ -31,7 +31,7 @@ At the completion of this article you will have:
 
    ![image-20200608155119996](images/image-20200608155119996.png)
 
-1. Click the **OK** button when done to return to the “SQL Server Installation Center” window.
+1. Click the **OK** button when done to return to the "SQL Server Installation Center" window.
 
 1. In the SQL Server Installation Center window, click the **Installation** link. The Installation Window appears:
 
@@ -106,7 +106,7 @@ At the completion of this article you will have:
 
 ### Installing SQL Server Management Studio
 
-1. In the “SQL Server Installation Center” window, click the **Installation** menu item. The Installation page appears:
+1. In the "SQL Server Installation Center" window, click the **Installation** menu item. The Installation page appears:
 
    ![User-added image](images/clip_image024.png)
 
@@ -126,7 +126,7 @@ At the completion of this article you will have:
 
 1. Click the **Restart** button if prompted. Otherwise, click the **Close** button.
 
-1. Close “SQL Server Installation Center.”
+1. Close "SQL Server Installation Center."
 
 ### Creating the SQL Server Database
 

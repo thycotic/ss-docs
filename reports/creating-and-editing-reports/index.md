@@ -34,7 +34,7 @@ There are two ways to create a Report. From the Reports Edit page, click the **A
 
 1. Click the **Report Definition** tab to return to your editing.
 
-1. Click the **Save** button. The new report’s page appears:
+1. Click the **Save** button. The new report's page appears:
 
    ![image-20200611111910360](images/image-20200611111910360.png)
 
@@ -48,7 +48,7 @@ To edit a report:
 
 1. Click the **Reports** menu item. The Reports page appears, listing all the reports.
 
-1. Click the name of the report, which is a link. That report’s page appears.
+1. Click the name of the report, which is a link. That report's page appears.
 
 1. Click the **Edit** button. The Report Edit page appears. See [Creating a Custom Report](#creating-a-custom-report) for details about the parameters.
 
@@ -58,7 +58,7 @@ To edit a report:
 
 ### Overview
 
-The best way to create SQL scripts is to view existing ones and the SS database structure. Click any existing report’s link to arrive at its page. Then click the **Edit** button. The SQL appears in the Report SQL text box.
+The best way to create SQL scripts is to view existing ones and the SS database structure. Click any existing report's link to arrive at its page. Then click the **Edit** button. The SQL appears in the Report SQL text box.
 
 > **Note:** Even though you are pressing the Edit button, you cannot edit non-custom reports. You can view their parameters, including their SQL script.
 

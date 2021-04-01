@@ -22,7 +22,7 @@
 
 1. (Optional) Click the dropdown list to limit the user search to a specific domain.
 
-1. Type the user’s name in the search text box. The matching users appear below the search text box:
+1. Type the user's name in the search text box. The matching users appear below the search text box:
 
    ![image-20191118144953352](images/image-20191118144953352.png)
 

@@ -11,7 +11,7 @@ Secret Server (SS) can push its secrets to DevOps Secret Vault by creating a sec
 
 ## Behavior
 
-You can manually push secrets to the DSV tenant, in addition to SS checking for secrets to push to tenants on a timer. SS will check for if a tenant needs updating every 30 minutes on the cloud or 10 minutes for an on-premises installation. Users are prevented from setting a tenant’s sync interval to less than SS’s timed iteration because there would be no benefit to doing so. When SS checks for secrets to be pushed to DSV, it only pushes secrets that have been changed since the last time they were updated in DSV. When a secret is pushed to DSV, its sync time is updated.
+You can manually push secrets to the DSV tenant, in addition to SS checking for secrets to push to tenants on a timer. SS will check for if a tenant needs updating every 30 minutes on the cloud or 10 minutes for an on-premises installation. Users are prevented from setting a tenant's sync interval to less than SS's timed iteration because there would be no benefit to doing so. When SS checks for secrets to be pushed to DSV, it only pushes secrets that have been changed since the last time they were updated in DSV. When a secret is pushed to DSV, its sync time is updated.
 
 ## Fields
 
@@ -118,7 +118,7 @@ Use a POST to `/api/v1/devops-secrets-vault/add-sync` using this body to map a s
 }
 ```
 
-When the secret is mapped to a tenant, an initial sync immediately occurs. Following the initial sync, the secret is checked to determine if updates have been made when the sync Interval expires (making it "dirty") for the mapped tenant. If no changes have been made to the secret, then the secret is not pushed to DSV. You can reference fields from the secret to create the path in DSV. Secret Server will look for a `$`, then search for the following string as the [field slug names](../../secret-templates/secret-template-settings/field-slug-names/index.md) for the secret’s template. The path in DSV follows this format: `/secrets/<DSV_secret_name>`.
+When the secret is mapped to a tenant, an initial sync immediately occurs. Following the initial sync, the secret is checked to determine if updates have been made when the sync Interval expires (making it "dirty") for the mapped tenant. If no changes have been made to the secret, then the secret is not pushed to DSV. You can reference fields from the secret to create the path in DSV. Secret Server will look for a `$`, then search for the following string as the [field slug names](../../secret-templates/secret-template-settings/field-slug-names/index.md) for the secret's template. The path in DSV follows this format: `/secrets/<DSV_secret_name>`.
 
 ### Manually Syncing a Secret
 
@@ -139,13 +139,13 @@ List DSV tenants registered to SS by running a GET to `/api/v1/devops-secrets-va
 - `filter.nameSearch=`
 - `filter.includeInactive=`
 
-### Getting a DevOps Secret Vault Tenant’s Details
+### Getting a DevOps Secret Vault Tenant's Details
 
 View the details of a single tenant by specifying a tenant ID in a GET to `/api/v1/devops-secrets-vault/tenant/{tenantId}`.
 
-### Getting the Status of a Secret’s Synchronization
+### Getting the Status of a Secret's Synchronization
 
-View a secret’s sync status by running a GET to `/api/v1/devops-secrets-vault/sync/status/{syncMapdId}`.
+View a secret's sync status by running a GET to `/api/v1/devops-secrets-vault/sync/status/{syncMapdId}`.
 
 ### Getting a List of Secret Synchronization Statuses
 

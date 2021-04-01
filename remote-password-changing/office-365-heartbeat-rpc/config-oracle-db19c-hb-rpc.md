@@ -133,7 +133,7 @@ Uninstall the ODAC, and then re-install the correct version. You can uninstall O
 
 This error occurs when the secret's database field does not match the Oracle SERVICE_NAME database.
 
-> **Note**: The default “Oracle Account” secret template's database field is looking for the Oracle SERVICE_NAME database. You can find that database’s location by reading the tnsnames.ora configuration file on your Oracle database server.
+> **Note**: The default "Oracle Account" secret template's database field is looking for the Oracle SERVICE_NAME database. You can find that database's location by reading the tnsnames.ora configuration file on your Oracle database server.
 
 **System.ArgumentException: Unable to find the requested .Net Framework Data Provider. It may not be installed.**
 

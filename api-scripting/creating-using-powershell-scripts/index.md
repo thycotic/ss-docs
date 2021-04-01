@@ -52,7 +52,7 @@ Scripts may contain debug lines to help you test the script. Debug statements us
 
 There are input boxes for specifying arguments in places where the PowerShell scripts are used. Argument values are specified on a single line separated by a space. Values containing spaces should be enclosed in quotes.  Parameters to PowerShell scripts are referenced through the zero-based `Args` array.  It is often beneficial to assign `Args` variables to other more-meaningful named variables. For example:
 
-Arguments:  "Welcome back"  and “Joe”
+Arguments:  "Welcome back"  and "Joe"
 
 Script:
 
@@ -61,7 +61,7 @@ $greeting = $Args[0]
 $name = $Args[1]
 Write-Debug "$greeting $name"
 ```
-Output:  “Welcome back Joe”
+Output:  "Welcome back Joe"
 
 ### Exceptions
 

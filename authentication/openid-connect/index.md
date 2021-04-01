@@ -32,11 +32,11 @@ Secret Server implements OpenID Connect authorization code flow, allowing any st
 
 ### Task One: Acquire and Configure an OpenID Connect Provider
 
-1. Follow your OpenID Connect provider’s setup instructions for configuring a new identity client.
+1. Follow your OpenID Connect provider's setup instructions for configuring a new identity client.
  
 1. Gather the configuration data from the provider. To configure an OpenID Connect login provider, the provider must supply these:
  
-   - **Provider URL**: An HTTPS URL, acting as an authentication endpoint. SS expects the provider URL to be the “issuer” URL of the provider. For example, if the OpenID Connect configuration for the provider is accessible at
+   - **Provider URL**: An HTTPS URL, acting as an authentication endpoint. SS expects the provider URL to be the "issuer" URL of the provider. For example, if the OpenID Connect configuration for the provider is accessible at
  
      `https://example.com/.well-known/openid-configuration`,
  
@@ -48,7 +48,7 @@ Secret Server implements OpenID Connect authorization code flow, allowing any st
  
    The process for determining this information varies by provider and you can usually find it by following the provider-specific documentation for configuring an OpenID Connect client.
  
-1. Configure the provider with the SS Redirect URI, as shown below, when configuring OpenID Connect integration in SS. It is usually `https://YourWebServer/SecretServer/signin-oidc`. The Secret Server Redirect URI value must be added to the provider’s configuration, so that the SS instance can perform the authentication handshake. This process varies by provider, but it is usually known as a post-login redirect URI or callback URI.
+1. Configure the provider with the SS Redirect URI, as shown below, when configuring OpenID Connect integration in SS. It is usually `https://YourWebServer/SecretServer/signin-oidc`. The Secret Server Redirect URI value must be added to the provider's configuration, so that the SS instance can perform the authentication handshake. This process varies by provider, but it is usually known as a post-login redirect URI or callback URI.
 
 ### Task Two: Configure Secret Server
 

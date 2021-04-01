@@ -279,7 +279,7 @@ If those application account credentials change in the future, follow these step
 
 1. Set **SecretServerPassword** to the plain text new password.
 
-These credentials are encrypted upon their first use, either the next time someone launches a SSSC session that hits this server, or if you reboot the entire server. Once this happens, returning to the Registry Editor, CredentialsEncrypted will be set back to “1,” and an encrypted version of the username and password will be visible.
+These credentials are encrypted upon their first use, either the next time someone launches a SSSC session that hits this server, or if you reboot the entire server. Once this happens, returning to the Registry Editor, CredentialsEncrypted will be set back to "1," and an encrypted version of the username and password will be visible.
 
 ### Task 6: Launching Session Connector Sessions
 
@@ -385,15 +385,15 @@ You must create a custom launcher for each combination of and RDS server cluster
 
 # Troubleshooting Session Connector
 
-When launching a downloaded .RDP file, if SSSC rejects the session due to any issues (including being expired based on the “Session Connector Session Timeout” setting), the user’s Remote Desktop client will receive a generic error about the RemoteApp being invalid.
+When launching a downloaded .RDP file, if SSSC rejects the session due to any issues (including being expired based on the "Session Connector Session Timeout" setting), the user's Remote Desktop client will receive a generic error about the RemoteApp being invalid.
 
-In the `SS.log` file, you can search for “SessionConnector” to find details about why sessions may have been rejected.
+In the `SS.log` file, you can search for "SessionConnector" to find details about why sessions may have been rejected.
 
 Session Connector will also log to the file `C:\Program Files\Thycotic Software Ltd\Secret Server Session Connector\log\SS-SC.log` on each RDS server. That is, If the RDS server has trouble using the supplied RDS credential to create a local user, it is logged to this file
 
 # Uninstalling Session Connector
 
-Secret Server Session Connector can be removed from “Add/Remove Programs” or “Apps & Features.” Once uninstalled, a reboot is required to restore the default Remote Desktop behavior.
+Secret Server Session Connector can be removed from "Add/Remove Programs" or "Apps & Features." Once uninstalled, a reboot is required to restore the default Remote Desktop behavior.
 
 Any related SSSC custom launchers need to be un-associated with any secret templates they were previously tied to.
 
