@@ -16,7 +16,7 @@ There are two major architectural changes in SS 10.7:
 
 > **Note:** The first change is obvious in the SS user interface, and the second is hidden but very important to those supporting SS.
 
-- **Primary Node:** We eliminated "primary nodes." Previously, some important background operations, such as password changing and heartbeat, would only run from the primary node. Now they run from all nodes. Given that, there is no longer a “Make Primary” button, and the ValidPrimaryNode setting no longer applies.
+- **Primary Node:** We eliminated "primary nodes." Previously, some important background operations, such as password changing and heartbeat, would only run from the primary node. Now they run from all nodes. Given that, there is no longer a "Make Primary" button, and the ValidPrimaryNode setting no longer applies.
 - **Background Operations:** There are no longer background threads for scheduled operations. Instead, operations are scheduled by Quartz.
 
 ### Clustering Overview
@@ -29,7 +29,7 @@ Each machine with SS installed on it, pointing to the same database, is a *node*
 
 #### Backbone Bus
 
-The backbone bus Internally handles all communication between the roles. In a clustered environment, the backbone bus should always be an installed RabbitMq messaging queue.  This allows every node in the cluster to help with the workload.  If the backbone bus is set to “internal,” then each node is using its own internal backbone bus.
+The backbone bus Internally handles all communication between the roles. In a clustered environment, the backbone bus should always be an installed RabbitMq messaging queue.  This allows every node in the cluster to help with the workload.  If the backbone bus is set to "internal," then each node is using its own internal backbone bus.
 
 #### Engine Response Bus
 
@@ -39,7 +39,7 @@ The engine response bus facilitates communication from SS to distributed engines
 
 Each node can optionally run one or more worker roles: background Worker, engine worker, and session recording worker.  Though they may run on the same machine, the roles do not directly communicate with each other.
 
-Each node that is set to run the background worker role automatically runs the scheduler role as well.  The scheduler role is responsible for running the vast majority of SS background operations.  It uses Quartz to run “trigger jobs” that send a message on the backbone bus for each scheduled operation. One or more background worker roles then processes those messages.
+Each node that is set to run the background worker role automatically runs the scheduler role as well.  The scheduler role is responsible for running the vast majority of SS background operations.  It uses Quartz to run "trigger jobs" that send a message on the backbone bus for each scheduled operation. One or more background worker roles then processes those messages.
 
 > **Note:** See the article [Troubleshooting Quartz Trigger Jobs](https://thycotic.force.com/support/s/article/SS-TSG-EXT-Quartz-Trigger-Jobs) for more information about Quartz.
 

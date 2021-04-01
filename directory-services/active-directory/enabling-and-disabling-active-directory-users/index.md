@@ -4,7 +4,7 @@
 
 # Enabling and Disabling Active Directory Users
 
-If you selected a manual setting for **User Account Options**, you can now enable or disable your AD users’ access to SS:
+If you selected a manual setting for **User Account Options**, you can now enable or disable your AD users' access to SS:
 
 1. Go to **Admin \> Users**. The Users page appears.
 

@@ -107,7 +107,7 @@ Procedure:
 
    1. `whoami` (Returns the name of the active user, which indicates the su command and the provided parameters worked). This test checks that the returned username is the same as the username field in the secret. If it is not, the heartbeat fails.
 
-   1. `CHECKFOR $USERNAME` (Checks if the ‘whoami’ returns the username field from the secret. If it does not, an error is thrown and the heartbeat fails)
+   1. `CHECKFOR $USERNAME` (Checks if the 'whoami' returns the username field from the secret. If it does not, an error is thrown and the heartbeat fails)
 
    > **Note:** Some of the command sets run by the "Verify Passwords Changed Test Action" button are empty. In that case, the test authenticates with the provided username and password, and if that is successful, so is the heartbeat. That is, the heartbeat uses the secret's own account (`$USERNAME`) and value to connect, rather than those of an associated secret.
 
@@ -181,7 +181,7 @@ This section troubleshoots the commands used by SS to heartbeat and RPC outside 
 
 9. Log on with the username and password for the main or associated secret.
 
-    > **Note:** If you are successful with connecting with PuTTY but not SS, launch PuTTY in in debug mode and collect a log file. Determine what cipher was used to connect. If you have a machine that works with SS, compare the ciphers. Also check if the endpoint handles interactive logins differently. SS’s logins for RPC are non-interactive. See [Troubleshooting SSH Issues](../ssh-issues/index.md)  for more information about troubleshooting connection issues in Putty.
+    > **Note:** If you are successful with connecting with PuTTY but not SS, launch PuTTY in in debug mode and collect a log file. Determine what cipher was used to connect. If you have a machine that works with SS, compare the ciphers. Also check if the endpoint handles interactive logins differently. SS's logins for RPC are non-interactive. See [Troubleshooting SSH Issues](../ssh-issues/index.md)  for more information about troubleshooting connection issues in Putty.
 
 14. Use the commands listed in the "Authenticate As" section you are troubleshooting directly in PuTTY to determine if they work outside of SS. For example, given these heartbeat (Verify Password Changed) commands:
 

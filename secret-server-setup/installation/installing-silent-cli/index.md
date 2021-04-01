@@ -33,7 +33,7 @@ Important considerations:
 
 ## Install Prerequisites
 
-As of SS 10.11, you can silently install all required prerequisites. These are the same prerequisites the “Fix Issues” button in the installer UI fixes. The important difference is missing prerequisites are not auto detected—you must tell the installer which ones you want installed. Older versions will not do a silent command line installation unless these necessary prerequisites are already installed.
+As of SS 10.11, you can silently install all required prerequisites. These are the same prerequisites the "Fix Issues" button in the installer UI fixes. The important difference is missing prerequisites are not auto detected—you must tell the installer which ones you want installed. Older versions will not do a silent command line installation unless these necessary prerequisites are already installed.
 
 ### Parameters
 
@@ -68,7 +68,7 @@ As of SS 10.11, you can silently install all required prerequisites. These are t
 
 Secret Server or Privilege Manager can be installed and pre-configured using these parameters. If the required prerequisites are not already present, the installer exits. They can both be installed at the same time but will then share the same database and email settings.
 
-If you need more control over configuring the website, you can create a site and configure it in advance (that is, using IIS’s `AppCmd.exe`), and then pass the preconfigured website name as `SecretServerSiteName` or `PrivilegeManagerSiteName`.
+If you need more control over configuring the website, you can create a site and configure it in advance (that is, using IIS's `AppCmd.exe`), and then pass the preconfigured website name as `SecretServerSiteName` or `PrivilegeManagerSiteName`.
 
 ### Secret Server Parameters
 
@@ -88,7 +88,7 @@ If you need more control over configuring the website, you can create a site and
 | `SecretServerSitePort` | Integer | Optional | HTTP port. If using the default website, this port HTTP binding is in addition to any defaults. |
 | `SecretServerUserDisplayName` | String | None | The display name for `SecretServerUserName`. |
 | `SecretServerUserEmail` | String | None | The email address for `SecretServerUserName`. |
-| `SecretServerUserName` | String | None | The initial SS administrator user. If not set, once Secret Server is installed, the first person to visit the website will  be able to pick the details on the “Create Initial Administrator” page. |
+| `SecretServerUserName` | String | None | The initial SS administrator user. If not set, once Secret Server is installed, the first person to visit the website will  be able to pick the details on the "Create Initial Administrator" page. |
 | `SecretServerUserPassword` | String | None | The password for `SecretServerUserName`. |
 []()
 

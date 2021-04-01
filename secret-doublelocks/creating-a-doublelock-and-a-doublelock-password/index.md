@@ -28,9 +28,9 @@
 
    > **Note:** A new doublelock and doublelock password are created together. In fact, it is impossible to create a doublelock password without immediately assigning it to a doublelock. For an existing doublelock, you are assigned access to it by its creator. Upon first accessing it, you must create *your* doublelock password for it. At least one other user will already have created their password for the same doublelock—the creator plus anybody else they granted access to.
 
-1. Type the new doublelock’s name in the **Name** text box.
+1. Type the new doublelock's name in the **Name** text box.
 
-1. Click the **OK** button. The new doublelock’s page appears:
+1. Click the **OK** button. The new doublelock's page appears:
 
    ![image-20191115150253270](images/image-20191115150253270.png)
 

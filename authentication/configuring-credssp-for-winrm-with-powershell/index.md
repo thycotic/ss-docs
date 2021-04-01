@@ -52,11 +52,11 @@ Some scenarios requiring CredSSP:
 
 1. The Web server always uses a specified account to run the PowerShell scripts. Considerations:
 
-   - Ensure that account is added to the “Remote Management Users” local group on each Web server.
-   - For RPCs with custom password changers, this would be “Change Password Using,” and then select “Privileged Account.”
+   - Ensure that account is added to the "Remote Management Users" local group on each Web server.
+   - For RPCs with custom password changers, this would be "Change Password Using," and then select "Privileged Account."
 
-   - Ensure that account is added to the “Remote Management Users” local group on each Web server.
-   - For custom dependencies using PowerShell scripts, this would be the “Run As” secret.
+   - Ensure that account is added to the "Remote Management Users" local group on each Web server.
+   - For custom dependencies using PowerShell scripts, this would be the "Run As" secret.
    - If you use any form of extensible discovery, this account needs to be the first secret that is linked to the scanner. Any additional secrets linked to the scanner are typically associated with authentication to the destination system.
 
 ## Configuring CredSSP for WinRM on a Distributed Engine
@@ -95,11 +95,11 @@ You can alternatively configure CredSSP and the credential delegation to occur f
 
 1. The distribute engine will always use a specified account to run the PowerShell scripts. Considerations:
 
-   - Ensure that account is added to the “Remote Management Users” local group on each engine where CredSSP is enabled.
-   - For RPCs with custom password changers, this would be “Change Password Using,” and then select “Privileged Account”.
+   - Ensure that account is added to the "Remote Management Users" local group on each engine where CredSSP is enabled.
+   - For RPCs with custom password changers, this would be "Change Password Using," and then select "Privileged Account".
 
-   - Ensure that account is added to the “Remote Management Users” local group on each engine where CredSSP is enabled.
-   - For custom dependencies using PowerShell scripts, this would be the “Run As” secret.
+   - Ensure that account is added to the "Remote Management Users" local group on each engine where CredSSP is enabled.
+   - For custom dependencies using PowerShell scripts, this would be the "Run As" secret.
    - If you use any form of extensible discovery, this account needs to be the first secret that is linked to the scanner. Any additional secrets linked to the scanner are typically associated with authentication to the destination system.
 
 1. Ensure that the "Allow Delegating Fresh Credentials" group policy setting is enabled and is not disabled by a domain policy.
@@ -155,11 +155,11 @@ By default, SS agents inherit the "Enable CredSSP Authentication for WinRM" sett
 
 1. Edit the `SecretServerAgentService.exe.Config` file in a text editor.
 
-1. Locate the “UnencryptedSettings” section.
+1. Locate the "UnencryptedSettings" section.
 
 1. Add a new key to that section for EnableCredSSPForWinRM and set it to true. For example:
 
    `<add key="EnableCredSSPForWinRM" value="true" />`
 
-1. Restart the “Secret Server Agent” service to apply the setting.
+1. Restart the "Secret Server Agent" service to apply the setting.
 

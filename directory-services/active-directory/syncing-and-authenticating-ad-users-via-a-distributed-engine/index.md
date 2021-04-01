@@ -12,7 +12,7 @@ SS connects to the domain: from the Web server _or_ routed through a distributed
 
 To setup AD to sync from a DE:
 
-1. Create a synced secret. Before synchronizing or creating users, create a secret for use as the sync secret. This secret should contain Domain Admin credentials (or an account with appropriate permissions for read access to all your organization’s AD objects).
+1. Create a synced secret. Before synchronizing or creating users, create a secret for use as the sync secret. This secret should contain Domain Admin credentials (or an account with appropriate permissions for read access to all your organization's AD objects).
 
 1. Specify the domain to authenticate against:
 

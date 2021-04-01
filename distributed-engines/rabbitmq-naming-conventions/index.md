@@ -70,7 +70,7 @@ This section of the message associates roles with queues and breaks the down by 
 
 ### Background Worker Role Queues
 
-List of queues for background worker’s functional areas:
+List of queues for background worker's functional areas:
 
 #### Active Directory Synchronization
 
@@ -228,9 +228,9 @@ List of queues for background worker’s functional areas:
 
 ### Engine Role Queues
 
-List of queues for engines’ functional areas.
+List of queues for engines' functional areas.
 
-> **Note:** In the example listed below, the SS site name is called “Gamma-Engines”.
+> **Note:** In the example listed below, the SS site name is called "Gamma-Engines".
 
 #### Active Directory Synchronization
 
@@ -300,7 +300,7 @@ List of queues for engines’ functional areas.
 
 ### Engine Worker Role Queues
 
-List of queues for engine worker’s functional areas:
+List of queues for engine worker's functional areas:
 
 #### Active Directory Synchronization
 
@@ -353,7 +353,7 @@ List of queues for engine worker’s functional areas:
 
 ### Session Recording Worker
 
-List of queues for session recording worker’s functional areas:
+List of queues for session recording worker's functional areas:
 
 #### Post Recording
 

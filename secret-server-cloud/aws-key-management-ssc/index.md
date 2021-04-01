@@ -8,13 +8,13 @@
 
 Secret Server (SS) protects your secrets using a master encryption key, as well as an additional intermediate encryption key that is unique for each secret. These effectively act as internal passwords that Secret Server itself needs to unlock your data, for example any time you view or update a secret.
 
-Key Management in Secret Server Cloud (SSC) allows you to add an additional layer of encryption using a third-party provider to protect these encryption keys for added protection and control. To do this, you must first set up your own encryption key with a third party that you fully control, and then provide SS limited access to it. This external encryption key is used to protect the SS encryption keys. You can revoke Secret Server’s access at any time if the need arises, rendering Secrets unusable.
+Key Management in Secret Server Cloud (SSC) allows you to add an additional layer of encryption using a third-party provider to protect these encryption keys for added protection and control. To do this, you must first set up your own encryption key with a third party that you fully control, and then provide SS limited access to it. This external encryption key is used to protect the SS encryption keys. You can revoke Secret Server's access at any time if the need arises, rendering Secrets unusable.
 
 > **Important:** Once enabled, beware that if you delete your external third-party encryption key, or the credentials you gave Secret Server no longer work. *You will not be able to access your existing Secrets, and even Thycotic will not be able to help!*
 
-You can change your key management configuration through SS’s Web interface or by using the REST API. If key management has already been enabled, you can switch to a new configuration or disable key management completely. To make any change, your existing key management configuration **must still be valid**, so your secrets and the master encryption keys can be converted to the new configuration. Your new settings are validated before they can be saved.
+You can change your key management configuration through SS's Web interface or by using the REST API. If key management has already been enabled, you can switch to a new configuration or disable key management completely. To make any change, your existing key management configuration **must still be valid**, so your secrets and the master encryption keys can be converted to the new configuration. Your new settings are validated before they can be saved.
 
-Secret Server Cloud currently supports  Amazon’s Key Management Service.
+Secret Server Cloud currently supports  Amazon's Key Management Service.
 
 ## Configuring Key Management
 
@@ -24,19 +24,19 @@ To enable key management, you will first create an encryption key with your thir
 
 > **Important:** Changing your key management settings will trigger "maintenance mode" and a secret key rotation that will re-encrypt all your secret keys. No one will be able to access secrets until the rotation finishes, and it must finish successfully before further key management changes can be made.
 
- Navigate to Secret Server’s key management page by clicking **Admin \> All \> Key Management**.
+ Navigate to Secret Server's key management page by clicking **Admin \> All \> Key Management**.
 
  Here you can change your key management settings, as well as view the audit history showing all key management updates.
 
 #### Key Management Providers
 
-SSC currently supports one provider, AWS Key Management Service. More providers may be added over time. Azure’s KeyVault service is not a viable provider at this time due to slow speed limits when using strong encryption keys (such as 4096-bit RSA with HSM).
+SSC currently supports one provider, AWS Key Management Service. More providers may be added over time. Azure's KeyVault service is not a viable provider at this time due to slow speed limits when using strong encryption keys (such as 4096-bit RSA with HSM).
 
 ### AWS Key Management Services Pricing
 
 Please see [AWS Key Management Service Pricing](https://aws.amazon.com/kms/pricing/).
 
-SSC requires one AWS Key (“CMK”), and the number of requests per month will vary depending on how often secrets are accessed.
+SSC requires one AWS Key ("CMK"), and the number of requests per month will vary depending on how often secrets are accessed.
 
 ## Procedure
 
