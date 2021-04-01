@@ -14,7 +14,7 @@ When secret key rotation takes place, or the HSM configuration is changed, SS ne
 
 ## Can I still access my Secrets when Maintenance Mode is turned on?
 
-Yes.  Secrets will be read-only, but you can still view them, including secrets that are double-locked or protected by “require approval for access.”  You are unable to change the checkout status of a secret during maintenance mode.  This means if the secret is currently checked-in, you will be unable to check it out.  If the secret is currently checked out, it cannot be checked in until the system leaves maintenance mode.
+Yes.  Secrets will be read-only, but you can still view them, including secrets that are double-locked or protected by "require approval for access."  You are unable to change the checkout status of a secret during maintenance mode.  This means if the secret is currently checked-in, you will be unable to check it out.  If the secret is currently checked out, it cannot be checked in until the system leaves maintenance mode.
 
 ## How long does Maintenance Mode last?
 

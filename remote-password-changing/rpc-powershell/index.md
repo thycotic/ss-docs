@@ -76,7 +76,7 @@ For the AD verification script:
 
 1. Type the username in the **Username** text box for account that can run PowerShell scripts on the domain.
 
-1. Type that user’s password in the **Password** text box.
+1. Type that user's password in the **Password** text box.
 
 1. Click the **OK** button to test your script the with provided parameters.
 
@@ -92,7 +92,7 @@ For the Active Directory change script:
 
 1. Type the username in the **Username** text box for account that can run PowerShell scripts on the domain.
 
-1. Type that user’s password in the **Password** text box.
+1. Type that user's password in the **Password** text box.
 
 1. Click the **OK** button to test your script the with provided parameters.
 
@@ -256,7 +256,7 @@ Everything should now be configured for heartbeat and RPC on the Secret. Run **H
 
 ## Errors
 
-If you receive the “The term 'Set-ADAccountPassword' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again." error, install the AD-Domain-Services in Powershell. To do this start PowerShell as an administrator then run the following command:
+If you receive the "The term 'Set-ADAccountPassword' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again." error, install the AD-Domain-Services in Powershell. To do this start PowerShell as an administrator then run the following command:
 
 `Install-windowsfeature -name AD-Domain-Services –IncludeManagementTools`
 

@@ -18,7 +18,7 @@ Each of these communications is explained below and can be disabled or avoided.
 
 Frequency: Once per day
 
-The software checks for available updates and sends the following information to Thycotic’s update server:
+The software checks for available updates and sends the following information to Thycotic's update server:
 
 - .NET Framework version
 - IP address of the installed instance

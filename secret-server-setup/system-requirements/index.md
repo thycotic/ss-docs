@@ -75,7 +75,7 @@ Recommended for organizations deploying discovery, session recording,or increase
 - System Requirements apply to both physical and virtual machines.
 - Discovery scanning for Windows Server 2016 scheduled tasks requires that either the SS node or the distributed engine that is executing the scan must run on Windows Server 2016 or later. This is due to changes in Windows Server 2016 API used for scheduled task dependency scans.
 - System Requirements apply to both physical and virtual machines.
-- Secret Server (SS) requires the application pool to have the “load user profile” setting enabled. Secret Server will report a critical alert to notify admins if this setting is not enabled.
+- Secret Server (SS) requires the application pool to have the "load user profile" setting enabled. Secret Server will report a critical alert to notify admins if this setting is not enabled.
 - Supported Web browsers:
 
   - Google Chrome

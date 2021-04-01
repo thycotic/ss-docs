@@ -79,7 +79,7 @@ In Secret Server UI
 
 1. Click the **Save** button.
 
-1. After the site connector is created, click the site connector’s link. The Site Connector Details page appears:
+1. After the site connector is created, click the site connector's link. The Site Connector Details page appears:
 
    ![image-20200602161342316](images/image-20200602161342316.png)
 
@@ -109,7 +109,7 @@ In Secret Server UI
 
 1. Return to SS, and go to the site connector you created in the previous section.
 
-1. Click the site connector’s link. The Site Connector Details page appears.
+1. Click the site connector's link. The Site Connector Details page appears.
 
 1. Click the **Validate Connectivity** button.
 

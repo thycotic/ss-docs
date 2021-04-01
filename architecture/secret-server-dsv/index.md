@@ -30,7 +30,7 @@ We discuss the following scenarios:
 - SS Premium/Professional/Platinum licensing and DSV Free Edition.
 - Each tenant in the SS instance has a settable interval  to check if secrets need to be pushed to DSV again. Once that interval hits (or they use an event pipeline to trigger it), SS checks all the secrets associated to that tenant. Any secret that has had a change since the last time that tenant had the secret pushed to it is pooled. SS authenticates and for each secret it POSTs or PUTs the secret (depending on creation or update).
 - The number of requests equals the number of updated tenants (authenticating for each tenant) plus the number of secrets that need updating updated per tenant (updating the secret in DSV).
-- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the “free” DSV licensing model.
+- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the "free" DSV licensing model.
 
 
 ### Diagram
@@ -55,7 +55,7 @@ We discuss the following scenarios:
 - SS Premium/Professional/Platinum licensing and DSV Free Edition.
 - Each tenant in the SS instance has a settable interval  to check if secrets need to be pushed to DSV again. Once that interval hits (or they use an event pipeline to trigger it), SS checks all the secrets associated to that tenant. Any secret that has had a change since the last time that tenant had the secret pushed to it is pooled. SS authenticates and for each secret it POSTs or PUTs the secret (depending on creation or update).
 - The number of requests equals the number of updated tenants (authenticating for each tenant) plus the number of secrets that need updating updated per tenant (updating the secret in DSV).
-- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the “free” DSV licensing model.
+- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the "free" DSV licensing model.
 
 
 ### Diagram
@@ -80,7 +80,7 @@ We discuss the following scenarios:
 - SS Premium/Professional/Platinum licensing and DSV Free Edition.
 - Each tenant in the SS instance has a settable interval  to check if secrets need to be pushed to DSV again. Once that interval hits (or they use an event pipeline to trigger it), SS checks all the secrets associated to that tenant. Any secret that has had a change since the last time that tenant had the secret pushed to it is pooled. SS authenticates and for each secret it POSTs or PUTs the secret (depending on creation or update).
 - The number of requests equals the number of updated tenants (authenticating for each tenant) plus the number of secrets that need updating updated per tenant (updating the secret in DSV).
-- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the “free” DSV licensing model.
+- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the "free" DSV licensing model.
 
 ### Diagram
 

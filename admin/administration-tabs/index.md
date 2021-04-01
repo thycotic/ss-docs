@@ -38,49 +38,27 @@ The following configuration settings are available in the General tab:
 - **Allow Approval for Access from Email:** Adds links in request for approval emails allowing approvers to approve or deny access to a secret without logging into SS. See Requires Approval for Access for details.
 - **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Allow Duplicate Secret Names:** Allow users to create or rename secrets with the same name as existing secrets.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Allow Users to Select Classic Theme:** Enable access to the classic user interface.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Allow View User To Retrieve Auto-Change Next Password:** Allow view-only users to get the next automatically changed password.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Allow Web Launcher Mappings to be Uploaded Off-site:** Enables the user to upload successful Web launcher configurations to Thycotic.com where they are approved and shared with other customers.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Change Administration Mode:** Enables or disable a button that takes you to a page where you can enable or disable Unlimited Administration mode.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Click to Toggle Password Masking:** Enable or disable being able to remove password masking.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Custom Logo (Collapsed):** Select an image to use as your collapsed logo.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Default Date Format:** Default time format used for all users. This setting can be overridden by each user. See [User Preferences](­../../../../users/user-preferences/index.md) for details.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Default Theme:** Select the default SS theme users see.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Default Secret Permissions:** Set to determine how permissions are propagated from folders to new secrets. See [Secret Folders](../../secret-folders/index.md) for more information.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Enable Launcher:** Enables Remote Desktop Launcher capabilities for SS. See the Launcher section for details.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Enable New User Interface as Default for New Users:** Force new users to use the new, as opposed to the classic, user interface. Does not stop users from manually changing to the classic interface.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Enable Refresh Tokens for Webservices:** Whether or not to accept refresh tokens.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Enable Webservices:** Enable other applications to interact with SS (still requires them to login as a SS user).
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Force Require Approval for Owners on Approval Secrets:** Do not let approvals to be disabled for owners for secrets requiring approvals.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Force Password Masking:** For more information, see [Setting Up Password Masking](../../secret-management/procedures/Setting-Up-Password-Masking/index.md).
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Maximum Time for Offline Access on Mobile Devices:** Amount of time that a mobile device can be disconnected from the server before it removes cached SS data from the device.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Prevent Application from Sleeping When Idle:** Prevents the application pool that SS is running under from going to sleep.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Secret Password History:** Enforces whether a recent password can be set on a secret's password text-entry field based on the history. Defaults to 1, which means the same password cannot be immediately re-used on a secret.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Secret Server Custom URL:** A URL to use for SS, other than the default one.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Session Timeout for Webservices:** Set a session time limit on use of the Web services API. Once the Web services session token expires, the user must login again with their username and password.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **Time Zone:** Time zone that all dates are displayed in.
-- **Allow Automatic Checks for Software Updates:** Enable this option to be notified of a new SS release. If a new update is available, displayed at the top of each SS page is a link to the latest update. This feature is only available to those with support licenses.
 - **UI Inactivity Timeout:** Time in minutes before SS times out from user inactivity.
 - **WinRM Endpoint URL:** URL for WinRM, which is used for PowerShell hooks.
 
@@ -97,13 +75,9 @@ This tab contains the following configuration options:
 - **Allow Users to Reset Forgotten Passwords:** Allows users to reset their passwords in case they forget them.
 - **Enable Local User Password Expiration:** Local user's passwords expire after a specified interval.
 - **Enable Local User Password History:** Local users cannot change their password if it has been recently used.
-- **Enable Local User Password Expiration:** Local user's passwords expire after a specified interval.
 - **Local User Password is valid for:** Specifies the maximum time a local user can keep a password.
-- **Enable Local User Password Expiration:** Local user's passwords expire after a specified interval.
 - **Minimum Password Length:** Require a minimum length on all local users' login passwords.
-- **Enable Local User Password Expiration:** Local user's passwords expire after a specified interval.
 - **Symbols Required for Passwords:** Force all local users to include special characters within their login passwords (%#@).
-- **Enable Local User Password Expiration:** Local user's passwords expire after a specified interval.
 - **User Lockout Time:** Sets the time in minutes that users are locked out for too many failed log on attempts.
 
 ## Login Tab
@@ -112,30 +86,18 @@ The Login tab contains the following options:
 
 - **Allow AutoComplete:** AutoComplete is a feature provided by most Web browsers to automatically remember and prefill forms for you. This can be a great security concern since they typically do not save the data in a secure manner. You can enable or disable Web browser prefill on the Login page by using this option.
 - **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
-- **Allow Two-Factor Remember Me:** Allow users to elect to remember them on SS with two-factor authentication enabled. See “Allow Remember Me.”
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
+- **Allow Two-Factor Remember Me:** Allow users to elect to remember them on SS with two-factor authentication enabled. See "Allow Remember Me."
 - **Attempt User Password:** SS normally passes the domain, username, and password to the RADIUS server.  This setting ensures the user is asked for their password instead.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Default Login Domain:** Allows for the selection of a default domain for user login.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Enable Domain Selector:** All users to select a domain at login.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Enable Login Failure CAPTCHA:** Enforces a CAPTCHA image if the user fails one or more logins to prevent brute force attacks of user credentials or brute force lockouts.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Enable RADIUS Integration:** Enabling RADIUS integration enables another form of two factor authentication for users.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Enable SAML Integration:** Enabling SAML integration allows users to log-in to SS using your SAML identity provider.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Maximum Concurrent Logins per User:** The number of times a user can be logged in at the same time.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **RADIUS Client Port Range:** Allowed computer ports for RADIUS.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **RADIUS Default Username:** The default username that appears at RADIUS login.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Require Two Factor for these Login Types:** When enabled on a specific user logging into SS, you can choose from a list to enable it for website, Web service, or both.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Use RADIUS Username for Duo:** Pass the RADIUS username to Duo.
-- **Allow Remember Me:** This option enables the Remember Me checkbox on the login page. When a user chooses to use "remember me," an encrypted cookie is set in their browser. This enables users to revisit SS without the need to login. This cookie is no longer be valid when the "remember me" period has expired, and users have to log in again.
 - **Visual Encrypted Keyboard Required:** Require the visual keyboard for logins.
 
 ## Security Tab
@@ -145,7 +107,6 @@ The Security tab contains the following configuration options:
 - **Additional Certificate Chain Policy Options:** Valid values for certificate chain policy options are any of the values in the Microsoft enumerations [listed here](../../authentication/x509-certificate/index.md).
 - **Allow HTTP Get:** Allows the HTTP Get verb for Web services. This allows REST-style calls to many Web service methods but reduces security.
 - **Apply TLS Certificate Chain Policy and Error Auditing:** Add audits for TLS certificate validation. Auditing will apply to all Active Directory domains using LDAPS and Syslog using TLS. The default policy is very strict.
-- **Allow HTTP Get:** Allows the HTTP Get verb for Web services. This allows REST-style calls to many Web service methods but reduces security.
 - **Enable FIPS Compliance:** See [FIPS Compliance](#FIPS-Compliance).
 - **Enable File Restrictions:** Allow administrators to configure what kind of file attachments can be uploaded to secrets. This helps protect users from being tricked into downloading a malicious secret attachment. The file extension can be specified, such as:
   *.7z, *.bmp, *.ca-bundle, *.cer, *.config, *.crt, *.csr, *.csv, *.dat, *.doc, *.docx, *.gif, *.gz, *.id-rsa, *.jpeg, *.jpg, *.json, *.key, *.lic, *.p7b, *.pcf, *.pdf
@@ -154,11 +115,8 @@ The Security tab contains the following configuration options:
 - **Enable TLS Debugging and Connection Tracking:**  When enabled, SS sends information logs to your audit server about when TLS connections are opened or closed.
 - **Enable HSTS:** Enable HTTP Strict Transport Security. Not available if Force HTTPS/SSL is turned off.
 - **Force HTTPS/SSL:** Require HTTPS; users cannot access SS using HTTP.
-- **Enable HSTS:** Enable HTTP Strict Transport Security. Not available if Force HTTPS/SSL is turned off.
 - **Hide Secret Server Version Numbers:** Hide SS version numbers from users.
-- **Enable HSTS:** Enable HTTP Strict Transport Security. Not available if Force HTTPS/SSL is turned off.
 - **Last Secret Key Rotation:** When the last rotation occurred.
-- **Enable HSTS:** Enable HTTP Strict Transport Security. Not available if Force HTTPS/SSL is turned off.
 - **Rotate Secret Keys (button):** Key rotation is the process by which the encryption key, used for securing Secret  data, is changed and Secret data is re-encrypted.
 
 ## SAML Tab

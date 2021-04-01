@@ -6,7 +6,7 @@
 
 ## Overview
 
-An SSL (Secure Sockets Layer) certificate greatly enhances the security between the user’s browser and the server your SS is installed on. It encrypts all data between the server and the client’s browser so if an attacker were to look at the data being transmitted between the two, they would not be able to decipher it.
+An SSL (Secure Sockets Layer) certificate greatly enhances the security between the user's browser and the server your SS is installed on. It encrypts all data between the server and the client's browser so if an attacker were to look at the data being transmitted between the two, they would not be able to decipher it.
 
 > **Note:** SSL is required when using Integrated Windows Authentication.
 

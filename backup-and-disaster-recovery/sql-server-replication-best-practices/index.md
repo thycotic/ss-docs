@@ -125,7 +125,7 @@ We recommend setting up two publications for SS:
 
 ### Tracking Level and Resolvers
 
-Using the default SS implementation, most conflicts are resolved by taking the change made on the publication server as the winner (using the “publisher wins” resolver). It is assumed that the publication server is most likely the main server in an environment and therefore, most likely, the decider in a case of a conflict. Thus, we recommend doing functions, such as configuration changes or secret template definition changes, on the publication node. This is only an issue if two people update the same data on two different servers before a synchronization occurs.
+Using the default SS implementation, most conflicts are resolved by taking the change made on the publication server as the winner (using the "publisher wins" resolver). It is assumed that the publication server is most likely the main server in an environment and therefore, most likely, the decider in a case of a conflict. Thus, we recommend doing functions, such as configuration changes or secret template definition changes, on the publication node. This is only an issue if two people update the same data on two different servers before a synchronization occurs.
 
 There are some exceptions to the "publisher always wins" rule:
 
@@ -227,7 +227,7 @@ There are a multitude of configuration options for SQL Server replication. At a 
 
 1. Right click these jobs to start them. After they complete, your subscriber database should have replicated the schema objects from the publication.
 
-1. Switch SS nodes over to subscriber databases. The primary node *must* remain on the Publisher database, as must any node that an engine calls back to, but all other nodes can be reconfigured to use subscriber databases. Which nodes to switch depends on your specific needs as described in the previous sections. To switch an existing node to a subscriber database, log into that node and go the DbConnectionReset.aspx page by entering that page name in the URL field of your browser (`http[s]://<your_secret_server_name>/DbConnectionReset.aspx`). Step through the wizard, entering the name of the new server and database when prompted. After completing this step, recycle the node’s application pool.
+1. Switch SS nodes over to subscriber databases. The primary node *must* remain on the Publisher database, as must any node that an engine calls back to, but all other nodes can be reconfigured to use subscriber databases. Which nodes to switch depends on your specific needs as described in the previous sections. To switch an existing node to a subscriber database, log into that node and go the DbConnectionReset.aspx page by entering that page name in the URL field of your browser (`http[s]://<your_secret_server_name>/DbConnectionReset.aspx`). Step through the wizard, entering the name of the new server and database when prompted. After completing this step, recycle the node's application pool.
 
 ### Troubleshooting the Installation
 

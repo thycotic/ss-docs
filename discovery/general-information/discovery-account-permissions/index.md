@@ -11,11 +11,11 @@ The scanning account needs to be able to connect over SSH and read the contents 
 
 ## ESXi
 
-The scanning account needs “Shell Access” and the “Query VRM Policy” permission.
+The scanning account needs "Shell Access" and the "Query VRM Policy" permission.
 
 ## Local Windows Accounts
 
-The scanning account needs the “Access This Computer From the Network” permission (and possibly one more) on the endpoint:
+The scanning account needs the "Access This Computer From the Network" permission (and possibly one more) on the endpoint:
 
 1. Open the local group policy editor (gpedit.msc).
 

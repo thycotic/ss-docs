@@ -213,7 +213,7 @@ The user tasks are:
 
 ### Event Users
 
-An event user is the user making the action. For example: Admin updated user Jane’s email. Admin is the event user.
+An event user is the user making the action. For example: Admin updated user Jane's email. Admin is the event user.
 
 ### Event Variables
 
@@ -330,7 +330,7 @@ These are variables created with the EP task. There are two types, global and it
 
 ### Target User
 
-A target user is the affected user. Example: Admin updated user Jane’s email. Jane is the target user.
+A target user is the affected user. Example: Admin updated user Jane's email. Jane is the target user.
 
 ### Triggers
 

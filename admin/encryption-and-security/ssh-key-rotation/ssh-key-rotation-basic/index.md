@@ -20,7 +20,7 @@ To use our default SSH key rotation commands, the following minimum requirements
 - SSH key logins should be enabled on the target using keys in OpenSSH format. A secret can be created with keys in PuTTY format but they will be converted to OpenSSH when the key is rotated.
 - Public keys should be stored in `[~userhome]/.ssh/authorized_keys` (not `authorized_keys2`).
 - Grep and Sed should be installed on the target.
-- If doing a privileged SSH key rotation, where a privileged user sets the key for another user, the privileged user must have sudo permissions that do not prompt for a password and the permissions to edit the user’s `authorized_keys` file with sudo.
+- If doing a privileged SSH key rotation, where a privileged user sets the key for another user, the privileged user must have sudo permissions that do not prompt for a password and the permissions to edit the user's `authorized_keys` file with sudo.
 
 If a system does not meet these requirements it may still be possible to do key rotation by modifying the key rotation command sets. Our [Custom SSH Key Rotation](../ssh-key-rotation-custom/index.md) topic describes how to do this.
 
@@ -52,7 +52,7 @@ Use **Unix Account (Privileged Account SSH Key Rotation)** if:
 
 1. Uploading a public key is optional but recommended. If a public key is not provided, SS will regenerate it from the private key during key rotation, but if the key in `authorized_keys` is not in the same format as the generated key or does not match exactly (including comments), the rotation will fail because it could not find the public key that needs to be removed.
 
-1. After the secret is created you should see a successful heartbeat status. If heartbeat isn’t running, make sure heartbeat and RPC are enabled under **Admin \> Remote Password Changing**.
+1. After the secret is created you should see a successful heartbeat status. If heartbeat isn't running, make sure heartbeat and RPC are enabled under **Admin \> Remote Password Changing**.
 
 ### Rotating the Key
 
@@ -86,7 +86,7 @@ To use **Unix Account (Privileged Account SSH Key Rotation)**, you must have a s
 
 1. After the Secret is created you should see a successful heartbeat status. If heartbeat is not running, make sure that heartbeat and RPC are enabled under **Admin \> Remote Password Changing**.
 
-1. Next go to the **Remote Password Changing** tab and choose the privileged secret that can authenticate to the machine and modify the user’s `authorized_keys` file.
+1. Next go to the **Remote Password Changing** tab and choose the privileged secret that can authenticate to the machine and modify the user's `authorized_keys` file.
 
 1. Click the **Back** button after adding the associated secret.
 
