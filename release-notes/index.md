@@ -8,10 +8,13 @@
 
 ## Current
 
->**Important:** These notes cover the early release of 10.11, which is 10.9.000063. The general release is not till April 13, 2021 for the on-premises version and between April 3rd and May 15th 2021, depending on region, for the cloud version. If you are not part of the early release program, please use the [Secret Server 10.9.000033](ss-rn-10-9-000033.md) notes instead.
+>**Important:** These notes cover the General Availability release of version 10.9.000064 and Early Adopter release of version 10.9.000063. The general  availability release is not till April 13, 2021 for the on-premises version and between April 3rd and May 15th 2021, depending on region, for the cloud version. If you are not part of the Early Adopter release program, or are in a Secret Server Cloud region that has not yet received the 10.9.00064 release, please use the [Secret Server 10.9.000033](ss-rn-10-9-000033.md) notes instead.
+>
+> Updates:
+>  - April 3rd: 10.9.000064 released to Secret Server Cloud in the Canada and Singapore regions. 
 
+- [Secret Server 10.9.000064](ss-rn-10-9-000064.md)
 - [Secret Server 10.9.000063](ss-rn-10-9-000063.md)
-- [Secret Server Cloud 2020-10-24 Supplement to 10.9.000002](ssc-rn-2020-10-24.md)
 
 >**Note:** The system requirements last changed with version 10.7.000000. See [that version's release notes](./ss-rn-10-7-000000.md) for details.
 
