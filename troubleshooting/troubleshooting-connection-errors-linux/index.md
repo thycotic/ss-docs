@@ -13,7 +13,7 @@ When using SS for SSH password rotation, you may encounter errors when changing 
 
 To determine if the heartbeat issue is outside of SS:
 
-1. Go to the the secret which is failing Remote Password Changing in SS:
+1. Open the secret which is failing Remote Password Changing in SS.
 
    ![image-20201103105646813](images/image-20201103105646813.png)
 
@@ -93,7 +93,7 @@ Procedure:
 
 12. Click the **Cancel** button to return to the previous page:
 
-    ![image-20200924134208538](images/image-20200924134208538.png)
+    ![image-202009241342085381](images/image-20200924134208538.png)
 
 1. The **Verify Password Changed Commands Test Action** button tests the defined password-changed verification listed under it. When clicked, it uses the "Authenticate As" parameters to connect to the accounts and run the commands to test for a heartbeat and check that the account and password is valid.
 
@@ -107,7 +107,7 @@ Procedure:
 
    1. `whoami` (Returns the name of the active user, which indicates the su command and the provided parameters worked). This test checks that the returned username is the same as the username field in the secret. If it is not, the heartbeat fails.
 
-   1. `CHECKFOR $USERNAME` (Checks if the ‘whoami’ returns the username field from the secret. If it does not, an error is thrown and the heartbeat fails)
+   1. `CHECKFOR $USERNAME` (Checks if the 'whoami' returns the username field from the secret. If it does not, an error is thrown and the heartbeat fails)
 
    > **Note:** Some of the command sets run by the "Verify Passwords Changed Test Action" button are empty. In that case, the test authenticates with the provided username and password, and if that is successful, so is the heartbeat. That is, the heartbeat uses the secret's own account (`$USERNAME`) and value to connect, rather than those of an associated secret.
 
@@ -143,7 +143,7 @@ Procedure:
 
 21. Similar to the last test, manually provide the input parameters. See [Step 2: Testing Heartbeat and RPC in Secret Server](#Step-2:-Testing-Heartbeat-and-RPC-in-Secret-Server) for a description of how to fill in the parameters.
 
-21. Click the **OK** button. The test connects with the "Authenticate As"’ accounts and runs the commands to change the password. A password rotation occurs, and more console output appears. Record any errors and output.
+21. Click the **OK** button. The test connects with the "Authenticate As" accounts and runs the commands to change the password. A password rotation occurs, and more console output appears. Record any errors and output.
 
 22. If the rotation did not occur, check the information that was presented to the changer from your secret. It is possible that the secret's data is involved in the issue.
 
@@ -181,7 +181,7 @@ This section troubleshoots the commands used by SS to heartbeat and RPC outside 
 
 9. Log on with the username and password for the main or associated secret.
 
-    > **Note:** If you are successful with connecting with PuTTY but not SS, launch PuTTY in in debug mode and collect a log file. Determine what cipher was used to connect. If you have a machine that works with SS, compare the ciphers. Also check if the endpoint handles interactive logins differently. SS’s logins for RPC are non-interactive. See [Troubleshooting SSH Issues](../ssh-issues/index.md)  for more information about troubleshooting connection issues in Putty.
+    > **Note:** If you are successful with connecting with PuTTY but not SS, launch PuTTY in in debug mode and collect a log file. Determine what cipher was used to connect. If you have a machine that works with SS, compare the ciphers. Also check if the endpoint handles interactive logins differently. SS's logins for RPC are non-interactive. See [Troubleshooting SSH Issues](../ssh-issues/index.md)  for more information about troubleshooting connection issues in Putty.
 
 14. Use the commands listed in the "Authenticate As" section you are troubleshooting directly in PuTTY to determine if they work outside of SS. For example, given these heartbeat (Verify Password Changed) commands:
 

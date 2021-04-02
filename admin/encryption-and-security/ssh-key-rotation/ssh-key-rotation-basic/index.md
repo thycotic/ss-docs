@@ -18,12 +18,9 @@ This document is a tutorial showing you how to quickly get started using SSH key
 To use our default SSH key rotation commands, the following minimum requirements must be met on the machine being managed:
 
 - SSH key logins should be enabled on the target using keys in OpenSSH format. A secret can be created with keys in PuTTY format but they will be converted to OpenSSH when the key is rotated.
-
 - Public keys should be stored in `[~userhome]/.ssh/authorized_keys` (not `authorized_keys2`).
-
 - Grep and Sed should be installed on the target.
-
-- If doing a privileged SSH key rotation, where a privileged user sets the key for another user, the privileged user must have sudo permissions that do not prompt for a password and the permissions to edit the user’s `authorized_keys` file with sudo.
+- If doing a privileged SSH key rotation, where a privileged user sets the key for another user, the privileged user must have sudo permissions that do not prompt for a password and the permissions to edit the user's `authorized_keys` file with sudo.
 
 If a system does not meet these requirements it may still be possible to do key rotation by modifying the key rotation command sets. Our [Custom SSH Key Rotation](../ssh-key-rotation-custom/index.md) topic describes how to do this.
 
@@ -34,13 +31,11 @@ Secret Server comes with two secret templates for SSH key rotation: **Unix Accou
  Use **Unix Account (SSH Key Rotation)** if:
 
 - The account is able to change its own password and modify its own `authorized_keys` file.
-
 - The account password and key should only be changed by SS (SS will always have the current password and keys).
 
 Use **Unix Account (Privileged Account SSH Key Rotation)** if:
 
 - The account is not able to change its own password or modify its own `authorized_keys` file.
-
 - The account password and key may be changed outside of SS, and SS may not have the current account credentials. A privileged account that is able to change the password and `authorized_keys` files of other users will still be able to change the account credentials.
 
 ## SSH Key Rotation Using the Secret's Credentials
@@ -57,7 +52,7 @@ Use **Unix Account (Privileged Account SSH Key Rotation)** if:
 
 1. Uploading a public key is optional but recommended. If a public key is not provided, SS will regenerate it from the private key during key rotation, but if the key in `authorized_keys` is not in the same format as the generated key or does not match exactly (including comments), the rotation will fail because it could not find the public key that needs to be removed.
 
-1. After the secret is created you should see a successful heartbeat status. If heartbeat isn’t running, make sure heartbeat and RPC are enabled under **Admin \> Remote Password Changing**.
+1. After the secret is created you should see a successful heartbeat status. If heartbeat isn't running, make sure heartbeat and RPC are enabled under **Admin \> Remote Password Changing**.
 
 ### Rotating the Key
 
@@ -91,7 +86,7 @@ To use **Unix Account (Privileged Account SSH Key Rotation)**, you must have a s
 
 1. After the Secret is created you should see a successful heartbeat status. If heartbeat is not running, make sure that heartbeat and RPC are enabled under **Admin \> Remote Password Changing**.
 
-1. Next go to the **Remote Password Changing** tab and choose the privileged secret that can authenticate to the machine and modify the user’s `authorized_keys` file.
+1. Next go to the **Remote Password Changing** tab and choose the privileged secret that can authenticate to the machine and modify the user's `authorized_keys` file.
 
 1. Click the **Back** button after adding the associated secret.
 
@@ -112,9 +107,7 @@ To use **Unix Account (Privileged Account SSH Key Rotation)**, you must have a s
 ## Troubleshooting
 
 - The SSH Password Changers are targeted to OpenSSH. If using a different SSH library or if the user keys are not in the user's `/.ssh/authorized_keys` file you can check the commands used and modify them as appropriate under **Admin \> Remote Password Changing** and clicking **Configure Password Changers**. The password changers used are **SSH Key Rotation** and **SSH Key Rotation Privileged Account**.
-
 - Errors are logged to **Admin \> Remote Password Changing**. Additional logs can be found in the Secret Server directory in the log subfolder. That is: `C:\inetpub\wwwroot\secretserver\log`.
-
 - A change was made to how SSH script variables are named to differentiate them from tokens when testing command sets on the Configure Password Changers page. Non-token script variables should begin with an underscore. Anything in the script beginning with a dollar sign not followed by an underscore will be treated as a token and displayed as a field in the test dialog. For example:
 
   - `$USERNAME`References the username from the secret.

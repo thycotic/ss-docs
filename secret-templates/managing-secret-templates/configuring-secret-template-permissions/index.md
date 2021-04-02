@@ -27,7 +27,6 @@ As of SS 10.3 it is possible to assign users and groups to specific secret templ
 1. Click to select a secret template you wish to assign them to. You may either assign "Template Create secret" or "Template Owner" to a user or group.
 
    - Template Create secret allows a user or group to create secrets based on the selected secret template.
-
    - Template Owner allows a user or group to edit a secret template and create secrets based on the selected secret template. By default, the Everyone group that targets all users of SS can create secrets based on any secret template.
 
    > **Note:** Users' secret Template permissions are based on the permissions directly assigned to them, as well as the permissions assigned to all of the groups they are a member of. If a user or group does not have Template Create secret or Template Owner permissions, they are unable to create a secret based on that secret template or see that it exists in SS.

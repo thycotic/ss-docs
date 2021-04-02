@@ -29,55 +29,30 @@ EP *Filters* are parameters that limit when an EP runs. All Filters have setting
 The current secret policy filters:
 
 - Custom Variable
-
 - Day of Week
-
 - Event Time
-
-- Event User: Group
-
+- Day of Week
 - Event User: Has Two Factor
-
-- Event User: Role
-
+- Day of Week
 - Event User: Role Permission
-
-- Event User: Team
-
+- Day of Week
 - Event User: User Domain
-
-- Event User: User Last Login
-
+- Day of Week
 - Event User: User Setting
-
-- IP Address
-
+- Day of Week
 - Group
-
-- Policy on a Secret
-
+- Day of Week
 - Role
-
-- Role Permission
-
+- Day of Week
 - Secret Access Role Permission
-
-- Secret Field
-
+- Day of Week
 - Secret has Field
-
-- Secret has RPC enabled
-
+- Day of Week
 - Secret Name
-
-- Secret Setting
-
+- Day of Week
 - Secret Template
-
-- Site
-
+- Day of Week
 - Target User: Two Factor Type
-
 - Two Factor Type
 
 #### User Policy Filters
@@ -85,49 +60,27 @@ The current secret policy filters:
 The current user policy filters:
 
 - Custom Variable
-
 - Day of Week
-
 - Event Time
-
-- Event User: Group
-
+- Day of Week
 - Event User: Has Two Factor
-
-- Event User: Role
-
+- Day of Week
 - Event User: Role Permission
-
-- Event User: Team
-
+- Day of Week
 - Event User: User Domain
-
-- Event User: User Last Login
-
+- Day of Week
 - Event User: User Setting
-
-- IP Address
-
+- Day of Week
 - Multi-Group
-
-- Target User: Group
-
+- Day of Week
 - Target User: Has Two Factor
-
-- Target User: Multi-Group
-
+- Day of Week
 - Target User: Role
-
-- Target User: Role Permission
-
+- Day of Week
 - Target User: Team
-
-- Target User: Two Factor Type
-
+- Day of Week
 - Target User: User Domain
-
-- Target User: User Setting
-
+- Day of Week
 - Two Factor Type
 
 Some filters prompt you for additional information when you select them.
@@ -157,137 +110,71 @@ Tasks run in order of their appearance on the Task tab of the Event Pipeline det
 The secret tasks are:
 
 - Add Custom Audit
-
 - Add Share
-
 - Assign Secret Policy
-
-- Assigning Site to Secret
-
+- Add Share
 - Change Password Remotely
-
-- Change Secrets to not require a comment when viewed
-
+- Add Share
 - Change Secrets to not require Check Out
-
-- Change Secrets to require Check Out
-
+- Add Share
 - Change Secrets to require Comment on View
-
-- Change to Inherit Permissions
-
+- Add Share
 - Delete
-
-- Disable Auto Change
-
+- Add Share
 - Disable Heartbeat
-
-- Edit Share
-
+- Add Share
 - Enable Heartbeat
-
-- Expire Secrets
-
+- Add Share
 - Fail with a message
-
-- Hide Launcher Password
-
+- Add Share
 - Move to Folder
-
-- Post Slack Message (WebHook)
-
+- Add Share
 - Retry with new random password
-
-- Run Heartbeat
-
+- Add Share
 - Run Script
-
-- Schedule Pipeline
-
+- Add Share
 - Secret: Add Custom Audit
-
-- Secret: Add Share
-
+- Add Share
 - Secret: Assign Secret Policy
-
-- Secret: Assigning Site to Secret
-
+- Add Share
 - Secret: Change Password Remotely
-
-- Secret: Change Secrets to not require a comment when viewed
-
+- Add Share
 - Secret: Change Secrets to not require Check Out
-
-- Secret: Change Secrets to require Check Out
-
+- Add Share
 - Secret: Change Secrets to require Comment on View
-
-- Secret: Change to Inherit Permissions
-
+- Add Share
 - Secret: Delete
-
-- Secret: Disable Auto Change on Secret
-
+- Add Share
 - Secret: Disable Heartbeat
-
-- Secret: Edit Share
-
+- Add Share
 - Secret: Enable Auto Change on Secret
-
-- Secret: Enable Heartbeat
-
+- Add Share
 - Secret: Expire Secrets
-
-- Secret: Fail with a message
-
+- Add Share
 - Secret: Move to Folder
-
-- Secret: Retry with new random password
-
+- Add Share
 - Secret: Run Heartbeat
-
-- Secret: Send Email to Owners
-
+- Add Share
 - Secret: Set Privileged Account
-
-- Secret: Stop RPC
-
+- Add Share
 - Secret: Undelete
-
-- Secret: Update Secret by field
-
+- Add Share
 - Secret: Update Secret Name
-
-- Secret: Update Secret with a script
-
+- Add Share
 - Secret: Viewing Password Does Not Require Edit
-
-- Secret: Viewing Password Requires Edit
-
+- Add Share
 - Send Email to Event User
-
-- Send Email to Group
-
+- Add Share
 - Send Email to List
-
-- Send Email to Owners
-
+- Add Share
 - Set Custom Variable
-
-- Set Privileged Account
-
+- Add Share
 - Stop RPC
-
-- Undelete
-
+- Add Share
 - Unhide Launcher Password
-
-- Update Secret by field
-
+- Add Share
 - Update Secret Name
-
-- Update Secret with a script
-
+- Add Share
 - Update Secrets to automatically change the password
 
 #### User Tasks
@@ -295,66 +182,38 @@ The secret tasks are:
 The user tasks are:
 
 - Post Slack Message (WebHook)
-
 - Run Script
-
 - Schedule Pipeline
-
-- Send Email to Event User
-
+- Run Script
 - Send Email to Group
-
-- Send Email to List
-
+- Run Script
 - Set Custom Variable
-
-- Target User: Add User to Group
-
+- Run Script
 - Target User: Add User to Team
-
-- Target User: Disable Duo Two Factor
-
+- Run Script
 - Target User: Disable Email Two Factor
-
-- Target User: Disable FIDO2 Two Factor
-
+- Run Script
 - Target User: Disable RADIUS Two Factor
-
-- Target User: Disable TOTP Auth Two Factor
-
+- Run Script
 - Target User: Disable Users
-
-- Target User: Enable Duo Two Factor
-
+- Run Script
 - Target User: Enable Email Two Factor
-
-- Target User: Enable FIDO2 Two Factor
-
+- Run Script
 - Target User: Enable RADIUS Two Factor
-
-- Target User: Enable TOTP Auth Two Factor
-
+- Run Script
 - Target User: Enable Users
-
-- Target User: Force Logout
-
+- Run Script
 - Target User: Lock User
-
-- Target User: Remove User from Group
-
+- Run Script
 - Target User: Remove User from Team
-
-- Target User: Reset FIDO2 Two Factor
-
+- Run Script
 - Target User: Reset TOTP Auth Two Factor
-
-- Target User: Send Email to Target User
-
+- Run Script
 - Target User: Unlock User
 
 ### Event Users
 
-An event user is the user making the action. For example: Admin updated user Jane’s email. Admin is the event user.
+An event user is the user making the action. For example: Admin updated user Jane's email. Admin is the event user.
 
 ### Event Variables
 
@@ -421,51 +280,34 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 ##### Secret
 
 - $SecretName
-
 - $SecretId
 
 ##### Folder
 
 - $FolderId
-
 - $FolderName
-
 - $FolderPath
 
 ##### Event User
 
 - $EventUserDomain
-
 - $EventUserKnownAs
-
 - $EventUserName
-
-- $EventUserLastLogin
-
+- $EventUserKnownAs
 - $EventUserId
 
 ##### Target User
 
 - $TargetUser.DisplayName
-
 - $TargetUser.IsApplicationAccount
-
 - $TargetUser.IsSystemUser
-
-- $TargetUser.UserEmail
-
+- $TargetUser.IsApplicationAccount
 - $TargetUser.UserEnabled
-
-- $TargetUser.UserName
-
+- $TargetUser.IsApplicationAccount
 - $TargetUserDomain
-
-- $TargetUserId
-
+- $TargetUser.IsApplicationAccount
 - $TargetUserKnownAs
-
-- $TargetUserLastLogin
-
+- $TargetUser.IsApplicationAccount
 - $TargetUserName
 
 #### Custom Task Variables
@@ -477,20 +319,18 @@ These are variables created with the EP task. There are two types, global and it
 #####  Global Variable
 
 - $GlobalVariable.CustomVariableName
-
 - This custom task variable is global, so there should only be one per variable name.
 
 ##### Item Variable
 
 - $ItemVariable.CustomVariableName
-
 - This variable is per SecretId (secret pipeline) or UserId (user pipeline).
 
 > **Note:** The first time an EP task is invoked, an item variable is not  translated, but subsequent invocations have the variable. Global variables are immediately available.
 
 ### Target User
 
-A target user is the affected user. Example: Admin updated user Jane’s email. Jane is the target user.
+A target user is the affected user. Example: Admin updated user Jane's email. Jane is the target user.
 
 ### Triggers
 
@@ -499,133 +339,73 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 #### Secret Triggers
 
 - Access Approved
-
 - Access Denied
-
 - Cache View
-
-- Check In
-
+- Access Denied
 - Check Out
-
-- Copy
-
+- Access Denied
 - Create
-
-- Custom Audit
-
+- Access Denied
 - Custom Password Requirement Added To Field
-
-- Custom Password Requirement Removed From Field
-
+- Access Denied
 - Delete
-
-- Dependency Added
-
+- Access Denied
 - Dependency Deleted
-
-- Dependency Failure
-
+- Access Denied
 - Edit
-
-- Expired Today
-
+- Access Denied
 - Expires in 1 Day
-
-- Expires in 15 Days
-
+- Access Denied
 - Expires in 3 Days
-
-- Expires in 30 Days
-
+- Access Denied
 - Expires in 45 Days
-
-- Expires in 60 Days
-
+- Access Denied
 - Expires in 7 Days
-
-- Export
-
+- Access Denied
 - File Save
-
-- Heartbeat Failure
-
+- Access Denied
 - Heartbeat Success
-
-- Hook Create
-
+- Access Denied
 - Hook Delete
-
-- Hook Edit
-
+- Access Denied
 - Hook Failure
-
-- Hook Success
-
+- Access Denied
 - Launch
-
-- Password Change
-
+- Access Denied
 - Password Change Failed
-
-- Password Change Maximum Attempts Reached
-
+- Access Denied
 - Password Displayed
-
 - Pre-Check In
 
   > **Note:** When using the Pre-Check In trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
 
 - Pre-Check Out
-
 - Secret Policy Change
-
 - Session Recording View
-
-- Undelete
-
+- Secret Policy Change
 - View
-
-- Viewed Secret Edit
-
+- Secret Policy Change
 - Web Password Fill
 
 #### User Triggers
 
 - Added to Group
-
 - Challenge Applied
-
 - Challenge Cleared
-
-- Disable
-
+- Challenge Applied
 - Enable
-
-- Lockout
-
+- Challenge Applied
 - Login
-
-- Login Failure
-
+- Challenge Applied
 - Logout
-
-- Owners Modified
-
+- Challenge Applied
 - Remove Personally Identifiable Information
-
-- Removed From Group
-
+- Challenge Applied
 - Two Factor Changed
-
-- Two Factor Reset Failure
-
+- Challenge Applied
 - Two Factor Reset Success
-
-- User: Create
-
+- Challenge Applied
 - User: Edit
-
 - User: Password Change
 
 ## Permissions
@@ -633,9 +413,7 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 There are three permissions:
 
 - **Administer Pipelines:** Allows the user to create, edit, and remove EPs and EP policies.
-
 - **Assign Pipelines:** Allows the user to assign an EP policy to secret policies, or folders.
-
 - **View Pipelines:** Allows the user to view EP policies and policy activities.
 
 ## Procedures
@@ -685,11 +463,9 @@ To create a new EP:
 1. In the **Add Triggers** section, click the **+** button next to the triggers you desire. You can also search for a trigger by typing in the search text box. The selected triggers appear in the Selected Triggers list. Consider the following when selecting triggers:
 
    - Currently triggers are centralized around events that are linked to a secret.
-
    - You can add multiple triggers.
 
-   - You can limit when the EP runs by adding filters.
-
+   - Currently triggers are centralized around events that are linked to a secret.
    - Multiple triggers are logically ORed (not XORed) together. Each trigger is considered individually, and only one needs to apply for the EP to run—if concurrent triggers do not apply, it does not matter. If multiple triggers do apply, the EP will only run once per EP policy.
 
 1. Click the **Next** button. The Choose Filters page of the wizard appears.
@@ -699,7 +475,6 @@ To create a new EP:
 1. Use the exact same method to add filters to the EP. All filters present a popup page for you to provide additional information when you click on them. Consider the following when selecting filters:
 
    - Whereas triggers focused on secrets, filters can access secret and user information.
-
    - Because the same filter can differ by its settings, you can add the same filter multiple times to an EP.
    - Filters are logically ANDed together—all filters apply at once and all matter.
 
@@ -811,7 +586,6 @@ To control if an EP policies is available, you can toggle the EP policy's active
 
 1. Click the **Add Policy** button, and you will be presented with the following options:
    - **Create New Policy:** Click the selection button, and type a name in the **Policy Name** text box, and optionally type a description in the **Policy Description** text box.
-
    - **Import Policy:** Import an exported EP policy in JSON format. This can be a policy exported from a separate SS instance. Click the selection button, and paste the JSON payload in the **Add Policy** text box, click the **Create** button.
    - **Duplicate Selected Policy:** Copy an existing EP policy. Click the selection button, and then click the **Create** button.
 
@@ -822,7 +596,6 @@ To control if an EP policies is available, you can toggle the EP policy's active
 There are two ways to monitor your EP policy:
 
 - **Audit:** Shows changes to EP policies, targets, and EPs. Click the **Audits** tab on the **Event Pipeline Policies** page.
-
 - **Activity:** Shows the actions each EP policy or single EP took each time it is triggered. This includes failures, skips, and successes. Click the card for the desired EP policy, and then click the **View Policy Activity** button on the right. Alternatively, you can click the title on the card. When the page for the EP policy appears, click the **Activity** tab.
 
 #### Ordering Event Pipelines in Event Pipeline Policies

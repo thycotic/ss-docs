@@ -7,11 +7,8 @@
 ## In This Section
 
 - [Overview](#overview)
-
 - [Data Retention Policies](#data-retention-policies)
-
 - [Permissions](#permissions)
-
 - [Procedures](#procedures)
   - [Viewing the Status and History of Audit-Data Retention Policies](#Viewing-the-Status-and-History-of-Audit-Data-Retention-Policies)
   - [Editing Audit Data Policies](#editing-audit-data-policies)
@@ -19,7 +16,7 @@
 
 ## Overview
 
-Secret Server can automatically delete older audit and audit-like information (both are called "audit data” here). By default, SS does not delete any audit data.
+Secret Server can automatically delete older audit and audit-like information (both are called "audit data" here). By default, SS does not delete any audit data.
 
 > **Important:** Do not configure automatic record deletion for compliance or other important data.
 
@@ -30,18 +27,17 @@ If enabled, old data deletion occurs automatically at 0200 EST every Sunday. Dat
 The audit data retention offers two data retention policies:
 
 - Personally Identifiable Information (PII): Tables containing identifiable user or organization data.
-
 - Database Size Management: Tables that are prone to grow large, which may affect SS performance.
 
-Each policy has a title and description, which are displayed to users, as well as a defined set of SS audit tables it manages. There is some overlap between the two policies’ table sets as some tables fall under both PII and size management.
+Each policy has a title and description, which are displayed to users, as well as a defined set of SS audit tables it manages. There is some overlap between the two policies' table sets as some tables fall under both PII and size management.
 
 When an audit-data retention policy runs, all records in each table for that policy that are older than the set maximum record age in days are deleted from the database. This also includes all dependent records in other tables that would otherwise prevent deletion.
 
 ## Permissions
 
-Access to the audit-data detention management pages in SS is limited to users with the roles “View Data Retention” and “Administer Data Retention.” As the names imply, only the latter role can manage audit data retention, such as editing and running now.
+Access to the audit-data detention management pages in SS is limited to users with the roles "View Data Retention" and "Administer Data Retention." As the names imply, only the latter role can manage audit data retention, such as editing and running now.
 
-> **Note:** The “Unlimited Admin” role does not include audit data retention management at this time.
+> **Note:** The "Unlimited Admin" role does not include audit data retention management at this time.
 
 By default, these two audit-data retention roles are not assigned to users. An admin must first assign the roles to users requiring access.
 
@@ -59,16 +55,14 @@ By default, these two audit-data retention roles are not assigned to users. An a
 1. Notice that each policy lists:
 
    - The enabled status (editable)
-
    - The maximum age audits are allowed to remain (editable)
 
-   - The last time the policy ran
-
+   - The enabled status (editable)
    - The last time the policy finished running
 
    - All the audit data tables that the policy covers
 
-1. To view a list of previous "runs,” click the **Audit** tab. You can also hover the mouse pointer over individual records to view details:
+1. To view a list of previous "runs," click the **Audit** tab. You can also hover the mouse pointer over individual records to view details:
 
    ![image-20191204152313970](images/image-20191204152313970.png)
 

@@ -17,15 +17,12 @@ If attackers compromise one of the DE servers, they would have access to all cri
 ### Restrict RDP Connections
 
 - Limit RDP connections to all PAM Server,  except for PAM admins and some users from the hosting team.
-
 - If there is no firewall segmentation in LAN network, you can accomplish this with the Windows OS firewall.
 
 ### Restrict Incoming Port Access to All DE Servers
 
 - Allow only RDP port access from some internal IPs.
-
 - Allow a SSH proxy port coming from the user's LAN.
-
 - Block all other incoming ports.
 
 ### Remove Unnecessary User Groups
@@ -33,7 +30,6 @@ If attackers compromise one of the DE servers, they would have access to all cri
 For administrator and Remote Desktop user groups:
 
 - Remove default domain admins, administrator and some common groups.
-
 -  Create one group that is going to have access these servers.
 - Disable the built-in local administrator user.
 
@@ -47,17 +43,11 @@ For administrator and Remote Desktop user groups:
 Disable these services:
 
 - Routing and remote access
-
 - Smart card
-
 - Smart card removal policy
-
-- SNMP trap
-
+- Smart card
 - Special administration console helper
-
-- Windows error reporting service
-
+- Smart card
 - WinHTTP Web proxy auto-discovery service
 
 ### Restrict Network Protocols
@@ -65,17 +55,13 @@ Disable these services:
 Keep these:
 
 - Client for Microsoft network
-
 - File and printer sharing for Microsoft network
-
 - Internet protocol version 4 (TCP/IPv4)
 
 Remove these:
 
 - QoS packet scheduler
-
 - Link-layer topology discovery mapper IO driver
-
 - Link-layer topology discovery responder
 
 ### Validate Server Roles
@@ -454,7 +440,7 @@ Administrator, System - Full
 | Network access:  Sharing and security model for local accounts | Classic - Local  users authenticate as themselves            | Vulnerability:  With the Guest only  model, any user who can authenticate to the server over the network does so  with guest privileges, which means that they will not have write access to  shared resources on that server. Although this restriction does increase  security, it makes it more difficult for authorized users to access shared  resources on the server because ACLs on those resources must include access  control entries (ACEs) for the Guest account. With the Classic model, local  accounts should be password protected. Otherwise, if Guest access is enabled,  anyone can use those user accounts to access shared system resources.  Severity of the  damage:  Low  Operational aspects:  None |
 | Network security: Do  not store LAN Manager hash value on next password change | Enabled                                                      | Vulnerability:  The SAM file can be targeted  by attackers who seek access to user name and password hashes. Such attacks  use special tools to discover passwords, which can then be used to  impersonate users and gain access to resources on your network.  Severity of the  damage:  Medium  Operational aspects:  None |
 | Network security:  Force logoff when logon hours expire      | Enabled                                                      | Vulnerability:  Users can remain  connected to the computer outside of their allotted logon hours.  Severity of the  damage:  Low  Operational aspects:  None |
-| Network security: LAN  Manager authentication level          | Send NTLMv2  Responses Only/Refuse LM & NTLM                 | Vulnerability:  The system allows  identification of users in the old LM and NTLM protocols. The old  identification protocols are vulnerable to attacks.  Severity of the damage:  Medium  Operational aspects:  These parameters  could effect on legacy system if the system don’t support NTLMv2 |
+| Network security: LAN  Manager authentication level          | Send NTLMv2  Responses Only/Refuse LM & NTLM                 | Vulnerability:  The system allows  identification of users in the old LM and NTLM protocols. The old  identification protocols are vulnerable to attacks.  Severity of the damage:  Medium  Operational aspects:  These parameters  could effect on legacy system if the system don't support NTLMv2 |
 | Network security:  Minimum session security for NTLM SSP based (including secure RPC) clients | Require NTLMv2  session security  Require 128-bit  encryption | Vulnerability:  Network traffic that  uses the NTLM Security Support Provider (NTLM SSP) might be exposed such that  an attacker who has gained access to the network can create man-in-the-middle  attacks.  Severity of the  damage:  Medium  Operational aspects:  None |
 | Network security:  Minimum session security for NTLM SSP based (including secure RPC) servers | Require NTLMv2  session security  Require 128-bit  encryption | Vulnerability:  Network traffic that  uses the NTLM Security Support Provider (NTLM SSP) might be exposed such that  an attacker who has gained access to the network can create man-in-the-middle  attacks.  Severity of the  damage:  Medium  Operational aspects:  None |
 | Recovery console:  Allow automatic administrative logon      | Disabled                                                     | Vulnerability:  The Recovery Console  can be very useful when you need to troubleshoot and repair computers that do  not start. However, it is dangerous to allow automatic logon to the console.  Anyone could walk up to the server, disconnect the power to shut it down,  restart it, select Recover Console from the Restart menu, and then assume  full control of the server.  Severity of the  damage:  Medium  Operational aspects:  None |

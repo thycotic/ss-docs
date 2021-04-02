@@ -17,7 +17,7 @@ Secret Server can send a copy of important log messages to an external syslog se
 | ------------ | ------------- | ------------------------------------------------------------ |
 | UDP | No | Least reliable. User Datagram Protocol (UDP) traffic is fire-and-forget with no assurance messages are delivered and no error checking. |
 | TCP | No | More reliable. Transmission Control Protocol (TCP) ensures messages arrive in order, missing messages are resent, and has built in error checking. |
-| Secure TCP | Yes | Establishes a secure connection — Transport Layer Security (TLS) 1.1 or 1.2 only. Syslog Server’s certificate is validated by Windows to ensure it is trusted and not revoked. Can be used with or without client certificates (configured in **Configuration \> Security tab \> TLS Auditing \> Advanced**). |
+| Secure TCP | Yes | Establishes a secure connection — Transport Layer Security (TLS) 1.1 or 1.2 only. Syslog Server's certificate is validated by Windows to ensure it is trusted and not revoked. Can be used with or without client certificates (configured in **Configuration \> Security tab \> TLS Auditing \> Advanced**). |
 
 []()
 
@@ -28,7 +28,6 @@ Due to the sensitive nature of SS logs, we strongly recommend using Secure TCP.
 ### Compatible Audit Servers
 
 - syslog-ng
-
 - Any Audit server that accepts TLS encrypted messages using the BSD syslog protocol
 
 ### Configuring an External Audit Server
@@ -77,7 +76,7 @@ To track problems with TLS connections (including whenever the connection fails)
 
 1. Ensure the **Apply TLS Certificate Chain Policy and Error Auditing** check box is enabled. If not, you cannot use client certificates.
 
-> **Note:** If secure TCP is used for the syslog/CEF protocol and there are one or more client certificate thumbprints entered, SS checks the local computer’s Web hosting and personal certificate store and uses the first one it finds.
+> **Note:** If secure TCP is used for the syslog/CEF protocol and there are one or more client certificate thumbprints entered, SS checks the local computer's Web hosting and personal certificate store and uses the first one it finds.
 
 ## Adding Client Certificate Thumbprints
 
@@ -142,9 +141,9 @@ If you are using a client certificate, and a syslog-ng logging server, the follo
 
 **TLS Error Detected (Authentication Error connecting to IP:PORT) - Authentication failed because the remote party has closed the transport stream.**
 
-This is caused by Windows trying to cache secure connections when client certificates are used, but because syslog-ng has not configured the OpenSSL “session id context”, OpenSSL displays this error when it tries to resume a previous session.
+This is caused by Windows trying to cache secure connections when client certificates are used, but because syslog-ng has not configured the OpenSSL "session id context", OpenSSL displays this error when it tries to resume a previous session.
 
-SS automatically reconnects and resends any missed messages, so the errors should not have an impact. However, you can disable Window’s secure connection caching by adding the [ClientCacheTime](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings) setting set to 0 in the Registry and then rebooting. This did not cause any significant performance impact in internal testing.
+SS automatically reconnects and resends any missed messages, so the errors should not have an impact. However, you can disable Window's secure connection caching by adding the [ClientCacheTime](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings) setting set to 0 in the Registry and then rebooting. This did not cause any significant performance impact in internal testing.
 
 > **Note**: If changing back to a previous syslog IP address and port, you will receive a closed connection TLS error on the first attempted syslog connection after making the change. A subsequent call will succeed as the first failure will clear the cached connection on Windows. This is due to the issue with syslog-ng.
 

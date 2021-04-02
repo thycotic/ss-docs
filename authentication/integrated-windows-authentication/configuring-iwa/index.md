@@ -30,7 +30,6 @@ Integrated Windows Authentication (IWA) allows users to log into SS automaticall
 
 1. If necessary, click to select the following check boxes:
    - Enable Active Directory Integration
-
    - Enable Synchronization of Active Directory
    - Enable Integrated Windows Authentication.
 1. Select your desired option from the **User Account Options** dropdown list.
@@ -111,7 +110,7 @@ By default, a launcher will not work when using IWA, resulting in an HTTP 401: U
 
 1. Open IIS and browse to your SS application.
 
-1. Click the **>** to see the application’s folders:
+1. Click the **>** to see the application's folders:
 
    ![img](images/clip_image022.png)
 

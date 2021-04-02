@@ -24,9 +24,9 @@ Thycotic One integration is off by default in the on-premise release of SS, but 
 
 When Thycotic One integration is turned on, all SS users can log in either with their local passwords or with Thycotic One. All SS permissions and configuration will apply to that user regardless of how they logged in.
 
-However, the local username and password and the Thycotic One username and password are not necessarily the same thing. In Thycotic One, you’ll log in with your email address rather than your username, and the password you use may very well be different from the SS password.
+However, the local username and password and the Thycotic One username and password are not necessarily the same thing. In Thycotic One, you'll log in with your email address rather than your username, and the password you use may very well be different from the SS password.
 
-You’ll see this on the login screen:
+You'll see this on the login screen:
 
 ![image-20200616115133898](images/image-20200616115133898.png)
 
@@ -50,35 +50,29 @@ Click **Edit** at the bottom of the page to change the configuration. The availa
 
 #### Secret Server Cloud
 
-When editing the options in SS Cloud, you’ll see something like this:
+When editing the options in SS Cloud, you'll see something like this:
 
 ![image-20200616121415023](images/image-20200616121415023.png)
 
 Here are the available options:
 
 - **Enable Thycotic One Integration:** Turn on to enable Thycotic One functionality. Turn off to completely disable Thycotic One logins and synchronization. Make sure you have an admin account with a working local password.
-
 - **Secret Server Redirect URI:** For informational purposes, this shows the page address to which you are redirected after you have logged in with Thycotic One.
-
 - **Thycotic One Server URL:** The Thycotic One server you have connected to. There is one separate Thycotic One instance in each SS Cloud region.
-
-- **Client ID:** The client ID portion of the Thycotic One server credentials.
-
+- **Secret Server Redirect URI:** For informational purposes, this shows the page address to which you are redirected after you have logged in with Thycotic One.
 - **Client Secret:** Not shown, the client password portion of the credentials.
-
-- **Add New Users to Thycotic One:** When checked, SS accounts will be synchronized with Thycotic One. Adding a user will send them a welcome email, where they can set up their Thycotic One account password and log into SS. When unchecked, users will not be synchronized and no email will be sent. New users will not be able to log in with Thycotic One, unless you click **Sync Now** on the **Admin** > **Configuration** > **Login** page, which will synchronize all active users.
-
+- **Secret Server Redirect URI:** For informational purposes, this shows the page address to which you are redirected after you have logged in with Thycotic One.
 - **Use Thycotic One authentication as the default:** When checked, Thycotic One authentication is used for the REST and SOAP APIs and mobile apps. Users who have logged in with Thycotic One use their Thycotic One account passwords for those activities, rather than their local SS account passwords. When unchecked, they will use their local SS account passwords for those activities.
 
 In Cloud, the server URL, client ID, and client secret cannot be edited—they are set up for you when the instance is provisioned and cannot be changed.
 
 #### Secret Server On-Premise
 
-When editing the options in SS on-premise, you’ll see something like this:
+When editing the options in SS on-premise, you'll see something like this:
 
 ![image-20200616132151554](images/image-20200616132151554.png)
 
-Unlike in Cloud, the server URL, client ID, and client secret can be edited in an on-premise instance. You can generate Thycotic One credentials using Thycotic’s cloud management portal, Cloud Manager. Otherwise, the configuration options behave the same as in Cloud.
+Unlike in Cloud, the server URL, client ID, and client secret can be edited in an on-premise instance. You can generate Thycotic One credentials using Thycotic's cloud management portal, Cloud Manager. Otherwise, the configuration options behave the same as in Cloud.
 
 ### Generating a Thycotic One Credential
 
@@ -86,7 +80,7 @@ To generate a credential for use in an on-premise SS instance, follow the steps 
 
 1. From Cloud Manager, choose a Thycotic One region under Other Login Options.
 
-1. Log into Thycotic One as a user that will be managing your organization’s credentials. Create an account if you have not yet done so.
+1. Log into Thycotic One as a user that will be managing your organization's credentials. Create an account if you have not yet done so.
 
 1. Go to Cloud Manager at https://portal.thycotic.com/.
 
@@ -105,11 +99,10 @@ To generate a credential for use in an on-premise SS instance, follow the steps 
 1. The available fields are as follows:
 
     - **Name:** A description of the application using this credential, for informational purposes.
+   - **Post-Login Redirect URIs:** A list of valid URIs that will be allowed to authenticate with this credential. The value of "Secret Server Redirect URI" from your on-premise instance should go here. If users access your instance with more than one URI, you may want to add all of them here by clicking the **+** button to create additional fields. Unless an application supplies a URI that is an exact match to one of these, Thycotic One will not complete the authentication.
 
-    - **Post-Login Redirect URIs:** A list of valid URIs that will be allowed to authenticate with this credential. The value of “Secret Server Redirect URI” from your on-premise instance should go here. If users access your instance with more than one URI, you may want to add all of them here by clicking the **+** button to create additional fields. Unless an application supplies a URI that is an exact match to one of these, Thycotic One will not complete the authentication.
-    - **Post-Logout Redirect URIs:** SS does not support this feature, so this may be left blank.
+    - **Name:** A description of the application using this credential, for informational purposes.
+   - **Credentials:** The fields in this area contain the values you need to put into the Thycotic One configuration in SS. Copy and paste them into the corresponding fields.
 
-    - **Credentials:** The fields in this area contain the values you need to put into the Thycotic One configuration in SS. Copy and paste them into the corresponding fields.
-
-1. Once you capture all the values, click **Save**, and then save the configuration in SS as well. Your instance is now fully integrated with Thycotic One. If you selected the synchronization option, SS will immediately sync your active users with Thycotic One, and they’ll receive welcome emails describing how to continue the process.
+1. Once you capture all the values, click **Save**, and then save the configuration in SS as well. Your instance is now fully integrated with Thycotic One. If you selected the synchronization option, SS will immediately sync your active users with Thycotic One, and they'll receive welcome emails describing how to continue the process.
 

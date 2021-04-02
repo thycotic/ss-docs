@@ -29,9 +29,7 @@ Folder structure defines how folders are named under the client's folder. By def
 The supported folder structure tokens are:
 
 - **$COMPANYINITIAL:** First letter of company name. Use to organize companies into subfolders of A, B, C, and the like.
-
 - **$STATUS:** Company status, such as active, inactive, or not-approved.
-
 - **$TYPE:** Company type, such as competition, customer, partner, prospect, suspect, or vendor.
 
 When configured, save and scroll down to the bottom and click **Synchronize Now** to run the synchronization
@@ -46,4 +44,4 @@ Enter the SQL Server location, SQL database name, and the credential information
 
 ![image-20191203160414962](images/image-20191203160414962.png)
 
-“Days to Keep Operational Logs” sets the period to keep folder-synchronization-related logs that might contain PII. SS automatically deletes logs older than that (in days).
+"Days to Keep Operational Logs" sets the period to keep folder-synchronization-related logs that might contain PII. SS automatically deletes logs older than that (in days).

@@ -39,19 +39,15 @@ If creating a new template:
    These settings are available:
 
    - **Secret Template Name** check box.
-
    - **Secret Template Icon** link: Click to change the icon displayed for the template.
 
-   - **Name Pattern** text box. See [Template Naming Patterns](../../Template-Naming-Patterns/index.md).
-
+   - **Secret Template Name** check box.
    - **Name Pattern Error Message** text box. See [Template Naming Patterns](../../Template-Naming-Patterns/index.md).
 
-   - **Keep Secret Name History?** check box: If Keep Secret Name History is enabled, SS keeps the specified number of entries for viewing. This feature creates a record of every name used when a new secret is created.
-
+   - **Secret Template Name** check box.
    - **Expiration Enabled?** check box: Secret templates allow expiration on certain text-entry fields. When the check box is selected, an expiration time interval can be specified for a selected text-entry field using the dropdown menu. With this option enabled and a time duration specified, SS begins providing alerts if the secret text-entry field is not changed within the specified expiration requirements.
 
-   - **Validate Password Requirements on Create?** check box: Ensure requirements are met on secret creation.
-
+   - **Secret Template Name** check box.
    - **Validate Password Requirements on Edit?** check box: Ensure requirements are met when editing secret.
 
    - **Field Displayed on Basic Home** dropdown list box: Choose the field that appears on the Basic Home view.

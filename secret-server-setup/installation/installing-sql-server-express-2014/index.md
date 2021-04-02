@@ -13,9 +13,7 @@ SQL Express is a free edition of SQL and is available for use with Thycotic prod
 At the completion of this article you will have:
 
 - Installed a basic stand-alone instance of SQL Server 2014 Express with the minimum features necessary for SQL Server. This includes SQL Server Management Studio and other tools.
-
 - Created a database in SQL for your Thycotic product
-
 - Created a new SQL Server user login for your SQL database
 
 > **Note:** This document uses Thycotic's Secret Server product as example in the instructions, but the same steps apply for Privilege Manager advanced installs.
@@ -39,7 +37,6 @@ Procedure:
 1. Click to select the following check boxes (you may need to scroll down):
 
    - **ExpressAndTools 64BIT\SQLEXPRWT_x64_ENU.exe**
-
    - **MgmtStudio 64BIT\SQLManagementStudio_x64_ENU.exe**
 
 1. Click the **Next** button. `SQLEXPRWT_x64_ENU.exe` and `SQLManagementStudio_x64_ENU.exe*` download to your computer.
@@ -95,12 +92,11 @@ Procedure:
 1. You have the choice to select either **Windows Authentication Mode** or **Mixed Mode**. Click to select the option that works best for your environment:
 
    - **Mixed Mode (for easiest configuration)**: This mode is required if you intend on using a SQL Server account to authenticate Secret Server to your SQL Server instance. **We recommend using mixed mode if you are setting up a test or demo environment**. Selecting this option will also require you to set a password for the SQL Server system administrator (sa) account. See [Adding a SQL Server User ](https://thycotic.force.com/support/s/article/Adv-Install-SQL-2016#user)(section below) for instructions on adding more users.
-
    - **Windows Mode (recommended for best security)**: This mode prevents SQL Server account authentication. We recommend using Windows mode for production environments. Whatever user or group assigned will have administrative access to your SQL instance. According to best security practices, limit this number to as few users as possible. Only choose this if you have experience and require this for a specific issue—we do **not** recommend SQL Server Express for production accounts.
 
    > **Note:** If choosing **Windows Mode** you will also need to  [run the IIS application pool as a service account](../running-ss-iis-app-pool-service-account/index.md) later in the installation process.
 
-1. If you selected mixed mode, which you almost certainly did, type your SQL Server system administrator (sa) account password in the **Enter password** and **Confirm password** text boxes. The password must meet Microsoft’s definition of a strong password. Click the **Help** button and search for “Database Engine Configuration - Account Provisioning” if you what to find out what that is. A 16 character mixture of lower and uppercase letters and numerals works fine.
+1. If you selected mixed mode, which you almost certainly did, type your SQL Server system administrator (sa) account password in the **Enter password** and **Confirm password** text boxes. The password must meet Microsoft's definition of a strong password. Click the **Help** button and search for "Database Engine Configuration - Account Provisioning" if you what to find out what that is. A 16 character mixture of lower and uppercase letters and numerals works fine.
 
 1. Your user account should already be shown in the **Specify SQL Server administrators** text box. If not, click the **Add Current User** button.
 
@@ -141,7 +137,6 @@ According to security best practices, limit the number of users with access to y
 1. Select a method of authentication:
 
    - **SQL Server Authentication**:  Use this option to create a new SQL Server account (this requires mixed mode to be enabled). To create the account, enter a new username and password and then deselect the **Enforce Password Policy** check box to prevent the account from expiring.
-
    - **Windows Authentication**:  Use this option to add access to SQL Server for an existing Windows account. To add the account, enter the login name or click **Search** to find the account. It is recommended to use a domain account rather than a local Windows account.
 
 1. Click **User Mapping** in the left menu.

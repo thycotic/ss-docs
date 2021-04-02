@@ -208,7 +208,7 @@ function CreateNewSecret {
 }
 
 # Define the username on the Secret and name of the Secret after $machine\
-CreateNewSecret '<username for the Secret>’
+CreateNewSecret '<username for the Secret>'
 ```
 
 ## Editing Secrets

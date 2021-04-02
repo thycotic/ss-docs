@@ -24,7 +24,6 @@ Common problems with LDAPS and SS:
 Both issues are caused by LDAPS to SS communication issues, usually one of the following:
 
 - The certificate is expired (this is the client certificate, not the SSL on the SS website).
-
 - LDAPS is not enabled in your environment.
 - A port is blocked that is denying successful communication between the server and AD.
 

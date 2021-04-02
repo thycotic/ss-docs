@@ -11,9 +11,8 @@ Secret Server now integrates with Slack, allowing for notifications and workflow
 To use Slack integration, you must:
 
 - Have the custom URL configuration options set, can be an internal or external domain.
-
 - Have an external domain name with DNS and routing to your Secret Server instance, which can be anything. We use this in the Slack configuration pages below.
-- Be an owner of your company’s Slack installation to continue. This is very important.
+- Be an owner of your company's Slack installation to continue. This is very important.
 
 ## Setup and Configuration
 
@@ -67,7 +66,7 @@ Setup the Slack app within the Slack API Interface:
 
 2. Type a link to your instance of Secret Server in the **Request URL** text box: `https://<secret server instance>/api/v1/slack/interaction`.
 
-2. In the **Shortcuts** section, click the **Create New Shortcut** button to add a global shortcut named “Secret search."
+2. In the **Shortcuts** section, click the **Create New Shortcut** button to add a global shortcut named "Secret search."
 
 2. Type `secretsearch` for the **Callback ID**.
 

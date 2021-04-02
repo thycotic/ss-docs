@@ -21,9 +21,6 @@ With SS teams, administrators can create special groups called _teams_ to restri
 Team visibility and management are controlled by user roles. Those roles, and by extension users, are governed by the following team-related role permissions:
 
 - **Administer Teams:** Users can create, edit, and view all teams.
-
 - **No Teams-related Permissions:** Users can only view other users within their team.
-
 - **Unrestricted by Teams:** Users can view all users, groups, and sites, regardless of Team affiliation. Essentially, teams do not exist for the users with this permission, and the Teams page is not available to them. The default user role has this permission.
-
 - **View Teams:** Users can view all teams. This is essentially a read-only Administer Teams.

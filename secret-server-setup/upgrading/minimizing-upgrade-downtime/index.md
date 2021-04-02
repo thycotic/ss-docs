@@ -25,18 +25,15 @@ We recommend that you have a QA or test environment mirroring your production en
 The upgrade procedure requires that you do these steps outside of the SS install.
 
 - Download the upgrade package (step 1)
-
 - Backup your database (step 2)
-
 - Obtain the database upgrade script from support (step 4)
-
 - Backup any customized web.config or web-appsettings.config files (step 10)
 
 #### Procedure
 
 1. Download the latest version of Secret Server from the [Thycotic Support Website](https://thycotic.force.com/support/s/download-onprem).
 
-2. Perform a full backup of your SS database using the preferred backup method used by your company. For a quicker recovery procedure in case of disaster, we recommend creating a local SQL backup, engaging your SQL DBA team as needed. If you use an AlwaysOn configuration, perform the backup from your primary node. If desired, you can choose the option to do a “copy only” backup to avoid interrupting any log truncation performed by your enterprise backup tool.
+2. Perform a full backup of your SS database using the preferred backup method used by your company. For a quicker recovery procedure in case of disaster, we recommend creating a local SQL backup, engaging your SQL DBA team as needed. If you use an AlwaysOn configuration, perform the backup from your primary node. If desired, you can choose the option to do a "copy only" backup to avoid interrupting any log truncation performed by your enterprise backup tool.
 
 3. Restore the database onto a separate SQL server or separate instance within your environment. This restored backup is used to test the upgrade process. For this instruction, we call this server the "Test SQL Server."
 
@@ -110,19 +107,14 @@ The manual rolling upgrade provides a way to upgrade SS with little to no downti
 The administrator role needs the following permissions:
 
 - Administer Configuration
-
 - Administer Nodes
-
 - Administer Backup
 
 In addition, the role:
 
 - Needs a database login with permission to change the database
-
 - Requires access with permission to update files on web servers
-
 - Must go through the current upgrade process
-
 - Must not turn on maintenance mode until needed
 
 #### Procedure
@@ -201,7 +193,7 @@ In addition, the role:
 
 1. Click the **Enable Maintenance Mode** button.
 
-1. Back up SS: Type “backup” in the Admin search text box, and click the item that appears in the dropdown list to access the Backup Configuration page. Click the **Backup Now** button.
+1. Back up SS: Type "backup" in the Admin search text box, and click the item that appears in the dropdown list to access the Backup Configuration page. Click the **Backup Now** button.
 
 1. Click the **Disable Maintenance Mode** button.
 
@@ -224,7 +216,7 @@ In addition, the role:
 
 1. Go to **Admin \> Secret Nodes** to confirm the staging system is in maintenance mode.
 
-1. Copy the contents of the generated application Zip file to the staging location’s web application folder. Typically, this is `C:\inetpub\wwwroot\SecretServer`.
+1. Copy the contents of the generated application Zip file to the staging location's web application folder. Typically, this is `C:\inetpub\wwwroot\SecretServer`.
 
 1. Run the generated SQL script on the staging database.
 
@@ -345,16 +337,10 @@ There is a new setting called "Manual Upgrade: Allow version mismatch while in M
 To support the manual rolling upgrade, there is a new audit type—ManualUpgrade. Its audits are stored in the tbAudit table and record the following actions:
 
 - CANCEL
-
 - COMPLETED
-
 - GENERATE DB SCRIPT
-
-- GENERATE UPGRADE ZIP
-
+- COMPLETED
 - STAGING TEST
-
-- STARTED
-
+- COMPLETED
 - VERIFY DELTAS
 

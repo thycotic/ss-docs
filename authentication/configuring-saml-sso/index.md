@@ -28,7 +28,7 @@ Secret Server Professional Edition or higher, upgraded to version 10.5 or later.
 
 ### .NET Framework 4.6.2+
 
-To use SAML 2.0, you must install .NET Framework 4.6.2 or higher on your Web server. This allows SS to use Microsoft’s “next generation” CryptoNG API for signing SAML requests, instead of being limited to the much older CryptoAPI. This is often necessary to use modern SSL certificates and is strongly recommended as a security best practice.
+To use SAML 2.0, you must install .NET Framework 4.6.2 or higher on your Web server. This allows SS to use Microsoft's "next generation" CryptoNG API for signing SAML requests, instead of being limited to the much older CryptoAPI. This is often necessary to use modern SSL certificates and is strongly recommended as a security best practice.
 
 To download and install the latest version of .NET Framework: See [Microsoft .NET Framework 4.8 offline Installer for Windows](https://support.microsoft.com/en-us/help/4503548/microsoft-net-framework-4-8-offline-installer-for-windows) for the latest version as of when this topic was written. If you have already installed SS on the same Web server, you have already done this.
 
@@ -36,7 +36,7 @@ To download and install the latest version of .NET Framework: See [Microsoft .NE
 
 ### Administer Configuration SAML Role Permission
 
-The “Administer Configuration SAML” role permission is required to use SAML to access SS. To grant a user this permission from an administrator account:
+The "Administer Configuration SAML" role permission is required to use SAML to access SS. To grant a user this permission from an administrator account:
 
 1. Go to **Admin > Roles**. The Roles page appears.
 
@@ -123,11 +123,8 @@ IDP setup varies by provider. Click one of the following links for instructions 
 > **Note:** You must be logged in to access these links.
 
 - [How To Set Up Okta For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OKTA-for-SAML) (KBA)
-
 - [How To Set Up OneLogin For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OneLogin-for-SAML) (KBA)
-
 - [How To Set Up Azure AD For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-Azure-AD-for-SAML) (KBA)
-
 - [How To Set Up ADFS For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-ADFS-for-SAML) (KBA)
 
 > **Note:** The username returned from the IDP to SS within the SAML Response/Assertion's subject statement must match the desired format. The format of the username passed depends upon how the user was created within SS.
@@ -136,9 +133,9 @@ IDP setup varies by provider. Click one of the following links for instructions 
 
 ## Lockout Workaround
 
-Locked Out? Here’s how you get around SSO. If during the configuration process for SAML you lock yourself (as an administrator or a user) out of SS, you can log on SS without using the SSO workflow by using this URL string:
+Locked Out? Here's how you get around SSO. If during the configuration process for SAML you lock yourself (as an administrator or a user) out of SS, you can log on SS without using the SSO workflow by using this URL string:
 
 `[YourSecretServerInstanceName]/login.aspx?preventautologin=true`
 
-The role permission needed for this is “Bypass SAML Login,” which admins have by default.
+The role permission needed for this is "Bypass SAML Login," which admins have by default.
 

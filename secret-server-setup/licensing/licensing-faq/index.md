@@ -15,9 +15,9 @@ Activation of license keys is standard practice in the software industry. We try
 
 Existing customers have 30 days to activate their licenses after upgrading. New licenses have to be activated immediately on adding them to Secret Server. Evaluation licenses do not require activation.
 
-**What will happen if we don’t activate our licenses?**
+**What will happen if we don't activate our licenses?**
 
-Secret Server will go into Limited Mode if you don’t activate your licenses. Limited Mode allows you to view passwords but many other features are disabled such as creating Secrets, editing Secrets, changing permissions and using web services. Simply activate your licenses to get out of Limited Mode.
+Secret Server will go into Limited Mode if you don't activate your licenses. Limited Mode allows you to view passwords but many other features are disabled such as creating Secrets, editing Secrets, changing permissions and using web services. Simply activate your licenses to get out of Limited Mode.
 
 **We have several license keys. Do we need to activate each license key individually?**
 
@@ -34,23 +34,16 @@ License Activation is required for each web server that will be running Secret S
 The following information is sent to `thycotic.com` when you activate:
 
 - Name (user entered)
-
 - Phone Number (user entered)
-
 - Email (user entered)
-
-- All Licenses (license name, license key)
-
+- Phone Number (user entered)
 - Hardware Hash of each web server
 
 This information is one way hashed before it is sent so it does not reveal any identifiable hardware information.
 
 - Secret Server version
-
 - An encrypted value to identify the instance
-
 - This does not include any secret data or the `encryption.config` file.
-
 - The data is gathered for the purpose of contact if there is a licensing issue and Thycotic will not sell or distribute the information provided during activation.  The only information available to Thycotic staff is the contact information solely for the purposes of technical support and customer service.
 
 **Our Secret Server does not have outbound access to the thycotic.com Web site. Can activation be done while offline?**

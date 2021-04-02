@@ -15,9 +15,7 @@ The integration with BMC Remedy leverages the out-of-the-box,  SOAP-based Web se
 ## Requirements
 
 - BMC Remedy SOAP Web Services enabled
-
 - A username and password that has access to execute the Web services. This can be set up in the developer studio by accessing the application in the navigator and viewing Permissions for the `CHG_ChangeInterface_WS` or `HPD_IncidentInterface_WS`. This user should also have access to query requests and add work items to requests for the appropriate module.
-
 - SS environment needs to be able to connect to the BMC Remedy Web services via port 80 or 443\. SSL is highly recommended because the SOAP messages contain a username and password.
 
 ## Configurable Settings
@@ -96,4 +94,4 @@ When Secret Server calls the BMC Remedy SOAP-based web services, there are times
 
 1. Click the **Apply** button.
 
-1. Once enabled, you can click **View** from this window to see the log or navigate to the mid-tier server’s file system at the location specified. Details of the SOAP web service exception are written to the log file including a stack trace.
+1. Once enabled, you can click **View** from this window to see the log or navigate to the mid-tier server's file system at the location specified. Details of the SOAP web service exception are written to the log file including a stack trace.

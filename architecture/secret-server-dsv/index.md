@@ -13,11 +13,8 @@ This reference architecture is our best practices for using Thycotic Secret Serv
 We discuss the following scenarios:
 
 - SS on-premises with a single DSV instance (A-1)
-
 - SSC with a single DSV instance (A-2)
-
 - SS on-premises with a single DSV instance in a separate region (B-1)
-
 - SS on-premises with multiple DSV instances in the same or a separate region (C-1)
 
 ## Secret Server On-Premises with a Single DSV Instance
@@ -25,20 +22,15 @@ We discuss the following scenarios:
 ### Overview
 
 - Customer is using an on-premise installation of SS installed in physical or private cloud environment and is leveraging a free instance of DSV (Limited to 250 secrets, 2,500 API calls per month).
-
 - When SS is down, user-to-jump-host connectivity becomes active and uses a break-the-glass account to connect to the jump host. The jump host then has the DSV executable available and can retrieve credentials when SS is down.
-
 - DSV SLA is 99.999%.
 
 ### Requirements
 
 - SS Premium/Professional/Platinum licensing and DSV Free Edition.
-
 - Each tenant in the SS instance has a settable interval  to check if secrets need to be pushed to DSV again. Once that interval hits (or they use an event pipeline to trigger it), SS checks all the secrets associated to that tenant. Any secret that has had a change since the last time that tenant had the secret pushed to it is pooled. SS authenticates and for each secret it POSTs or PUTs the secret (depending on creation or update).
-
 - The number of requests equals the number of updated tenants (authenticating for each tenant) plus the number of secrets that need updating updated per tenant (updating the secret in DSV).
-
-- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the “free” DSV licensing model.
+- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the "free" DSV licensing model.
 
 
 ### Diagram
@@ -54,22 +46,16 @@ We discuss the following scenarios:
 ### Overview
 
 - Customer using an on-premise installation of SS installed in physical or private cloud environment and is leveraging a free instance of DSV (Limited to 250 secrets, 2,500 API calls per month).
-
 - When SS is down, the DSV executable is available and can retrieve credentials when SS is down. This is more convenient but less secure than other options.
-
 - DSV SLA is 99.999%.
-
 - SSC SLA is 99.9%.
 
 ### Requirements
 
 - SS Premium/Professional/Platinum licensing and DSV Free Edition.
-
 - Each tenant in the SS instance has a settable interval  to check if secrets need to be pushed to DSV again. Once that interval hits (or they use an event pipeline to trigger it), SS checks all the secrets associated to that tenant. Any secret that has had a change since the last time that tenant had the secret pushed to it is pooled. SS authenticates and for each secret it POSTs or PUTs the secret (depending on creation or update).
-
 - The number of requests equals the number of updated tenants (authenticating for each tenant) plus the number of secrets that need updating updated per tenant (updating the secret in DSV).
-
-- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the “free” DSV licensing model.
+- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the "free" DSV licensing model.
 
 
 ### Diagram
@@ -85,22 +71,16 @@ We discuss the following scenarios:
 ### Overview
 
 - Customer is using an on-premise installation of SS installed in a physical or private cloud environment and is using a free instance of DSV (Limited to 250 secrets, 2,500 API calls per month).
-
 - When SS is down, user-to-jump-host connectivity becomes active and uses a break-the-glass account to connect to the jump host. The jump host then has the DSV executable available and can retrieve credentials when SS is down.
-
 - Multiple jump hosts are provisioned in case the primary site is down.
-
 - DSV SLA is 99.999%.
 
 ### Requirements
 
 - SS Premium/Professional/Platinum licensing and DSV Free Edition.
-
 - Each tenant in the SS instance has a settable interval  to check if secrets need to be pushed to DSV again. Once that interval hits (or they use an event pipeline to trigger it), SS checks all the secrets associated to that tenant. Any secret that has had a change since the last time that tenant had the secret pushed to it is pooled. SS authenticates and for each secret it POSTs or PUTs the secret (depending on creation or update).
-
 - The number of requests equals the number of updated tenants (authenticating for each tenant) plus the number of secrets that need updating updated per tenant (updating the secret in DSV).
-
-- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the “free” DSV licensing model.
+- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the "free" DSV licensing model.
 
 ### Diagram
 
@@ -115,25 +95,17 @@ We discuss the following scenarios:
 ### Overview
 
 - Customer is using an on-premise installation of SS installed in a physical or private cloud environment and is using a free instance of DSV (Limited to 250 secrets, 2,500 API calls per month).
-
 - When SS is down, user-to-jump-host connectivity becomes active and uses a break-the-glass account to connect to the jump host. The jump host then has the DSV executable available and can retrieve credentials when SS is down.
-
 - Multiple jump hosts are provisioned in case the primary site is down.
-
-- Users from different regions can access their own regional DSV instance.
-
+- When SS is down, user-to-jump-host connectivity becomes active and uses a break-the-glass account to connect to the jump host. The jump host then has the DSV executable available and can retrieve credentials when SS is down.
 - DSV SLA is 99.999%.
 
 ### Requirements
 
 - SS Premium/Professional/Platinum licensing and DSV Free Edition.
-
 - Each tenant in the SS instance has a settable interval  to check if secrets need to be pushed to DSV again. Once that interval hits (or they use an event pipeline to trigger it), SS checks all the secrets associated to that tenant. Any secret that has had a change since the last time that tenant had the secret pushed to it is pooled. SS authenticates and for each secret it POSTs or PUTs the secret (depending on creation or update).
-
 - The number of requests equals the number of updated tenants (authenticating for each tenant) plus the number of secrets that need updating updated per tenant (updating the secret in DSV).
-
-- Compare the total 2,500 free API calls per month to your number of requests to determine if this fits the “free” DSV licensing model.
-
+- Each tenant in the SS instance has a settable interval  to check if secrets need to be pushed to DSV again. Once that interval hits (or they use an event pipeline to trigger it), SS checks all the secrets associated to that tenant. Any secret that has had a change since the last time that tenant had the secret pushed to it is pooled. SS authenticates and for each secret it POSTs or PUTs the secret (depending on creation or update).
 - In this model, the DSV instance is provisioned in two regions. Some secrets synchronize to one region while other secrets synchronize to another. This may be ideal for large global deployments.
 
 

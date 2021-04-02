@@ -22,4 +22,4 @@ To view or copy the TOTP generated for an account:
 
 1. Click the **Close** button.
 
-> **Note:**  The “Generate One Time Password” link also appears on the preview pane when you click a secret on the All Secrets page.
+> **Note:**  The "Generate One Time Password" link also appears on the preview pane when you click a secret on the All Secrets page.

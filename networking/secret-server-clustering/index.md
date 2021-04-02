@@ -16,8 +16,7 @@ There are two major architectural changes in SS 10.7:
 
 > **Note:** The first change is obvious in the SS user interface, and the second is hidden but very important to those supporting SS.
 
-- **Primary Node:** We eliminated "primary nodes." Previously, some important background operations, such as password changing and heartbeat, would only run from the primary node. Now they run from all nodes. Given that, there is no longer a “Make Primary” button, and the ValidPrimaryNode setting no longer applies.
-
+- **Primary Node:** We eliminated "primary nodes." Previously, some important background operations, such as password changing and heartbeat, would only run from the primary node. Now they run from all nodes. Given that, there is no longer a "Make Primary" button, and the ValidPrimaryNode setting no longer applies.
 - **Background Operations:** There are no longer background threads for scheduled operations. Instead, operations are scheduled by Quartz.
 
 ### Clustering Overview
@@ -30,7 +29,7 @@ Each machine with SS installed on it, pointing to the same database, is a *node*
 
 #### Backbone Bus
 
-The backbone bus Internally handles all communication between the roles. In a clustered environment, the backbone bus should always be an installed RabbitMq messaging queue.  This allows every node in the cluster to help with the workload.  If the backbone bus is set to “internal,” then each node is using its own internal backbone bus.
+The backbone bus Internally handles all communication between the roles. In a clustered environment, the backbone bus should always be an installed RabbitMq messaging queue.  This allows every node in the cluster to help with the workload.  If the backbone bus is set to "internal," then each node is using its own internal backbone bus.
 
 #### Engine Response Bus
 
@@ -40,7 +39,7 @@ The engine response bus facilitates communication from SS to distributed engines
 
 Each node can optionally run one or more worker roles: background Worker, engine worker, and session recording worker.  Though they may run on the same machine, the roles do not directly communicate with each other.
 
-Each node that is set to run the background worker role automatically runs the scheduler role as well.  The scheduler role is responsible for running the vast majority of SS background operations.  It uses Quartz to run “trigger jobs” that send a message on the backbone bus for each scheduled operation. One or more background worker roles then processes those messages.
+Each node that is set to run the background worker role automatically runs the scheduler role as well.  The scheduler role is responsible for running the vast majority of SS background operations.  It uses Quartz to run "trigger jobs" that send a message on the backbone bus for each scheduled operation. One or more background worker roles then processes those messages.
 
 > **Note:** See the article [Troubleshooting Quartz Trigger Jobs](https://thycotic.force.com/support/s/article/SS-TSG-EXT-Quartz-Trigger-Jobs) for more information about Quartz.
 
@@ -73,86 +72,48 @@ The work an individual node handles depends entirely on which boxes are checked 
 ![1565717798898](images/1565717798898.png)
 
 - **In Cluster** is a toggle that turns a server node on or off. If enabled this node can process Web requests, and (if configured) will run the background, engine, and session recording roles. If disabled, the node is just a backup—it cannot run any roles, and trying to access the website on the node will redirect to the server nodes page.
-
 - **Background Worker** is a toggle for all background operations, such as password changing, heartbeat, and discovery. When it is set to false, only the bulk operations, password generation, email, and secret import operations run on the node. See the list of background operations below.
-
 - The **Background Worker**, **Engine Worker**, and **Session Recording Worker** check boxes enable the corresponding roles for that node.
-
-- **Engine Worker** enables or disables the engine worker role, which processes responses from distributed engines.
-
+- **Background Worker** is a toggle for all background operations, such as password changing, heartbeat, and discovery. When it is set to false, only the bulk operations, password generation, email, and secret import operations run on the node. See the list of background operations below.
 - **Session Recording Worker** enables or disables the session recording role, which encodes session videos.
-
 - **Maintenance Mode** enables or disables a read-only mode where the node cannot change secrets or related data.
 
 ####  Scheduled Background Operations
 
  The current scheduled background operations operations in SS are:
 - ActiveDirectorySynchronizationMonitor
-
 - BackgroundWorkerTaskTriggerJob
-
 - BackupMonitor
-
-- Bulk Operations When triggered by user
-
+- BackgroundWorkerTaskTriggerJob
 - CheckOutMonitor
-
-- ComputerScanMonitor
-
+- BackgroundWorkerTaskTriggerJob
 - ConnectWiseMonitor
-
-- DatabaseCleanupTriggerJob
-
+- BackgroundWorkerTaskTriggerJob
 - DiscoveryMonitor
-
-- EventQueueMonitor
-
+- BackgroundWorkerTaskTriggerJob
 - ExpiredSecretPasswordChangeTriggerJob
-
-- ExpiringLicenseTaskTriggerJob
-
+- BackgroundWorkerTaskTriggerJob
 - ExpiringSecretTaskTriggerJob
-
-- HeartbeatMonitor
-
+- BackgroundWorkerTaskTriggerJob
 - Local Heartbeat Trigger Job
-
-- Local Password Change Trigger Job
-
+- BackgroundWorkerTaskTriggerJob
 - NodeClusteringMonitor
-
-- NodeTaskTriggerJob
-
+- BackgroundWorkerTaskTriggerJob
 - PasswordRequirementTriggerJob
-
-- PbaDirectiveTriggerJob
-
+- BackgroundWorkerTaskTriggerJob
 - PbaMetadataUploadTriggerJob
-
-- PrimaryNodeTaskMonitor
-
+- BackgroundWorkerTaskTriggerJob
 - Process Field Encryption Changes Task
-
-- ProcessDashboardJsonValidationTask
-
+- BackgroundWorkerTaskTriggerJob
 - ProcessSecretPolicyChangesMessage
-
-- ScheduledReportMonitor
-
+- BackgroundWorkerTaskTriggerJob
 - SecretComputerMatcherMonitor
-
-- SecretItemHashMonitor
-
+- BackgroundWorkerTaskTriggerJob
 - SqlReplicationConflictMonitor
-
-- TelemetryTriggerJob
-
+- BackgroundWorkerTaskTriggerJob
 - ThycoticOneSyncUserTriggerJob
-
-- TruncateDatabaseCacheTriggerJob
-
+- BackgroundWorkerTaskTriggerJob
 - TruncateEngineLogTriggerJob
-
 - VideoConversionTriggerJob
 
 To see the current state of these jobs, such as the last time they ran and how long until they run again, go to **Admin \> Diagnostics**.
@@ -194,8 +155,7 @@ To see the current state of these jobs, such as the last time they ran and how l
 1. Configure the worker roles for the cluster:
 
     - Each server node can optionally run the background worker, engine worker, and session recording worker roles.
-
-    - At least one instance of **each** type of those roles must be active in the cluster for the clustered SS application to function.
+   - At least one instance of **each** type of those roles must be active in the cluster for the clustered SS application to function.
     - You may run more than one instance of each role as desired to improve the performance of the clustered SS application.
 > **Note:** For more information on what the various roles do, please see the [Worker Roles](#worker-roles) section.
 
@@ -222,8 +182,7 @@ SS has a built-in Web installer. That installer is a series of pages inside SS f
 1. Before you start:
 
     - Ensure that you have account credentials information and access for the server hosting SS and the SQL Server instance hosting your SS database.
-
-    - Have a recent backup of the application files and database available.
+   - Have a recent backup of the application files and database available.
 
     - Stop the application pools on all of the servers except the one that you have chosen to upgrade.
 
@@ -341,7 +300,6 @@ For SS 10.5.000000 and later:
 The following errors may arise when setting up or operating SS clustering:
 
 - Encryption configurations do not match: See the [Encryption Key Does Not Match Error](https://thycotic.force.com/support/s/article/Encryption-key-doesnt-match-error) knowledge base article.
-
 - Server dates do not match: If the Web server dates do not match, the audit records could be bad. The fix is to set the servers to the same time.
 
   > **Note:** This only applies to SS before version 8.9.300000.

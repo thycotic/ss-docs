@@ -10,7 +10,7 @@ This document covers the most common settings to tune to make discovery more eff
 
 ## Global Settings
 
-The settings below might make discovery more efficient, regardless an organization’s size.
+The settings below might make discovery more efficient, regardless an organization's size.
 
 ### Enabling Port Scanning
 
@@ -25,17 +25,13 @@ The settings below might make discovery more efficient, regardless an organizati
 Port scanning for discovery has three configurations or controls:
 
 - Port Scan Enable: Whether to port scan at all. Defaults to unchecked.
-
 - Port Scan Timeout: How long (in seconds) the port scan will try before giving up. Defaults to 30.
-
 - Port Scan List: A comma-delimited list of ports to scan. These depend on the configuration of the systems you will scan. Defaults to NetBIOS (135) and Active Directory services (445).
 
 Examples of scanners that have a port-scanning timeout option for Active Directory include:
 
 - Windows local accounts
-
 - Active Directory user accounts
-
 - All dependency scanners
 
 #### Accessing Port Scanning
@@ -69,7 +65,6 @@ Thus, 8.75 hours (525 ÷ 60) of timeout are possible and enabling discovery port
 Currently, you cannot set when discovery runs via a control or setting. You can, however, approximately set when it runs by disabling and enabling it at the desired time. It runs daily around the same time as when it was first enabled and then again according to whatever the [discovery scan offset hours](#discovery-scan-offset-hours) interval was set to. If you are running discovery once per day, we suggest:
 
 - Choosing a start time outside your normal business hours, such as midnight.
-
 - First running several ad-hoc discoveries when your network traffic normally drops at the end of the day. Record how long each discovery process takes. Remember, this can vary greatly if a lot of machines are down, which is why we suggest conducting more than one discovery.
 
    > **Note:** It might be fun to run one test with discovery port scanning disabled, just to see the difference.
@@ -87,14 +82,11 @@ For example, if your tested average discovery time was four hours and your netwo
 The settings are:
 
 - Synchronization Interval for Discovery: How often you want the regular discover scan to occur.
-
-- Ignore Cluster Node Objects: A check box that tells SS to not run discovery on machines identified as “msclustervirtualserver.” Do not change this setting.
-
+- Ignore Cluster Node Objects: A check box that tells SS to not run discovery on machines identified as "msclustervirtualserver." Do not change this setting.
 - Engine AD Discovery Batch Size: A legacy setting that should always be set to 1.
-
 - See [Discovery Scan Offset Hours](#discovery-scan-offset-hours) for a discussion of the last setting.
 
-> **Note:** There is another “Discovery Batch Size” setting on the Advance Settings page, which is usually only available to Thycotic Customer Support. This setting, too, is legacy, and should not be set.
+> **Note:** There is another "Discovery Batch Size" setting on the Advance Settings page, which is usually only available to Thycotic Customer Support. This setting, too, is legacy, and should not be set.
 
 ## Environment-Specific Considerations
 
@@ -106,7 +98,7 @@ This section discusses a setting that allows you to quickly discover changes wit
 
 ![](images/image-20191121145115081.png)
 
-The “discovery scan offset hours” (DSOH) setting is for customers that need to detect new (to the network) systems quickly without excessive network traffic during business hours. For example, you might need this feature if you have lots of server testing (systems are up and down) or laptops (systems are connected or not). The trick is doing this while minimizing the networking load.
+The "discovery scan offset hours" (DSOH) setting is for customers that need to detect new (to the network) systems quickly without excessive network traffic during business hours. For example, you might need this feature if you have lots of server testing (systems are up and down) or laptops (systems are connected or not). The trick is doing this while minimizing the networking load.
 
 We accomplish this with discovery scan offsets. With these, you have multiple synchronization scans per day, rather than just one, where SS attempts to scan each and every system, but first SS looks up each system to see if that system is flagged for scanning. The process goes like this:
 
@@ -118,17 +110,17 @@ We accomplish this with discovery scan offsets. With these, you have multiple sy
 
 1. The next time SS does a discovery scan, it sees the flag is present and scans the system.
 
-The period the “scan me” flag is down (the period the timer is running) is defined by the DSOH setting. Thus, DSOH essentially tells SS how long before scanning that discovered system again.
+The period the "scan me" flag is down (the period the timer is running) is defined by the DSOH setting. Thus, DSOH essentially tells SS how long before scanning that discovered system again.
 
 For example, if you have a discovery scan offset of 12 hours and a discovery interval of four hours:
 
-1. Start: The first time discovery runs, it scans every object because each one’s timer is zeroed out, which makes it flagged for scanning. After scanning, each object’s timer starts to count down, which makes it unflagged for scanning.
+1. Start: The first time discovery runs, it scans every object because each one's timer is zeroed out, which makes it flagged for scanning. After scanning, each object's timer starts to count down, which makes it unflagged for scanning.
 
 1. At four-hours: The next time discovery runs , it ignores the objects that were scanned the first time (because their timer was set to 12 hours), but it does process any newly discovered objects.
 
 1. At eight-hours: In four more hours the same happens—only new objects are processed.
 
-1. At 12 Hours:  In four more hours, the scan runs again. This time, the 12-hour scan offset has expired, and all the timers of the original objects are zeroed out. The process begins anew—discovery scans every object because its timer is zeroed out, which makes it flagged for scanning. After scanning, each object’s timer starts to count down, which makes it unflagged for scanning.
+1. At 12 Hours:  In four more hours, the scan runs again. This time, the 12-hour scan offset has expired, and all the timers of the original objects are zeroed out. The process begins anew—discovery scans every object because its timer is zeroed out, which makes it flagged for scanning. After scanning, each object's timer starts to count down, which makes it unflagged for scanning.
 
 ###  Advanced Settings
 
@@ -146,7 +138,7 @@ By default, the secret computer matcher runs once every five hours (this is non-
 
 #### Limit the Network Traffic Caused by Nested Organizational Units
 
-**Figure:** Discovery: Bypass “Scan Specific OUs”
+**Figure:** Discovery: Bypass "Scan Specific OUs"
 
 ![](images/image-20191121151527413.png)
 

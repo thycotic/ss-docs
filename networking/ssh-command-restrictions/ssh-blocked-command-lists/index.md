@@ -21,7 +21,6 @@ Upon launching a secret with an assigned SSH command blocklist, each command sen
 System requirements:
 
 - Secret Server 10.11 or later
-
 - Secret Server Platinum Edition license or Secret Server Professional and Unix SUPM license
 - SSH proxy must be enabled
 
@@ -41,8 +40,7 @@ This expression blocks the execution of any command with the `sudo` string in it
 And these are not: 
 
 - `cat sudoku`
-
-- `echo “sudo”`
+- `echo "sudo"`
 
 To create a list of blocked commands:
 
@@ -85,7 +83,7 @@ To create a list of blocked commands:
 
 To enable privilege management for an account:
 
-1. Navigate to a PuTTY secret’s **Settings** tab.
+1. Navigate to a PuTTY secret's **Settings** tab.
 
 1. Go to the **SSH Launcher** section.
 
