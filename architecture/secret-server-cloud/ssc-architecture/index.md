@@ -1,35 +1,20 @@
-[title]: # (SSC Customer Example Architecture)
-[tags]: # (Secret Server Cloud, Architecture,example)
+[title]: # (Secret Server Cloud Architecture)
+[tags]: # (Secret Server Cloud, Architecture)
 [priority]: # (1000)
 
-# Secret Server Cloud Customer Example Architecture
+# Secret Server Cloud Architecture
 
 > **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services support architects.
 
+> **Note:**  This, the standard SSC architecture, is "hybrid multi-tenant" because only the front-end is multi-tenant—it is shared with other customers. The databases, service busses, and storage accounts are single-tenant (dedicated to you).
+
 ## Diagram
 
-**Figure:** SSC Customer Example Architecture
+**Figure:** Secret Server Cloud Architecture
 
-![image-20210405162451314](images/image-20210405162451314.png)
-
->**Note:** This design is fully supported by Thycotic.
+![image-20210405132742976](images/image-20210405132742976.png)
 
 > **Note:** Arrows indicate the direction of initial connection.
-
-> **Note:** Reference architecture requirements:
->
-> - Ports for accessing, managing and discovering end-points must have the required ports opened between the site DEs the appropriate devices. Please see [Ports Used by Secret Server](../../networking/secret-server-ports/index.md).
-> - All DE servers must run on Windows Server 2012 to 2019.
-> - Distributed Engines servers must have 4 cores and 4 GB RAM. We encourage increasing CPUs before RAM to improve DE efficiency.
-
-> **Note:** Your first distributed engines will likely be located in the primary datacenter and will
-> serve as the management zone for all other locations and domains. This includes:
->
-> - AD synchronization
-> - Account discovery
-> - Password changing and heartbeats
-> - SSH and RDP proxy
-> - Session recording
 
 ## Details
 
@@ -52,33 +37,33 @@ All regions:
 
 ### 3: RADIUS
 
-- Inbound allowlisting is necessary if RADIUS authentication is configured. IP addresses:
+Inbound allowlisting is necessary if RADIUS authentication is configured. IP addresses:
 
-  - secretservercloud.com: 
-    - 52.160.67.38
-    - 52.160.67.39
-    - 52.224.253.4
-    - 52.224.253.7
-  - secretservercloud.com.au: 
-    - 20.37.251.37
-    - 20.37.251.120
-    - 20.53.142.34
-    - 20.53.142.37
-  - secretservercloud.eu: 
-    - 20.50.180.187
-    - 20.50.180.242
-    - 20.79.65.3
-    - 20.79.64.213
-  - secretservercloud.com.sg: 
-    - 20.195.97.220
-    - 20.195.98.154
-    - 65.52.160.251
-    - 65.52.165.108
-  - secretservercloud.ca:
-    - 52.228.113.119
-    - 52.228.117.246
-    - 52.229.119.89
-    - 52.229.119.193
+- secretservercloud.com: 
+  - 52.160.67.38
+  - 52.160.67.39
+  - 52.224.253.4
+  - 52.224.253.7
+- secretservercloud.com.au: 
+  - 20.37.251.37
+  - 20.37.251.120
+  - 20.53.142.34
+  - 20.53.142.37
+- secretservercloud.eu: 
+  - 20.50.180.187
+  - 20.50.180.242
+  - 20.79.65.3
+  - 20.79.64.213
+- secretservercloud.com.sg: 
+  - 20.195.97.220
+  - 20.195.98.154
+  - 65.52.160.251
+  - 65.52.165.108
+- secretservercloud.ca:
+  - 52.228.113.119
+  - 52.228.117.246
+  - 52.229.119.89
+  - 52.229.119.193
 
 ### 4: Distributed Engine (DE)
 
@@ -94,4 +79,5 @@ Allowlisting is not necessary unless outbound firewall rules are in place. If it
 - CDN for DE updates
 
 >**Note:** Obtaining and reviewing certificates is not within the scope of this document, but you can find resources online, such as [OCSP & CRL and Revoked SSL Certificates](https://www.digicert.com/kb/util/utility-test-ocsp-and-crl-access-from-a-server.htm), which is not owned or maintained by Thycotic.
+
 
