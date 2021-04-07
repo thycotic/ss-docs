@@ -104,13 +104,13 @@
 
 #### Virtual IP or Computer
 
-- ss.company.com:443, rmq.company.com:5671/5672 (2 virtual IPs, global load balancer) 
-- ss-a.company.com:443, ss-b.company.com:443 (2 virtual IPs, local load balancer) 
-- rmq-a.company.com:5671/5672 (load balancer), rmq-b.company.com:5671/5672 (2 virtual IPs, local load balancer)
+- ss.company.com: 443, rmq.company.com: 5671 or 5672 (2 virtual IPs, global load balancer) 
+- ss-a.company.com: 443, ss-b.company.com: 443 (2 virtual IPs, local load balancer) 
+- rmq-a.company.com: 5671 or 5672 (load balancer), rmq-b.company.com: 5671 or 5672 (2 virtual IPs, local load balancer)
 -  ss-aoag.company.com:1433 (created as part of SQL AlwaysOn configuration):
   - ss-aoag.company.com computer object or virtual IP. 
   - Two virtual IP addresses may be required as part of this configuration .
-- Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
+- Windows failover cluster object (created as part of Windows failover clustering configuration):
   - Computer object or virtual IP. 
   - Two additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster representing both networks at each respective site.
 
@@ -131,9 +131,8 @@
 - DR site acts at temporary site only with no intention for long-term usage or becoming primary site.
 - Multiple site connector design intended for RabbitMQ. All distributed engines communicate to one local load balancer/RMQ cluster for their response bus. There are two site connectors, one for each location.
 - Global load balancers are unavailable, thus requiring a manual failover process/DNS change for Web traffic to the DR site. Additional application-specific changes will be needed for full functionality to resume in the DR site:
-
   - Change the internal site connector to the DR site connector.
-   - Change the response bus to the DR site connector.
+  - Change the response bus to the DR site connector.
 - Design assumes the Web server in the DR location is joined to the cluster and is online so that work is also being generated from Web servers in the DR location. If server is online and has roles configured, cross-data-center RabbitMQ communication may occur. Work may be generated at either location's Web servers and is placed on either site connector, based on how secrets are configured.
 
 ### Requirements
@@ -148,9 +147,9 @@
 
 #### Virtual IP or Computer
 
-- ss.company.com:443 (load balancer).
-- rmq.company.com:5671/5672 (load balancer).
-- ss-aoag.company.com:1433 (created as part of SQL AlwaysOn configuration). ss-aoag.company.com computer object/virtual IP.
+- ss.company.com: 443 (load balancer).
+- rmq.company.com: 5671 or 5672 (load balancer).
+- ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). ss-aoag.company.com computer object/virtual IP.
 - Windows failover cluster object (created as part of Windows failover clustering configuration):
   - Computer object/virtual IP.
   - One additional virtual IP addresses may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
@@ -188,10 +187,10 @@
 
 #### Virtual IP or Computer
 
-- ss.company.com:443, rmq.company.com: 5671/5672 (two virtual IPs, global load balancer).
-- ss-a.company.com:443, ss-b.company.com:443 (two virtual IPs, local load balancer). 
-- rmq-a.company.com:5671/5672 (Load Balancer), rmq-b.company.com:5671/5672 (two virtual IPs, local load balancer).
-- ss-aoag.company.com:1433 (created as part of SQL AlwaysOn configuration):
+- ss.company.com: 443, rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer).
+- ss-a.company.com: 443, ss-b.company.com: 443 (two virtual IPs, local load balancer). 
+- rmq-a.company.com: 5671 or 5672 (Load Balancer), rmq-b.company.com: 5671 or 5672 (two virtual IPs, local load balancer).
+- ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration):
   - ss-aoag.company.com computer object/virtual IP.
   - Two virtual IP addresses may be required as part of this configuration.
 - Windows failover cluster object (created as part of Windows failover clustering configuration):
@@ -217,9 +216,8 @@
 - Can accommodate manual failover only with asynchronous replication (30 ms or more latency between SQL DB nodes).
 - Singular site connector using only the local site. The local site comes with two distributed engines now. The distributed engine layer can be online/active but cross-data-center communication may occur (as depicted). It can alternatively be marked as yellow as other layers.
 - Global load balancers are unavailable, thus requiring a manual failover process/DNS change for Web traffic to the DR site. Additional application-specific changes will be needed for full functionality to resume in DR site:
-
   - Change the internal site connector to the DR site connector.
-   - Change the response bus to the DR site connector.
+  - Change the response bus to the DR site connector.
 - Design assumes the Web server in DR location is joined to the cluster but is shut down (marked in yellow) so that no work is being generated from the Web servers in the DR location. If server is online and has roles configured, cross-data-center RabbitMQ communication may occur. The RabbitMQ layer is also marked as yellow, indicative of the server being built/online but the RabbitMQ service is shut down.
 - In this design, a manual failover may proceed in the following order:
   - Bring database node only and force it to become the new primary.
@@ -242,7 +240,7 @@
 #### Virtual IP or Computer
 
 - ss.company.com: 443 (load balancer).
-- rmq.company.com: 5671/5672 (load balancer).
+- rmq.company.com: 5671 or 5672 (load balancer).
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). ss-aoag.company.com computer object/virtual IP.
 - Windows failover cluster object (created as part of Windows failover clustering configuration):
 
@@ -291,9 +289,9 @@
 
 #### Virtual IP or Computer
 
-- ss.company.com: 443, rmq.company.com: 5671/5672 (two virtual IPs, global load balancer).
+- ss.company.com: 443, rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer).
 - ss-a.company.com: 443, ss-b.company.com: 443 (two virtual IPs, local load balancer). 
-- rmq-a.company.com: 5671/5672 (Load Balancer), rmq-b.company.com: 5671/5672 (two virtual IPs, local load balancer).
+- rmq-a.company.com: 5671 or 5672 (Load Balancer), rmq-b.company.com: 5671 or 5672 (two virtual IPs, local load balancer).
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration):
   - ss-aoag.company.com computer object/virtual IP.
   - Two virtual IP addresses may be required as part of this configuration.
@@ -336,9 +334,9 @@
 
 #### Virtual IP or Computer
 
-- ss.company.com: 443, rmq.company.com: 5671/5672 (two virtual IPs, global load balancer).
+- ss.company.com: 443, rmq.company.com: 5671 or 5672 (two virtual IPs, global load balancer).
 - ss-a.company.com: 443, ss-b.company.com: 443 (two virtual IPs, local load balancer). 
-- rmq-a.company.com: 5671/5672 (Load Balancer), rmq-b.company.com: 5671/5672 (two virtual IPs, local load balancer).
+- rmq-a.company.com: 5671 or 5672 (Load Balancer), rmq-b.company.com: 5671 or 5672 (two virtual IPs, local load balancer).
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration):
   - ss-aoag.company.com computer object/virtual IP.
   - Two virtual IP addresses may be required as part of this configuration.
