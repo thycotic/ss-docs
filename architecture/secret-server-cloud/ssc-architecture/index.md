@@ -12,7 +12,7 @@
 
 **Figure:** Secret Server Cloud Architecture
 
-![image-20210211161118505](images/image-20210211161118505.png)
+![image-20210405132742976](images/image-20210405132742976.png)
 
 > **Note:** Arrows indicate the direction of initial connection.
 
@@ -24,31 +24,52 @@ IP Address allowlisting is not necessary unless outbound firewall rules are in p
 
 ### 2: Web Application Firewall (WAF)
 
-IP Address allowlisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
+IP Address allowlisting is not necessary unless outbound firewall rules are in place. Generally, the public IP the hostname resolves to is based on geographical location of the request source. All IPs below should be allowlisted to ensure uninterrupted connectivity.
 
-IP addresses for all regions: 45.60.38.37, 45.60.40.37, 45.60.32.37, 45.60.34.37, 45.60.36.37, and 45.60.104.37.
+All regions: 
 
-### 3: Content Delivery Network (CDN)
+- 45.60.32.37
+- 45.60.34.37
+- 45.60.36.37
+- 45.60.38.37
+- 45.60.40.37
+- 45.60.104.37
 
-IP Address allowlisting is not necessary unless outbound firewall rules are in place. Public IP is based on geographical location.
-
-Edge nodes for all regions: [Microsoft Edge Node List](https://docs.microsoft.com/en-us/rest/api/cdn/edgenodes/list). The edge node type or name is "Standard_Verizon."
-
-### 4: RADIUS
+### 3: RADIUS
 
 Inbound allowlisting is necessary if RADIUS authentication is configured. IP addresses:
 
-- secretservercloud.com: 40.76.197.147, 40.121.181.52
-- secretservercloud.com.au: 20.36.47.199, 20.36.45.106
-- secretservercloud.eu: 51.116.228.208, 51.116.228.152
-- secretservercloud.com.sg: 137.116.141.200, 137.116.143.17
-- secretservercloud.ca 13.88.237.67, 52.228.62.157
+- secretservercloud.com: 
+  - 52.160.67.38
+  - 52.160.67.39
+  - 52.224.253.4
+  - 52.224.253.7
+- secretservercloud.com.au: 
+  - 20.37.251.37
+  - 20.37.251.120
+  - 20.53.142.34
+  - 20.53.142.37
+- secretservercloud.eu: 
+  - 20.50.180.187
+  - 20.50.180.242
+  - 20.79.65.3
+  - 20.79.64.213
+- secretservercloud.com.sg: 
+  - 20.195.97.220
+  - 20.195.98.154
+  - 65.52.160.251
+  - 65.52.165.108
+- secretservercloud.ca:
+  - 52.228.113.119
+  - 52.228.117.246
+  - 52.229.119.89
+  - 52.229.119.193
 
-### 5: Distributed Engine (DE)
+### 4: Distributed Engine (DE)
 
-If external clients must be able to connect to internal SSH or RDP endpoints, an SSH proxy can be configured on the DE. Additionally, TCP port 22 needs to be open for inbound connections on the DE server, as well as appropriate configuration to allow inbound connections from the public Internet.
+If external clients must be able to connect to internal SSH or RDP endpoints, an SSH proxy can be configured on the DE. Additionally, TCP port 22 needs to be open for inbound connections on the DE server, as well as have an appropriate configuration to allow inbound connections from the public Internet.
 
-### 6: Certificate CRLs
+### 5: Certificate CRLs
 
 Allowlisting is not necessary unless outbound firewall rules are in place. If it is necessary, access to CRLs or OSCP endpoints may be required. CRL and OSCP endpoints may differ from customer to customer. To determine the endpoints, review the certificates presented by the:
 
@@ -58,3 +79,5 @@ Allowlisting is not necessary unless outbound firewall rules are in place. If it
 - CDN for DE updates
 
 >**Note:** Obtaining and reviewing certificates is not within the scope of this document, but you can find resources online, such as [OCSP & CRL and Revoked SSL Certificates](https://www.digicert.com/kb/util/utility-test-ocsp-and-crl-access-from-a-server.htm), which is not owned or maintained by Thycotic.
+
+
