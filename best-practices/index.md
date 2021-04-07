@@ -360,7 +360,6 @@ Business users are not permitted to manage privileged accounts, such as database
 Business users can:
 
 - Access secrets: They can create, update and delete their own secrets within SS. For example, A user signing up for an online service can use the password generator to create a strong password, store that password in SS, and use the Web Password Filler to log in later. 
-
 - Request and approve access to secrets:  Non-privileged secrets may need approval workflows. Business users can request access to these secrets and can act as approvers. For example, if access to an organization’s social media accounts requires authorization from a member of the marketing team, a business user can request access to the secret, and another business user can approve access.
 - Share secrets with other users: Business users can share non-privileged secrets with other users of SS, whether or not they are business users.
 - Access secrets using the mobile app:  Business users can use the Thycotic PAM application to access and manage their secrets.
@@ -751,7 +750,7 @@ Carefully consider your authentication strategy for the API when automating work
 
 ##### Software Development Kit
 
-The SS Software Development Kit (SDK) is a mechanism to authenticate machines to a SS instance, without having to pass implicit credentials into the system for each set of calls. To ensure proper RBAC, the SDK is associated to a specific API user in SS . On the local system, once the SDK is initialized, it leverages DPAPI to encrypt the config files, tying it to the user who initialized it. You can use multiple SDK instances on the same machine; however, each instance needs its own directory. 
+The SS Software Development Kit (SDK) is a mechanism to authenticate machines to a SS instance, without having to pass implicit credentials into the system for each set of calls. To ensure proper RBAC, the SDK is associated to a specific API user in SS. On the local system, once the SDK is initialized, it leverages DPAPI to encrypt the config files, tying it to the user who initialized it. You can use multiple SDK instances on the same machine; however, each instance needs its own directory.
 
 ##### Integrated Windows Authentication
 

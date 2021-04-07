@@ -39,7 +39,7 @@
 
 **Figure:** Minimal Single-Site Enterprise Deployment
 
-![image-20210406140513567](images/image-20210406140513567.png)
+![image-20210407130323981](images/image-20210407130323981.png)
 
 ## Average Single-Site Enterprise Deployment
 
@@ -75,7 +75,7 @@
 
 **Figure:** Average Single-Site Enterprise Deployment
 
-![image-20210406141259201](images/image-20210406141259201.png)
+![image-20210407130455682](images/image-20210407130455682.png)
 
 ## Minimal Multi-Site Enterprise Deployment
 
