@@ -30,9 +30,8 @@
 - ss.company.com: 5671 or 5672 (load balancer)
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP.
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
-
   - Computer object or virtual IP
-   - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
+  - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -67,9 +66,8 @@
 - ss.company.com: 5671 or 5672 (load balancer)
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). Computer object or virtual IP.
 - Windows Failover Cluster Object (created as part of Windows failover clustering configuration):
-
   - Computer object or virtual IP
-   - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
+  - One additional virtual IP address may be required as part of Windows failover cluster for single-site design for the network configuration of the failover cluster.
 
 ### Diagram
 
@@ -243,9 +241,8 @@
 - rmq.company.com: 5671 or 5672 (load balancer).
 - ss-aoag.company.com: 1433 (created as part of SQL AlwaysOn configuration). ss-aoag.company.com computer object/virtual IP.
 - Windows failover cluster object (created as part of Windows failover clustering configuration):
-
   - Computer object/virtual IP.
-   - One additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster.
+  - One additional virtual IP addresses may be required as part of Windows failover cluster for single site design for the network configuration of the failover cluster.
 
 ### Diagram
 
