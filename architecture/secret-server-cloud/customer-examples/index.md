@@ -1,14 +1,14 @@
-[title]: # (SSC Customer Example Architecture)
+[title]: # (SSC Customer Example Architectures)
 [tags]: # (Secret Server Cloud, Architecture,example)
 [priority]: # (1000)
 
-# Secret Server Cloud Customer Example Architecture
+# Secret Server Cloud Customer Example Architectures
 
 > **Note:** If you are a current customer with support hours for Thycotic Professional Services, you can discuss any of these diagrams in detail with one of our Professional Services support architects.
 
-## Diagram
+## Multi-Site with ASR Agents Example Architecture
 
-**Figure:** SSC Customer Example Architecture
+**Figure:** Multi-site with ASR Agents Example Architecture
 
 ![image-20210405162451314](images/image-20210405162451314.png)
 
@@ -31,7 +31,7 @@
 > - SSH and RDP proxy
 > - Session recording
 
-## Details
+## Details for All Architectures
 
 ### 1: Service Buses
 
@@ -94,4 +94,3 @@ Allowlisting is not necessary unless outbound firewall rules are in place. If it
 - CDN for DE updates
 
 >**Note:** Obtaining and reviewing certificates is not within the scope of this document, but you can find resources online, such as [OCSP & CRL and Revoked SSL Certificates](https://www.digicert.com/kb/util/utility-test-ocsp-and-crl-access-from-a-server.htm), which is not owned or maintained by Thycotic.
-
