@@ -442,7 +442,7 @@ If there are errors, a system log entry will also be saved with details:
 
 ## Events
 
-When SS settings are exported or imported, an SECRETSERVERSETTINGS event is  logged.
+When SS settings are exported or imported, an SECRETSERVERSETTINGS event is logged.
 
 ## Logs
 
@@ -462,11 +462,9 @@ When Secret Server settings are exported or imported or validation errors occur,
 ## Errors and Resolutions
 
 | **Sample Error**                                             | **Resolution**                                               |
-| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| :-- | :-- |
 | SAML=Access Denied                                           | Need Administer Configuration SAML permission to update SAML settings. |
 | SAML=Identity Provider Id was not found in the database. Check that it was not modified after export. (IdentityProviderId) | For SAML, the IdentityProviderId provided in the import file was not found in the database. If intending to add a new one, set this to 0. |
 | TicketSystem=Only one ticket system can be default. (IsDefault) | For TicketSystem, IsDefault is set to true when there is already one set to true in the database. If intending to set it to true, set the other one to false. |
 | Insufficient permissions to edit Radius settings. (Radius) Insufficient permissions to edit Duo settings. (Duo) | Need Administer Configuration Two Factor permission to update Radius or Duo settings. |
 | Insufficient permissions to edit Thycotic One or OpenId settings. (OpenIdConnect) | Need Administer OpenID Connect permission to update Open ID Connect settings. |
-
- 

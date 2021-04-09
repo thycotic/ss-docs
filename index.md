@@ -37,14 +37,14 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 - [Best Practices](./best-practices/index.md)
 - [Discovery Best Practices](./discovery/discovery-best-practices/index.md)
 - [High Availability and Disaster Recovery](https://updates.thycotic.net/secretserver/documents/SS_DRGuide.pdf) (PDF)
-- [Discovery Best Practices](./discovery/discovery-best-practices/index.md)
+- [Secret Server Government Edition—Common Criteria Hardening Guide](https://updates.thycotic.net/secretserver/documents/gov/SS_CommonCriteria_HardeningGuide_v10.pdf) (PDF)
 - [Security Hardening Guide](./security-hardening/security-hardening-guide/index.md)
 
 ### Security Whitepapers
 - [Distributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf) (PDF)
 - [Launcher Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_Launcher.pdf) (PDF)
 - [Meltdown and Spectre Security Information](https://updates.thycotic.net/secretserver/documents/SS_Sec_MeltdownAndSpectre.pdf) (PDF)
-- [Launcher Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_Launcher.pdf) (PDF)
+- [\*nix Management](https://updates.thycotic.net/secretserver/documents/SS_Sec_nixManagement.pdf) (PDF)
 - [Security Model](https://updates.thycotic.net/secretserver/documents/SS_Security_Model.pdf) (PDF)
 - [Web Services Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_WebServices.pdf) (PDF)
 
@@ -66,7 +66,7 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 - [Integration Guides](https://docs.thycotic.com/ssi)
 - [HSM](./security-hardening/hsm-integration/index.md)
 - [SecureLink](https://www.securelink.com/thycotic-integration/)
-- [HSM](./security-hardening/hsm-integration/index.md)
+- [SCIM Connector](https://docs.thycotic.com/scim/2.5.0/index.md)
 - [Syslog](./events-and-alerts/secure-syslog-cef/index.md)
 
 #### Legacy

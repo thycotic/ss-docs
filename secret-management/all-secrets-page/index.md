@@ -15,20 +15,20 @@ You can customize which columns are displayed by clicking the ![image-2020081411
 - Auto Change Enabled
 - Checked Out
 - Checkout Enabled
-- Checked Out
+- Created
 - Days until Expiration
-- Checked Out
+- Deleted
 - DoubleLock Enabled
-- Checked Out
+- **Folder**
 - **Heartbeat**
-- Checked Out
+- Hide Password
 - Inherits Permissions
-- Checked Out
+- **Last Accessed**
 - Machine
-- Checked Out
+- **Name**
 - Notes
-- Checked Out
+- **Out of Sync**
 - Requires Approval
-- Checked Out
+- Requires Comment
 - **Secret Template**
 - Username

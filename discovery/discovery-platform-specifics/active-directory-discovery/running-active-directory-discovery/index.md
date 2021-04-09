@@ -87,7 +87,7 @@ The table below describes the contents of each column:
 **Table:** Discovery Results
 
 | Column             | Description                                                  | Account Type  (Local,  Service) |
-| ------------------ | ------------------------------------------------------------ | ------------------------------- |
+| -- | -- | -- |
 | **Account**        | Username of discovered account.                              | Both                            |
 | **Computer**       | Computer  name of the machine scanned. This is obtained from AD during the  first part of the discovery process. | Both                            |
 | **Last Connected** | Last date a user logged into the machine.                    | Local                           |
@@ -103,7 +103,7 @@ Service account dependency types identified in the **Type** column:
 **Table:** Service Account Dependency Types
 
 | Type                 | Icon                                                         | Service Name              |
-| -------------------- | ------------------------------------------------------------ | ------------------------- |
+| -- | -- | -- |
 | **Application Pool** | ![image-20210201111500478](images/image-20210201111500478.png) | IIS application pool name |
 | **Scheduled Task**   | ![image-20210201111516978](images/image-20210201111516978.png) | Scheduled task name       |
 | **Windows Service**  | ![image-20210201111442318](images/image-20210201111442318.png) | Service name              |

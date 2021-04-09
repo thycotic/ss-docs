@@ -130,7 +130,7 @@ Using the default SS implementation, most conflicts are resolved by taking the c
 There are some exceptions to the "publisher always wins" rule:
 
 |Data&nbsp;Element&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Resolver&nbsp;or Tracking&nbsp;Level&nbsp;&nbsp;&nbsp;&nbsp;|Example|
-| ----------------------------- | --------------------- | ------------ |
+| -- | -- | -- |
 | Secret Fields            | Last Update Wins        | If two people change a password on a secret to a new password, then the last person to make the change will win. |
 | Secret Access Request Approval | Last Update Wins        | If two people are in a group that is requested to approve access, then the last person to approve or disapprove access would set that approval. |
 | File Attachment           | Last Update Wins        |                                          |
@@ -297,7 +297,7 @@ You only need to remove replication from the Publisher and all Subscribers. The 
 Once replication is setup and working certain considerations should be given to managing it along with conflicts that can occur. The recommended settings for the publication have been tested to limit conflicts, but they can still occur. Here are some scenarios you might encounter:
 
 | Scenario&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Solution                                    |
-| -------------------------------------------- | ------------------------------------------------------------ |
+| -- | -- |
 | Conflict automatically resolved | SQL Server was able to determine how to resolve the conflict. SS will log and audit this conflict. To see the specific details for the conflict, use the **SQL Server Conflict Viewer** in SQL Server Management Studio. |
 | Conflict unable to be automatically resolved | A user with SQL Server access needs to open the conflict in SQL Server Management Studio. Access these by right-clicking on the publication and choosing to view conflicts. |
 | Some data stops replicating | A table could become blocked if there are conflicts. Other data may continue to synchronize. If data in one region or database node is different than another after a synchronization, there could be conflicts that need to be reviewed and resolved. |

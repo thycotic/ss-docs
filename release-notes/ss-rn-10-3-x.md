@@ -18,11 +18,11 @@
 - Fixed issue where Active Directory Synchronization may become slow or unresponsive when synchronizing a significant number of Active Directory groups.
 - Fixed issue where users may be removed from a group in Secret Server if that group contains users from multiple Active Directory domains and one of the domains cannot be reached during a synchronization.
 - Fixed issue where Secret Server Free customers could not manually add Active Directory users.
-- Fixed issue where users may be removed from a group in Secret Server if that group contains users from multiple Active Directory domains and one of the domains cannot be reached during a synchronization.
+- Fixed issue where selecting specific Organizational Units for an existing Active Directory discovery source may not work properly after a manual host range is added to it.
 - Fixed issue where Unix machines discovered using PowerShell may reflect an incorrect Organizational Unit.
-- Fixed issue where users may be removed from a group in Secret Server if that group contains users from multiple Active Directory domains and one of the domains cannot be reached during a synchronization.
+- Fixed issue where users were no longer forced to change their password upon first login if the Enable Local User Password Expiration configuration setting was enabled.
 - Fixed issue where using Discovery for dependencies over Distributed Engine may return incorrect results.
-- Fixed issue where users may be removed from a group in Secret Server if that group contains users from multiple Active Directory domains and one of the domains cannot be reached during a synchronization.
+- Fixed issue where multiple Discovery host range scans could cause redundant machine loads.
 - Fixed issue where using search in Secret Server while on the Notifications page may cause an application error.
 - Fixed issue where users who have an externally facing IP address that could not be resolved from the web server hosting Secret Server may experience performance issues throughout Secret Server.
 
@@ -47,7 +47,7 @@ $2
 - Added a report in Secret Server to display what Secret Template permissions a user or group has.
 - Added an option in Secret Server to backup Privilege Manager.
 - Secret Access Requests can now be found under the Tools menu.
-- Added an option in Secret Server to backup Privilege Manager.
+- "Share Secret" Role permission has been renamed to "Own Secret".
 - Upgraded the module responsible for Office 365 and Azure Active Directory password changes to ensure continued support.
 
 ### **Bug Fixes**
@@ -91,7 +91,7 @@ $2
 - The Dashboard load time performance has been optimized.
 - Add auditing for configuration changes.
 - Added a button to export all logs under Admin | Diagnostics.
-- Add auditing for configuration changes.
+- Refined user experience around creating dependencies on Secrets.
 - Added bulk operations for Dependencies.
 
 **REST**
@@ -107,7 +107,7 @@ $2
 - Fixed issue where Local Account Discovery used unnecessary calls.
 - Fixed issue where Secret Server removed dependencies that were not found by Discovery and would not re-add them if found again.
 - Fixed issue where the Thycotic RDP Launcher would not allow fullscreen mode.
-- Fixed issue where Secret Server removed dependencies that were not found by Discovery and would not re-add them if found again.
+- Fixed issue where Discovery did not properly detected Scheduled Tasks on Windows 10 machines.
 - Fixed issue where testing a SSH script in Secret Server would only display an exit status when it failed.
 
 ### **Security Fixes**

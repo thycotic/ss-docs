@@ -6,7 +6,7 @@
 
 ## Overview
 
-We recommend setting up a domain service account that can both access the Thycotic product's SQL database and run the IIS Application Pool(s) dedicated to your Thycotic product.
+We recommend setting up a domain service account that can both access the Thycotic product’s SQL database and run the IIS Application Pool(s) dedicated to your Thycotic product.
 
 > **Note:** The service account created in this KB should **not** be the same account that is created during the installation of SQL and used to manage SQL as a whole.
 
@@ -38,7 +38,7 @@ We recommend setting up a domain service account that can both access the Thycot
 
 1. Select **Service Accounts**.
 
-1. Right click and and select **New > User**. The "New Object - User" wizard dialog box appears.
+1. Right click and and select **New > User**. The “New Object - User” wizard dialog box appears.
 
 1. Type a name and logon name for the service account.
 
@@ -50,7 +50,7 @@ We recommend setting up a domain service account that can both access the Thycot
 
 1. Click to select the **Password never expires** check box. Failing to do this could lock the account out of SS.
 
-1. " Check **Password never expires** or the account could lock you out of SS.
+1. ” Check **Password never expires** or the account could lock you out of SS.
 
 1. Click **Next** button.
 
@@ -64,7 +64,7 @@ Grant access:
 
 1. Open the SQL Management Studio on your database server.
 
-1. Connect to your Thycotic product's SQL database using an administrator account.
+1. Connect to your Thycotic product’s SQL database using an administrator account.
 
 1. Click to select the Security folder in the Object Explorer.
 
@@ -72,7 +72,7 @@ Grant access:
 
 1. Ensure the **Windows Authentication** radio button is selected.
 
-1. Click the **Search…** button. The "Select User, Service Account, or Group" dialog box appears.
+1. Click the **Search…** button. The “Select User, Service Account, or Group” dialog box appears.
 
 1. Ensure that your domain or AD server appears in the **From this location** text box. If not, click the **Locations…** button and select it.
 
@@ -105,13 +105,13 @@ Grant access:
 
 1. Click the **Set…** button. The Set Credentials dialog box appears.
 
-1. Type your service account's name, such as test and password.
+1. Type your service account’s name, such as test and password.
 
 1. Click the **OK** button. The dialog box closes.
 
 1. Open the command console as an Admin.
 
-1. Change the directory to your .NET framework installation directory using the "cd" command, for example, `C:\Windows\Microsoft.NET\Framework\v4.0.30319`.
+1. Change the directory to your .NET framework installation directory using the “cd" command, for example, `C:\Windows\Microsoft.NET\Framework\v4.0.30319`.
 
 1. Type `.\aspnet_regiis -ga <domain name>\<username>`, replacing `<domain name>` and `<username>` with your information. For local accounts omit the domain name parameter.
 
@@ -122,7 +122,7 @@ Grant access:
  Following the steps below, you give the service account "Modify" access to **two** folders:
 
 - `C:\Windows\TEMP`
-- The folder where your Thycotic product's application files are located, such as  `C:\inetpub\wwwroot\SecretServer`
+- The folder where your Thycotic product’s application files are located, such as  `C:\inetpub\wwwroot\SecretServer`
 
 Procedure (for each folder):
 
@@ -136,7 +136,7 @@ Procedure (for each folder):
 
 1. Click the **Add** button. A permissions panel appears.
 
-1. Click the **Select a Principal** link. The "Select User, Computer, Service Account, or Group" dialog box appears.
+1. Click the **Select a Principal** link. The “Select User, Computer, Service Account, or Group” dialog box appears.
 
 1. Ensure that your domain or AD server appears in the **From this location** text box. If not, click the **Locations…** button and select it.
 
@@ -156,14 +156,14 @@ Procedure (for each folder):
 
 > **Note**: If a Windows Security pop-up appears, click the **Yes** button. The service account will now be able to access this folder.
 
-> **Note**: The application folder only needs "Write" and "Modify" permissions during the installation or during an upgrade. You can remove these once the installation process is complete.
+> **Note**: The application folder only needs “Write” and “Modify” permissions during the installation or during an upgrade. You can remove these once the installation process is complete.
 
 ### Task 5: Configuring User Rights
 
 The following settings are required for Thycotic Secret Server to function:
 
-- "Log on as a batch job"
-- "Impersonate a client after authentication"
+- “Log on as a batch job”
+- “Impersonate a client after authentication”
 
 You can adjust these settings either at the **Domain** level using group policy or locally on your IIS Web server using the Local Security Policy Console. See [User Rights Assignment](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/user-rights-assignment) to learn more.
 
@@ -177,7 +177,7 @@ You can adjust these settings either at the **Domain** level using group policy 
 
 1. Right-click the desired GPO folder (under the domain node) in the **Group Policy Management** Tree, and select **New**. The New GPO dialog box appears.
 
-1. Type the name, such as "Thycotic User Rights Assignment," in the **Name** text box.
+1. Type the name, such as “Thycotic User Rights Assignment,” in the **Name** text box.
 
 1. Click the **OK** button. The dialog box closes.
 
@@ -187,9 +187,9 @@ You can adjust these settings either at the **Domain** level using group policy 
 
 1. Click to select the **User Rights Assignment **folder.
 
-1. Repeat the following procedure for the "Log on as a batch job" and "Impersonate a client after authentication" permissions (for this instruction we show the former):
+1. Repeat the following procedure for the “Log on as a batch job” and “Impersonate a client after authentication” permissions (for this instruction we show the former):
 
-   1. In the list on the right, right-click **Log on as a batch job** and select **Properties**. The "Log on as a batch job Properties" dialog box appears.
+   1. In the list on the right, right-click **Log on as a batch job** and select **Properties**. The “Log on as a batch job Properties” dialog box appears.
 
    1. Ensure that the **Define these policy settings** check box is checked.
 
@@ -205,13 +205,13 @@ You can adjust these settings either at the **Domain** level using group policy 
 
 #### Option 2: Setting User Rights Assignment Locally
 
-1. On the Web server hosting IIS and your Thycotic Application files, open the "Local Security Policy Console" as an administrator (Run as administrator).
+1. On the Web server hosting IIS and your Thycotic Application files, open the “Local Security Policy Console” as an administrator (Run as administrator).
 
 1. On the Local Policies node, click to expand **Local Policies \> User Rights Assignment**.
 
 1. Click to select the **User Rights Assignment** folder.
 
-1. Repeat the following procedure for the "Log on as a batch job" and "Impersonate a client after authentication" permissions (for this instruction we show the former):
+1. Repeat the following procedure for the “Log on as a batch job” and “Impersonate a client after authentication” permissions (for this instruction we show the former):
    1. Right-click on **Log on as a batch job** in the list on the right and select  **Properties > Add User or Group**.
    1. Click to select your Thycotic service account.
    1. Click the **OK** button.

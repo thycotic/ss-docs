@@ -18,11 +18,11 @@ This topic is a one-stop resource for Secret Server developers. It points to TDP
 - [Configure CredSSP for use with PowerShell](../authentication/configuring-credssp-for-winrm-with-powershell/index.md)
 - [Creating and Using PowerShell Scripts](../api-scripting/creating-using-powershell-scripts/index.md)
 - [Creating and Using SSH Scripts](../api-scripting/creating-using-ssh-scripts/index.md)
-- [Creating and Using PowerShell Scripts](../api-scripting/creating-using-powershell-scripts/index.md)
+- [Creating and Using SQL Scripts](https://thycotic.force.com/support/s/article/Creating-and-Using-SQL-Scripts) (KBA)
 - [Exporting Secrets - PowerShell Export Script](https://thycotic.force.com/support/s/article/PowerShell-Export-Script) (KBA)
-- [Creating and Using PowerShell Scripts](../api-scripting/creating-using-powershell-scripts/index.md)
+- [Password Changing Scripts](../../remote-password-changing/custom-password-changers/password-changing-scripts/index.md)
 - [Searching Secret Server - PowerShell](https://thycotic.force.com/support/s/article/Searching-Secret-Server-programmatically-PowerShell-script) (KBA)
-- [Creating and Using PowerShell Scripts](../api-scripting/creating-using-powershell-scripts/index.md)
+- [Using Secret Fields in Scripts](../api-scripting/using-secret-fields-scripts/index.md)
 - [Using Webservices with IWA via PowerShell](https://docs.thycotic.com/ss/10.8.0/api-scripting/webservice-iwa-powershell/index.md)
 
 ## REST API

@@ -24,7 +24,11 @@ With it, you can quickly and easily find administration controls in several ways
 
   ![image-20191115094054886](images/image-20191115094054886.png)
 
-  Once you see the item you desire, you simply click it, and you are brought to that page.$1   - Simplified View: The large, clickable buttons.
+  Once you see the item you desire, you simply click it, and you are brought to that page.$1   
+
+- **Views:** You have three views to choose from, which you set by clicking the view link. The link text states the current view. The views are:
+
+  - Simplified View: The large, clickable buttons.
 
   - Alphabetized List: A text list of the available items:
 

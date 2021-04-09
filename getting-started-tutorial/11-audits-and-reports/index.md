@@ -15,7 +15,7 @@ This generates enough audit logs to provide meaningful outputs in your reports:
 - Security Hardening Report
 - What secrets have been accessed
 - What secrets failed heartbeat
-- What secrets have been accessed
+- Failed login attempts
 - Secret activity
 
 See [List of Built-In Reports](../../reports/built-in-reports/index.md) for the most up-to-date list of reports included.

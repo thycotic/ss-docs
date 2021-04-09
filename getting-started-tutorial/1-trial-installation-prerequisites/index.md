@@ -72,7 +72,7 @@ To test email notifications, which can be used for event subscription notificati
 - Service account to run the application and connect to SQL
 - Domain (test or production)
 - Domain account to be used for AD sync and discovery
-- Domain (test or production)
+- Test machines (if testing discovery)
 - Test accounts
 - SMTP server settings
 

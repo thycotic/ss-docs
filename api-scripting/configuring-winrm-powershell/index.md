@@ -16,21 +16,20 @@ Run PowerShell as an Administrator and execute:
 
 See [Enable-PSRemoting](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1) for more information.
 
-This command perform the following steps:
+This command performs the following steps:
+
+- Runs the [Set-WSManQuickConfig](http://go.microsoft.com/fwlink/?LinkID=141463) cmdlet, which performs the following tasks:
 
    - Starts the WinRM service
-   - Starts the WinRM service
-
-   - Starts the WinRM service
+   - Sets the startup type on the WinRM service to Automatic
    - Creates a listener to accept requests on any IP address
-
-   - Starts the WinRM service
+   - Enables a firewall exception for WS-Management communications
    - Registers the Microsoft.PowerShell and Microsoft.PowerShell.Workflow session configurations, if it they are not already registered
    - Registers the Microsoft.PowerShell32 session configuration on 64-bit computers, if it is not already registered
    - Enables all session configurations
    - Changes the security descriptor of all session configurations to allow remote access.
-
 - Restarts the WinRM service to make the preceding changes effective.
+
 
 ## Verifying Listeners
 
@@ -46,7 +45,6 @@ The output should reflect the newly configured listener with **Enabled : true**
 
 - By default two BUILTIN groups are allowed to use PowerShell Remoting as of v4.0: Administrators and Remote Management Users.
   `(Get-PSSessionConfiguration -Name Microsoft.PowerShell).Permission`
-
 - Sessions are launched by SS under the user's context, which means all the same security controls and policies apply within the session.
 - See [Investigating PowerShell Attacks](https://www.fireeye.com/content/dam/fireeye-www/global/en/solutions/pdfs/wp-lazanciyan-investigating-powershell-attacks.pdf) by FireEye for additional security considerations.
 - Your environment may already be configured for WinRM. If your server is already configured for WinRM but it is not using the default configuration, you can change the URI to use a custom port or URLPrefix.

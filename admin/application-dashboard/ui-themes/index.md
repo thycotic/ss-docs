@@ -17,7 +17,7 @@ Settings and terminology for the two UIs are intertwined in in SS, so some clari
 - **Classic UI**: The original, utilitarian, "90s-looking" interface, which many still prefer. It is sometimes called Secret Server classic.
 - **New UI**: The refined, modern-looking interface with enhanced usability and aesthetics.
 - **Theme** or **Classic Theme**: A color scheme (skin) for the classic UI. The "real" themes are Secret Server Classic - Blue, Secret Server Classic - Dark, Secret Server Classic - Default (Thycotic green), Secret Server Classic - Gray, and Secret Server Classic - Green. The new UI masquerading as a classic UI theme is called "Secret Server New" (see [Best Practices](#best-practices)).
-- **New UI**: The refined, modern-looking interface with enhanced usability and aesthetics.
+- **Color Mode**: A color scheme (skin) for the new UI. The color modes are System Default, Light, and Dark. System default means whatever color was chosen on your system for the Windows application default.
 - **Secret Server Classic:** An alternate name for the classic UI. This appears at times in SS.
 
 ### Best Practices
@@ -117,10 +117,8 @@ This is a procedure for admin users that determines what all newly created users
 
    - Secret Server Classic - Blue
    - Secret Server Classic - Dark
-
-   - Secret Server Classic - Blue
+   - Secret Server Classic - Default
    - Secret Server Classic - Gray
-
    - Secret Server Classic - Green
 
 1. Click the **Save** button. The classic user interface theme for new users is now set.

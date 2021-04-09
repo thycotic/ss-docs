@@ -19,4 +19,3 @@ Yes.  Secrets will be read-only, but you can still view them, including secret
 ## How long does Maintenance Mode last?
 
 Maintenance mode lasts until the operation triggering it is completed. The time required will vary based on the operation and the number of secrets in the system.  Typically, maintenance mode lasts less than 30 minutes.
-

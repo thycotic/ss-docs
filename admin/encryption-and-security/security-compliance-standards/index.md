@@ -19,9 +19,7 @@ SS can make it easier to comply with PCI-DSS requirements:
 
    - Applying two-factor authentication
    - Enabling launchers
-
-   - Applying two-factor authentication
+   - Enabling Web services
    - Enforcing local-user password requirements
-
-   - Applying two-factor authentication
+   - Forcing HTTPS/SSL
    - Requiring folders for secrets (for uniform permissions)

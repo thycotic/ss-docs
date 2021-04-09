@@ -38,11 +38,11 @@ To edit an IP address range, go to the **IP Address Management** page, click on 
 
 1. Go to **Admin \> Users** page. The View User page appears:
 
-  ![image-20191115110201765](images/image-20191115110201765.png)
+   ![image-20191115110201765](images/image-20191115110201765.png)
 
 1. Scroll to the bottom of the page and click the **Change IP Restrictions** button. The Edit IP Address Restrictions Page appears:
 
- ![image-20191115110512161](images/image-20191115110512161.png)
+   ![image-20191115110512161](images/image-20191115110512161.png)
 
 1. Click to select or deselect check boxes next to the ranges to choose which IP Addresses a user can use to access SS. If no boxes are checked, the user can access SS through any IP Address.
 

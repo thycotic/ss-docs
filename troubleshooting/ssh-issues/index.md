@@ -115,10 +115,10 @@ Things to look for in an SSH log:
 - Verifies the host IP address that you are connecting to.
 - Verifies the port is correct for the address that you are connecting to.
 - Verifies that you are not using an outdated SSH client.
-- Verifies the port is correct for the address that you are connecting to.
+- Verifies the SSH protocol you are using.
 - Verifies what group exchange algorithm is being used.
-- Verifies the port is correct for the address that you are connecting to.
+- Verifies the server identity using the presented fingerprint. If the fingerprint is not expected then there may be malicious server between you and the remote host you want to connect to. Alert the administrator to verify if the host key has changed or if there is another issue.
 - Verifies the transport layer and HMAC ciphers being used.
-- Verifies the port is correct for the address that you are connecting to.
+- Verifies that the password or key being sent is accepted by the server.
 - If a connection does not open, it notes what the last successful step was and then what the next failed step is to find what the issue is.
 - If using SS proxy, it is useful to collect the client-to-proxy SSH log and then the proxy-to-remote-host log from the remote server.

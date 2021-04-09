@@ -25,21 +25,18 @@ To address this, SS has a button that automatically removes most PII for any dea
     Clicking the **OK** button will change these to random values:
 
     - Username
-   - Display name
-
-    - Username
-   - Personal folder name
-
-    - Username
-   - RADIUS username
+    - Display name
+    - Password
+    - Personal folder name
+    - Personal group name
+    - RADIUS username
 
     In addition:
 
     - The user's AD GUID is cleared
-   - The user's email address is removed from their record
-
-    - The user's AD GUID is cleared
-   - The PII removal is recorded in the user's audit
+    - The user's email address is removed from their record
+    - The user's name is replaced with "\<redacted\>" in event audits where it can be clearly identified.
+    - The PII removal is recorded in the user's audit
 
 1. Click the **OK** button. The removal begins. Once complete, the Remove PII button disappears for that user.
 

@@ -1,90 +1,150 @@
-[title]: # (Python Example Code for SOAP)
-[tags]: # (SOAP API,API,Scripting,Python)
+[title]: # (Ruby Example Code for SOAP)
+[tags]: # (SOAP API,API,Scripting,Ruby)
 [priority]: # (1000)
 
-# Python Example Code for SOAP
+# Ruby Example Code for SOAP
 
 ## Overview
 
-Secret Server webservices can be called using scripts. This example demonstrates how to authenticate and retrieve secrets programmatically in Python using SOAP. There are also [Perl](../soap-perl-example-code/index.md) and [C#](../soap-C#-example-code/index.md) versions.
+Secret Server webservices can be called using scripts. This example demonstrates how to authenticate and retrieve secrets programmatically in Ruby using SOAP. There are also [Perl](../soap-perl-example-code/index.md) and [C#](../soap-C#-example-code/index.md) versions.
 
-This code uses the [SUDS module](https://fedorahosted.org/suds/) to import and create the WSDL.
+> **Note:** Webservices can be enabled at the Administration \> Configuration general tab. Enabling Webservices simply makes the [ASP.NET](http://asp.net/) SOAP and REST Webservices built into Secret Server available.
+
+This is an example of getting a secret and updating its Name using Ruby.  XML (using Nokogiri) is used to construct the secret update call.  To run, save the two files as ss.rb and test.rb in the same directory, fill in the URL to your Secret Server in test.rb and specify a username/password, then run test.rb.
 
 ## Code
 
-### Searching Secrets
+### ss.rb File
 
-```python
-import sys
+````ruby
+require 'savon'
+require 'nokogiri'
 
-import suds
+class SecretServer
 
-client = suds.client.Client("http://localhost/SecretServer/webservices/SSWebservice.asmx?wsdl"")
-#Org code is not necessary for installed edition and can be represented by ""
-token = client.service.Authenticate("Username", "Password", "ORG Code", "Domain")
+  def initialize(wsdl, ssl_verify_mode, ssl_version)
+    @@wsdl=wsdl
+    @@ssl_verify_mode=ssl_verify_mode
+    @@ssl_version=ssl_version
+    client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1)
+  end
 
-searchSecret=client.service.SearchSecrets(token.Token, "SearchString")
-```
+  def Authenticate(username, password, domain)
+    client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1)
 
-### Updating Secrets
+    response = client.call(:authenticate, message: {
+      username: username,
+      password: password,
+      organization: "",
+      domain: domain
+    })
 
-```python
-import sys
+    @@token = response.to_hash[:authenticate_response][:authenticate_result][:token]
 
-import suds
+    return @@token
+  end
 
-client = suds.client.Client("http://localhost/SecretServer/webservices/SSWebservice.asmx?wsdl"")
-#Org code is not necessary for installed edition and can be represented by ""
-token = client.service.Authenticate("Username", "Password", "ORG Code", "Domain")
+  def GetTokenIsValid
+    client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1)
+    response = client.call(:get_token_is_valid, message: {
+      token: @@token
+    })
 
-secret = client.service.GetSecret(token.Token, "SecretID")
+    return response
+  end
 
-updateSecret = client.factory.create("UpdateSecret")
+  def GetSecret(secretId)
+	thesame = lambda { |key| key }
+ 
+    client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1, convert_request_keys_to: :none) #, convert_response_tags_to: thesame)
+    response = client.call(:get_secret, message: {
+      token: @@token,
+      secretId: secretId,
+    })
+    return response.to_xml
+  end
 
-updateSecret.token = token.Token #Passes the authentication token to the updateSecret factory
+  def UpdateSecret(secret)
+    client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1)
+	# Nokogiri is stripping the 'xsi' prefix which is required, and it also puts a 'default' prefix in, which is disallowed.
+	fixedXml = secret.to_s.gsub! 'nil=', 'xsi:nil='
+	fixedXml = fixedXml.gsub! 'default:',''
 
-updateSecret.secret = secret.Secret #Gives the updateSecret the Secret ID of the Secret that we are updating
+    response = client.call(:update_secret, xml: fixedXml)
+    return response
+  end
 
-updateSecret.secret.Items.SecretItem[0].Value = "NewValue1"
+  def WhoAmI
+    client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1)
+    response = client.call(:who_am_i, message: {
+      token: @@token
+    })
+    return response
+  end
 
-updateSecret.secret.Items.SecretItem[1].Value = "NewValue2"
+  def VersionGet
+    client = Savon.client(wsdl: @@wsdl, ssl_verify_mode: :none, ssl_version: :TLSv1)
+    response = client.call(:version_get, message: {
+      token: @@token
+    })
+    return response
+  end
 
-updateSecret.secret.Items.SecretItem[2].Value = "NewValue3"
+end
+````
 
-updateSecret.secret.Items.SecretItem[3].Value = "NewValue4"
+### test.rb File
 
-updateResult = client.service.UpdateSecret(updateSecret)
-```
+````ruby
+require './ss'
 
-### Adding Secrets
+ss = SecretServer.new('https://your_secret_server_url/webservices/SSWebService.asmx?WSDL';, ':none', ':TLSv1')
+username = ""
+password = ""
+domain = ""
+secretId = 20
 
-```python
-import sys
+puts " "
 
-import suds
+puts "### Authenticate ###"
+token = ss.Authenticate(username, password, domain)
+puts token
+puts " "
 
-client = suds.client.Client("http://localhost/SecretServer/webservices/SSWebservice.asmx?wsdl"")
-#Org code is not necessary for installed edition and can be represented by ""
-token = client.service.Authenticate("Username", "Password", "Org Code", "Domain")
+puts "### GetSecret ###"
+secretResult = ss.GetSecret(secretId)
+puts secretResult
+puts " "
 
-newSecret = client.factory.create("AddSecret")
+# Convert the result to a Nokogiri xml document.
+@doc = Nokogiri::XML::Document.parse(secretResult)
+namespaces = @doc.collect_namespaces
+ns = Hash.new
+namespaces.each_pair do |key, value|
+  ns[key.sub(/^xmlns:/, '')] = value
+end
 
-newSecret.token = token.Token
+# Get the Secret by xpath and set the secret name to 'My New Secret Name'
+secretNode = @doc.at_xpath('/soap:Envelope/soap:Body/xmlns:GetSecretResponse/xmlns:GetSecretResult/xmlns:Secret', ns)
+nameNode = secretNode.at_xpath('//xmlns:Name', ns)
+nameNode.content = "My New Secret111 Name"
 
-newSecret.secretTypeId = 6001 #Secret types can be found using the GetSecretTemplates webservice
+# Build the soap envelope for posting to UpdateSecret and set the token and secret
+puts "### UpdateSecret ###"
+updateSoapPackage = '<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd="http://www.w3.org/2001/XMLSchema"" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">;
+  <soap:Body>
+    <UpdateSecret xmlns="urn:thesecretserver.com">
+		<token></token>
+		<secret></secret>
+	</UpdateSecret>
+  </soap:Body>
+</soap:Envelope>'
+@updateDoc = Nokogiri::XML::Document.parse(updateSoapPackage)
+@updateDoc.at_xpath('//*[name() = \'token\']').content = token
+@updateDoc.at_xpath('//*[name() = \'secret\']').add_child(secretNode.children())
+ss.UpdateSecret(@updateDoc)
 
-newSecret.secretName = "NewSecret"
-
-newSecret.folderId = 23 #Folder ID can be found using the SearchFolders webservice
-
-newSecret.secretFieldIds = client.factory.create("ArrayOfInt") #secretFieldIds are found using the GetSecretTemplateFields webservice
-#Must use all FieldIds and they must be in correct order
-newSecret.secretFieldIds.int = [87, 90, 89, 88]
-
-newSecret.secretItemValues = client.factory.create("ArrayOfString")
-
-newSecret.secretItemValues.string = ["Vaule1", "Vaule2","Vaule3","Vaule4"]
-
-resultAdd = client.service.AddSecret(newSecret)
-```
+puts '-> Finished'
+````
 

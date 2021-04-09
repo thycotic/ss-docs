@@ -15,13 +15,13 @@ The internal site connector receives and processes messages as a result of numer
 - Bulk Operations
 - Generate Password
 - Secret Import (CSV and XML)
-- Generate Password
+- Run Heartbeat Now
 - Run Heartbeat (Scheduled)
-- Generate Password
+- Run Password Change Now
 - Run Password Change (Scheduled)
-- Generate Password
+- Run Discovery Now
 - Run Discovery (Scheduled)
-- Generate Password
+- Run AD Sync Now
 - Run AD Sync (Scheduled)
 - Elements of Session Recording
 
