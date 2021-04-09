@@ -11,9 +11,9 @@ The Dashboard Tools Menus is available via the ![1557174423911](images/155717442
 - Connection Manager
 - Importing Secrets
 - Exporting Secrets
-- Importing Secrets
+- Manage Secret Access Request
 - Launcher Tools
-- Importing Secrets
+- Privilege Manager
 - Privilege Behavior Analytics
 
 ## Help Section

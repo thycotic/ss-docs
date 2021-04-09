@@ -9,7 +9,7 @@ Character sets are a collection of distinct characters that are used in password
 - Lower Case (a-z)
 - Upper Case (A-Z)
 - Numeric (0-9)
-- Upper Case (A-Z)
+- Non-Alphanumeric (!@#$%^&*())
 - Default – Includes all the above
 
 To manage character sets, click the **Character Sets** button on the **Administration > Secret Templates** page. Only character sets which are not currently used by a password requirement can be deleted.

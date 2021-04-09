@@ -10,7 +10,7 @@ Secret Server webservices can be called using scripts. This example demonstrates
 
 This is a working example for Secret Server Online. A test user has been filled in and OrganizationCode passed in. The test user has  been restricted to only viewing secrets. If connecting to an installed instance, change the web reference URL to match your site and pass in an empty string for organizationCode.
 
-For instructions with using Perl and Integrated Windows Authentication see: http://support.thycotic.com/KB/a180/using-web-services-with-windows-authentication-perl.aspx
+For instructions with using Perl and Integrated Windows Authentication see: [Using Webservices with IWA via Perl](../webservice-iwa-perl/index.md)
 
 This example runs using standard Perl libraries. We used Strawberry Perl 5.10.1.1.
 
@@ -80,4 +80,3 @@ sub WSRequest()
 	return $response;
 }
 ```
-

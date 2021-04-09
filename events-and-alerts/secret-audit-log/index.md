@@ -6,16 +6,16 @@
 
 The audit log for a secret can be accessed by clicking the **View Audit** button on the **Secret View** page or navigating from the User Audit report. The log shows the date, the username, the action, and any other details about the event. Secret auditing provides a detailed view of each change or view on a secret.
 
-> **Note:** Audit logs are visible to anyone with the "list" permission. Thus, anybody with that permission can view permission changes, users whose permissions were changed, secret dependency information, and the machine.
+> **Note:** Audit logs are visible to anyone with the “list” permission. Thus, anybody with that permission can view permission changes, users whose permissions were changed, secret dependency information, and the machine.
 
 Secret audits are taken for the following user actions:
 
 - Adding, updating and removing secret dependencies
 - Check out
 - Editing permissions
-- Check out
+- Forced expiration
 - Hide launcher password changes
-- Check out
+- Set for check-in
 - Update
 - View
 

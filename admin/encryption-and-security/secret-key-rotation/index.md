@@ -37,7 +37,7 @@ As a general guideline, use the following:
 **Table:** Secret Key Rotation Processing Time
 
 | Configuration           | Approximate Time Taken          |
-| ----------------------- | ------------------------------- |
+| -- | -- |
 | Without HSM (default)   | 2,000-12,000 secrets per minute |
 | HSM with a 2048-bit key | 240-600 secrets per minute      |
 | HSM with a 4096-bit key | 120-300 Secrets per minute      |

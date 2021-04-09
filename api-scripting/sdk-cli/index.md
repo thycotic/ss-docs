@@ -103,7 +103,7 @@ Configure SS for communication with the SDK:
 
    4. Assign the **View Secret** permission to that role. The permission appears in the Permissions Assigned text box. You can add additional permissions later as needed.
    5. Click the **Save** button. The new role appears in the Roles table.
-1.  Enable SDK management:
+1. Enable SDK management:
 
    1.  Go **Admin > See All**. The admin panel appears.
 
@@ -113,7 +113,7 @@ Configure SS for communication with the SDK:
 
    3.  Click the **Disabled** toggle button to change it to **Enabled**.
 
-9.  Set up a SDK client rule:
+9. Set up a SDK client rule:
 
    1. Click the **Client Onboarding** tab.
 

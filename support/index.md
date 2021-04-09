@@ -13,9 +13,9 @@ Before you contact Support, gather the following information:
 - Your Thycotic Support username and password
 - The email account already associated with your account (if using email)
 - Your company name
-- The email account already associated with your account (if using email)
+- The technical contact name
 - The technical contact phone number
-- The email account already associated with your account (if using email)
+- The product name
 - Issue symptoms and details
 - Any other relevant details, such as hours the technical contact is present
 

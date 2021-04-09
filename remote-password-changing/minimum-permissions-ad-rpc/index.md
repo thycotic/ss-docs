@@ -11,9 +11,11 @@ Secret Server requires proper permissions to perform remote password changing. T
 - Change password
 - Reset password
 - Write lockoutTime
-- Reset password
+- Write pwdLastSet
 - Write UserAccountControl
-- Read all properties on CN=System,CN=Password Settings Container and all child containers or objects, or read all properties on any other fine-grained password policy objects (this is completed through ADSIedit).
+- Read all properties on CN=System,CN=Password 
+
+Settings Container and all child containers or objects, or read all properties on any other fine-grained password policy objects (this is completed through ADSIedit).
 
 ## Setting Permissions
 
@@ -59,18 +61,14 @@ Secret Server requires proper permissions to perform remote password changing. T
 1. Locate and select the followings in the **Permissions** list:
 
     - Write lockoutTime
-   - Read lockoutTime
-
-    - Write lockoutTime
-   - Read pwdLastSet
-
-    - Write lockoutTime
-   - Read UserAccountControl
+    - Read lockoutTime
+    - Write pwdLastSet
+    - Read pwdLastSet
+    - Write UserAccountControl
+    - Read UserAccountControl
 
 1. Click the **Next** button.
 
 1. Click the **Finish** button.
-
- 
 
  

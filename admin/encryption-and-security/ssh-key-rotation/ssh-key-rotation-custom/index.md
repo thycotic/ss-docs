@@ -125,20 +125,19 @@ Secret Server includes two password changers for SSH key rotation: **SSH Key Rot
 
 The authentication section defines the credentials that will be used to connect to the machine and run the command set. These can be either the credentials of the secret or credentials from an associated secret. The command sets on the **SSH Key Rotation** password changer are designed to be run with the secret's credentials. Any customized password changer based on this password changer should use the secret's credentials in the authentication section.
 
-
 For more information about tokens beginning with a dollar sign used in the above screenshot, see the [Dependency Token List](../../../../api-scripting/dependency-tokens/index.md).
 
 The command sets on the **SSH Key Rotation Privileged Account** password changer are designed to be run with the credentials of an account that can change the password and public key on behalf of other users. Any customized password changer based on **SSH Key Rotation Privileged Account** should use the credentials off one of the secret's associated secrets. This is typically the first associated secret but can be any associated secret if your password changer requires more than one associated secret. The exception to this is validation which does not run a command set by default and uses the secret's credentials. If you modify validation to use a command set you will need to change the default authentication for validation if the command set uses sudo.
 
 Here is a typical authentication for **SSH Key Rotation Privileged Account** (except validation, which is identical to the authentication block used by **SSH Key Rotation**):
 
-​	Username: `$[1]$USERNAME`
+​Username: `$[1]$USERNAME`
 
-​	Password: `$[1]$PASSWORD`
+Password: `$[1]$PASSWORD`
 
-​	Key: `$[1]$PRIVATE KEY`
+​Key: `$[1]$PRIVATE KEY`
 
-​	Passphrase:  `$[1]$PRIVATE KEY PASSPHRASE`
+​Passphrase:  `$[1]$PRIVATE KEY PASSPHRASE`
 
 ## Command Sets
 
@@ -178,7 +177,7 @@ If the Password Change command set and Verify Password Changed are both successf
 
 If the Password Change command set is successful but the Verify Password Changed fails, the Post Fail Change command set is run. This command set rolls back the changes made in the Password Change command set by removing the new public key from authorized_keys.
 
- For more information about customizing SSH command sets, see the [How to Create a Custom SSH Password Changer](http://thycotic.force.com/support/s/article/How-to-create-a-custom-SSH-password-changer) KB article.
+For more information about customizing SSH command sets, see the [How to Create a Custom SSH Password Changer](http://thycotic.force.com/support/s/article/How-to-create-a-custom-SSH-password-changer) KB article.
 
 ### Notes
 
@@ -196,9 +195,8 @@ This will pass the credentials from the first associated secret when prompted by
 
 - The SSH Password Changers are targeted to OpenSSH. If using a different SSH library or if the user keys are not in the users `/.ssh/authorized_keys` file you can check the commands used and modify them as appropriate under **Admin \> Remote Password Changing** and clicking **Configure Password Changers**. The password changers used are **SSH Key Rotation** and **SSH Key Rotation Privileged Account**.
 - Errors are logged to **Admin \> Remote Password Changing**. Additional logs can be found in the Secret Server directory in the log subfolder. For example: `C:\inetpub\wwwroot\secretserver\log`.
-- A change was made to how SSH script variables are named in order to differentiate them from tokens when testing command sets on the Configure Password Changers page. Non-token script variables should begin with an underscore. Anything in the script beginning with a dollar sign not followed by an underscore will be treated as a token and displayed as a field in the test dialog. For example
-- - `$USERNAME`  – References the username from the Secret.
+- A change was made to how SSH script variables are named in order to differentiate them from tokens when testing command sets on the Configure Password Changers page. Non-token script variables should begin with an underscore. Anything in the script beginning with a dollar sign not followed by an underscore will be treated as a token and displayed as a field in the test dialog. For example:
+ 
+  - `$USERNAME`  – References the username from the Secret.
   - `$[1]$USERNAME`  – References the username from the first linked Secret.
   - `$_USERNAME`  – References a bash variable defined in the script.
-
- 

@@ -36,7 +36,7 @@ Descendant User objects:
 - Read Display Name
 - Read Distinguished Name
 - Read E-mail-Address
-- Read Distinguished Name
+- Read objectGUID
 - Read Logon Name
 - Read Logon Name (pre-Windows 2000)
 
@@ -45,7 +45,7 @@ Descendant Group objects:
 - Read displayName
 - Read Distinguished Name
 - Read Group name (pre-Windows 2000)
-- Read Distinguished Name
+- Read groupAttributes
 - Read memberOf
-- Read Distinguished Name
+- Read Members
 - Read objectGUID

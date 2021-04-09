@@ -118,7 +118,7 @@ foreach($secretSummary in $secretSummaries)
 echo "--------------------------------------------"
 ```
 
-Creating Secrets
+## Creating Secrets
 
 ```powershell
 # Helper Function

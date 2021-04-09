@@ -11,7 +11,7 @@ When creating a new directory, the required configuration screen settings have t
 - **Domain Name:** A friendly display name for the Azure Directory.
 - **Active:** Enable or disable the Azure Active Directory domain integration.
 - **Tenant ID:** Globally unique identifier (GUID) value assigned to the Azure AD directory.
-- **Active:** Enable or disable the Azure Active Directory domain integration.
+- **Client ID:** Globally unique identifier (GUID) value assigned to the Client Secret upon creation. Portal will also reference this as the _Application ID_ or _App ID_.
 - **Client Secret:** Unique, generated string for the Client Secret. _This value can only be retrieved upon creation._
 
 Optionally you can also configure the following:
