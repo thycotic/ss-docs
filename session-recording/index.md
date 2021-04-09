@@ -60,7 +60,7 @@ In addition to those, ASR includes these enhanced video playback features:
 - Searchable Video: You can search video activity to find locations where specific activities, such as specific keystrokes or ran processes.
 - Enhanced Playback: Sessions recorded using ASR display additional data on playback, such as the current active window, the used processes, and keystrokes in the session.
 - On-demand video processing
-- Enhanced Playback: Sessions recorded using ASR display additional data on playback, such as the current active window, the used processes, and keystrokes in the session.
+- Recording all sessions
 - Inactivity timeout
 - Maximum session-length protection
 
@@ -77,7 +77,7 @@ The Session Recording tab contains the following configuration options:
 - **Enable Deleting:** After the "Days Until Deleting" value, SS deletes the videos from disk.
 - **Enable Moving to Disk:** After the "Days Until Moved to Disk" value, SS can move videos from the database to an archive path on disk.
 - **Enable Session Recording:** Enable session recording for launched sessions.
-- **Enable Moving to Disk:** After the "Days Until Moved to Disk" value, SS can move videos from the database to an archive path on disk.
+- **Save Videos To:** By default, videos are stored in the database, SS can also store them directly to a network share. This network share must be accessible from all Web servers that SS is installed on.
 - **Video Code:** Specify the codec to use to create the videos from the launcher screenshots. This codec must be installed on the Web server (or servers if clustering is enabled) that SS is installed on.
 
 > **Note:** The Microsoft Video 1 codec is for testing only and does not support in browser playback. Sessions encoded with Microsoft Video 1 can still be downloaded for review.

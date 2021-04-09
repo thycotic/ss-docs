@@ -40,8 +40,7 @@ To configure pushing secrets to DSV:
    1. Type the DSV tenant to connect to in the **Tenant** text box. A DSV tenant is your DSV cloud account and the rights to access it. Use the format: `https://<tenantname>.secretsvaultcloud.<region>` with the region being one of the following:
 
       - U.S. region: `com`
-   - E.U. region: `eu`
-
+      - E.U. region: `eu`
       - APAC region: `au`
 
    1. Click the **Site** dropdown list to select your SS site.
@@ -155,5 +154,3 @@ View a list of secret sync statuses by running a GET to
 - `filter.secretId=`
 - `filter.includeInactive=`
 - `filter.tenantId=`
-
- 

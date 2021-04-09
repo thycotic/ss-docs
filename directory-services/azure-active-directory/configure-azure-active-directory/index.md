@@ -18,8 +18,7 @@ The steps below are used for adding an Azure Active Directory configuration to D
 
    - Friendly domain name
    - Tenant ID
-
-   - Friendly domain name
+   - Client ID
    - Client Secret
 
 1. Ensure the **Active** check box remains checked.

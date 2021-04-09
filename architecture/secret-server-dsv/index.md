@@ -97,7 +97,7 @@ We discuss the following scenarios:
 - Customer is using an on-premise installation of SS installed in a physical or private cloud environment and is using a free instance of DSV (Limited to 250 secrets, 2,500 API calls per month).
 - When SS is down, user-to-jump-host connectivity becomes active and uses a break-the-glass account to connect to the jump host. The jump host then has the DSV executable available and can retrieve credentials when SS is down.
 - Multiple jump hosts are provisioned in case the primary site is down.
-- When SS is down, user-to-jump-host connectivity becomes active and uses a break-the-glass account to connect to the jump host. The jump host then has the DSV executable available and can retrieve credentials when SS is down.
+- Users from different regions can access their own regional DSV instance.
 - DSV SLA is 99.999%.
 
 ### Requirements

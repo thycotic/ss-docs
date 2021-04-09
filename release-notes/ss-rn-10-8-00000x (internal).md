@@ -56,7 +56,7 @@ Enhancements:
 - 117943 - Web session recording is now supported in the WPF (please see the below section on Web Session Recording).
 - 163130 - Improved support for the refresh token. We improved the refresh token to better support SAML-configured SS environments, and the WPF is updated to use this improved token. This also makes better use of the timeout settings for the SAML token.
 - 164884 - Added timing restriction to the refresh button on the "sign in as" pop-up window in the WPF. This is to limit the number of calls that can be made in a 10-second time frame from going back to SS to update the list of secrets.
-- 163130 - Improved support for the refresh token. We improved the refresh token to better support SAML-configured SS environments, and the WPF is updated to use this improved token. This also makes better use of the timeout settings for the SAML token.
+- 164490 - Added a new feature to match URLs by exact path. This option looks at the domain value in the URL and will only list secrets that have an exact match. During Web session recording, this option exactly matches the values between `//` and the first `/` in the URL. For example, in `http://Company.Sub.Primary.Domain.TopDomain/subsite` it matches `Company.Sub.Primary.Domain.TopDomain`.
 - 164490 - Improved support for sites that have second-level subdomains in the URL, such as sites that have ".co.uk" or ".online.com.""""""""""""
 - 159832 – Added handling  when fetching secrets from SS for common second-level subdomains when filtering for applicable secrets on a website.
 
@@ -111,7 +111,7 @@ Enhancements:
 - 143628 - Fixed an issue where a local user could log in to the SS SSH terminal despite an expired password.
 - 163910 - Fixed a reflected cross-site scripting (XSS) vulnerability.
 - 163913 - Extended the default HSTS max age to one year and extended it to cover subdomains.
-- 163910 - Fixed a reflected cross-site scripting (XSS) vulnerability.
+- 163916 - Fixed a cross-site scripting (XSS) issue.
 - 163918 - Fixed an issue preventing a security header from being returned in certain locations within the application.
 
 ### API
@@ -169,56 +169,61 @@ Enhancements:
 - 150770 - Updated the layout for configuration pages to include more details about  page sections.
 - 153638 - Removed options such as "import secrets" and "launcher tools" from the grid icon menu. All menu items are available from the admin page.
 - 155837 - Redesigned the "user preferences" page. Click the profile icon in the upper right, and then select User Preferences.
-- 153638 - Removed options such as "import secrets" and "launcher tools" from the grid icon menu. All menu items are available from the admin page.
+- 155841 - Added actions that allow a user to cancel an existing request in the request log grid.
 - 155953 - Added auditing for changes made to discovery source pages.
-- 153638 - Removed options such as "import secrets" and "launcher tools" from the grid icon menu. All menu items are available from the admin page.
+- 159758 - Application requests made from the API can now be approved or denied on  the inbox page.
 - 159780 - Added a checkbox to the settings of the scheduled task and Windows service scanners to use NETBIOS name instead of UPN when matching domains.
-- 153638 - Removed options such as "import secrets" and "launcher tools" from the grid icon menu. All menu items are available from the admin page.
+- 163036 - On secrets that require both check out and comment, users are no longer required to submit two comments. We combined the check out and comment prompts.
 - 164130 - Added a "next password reveal" audit for secrets that are manually updated with a next password.
 - 144344 - Converted active templates to new UI.
 
-## Bug Fixes$1   - 127410 - Fixed an issue where request access emails did not send to some approvers.
+## Bug Fixes
+
+- 51027 - Fix an issue to Web Password Filler to have the URL encoding match what is configured in the secret. Issue related to handling of ampersands contained in the launcher URL.
+
+
+- 127410 - Fixed an issue where request access emails did not send to some approvers.
 - 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
 - 140009 - Fixed an issue where copying custom reports sometimes did not allow a user to save.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 141587 - Fixed an issue where some secrets did not display when picking associated secrets for a secret policy or event subscription. Associated secrets on secret policy edit will now default to not filtering by password type configured on the template. The "show all" button will also no longer filter by this setting.
 - 148772 - Fixed an issue where folder permissions could be changed via REST API despite the "inherit permissions from parent" setting being enabled. Changes to folder inheritance through the API will now be reflected in the UI and will be messaged in the API.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 149450 - Added a new advanced configuration advanced setting, OffloadRunNowToDifferentNode. If true, offloads the "run now" commands to nodes with background worker enabled. This only applies if SS nodes have different RabbitMQ site connectors.
 - 149752 - Fixed an issue where filter parameters were ignored when using `filter.searchField` in the API method. Users are now able to perform partial searches through the API.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 150385 - Fixed an issue where users with edit permission on a folder were unable to perform the "convert template" bulk operation on secrets they owned within that folder.
 - 151022 - Fixed an issue where deleted engines were still shown on the engine status widget.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 151896 - Fixed an issue where RADIUS two-factor authentication access challenge prompts did not work with Integrated Windows Authentication.
 - 153276 - Fixed an issue where the time format in the secret access request form page did not match the default time format in Admin \> Configuration.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 153413 - Fixed an issue in the new UI where the dependencies tab was not displayed correctly.
 - 154289 - Added a notification message when a secret is forced to check in by another user.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 154400 - Fix made for RPC password changes getting stuck in the processing state, after disabling RPC.
 - 154407 - Fixed an issue where a folder name is truncated to 50 characters when imported via XML.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 154507 - Fixed an issue where the audit log showed duplicate view instances for secrets
 - 155486 - Fixed an issue where Unicode characters would display as question marks on the SSH proxy session data page.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 155547 - Enhanced search logic so that an exact match for folder or secret name will appear first in the search results list.
 - 155732 - Fixed an issue where proxied sessions (RDP or SSH) did not properly terminate if session recording was previously disabled for the secret.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 155779 - Fixed an issue where the "inherit permission from folder" setting was disabled when sharing a newly created secret in the old UI.
 - 156480 - Fixed an issue where other users' personal sub-folders were still visible to users who did not have View permissions on them despite the "require view permission on specific folder for visibility" setting being enabled. This only occurred on the Admin > Folder Permissions & Audit page.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 156576 - Fixed an issue where different time zones were shown when editing the RPC settings of a secret.
 - 158288 - Fix made to address error when attempting to export diagnostic logs which resulted in incomplete records.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 158318 - Fixed the "value cannot be null" error message after clearing a report filter.
 - 158920 - Fixed an issue where the `POST /secret-templates/generate-password/{secretfieldId}` endpoint did not properly handle password fields.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 159977 - Fixed an issue where the web password filler could not login local users through SAML authentication.
 - 160636 - On the security hardening report page, increased the maximum size of the zero-information disclosure message. For more information, see https://thycotic.force.com/support/s/article/Prevent-Secret-Server-from-displaying-error-message-details.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 160797 - Fixed an issue where AD sync processed a disabled domain.
 - 160849 - Updated the distributed engine "processing" status query to exclude inactive secrets in its data count on the SiteView.aspx page.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 161174 - Fixed an issue where duplicate secrets could be linked to a discovery scanner.
 - 161300 - Fixed an issue where edits to a dependency modal did not save.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 161370 - Fixed an issue where the "automatic user management" setting did not re-enable Integrated Windows Authentication (IWA) users properly.
 - 161668 - Fixed an issue with attaching files while creating a new secret that had check-out or require comment enabled.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 161895 - Fixed an issue with the REST API `POST /secret-templates/` endpoint, which did not work.
 - 161933 - Fixed an issue in folders that contain over 30 sub-folders where clicking to maximize the folder list threw an error.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 162041 - Fixed an issue where converting a secret template failed after modifying the secret template without first saving the template.
 - 162450 - Fixed an issue in the new UI where require approval logic on a secret policy blocked users from creating secrets in a folder where the policy was assigned.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 162968 - Fixed a new UI issue where copying a secret template failed when using the Internet Explorer browser.
 - 163266 - Fixed an application error message when secret access was revoked by its owner, while another user was attempting to check it out.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 163350 - Fixed inaccuracies displayed in "last accessed" and "created" column data in secret grids.
 - 163619 - Fixed an issue in the way IP addresses in URL fields were indexed and how indexed searching was conducted. Searching by partial IP address now correctly matches against URL fields for any substring of the IP address, as long as the search term starts with a whole octet of the field.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 163901 - Fixed a display issue for drop-down grid menus in the new UI.
 - 164192 - Fixed an issue when sharing a secret where a message incorrectly stated that the user would no longer be owner of the secret.
-- 139322 - Fix to address accuracy of login time stamps when using SAML Active Directory Federated Services.
+- 166057 - Fixed an issue where duplicate groups populated when selecting from the "add Group/user" dropdown on the Admin > Groups page.
 - 148840 - Secret folder tree expansion is no longer lost when editing a folder.

@@ -10,7 +10,7 @@ This document explains how to configure Oracle Database 19c for heartbeat and re
 
 > **Note**: This document is not updated with every release—many releases do not affect the guide's contents and thus do not warrant a document update.
 
-This Thycotic **technical configuration** knowledge base article is relevant to and has been tested on:
+This Thycotic technical configuration knowledge base article is relevant to and has been tested on:
 
 * Secret Server 10.7 on Windows Server 2016 Standard (64-bit)
 * Distributed engine 10.7 on Windows Server 2016 Standard (64-bit)
@@ -29,9 +29,7 @@ This document explains how to configure Oracle Database 19c for heartbeat and re
 
 1. Download the latest version of the ODAC OUI file with the same major number as your database version.
 
-You had me remove all of these yesterday.  As of October 22, 2019, the latest ODAC version is 19.3.
-
-3. Unzip the file.
+1. Unzip the file.
 
 1. Right click and run setup.exe as a Windows administrator. The setup wizard appears.
 
