@@ -84,6 +84,8 @@ The easiest way to get to the page is:
 
 1. Navigate to **Admin \> Configuration**. The (regular) Configuration page appears:
 
+> **Note:** Administrators in SS do **not** automatically have access to all data stored in the system—access to data is still controlled by explicit permissions on that data.
+
    ![image-20210325115600894](images/image-20210325115600894.png)
 
 1. Look at the URL for the page. The file name is `ConfigurationGeneral.aspx`.

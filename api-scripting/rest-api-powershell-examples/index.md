@@ -10,13 +10,13 @@
 
 > **Note:** When using the API to search secrets, the account used must have at least "view" permissions on the full folder path to find the secret.
 
- >  **Note:** Secret Server Cloud exclusively supports TLS 1.2. This version includes fixes for known vulnerabilities in older TLS versions and will eventually be required for PCI compliance. The following will need to be added to the top of your scripts because PowerShell defaults to TLS 1.0:
- >  `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
+ > **Note:** Secret Server Cloud exclusively supports TLS 1.2. This version includes fixes for known vulnerabilities in older TLS versions and will eventually be required for PCI compliance. The following will need to be added to the top of your scripts because PowerShell defaults to TLS 1.0:
+ > `[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12`
 
 > **Note:** Secret Server Cloud API users: If Thycotic One is enabled, _and_ an API user logging on has an email address set in Secret Server, the user *must* use the Thycotic One password, instead of the local SS password. Using a local account password will fail. Use one of these workarounds:
-> * Disable Thycotic One, if not needed
-> * Use the Thycotic One password instead
-> * Use a user account that does not have an email address in SS
+> - Disable Thycotic One, if not needed
+> - Use the Thycotic One password instead
+> - Use a user account that does not have an email address in SS
 
 ## OAuth Authentication
 

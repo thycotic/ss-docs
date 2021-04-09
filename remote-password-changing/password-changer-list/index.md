@@ -20,47 +20,47 @@ Secret Server includes many pre-configured password changers that are used by Re
 -  Active Directory Account
 -  Amazon IAM Console Password Privileged Account
 -  Amazon IAM Key
--  Amazon IAM Console Password Privileged Account
+-  Blue Coat Account Custom (SSH)
 -  Blue Coat Enable Password Custom (SSH)
--  Amazon IAM Console Password Privileged Account
+-  Cisco Account Custom (SSH)
 -  Cisco Account Custom (Telnet)
--  Amazon IAM Console Password Privileged Account
+-  Cisco Enable Secret Custom (SSH)
 -  Cisco Enable Secret Custom (Telnet)
--  Amazon IAM Console Password Privileged Account
+-  ESX/ESXi (API)
 -  F5 BIG-IP Root Account (SSH)
--  Amazon IAM Console Password Privileged Account
+-  Generic Discovery-Only Credentials
 -  Generic ODBC (DataSource)
--  Amazon IAM Console Password Privileged Account
+-  HP iLO Account Custom (SSH)
 -  IBM iSeries Mainframe
--  Amazon IAM Console Password Privileged Account
+-  Juniper Account Custom (SSH)
 -  LDAP (Active Directory)
--  Amazon IAM Console Password Privileged Account
+-  LDAP (DSEE)
 -  LDAP (OpendLDAP)
--  Amazon IAM Console Password Privileged Account
+-  MySQL Account
 -  Office365 *
--  Amazon IAM Console Password Privileged Account
+-  Oracle Account
 -  Oracle Account (AS SYS)
--  Amazon IAM Console Password Privileged Account
+-  Oracle Account (DataSource)
 -  PostgreSQL Account (x64)
--  Amazon IAM Console Password Privileged Account
+-  PowerShell Script **
 -  SAP Account **
--  Amazon IAM Console Password Privileged Account
+-  SonicWall NSA Web Admin Account
 -  SonicWall NSA Web Local User Account
--  Amazon IAM Console Password Privileged Account
+-  SQL Server Account
 -  SSH Key Rotation **
--  Amazon IAM Console Password Privileged Account
+-  SSH Key Rotation (No Password) **
 -  SSH Key Rotation Privileged Account **
--  Amazon IAM Console Password Privileged Account
+-  SSH Key Rotation Privileged Account (No Password) **
 -  Sybase Account
--  Amazon IAM Console Password Privileged Account
+-  Unix Account (SSH)
 -  Unix Account (Telnet)
--  Amazon IAM Console Password Privileged Account
+-  Unix Account Custom (SSH)
 -  Unix Account Custom (Telnet)
--  Amazon IAM Console Password Privileged Account
+-  Unix Account SU Takeover (SSH)
 -  Unix Account SUDO Takeover (SSH)
--  Amazon IAM Console Password Privileged Account
+-  Unix Root Account Custom (SSH)
 -  WatchGuard Custom (SSH)
--  Amazon IAM Console Password Privileged Account
+-  Web User Account (built-in support for AWS, Google, Salesforce)
 -  Windows Account
 -  z/OS Mainframe
 
@@ -73,5 +73,5 @@ Other platforms that SS can change passwords on include:
 -  AS/400
 -  Linux / Mac
 -  Check Point
--  Linux / Mac
+-  Enterasys
 -  Dell DRAC

@@ -11,9 +11,9 @@ These are the configuration options that are common to every secret:
 - **Convert Template:** Change which template is being used to store and display information in this Secret.
 - **Copy Secret:** Create a duplicate copy of the secret, which may also be renamed and modified.
 - **Delete:** Delete the secret.
-- **Copy Secret:** Create a duplicate copy of the secret, which may also be renamed and modified.
+- **Edit:** Edit the secret parameters.
 - **Favorite:** Click the star from the Dashboard or check this box on the Secret View page to mark the Secret as a favorite. It then displays in the Favorite Secrets widget.
-- **Copy Secret:** Create a duplicate copy of the secret, which may also be renamed and modified.
+- **Folder:** Folder location of the secret. The secret inherits permissions of this folder, depending on the Default Secret Permissions setting in the SS Configuration options.
 - **Share:** Configure the sharing settings, or permissions, for the secret.
 - **View Audit:** View the secret audit log to see which users have accessed the secret and the actions that have been performed.
 

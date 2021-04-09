@@ -59,7 +59,7 @@ Active Directory group synchronization means that SS can automatically add users
 
 ### Discovery
 
-To test discovery, please have some machines available for SS to connect to for discovering accounts. An account is required to sync with AD and also scan the machines found for Windows local account and service account discovery. [Account Permissions for Discovery](../../discovery/general-information/discovery-account-permissions/index.md) describes the permissions required for an AD account to be used for discovery.
+To test discovery, please have some machines available for SS to connect to for discovering accounts. An account is required to sync with AD and also scan the machines found for Windows local account and service account discovery. [Account Permissions for Discovery](../../discovery/account-permissions/index.md) describes the permissions required for an AD account to be used for discovery.
 
 ### Test Accounts
 
@@ -72,7 +72,7 @@ To test email notifications, which can be used for event subscription notificati
 - Service account to run the application and connect to SQL
 - Domain (test or production)
 - Domain account to be used for AD sync and discovery
-- Domain (test or production)
+- Test machines (if testing discovery)
 - Test accounts
 - SMTP server settings
 

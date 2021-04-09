@@ -31,27 +31,27 @@ The current secret policy filters:
 - Custom Variable
 - Day of Week
 - Event Time
-- Day of Week
+- Event User: Group
 - Event User: Has Two Factor
-- Day of Week
+- Event User: Role
 - Event User: Role Permission
-- Day of Week
+- Event User: Team
 - Event User: User Domain
-- Day of Week
+- Event User: User Last Login
 - Event User: User Setting
-- Day of Week
+- IP Address
 - Group
-- Day of Week
+- Policy on a Secret
 - Role
-- Day of Week
+- Role Permission
 - Secret Access Role Permission
-- Day of Week
+- Secret Field
 - Secret has Field
-- Day of Week
+- Secret has RPC enabled
 - Secret Name
-- Day of Week
+- Secret Setting
 - Secret Template
-- Day of Week
+- Site
 - Target User: Two Factor Type
 - Two Factor Type
 
@@ -62,25 +62,25 @@ The current user policy filters:
 - Custom Variable
 - Day of Week
 - Event Time
-- Day of Week
+- Event User: Group
 - Event User: Has Two Factor
-- Day of Week
+- Event User: Role
 - Event User: Role Permission
-- Day of Week
+- Event User: Team
 - Event User: User Domain
-- Day of Week
+- Event User: User Last Login
 - Event User: User Setting
-- Day of Week
+- IP Address
 - Multi-Group
-- Day of Week
+- Target User: Group
 - Target User: Has Two Factor
-- Day of Week
+- Target User: Multi-Group
 - Target User: Role
-- Day of Week
+- Target User: Role Permission
 - Target User: Team
-- Day of Week
+- Target User: Two Factor Type
 - Target User: User Domain
-- Day of Week
+- Target User: User Setting
 - Two Factor Type
 
 Some filters prompt you for additional information when you select them.
@@ -112,69 +112,69 @@ The secret tasks are:
 - Add Custom Audit
 - Add Share
 - Assign Secret Policy
-- Add Share
+- Assigning Site to Secret
 - Change Password Remotely
-- Add Share
+- Change Secrets to not require a comment when viewed
 - Change Secrets to not require Check Out
-- Add Share
+- Change Secrets to require Check Out
 - Change Secrets to require Comment on View
-- Add Share
+- Change to Inherit Permissions
 - Delete
-- Add Share
+- Disable Auto Change
 - Disable Heartbeat
-- Add Share
+- Edit Share
 - Enable Heartbeat
-- Add Share
+- Expire Secrets
 - Fail with a message
-- Add Share
+- Hide Launcher Password
 - Move to Folder
-- Add Share
+- Post Slack Message (WebHook)
 - Retry with new random password
-- Add Share
+- Run Heartbeat
 - Run Script
-- Add Share
+- Schedule Pipeline
 - Secret: Add Custom Audit
-- Add Share
+- Secret: Add Share
 - Secret: Assign Secret Policy
-- Add Share
+- Secret: Assigning Site to Secret
 - Secret: Change Password Remotely
-- Add Share
+- Secret: Change Secrets to not require a comment when viewed
 - Secret: Change Secrets to not require Check Out
-- Add Share
+- Secret: Change Secrets to require Check Out
 - Secret: Change Secrets to require Comment on View
-- Add Share
+- Secret: Change to Inherit Permissions
 - Secret: Delete
-- Add Share
+- Secret: Disable Auto Change on Secret
 - Secret: Disable Heartbeat
-- Add Share
+- Secret: Edit Share
 - Secret: Enable Auto Change on Secret
-- Add Share
+- Secret: Enable Heartbeat
 - Secret: Expire Secrets
-- Add Share
+- Secret: Fail with a message
 - Secret: Move to Folder
-- Add Share
+- Secret: Retry with new random password
 - Secret: Run Heartbeat
-- Add Share
+- Secret: Send Email to Owners
 - Secret: Set Privileged Account
-- Add Share
+- Secret: Stop RPC
 - Secret: Undelete
-- Add Share
+- Secret: Update Secret by field
 - Secret: Update Secret Name
-- Add Share
+- Secret: Update Secret with a script
 - Secret: Viewing Password Does Not Require Edit
-- Add Share
+- Secret: Viewing Password Requires Edit
 - Send Email to Event User
-- Add Share
+- Send Email to Group
 - Send Email to List
-- Add Share
+- Send Email to Owners
 - Set Custom Variable
-- Add Share
+- Set Privileged Account
 - Stop RPC
-- Add Share
+- Undelete
 - Unhide Launcher Password
-- Add Share
+- Update Secret by field
 - Update Secret Name
-- Add Share
+- Update Secret with a script
 - Update Secrets to automatically change the password
 
 #### User Tasks
@@ -184,36 +184,36 @@ The user tasks are:
 - Post Slack Message (WebHook)
 - Run Script
 - Schedule Pipeline
-- Run Script
+- Send Email to Event User
 - Send Email to Group
-- Run Script
+- Send Email to List
 - Set Custom Variable
-- Run Script
+- Target User: Add User to Group
 - Target User: Add User to Team
-- Run Script
+- Target User: Disable Duo Two Factor
 - Target User: Disable Email Two Factor
-- Run Script
+- Target User: Disable FIDO2 Two Factor
 - Target User: Disable RADIUS Two Factor
-- Run Script
+- Target User: Disable TOTP Auth Two Factor
 - Target User: Disable Users
-- Run Script
+- Target User: Enable Duo Two Factor
 - Target User: Enable Email Two Factor
-- Run Script
+- Target User: Enable FIDO2 Two Factor
 - Target User: Enable RADIUS Two Factor
-- Run Script
+- Target User: Enable TOTP Auth Two Factor
 - Target User: Enable Users
-- Run Script
+- Target User: Force Logout
 - Target User: Lock User
-- Run Script
+- Target User: Remove User from Group
 - Target User: Remove User from Team
-- Run Script
+- Target User: Reset FIDO2 Two Factor
 - Target User: Reset TOTP Auth Two Factor
-- Run Script
+- Target User: Send Email to Target User
 - Target User: Unlock User
 
 ### Event Users
 
-An event user is the user making the action. For example: Admin updated user Jane's email. Admin is the event user.
+An event user is the user making the action. For example: Admin updated user Jane’s email. Admin is the event user.
 
 ### Event Variables
 
@@ -293,7 +293,7 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 - $EventUserDomain
 - $EventUserKnownAs
 - $EventUserName
-- $EventUserKnownAs
+- $EventUserLastLogin
 - $EventUserId
 
 ##### Target User
@@ -301,13 +301,13 @@ These can be any secret field name in the tbSecretField table that is not a Pass
 - $TargetUser.DisplayName
 - $TargetUser.IsApplicationAccount
 - $TargetUser.IsSystemUser
-- $TargetUser.IsApplicationAccount
+- $TargetUser.UserEmail
 - $TargetUser.UserEnabled
-- $TargetUser.IsApplicationAccount
+- $TargetUser.UserName
 - $TargetUserDomain
-- $TargetUser.IsApplicationAccount
+- $TargetUserId
 - $TargetUserKnownAs
-- $TargetUser.IsApplicationAccount
+- $TargetUserLastLogin
 - $TargetUserName
 
 #### Custom Task Variables
@@ -330,7 +330,7 @@ These are variables created with the EP task. There are two types, global and it
 
 ### Target User
 
-A target user is the affected user. Example: Admin updated user Jane's email. Jane is the target user.
+A target user is the affected user. Example: Admin updated user Jane’s email. Jane is the target user.
 
 ### Triggers
 
@@ -341,50 +341,50 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 - Access Approved
 - Access Denied
 - Cache View
-- Access Denied
+- Check In
 - Check Out
-- Access Denied
+- Copy
 - Create
-- Access Denied
+- Custom Audit
 - Custom Password Requirement Added To Field
-- Access Denied
+- Custom Password Requirement Removed From Field
 - Delete
-- Access Denied
+- Dependency Added
 - Dependency Deleted
-- Access Denied
+- Dependency Failure
 - Edit
-- Access Denied
+- Expired Today
 - Expires in 1 Day
-- Access Denied
+- Expires in 15 Days
 - Expires in 3 Days
-- Access Denied
+- Expires in 30 Days
 - Expires in 45 Days
-- Access Denied
+- Expires in 60 Days
 - Expires in 7 Days
-- Access Denied
+- Export
 - File Save
-- Access Denied
+- Heartbeat Failure
 - Heartbeat Success
-- Access Denied
+- Hook Create
 - Hook Delete
-- Access Denied
+- Hook Edit
 - Hook Failure
-- Access Denied
+- Hook Success
 - Launch
-- Access Denied
+- Password Change
 - Password Change Failed
-- Access Denied
+- Password Change Maximum Attempts Reached
 - Password Displayed
 - Pre-Check In
 
-  > **Note:** When using the Pre-Check In trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
+>**Note:** When using the Pre-Check In trigger, we recommend applying a group filter too. That trigger is a blocking call prior to secret check in that runs a script or causes the check in to fail with a warning. A problem arises when SS does the same check-in process for the system "user" in the background at the end of the checkout interval. When the Pre-Check In trigger causes the check in to fail with a warning, the SS background process continues to attempt check in forever, causing SS to disable the pipeline. Applying a group filter ensures the trigger does not apply to the system user.
 
 - Pre-Check Out
 - Secret Policy Change
 - Session Recording View
-- Secret Policy Change
+- Undelete
 - View
-- Secret Policy Change
+- Viewed Secret Edit
 - Web Password Fill
 
 #### User Triggers
@@ -392,19 +392,19 @@ EP *triggers* are events in SS that cause the EP to begin processing. All trigge
 - Added to Group
 - Challenge Applied
 - Challenge Cleared
-- Challenge Applied
+- Disable
 - Enable
-- Challenge Applied
+- Lockout
 - Login
-- Challenge Applied
+- Login Failure
 - Logout
-- Challenge Applied
+- Owners Modified
 - Remove Personally Identifiable Information
-- Challenge Applied
+- Removed From Group
 - Two Factor Changed
-- Challenge Applied
+- Two Factor Reset Failure
 - Two Factor Reset Success
-- Challenge Applied
+- User: Create
 - User: Edit
 - User: Password Change
 
@@ -464,8 +464,7 @@ To create a new EP:
 
    - Currently triggers are centralized around events that are linked to a secret.
    - You can add multiple triggers.
-
-   - Currently triggers are centralized around events that are linked to a secret.
+   - You can limit when the EP runs by adding filters.
    - Multiple triggers are logically ORed (not XORed) together. Each trigger is considered individually, and only one needs to apply for the EP to run—if concurrent triggers do not apply, it does not matter. If multiple triggers do apply, the EP will only run once per EP policy.
 
 1. Click the **Next** button. The Choose Filters page of the wizard appears.
@@ -588,7 +587,6 @@ To control if an EP policies is available, you can toggle the EP policy's active
    - **Create New Policy:** Click the selection button, and type a name in the **Policy Name** text box, and optionally type a description in the **Policy Description** text box.
    - **Import Policy:** Import an exported EP policy in JSON format. This can be a policy exported from a separate SS instance. Click the selection button, and paste the JSON payload in the **Add Policy** text box, click the **Create** button.
    - **Duplicate Selected Policy:** Copy an existing EP policy. Click the selection button, and then click the **Create** button.
-
     The new EP appears in the Event Pipeline Policies list.
 
 #### Monitoring Event Pipeline Policies

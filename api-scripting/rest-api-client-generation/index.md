@@ -21,7 +21,6 @@ Secret Server (SS) contains an OpenAPI Swagger specification file that describes
 
    - Namespace: SecretServerAuthentication
    - Inject HttpClient via constructor
-
    - Generate default values for properties
 
 1. Generate output.
@@ -34,7 +33,6 @@ Secret Server (SS) contains an OpenAPI Swagger specification file that describes
 
    - Namespace: SecretServerRestClient
    - Inject HttpClient via constructor
-
    - Generate default values for properties
 
 1. Generate output.
@@ -87,7 +85,6 @@ java -jar openapi-generator-cli.jar generate -i $tokenAuthSwagger -g csharp-netc
 (Get-Content -Path .\tokenauth-csharp\src\SecretServerTokenAuth\Model\WorkflowTemplateCreateArgs.cs) | Foreach-Object {$_ -replace 'this\.WorkflowType = workflowType \?\? throw new ArgumentNullException\("workflowType is a required property for WorkflowTemplateCreateArgs and cannot be null"\);;', 'this.WorkflowType = workflowType;'} | Set-Content -Path .\tokenauth-csharp\src\SecretServerTokenAuth\Model\WorkflowTemplateCreateArgs.cs
 (Get-Content -Path .\tokenauth-csharp\src\SecretServerTokenAuth\Model\Sort.cs) | Foreach-Object {$_ -replace 'this\.Direction = direction \?\? throw new ArgumentNullException\("direction is a required property for Sort and cannot be null"\);;', 'this.Direction = direction;'} | Set-Content -Path .\tokenauth-csharp\src\SecretServerTokenAuth\Model\Sort.cs
 ```
-
 6. For Mac (untested):
 
 ```shellscript

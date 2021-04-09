@@ -19,7 +19,7 @@ The Personalize tab also contains settings that pertain to the type of launcher 
 - **Connect to Console:** Remote Desktop  (RD) may connect to the console session.
 - **Allow Access to Printers:** RD may access local printers.
 - **Allow Access to Drives**: RD may access drives connected to the local machine.
-- **Allow Access to Printers:** RD may access local printers.
+- **Allow Access to Clipboard:** RD may access the clipboard of the local machine.
 - **Use Custom Window Size:** Users may specify custom window height and width. Use Preferences refer to the user's settings under **Profile > Preferences** in the **Launcher** tab.
 
 Users may enable or disable these settings or to defer to what is configured in their user settings by selecting **Use Preferences**.

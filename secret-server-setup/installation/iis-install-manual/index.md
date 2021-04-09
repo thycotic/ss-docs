@@ -17,37 +17,64 @@ Thycotic products recommend the following roles and features to be installed on 
 - Web Server (IIS)\Web Server\Common HTTP Features
 
   - Default Document
-   - Directory Browsing
 
-  - Default Document
-   - Static Content
+  - Directory Browsing
 
-  - HTTP Redirection$1   - HTTP Logging$1   - Static Content Compression
+  - HTTP Errors
 
-  - Dynamic Content Compression$1   - Request Filtering
+  - Static Content
+
+  - HTTP Redirection
+
+- Web Server (IIS)\Web Server\Health and Diagnostics
+
+  - HTTP Logging
+
+- Web Server (IIS)\Web Server\Performance
+
+  - Static Content Compression
+
+  - Dynamic Content Compression
+
+- Web Server (IIS)\Web Server\Security
+
+  - Request Filtering
 
   - Windows Authentication
 
-  - .NET Extensibility 4.6
-   - .NET Extensibility 4.6
+- Web Server (IIS)\Web Server\Application Development
 
   - .NET Extensibility 4.6
-   - ISAPI Extensions
 
-  - ISAPI Filters$1   - IIS Management Console
+  - ASP.NET 4.6
 
-### Features$1   - .Net Framework 4.x
+  - ISAPI Extensions
+
+  - ISAPI Filters
+
+- Web Server (IIS)\Web Server\Management Tools
+
+  - IIS Management Console
+
+### Features
+
+- .NET Framework 4.x Features
+
+  - .Net Framework 4.x
 
   - ASP.NET 4.x
 
-  - HTTP Activation
-   - HTTP Activation
+- WCF Services
 
   - HTTP Activation
-   - TCP Port Sharing
 
-  - HTTP Activation
-   - Windows PowerShell 5.1
+  - TCP Activation
+
+  - TCP Port Sharing
+
+- PowerShell
+
+  - Windows PowerShell 5.1
 
 ## Step One: Windows Server 2012–2019 IIS Installation
 
@@ -78,6 +105,7 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
 1. In the **Features** list, Click to select the following checkboxes (If necessary, click the **Add Features** button when prompted):
 
    - .NET Framework 4.x Features \> WCF Services \> **HTTP Activation**
+
    - .NET Framework 4.x Features \> WCF Services \> **TCP Activation**
 
 1. Click the **Next** button. The Web Server Role (IIS)  window appears.
@@ -89,6 +117,7 @@ To install Internet Information Services (IIS) Manager on Windows Server 2016, y
    >**Note:** Leave all the auto-selected check boxes as is.
 
    - Web Server (IIS) \> Web Server \> Common HTTP Features \> **HTTP Redirection**
+
    - Web Server (IIS) \> Web Server \> Performance \> **Dynamic Content Compression**
 
    - Web Server (IIS) \> Web Server \> Security \> **Windows Authentication**
@@ -170,6 +199,7 @@ Procedure:
 1. Open **Internet Information Server (IIS) Manager**:
 
    - If you are using Windows Server 2012 or Windows Server 2012 R2: On the taskbar, click **Server Manager \> Tools \> Internet Information Services (IIS) Manager**.
+
    - If you are using Windows Server 2008 or Windows Server 2008 R2: On the taskbar, click **Start \> Administrative Tools \> Internet Information Services (IIS) Manager**.
 
 1. In the **Connections** pane, expand the server name.

@@ -67,7 +67,6 @@
      1. Audit events occur when:
 
         - The team is created
-   - General tab: name, description, or active status is changed
-
-        - The team is created
-   - Members: users or groups are added or removed
+        - General tab: name, description, or active status is changed
+        - Sites tab: restrictions are added, removed, or changed
+        - Members: users or groups are added or removed

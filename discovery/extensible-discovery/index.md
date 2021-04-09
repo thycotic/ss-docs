@@ -19,7 +19,7 @@ Creating a discovery source using scripted scanners can be a lot of work to set 
 - Discover configuration files containing passwords and automatically add them as dependencies.
 - Scan computers not joined to the domain.
 - Create "dependencies" that run a SQL, SSH, or PowerShell script when a secret's password changes to log events to an external source, such as an external auditing system or an external monitoring system).
-- Scan computers not joined to the domain.
+- Record information not currently imported by local account discovery  a custom fields in a secret template.
 - Discover SQL Server logins as "local accounts" and import them as SQL Server account secrets.
 
 > **Note:** To run PowerShell scanners against machines for local account and dependency discovery, you may need to configure WinRM and CredSSP. See [Configuring WinRM for PowerShell](../../api-scripting/configuring-winrm-powershell/index.md) and [Configuring CredSSP for WinRM with PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md)

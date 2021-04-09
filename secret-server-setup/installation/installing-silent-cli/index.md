@@ -17,7 +17,7 @@ Important considerations:
 - Always pass `-q -s` to `ThycoticSetup.exe` and then pass in your parameters or switches.
 - There are two stages to the installer. The first (optional) stage is to install the prerequisites such as IIS and .NET 4.8. Then in a second stage, once all required pre-reqs are present, you can install Secret Server (SS) or Privilege Manager (PM).
 - The installer UI performs additional validation steps, such as testing the database connection information, that a silent CLI one does not. Thus, this install can fail if you provide incorrect settings.
-- There are two stages to the installer. The first (optional) stage is to install the prerequisites such as IIS and .NET 4.8. Then in a second stage, once all required pre-reqs are present, you can install Secret Server (SS) or Privilege Manager (PM).
+- The installer checks to see if SS and PM are already installed by default. It will install them if either is not found. If you would like to specify which applications to install, you must use the `/nodetect` switch to avoid the automatic detection, so the `InstallSecretServer` and `InstallPrivilegeManager` settings are respected.
 - Due to how MSI installers work, if you need to pass in parameters that contain spaces, use the special `CMDLINE` parameter, using extra double quotes to delineate each parameter. For instance:
 
   `ThycoticSetup.exe -q -s PARAM1=some_string PARAM2=1234 CMDLINE=" PARAM3=""Something with a space"" PARAM 4=""Another value with spaces"" "`
@@ -33,7 +33,7 @@ Important considerations:
 
 ## Install Prerequisites
 
-As of SS 10.11, you can silently install all required prerequisites. These are the same prerequisites the "Fix Issues" button in the installer UI fixes. The important difference is missing prerequisites are not auto detected—you must tell the installer which ones you want installed. Older versions will not do a silent command line installation unless these necessary prerequisites are already installed.
+As of SS 10.11, you can silently install all required prerequisites. These are the same prerequisites the “Fix Issues” button in the installer UI fixes. The important difference is missing prerequisites are not auto detected—you must tell the installer which ones you want installed. Older versions will not do a silent command line installation unless these necessary prerequisites are already installed.
 
 ### Parameters
 
@@ -68,7 +68,7 @@ As of SS 10.11, you can silently install all required prerequisites. These are t
 
 Secret Server or Privilege Manager can be installed and pre-configured using these parameters. If the required prerequisites are not already present, the installer exits. They can both be installed at the same time but will then share the same database and email settings.
 
-If you need more control over configuring the website, you can create a site and configure it in advance (that is, using IIS's `AppCmd.exe`), and then pass the preconfigured website name as `SecretServerSiteName` or `PrivilegeManagerSiteName`.
+If you need more control over configuring the website, you can create a site and configure it in advance (that is, using IIS’s `AppCmd.exe`), and then pass the preconfigured website name as `SecretServerSiteName` or `PrivilegeManagerSiteName`.
 
 ### Secret Server Parameters
 
@@ -88,7 +88,7 @@ If you need more control over configuring the website, you can create a site and
 | `SecretServerSitePort` | Integer | Optional | HTTP port. If using the default website, this port HTTP binding is in addition to any defaults. |
 | `SecretServerUserDisplayName` | String | None | The display name for `SecretServerUserName`. |
 | `SecretServerUserEmail` | String | None | The email address for `SecretServerUserName`. |
-| `SecretServerUserName` | String | None | The initial SS administrator user. If not set, once Secret Server is installed, the first person to visit the website will  be able to pick the details on the "Create Initial Administrator" page. |
+| `SecretServerUserName` | String | None | The initial SS administrator user. If not set, once Secret Server is installed, the first person to visit the website will  be able to pick the details on the “Create Initial Administrator” page. |
 | `SecretServerUserPassword` | String | None | The password for `SecretServerUserName`. |
 []()
 

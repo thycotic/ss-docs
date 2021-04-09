@@ -37,6 +37,7 @@ Depending on how your administrators configured SS, you can log on with either y
 2. On the login screen, enter your:
 
    - Active Directory username (or local one if you do not have one)
+
    - Active Directory password (or local one if you do not have one)
 
 3. Select the your domain from the **Domain** dropdown list. If you do not have an AD domain, select **Local** instead.
@@ -60,7 +61,7 @@ _Secrets_ are individually named packets of sensitive information, such as passw
 - Ensuring passwords are long, complex, and frequently changed.
 - Relieving users of having to remember numerous complex passwords or when to change them. You only need to remember your password to access SS. All of your secret passwords are managed for you.
 - Automatically changing passwords at set intervals with no user intervention.
-- Relieving users of having to remember numerous complex passwords or when to change them. You only need to remember your password to access SS. All of your secret passwords are managed for you.
+- Defining who has access to the secret.
 - Ensuring the person accessing SS or a secret is indeed you.
 - Recording who actually accessed a secret.
 
@@ -71,7 +72,7 @@ Some important basic information about secrets:
 - [Viewing Secrets](../secret-management/procedures/viewing-secrets/index.md) (includes checking expiration and history)
 - [Creating Secrets](../secret-management/procedures/creating-secrets/index.md)
 - [Secret Configuration Options](../secret-management/secret-configuration-options/index.md)
-- [Creating Secrets](../secret-management/procedures/creating-secrets/index.md)
+- [Editing Secrets](../secret-management/procedures/editing-secrets/index.md) (includes manually changing passwords, instead of waiting for expiration)
 - [Deleting and Undeleting Secrets](../secret-management/procedures/deleting-and-undeleting-secrets/index.md)
 
 ## Secret Folders

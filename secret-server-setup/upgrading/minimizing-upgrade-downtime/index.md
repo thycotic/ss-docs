@@ -339,8 +339,7 @@ To support the manual rolling upgrade, there is a new audit type—ManualUpgrade
 - CANCEL
 - COMPLETED
 - GENERATE DB SCRIPT
-- COMPLETED
+- GENERATE UPGRADE ZIP
 - STAGING TEST
-- COMPLETED
+- STARTED
 - VERIFY DELTAS
-

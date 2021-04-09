@@ -13,9 +13,9 @@ To specify a before- or after-checkout hook, click **Create New Hook** and speci
 - **Before/After:** Whether the PowerShell script should run before or after the event action.
 - **Event Action:** The hook runs at either check in or checkout.
 - **Name:** A descriptive name for the hook.
-- **Event Action:** The hook runs at either check in or checkout.
+- **Description:** An extended description for the purpose of the hook.
 - **PowerShell Script:** Administrator-created PowerShell script to run.
-- **Event Action:** The hook runs at either check in or checkout.
+- **Arguments:** Any command line arguments to pass to the PowerShell script.
 - **Stop on Failure:** If enabled, SS prevents the event action if the script returns an error. For example, if "Stop on Failure" is selected for a checkout action, then SS prevents the user from checking out the secret if the script fails.
 - **Privileged Account:** If needed, the script can run as another secret's identity.
 
@@ -30,12 +30,12 @@ The variables are:
 **Table:** Checkout User Variables for Scripts:
 
 | Variable                    | User Action Returns            | Automated Task Returns |
-| --------------------------- | ------------------------------ | ---------------------- |
-| `$SECRETSERVERUSERID`       | Logged-on user's ID            | -1                     |
-| `$SECRETSERVERUSERNAME`     | Logged-on user's name          | "System"               |
-| `$SECRETSERVERDISPLAYNAME`  | Logged-on user's display name  | "System"               |
-| `$SECRETSERVEREMAILADDRESS` | Logged-on user's email address | Empty string           |
+| -- | -- | -- |
+| `$SECRETSERVERUSERID`       | Logged-on user’s ID            | -1                     |
+| `$SECRETSERVERUSERNAME`     | Logged-on user’s name          | “System”               |
+| `$SECRETSERVERDISPLAYNAME`  | Logged-on user’s display name  | “System”               |
+| `$SECRETSERVEREMAILADDRESS` | Logged-on user’s email address | Empty string           |
 
 []()
 
-> **Note:** You can find the regular "system" variables in the [Editing Custom Commands](../../remote-password-changing/custom-password-changers/editing-custom-commands/index.md) subsection of the Custom Password Changers section.
+> **Note:** You can find the regular “system” variables in the [Editing Custom Commands](../../remote-password-changing/custom-password-changers/editing-custom-commands/index.md) subsection of the Custom Password Changers section.

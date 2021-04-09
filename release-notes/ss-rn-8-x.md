@@ -20,15 +20,15 @@ _Release Date: 3/8/2016_
 - Fixed issue where domain password changing failed when target credential was on different domain than Secret Server and no privileged account was used
 - Fixed issue with running Discovery over LDAPS
 - Fixed issue where nested groups would not import correctly in AD synchronization when the group is nested within multiple AD groups
-- Fixed issue with running Discovery over LDAPS
+- Fixed issue where Folder was not added to the Dependency when importing Scheduled Tasks through Discovery
 - Fixed issue where scheduled task discovery could get incorrectly marked with an error and prevent import
-- Fixed issue with running Discovery over LDAPS
+- Fixed authentication issues when using the Web Password Filler with Integrated Windows Authentication
 - Fixed RDP proxying error when using FIPS compliance mode
-- Fixed issue with running Discovery over LDAPS
+- Fixed Session Launcher error if TLS 1.0 is disabled on the web server.
 - Fixed Discovery issue when scanning using credentials from a different domain.
-- Fixed issue with running Discovery over LDAPS
+- Fixed issue where new domain users were not getting a personal folder.
 - Fixed issue where Distributed Engine could create excessive database entries for background threads
-- Fixed issue with running Discovery over LDAPS
+- Oracle Script Dependencies will now ignore extra parameters passed in from Secret Server
 - Fixed potential error during upgrade if there were users that had never logged in
 
 ### Security Fixes
@@ -49,7 +49,11 @@ _Release Date: 1/13/2016_
   - When target systems disallow certain characters, users can now set a rule for which characters a generated password is allowed to start with.
 
 - Dates are now stored in UTC format
-  - Customers with servers in different time zones no longer need to set the servers to use the same timezone or UTC time. Existing dates in the database will be retrofitted to UTC if the web server is not already in UTC time.$1   - Improved installer to pre-configure IIS and .NETfor fresh installation
+  - Customers with servers in different time zones no longer need to set the servers to use the same timezone or UTC time. Existing dates in the database will be retrofitted to UTC if the web server is not already in UTC time.
+
+- Installer updates<br>
+
+  - Improved installer to pre-configure IIS and .NETfor fresh installation
   - Added configuration wizard for the initial setup of Secret Server
   - New users will see a dashboard overlay highlighting key features.
 
@@ -92,11 +96,11 @@ _Release Date: 10/1/2015_
 - Added NAS attributes to the RADIUS messages.
 - The SonicWALL Web Admin and SonicWALL Web Local User password changers have an option to validate or bypass remote SSL certificates.
 - The RDP Session Launcher now shows the end target machine name in the RDP window when RDP Proxying is used.
-- The SonicWALL Web Admin and SonicWALL Web Local User password changers have an option to validate or bypass remote SSL certificates.
+- Logging to the Remote Password Change log when a Secret isn't changed because it's outside its AutoChange Scheduled time is now only logged once.
 - Added new option for Active Directory Discovery Sources to resolve based on machine name only.
-- The SonicWALL Web Admin and SonicWALL Web Local User password changers have an option to validate or bypass remote SSL certificates.
+- Added new options for how the custom process launcher runs to help handle UAC prompts.
 - SSH, SQL, and PowerShell Dependencies can now use the $CURRENTPASSWORD token.
-- The SonicWALL Web Admin and SonicWALL Web Local User password changers have an option to validate or bypass remote SSL certificates.
+- Updated the web password filler to prioritize exact matches in the search results to help show matching Secrets when on sub-domains.
 - IP Address Restrictions can now be applied to Active Directory Groups.
 
 ### Bug Fixes
@@ -104,19 +108,19 @@ _Release Date: 10/1/2015_
 - Fixed issue where Dashboard would not display in Firefox 41.
 - Fixed performance issue some customers were seeing after upgrades to 8.9.
 - Fixed issue where SSH Dependencies were suppressing the full error details.
-- Fixed performance issue some customers were seeing after upgrades to 8.9.
+- Fixed issue where SSH connections were not being closed after Heartbeat.
 - Fixed test dialog for custom UNIX password changers with linked Secrets.
-- Fixed performance issue some customers were seeing after upgrades to 8.9.
+- Fixed incorrect display of the SSH Log link in Secret Audit trails.
 - Fixed issue where pressing enter in the quick search area when viewing a Secret would run the Secret Launcher in some browsers.
-- Fixed performance issue some customers were seeing after upgrades to 8.9.
+- Secret Server will no longer override root level IIS HTTP Redirects on upgrade.
 - Fixed issue where the Web Password Filler didn't work with SAML integration.
-- Fixed performance issue some customers were seeing after upgrades to 8.9.
+- Fixed error in test dialog for custom UNIX password changers when no key was present.
 - Fixed copy to clipboard issue in IE11.
-- Fixed performance issue some customers were seeing after upgrades to 8.9.
+- Fixed issue where hitting Enter on Secret Edit would prompt to generate a new password.
 - Fixed password strength error alert on Secret View.
-- Fixed performance issue some customers were seeing after upgrades to 8.9.
+- Fixed issue where SSH Discovery would leave hanging sshd processes on AIX instances.
 - Fixed issue where duplicate Active Directory discovery sources could be created. Security Fixes
-- Fixed performance issue some customers were seeing after upgrades to 8.9.
+- Fixed security issue with update checks with update process. See our security advisory for more details.
 - NOTE: It is recommended to perform an offline upgrade to 8.9.000022\. See this KB article for instructions on performing offline upgrades. Upgrading Without Outbound Access
 - Fixed DOM XSS issue.
 
@@ -132,7 +136,11 @@ _Release Date: 8/7/2015_
   - Distributed Engine is a NEW feature. All existing customers will receive unlimited Sites to replace our Agent feature. A Site can be assigned to a Secret or a Discovery Source.
   - Discovery can be run through the Sites to provide discovery on remote sites.
   - Customers using Agents will need to install an additional service. Review this KB and this KB prior to upgrade.  PLEASE NOTE: After upgrading, Secret Server will automatically upgrade all Agents to Sites. Agents will not be available after upgrading to 8.9.
-  - API Change: The web service method "AssignToAgent" has renamed to "AssignSite". Use the new method, or use Secret Policy to assign Sites to Secrets.$1   - All existing customers will receive enhanced performance through our new Engine technology. Engines are installed on remote networks and are grouped by Site in Secret Server. The new Engines will provide improved performance for Heartbeat, Remote Password Changing, and Discovery. See this KB for additional information on configuration of Distributed Engine:Distributed Engine KB Overview.
+  - API Change: The web service method "AssignToAgent" has renamed to "AssignSite". Use the new method, or use Secret Policy to assign Sites to Secrets.
+
+- Distributed Engine – ENGINES<br>
+
+  - All existing customers will receive enhanced performance through our new Engine technology. Engines are installed on remote networks and are grouped by Site in Secret Server. The new Engines will provide improved performance for Heartbeat, Remote Password Changing, and Discovery. See this KB for additional information on configuration of Distributed Engine:Distributed Engine KB Overview.
 
 - RDP Proxying
   - RDP Sessions can now be proxied through Secret Server.
@@ -159,9 +167,9 @@ _Release Date: 8/7/2015_
 - Fixed issue with SSH Proxying when using the Safenet HSM.
 - Fixed issue where the IsFile element in the XML export was not properly set.
 - Fixed issue where SSH Dependencies would attempt to use a password first even when a key was set.
-- Fixed issue where the IsFile element in the XML export was not properly set.
+- Fixed issue where the Dependency Discovery Import did not apply Secret Policy for newly created Secrets.
 - Fixed issues with web password filler in IE 11 enterprise mode.
-- Fixed issue where the IsFile element in the XML export was not properly set.
+- Fixed issue where testing SSH scripts would not use a test SSH key for authentication.
 - Fixed memory issues in Scheduled Task Discovery.
 
 ## Release Notes 8.8.000020
@@ -184,7 +192,7 @@ _Release Date: 3/16/2015_
 - Added Per Secret Key Encryption
 - Administrators can rotate these keys periodically (Enterprise Plus). For more information please refer to this KB article on Secret key rotation.
 - Updated local user hashed passwords to use PBKDF2 going forward.
-- Administrators can rotate these keys periodically (Enterprise Plus). For more information please refer to this KB article on Secret key rotation.
+- Administrators can now choose an RSA key size when configuring the HSM integration.
 - Managing Dependencies on a Secret now only requires Edit access to the Secret. Importing Service Accounts from Discovery requires Edit on the Folder the Secrets will be created in.
 
 ### Bug Fixes
@@ -207,7 +215,7 @@ _Release Date: 2/10/2015_
 - Added new extended mapping for specifying a public key digest when connecting to a server for password changing, Heartbeat, Discovery, or through a Launcher. If the public key digest is present, it will be validated. For more information, see our Security Advisory and KB article on how to add public keys.
 - Fixed performance issues with Web Password Filler, caused by many Secrets containing matching URLs.
 - Fixed issue where Secrets that have an Auto Change Schedule might not change if there are many Secrets failing password changing.
-- Fixed performance issues with Web Password Filler, caused by many Secrets containing matching URLs.
+- Fixed issue where the Regex file dependency wouldn't work with a privileged account on an untrusted domain.
 - Fixed issue where Active Directory Synchronization wouldn't find users on a domain if a group being synchronized had zero members.
 
 ## Release Notes 8.8.000001
@@ -242,17 +250,17 @@ _Release Date: 2/10/2015_
 - Added a new widget for managing access requests.
 - Approvers can now set a start time for an approval for access request.
 - Approvers are now required to enter a reason when approving an access request within Secret Server.
-- Approvers can now set a start time for an approval for access request.
+- Added a new role permission Administer Create Users for creating users only. To edit user accounts, administrators will still need the Administer Users role permission.
 - Maximum Attempts can now be set for Password Changing on the Secret Template.
-- Approvers can now set a start time for an approval for access request.
+- A custom field for displaying to users on the Basic Home can now be set on the Secret Template.
 - The Protocol Handler is now the default launcher option for fresh installations of Secret Server.
-- Approvers can now set a start time for an approval for access request.
+- Computers not in specified OU's for an Active Directory Discovery Source will no longer be shown on the Discovery Network View.
 - Added enrollment URL for Duo authentication for when the user is not enrolled.
-- Approvers can now set a start time for an approval for access request.
+- Added support for control characters in the SSH command sets.
 - Added support for Secret values in the Approval for Access email customization.
-- Approvers can now set a start time for an approval for access request.
+- Added a Administer Create Users role permission which gives user account creation permissions only. Administer Users role permission still allows an admin to create and edit user accounts.
 - Added View Audit button on the Dashboard Secret view for users that have the View Audit role permission but not the View Secret role permission.
-- Approvers can now set a start time for an approval for access request.
+- Syslog change: Syslog events now pass the Username instead of the Display Name of the user. Display Name has been moved to cs4 and cs4label fields. Please refer to the syslog guide for full field listing.
 - NOTE: 8.8 supports running Secret Server on Windows Server 2008, but support for this will be deprecated in a future version of Secret Server. Server 2008 R2 will continue to be supported.
 - Fixed an issue that would allow users with permissions to view a Secret to access the password history directly without going through Check Out or Approval for Access flows THY-SS-002.
 
@@ -261,21 +269,21 @@ _Release Date: 2/10/2015_
 - Custom proxied SSH Launchers can now use custom fields in process arguments
 - Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
 - Fixed issues with folder searching in some dialogs.
-- Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
+- Fixed bug where an admin could not add application accounts if the user count was already at the licensing limit.
 - Fixed issue where the some OU's could not be selected in a Discovery Source when there were several OU's named similarly on the domain.
-- Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
+- Fixed issue where a failed password change on check in would write additional audits for Secret Set for Check In.
 - Fixed memory issues in scheduled task discovery.
-- Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
+- Updated the query to retrieve computers from the domain to only return computers in specified OU's.
 - Fixed issues with Active Directory Sync connection failures potentially disabling users.
-- Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
+- Fixed issue with using the attempt user password setting for RADIUS and integrated windows authentication.
 - Fixed issue when creating a folder shared with hundreds of users and groups.
-- Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
+- Fixed workflow issues in web password filler when a Secret has check out or other security settings applied.
 - Fixed issue where web password filler would not work properly if the URL was extremely long.
-- Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
+- Tokens are now supported for use with Duo Security.
 - Events written to the Windows Event Log now have unique identifiers.
-- Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
+- Fixed performance issues in dashboard searching for deep folder structures.
 - Fixed searching behavior where a found value is on multiple Secret fields.
-- Fixed issues where Secrets created through the web password filler would not respect default field values or Secret Policy settings.
+- Fixed issue in dashboard searching where a backslash in the search terms would not return results in Firefox only.
 - Fixed display issue on Service Account Discovery when using an account to run the scan on a child domain.
 - Fixed URL encoding issues on the Basic Dashboard.
 
@@ -300,11 +308,11 @@ _Release Date: 2/10/2015_
 - There is a new option to delete secrets shown in a report.
 - Added password masking in all entry fields
 - Folder deletes and renames are now audited.
-- Added password masking in all entry fields
+- RADIUS authentication now handles multiple consecutive access challenges.
 - Added support for Duo Security as a two-factor option.
-- Added password masking in all entry fields
+- Added support for optionally using a user's login password as the RADIUS password if prompted.
 - Added search bar for web password filler to filter returned Secrets.
-- Added password masking in all entry fields
+- Unmasked passwords on Secrets now use a different font to help distinguish between certain similar characters.
 - Added option to specify a Secret for running Discovery in Active Directory Sources rather than using the Active Directory Synchronization credentials.
 - Added "Password Changed" event subscription event.
 
@@ -313,21 +321,21 @@ _Release Date: 2/10/2015_
 - SSH Proxy now respects the client terminal type settings.
 - Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
 - Fixed an issue where the launcher may not start when configured to use a protocol handler in Chrome and Firefox.
-- Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
+- Users will be able to see the name of the privileged account on the Secret if they do not have access to it.
 - Logging in via the Windows Authenticated Web Services now sets the Last Login on the user.
-- Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
+- Enable Approval from Email is no longer on the Security Hardening report for editions without Approval for Access available.
 - Fixed issue where an admin in unlimited admin mode would bypass entering in a comment when both Check Out and Require Comment were enabled on a Secret.
-- Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
+- Fixed issues with the Web Password Filler in IE8.
 - Fixed issue where failover with the web servers could occur even if clustering was disabled.
-- Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
+- Fixed issue where there were inconsistent permission checks for adding and deleting between the web interface and the web service methods.
 - Fixed issue where the MSI installer would not detect a local SQL 2014 instance.
-- Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
+- Fixed issue where a file could be uploaded to a non-File field using the web service API.
 - Fixed issue where service account import could fail because the saved folder no longer exists.
-- Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
+- Fixed issue where Check Out and Require Comment workflows could send a user back to the dashboard instead of to the Secret.
 - Fixed error where email report options were available when no SMTP server was set.
-- Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
+- Fixed issue where the SalesForce password changer would not correctly work on sandbox instances.
 - Fixed incorrect display of line breaks in Notes fields on the Basic Dashboard view.
-- Users can now edit notes fields in cases where they do not have access to the privileged account on the Secret.
+- Windows account discovery now uses the LastLoginTimestamp AD attribute rather than LastLogin to better support replicated domains.
 - Fixed performance issues on Dashboard when loading large numbers of Secrets.
 - Fixed issue where Access Request approvals could not be accessed by Email.
 
@@ -345,9 +353,9 @@ _Release Date: 2/10/2015_
 - Fixed security issues reported by a customer. This report was acknowledged within 24 hours.
 - Added built-in support for HTTP Strict Transport Security (HSTS).
 - Improved performance of loading dashboard for very large installations.
-- Added built-in support for HTTP Strict Transport Security (HSTS).
+- Administrators can now disable HTTP GET functionality for web services.
 - Added additional HTTP headers to improve Secret Server's security policies.
-- Added built-in support for HTTP Strict Transport Security (HSTS).
+- Added additional options to the new Theme Roller to change font size and padding between elements.
 - Added new web service methods for adding dependencies to Secrets.
 
 ### Bug Fixes
@@ -369,17 +377,17 @@ _Release Date: 2/10/2015_
 - Added Personal Folders option for users to store work related Secrets. These are only accessible by a named user by default, but can be accessed in Unlimited Admin mode by an administrator.
 - Added support for mobile app authenticator soft tokens for Two-Factor.
 - Added a built in SSH password changer for F5 root accounts.
-- Added support for mobile app authenticator soft tokens for Two-Factor.
+- Added a Salesforce password changer. See this KB article for more information.
 - DoubleLocked Secrets can now be accessed through web services.
-- Added support for mobile app authenticator soft tokens for Two-Factor.
+- Added a new option to run Local Account Discovery using WMI, which can provide a performance boost in some environments where WMI is properly configured.
 - Added optional Domain Controller field to the LDAP based Password Changers: LDAP (Active Directory), LDAP (openLDAP), and LDAP (DSEE).
-- Added support for mobile app authenticator soft tokens for Two-Factor.
+- Reorganized the bulk operation drop down list for usability.
 - Added AssignUserToGroup and GetAllGroups API methods.
-- Added support for mobile app authenticator soft tokens for Two-Factor.
+- When proxying is enabled users can manually make a connection to Secret Server using the get proxy credentials API method or button on Secret.
 - SSH Proxying can now be specified on a per node basis for clustered environments.
-- Added support for mobile app authenticator soft tokens for Two-Factor.
+- Check Out and Approval for Access end times are now synchronized. A user will not be able to keep a Secret checked out past the approval period end time.
 - Added in a configuration option for whether launched sessions automatically close on Check In.
-- Added support for mobile app authenticator soft tokens for Two-Factor.
+- Added additional logging and event subscriptions for when DPAPI encryption is enabled or disabled.
 - Improved performance for the SearchSecrets API call.
 - Cluster computer objects are now ignored by default in Discovery.
 
@@ -388,19 +396,19 @@ _Release Date: 2/10/2015_
 - Added extra error handling to the Discovery process.
 - Fixed issue with running user audit report with the Exclude Changed and Deleted Secrets.
 - Updated the web password filler to handle different zones in IE. Due to security restrictions users may now be required to log in to the web password filler in addition to Secret Server. Other browsers are unaffected.
-- Fixed issue with running user audit report with the Exclude Changed and Deleted Secrets.
+- Fixed performance issues in reports with large amounts of data.
 - Fixed issue where the Secret Export incorrectly reflected the Secret count for a Folder.
-- Fixed issue with running user audit report with the Exclude Changed and Deleted Secrets.
+- Fixed date range search in Session Monitoring.
 - Fixed issue where automatic backups were not available in Express Edition.
-- Fixed issue with running user audit report with the Exclude Changed and Deleted Secrets.
+- Fixed issue with email two-factor in Express Edition.
 - Fixed issue where an incorrect SMTP configuration could cause an Application Pool Recycle.
-- Fixed issue with running user audit report with the Exclude Changed and Deleted Secrets.
+- Fixed issue where bat file launcher would require a port field when mapping to the Secret Template.
 - Fixed issue where bat file launcher did not handle parameters enclosed in double quotes correctly.
-- Fixed issue with running user audit report with the Exclude Changed and Deleted Secrets.
+- Added performance enhancements for session video processing.
 - Secret fields marked as Exposed for Display on the Template will no longer have their history encrypted for consistency and reporting.
-- Fixed issue with running user audit report with the Exclude Changed and Deleted Secrets.
+- Fixed paging on Report Schedule History grid.
 - The Out of Sync Report now shows the reason in the saved report.
-- Fixed issue with running user audit report with the Exclude Changed and Deleted Secrets.
+- Added additional error handling for RADIUS authentication.
 - Added additional error handling for Discovery machine scanning.
 
 ## Release Notes 8.5.000000
@@ -416,21 +424,21 @@ _Release Date: 2/10/2015_
 - Session Monitoring: The Session Monitoring administrators can now view sessions launched from Secret Server, watch activity, and even terminate the session or send a message to the end-user while the session is in progress.
 - SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
 - Discovery and Password Change Performance: Speed of Discovery scanning, password changing and Heartbeat checks are significantly faster for management of very large environments.
-- SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
+- Session Recording Retention: New configuration options are available for moving stored session movies out of the database and establishing a retention period.
 - Group Owners: Owners can now be assigned to local groups. Group owners can manage membership for the group.
-- SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
+- Added support for PostgreSQL password changing.
 - Added support for custom ODBC based password changing.
-- SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
+- Session Recording now uses differential images to reduce network bandwidth and database size.
 - Added new Video Codec option for Microsoft Video 9, which provides high levels of compression.
-- SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
+- Secret Audits now include field and setting names that were changed.
 - Automatic Backups now support Copy-Only database backups.
-- SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
+- User Audit report now has option to exclude deleted Secrets.
 - Added new search options to help performance for choosing groups for Active Directory Synchronization.
-- SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
+- User drop down on User Audit report will properly switch to an autocomplete based on user count.
 - Passwords are now masked on Secret Edit.
-- SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
+- Secret Check In will now terminate any open launched sessions.
 - Added configuration option to check in Secrets when a launcher session is closed..
-- SSH Proxy: SSH Launchers can now be proxied through Secret Server. Admins can review full SSH logs of proxied sessions as part of the Session Recording feature.
+- Added P3P policy to help with cross domain issues with the Web Password Filler in IE.
 - Added new configuration option to specify a custom Secret Server URL for use by the Session Launchers and Emails. This is for cases when Secret Server is behind a proxy or load balancer and a client machine cannot resolve the Secret Server web server name.
 
 ### Bug Fixes
@@ -438,11 +446,11 @@ _Release Date: 2/10/2015_
 - Fixed issue with Scheduled Task Discovery on Windows Server 2003.
 - Added additional checks to installer to help validate access to update files.
 - Fixed a performance issue with Service Account Discovery attempting to resolve domains.
-- Added additional checks to installer to help validate access to update files.
+- Fixed issue with searching inside Folders on Dashboard with query string parameters.
 - Fixed improper display of Edit button on custom reports.
-- Added additional checks to installer to help validate access to update files.
+- Web service view audits now respect the Secret View interval in configuration.
 - Fixed issue where disabling check out did not clear the user it was checked out to.
-- Added additional checks to installer to help validate access to update files.
+- Fixed issue with bulk operation for Set Privileged Account when setting to "Credentials on Secret".
 - Fixed issue where user could get an error on the Hooks tab of Check Out Secrets when not assigned the Owner permission.
 - Fixed issue in 8.4 where scheduled task dependencies could be disabled from Service Account Discovery. If the instance has Service Account Discovery for tasks running these dependencies will be re-enabled. Please contact support if there are issues with Scheduled Task dependencies staying disabled.
 
@@ -460,9 +468,9 @@ _Release Date: 2/10/2015_
 - Fixed variable replacement for custom launchers in some cases when field names contained other field names.
 - Added additional database connection properties for MS SQL Always On configuration.
 - Fixed issue where the background processing of expired Secrets for password changing could overwrite changes in the UI in certain cases.
-- Added additional database connection properties for MS SQL Always On configuration.
+- Fixed issue where a custom report with a Secret ID column would cause an error if there was a row with no Secret ID value.
 - Added performance enhancements for the GetSecretsByFieldValue web service method.
-- Added additional database connection properties for MS SQL Always On configuration.
+- Fixed potential upgrade issue for customers upgrading from versions below 7.9.000012.
 - Fixed issue where copy to clipboard for Internet Explorer 10 and 11 would cause the page to scroll to the top.
 
 ## Release Notes 8.4.000000
@@ -484,9 +492,9 @@ _Release Date: 2/10/2015_
 - The Secret Server Launcher can now be optionally run using a Protocol Handler instead of Microsoft ClickOnce. This may be needed in some virtualized environments where ClickOnce does not function properly. You can read about the Protocol Handler configuration here
 - Added performance improvements for Dashboard search.
 - Added option to force expire Secrets from any report with a Secret Id column.
-- Added performance improvements for Dashboard search.
+- User Bulk Operations are now available.
 - Added new User preference and Secret preference for the size of the launched Remote Desktop Window..
-- Added performance improvements for Dashboard search.
+- Web Service Change: The Secret object used in the Web Service API has new fields in the SecretSettings section for setting privileged Secrets for RPC. This is documented in the Web Service API Guide .
 - .NET 3.5 SP1 Support
   - This will be the last minor version of Secret Server to run on .NET 3.5.1\. The next subsequent minor version (8.5) will require the .NET Framework 4.5.1\. You can read more about why this move is happening in this KB Article
 
@@ -495,19 +503,19 @@ _Release Date: 2/10/2015_
 - Secret IDs on reports are now links, not link buttons.
 - Reports on Dashboard now show rows with background colors if specified.
 - Fixed error when viewing a secret set for check out by the bulk operation and a next password was already specified.
-- Reports on Dashboard now show rows with background colors if specified.
+- Fixed issue where viewing the password history would not produce an audit for password displayed.
 - Fixed issues with password changing for Oracle accounts without the Alter User privilege.
-- Reports on Dashboard now show rows with background colors if specified.
+- Fixed potential issues with Service Account Discovery importing duplicate dependencies.
 - Fixed issue where the password strength indicator on Secret View could be incorrect.
-- Reports on Dashboard now show rows with background colors if specified.
+- Fixed issues with Dependencies not matching correctly in Discovery if the username format was different.
 - Fixed issues with Service Account Discovery import not properly matching to existing Secrets.
-- Reports on Dashboard now show rows with background colors if specified.
+- Fixed issues with Local Account Discovery rules importing accounts from OUs excluded from the domain level scanning.
 - Individual computer discovery scan logs are now limited to the number of entries stored to prevent excessive database growth.
-- Reports on Dashboard now show rows with background colors if specified.
+- Fixed issue where the search results on Dashboard could sometimes be incorrect due to timing of search.
 - Fixed issues with the header search box ignoring custom columns in the returned results.
-- Reports on Dashboard now show rows with background colors if specified.
+- Fixed issue with an incorrect validation for Folder permissions when saving a Secret through web services.
 - Fixed issue where the password strength icon on Secret View was incorrect in some cases.
-- Reports on Dashboard now show rows with background colors if specified.
+- Added missing Check In method to the windows authenticated web service API.
 - Fixed issue where the Check Out information was not correctly populated by the return value of the GetCheckOutStatus web service method.
 - Fixed issue with enter key not starting the launcher when a drop down list was used for the target machines.
 
@@ -518,7 +526,7 @@ _Release Date: 2/10/2015_
 - Added support for SAML 2.0 for authentication to Secret Server. Additional information on configuring SAML can be found here.
 - Added configuration option to allow approval or denial of access requests directly from the email notifications.
 - Updated Discovery to use the DNS name of the target machines for environments where that differs from the machine name.
-- Added configuration option to allow approval or denial of access requests directly from the email notifications.
+- Added an additional configuration option to allow a separate timeout option for API sessions.
 - Added the option to set a custom password requirement on the Secret.
 
 ### Bug Fixes
@@ -550,7 +558,7 @@ _Release Date: 2/10/2015_
 - Website Password Changing. Secret Server now supports password changing on Amazon and Google Accounts in addition to improvements to Windows Live password changing.
 - Administrators can limit Discovery to only search certain OUs for Windows Local Accounts and Service Accounts.
 - Added new SonicWALL password changers for latest SonicWALL firmware versions.
-- Administrators can limit Discovery to only search certain OUs for Windows Local Accounts and Service Accounts.
+- Added French Language Support
 - The recipient email address is now displayed when testing email on SMTP Configuration.
 - Added SearchSecretsLegacy Web Service API method to allow calls for Search Secrets via GET requests.
 
@@ -559,25 +567,25 @@ _Release Date: 2/10/2015_
 - Fixed issues with Windows Live password changing due to changes on Microsoft's site.
 - Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
 - Fixed issue where Web Service authentication failed if the user did not have the View Deleted Secrets permission in some cases.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Fixed double encoding of text in a few places in the UI.
 - Save to File on the Admin Performance page now exports Fastest Time.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- User IP Address Restrictions redirects properly if navigated to with an incorrect querystring.
 - Fixed issue where the Discovery Import could break if an Active Directory Secret was Double Locked.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Fixed issue when searching using Unicode characters in search terms on Dashboard.
 - Fixed display issue with editing multiple file attachments on a Secret.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Removed obsolete warning on Secret Template regarding write access to file system.
 - Fixed display issues with Copy Secret button.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Fixed issue where a required Secret File Field could be saved without an attachment.
 - Added required field indicators on the Password Requirements page.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Fixed issue where emails could be configured in Discovery Rules even when an SMTP server was not configured.
 - Added validation to prevent users from enabling email two-factor when an SMTP server was not configured.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Fixed issues with Sharing Secrets with large numbers of individual users.
 - Fixed error when setting up ConnectWise integration in a new Secret Server installation.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Added timeout to the RADIUS login page.
 - Added validation for day of month when creating a Secret AutoChange Schedule.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Fixed visibility issue with the Add Secret button on the Web Password Filler.
 - Fixed issue with clear search button in IE 10.
-- Fixed issue where the File Dependency could get a logon failure due to privileged account username format.
+- Fixed issue with updating Secrets via web services if some fields were left blank.
 - Fixed issue with the Reset Password test action on Remote Password Changers using privileged accounts.
 - Fixed performance issue in some environments when authenticating via web services.
 
@@ -616,11 +624,11 @@ _Release Date: 2/10/2015_
 - New Audits and Event Subscriptions for Displaying Passwords, and Copying to Clipboard.
 - RADIUS Two Factor can be set to be automatically enabled on new users per Domain.
 - Discovery Network View now remembers the last selected tab.
-- RADIUS Two Factor can be set to be automatically enabled on new users per Domain.
+- Increased performance on the Discovery Network View.
 - Increased performance for Reports.
-- RADIUS Two Factor can be set to be automatically enabled on new users per Domain.
+- Added optional retry interval on Secret Template for failed password changes.
 - Added TimeZone configuration option.
-- RADIUS Two Factor can be set to be automatically enabled on new users per Domain.
+- Added a timeout setting for automated backups.
 - Inactive Users can now be selected in Reports.
 
 ### Bug Fixes
@@ -628,17 +636,17 @@ _Release Date: 2/10/2015_
 - Updated the session recording video processing to work on Server 2012 x64 environments.
 - Fixed issues with the XML Import / Export not applying permissions correctly when inheritance should be used.
 - Fixed button layout for some resolutions on the User Edit page.
-- Fixed issues with the XML Import / Export not applying permissions correctly when inheritance should be used.
+- Fixed bug where GetSecretAudit API method required Secret View permission.
 - Fixed layout of Weekly and Monthly schedules for reports in Internet Explorer.
-- Fixed issues with the XML Import / Export not applying permissions correctly when inheritance should be used.
+- Users can no longer click the RADIUS login button multiple times.
 - Fixed paging on Discovery Network View.
-- Fixed issues with the XML Import / Export not applying permissions correctly when inheritance should be used.
+- Fixed searching in Service Account Discovery log.
 - Fixed potential incorrect Secret matches for Local Account Discovery when machine names were too similar.
-- Fixed issues with the XML Import / Export not applying permissions correctly when inheritance should be used.
+- Discovery for Service Accounts now correctly handles the stored record if the Windows Service no longer exists or is running under a different account.
 - Fixed issue where Service Account Discovery would not run automatically in Enterprise Edition.
-- Fixed issues with the XML Import / Export not applying permissions correctly when inheritance should be used.
+- Fixed Windows Service Dependencies for connecting by IP Address for Local Accounts.
 - Fixed bug where RADIUS could be disabled if login security settings were modified and the user didn't have permissions to the RADIUS configuration.
-- Fixed issues with the XML Import / Export not applying permissions correctly when inheritance should be used.
+- The Regular Expression in the Flat File Dependency type is no longer case sensitive.
 - Fixed potential exception during audit when adding large numbers of users to a group.
 
 ## Release Notes 8.1.000014
@@ -659,13 +667,13 @@ _Release Date: 2/10/2015_
 - Added Assign Agent method to Web Service API.
 - Added Create User method to Web Service API.
 - Added Get Secrets in Folder method to Web Service API.
-- Added Create User method to Web Service API.
+- Added the ability to restrict edit access at the Secret Template Field level.
 - Added the ability to set Secret Fields to not display in View mode.
-- Added Create User method to Web Service API.
+- Added the ability to restrict Session Launcher computers to a specified list for when the computer is selected by the user.
 - Minor display fixes on the Dashboard.
-- Added Create User method to Web Service API.
+- Improved usability of the Web Password Filler.
 - Sorted Bulk operations on Dashboard.
-- Added Create User method to Web Service API.
+- Added the ability to set a default domain for the login screen.
 - Added an 'Inherit' option to Discovery Rules to allow optional overriding of the configuration setting for created Secret permissions.
 - Customers with Event Subscriptions for Configuration Edit will receive an email during the upgrade, for more information refer to this KB article.
 
@@ -678,13 +686,13 @@ _Release Date: 2/10/2015_
 - Fixed an issue where certain event subscriptions did not fire for web services and bulk operations.
 - Fixed an issue with email two factor login.
 - Prevented AutoChange Schedule drift on start times.
-- Fixed an issue with email two factor login.
+- Improved the performance of Service Account Discovery and fixed issue due to duplicate names.
 - Fixed a display issue on the AD sync user preview.
-- Fixed an issue with email two factor login.
+- Added an audit for Enable and Disable Role.
 - Fixed issue with auto linking on the first column in Custom Reports.
-- Fixed an issue with email two factor login.
+- Enhanced Folder security related to root folders when being moved.
 - Prevented issue where manual failover to a different web server may not occur in certain configurations.
-- Fixed an issue with email two factor login.
+- Fixed an issue where the Web Password Filler displayed duplicate Secrets.
 - Fixed Sybase reference errors that could occur during Sybase password changing.
 
 ## Release Notes 8.1.000000
@@ -716,9 +724,9 @@ _Release Date: 2/10/2015_
 - Fixed bug where importing multiple service accounts created multiple Secrets.
 - Fixed bug where certain special characters in the Dashboard Search could not be used.
 - Fixed error where a Custom Launcher could throw an error if no parameters were set.
-- Fixed bug where certain special characters in the Dashboard Search could not be used.
+- Fixed bug where Admins could not disable a user with the same username but for a different domain.
 - Fixed issues with PowerShell scripts impersonating as Privileged Accounts. PowerShell scripts now require that the WinRM service is configured.
-- Fixed bug where certain special characters in the Dashboard Search could not be used.
+- Updated the collation check on installation and upgrades to better handle different SQL language collations.
 - Fixed bug where movies longer than 24 hours could not be processed.
 
 ## Release Notes 8.0.000005
@@ -757,9 +765,9 @@ _Release Date: 2/10/2015_
 - Fixed issue where the Launcher failed in IE in certain security zones.
 - Fixed error that could appear in the system log due to OU's being deleted after the Discovery Process ran.
 - Fixed duplicate checking in the CSV import.
-- Fixed error that could appear in the system log due to OU's being deleted after the Discovery Process ran.
+- Fixed layout issue with the Report Widget in lower resolutions.
 - Inactive Application Accounts are now hidden by default on the User Administration page.
-- Fixed error that could appear in the system log due to OU's being deleted after the Discovery Process ran.
+- Fixed potential XSS vulnerability on the Dashboard.
 - Fixed issues with Custom Launchers running as Privileged accounts of different Secret Types.
 - Exporting reports or logs to CSV will now include the timestamp instead of just the date. Are you an IBM Security Secret Server customer? Access IBM-specific documentation here.
 

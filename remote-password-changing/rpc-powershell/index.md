@@ -6,7 +6,6 @@
 
 ## Overview
 
-
 As of version 8.8, Secret Server supports running PowerShell scripts for Remote Password Changing (RPC) and heartbeat. Below are the steps for creating an Active Directory (AD) password changer that uses PowerShell scripts.  The example is meant as a simple guide for how to wire-up the template to scripts as a proof of concept.  Your actual PowerShell password changer scripts may be more complex depending on your environment and needs.
 
 > **Important:** Before  you begin, please ensure password changing and heartbeat are enabled in **Admin \> Remote Password Changing** and review the information on [Configuring CredSSP for use with WinRM/PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md), which will be necessary for most PowerShell password changing tasks.
@@ -25,8 +24,7 @@ The PowerShell scripts are created and accessed through the **Admin > Scripts** 
 
    - **Name**: Active Directory Verify
    - **Description**: Script used to verify an Active Directory account
-
-   - **Name**: Active Directory Verify
+   - **Category**: Heartbeat
    - **Script**:
 
 ```powershell
@@ -45,8 +43,7 @@ if ($dn.name -eq $null){ throw "Authentication failed - please verify your usern
 
    - **Name**: Active Directory Change
    - **Description**: Script used to change the password of an Active Directory account
-
-   - **Name**: Active Directory Change
+   - **Category**: Password Changing
    - **Script**:
 
 ```powershell
@@ -76,7 +73,7 @@ For the AD verification script:
 
 1. Type the username in the **Username** text box for account that can run PowerShell scripts on the domain.
 
-1. Type that user's password in the **Password** text box.
+1. Type that user’s password in the **Password** text box.
 
 1. Click the **OK** button to test your script the with provided parameters.
 
@@ -92,7 +89,7 @@ For the Active Directory change script:
 
 1. Type the username in the **Username** text box for account that can run PowerShell scripts on the domain.
 
-1. Type that user's password in the **Password** text box.
+1. Type that user’s password in the **Password** text box.
 
 1. Click the **OK** button to test your script the with provided parameters.
 
@@ -145,7 +142,6 @@ The next step is to create the secret template:
 
    - Domain Field Type: Text
    - Username Field Type: Text
-
    - Password Field Type: Password
    - Notes Field Type: Notes
 
@@ -205,8 +201,9 @@ Create the AD account secret PowerShell account:
 
 1. On the dashboard, use the dropdown on the **Create Secret** widget and select **Active Directory Account**. Use the following parameters:
    - **Secret Name:** PowerShell Admin
+
    - **Domain:** Domain that the account exists on
-   - **Secret Name:** PowerShell Admin
+   - **Username:** Account name that can run PowerShell scripts in the domain
    - **Password:** Password for the account
 1. Click the **Save** button to save your secret and verify that it passes heartbeat.
 
@@ -215,9 +212,10 @@ Create the AD account secret PowerShell account:
 Create the AD account secret for password changing:
 
 1. On the dashboard, use the dropdown on the **Create Secret** widget and select **Active Directory Account**. Use the following parameters:
+
    - **Secret Name:** Password changing Admin
    - **Domain:** Domain that the account exists on
-   - **Secret Name:** Password changing Admin
+   - **Username:** Account name that can change passwords in the domain
    - **Password:** Password for the account
 1. Click the **Save** button to save your secret and verify that it passes heartbeat.
 
@@ -227,8 +225,9 @@ Create the PowerShell Active Directory secret:
 
 1. On the dashboard, use the dropdown on the **Create Secret** widget and select **PowerShell Active Directory Account**. Use the following parameters:
    - **Secret Name:** PowerShell AD user
+
    - **Domain:** Domain that the account exists on
-   - **Secret Name:** PowerShell AD user
+   - **Username:** samAccountName of the account to be managed
    - **Password:** Password for the account
 1. Click the **Save** button to save your secret and verify that it passes heartbeat.
 
@@ -256,7 +255,7 @@ Everything should now be configured for heartbeat and RPC on the Secret. Run **H
 
 ## Errors
 
-If you receive the "The term 'Set-ADAccountPassword' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again." error, install the AD-Domain-Services in Powershell. To do this start PowerShell as an administrator then run the following command:
+If you receive the “The term 'Set-ADAccountPassword' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again." error, install the AD-Domain-Services in Powershell. To do this start PowerShell as an administrator then run the following command:
 
 `Install-windowsfeature -name AD-Domain-Services –IncludeManagementTools`
 

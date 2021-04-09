@@ -9,5 +9,5 @@ The access request feature allows a secret to require approval prior to accessin
 - Establishing a workflow model, the user must request access from the approval group or groups.
 - An email is sent to everyone in the approval groups, notifying them of the request.
 - The request can be approved or denied by any members of the approval groups.
-- An email is sent to everyone in the approval groups, notifying them of the request.
+- Access is granted for a set time period.
 - If **Owners and Approvers also Require Approval** is enabled, then even owners or those in an approval group needs to request access.

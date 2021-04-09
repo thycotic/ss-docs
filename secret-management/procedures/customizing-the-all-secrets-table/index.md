@@ -13,21 +13,21 @@ You can display additional columns on the grid by clicking the ![1567717023376](
 - Auto Change Enabled
 - Checked out
 - Checkout Enabled
-- Checked out
+- Created
 - Days until Expiration
-- Checked out
+- Deleted
 - Double Lock Enabled
-- Checked out
+- Expiration Field Changed
 - Folder
-- Checked out
+- Inherits Permissions
 - Heartbeat
-- Checked out
+- Hide Password
 - Last Accessed
-- Checked out
+- Machine
 - Notes
-- Checked out
+- Requires Approval
 - Requires Comment
-- Checked out
+- Secret Template
 - Username
 
 ## Filtering Search Results

@@ -13,7 +13,7 @@ Integrated Windows Authentication (IWA) requires:
 - Installing a SQL Server instance
 - Creating a new domain service account
 - Granting  access to SQL Server database
-- Creating a new domain service account
+- Registering  a service account to run IIS and ASP.NET
 - Assigning an account as an application pool identity
 
 > **Note:** For instructions on Creating the SQL account or Installing SQL Server see [Installing and Configuring SQL Server](http://updates.thycotic.net/link.ashx?SSSqlServerHelp) (KBA).
