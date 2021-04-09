@@ -22,19 +22,14 @@ You can perform bulk operations from the Dashboard on multiple secrets:
    - Disable comment on view
    - Disable heartbeat
    - Edit share
-
    - Enable autochange
    - Enable check out
-
    - Enable comment on view
    - Enable heartbeat
-
    - Hide launcher password
    - Move to folder
-
    - Run heartbeat
    - Set privileged account
-
    - Undelete
    - Unhide launcher password
 

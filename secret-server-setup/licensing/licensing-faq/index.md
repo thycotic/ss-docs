@@ -15,9 +15,9 @@ Activation of license keys is standard practice in the software industry. We try
 
 Existing customers have 30 days to activate their licenses after upgrading. New licenses have to be activated immediately on adding them to Secret Server. Evaluation licenses do not require activation.
 
-**What will happen if we don't activate our licenses?**
+**What will happen if we don’t activate our licenses?**
 
-Secret Server will go into Limited Mode if you don't activate your licenses. Limited Mode allows you to view passwords but many other features are disabled such as creating Secrets, editing Secrets, changing permissions and using web services. Simply activate your licenses to get out of Limited Mode.
+Secret Server will go into Limited Mode if you don’t activate your licenses. Limited Mode allows you to view passwords but many other features are disabled such as creating Secrets, editing Secrets, changing permissions and using web services. Simply activate your licenses to get out of Limited Mode.
 
 **We have several license keys. Do we need to activate each license key individually?**
 
@@ -36,7 +36,7 @@ The following information is sent to `thycotic.com` when you activate:
 - Name (user entered)
 - Phone Number (user entered)
 - Email (user entered)
-- Phone Number (user entered)
+- All Licenses (license name, license key)
 - Hardware Hash of each web server
 
 This information is one way hashed before it is sent so it does not reveal any identifiable hardware information.

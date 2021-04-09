@@ -40,11 +40,11 @@ The following secret template settings **are** transferred with the export or im
 - Edit requires
 - Field slug names
 - Hide on view
-- Field slug names
+- Is required?
 - Keep secret name history
-- Field slug names
+- One-time password settings
 - Secret template icons
-- Field slug names
+- Type descriptions
 - Validate password requirements on create or edit
 
 The following secret template settings are **not** transferred:

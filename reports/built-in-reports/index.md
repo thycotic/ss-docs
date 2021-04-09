@@ -13,17 +13,17 @@ Secret Server includes many pre-configured reports that you can run or use as te
 - Custom Report Activity
 - Database Configuration Audit
 - Distributed Engine Activity **(Professional)**
-- Database Configuration Audit
+- Dual Control Audit
 - Event Subscription Activity **(Professional)**
-- Database Configuration Audit
+- Folder Activity
 - Internal Communication Changes
-- Database Configuration Audit
+- IP Address Range Audit
 - License Audit
-- Database Configuration Audit
+- Secret Activity
 - Secret Activity Today
-- Database Configuration Audit
+- Secret Activity Yesterday
 - Secret Template Activity **(Professional)**
-- Database Configuration Audit
+- Session Recording Errors
 - Unlimited Administrator Behavior
 - Users Activity
 
@@ -34,7 +34,7 @@ Secret Server includes many pre-configured reports that you can run or use as te
 - Discovery Scan Status
 - What computers in Active Directory no longer exist?
 - What computers have been successfully scanned?
-- What computers in Active Directory no longer exist?
+- What computers that exist have not been successfully scanned?
 - What Secrets failed to import by Discovery?
 - What Secrets are pending import by Discovery?
 
@@ -77,25 +77,25 @@ Report Schedules **(Professional)**
 - Secret Count per Site
 - Secret Permissions Mismatch
 - What file types have been uploaded to Secrets?
-- Secret Permissions Mismatch
+- What file types have been uploaded to Secrets? (Pie Chart)
 - What Hooks and Dependencies use a script? **(Enterprise Plus/Premium add-on)**
-- Secret Permissions Mismatch
+- What Secret permissions exist for a group?
 - What Secret permissions exist for a user?
-- Secret Permissions Mismatch
+- What Secret permissions exist?
 - What Secrets are expiring this week?
-- Secret Permissions Mismatch
+- What Secrets can a user see?
 - What Secrets can all users see?
-- Secret Permissions Mismatch
+- What Secrets changed passwords in the last 90 days?
 - What Secrets Do Not Have Distributed Engines? **(Professional)**
-- Secret Permissions Mismatch
+- What Secrets don't require approval? **(Enterprise/Premium)**
 - What Secrets have been accessed by a user?
-- Secret Permissions Mismatch
+- What Secrets have been accessed by an impersonated user?
 - What Secrets have been accessed?
-- Secret Permissions Mismatch
+- What Secrets have Distributed Engines?
 - What Secrets have Expiration?
-- Secret Permissions Mismatch
+- What Secrets have failed Heartbeat? **(Professional)**
 - What Secrets have not changed passwords for over 90 days?
-- Secret Permissions Mismatch
+- What Secrets require approval? **(Enterprise/Premium)**
 - What Secrets require Comments?
 
 ## Secret Policy

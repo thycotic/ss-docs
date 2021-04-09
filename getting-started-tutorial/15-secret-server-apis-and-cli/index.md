@@ -16,33 +16,30 @@ Both APIs, the .NET framework, and the CLI support:
 - GET Requests: Retrieve information from SS, including entire secrets, individual secret fields, and security tokens
 - POST Requests: Create SS data
 - PUT Requests: Update SS data
-- POST Requests: Create SS data
+- DELETE Requests: Remove SS data
 - Once-per-session permissions (tested once and then based on the IP address), administered with a SS rule
 
 SDK Documentation:
 
-   - SS configuration
-   - SS configuration
+-  [Secret Server SDK Guide](../../api-scripting/sdk-cli/index.md): Includes these topics:
 
    - SS configuration
+   - Roles and permissions
    - SDK client installation
-
-   - SS configuration
+   - Connecting to SS
    - SDK client caching
-
    - Examples
--  [Secret Server SDK Downloads](../../api-scripting/sdk-downloads/index.md): Includes these topics:
 
+-  [Secret Server SDK Downloads](../../api-scripting/sdk-downloads/index.md): Includes these topics:
    - SDK downloads
    - Download
-
-   - SDK downloads
+   - SDK release notes
    - NuGet packages
 
-   - SDK downloads
-   - Integrating using C#
+-  [SDK Integration Document](https://github.com/thycotic/sdk-documentation): Includes these topics:
 
-   - SDK downloads
+   - Integrating using C#
+   - Integrating using the `web.config` file
    - Methods of the SecretServerClient() class
 
 REST API Documentation:

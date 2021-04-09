@@ -35,7 +35,7 @@ Because `$machine` is a reserved word, the parser would separate the reserved `$
 **Table:** Dependency Tokens
 
 | **Token**                           | **Available   In** | **Translates   To**                                          |
-| ----------------------------------- | ------------------ | ------------------------------------------------------------ |
+| -- | -- | -- |
 | $[x]${name  of any field on secret} | pre-10.0           | The  value of the field with the same name on the xth secret on the RPC tab for  use in custom password changing commands and scripts. |
 | $[x]$PASSWORD                       | pre-10.0           | The  password on the xth secret on the RPC tab for use in custom password changing  commands and scripts. |
 | $[x]$USERNAME                       | pre-10.0           | The  username on the xth secret on the RPC tab for use in custom password changing  commands and scripts. Example: $[1]$USERNAME is the username of the  first associated secret. |

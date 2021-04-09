@@ -9,10 +9,15 @@ SSH scripts can be used in Secret Server (SS) to automate specific tasks.  An SS
 ## Creating an SSH Script
 
 1. From the **Admin** menu, click **Scripts**. 
+
 1. Click the **SSH** tab on the Scripts page.
+
 1. Click the **Create New** button. 
+
 1. Type the name and description in their text boxes.
+
 1. Paste the script in the text box.
+
 1. Click the **OK** button.  
 
 Using SSH scripts as dependencies requires that Remote Password Changing is turned on, so ensure that this is enabled on the Remote Password Changing page.
@@ -71,8 +76,11 @@ exit 5;
 ## Adding an SSH Script as a Dependency
 
 1. Navigate to **Admin > Scripts**. 
+
 1. Select the **SSH** tab. 
+
 1. Click **Create New** to create a script. 
+
 1. Fill out the required fields **Name**, **Description**, and **Script**. 
 1. (Optional) Change the setting for the environmental line ending in case your environment experiences issues with line termination. 
 1. (Optional) Specify the port that the script will connect to.
@@ -88,5 +96,3 @@ When adding the SSH Script as a dependency to a secret, specify the built-in SS 
 ![image-20201230150656399](images/image-20201230150656399.png)
 
 If a parameter in the script is not specified in the list of parameters, then they will use environmental variables on the remote host.
-
- 

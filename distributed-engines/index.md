@@ -42,9 +42,8 @@ Default ports:
 - MemoryMQ: 8672 (non-SSL), 8671 (SSL)
 - Secret Server: existing IP address bindings or custom port over TCP. We reserve one port for legacy upgrades, usually port 9999.
 - Secret Server Cloud:
-
     - 443 (Web sockets—the default)
-   - 5671 and 5672 (AMQP)
+    - 5671 and 5672 (AMQP)
 
     >**Note:** These ports are used for outbound traffic for engines to communicate with SSC instances. They are set by the "Azure ServiceBus Transport Type" global engine setting.
 
@@ -55,7 +54,7 @@ Default ports:
 - Engines must be approved within SS before they will be given access to a site.
 - Work items are encrypted with a site-specific symmetric key prior to sending them to the site connector.
 - Communication to the site connector supports SSL and TLS.
-- Work items are encrypted with a site-specific symmetric key prior to sending them to the site connector.
+- Direct communication from engine to SS uses a public-private key exchange.
 - The engine configuration file is DPAPI encrypted.
 
 For more information about DE security, see the [Distributed Engine Security Guide](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf).
@@ -86,7 +85,8 @@ Below is a summary of the steps required to configure DEs:
 
 1. Configure and Install the site connector.
 
-   - If you plan to use RabbitMQ (recommended), follow the instructions [here](https://thycotic.force.com/support/s/article/How-to-install-RabbitMq). You can find general information on using RabbitMQ Helper to install RabbitMQ can be found in [Thycotic's GitHub Repository](https://thycotic.github.io/rabbitmq-helper/)
+   - If you plan to use RabbitMQ (recommended), follow the instructions [here](https://thycotic.force.com/support/s/article/How-to-install-RabbitMq). You can find general information on using RabbitMQ Helper to install RabbitMQ can be found in [Thycotic’s GitHub Repository](https://thycotic.github.io/rabbitmq-helper/)
+
    - If you plan to use MemoryMQ, create the site connector record within SS then click the **Download Site Connector Installer** button to get the MSI. Run the MSI on the desired host.
 
 1. Setup sites.
