@@ -659,7 +659,7 @@ The final step is to create a discovery source and assign the discovery scanners
 
 1.  Click **Admin \> Discovery**. The Discovery Sources tab of the Discovery page appears:
 
-    ![image-20210128133932700](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128133932700.png)
+    ![image-20210128133932700](images/image-20210128133932700.png)
 
 1.  Note the list of existing discovery sources.
 
@@ -667,7 +667,7 @@ The final step is to create a discovery source and assign the discovery scanners
 
 1.  Click the **Create Discovery Source** button and select **Active Directory** to choose that discovery source type. A Discovery Source page appears for that type:
 
-    ![image-20210128134113383](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134113383.png)
+    ![image-20210128134113383](images/image-20210128134113383.png)
 
 1.  Type the parameters for the discovery source name, FQDN, and friendly (human readable) name. The parameters with asterisks are required.
 
@@ -675,7 +675,7 @@ The final step is to create a discovery source and assign the discovery scanners
 
 1.  Next, you select a secret this is used as the credentials for discovery scanning and AD synchronization. These credentials must have the proper rights to scan the remote machines. Click the **No Secret Selected** link. The Select Secret popup page appears:
 
-    ![image-20210128134153370](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134153370.png)
+    ![image-20210128134153370](images/image-20210128134153370.png)
 
 1.  **Either** search for and click the secret you want to use for the account credentials during the scan. The popup page closes. The name of the secret you chose replaces the No Secret Selected link.
 
@@ -683,11 +683,11 @@ The final step is to create a discovery source and assign the discovery scanners
 
       1. Click the **Create New** Secret link. The Create New Secret page appears:
 
-         ![image-20210128134404389](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134404389.png)
+         ![image-20210128134404389](images/image-20210128134404389.png)
 
       1. Click the **Generic Discovery Credentials** secret template. Another Create New Secret page appears:
 
-         ![image-20210128134601427](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134601427.png)
+         ![image-20210128134601427](images/image-20210128134601427.png)
 
       1. Type or select the parameters needed for the discovery operation. Parameters with asterisks are required.
 
