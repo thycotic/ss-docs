@@ -34,7 +34,7 @@ The steps provided can be used to create the App Registration required for confi
 
 1. In the blade for this app registration, take note of the **Application (client) ID** and **Directory (tenant) ID**. These will be needed for Secret Server configuration. For example:
 
-    ![image-20210202112240332](images/image-20210202112240332.png)
+   ![image-20210202112240332](images/image-20210202112240332.png)
 
 ### Add Client Secret to the Application Registration
 
