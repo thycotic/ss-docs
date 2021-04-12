@@ -4,9 +4,27 @@
 
 # Secret Server Download Hashes
 
-## 10.9.000063 (Current Version)
+## 10.9.000064 (Current Version)
 
->**Important:** These hashes are for the early release of 10.11, which is 10.9.000063. The general release is not till April 13, 2021 for the on-premises version and between April 3rd and May 15th 2021, depending on region, for the cloud version.
+> **Note:** Calculated on 2021-03-26 17:50:27-04:00.
+
+ThycoticSetup.exe:
+
+- SHA1 = aa564d9b4a60e76cbdf6c4034c1d356d2be90cb0
+- SHA256 = e92a4408809a3b1cebbe7d5475f76f13e74bb98c08c9110019ce213f72797838
+
+Version_10_9_000064.zip:
+
+- SHA1 = aec38df961ccc88650188ee4158c15b6a7a4a107
+- SHA256 = b896ef24904beb2414edcfc259ef14c9eadb2fdd442289a2781d3e1ac8fa411b
+
+## Earlier Versions
+
+Below are the hashes for the step-upgrade version. When upgrading from a version prior to 8.4.000004, the upgrade process will upgrade Secret Server to 8.4.000004.
+
+If Secret Server is version 8.4.000004 to 9.1.000000 the upgrade process will upgrade to 9.1.000001 and from there Secret Server can be upgraded to the latest release.
+
+### 10.9.000063
 
 > **Note:** Calculated on 2021-03-22 16:43:23-04:00.
 
@@ -19,12 +37,6 @@ Version_10_9_000063.zip:
 
 - SHA1 = a6da7bdee1d5018f050b10317299c8993a6dd14a
 - SHA256 = 853de55ba231e37d2a8787e253cfd1037c9c8d3a89fa697cdd425a87c258481d
-
-## Earlier Versions
-
-Below are the hashes for the step-upgrade version. When upgrading from a version prior to 8.4.000004, the upgrade process will upgrade Secret Server to 8.4.000004.
-
-If Secret Server is version 8.4.000004 to 9.1.000000 the upgrade process will upgrade to 9.1.000001 and from there Secret Server can be upgraded to the latest release.
 
 ### 10.9.000033
 
