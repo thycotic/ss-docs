@@ -12,10 +12,11 @@
 >
 > Updates:
 >- April 3rd: 10.9.000064 released to Secret Server Cloud in the Canada and Southeast Asia regions.
->- April 10th: 10.9.000064 released to Secret Server Cloud in the Australia region. 
+>- April 10th: 10.9.000064 released to Secret Server Cloud in the Australia region.
+>- April 13th: 10.9.000064 On-Premises released.
 
-- [Secret Server 10.9.000064](ss-rn-10-9-000064.md)
-- [Secret Server 10.9.000063](ss-rn-10-9-000063.md)
+- [Secret Server 10.9.000063](ss-rn-10-9-000063.md) (Early Adopter)
+- [Secret Server 10.9.000064](ss-rn-10-9-000064.md) (General Availability)
 
 >**Note:** The system requirements last changed with version 10.7.000000. See [that version's release notes](./ss-rn-10-7-000000.md) for details.
 
