@@ -22,6 +22,7 @@ Created or made significant changes to these topics:
 - Object Metadata
 - Running Heartbeat and RPC for Office 365 Accounts with a PowerShell Module
 - Scheduled Reports
+- Secret Server Architecture
 - Secret Server Cloud Architecture
 - Secret Server Cloud IP Address Change for March to May 2021
 - Securing IIS Server
