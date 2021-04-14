@@ -22,8 +22,6 @@ If that does not resolve the issue or SS is not running in a clustered environme
 
 > **Note:** See the [Configuring SAML in Secret Server](../../authentication/configuring-saml-sso/index.md) article for more information on configuring your saml.config in 10.2
 
-> **Note:** If you are receiving an *Invalid algorithm specified* error, please refer to [SHA-2 Certificate Requirements for SAML (SSO)](https://thycotic.force.com/support/s/article/SHA-Certificate-Requirements-for-SAML-SSO) (KBA).
-
 ## Additional Troubleshooting
 
 If the `saml.config` is not loading properly, there are a few possibilities:
