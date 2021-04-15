@@ -8,7 +8,7 @@
 
  Maintenance mode prevents users from changing secrets or secret-related data such as dependencies, secret templates, and password requirements.
 
-##   Why do we need Maintenance Mode?
+## Why do we need Maintenance Mode?
 
 When secret key rotation takes place, or the HSM configuration is changed, SS needs to ensure that no data corruption occurs.  To mitigate this, these operations turn on maintenance mode, which puts Secret Server into read-only mode. We also recommend manually enabling maintenance mode before performing upgrades.
 
