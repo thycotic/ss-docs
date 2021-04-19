@@ -44,9 +44,9 @@ A typical automated discovery process for Active Directory domains, running on a
 
 > **Note:** Even though automatic discoveries run on a set interval, you cannot schedule when those occur. The interval is from whenever the discovery last ran.
 
-1. Discovery matching runs. The discovery matcher creates a link between existing active secrets and any existing secrets in SS based on their machine names, accounts and dependencies. The matcher is automatic. When matches are found, the corresponding existing discovery results appear as "managed" in the discovery network view with a link to the existing secret or dependency.
+1. Discovery matching runs. The discovery matcher creates a link between existing active secrets and any existing secrets in SS based on their machine names, accounts and dependencies. The matcher is automatic. When matches are found, the corresponding existing discovery results appear as “managed” in the discovery network view with a link to the existing secret or dependency.
 
-1. Discovery rules run and attempt to match any unmanaged discovery results to the rule's parameters. If a rule matches the results, discovery automatically imports the results using the settings in the discovery rule. Once finished, discovery begins.
+1. Discovery rules run and attempt to match any unmanaged discovery results to the rule’s parameters. If a rule matches the results, discovery automatically imports the results using the settings in the discovery rule. Once finished, discovery begins.
 
 1. The Find Host Ranges scanner (using the Windows Discovery base scanner) runs with an Active Directory Domain input template. The scanner determines which OUs are to be scanned and populates its Organizational Unit output template with a list of those OUs. The output template will be used by the following Find Machine scanner and also by the Find Local Accounts scanner, which does not require machine information.
 
@@ -54,7 +54,7 @@ A typical automated discovery process for Active Directory domains, running on a
 
 1. The Find Local Accounts scanner (using the File Load Discovery base scanner) examines OUs from its Organizational Unit input template via LDAP and creates a list of all AD admin accounts with which it populates its Active Directory Account output template. This is the list of discovered admin accounts.
 
-1. The Find Dependencies scanner (using the Windows Discovery base scanner) examines a list of machines from its Windows computer input template using various technologies. For example, applications pools use Microsoft Web Administration (WMA) or, failing that, Windows Management Instrumentation (WMI). Services use WMI, and scheduled tasks use Windows' task scheduler interfaces. The Find Dependencies scanner can return any number of output templates as desired. These include: Com+ Application, Computer Dependency (Basic), PS Dependency, Remote File, SQL Dependency (Basic), SSH Dependency (Basic), SSH Key Rotation Dependency, Windows Application Pool, Windows Scheduled Task, and Windows Service.
+1. The Find Dependencies scanner (using the Windows Discovery base scanner) examines a list of machines from its Windows computer input template using various technologies. For example, applications pools use Microsoft Web Administration (WMA) or, failing that, Windows Management Instrumentation (WMI). Services use WMI, and scheduled tasks use Windows’ task scheduler interfaces. The Find Dependencies scanner can return any number of output templates as desired. These include: Com+ Application, Computer Dependency (Basic), PS Dependency, Remote File, SQL Dependency (Basic), SSH Dependency (Basic), SSH Key Rotation Dependency, Windows Application Pool, Windows Scheduled Task, and Windows Service.
 
 The discovered dependencies for local accounts are displayed at **Admin \> Discovery \> Discovery Network View \> Local Accounts**. Returned accounts for AD users are displayed at  **Admin \> Discovery \> Discovery Network View \> Domain \> Cloud Accounts**.
 
@@ -62,4 +62,4 @@ The discovered dependencies for local accounts are displayed at **Admin \> Disco
 
 ### Manual Discovery
 
-You can also run discovery manually by going to **Admin \> Discovery** and clicking the **Run Now** button and selecting **Discovery Scan**. We recommend waiting for any automatic discovery to idle before starting a manual discovery run. A discovery scan runs the first four of the automated steps above. When you click the "Run Now" button on the Scan Computers tab, the last two are run. These steps are the most time intensive steps because many machines may be scanned.
+You can also run discovery manually by going to **Admin \> Discovery** and clicking the **Run Now** button and selecting **Discovery Scan**. We recommend waiting for any automatic discovery to idle before starting a manual discovery run. A discovery scan runs the first four of the automated steps above. When you click the “Run Now” button on the Scan Computers tab, the last two are run. These steps are the most time intensive steps because many machines may be scanned.
