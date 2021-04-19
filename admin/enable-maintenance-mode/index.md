@@ -24,10 +24,10 @@ To turn on Maintenance Mode, perform the steps below.
 
 ![enable-maintenance4](images/enable-maintenance4.png)
 
-**Note**:  When Secret Server is in Maintenance Mode; a notification bar is displayed to users.
+>**Note**:  When Secret Server is in Maintenance Mode; a notification bar is displayed to users.
 
 1. To return Secret Server from Maintenance Mode to normal operation, click **Disable** in the **Web Server Nodes** window in the Maintenance Mode column.
 
 ![enable-maintenance5](images/enable-maintenance5.png)
 
-**Note**: The Maintenance Mode notification bar will no longer be displayed once Secret Server is in its normal running mode.
+>**Note**: The Maintenance Mode notification bar will no longer be displayed once Secret Server is in its normal running mode.
