@@ -383,11 +383,11 @@ Thus, our scan template must have fields to store the values of these three prop
 1. In the **Fields** section, use the blue **+** button to add a field for each of our script output object's properties:
 
     | **Field Name**    | **Parent Field** |
-    | ----------------- | ---------------- |
+    | -- | -- |
     | DistinguishedName | \<None\>         |
     | Name              | HostRange        |
     | ObjectGUID        | \<None\>         |
-[]()
+    []()
 1. When done, click the **Save** button.
 
 #### Machines
@@ -455,7 +455,7 @@ The setup of these fields on the Local Account scan template is a bit different 
 1. In the **Fields** section, click the blue **+** button to add a field for each of our script output object's properties:
 
 | **Field Name** | **Parent Field** |
-| -------------- | ---------------- |
+| -- | -- |
 | Disabled       | \<None\>         |
 | Name           | Username         |
 | Password       | Password         |
