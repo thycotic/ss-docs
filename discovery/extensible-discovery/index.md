@@ -50,13 +50,23 @@ For simplicity, we will only create a Windows service dependency scanner in the 
 For most of this tutorial we will use the "Extensible Discovery Configuration" page as our launch page into each of the features that needs to be configured. Setting up Extensible Discovery requires making changes on several pages. The "Extensible Discovery Configuration" page has buttons linking to each of these pages as well as short explanations of what you need to do on them. The high-level process is:
 
 1. Create the scripts for each discovery step.
-1. Create scan templates to define the information to return from the objects discovered at each step.
+
+1. If necessary, create scan templates to define the information to return from the objects discovered at each step.
+
+   >**Note:** You want to avoid altering scan templates unless you absolutely need to. First, ensure the regular scanners cannot do the job. Once you change a template, you cannot use out-of-the-box scanners and must maintain your own PowerShell scripts for the local account and dependency scanners.  
+
 1. Create discovery scanners for each step to define which script to use for scanning, which scan template represents the objects used as the source of data for the script, and which scan template represents the object returned from the script.
+
 1. Create a discovery source that is configured to use these discovery scanners in lieu of the default scanners.
+
 1. Create a dependency changer for the type of dependency we want to manage.
+
 1. Create a dependency template for the changer.
+
 1. Manually add a dependency to a secret using the dependency changer.
+
 1. Create a local account rule to import discovered accounts as secrets.
+
 1. Create a dependency rule to import discovered dependencies as secrets.
 
 ### Task Two: Creating the Scripts for Each Discovery Step

@@ -8,7 +8,7 @@ Discovery *account rules* automatically create secrets or send emails when local
 
 Discovery *dependency rules* automatically add discovered dependencies to *existing* secrets when rule criteria are met—no secrets are created.
 
-## Creating Account Rules
+## Creating Local Account Rules
 
 Discovery account rules are search queries against the accounts found by discovery (and visible in the discovery network view). When these rules are created and run, accounts that match rules can be automatically imported as secrets. When matches are found, email notifications can also be sent out. The rule order determines the rule application order. Drag rules to reorder them. Rules can specify a combination of the domain or OU, the computer name and the account name. 
 
@@ -38,27 +38,27 @@ To create a rule:
 
 1.  Type a description in the **Description** text box. At a minimum, leave the suggested log on account name as is.
 
-1.  Ensure the **Active** check box is selected.
+1. Ensure the **Active** check box is selected.
 
 1.  Click the **Next** button. The Source page of the wizard appears:
 
     ![image-20210210114027868](images/image-20210210114027868.png)
 
-1.   Click the **Discovery Source** link to select a discovery source or container (folder). The Discovery Source or Container popup appears:
+1. Click the **Discovery Source** link to select a discovery source or container (folder). The Discovery Source or Container popup appears:
 
-    ![image-20210210114236692](images/image-20210210114236692.png)
+   ![image-20210210114236692](images/image-20210210114236692.png)
 
-    When you click a domain or subfolder with no children, the popup automatically disappears, and the information you chose appears on the Source tab:
+   When you click a domain or subfolder with no children, the popup automatically disappears, and the information you chose appears on the Source tab:
 
     ![image-20210210115016699](images/image-20210210115016699.png)
 
-1.  If you want the rule to apply to children of what you chose, ensure the **Include Children** check box is selected.
+1. If you want the rule to apply to children of what you chose, ensure the **Include Children** check box is selected.
 
-1.  Click the **Scan Template** dropdown list to select an output scan template. For a standard discovery configuration, without scripted scanners, there should only be one option here. If you added multiple local account scanners, then you can select one of their output scan templates. This limits the rule to the output results of scanners with the listed output template. 
+1. Click the **Scan Template** dropdown list to select an output scan template. For a standard discovery configuration, without scripted scanners, there should only be one option here. If you added multiple local account scanners, then you can select one of their output scan templates. This limits the rule to the output results of scanners with the listed output template. 
 
-1.  (Optional) Filter when the rule applies:
+1. (Optional) Filter when the rule applies:
 
-    >**Note**: Using a discovery rule as a search filter only applies to accounts that are found on computers in the OUs included in the discovery scan. To change those settings, modify the AD source to include more OUs or the entire domain.
+   >**Note**: Using a discovery rule as a search filter only applies to accounts that are found on computers in the OUs included in the discovery scan. To change those settings, modify the AD source to include more OUs or the entire domain.
 
     1.  (Optional) Type any computer name substring to filter the rule in the **Computer Name Contains** text box.
 
@@ -170,7 +170,7 @@ Dependency rules automatically add dependencies (Windows services, schedule task
 
     ![image-20210210142003994](images/image-20210210142003994.png)
 
-1.   Click the **Discovery Source** link to select a discovery source or container (folder). The Choose Org Unit popup appears:
+1. Click the **Discovery Source** link to select a discovery source or container (folder). The Choose Org Unit popup appears:
 
     ![image-20210210142311020](images/image-20210210142311020.png)
 

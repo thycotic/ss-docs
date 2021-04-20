@@ -31,29 +31,11 @@ The scanning account needs the “Access This Computer From the Network” permi
 
    > **Note:** For more information on this security issue, see [Network access: Restrict clients allowed to make remote calls to SAM](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
-1. If you found a match, do the following too:
-
-   1. Go to **Computer Configuration \> Windows Settings \> Security Settings \> Local Policies \> Security Options**.
-
-   1. Double-click the **Network access: Restrict clients allowed to make remote calls to SAM** policy. The policy properties appear.
-
-   1. Click the **Edit Security** button to select an account for the Security descriptor text box. The Security Setting for Remote Access to SAM dialog box appears.
-
-   1. Ensure the scanning account is present (if not add it).
-
-   1. Click the account in the **Group or user names** list. The permissions for that account appear.
-
-   1. Ensure the **Allow** check box next to the **Remote Access** permission is selected.
-
-   1. Click the **OK** button.
-
-> **Note:** The discovery account must be part of the local admin's group to be able to pull back any local accounts.
-
 ## Windows Services, Scheduled Tasks, App Pools, and COM+ Applications
 
-> **Note:** There are special considerations for discovering service accounts running COM+ Applications, please see the following for instructions: [COM+ Dependency Scanner](https://thycotic.force.com/support/s/article/ka037000000HtkmAAC/COMPlus-Depenency-Scanner) (KBA).
+> **Note:** There are special considerations for discovering service accounts running COM+ Applications, please contact Thycotic for more information.
 
-To scan for service accounts, the account entered must be a domain account that is in the Administrators group on the target machines. Follow the instructions below in either case to ensure your account has the appropriate privileges to run a successful scan:
+To scan for service accounts, the account entered must be a domain account that is in the Administrators group on the target machines. Follow the instructions below in either case to ensure your account has the privileges to run a successful scan:
 
 1. Open the group policy editor for your domain policy.
 
