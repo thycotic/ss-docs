@@ -17,9 +17,13 @@ If the built-in discovery sources, scanners, or input and output template, co yo
 Creating a discovery source using scripted scanners can be a lot of work to set up, so when should you consider it? If you only need to discover local administrator accounts with standard dependencies (Windows services, application pools, and scheduled tasks), our built-in scanners will do the job, and extensible discovery is not necessary. However, your network probably contains other items you want to discover and bring under managed control. Here are some examples:
 
 - Discover configuration files containing passwords and automatically add them as dependencies.
+
 - Scan computers not joined to the domain.
+
 - Create "dependencies" that run a SQL, SSH, or PowerShell script when a secret's password changes to log events to an external source, such as an external auditing system or an external monitoring system).
+
 - Record information not currently imported by local account discovery  a custom fields in a secret template.
+
 - Discover SQL Server logins as "local accounts" and import them as SQL Server account secrets.
 
 > **Note:** To run PowerShell scanners against machines for local account and dependency discovery, you may need to configure WinRM and CredSSP. See [Configuring WinRM for PowerShell](../../api-scripting/configuring-winrm-powershell/index.md) and [Configuring CredSSP for WinRM with PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md)
@@ -482,11 +486,11 @@ Thus, our setup for this scan template will be:
 1. In the **Fields** section, click the blue **+** button to add a field for each of our script output object's properties:
 
 | **Field Name** | **Parent Field** |
-| -------------- | ---------------- |
+| -- | -- |
 | AccountStatus  | None             |
 | DependencyType | None             |
 | Domain         | Domain           |
-| Enabled        | <None>           |
+| Enabled        | \<None\>           |
 | Machine        | Machine          |
 | ServiceName    | ServiceName      |
 | Username       | Username         |
@@ -556,7 +560,7 @@ To get started:
 **Table:** Script Tokens 
 
 | **Token**     | **Description**                                              |
-| ------------- | ------------------------------------------------------------ |
+| -- | -- |
 | $target       | A generic placeholder for the input object. This is not used when scanning for host ranges because there is no previous scanner input source. For machine scanners, $target refers to either the OU (for Active  Directory discovery sources) or the IP address (for Unix and ESXi discovery sources) from the host range input. For local account and dependency scanners, $target is the name of the scanned computer. |
 | $[x]$Username | The username of the nth privileged account associated with the scanner ("x" represents n). Each scanner can have one or more privileged accounts associated  with it. Thus, if you need to use the username of the first privileged account in your script, you would pass in $[1]$Username. The second would be $[2]$Username and so forth. You can have as many privileged accounts as necessary. |
 | $[x]$Password | Similar to $[x]$Username, this is the password of the nth privileged account associated with the scanner. |
@@ -659,7 +663,7 @@ The final step is to create a discovery source and assign the discovery scanners
 
 1.  Click **Admin \> Discovery**. The Discovery Sources tab of the Discovery page appears:
 
-    ![image-20210128133932700](images/image-20210128133932700.png)
+    ![image-20210128133932700](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128133932700.png)
 
 1.  Note the list of existing discovery sources.
 
@@ -667,7 +671,7 @@ The final step is to create a discovery source and assign the discovery scanners
 
 1.  Click the **Create Discovery Source** button and select **Active Directory** to choose that discovery source type. A Discovery Source page appears for that type:
 
-    ![image-20210128134113383](images/image-20210128134113383.png)
+    ![image-20210128134113383](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134113383.png)
 
 1.  Type the parameters for the discovery source name, FQDN, and friendly (human readable) name. The parameters with asterisks are required.
 
@@ -675,7 +679,7 @@ The final step is to create a discovery source and assign the discovery scanners
 
 1.  Next, you select a secret this is used as the credentials for discovery scanning and AD synchronization. These credentials must have the proper rights to scan the remote machines. Click the **No Secret Selected** link. The Select Secret popup page appears:
 
-    ![image-20210128134153370](images/image-20210128134153370.png)
+    ![image-20210128134153370](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134153370.png)
 
 1.  **Either** search for and click the secret you want to use for the account credentials during the scan. The popup page closes. The name of the secret you chose replaces the No Secret Selected link.
 
@@ -683,11 +687,11 @@ The final step is to create a discovery source and assign the discovery scanners
 
       1. Click the **Create New** Secret link. The Create New Secret page appears:
 
-         ![image-20210128134404389](images/image-20210128134404389.png)
+         ![image-20210128134404389](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134404389.png)
 
       1. Click the **Generic Discovery Credentials** secret template. Another Create New Secret page appears:
 
-         ![image-20210128134601427](images/image-20210128134601427.png)
+         ![image-20210128134601427](../discovery-platform-specifics/active-directory-discovery/creating-active-directory-discovery-source/images/image-20210128134601427.png)
 
       1. Type or select the parameters needed for the discovery operation. Parameters with asterisks are required.
 
@@ -736,5 +740,3 @@ The final step is to create a discovery source and assign the discovery scanners
 1. Finally, repeat the process for the dependency scanner, **PS Window Services**, with the appropriate secret. Repeat any advanced settings from the last scanner. 
 
 1. Your scripted discovery source is now complete. You can go to the main discovery page to run discovery followed by a computer scan. When both are done, you should see identical results in your discovery network view to what you would get if you ran discovery with our built-in scanners.
-
- 

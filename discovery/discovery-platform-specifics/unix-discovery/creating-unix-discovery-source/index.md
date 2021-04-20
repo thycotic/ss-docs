@@ -83,7 +83,7 @@ Discovery sources define a set of discovery operations. You must create one base
     **Table:** Unix Scanner Summary
 
     | Scanner                              | Input Template   | Output Template   |
-    | -- | -- | -- |
+    | ------------------------------------ | ---------------- | ----------------- |
     | Manual Host Range (Find Host Ranges) | Discovery Source | Host Range        |
     | Unix Machine (Find Machines)         | Host Range       | Computer          |
     | Unix Non-Daemon User (Find Accounts) | Computer         | SSH Local Account |
@@ -112,13 +112,21 @@ Discovery sources define a set of discovery operations. You must create one base
 1.  Note the following:
 
     - Each machine is scanned using SSH and the settings defined in the scanner. To obtain more information from the machine scan, use the default custom commands and authentication and the scanner can return the OS of the Unix machine. 
+
     - The **Secrets Credentials** may be generic discovery Credentials or a Unix Account (SSH) secret. You can add multiple accounts when editing the scanner. The secret should contain a host name instead of an IP address to minimize potential problems with SS or the machines associated with that account.
+
     - The **Command Set** contains customizable Unix command sets sent over an SSH connection that are used to gather information from them machine when it is scanned. The command set is defined on the discovery scanner. To change a command set, you must create a new machine scanner. 
+
       > **Note:** Click the Configure Command Sets button on the Discovery Network View page to view a list of all of the custom command sets that are available for discovery. You can select any existing command set to edit, or you can create a new one. When you create a new command set, you must give it a name and save it before you are able to enter commands.
+
     - Commands are only run on machines when authentication is enabled and a credential secret is added to the Find Machine settings. 
+
     - The default command set is Find Machine (Basic Unix). This command set returns the OS.
+
     - The **Ports** text box contains a comma-delimited list of port values (1-65535). SSH generally uses port 22.
+
     - The **Max TCP Connections** text box limits the concurrent threads used for scanning your network.
+
     - The **Attempt Authentication** check box must be selected to run commands on the machines being scanned. The credentials supplied by the secret will be used to access each machine during the scan. If the credentials are correct, the custom commands are run to extract the OS information from the machine.
 
 1. The next scanner, Unix Non-Daemon User, has the following configurations available:
@@ -128,7 +136,11 @@ Discovery sources define a set of discovery operations. You must create one base
 1. Note the following:
 
     - The **Secret Credentials** secret is the same one used for the Unix Machine scanner, but it is possible to use a different one.
+
     - As earlier, the **Ports** text box is a comma-separated list of port values (1-65535). SSH generally uses port 22. The default port used when attempting to scan a machine for users. This may be overridden by a specific port found during machine scanning.
+
     - The **User Regex Format** text box contains a regular expression that finds the lines of text received during the scan that are valid for user parsing. The matched groups in the regular expression should correspond to the comma-separated items in the parse format.
+
     - The **Parse Format** text box defines the order of values retrieved during a scan. If the parse names match the fields defined in the imported secret, the values will be populated from the data collected on the scan.
+
     - The **Newline Separator Character** text box defines the character that divides the lines in the output received during a scan.
