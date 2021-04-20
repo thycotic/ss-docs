@@ -486,11 +486,11 @@ Thus, our setup for this scan template will be:
 1. In the **Fields** section, click the blue **+** button to add a field for each of our script output object's properties:
 
 | **Field Name** | **Parent Field** |
-| -------------- | ---------------- |
+| -- | -- |
 | AccountStatus  | None             |
 | DependencyType | None             |
 | Domain         | Domain           |
-| Enabled        | <None>           |
+| Enabled        | \<None\>           |
 | Machine        | Machine          |
 | ServiceName    | ServiceName      |
 | Username       | Username         |
@@ -560,7 +560,7 @@ To get started:
 **Table:** Script Tokens 
 
 | **Token**     | **Description**                                              |
-| ------------- | ------------------------------------------------------------ |
+| -- | -- |
 | $target       | A generic placeholder for the input object. This is not used when scanning for host ranges because there is no previous scanner input source. For machine scanners, $target refers to either the OU (for Active  Directory discovery sources) or the IP address (for Unix and ESXi discovery sources) from the host range input. For local account and dependency scanners, $target is the name of the scanned computer. |
 | $[x]$Username | The username of the nth privileged account associated with the scanner ("x" represents n). Each scanner can have one or more privileged accounts associated  with it. Thus, if you need to use the username of the first privileged account in your script, you would pass in $[1]$Username. The second would be $[2]$Username and so forth. You can have as many privileged accounts as necessary. |
 | $[x]$Password | Similar to $[x]$Username, this is the password of the nth privileged account associated with the scanner. |
@@ -740,5 +740,3 @@ The final step is to create a discovery source and assign the discovery scanners
 1. Finally, repeat the process for the dependency scanner, **PS Window Services**, with the appropriate secret. Repeat any advanced settings from the last scanner. 
 
 1. Your scripted discovery source is now complete. You can go to the main discovery page to run discovery followed by a computer scan. When both are done, you should see identical results in your discovery network view to what you would get if you ran discovery with our built-in scanners.
-
- 
