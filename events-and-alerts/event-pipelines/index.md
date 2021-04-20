@@ -316,7 +316,7 @@ These are variables created with the EP task. There are two types, global and it
 
 > **Note:** You must set a custom variable before using it. Thus, you cannot set a variable and use it in the same pipeline. One way around this is to create two pipelines in a policy—the first pipeline sets the variable and the second one uses it. Another way is to first set the variable in SS.
 
-#####  Global Variable
+##### Global Variable
 
 - $GlobalVariable.CustomVariableName
 - This custom task variable is global, so there should only be one per variable name.
