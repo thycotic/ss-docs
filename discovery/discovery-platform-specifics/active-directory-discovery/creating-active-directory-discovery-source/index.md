@@ -22,7 +22,7 @@ Discovery sources define a set of discovery operations. You must create one base
 
    ![image-20210128134113383](images/image-20210128134113383.png)
 
-1. Type the parameters for the discovery source name, FQDN, and friendly (human readable) name. The parameters with asterisks are required.
+1. Type the parameters for the discovery source name, FQDN, and friendly name. The parameters with asterisks are required.
 
 1.  Ensure the **Active** check box is selected. This activates this discovery Source for scanning. Active discovery sources are scanned at the defined discovery interval defined. If you have multiple discovery sources, the discovery source with the most un-scanned computers is scanned first.
 
@@ -48,10 +48,8 @@ Discovery sources define a set of discovery operations. You must create one base
 
 1.  Click the **Discovery Site** dropdown list to select the desired site for the discovery source. If distributed engines are setup, the list shows all active sites. If no distributed engines are setup, the list defaults to local, and you cannot change it.
 
-1. Click the **Discover Specific OU** check box to limit your discovery to an OU. See **Enabling Specific OU Domain Discovery** ADD LINK to define the scanned OU. When you select this option, a Domain Scope tab appears on the Discovery Source page for the created AD discovery source.
+1. Click the **Discover Specific OU** check box to limit your discovery to an OU. See [Enabling Specific OU Domain Discovery](../../../general-information/discovery-enabling-specific-ou-domain/index.md) to define the scanned OU. When you select this option, a Domain Scope tab appears on the Discovery Source page for the created AD discovery source.
 
 1. Leave the **Machine Resolution Type** dropdown list set to **Use Machine and Fully Qualified Name** unless you have a specific reason to change it.
-
-1. Click to select the **Use LDAPS** check box to use secure LDAP for the discovery.
 
 1. Click the **Create** button. SS attempts to access the domain with your specified credentials to ensure the configuration is correct. Thus, SS must have access to the domain provided, and the account credentials must work.
