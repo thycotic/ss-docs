@@ -18,35 +18,55 @@ An input box for specifying arguments will exist in places where the SQL scripts
 
 #### SQL
 
-1. UPDATE TABLE cmsuser
-2. SET password = PWDENCRYPT(@Password)
-3. WHERE username = @Username;
+````sql
+
+UPDATE TABLE cmsuser
+SET password = PWDENCRYPT(@Password) WHERE username = @Username;
+
+````
 
 #### MySQL
 
-1. UPDATE TABLE cmsuser
-2. SET password = PASSWORD(?)
-3. WHERE username = ?;
+````sql
+
+UPDATE TABLE cmsuser
+SET password = PASSWORD(?) WHERE username = ?;
+
+````
 
 #### PostgreSQL
 
-1. UPDATE TABLE cmsuser
-2. SET passwd = CRYPT(?, GEN_SALT('sha256'))
-3. WHERE username = ?;
+````sql
+
+UPDATE TABLE cmsuser
+SET passwd = CRYPT(?, GEN_SALT('sha256')) WHERE username = ?;
+
+````
 
 #### ODBC
 
-1. UPDATE TABLE cmsuser
-2. SET passwd = $Password
-3. WHERE username = $Username;
+````sql
+
+UPDATE TABLE cmsuser
+SET passwd = $Password WHERE username = $Username;
+
+````
 
 #### Basic Oracle PL/SQL
 
-1. INSERT INTO cmuser values (:username, :password);
+````sql
+
+INSERT INTO cmuser values (:username, :password);
+
+````
 
 #### Advanced Oracle PL/SQL
 
-1. EXECUTE IMMEDIATE 'alter user '|| :username ||' identified by "' || :password || '"';
+````sql
+
+EXECUTE IMMEDIATE 'alter user '|| :username ||' identified by "' || :password || '"';
+
+````
 
 ## Returning Errors
 
@@ -56,24 +76,41 @@ In situations where the script should fail given a specific set of conditions, a
 
 #### SQL
 
-1. RAISERROR(N'ERROR: %s', 14, 1, N'Failure');
+````sql
+
+RAISERROR(N'ERROR: %s', 14, 1, N'Failure');
+
+````
 
 #### MySQL
 
-1. SIGNAL SQLSTATE '45000'
-2. SET MESSAGE_TEXT = 'ERROR: Failure';
+````sql
+
+SIGNAL SQLSTATE '45000'
+SET MESSAGE_TEXT = 'ERROR: Failure';
+
+````
 
 #### PostgreSQL
 
-1. DO language plpgsql $$
-2. BEGIN
-3. RAISE EXCEPTION 'ERROR (14)';
-4. END
-5. $$;
+````sql
+
+DO language plpgsql $$
+BEGIN
+RAISE EXCEPTION 'ERROR (14)';
+END
+$$;
+
+````
 
 #### ODBC
 
-1. RAISERROR(N'ERROR: %s', 14, 1, N'Failure');
+
+````sql
+
+RAISERROR(N'ERROR: %s', 14, 1, N'Failure');
+
+````
 
 ## SQL Example
 
@@ -83,10 +120,14 @@ One issue in SQL Server database environments is if a linked database is set up 
 
 #### SQL
 
-1. EXEC master.dbo.sp_dropserver @server=@MACHINE, @droplogins='droplogins'
-2. EXEC master.dbo.sp_addlinkedserver @server = @MACHINE, @srvproduct=N'SQL Server'
-3. EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=@MACHINE,@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL
-4. EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=@MACHINE,@useself=N'False',@locallogin=@LOCALUSERNAME,@rmtuser=@REMOTEUSERNAME,@rmtpassword=@PASSWORD
+````sql
+
+EXEC master.dbo.sp_dropserver @server=@MACHINE, @droplogins='droplogins'
+EXEC master.dbo.sp_addlinkedserver @server = @MACHINE, @srvproduct=N'SQL Server'
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=@MACHINE,@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=@MACHINE,@useself=N'False',@locallogin=@LOCALUSERNAME,@rmtuser=@REMOTEUSERNAME,@rmtpassword=@PASSWORD
+
+````
 
 #### Parameters
 
