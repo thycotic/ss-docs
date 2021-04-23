@@ -8,7 +8,7 @@ Launchers using an SSH connection can alternatively use SS as a proxy rather tha
 
 To configure this:
 
-1. Select **Admin \> SSH Proxy**:
+1. Select **Admin \> Proxying**:
 
    ![image-20191203155530167](images/image-20191203155530167.png)
 

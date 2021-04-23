@@ -9,7 +9,7 @@
 ## Minimum Requirements for Basic Deployments
 
 | **Web Server**                            | **Database Server**                    |
-| ----------------------------------------- | -------------------------------------- |
+| -- | -- |
 | 2 CPU Cores                               | 2 CPU Cores                            |
 | 4 GB RAM                                  | 4 GB RAM                               |
 | 25 GB Disk Space                          | 50 GB Disk Space                       |
@@ -22,7 +22,7 @@
 **Note:** Environments budgeting for over 10,000 secrets require a scoping call with a Thycotic engineer
 
 | **Web Server**                            | **Database Server**                    |
-| ----------------------------------------- | -------------------------------------- |
+| -- | -- |
 | 4 CPU Cores                               | 4 CPU Cores                            |
 | 16 GB RAM                                 | 16 GB RAM                              |
 | 25 GB Disk Space                          | 100+ GB Disk Space                     |
@@ -37,16 +37,16 @@ Recommended for organizations deploying discovery, session recording,or increase
 > **Note:** Also see feature-specific guides listed below.
 
 | **Web Server**                            | **Database Server**                    |
-| ----------------------------------------- | -------------------------------------- |
+| -- | -- |
 | 8 CPU Cores                               | 8 CPU Cores                            |
 | 16 GB RAM                                 | 16 GB RAM                              |
 | 25 GB Disk Space                          | 100+ GB Disk Space                     |
 | Windows Server 2012-2019                  | Windows Server 2012-2019               |
-| IIS 7 or newer (64-bit applications only) | SQL Server 2012-2019                   |
+| IIS 8 or newer (64-bit applications only) | SQL Server 2012-2019                   |
 | .NET 4.8 or newer                         | Collation SQL_Latin1_General_CP1_CI_AS |
 
 | **Distributed Engines** | **RabbitMQ Messaging Server** |
-| ----------------------- | ----------------------------- |
+| -- | -- |
 | 4 CPU Cores             | 4 CPU Cores                   |
 | 4 GB RAM                | 4 GB RAM                      |
 | 25 GB Disk Space        | 40 GB Disk Space              |
@@ -87,6 +87,4 @@ Recommended for organizations deploying discovery, session recording,or increase
   - Safari
  
   - Microsoft Internet Explorer 11. Support for Internet Explorer 11 will end on 31 August 2021.
-
- 
 

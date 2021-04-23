@@ -4,6 +4,8 @@
 
 # RDP Proxy Configuration
 
+>**Note:** RDP Proxy requires .NET 4.7.2 or later.
+
 ## Overview
 
 The RDP Proxying feature allows RDP connections, established using a launcher, to be routed through SS. You can set it up one of two ways:
@@ -45,7 +47,7 @@ These two approaches to RDP proxying are not compatible—you may use one or the
 
 2. If necessary, enable the RDP proxy.
 
-3. Click the **Endpoints** tab to ensure that your server nodes, sites, and engines are properly configured.
+3. Click the **Endpoints** tab to ensure that your server nodes, sites, and engines have RDP Proxy enabled.
 
 4. Proxied RDP secrets now launch into the RDP proxy using short-lived credentials, protecting the secret credentials from the client machine.
 
