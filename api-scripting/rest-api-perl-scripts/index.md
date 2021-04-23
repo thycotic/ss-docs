@@ -6,7 +6,7 @@
 
 Secret Server web services can be called using scripts. This example demonstrates how to authenticate and retrieve a Secret programmatically in Perl. If connecting to an Installed instance, change the URL to match your site and specify the application name if configured.
 
-This example runs using standard Perl modules and Strawberry Perl v5.24.1.1. 
+This example runs using standard Perl modules and Strawberry Perl v5.24.1.1.
 
 You may need to install REST::Client from CPAN which can be done by running:
 
@@ -14,17 +14,17 @@ You may need to install REST::Client from CPAN which can be done by running:
 
 This module makes interacting with REST-ful APIs much easier.
 
-The TSS script below leverages the API created in the TSS with .pm extension file. 
+The TSS script below leverages the API created in the TSS with .pm extension file.
 
-The TokenResponse with .pm extension file defines an object that stores the authentication credentials for the session. 
+The TokenResponse with .pm extension file defines an object that stores the authentication credentials for the session.
 
-The ErrorResponse with .pm extension file defines an object that stores error information should a REST request fail. 
+The ErrorResponse with .pm extension file defines an object that stores error information should a REST request fail.
 
 The SecretModel with .pm extension file defines an object that stores the Secret information when requesting a particular Secret from the REST API.
 
 TSS.pl:
 
-~~~~
+````perl
 use REST::Client;
 use JSON;
 
@@ -88,11 +88,11 @@ if (ref $response eq 'ErrorResponse') {
 # Read the SecretModel object
 print 'Secret ' . $response->id . ' retrieved successfully. Secret name: ' . $response->name . "\r\n";
 
-~~~~
+````
 
 TSS.pm:
 
-~~~~
+````perl
 
 package TSS;
 
@@ -278,11 +278,11 @@ sub getSecret {
 
 1;
 
-~~~~
+````
 
 TokenResponse.pm:
 
-~~~~
+````perl
 
 package TokenResponse;
 
@@ -321,11 +321,11 @@ sub expires_in {
 
 1;
 
-~~~~
+````
 
 ErrorResponse.pm:
 
-~~~~
+````perl
 package ErrorResponse;
 
 use warnings;
@@ -357,11 +357,11 @@ sub message {
 
 1;
 
-~~~~
+````
 
 SecretModel.pm:
 
-~~~~
+````perl
 
 package SecretModel;
 
@@ -610,4 +610,4 @@ sub responseCodes {
 
 1;
 
-~~~~
+````
