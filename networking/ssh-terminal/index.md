@@ -62,7 +62,7 @@ User: View Secret
    - Must meet Admin permission requirements (see [Secret Server Permission Requirements](#Secret-Server-Permission-Requirements))
    - Secret Server **Professional** or **Platinum** Edition license
 
-1. Navigate to **Secret Server \> Admin \> SSH Proxy**.
+1. Navigate to **Secret Server \> Admin \> Proxying**.
 
    ![1565192991895](images/1565192991895.png)
 
@@ -88,7 +88,7 @@ User: View Secret
 
 1. Specify the IP address for nodes (and engines) that will run SSH proxy:
 
-   1.  Navigate to **Admin \> SSH Proxy \> Nodes.**
+   1.  Navigate to **Admin \> Proxying \> Nodes.**
 
    1. Set the **SSH Public Host.** This is the public hostname or IP that the client launcher connects to. In most cases, this is the same as the SSH bind address; however, there are cases where the public IP or host differs from the private IP that SS should bind to, such as NAT or Amazon EC2 instances.
 
@@ -100,7 +100,7 @@ SSH terminal can also run on each proxy-enabled distributed engine (DE) site.
 
 > **Note:** To launch secrets on non-local sites, users **must** connect to an SSH terminal over an engine on this site.
 
-1. Go to **Admin \> SSH Proxy \> Sites**.
+1. Go to **Admin \> Proxying \> Sites**.
 
 1. Click to select **Proxy Enabled**.
 

@@ -456,8 +456,6 @@ Administrator, System - Full
 | User Account  Control: Run all administrator in admin approval mode | Enable                                                       | Vulnerability:  This is the setting  that turns on or off UAC. If this setting is disabled, UAC will not be used  and any security benefits and risk mitigations that are dependent on UAC will  not be present on the system.  Severity of the  damage:  Medium  Operational aspects:  None |
 | User Account  Control: Switch to the secure desktop when prompting for elevation | Enable                                                       | Vulnerability:  Elevation prompt  dialog boxes can be spoofed, causing users to disclose their passwords to  malicious software.  Severity of the  damage:  Medium  Operational aspects:  None |
 | User Account  Control: Virtualize file and registry write failures to per-user locations | Enable                                                       | Severity of the  damage:  Low  Operational aspects:  None    |
-| Microsoft network  server: Server SPN target name validation level | Disabled                                                     | Vulnerability:  Without the use of  software restriction policies, users and computers might be exposed to the  running of unauthorized software, such as viruses and Trojans horses.  Severity of the  damage:  Low  Operational aspects:  None |
-
 []()
 
 **Computer Configuration \> Policies \> Windows Settings \> Security Settings \> System Services**
