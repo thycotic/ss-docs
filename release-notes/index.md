@@ -14,6 +14,7 @@
 >- April 3rd: 10.9.000064 released to Secret Server Cloud in the Canada and Southeast Asia regions.
 >- April 10th: 10.9.000064 released to Secret Server Cloud in the Australia region.
 >- April 13th: 10.9.000064 On-Premises released.
+>- April 24th: 10.9.000064 released to half of the United States region customers.
 
 - [Secret Server 10.9.000063](ss-rn-10-9-000063.md) (Early Adopter)
 - [Secret Server 10.9.000064](ss-rn-10-9-000064.md) (General Availability)
