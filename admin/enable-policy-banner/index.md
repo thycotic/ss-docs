@@ -8,7 +8,7 @@ Our company requires the login banner for usage agreements and conditions to be 
 
 To enable the login banner, follow the procedure below:
 
-1. In the Secret Server main dashboard window, click **ADMIN** and then **Configuration**.
+1. In the Secret Server main dashboard window, click **Administration** and then **Configuration**.
 
 1. In the **Configuration** window, select the **Login** tab.
 
