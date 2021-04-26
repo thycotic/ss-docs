@@ -250,8 +250,11 @@ To view these scanners:
 This option is only available for the instance scanners. The Custom Filter Setting can be used to include or exclude instances using a filter expression on the name, label, or any other field allowed by GCP. The filter must:
 
 - Be a string, number, or Boolean value
+
 - Use these comparison operators: =, \!=, \>, or \<
+
 - Use parentheses ( ) around each filter
+
 - Combine different filters using AND or OR (all caps). For example: `(name="instanceName") AND (labels.key="value")`
 
 > **Note:** See [Method: instances.aggregatedList](https://cloud.google.com/compute/docs/reference/rest/v1/instances/aggregatedList#query-parameters) for more on filtering instances.
@@ -325,7 +328,9 @@ To Import a Service Account
 To make API calls to GCP, you need to enable the following APIs to use GCP discovery in SS. More information can be found on the [GCP Getting Started](https://cloud.google.com/apis/docs/getting-started) page. The APIs are:
 
 - **Cloud Resource Manager API**: Used for managing GCP resource containers, such as Projects.
+
 - **Compute Engine API**: Used for managing GCP instances (virtual machines).
+
 - **Identity and Access Management (IAM) API**: Used for managing identity and access control for GCP resources, such as service accounts.
 
 ### Enabling GCP APIs

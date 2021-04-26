@@ -12,7 +12,7 @@ Secret Server (SS) contains an OpenAPI Swagger specification file that describes
 
 ### C# Client Using NSwagStudio
 
-1. Download and install NSwagStudio ( https://github.com/RicoSuter/NSwag/wiki/NSwagStudio )
+1. Download and install NSwagStudio ( <https://github.com/RicoSuter/NSwag/wiki/NSwagStudio> )
 
 1. Copy and paste the `swagger.json` file for "Documentation for token authentication." This is located at:
    `{Your SecretServer Base Url}/Documents/restapi/OAuth/swagger.json`
@@ -57,7 +57,7 @@ var results = search.Result;
 
 ### C# or .NET Core Client Using OpenAPI Generator
 
->**Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments.
+> **Note:** These client-generation instructions were written with OpenAPI Generator version 2.4.3, which was the latest version at the time. Future versions may fix issues that necessitated some workarounds. If you are using a newer version, you may need to make adjustments.
 
 > **Note:** These instructions assume that you have Java and .NET Core installed on your machine. They should work on all systems, but the syntax will need to be tweaked for other shells.
 
@@ -142,6 +142,7 @@ var foldersApi = new FoldersApi(tokenAuthConfig);
 var folder = await foldersApi.GetAsync(11);
 
 Console.WriteLine(folder);
+
 ```
 
 ### Java Client Using OpenAPI Generator
