@@ -18,9 +18,9 @@ Running a discovery on an AD system is easy, assuming everything was configured 
 
 When you complete the configuration and there is at least one active discovery source and discovery is enabled (the Active check box is selected), you can run a discovery scan manually or wait for an automatic one to start. A typical scan:
 
-1. Runs discovery matching: The discovery matcher creates a link between existing active secrets and any existing secrets in SS based on their machine names, accounts and dependencies. The matcher is automatic. When matches are found, the corresponding existing discovery results appear as "managed" in the discovery network view with a link to the existing secret or dependency.
+1. Runs discovery matching: The discovery matcher creates a link between existing active secrets and any existing secrets in SS based on their machine names, accounts and dependencies. The matcher is automatic. When matches are found, the corresponding existing discovery results appear as “managed” in the discovery network view with a link to the existing secret or dependency.
 
-1. Runs discovery rules: SS attempts to match any unmanaged discovery results to the rule's parameters. If a rule matches the results, discovery automatically imports the results using the settings in the discovery rule. Once finished, discovery begins.
+1. Runs discovery rules: SS attempts to match any unmanaged discovery results to the rule’s parameters. If a rule matches the results, discovery automatically imports the results using the settings in the discovery rule. Once finished, discovery begins.
 
 1. Runs the find host ranges scanner: The scanner (using the Windows discovery base scanner) runs with an Active Directory domain input template. The scanner determines which OUs are to be scanned and populates its organizational unit output template with a list of those OUs. The output template will be used by the following find machine scanner and also by the find local accounts scanner, which does not require machine information.
 
@@ -36,7 +36,7 @@ Once the computers in the desired AD domain or OU are discovered, a computer sca
 
 1. Runs the find local accounts scanner: Using the file load discovery base scanner, SS examines OUs from its organizational unit input template via LDAP and creates a list of all AD admin accounts with which it populates its Active Directory account output template. This is the list of discovered admin accounts.
 
-1. Runs the find dependencies scanner: Using the Windows discovery base scanner, SS examines a list of machines from its Windows computer input template using various technologies. For example, applications pools use Microsoft Web Administration (WMA) or, failing that, Windows Management Instrumentation (WMI). Services use WMI, and scheduled tasks use Windows' task scheduler interfaces. The find dependencies scanner can return any number of output templates as desired. These include: com+ application, computer dependency (basic), PS dependency, remote file, SQL dependency (basic), SSH dependency (basic), SSH key rotation dependency, Windows application pool, Windows scheduled task, and Windows service.
+1. Runs the find dependencies scanner: Using the Windows discovery base scanner, SS examines a list of machines from its Windows computer input template using various technologies. For example, applications pools use Microsoft Web Administration (WMA) or, failing that, Windows Management Instrumentation (WMI). Services use WMI, and scheduled tasks use Windows’ task scheduler interfaces. The find dependencies scanner can return any number of output templates as desired. These include: com+ application, computer dependency (basic), PS dependency, remote file, SQL dependency (basic), SSH dependency (basic), SSH key rotation dependency, Windows application pool, Windows scheduled task, and Windows service.
 
 > **Note:** You can see logs of this process by going to the Computer Scan Logs tab on the Discovery page.
 
@@ -78,7 +78,7 @@ Select an option in the **Search By** menu to narrow the search results to match
 
 Click the **Account Status** dropdown list to select accounts managed or unmanaged by SS.
 
-Click to select the **Include Child Organization Units** check box to match search results within child OU's of the OU highlighted in the folder tree.
+Click to select the **Include Child Organization Units** check box to match search results within child OU’s of the OU highlighted in the folder tree.
 
 ### Understanding Discovery Results
 
@@ -87,7 +87,7 @@ The table below describes the contents of each column:
 **Table:** Discovery Results
 
 | Column             | Description                                                  | Account Type  (Local,  Service) |
-| -- | -- | -- |
+| ------------------ | ------------------------------------------------------------ | ------------------------------- |
 | **Account**        | Username of discovered account.                              | Both                            |
 | **Computer**       | Computer  name of the machine scanned. This is obtained from AD during the  first part of the discovery process. | Both                            |
 | **Last Connected** | Last date a user logged into the machine.                    | Local                           |
@@ -103,7 +103,7 @@ Service account dependency types identified in the **Type** column:
 **Table:** Service Account Dependency Types
 
 | Type                 | Icon                                                         | Service Name              |
-| -- | -- | -- |
+| -------------------- | ------------------------------------------------------------ | ------------------------- |
 | **Application Pool** | ![image-20210201111500478](images/image-20210201111500478.png) | IIS application pool name |
 | **Scheduled Task**   | ![image-20210201111516978](images/image-20210201111516978.png) | Scheduled task name       |
 | **Windows Service**  | ![image-20210201111442318](images/image-20210201111442318.png) | Service name              |
