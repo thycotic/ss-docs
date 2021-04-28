@@ -52,5 +52,4 @@ REST API Documentation:
 SOAP API Documentation:
 
 - [SOAP Web Services API - Secret Server](https://updates.thycotic.net/secretserver/documents/SS_WebServicesGuide.pdf): Reference guide in a downloadable PDF
-- [Using Web Services with SOAP and JavaScript](https://thycotic.force.com/support/s/article/Using-Web-Services-with-SOAP-Javascript)
 - [SOAP-based Web services API - Getting Started](../../api-scripting/soap-api-powershell-examples/index.md)
