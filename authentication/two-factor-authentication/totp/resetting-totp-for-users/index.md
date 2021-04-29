@@ -2,7 +2,7 @@
 [tags]: # (Authentication, Credentials, TOTP)
 [priority]: #
 
-# Resetting TOTP for Secret Servere Users
+# Resetting TOTP for Secret Server Users
 
 1. From the **Admin** menu, select **Users**.
 
