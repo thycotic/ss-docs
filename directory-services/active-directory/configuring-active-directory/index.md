@@ -26,7 +26,7 @@ To allow users to log in with their Active Directory (AD) credentials, you can c
 
 1. Fill in the domain information and the username and password that will be used for connecting to the domain and synchronizing users and groups.
 
-1. If you wish to use Secure LDAP, enable the **Use LDAPS** checkbox under the **Advanced** section. For more information on Secure LDAP, please see the Using Secure LDAP KB Article.
+1. If you wish to use Secure LDAP, enable the **Use LDAPS** checkbox under the **Advanced** section. 
 
 1. It is possible to set **Automatically enable Two Factor Authentication** for users synchronized from this domain. This option is also available under the **Advanced** section.
 

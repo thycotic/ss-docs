@@ -496,7 +496,7 @@ You can use EFS to protect your SS encryption key. This allows only a single ser
 
 We strongly recommend employing SSL (TLS) for SS. Taking SSL a step further, SS also supports HTTP Strict Transport Security (HSTS). HSTS is supported by modern browsers and tells the browser that a site is only accessible by SSL with a valid certificate, period. Even if there is a man-in-the-middle attack with a trusted, but different, SSL certificate, the browser will reject the SSL certificate. Consequently, this setting is very useful for protecting against forged SSL certificates or man-in-the-middle attacks.
 
-For more information about configuring SSL certificates, see [Creating 2048-bit Domain SSL Certificate](http://support.thycotic.com/kb/a247/creating-2048-bit-domain-ssl-certificate.aspx) (KB) and the [Installation Guide](http://thycotic.com/products/secret-server/support-2/). You can view additional information about HSTS in [Securing with HTTP Strict Transport Security (HSTS)](http://support.thycotic.com/kb/a433/securing-with-http-strict-transport-security-hsts.aspx) (KBA).
+For more information about configuring SSL certificates, see the [Installation Guide](http://thycotic.com/products/secret-server/support-2/). You can view additional information about HSTS in [Securing with HTTP Strict Transport Security (HSTS)](http://support.thycotic.com/kb/a433/securing-with-http-strict-transport-security-hsts.aspx) (KBA).
 
 ### SSH Key Validation
 

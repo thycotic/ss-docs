@@ -372,7 +372,7 @@ _Release Date: 2/10/2015_
 - Secret Policy: Administrators can now define a policy for Secret Security and Auto Change settings. This can be applied at the Folder level and Secrets in that Folder automatically inherit those settings.
 - The Secret Server UI has been significantly updated for look and feel, including a new basic dashboard view for non-admin users who just need core functionality.
   - Added a theme roller for creating new themes and uploading corporate logos.
-  - Warning: Users with custom themes will be moved to the default theme on upgrade and will need to use the new Theme Roller to create a theme. See this KB article for new instructions on theming.
+  - Warning: Users with custom themes will be moved to the default theme on upgrade and will need to use the new Theme Roller to create a theme. 
 
 - Added Personal Folders option for users to store work related Secrets. These are only accessible by a named user by default, but can be accessed in Unlimited Admin mode by an administrator.
 - Added support for mobile app authenticator soft tokens for Two-Factor.
