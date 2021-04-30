@@ -36,9 +36,9 @@ You will receive a refresh token only if the option is enabled in **Admin** > **
 
 1. Check the box next to **Enable Web Services**.
 
-  The menu expands and the **Enable Refresh Tokens for Web Services** is now visible.
+    The menu expands and the **Enable Refresh Tokens for Web Services** field is now visible.
 
-    ![image-refresh-token-enable-services](images/refresh-token-enable-services.png)
+   ![enable-services](images/refresh-token-enable-services.png)
 
 1. Check the box next to **Enable Refresh Tokens for Web Services**.
 
