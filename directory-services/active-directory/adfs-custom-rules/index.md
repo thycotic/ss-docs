@@ -13,31 +13,31 @@ To rectify this situation you must configure the SAML Username Attribute in Secr
 
 To change the SAML Username Attribute in Secret Server, perform the following steps:
 
- 1. Click **Admin** > **Configuration**.
+1. Click **Admin \> Configuration**.
 
- 1. Click the **SAML** tab and scroll to the bottom of the window.
+1. Click the **SAML** tab and scroll to the bottom of the window.
 
- 1. Click **Create New Identity Provider**.
+1. Click **Create New Identity Provider**.
 
-![image-adfs-create-new-id-provider](images/adfs-create-new-id-provider.png)
+   ![image-adfs-create-new-id-provider](images/adfs-create-new-id-provider.png)
 
- 1. In the Identity Provider dialog, click **Enter IDP Information**.
+1. In the Identity Provider dialog, click **Enter IDP Information**.
 
-![image-adfs-enter-id-provider-info](images/adfs-enter-id-provider-info.png)
+   ![image-adfs-enter-id-provider-info](images/adfs-enter-id-provider-info.png)
 
- 1. In the next Identity Provider dialog under **User Matching**, type *customvalue* in the box next to **Username Attribute** and click **OK**.
+1. In the next Identity Provider dialog under **User Matching**, type *customvalue* in the box next to **Username Attribute** and click **OK**.
 
-![image-adfs-enter-id-provider](images/adfs-id-provider.png)
+   ![image-adfs-enter-id-provider](images/adfs-id-provider.png)
 
 ## Create Three Rules
 
 To create the three rules you need, open the Active Directory application and follow these steps:
 
- 1. In the **Edit Claim Rules** window, select **Add Rule**.
- 1. Choose **Send Claims Using a Custom Rule** as the rule template.
- 1. Create each rule using the information below, in the order presented.
+1. In the **Edit Claim Rules** window, select **Add Rule**.
+1. Choose **Send Claims Using a Custom Rule** as the rule template.
+1. Create each rule using the information below, in the order presented.
  
- > **Note:** If you copy code directly from the webpage for pasting, please ensure that you have copied everything you need, or correct the text after pasting it.
+> **Note:** If you copy code directly from the webpage for pasting, please ensure that you have copied everything you need, or correct the text after pasting it.
 
 ### Rule 1 (query AD for upn and sAMaccountname attributes)
 
