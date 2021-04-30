@@ -37,16 +37,12 @@ This address using a SS privileged account to change SQL Server accounts. This e
 ## Assign Permissions
 
 1. In SQL Server Management Studio, go to **Security \> Logins** in the object explorer.
-
 1. Right click on the SQL login object and select **Properties**. The Login Properties dialog box appears.
-
 1. Select **Securables** in the **Select a page** list.
-
 1. Find the **Alter any login** permission on the **Explicit** tab at the bottom of the dialog box.
-
 1. Click to select the **Grant** check box for that permission.
-
 1. Click the **OK** button.
+1. Similarly, enable the **Control Server** permission. This is for changing the target logins that are members of the **sysadmin** fixed server role or grantees of this permission.
 
 ## Using the Account
 

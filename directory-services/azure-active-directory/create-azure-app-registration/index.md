@@ -33,9 +33,8 @@ The steps provided can be used to create the App Registration required for confi
 
 1. Click the **Register** button. Once the app registration is created, the Azure portal opens the blade to this object.
 
-1. In the blade for this app registration, take note of the **Application (client) ID** and **Directory (tenant) ID**. These will be needed for Secret Server configuration. For example:
+1. In the blade for this app registration, take note of the **Application (client) ID** and **Directory (tenant) ID**. These will be needed for Secret Server configuration. 
 
-   ![image-20210202112240332](images/image-20210202112240332.png)
 
 ### Add Client Secret to the Application Registration
 
@@ -81,7 +80,7 @@ The steps provided can be used to create the App Registration required for confi
    
    and for the User.Read delegated permission. The result should look like this:
 
-   ![image-20210226134538965](images/image-20210226134538965.png)
+   ![image-20210426165114382](images/image-20210426165114382.png)
    
 1. Click the **Add Permissions** button. A prompt appears.
 

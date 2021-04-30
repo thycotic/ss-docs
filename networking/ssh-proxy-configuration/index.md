@@ -13,7 +13,7 @@ The Secret Server proxy routes SSH and RDP sessions and helps protect the endpoi
 
 ## Enabling Proxy
 
-1. Go to **Admin \> SSH Proxy**.
+1. Go to **Admin \> Proxying**.
 
 1. Enable **SSH Proxying**.
 
@@ -60,7 +60,7 @@ Connections from the user to the proxy are over SSH, and you can configure the p
 
 ## SSH Proxy with Multiple Nodes
 
-If you are using clustering with SS, you can pick exactly which of your nodes act as a SSH proxy by going to the **Admin \> SSH Proxy** page and scrolling down to the **Nodes** section. For each node you wish to be a proxy, configure the **SSH Public Host** (must be an IP address, not a DNS name) and the **SSH Bind IP Address** (use 0.0.0.0 to easily bind to all IPv4 Ps on a server). There is no need to configure all nodes if you do not want them all to be proxies.
+If you are using clustering with SS, you can pick exactly which of your nodes act as a SSH proxy by going to the **Admin \> Proxying** page and scrolling down to the **Nodes** section. For each node you wish to be a proxy, configure the **SSH Public Host** (must be an IP address, not a DNS name) and the **SSH Bind IP Address** (use 0.0.0.0 to easily bind to all IPv4 Ps on a server). There is no need to configure all nodes if you do not want them all to be proxies.
 
 As soon as the IPs are saved for each node, the node should start listening on the SSH proxy port. You can  verify that with netstat. If you do not see the node listening on your chosen port, perform an IIS reset and hit its SS website. It should be listening once SS starts up again. For example:
 

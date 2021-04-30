@@ -12,6 +12,8 @@ HSMs offer several security features that traditional servers cannot. Depending 
 
 To provide broad support for HSMs, SS supports any HSM that can be configured with Microsoft's Cryptography Next Generation (CNG) provider. CNG is a layer provided by Windows Server 2008 and later that HSM manufacturers can interface with. If your HSM properly supports CNG and supports the right algorithms, SS can use it.
 
+>**Note:** Turning off HSM (deselecting the check box) in SS may cause a "Server connection unavailable" error. If this happens, a manual reset of the IIS server should take care of it.
+
 > **Note:** CNG provider installation and configuration varies from HSM to HSM; however, documentation is available from each HSM vendor on how to correctly install CNG providers.
 
 ## HSM Requirements
@@ -74,7 +76,6 @@ To rotate the HSM key:
 1. Click the **Finish** button.
 
 1. Do an IISReset or application pool recycle. This starts the rotation.
-
 
 ## Securing HSM Integration
 
