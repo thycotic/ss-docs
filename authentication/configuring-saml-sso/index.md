@@ -1,152 +1,86 @@
-[title]: # (Configuring SAML Single Sign-on)
-[tags]: # (authentication,SAML,SSO)
+[title]: # (Configuring SAML OneLogin)
+[tags]: # (authentication,SAML,SSO, OneLogin)
 [priority]: # (1000)
 [display]: # (all)
 
-# Configuring SAML Single Sign-on
+# Configuring SAML OneLogin
 
-> **Important:** This topic is for Secret Server v10.5 and later and assumes you have a running Identity Service Provider (IDP) with a signed certificate.
+To access Secret Server using OneLogin for SAML, follow the steps below
 
-> **Note:** Secret Server does not support using SAML when Integrated Windows Authentication (IWA) is enabled.
+1. Navigate to your OneLogin instance and log in as an administrator, then select **Administration \> Apps \> Add Apps**.
 
-> **Note:** This topic applies to Secret Server 10.5 and later. For earlier versions, please see [Configuring SAML in Secret Server](https://docs.thycotic.com/ss/10.8.0/authentication/configuring-saml-sso/index.md) (KBA).
+   ![image-one-login-add-apps](images/one-login-add-apps.png)
 
-## SAML Overview
+1. Search for **SAML Test Connector (IdP)** and select it, then click **Save**.
 
-Secret Server allows the use of SAML Identity Provider (IDP) authentication instead of the normal authentication process for single sign-on (SSO). To do this, SS acts as a SAML Service Provider (SP) that can communicate with any configured SAML IDP.
+   ![image-test-connector](images/one-login-test-connector.png)
 
-In the diagram below, SS acts as the service provider. Any configured SAML IDP can be used for this process and there are several well tested providers, including OKTA, OneLogin, Azure ADFS, and Microsoft ADFS.
+1. Click on the **Configuration** tab and fill out the details as described below:
 
-**Figure:** Secret Server as a SAML Identity Provider
+   ![image-configuration](images/one-login-configuration.png)
 
-![image-20200610164654958](images/image-20200610164654958.png)
+     * **RelayState** can be left blank.
 
-##  Prerequisites
+   * **Audience** is the name of the Service Provider configured in Secret Server (e.g. "SecretServerServiceProvider").
 
-### Licensing and Version
+   * **Recipient** can be left blank.
 
-Secret Server Professional Edition or higher, upgraded to version 10.5 or later. To install a new SAML license, go to **Admin \> Licenses \> Install New License**.
+   * **ACS (Consumer) URL Validator** a required field that needs to be a valid RegEx of the ACS (Consumer) URL.
 
-### .NET Framework 4.6.2+
+     Modify the text in the example below according to the URL string of your Secret Server instance:
 
-To use SAML 2.0, you must install .NET Framework 4.6.2 or higher on your Web server. This allows SS to use Microsoft's "next generation" CryptoNG API for signing SAML requests, instead of being limited to the much older CryptoAPI. This is often necessary to use modern SSL certificates and is strongly recommended as a security best practice.
+      `https:\/\/instance\.example\.com\/saml\/assertionconsumerservice\.aspx$`
 
-To download and install the latest version of .NET Framework: See [Microsoft .NET Framework 4.8 offline Installer for Windows](https://support.microsoft.com/en-us/help/4503548/microsoft-net-framework-4-8-offline-installer-for-windows) for the latest version as of when this topic was written. If you have already installed SS on the same Web server, you have already done this.
+   * **ACS (Consumer) URL** like the step above, but no longer in RegEx format.
 
-****
+    Modify the text in the example below according to the URL of your Secret Server:
 
-### Administer Configuration SAML Role Permission
+​​`https://instance.example.com/saml/assertionconsumerservice.aspx`
 
-The "Administer Configuration SAML" role permission is required to use SAML to access SS. To grant a user this permission from an administrator account:
+   * **Single Logout URL** the Secret Server URL for SLO (Single Logout):
 
-1. Go to **Admin > Roles**. The Roles page appears.
+​​`https://instance.example.com/saml/sloservice.aspx`
 
-1. Click the **Create New** button. The Role Edit page appears:
+Click **Save** when done.
 
-   ![image-20200610145830073](images/image-20200610145830073.png)
+1. Click **More Actions** and **SAML Metadata** to download the metadata for OneLogin.
 
-1. Type the name, such as `SAML`, in the **Role Name** text box.
+   ![image-one-login-saml-metadata](images/one-login-saml-metadata.png)
 
-1. Click to select the **Enabled** check box.
+1. Log into your Secret Server instance, then go to **Admin** > **Configuration** > **SAML** tab and click **Create New Identity Provider**.
 
-1. Click **Administer Configuration SAML** in the right side **Permissions Unassigned** list box.
+   ![image-ss-create-new-saml-provider](images/ss-create-new-saml-provider.png)
 
-1. Click the **\<** button to move the permission to the other side.
+1. Click **Import IDP from XML Metadata** and select the OneLogin metadata you saved previously. If you don't see the file, you may need to change the metadata filetype to .xml
 
-1. Click the **Save** button. The Roles page returns.
+   ![image-ss-import-idp-xml](images/ss-import-idp-xml.png)
 
-1. Click the Assign Roles button.name link of the newly created role. The View Role Assignment page appears:
+1. To add users to OneLogin, navigate to OneLogin and log in as an administrator once more, then click **Administration** > **Users** > **New User**.
 
-   ![image-20200610150702026](images/image-20200610150702026.png)
+   ![image-one-login-save-user](images/one-login-save-user.png)
 
-1. Click the **Role** dropdown list to select the role you just created.
+1. Fill out the required information and click **Save** when finished.
 
-   ![image-20200610150844712](images/image-20200610150844712.png)
+    >**Note:** If you are using a Secret Server local account or Secret Server Cloud, the username will be in email format and it must be identical on OneLogin and Secret Server. For an Active Directory account, it should be the samAccountName.
 
-1. Click the **Edit** button. The Role Assignment page appears:
+1. Click on the **Applications** tab, then click the plus sign (+).
 
-   ![image-20200610151025938](images/image-20200610151025938.png)
+   ![image-one-login-add-app](images/one-login-add-app.png)
 
-1. Move the desired users to the **Assigned** list using the same method as before.
+1. Select **SAML Test Connector (IdP)**, then click **Continue**.
 
-1. Click the **Save Changes** button.
+   ![image-one-login-test-connector](images/one-login-new-login.png)
 
-## Setting up Secret Server
+1. Enter the user's Secret Server username (email format) then click **Save**.
 
-1. Navigate to **Admin \> Configuration**.
+   ![image-one-login-username](images/one-login-username.png)
 
-1. Click the **SAML** tab:
+1. Mouse over **More Actions** and click **Change Password** to give the user a login password.
 
-   ![image-20200610151801952](images/image-20200610151801952.png)
+   ![image-one-login-change-pw2](images/one-login-change-pw2.png)
 
-1. Click the **Edit** button in the **SAML General Settings** section.
+1. In another browser or in incognito mode, log into your OneLogin instance as the user you just created. If prompted to add OneLogin to your browser, click **Skip**.
 
-1. Click to select the **SAML Enabled** check box.
+1. You should see the **SAML Test Connector (IdP)**. Click on it to authenticate into Secret Server using the SAML workflow.
 
-1. Click the **Save** button.
-
-1. Under General Settings, click **Edit**, then check the **SAML Enabled** checkbox. **Save** changes.
-
-1. Click the **Edit** button in the **SAML Service Providers** section.
-
-1. Type a name for your SS service provider, such as `SecretServerServiceProvider`, in the **Name** text box.
-
-1. Click the **Select Certificate** link. The Upload Certificate popup appears:
-
-   ![image-20200610152423326](images/image-20200610152423326.png)
-
-1. Click the **Upload Certificate** button to upload the certificate used for SS's HTTPS configuration.
-   
-   What type of certificate can be used?
-   
-   - The uploaded SAML certificate requires a `.pfx` file format.
-   
-   - For on-premises instances: The uploaded certificate should match the one used for SS's HTTPS configuration, **or** it can be created as a self-signed certificate using the PowerShell script [here](https://github.com/thycotic/extrabits/blob/master/Generate-Cert.ps1).
-   
-   - For Secret Server Cloud users: Generate your own certificate using the same PowerShell script.
-   
-      > **Note:** Run the referenced PowerShell script as an administrator on a machine with .NET 4.5 or above and replace the variables in the script as directed. Your certificate is created in the directory from which you run the script. The subject name on the certificate is irrelevant, though for on-premises instances it typically matches the URL of the instance.
-   
-1. Locate your certificate `.pfx` file and select it.
-
-1. Click the **Open** button. The new certificate appears.
-
-1. Type the access password for the private key of the certificate in the **Password** text box.
-
-1. Click the **OK** button. The certificate is uploaded and tested, and the popup disappears. The certificate now appears in the SAML Service Provider Settings section.
-
-   > **Note:** If you have an outdated version .NET Framework (earlier than 4.6.2), you may see an error recommending you upgrade to fix the error. Reload the certificate after you do so.
-
-1. Click the **Save** button.
-
-1. Click the Create New Identity Provider link. An Identity Provider popup appears.
-
-1. Click the **Import IDP from XML Metadata** link.
-
-1. Navigate to your `SecretServerSAMLMetadata.xml` file and select it. This is used for uploading into your IDP, which varies by provider. Follow instructions in the following section..
-
-1. Click the Open button.
-
-## Setting up IDPs
-
-IDP setup varies by provider. Click one of the following links for instructions for your provider:
-
-> **Note:** You must be logged in to access these links.
-
-- [How To Set Up Okta For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OKTA-for-SAML) (KBA)
-- [How To Set Up OneLogin For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-OneLogin-for-SAML) (KBA)
-- [How To Set Up Azure AD For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-Azure-AD-for-SAML) (KBA)
-- [How To Set Up ADFS For SAML Integration](https://thycotic.force.com/support/s/article/SS-Setting-up-ADFS-for-SAML) (KBA)
-
-> **Note:** The username returned from the IDP to SS within the SAML Response/Assertion's subject statement must match the desired format. The format of the username passed depends upon how the user was created within SS.
-
-> **Note:** If AD Sync was used to create SS users, the username returned from the IDP must match this format: `SecretServerUsername@ADsyncDomain` or`ADsyncDomain\SecretServerUsername`. If using SLO, ensure that the NameID is set correctly in the IDP as an outgoing claim for the Secret Server Service Provider. If a user has different sAMAccountName and userPrincipalName in Active Directory, custom rules in the IDP can be created.
-
-## Lockout Workaround
-
-Locked Out? Here's how you get around SSO. If during the configuration process for SAML you lock yourself (as an administrator or a user) out of SS, you can log on SS without using the SSO workflow by using this URL string:
-
-`[YourSecretServerInstanceName]/login.aspx?preventautologin=true`
-
-The role permission needed for this is "Bypass SAML Login," which admins have by default.
-
+   ![image-test-connector](images/one-login-test-connector.png)
