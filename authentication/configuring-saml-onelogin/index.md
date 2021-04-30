@@ -1,11 +1,13 @@
 [title]: # (Configuring SAML OneLogin)
-[tags]: # (authentication,SAML,SSO, OneLogin)
+[tags]: # (authentication,SSO)
 [priority]: # (1000)
 [display]: # (all)
 
 # Configuring SAML OneLogin
 
-To access Secret Server using OneLogin for SAML, follow the steps below
+To access Secret Server using OneLogin for SAML, follow the steps below for OneLogin, then follow the steps for Secret Server.
+
+## OneLogin
 
 1. Navigate to your OneLogin instance and log in as an administrator, then select **Administration \> Apps \> Add Apps**.
 
@@ -17,7 +19,7 @@ To access Secret Server using OneLogin for SAML, follow the steps below
 
 1. Click on the **Configuration** tab and fill out the details as described below:
 
-  ![image-configuration](images/one-login-configuration.png)
+   ![image-configuration](images/one-login-configuration.png)
 
    * **RelayState** can be left blank.
 
@@ -27,25 +29,27 @@ To access Secret Server using OneLogin for SAML, follow the steps below
 
    * **ACS (Consumer) URL Validator** a required field that needs to be a valid RegEx of the ACS (Consumer) URL.
 
-Modify the text in the example below according to the URL string of your Secret Server instance:
+      Modify the text in the example below according to the URL string of your Secret Server instance:
 
-`https:\/\/instance\.example\.com\/saml\/assertionconsumerservice\.aspx$`
+        `https:\/\/instance\.example\.com\/saml\/assertionconsumerservice\.aspx$`
 
    * **ACS (Consumer) URL** like the step above, but no longer in RegEx format.
 
-Modify the text in the example below according to the URL of your Secret Server:
+      Modify the text in the example below according to the URL of your Secret Server:
 
-​​`https://instance.example.com/saml/assertionconsumerservice.aspx`
+        `https://instance.example.com/saml/assertionconsumerservice.aspx`
 
    * **Single Logout URL** the Secret Server URL for SLO (Single Logout):
 
-​​`https://instance.example.com/saml/sloservice.aspx`
+        `https://instance.example.com/saml/sloservice.aspx`
 
-Click **Save** when done.
+1. Click **Save** when done.
 
 1. Click **More Actions** and **SAML Metadata** to download the metadata for OneLogin.
 
    ![image-one-login-saml-metadata](images/one-login-saml-metadata.png)
+
+## Secret Server
 
 1. Log into your Secret Server instance, then go to **Admin** > **Configuration** > **SAML** tab and click **Create New Identity Provider**.
 
