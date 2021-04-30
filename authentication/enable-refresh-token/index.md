@@ -8,34 +8,47 @@ Many modern secure applications use access tokens to ensure that users have acce
 
 When an access token expires or becomes invalid but the application still needs to access a protected resource, the application must use a new access token. To provide a new access token without requiring the user to grant permission a second time, OAuth 2.0 introduced an artifact called a *refresh token*.
 
-You cannot use a refresh token more than once.
+Note the following points:
 
-You cannot use a refresh token if your API Session Timeout is set to `unlimited`.
+- You cannot use a refresh token more than once.
 
-In Secret Server, the refresh token "Time to live" equals the APISessionTimeout plus 15 minutes.
+- You cannot use a refresh token if your API Session Timeout is set to `unlimited`.
 
-Access tokens retrieved from REST can also be used for SOAP.
+- In Secret Server, the refresh token "Time to live" equals the APISessionTimeout plus 15 minutes.
+
+- Access tokens retrieved from REST can also be used for SOAP.
 
 ## How to Enable Refresh Tokens in Secret Server
 
 You will receive a refresh token only if the option is enabled in **Admin** > **Configuration** as described below.
 
 1. Click **Admin** > **Configuration** > then click the **General** tab.
-1. Scroll to the bottom of the window and click the **Edit** button.
 
-   ![image-refresh-token-edit](images/refresh-token-edit.png)
+   The **Enable Web Services** field is visible but not editable.
 
-1. Scroll up and check the box next to **Enable Web Services**.
+   ![image-refresh-token-config](images/refresh-token-config.png)
 
-   ![image-refresh-token-webservices-enable](images/refresh-token-webservices-enable.png)
+1. Scroll to the bottom of the window, click the **Edit** button, and scroll back up.
+
+   The window title changes from **Configuration** to **Edit Configuration** and the **Enable Web Services** field is now editable.
+
+   ![image-refresh-token-edit-config](images/refresh-token-edit-config.png)
+
+1. Check the box next to **Enable Web Services**.
+
+  The menu expands and the **Enable Refresh Tokens for Web Services** is now visible.
+
+    ![image-refresh-token-enable-services](images/refresh-token-enable-services.png)
 
 1. Check the box next to **Enable Refresh Tokens for Web Services**.
 
-   ![image-refresh-token-enable](images/refresh-token-enable.png)
+   The menu expands and the **Maximum Token Refreshes Allowed** field is now visible.
+
+   ![image-refresh-token-enable-refresh](images/refresh-token-enable-refresh.png)
 
 1. Enter a numeral in the box next to **Maximum Token Refreshes Allowed**.
 
-   ![image-refresh-token-maximum-refreshes](images/refresh-token-maximum-refreshes.png)
+1. Scroll to the bottom of the page and click **Save**.
 
 1. Authenticate with REST. You should receive both an access_token and a refresh_token.
 1. Use the access token until it expires.
