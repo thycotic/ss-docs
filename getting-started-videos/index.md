@@ -1,6 +1,7 @@
 [title]: # (Getting Started Videos)
 [tags]: # (video,getting started,help)
 [priority]: # (500)
+[display]: # (toc,search,content)
 
 # Getting Started Videos
 
