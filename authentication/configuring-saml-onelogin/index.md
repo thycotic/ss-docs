@@ -61,7 +61,7 @@ Click **Save** when done.
 
 1. Fill out the required information and click **Save** when finished.
 
->**Note:** If you are using a Secret Server local account or Secret Server Cloud, the username will be in email format and it must be identical on OneLogin and Secret Server. For an Active Directory account, it should be the samAccountName.
+    >**Note:** If you are using a Secret Server local account or Secret Server Cloud, the username will be in email format and it must be identical on OneLogin and Secret Server. For an Active Directory account, it should be the samAccountName.
 
 1. Click on the **Applications** tab, then click the plus sign (+).
 
