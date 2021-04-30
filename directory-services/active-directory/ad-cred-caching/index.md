@@ -1,5 +1,5 @@
 [title]: # (Active Directory Credential Caching)
-[tags]: # (Active Directory,AD,credential,caching)
+[tags]: # (AD,credential,cache)
 [priority]: # (1000)
 
 # Active Directory Credential Caching
@@ -28,4 +28,4 @@ AD credential caching is disabled by default, but an administrator can enabled o
 
 ## Auditing
 
-Audit logs are recorded in the System Log whenever cached credentials are found to be expired, or when a successful login attempt has been made using cached credentials.
+Audit logs are recorded in the system log whenever cached credentials are found to be expired, or when a successful login attempt has been made using cached credentials.
