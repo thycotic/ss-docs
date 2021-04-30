@@ -1,18 +1,20 @@
 [title]: # (Enabling and Disabling Maintenance Mode)
-[tags]: # (Administration, Enable, Disable, Maintenance mode)
+[tags]: # (Administration, Enable, Disable)
 [priority]: # (1000)
 
 # Enabling and Disabling Maintenance Mode
 
-Turning on Maintenance Mode allows you to temporarily prevent users from changing roles, Secrets, or Secret-related data such as dependencies, templates, and password requirements. For example, you would want to enable Maintenance Mode while migrating the Secret Server application to a new server with a different domain.
+Turning on maintenance mode allows you to temporarily prevent users from changing roles, secrets, or secret-related data such as dependencies, templates, and password requirements. For example, you would want to enable Maintenance Mode while migrating the Secret Server application to a new server with a different domain.
 
-To turn on Maintenance Mode, click **Administration** in the left-hand navigation and at the bottom of the list of Administration areas, then click **Show All**.
+To turn on Maintenance Mode, click **Administration \> Show All**.
 
-1. In the Server Nodes window, click **Setup & System Maintenance**, then click **Server Nodes**.  
+1. In the Server Nodes window, click **Setup & System Maintenance**.
+
+1. Click **Server Nodes**.  
 
    ![enable-maint1](images/enable-maint1.png)
 
-1. In the Maintenance Mode column, click the edit icon next to Disabled.
+1. In the **Maintenance Mode** column, click the edit icon next to Disabled.
 
    ![enable-maint2](images/enable-maint2.png)
 
