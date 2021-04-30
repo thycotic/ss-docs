@@ -2,7 +2,7 @@
 [tags]: # (configure,RDP,launcher,domain,windows,account,template)
 [priority]: # (1000)
 
-# Configure RDP Launcher domain for Windows Account template
+# Configure RDP Launcher Domain for Windows Account Template
 
 ## Problem
 
@@ -10,11 +10,11 @@ When a Remote Desktop Launcher fails to log into a machine, it is sometimes beca
 
 **Registry Setting:** HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\DefaultDomainName
 
-**Group Policy:** (Windows 2008 and higher) "Assign a default domain for logon" under Computer Configuration\Administrative Templates\System\Logon
+**Group Policy** (Windows 2008 and higher): "Assign a default domain for logon" under Computer Configuration\Administrative Templates\System\Logon
 
 ## Solution
 
-Add a key to `web-appSettings.config` that will cause the RDP Launcher to use the machine name as the domain name when authenticating using a local Windows account.
+Add a key to `web-appSettings.config` that will cause the RDP launcher to use the machine name as the domain name when authenticating using a local Windows account.
 
  1. Run a text editor as an administrator on the server running Secret Server.
 
@@ -24,4 +24,6 @@ Add a key to `web-appSettings.config` that will cause the RDP Launcher to use th
 
      `<add key="RDPUseComputerForDomain" value="true" />`
 
- 1. Perform an iisreset, then test the Launcher.
+ 1. Perform an IIS reset
+
+ 1. Test the Launcher.
