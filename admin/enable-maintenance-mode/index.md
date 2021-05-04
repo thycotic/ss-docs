@@ -1,6 +1,7 @@
 [title]: # (Enabling and Disabling Maintenance Mode)
 [tags]: # (Administration, Enable, Disable)
 [priority]: # (1000)
+[display]: # (all)
 
 # Enabling and Disabling Maintenance Mode
 

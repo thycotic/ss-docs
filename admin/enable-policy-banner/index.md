@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 [title]: # "Enable Company Policy Banner"
 [tags]: # "banner, log on"
 [priority]: # "1000"
+=======
+[title]: # (Enable Company Policy Banner)
+[tags]: # (Advanced Encryption)
+[priority]: # (1000)
+[display]: # (all)
+>>>>>>> 8871fea9043f45a39074d71491315ba6a7dec491
 
 # Enable Company Policy Login Banner
 
