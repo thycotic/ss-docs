@@ -1,6 +1,7 @@
 [title]: # (Enable Company Policy Banner)
 [tags]: # (Advanced Encryption)
 [priority]: # (1000)
+[display]: # (all)
 
 # Enable Company Policy Login Banner
 
