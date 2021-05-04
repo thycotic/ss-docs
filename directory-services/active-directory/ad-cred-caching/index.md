@@ -1,8 +1,10 @@
-[title]: # (Active Directory Credential Caching)
-[tags]: # (AD,credential,cache)
-[priority]: # (1000)
+[title]: # "Active Directory Credential Caching"
+[tags]: # "AD,credential,cache"
+[priority]: # "1000"
 
 # Active Directory Credential Caching
+
+## Overview
 
 Active Directory credential caching enables users to access Secret Server even when the domain controller is unavailable. When caching is enabled, Active Directory credentials are cached for 30 days in the on-premise editions, and for 90 days in Secret Server Cloud.
 
@@ -12,20 +14,18 @@ If a domain user attempts to log in but Secret Server is unable to contact a dom
 
 ## AD Caching Configuration
 
-AD credential caching is disabled by default, but an administrator can enabled or disable it at any time using the steps below.
+AD credential caching is disabled by default, but an administrator can enabled or disable it at any time using the steps below:
 
 1. Click **Admin** > **Configuration** and click the **Login** tab.  
 
-1. Scroll to the bottom of the window and click the **Edit** button.
+1. Scroll to the bottom of the window and click the **Edit** button. The tab becomes editable:
 
-    ![image-edit-button](images/edit-button.png)
+   ![image-cache-clear-cache](images/cache-clear-cache.png)
 
-   To enable caching, check the box next to **Cache AD Credentials for when Engines are offline**.
+1. To enable caching, click to select the **Cache AD Credentials for when Engines are offline** check box.
 
-   To disable caching, click the **Clear Cached AD Credentials** button.
-
-  ![image-cache-clear-cache](images/cache-clear-cache.png)
+1. To disable caching, click the **Clear Cached AD Credentials** button.
 
 ## Auditing
 
-Audit logs are recorded in the system log whenever cached credentials are found to be expired, or when a successful login attempt has been made using cached credentials.
+Audit logs are recorded in the system log whenever cached credentials are found to be expired or when a successful login attempt has been made using cached credentials.

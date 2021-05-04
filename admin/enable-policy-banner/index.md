@@ -1,10 +1,10 @@
-[title]: # (Enable Company Policy Banner)
-[tags]: # (Advanced Encryption)
-[priority]: # (1000)
+[title]: # "Enable Company Policy Banner"
+[tags]: # "banner, log on"
+[priority]: # "1000"
 
 # Enable Company Policy Login Banner
 
-Our company requires the login banner for usage agreements and conditions to be visible when users log into Secret Server.
+If your company requires the login banner for usage agreements and conditions to be visible when users log into Secret Server:
 
 To enable the login banner, follow the procedure below:
 

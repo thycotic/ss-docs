@@ -1,14 +1,16 @@
-[title]: # (How to Enable Refresh Tokens for Web Services)
-[tags]: # (authentication,refresh token,access token,web services)
-[priority]: # (1000)
+[title]: # "How to Enable Refresh Tokens for Web Services"
+[tags]: # "authentication,refresh token,access token,web services"
+[priority]: # "1000"
 
-# Overview
+# How to Enable Refresh Tokens for Web Services
+
+## Overview
 
 Many modern secure applications use access tokens to ensure that users have access to the resources appropriate for them. Access tokens typically have a limited lifetime to ensure that information they contain or reference doesn't become stale, and to limit the time available for an attacker to use a stolen token.
 
 When an access token expires or becomes invalid but the application still needs to access a protected resource, the application must use a new access token. To provide a new access token without requiring the user to grant permission a second time, OAuth 2.0 introduced an artifact called a *refresh token*.
 
-Note the following points:
+Note the following:
 
 - You cannot use a refresh token more than once.
 
@@ -20,6 +22,8 @@ Note the following points:
 
 ## How to Enable Refresh Tokens in Secret Server
 
+### Procedure
+
 You will receive a refresh token only if the option is enabled in **Admin** > **Configuration** as described below.
 
 1. Click **Admin** > **Configuration** > then click the **General** tab.
@@ -28,21 +32,15 @@ You will receive a refresh token only if the option is enabled in **Admin** > **
 
    ![image-refresh-token-config](images/refresh-token-config.png)
 
-1. Scroll to the bottom of the window, click the **Edit** button, and scroll back up.
-
-   The window title changes from **Configuration** to **Edit Configuration** and the **Enable Web Services** field is now editable.
+1. Scroll to the bottom of the window, click the **Edit** button, and scroll back up. The window title changes from **Configuration** to **Edit Configuration** and the **Enable Web Services** field is now editable.
 
    ![image-refresh-token-edit-config](images/refresh-token-edit-config.png)
 
-1. Check the box next to **Enable Web Services**.
+1. Check the box next to **Enable Web Services**. The menu expands and the **Enable Refresh Tokens for Web Services** field is now visible.
 
-    The menu expands and the **Enable Refresh Tokens for Web Services** field is now visible.
+    ![enable-services](images/refresh-token-enable-services.png)
 
-   ![enable-services](images/refresh-token-enable-services.png)
-
-1. Check the box next to **Enable Refresh Tokens for Web Services**.
-
-   The menu expands and the **Maximum Token Refreshes Allowed** field is now visible.
+1. Click to enable the check box next to **Enable Refresh Tokens for Web Services**. The menu expands and the **Maximum Token Refreshes Allowed** field is now visible.
 
    ![image-refresh-token-enable-refresh](images/refresh-token-enable-refresh.png)
 
