@@ -76,11 +76,11 @@ Once a username matches in both systems, the user can log into their desktop com
 
 If you encounter any of the errors below, check that the **RelyingPartyTrust Rule** on the ADFS server has both the message and assertion signed. By default, only the assertion is signed.
 
-"Attempt to login via SAML from identity provider had no signd responses or asseretions"
+* "Attempt to login via SAML from identity provider had no signed responses or assertions"
 
-"Attempt to login via SAML with unsigned request"
+* "Attempt to login via SAML with unsigned request"
 
-"Attempt to login via SAML with unsigned assertion"
+* "Attempt to login via SAML with unsigned assertion"
 
 If you encounter the error, "SAML Response signature message from IDP failed verification," it means that Secret Server cannot decrypt the assertion message from the IDP (ADFS) because the public certificate thumbprint is incorrect. To fix this issue, follow the steps below.
 
