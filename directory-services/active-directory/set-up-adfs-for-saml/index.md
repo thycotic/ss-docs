@@ -43,8 +43,8 @@ How to set up Single Sign-On (SSO) for users synced between an Active Directory 
    * **Claim rule name**: Optional
    * **Attribute Store**: Active Directory
    * Add an **LDAP Attribute** of User-Principal-Name with an **Outgoing Claim Type** of Name ID.
-   * Click **Finish**.
-   * Click **Apply** and then **OK**.
+1. Click **Finish**.
+1. Click **Apply** and then click **OK**.
 
 1. Run the following PowerShell command:
 
@@ -74,17 +74,15 @@ Once a username matches in both systems, the user can log into their desktop com
 
 ## Common Errors
 
-* **Attempt to login via SAML from identity provider had no signed responses or assertions**
+If you encounter any of the errors below, check that the **RelyingPartyTrust Rule** on the ADFS server has both the message and assertion signed. By default, only the assertion is signed.
 
-* **Attempt to login via SAML with unsigned request**
+"Attempt to login via SAML from identity provider had no signd responses or asseretions"
 
-* **Attempt to login via SAML with unsigned assertion**
+"Attempt to login via SAML with unsigned request"
 
-If you encounter any of the errors above, check that the **RelyingPartyTrust Rule** on the ADFS server has both the message and assertion signed. By default, only the assertion is signed.
+"Attempt to login via SAML with unsigned assertion"
 
-* **SAML Response signature message from IDP failed verification**
-
-The error above indicates that Secret Server cannot decrypt the assertion message from the IDP (ADFS) because the public certificate thumbprint is incorrect. To fix this issue, follow the steps below.
+If you encounter the error, "SAML Response signature message from IDP failed verification," it means that Secret Server cannot decrypt the assertion message from the IDP (ADFS) because the public certificate thumbprint is incorrect. To fix this issue, follow the steps below.
 
 1. Download the ADFS certificate, upload it to Secret Server (**Admin \> Configuration \> SAML** tab) and edit the IDP configuration.
 
@@ -96,4 +94,4 @@ The error above indicates that Secret Server cannot decrypt the assertion messag
 
    * A primary token-encrypting certificate is published in federation metadata for use by trusted claims providers.
 
-   * Information Card signing and service communications certificates are always primary.
+   * Information card signing and service communications certificates are always primary.
