@@ -40,9 +40,13 @@ How to set up Single Sign-On (SSO) for users synced between an Active Directory 
 1. Select **Send LDAP Attributes as Claims** as the Claim Rule Template and click **Next**.
 
 1. Fill out the fields below as indicated:
-   * **Claim rule name**: Optional
+
+   * **Claim rule name**: Optional Name
+
    * **Attribute Store**: Active Directory
+
    * Add an **LDAP Attribute** of User-Principal-Name with an **Outgoing Claim Type** of Name ID.
+
 1. Click **Finish**.
 1. Click **Apply** and then click **OK**.
 
