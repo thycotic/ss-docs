@@ -1,35 +1,68 @@
 [title]: # (Using Two-Factor Authentication with Thycotic One)
-[tags]: # (Authentication,2fa,two factor,thycotic one)
-[priority]: # (1000)
+[tags]: # (Two-Factor,Authentication,Thycotic One,Credentials,2FA)
+[priority]: #
 
-# Using Two-Factor Authentication with Thycotic One
+# Enabling Two-Factor Authentication in Thycotic One
 
-Thycotic One supports two-factor authentication (2FA) via TOTP (Google Authenticator) or SMS. When two-factor authentication is enabled, Thycotic One presents the user with a two-factor challenge after the user logs in. This authentication adds to and does not replace any other two-factor authentication methods a client app (such as Secret Server) may be configured to use. We recommend using TOTP over SMS if possible for improved security.
- 	
-Step 1: To use SMS, you’ll need to add and verify a mobile phone number before enabling two-factor authentication. A phone number is not required for the TOTP method. To add a phone number, log in to Thycotic One, and then click Profile in the User Home - Apps dialog on the account homepage. To use TOTP app, start from Step 4:
+When two-factor authentication is enabled, Thycotic One presents a two-factor challenge to the user logging in. The Thycotic One two-factor authentication supplements and does not replace any other two-factor authentication methods used by a client application such as Secret Server. Thycotic One supports two-factor authentication using TOTP or SMS. You can have only one two-factor authentication method active at any time. We recommend using TOTP over SMS whenever possible for better security.
 
-Step 2: Click Add Phone and enter the country code and phone number you would like to use and able to accept text messages. Once a valid phone number has been entered, click +Add and Verify. This will send a text message to the entered phone number, and ask you to enter a code:
+## TOTP Two-Factor Authentication
 
-Step 3: Once you have received the text message, enter the code and click Submit in the Verification Code dialog:
+To use TOTP two-factor authentication with Thycotic One, you must first have a mobile device with an installed TOTP application such as Google Authenticator, Authy, or Microsoft Authenticator. When you have the app installed, follow the steps below.
 
-This will complete the addition of the phone number, and it will now appear as Verified on your profile page.
+1. Log into Thycotic One and on the account homepage in the **User Home - Apps** dialog, click **Two-Factor Authentication**.
 
-Step 4: To enable two-factor authentication in Thycotic One, log in and then click the Two-Factor Authentication link on the account homepage:
+   ![image-2fa-user-home-apps](images/2fa-user-home-apps.png)
 
-Step 5: Choose the method you want to use (TOTP or SMS) and click Enroll for that method. You can only have one two-factor authentication method active at the same time.
+1. Choose **TOTP** and click **Enroll**.
 
-Step 6: To use TOTP two-factor authentication, you’ll need a mobile device with a TOTP app (such as Google Authenticator, Authy, or Microsoft Authenticator) installed. If using SMS, go to Step 9.
+   ![image-2fa-user-home-apps](images/2fa-enroll-totp-sms.png)
 
-Step 7: Click Enroll for the TOTP two-factor method:
+   Thycotic One displays a barcode (redacted in the example shown).
 
-Step 8: This will display a barcode (it has been redacted in the example below). Using the TOTP app on your mobile device, scan the barcode and enter one of the generated six-digit codes in the Verification Code field:
+   ![image-2fa-bar-code](images/2fa-bar-code.png)
 
-A new code will be generated every 30 seconds. Once you have entered in the correct code, TOTP two-factor authentication will be fully set up, and you’ll be prompted to enter in a new code from your mobile device each time you log in.
+1. Using the TOTP app on your mobile device, scan the barcode. You will receive multiple six-digit codes.
 
-Step 9: To use SMS two-factor authentication, you’ll need to have a verified primary phone number on your account (Step 2 shows how to add a phone number). Click Enroll for the SMS two-factor method.
+1. In the Verification Code field, enter one of the six-digit codes (a new code is generated every 30 seconds).
 
-Step 10: Click the button to send a text message to your phone. When you receive the message, enter the six-digit code into the box provided:
+   ![image-2fa-verification-code](images/2fa-verification-code.png)
 
-Once you have entered in the correct code, SMS two-factor authentication will be fully set up. Each time you log in, you’ll receive a text message, and you’ll need to enter the provided code in order to complete the login process.
+When you have correctly entered and submitted a six-digit code, the setup of TOTP two-factor authentication is complete. From this point forward, each time you attempt to log in you will receive a text message on your mobile device with a code that you must enter to complete the login process.
 
+## SMS Two-Factor Authentication
 
+To use SMS two-factor authentication with Thycotic One, you must first provide and verify a mobile phone number.
+1. To provide a mobile phone number, log into Thycotic One, and on the account homepage in the **User Home - Apps** dialog, click **Profile**.
+
+   ![image-2fa-user-home-apps](images/2fa-user-home-apps.png)
+
+1. Click **Add Phone** and enter the country code and phone number of a mobile phone that accepts text messages.
+
+   ![image-2fa-add-phone-number](images/2fa-add-phone-number.png)
+
+1. Click **+Add** and **Verify**.
+
+   Thycotic One sends a text message to the phone number, with a code.
+
+1. Enter the code and click **Submit** in the Verification Code dialog.
+
+   ![image-2fa-phone-verification-code](images/2fa-phone-verification-code.png)
+
+   The phone number now appears as Verified on your profile page.
+
+1.On the Thycotic One account homepage in the **User Home - Apps** dialog, click **Two-Factor Authentication**.
+
+   ![image-2fa-user-home-apps](images/2fa-user-home-apps.png)
+
+1. Choose **SMS** and click **Enroll**.
+
+   ![image-2fa-user-home-apps](images/2fa-enroll-totp-sms.png)
+
+   Thycotic One sends a text message to your phone with a six-digit code.
+
+1. Enter the six-digit code into the box provided.
+
+   ![image-2fa-verification-code](images/2fa-verification-code.png)
+
+When you have correctly entered and submitted the six-digit code, the setup of SMS two-factor authentication is complete. From this point forward, each time you attempt to log in you will receive a text message on your mobile device with a code that you must enter to complete the login process.
