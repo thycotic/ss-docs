@@ -1,6 +1,6 @@
 [title]: # (Installing RabbitMQ)
 [tags]: # (RabbitMQ,Setup,Install)
-[priority]: #
+[priority]: #	(1000)
 
 # Installing RabbitMQ
 
@@ -31,7 +31,7 @@ RabbitMQ requires:
 - Nodes hosting RabbitMQ need a minimum of 2 GB RAM
 - Nodes hosting RabbitMQ should have at least 128 MB of memory available at all times
 - Disk space is not an issue, but it should not go below 50 MB (default value), especially if you host RabbitMQ on the same server as SS
-- Minimum 2 vCPUs
+- Minimum two vCPUs. This is an **absolute minimum** otherwise installation fails without much useful feedback to troubleshoot. We strongly recommend four vCPUs or more.
 - Ports 5672 (non-SSL) or 5671 (SSL) opened on the machine and firewall
 
 ### SSL Certificate

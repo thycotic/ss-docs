@@ -47,4 +47,3 @@ Assign the new launcher to an appropriate existing template. To build a new temp
 1. Map the username and password fields accordingly.
 
 1. Click **Save**.
-  
