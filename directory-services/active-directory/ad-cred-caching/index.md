@@ -1,6 +1,6 @@
-[title]: # "Active Directory Credential Caching"
-[tags]: # "AD,credential,cache"
-[priority]: # "1000"
+[title]: # (Active Directory Credential Caching)
+[tags]: # (AD,credential,cache)
+[priority]: # (1000)
 
 # Active Directory Credential Caching
 

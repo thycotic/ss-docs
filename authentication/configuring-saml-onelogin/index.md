@@ -1,7 +1,7 @@
-[title]: # "Configuring SAML OneLogin"
-[tags]: # "authentication,SSO,OneLogin"
-[priority]: # "1000"
-[display]: # "all"
+[title]: # (Configuring SAML OneLogin)
+[tags]: # (authentication,SSO,OneLogin)
+[priority]: # (1000)
+[display]: # (all)
 
 # Configuring SAML OneLogin
 

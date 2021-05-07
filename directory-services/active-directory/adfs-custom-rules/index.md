@@ -1,7 +1,7 @@
-[title]: # "ADFS Custom Rules"
-[tags]: # "directory services,active directory,adfs,sAMAccountName,UPN"
-[priority]: # "1000"
-[display]: # "all"
+[title]: # (ADFS Custom Rules)
+[tags]: # (directory services,active directory,adfs,sAMAccountName,UPN)
+[priority]: # (1000)
+[display]: # (all)
 
 # ADFS Custom Rules
 

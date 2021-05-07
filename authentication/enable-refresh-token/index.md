@@ -1,8 +1,8 @@
-[title]: # "How to Enable Refresh Tokens for Web Services"
-[tags]: # "authentication,refresh token,access token,web services"
-[priority]: # "1000"
+[title]: # (Enabling Refresh Tokens for Web Services)
+[tags]: # (authentication,refresh token,access token,web services)
+[priority]: # (1000)
 
-# How to Enable Refresh Tokens for Web Services
+# Enabling Refresh Tokens for Web Services
 
 ## Overview
 
