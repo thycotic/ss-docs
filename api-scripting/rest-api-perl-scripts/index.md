@@ -1,4 +1,4 @@
-[title]: # (REST API Perl Script Examples)
+[title]: # (REST API Perl Scripts)
 [tags]: # (REST API,API,Scripting,Perl,examples)
 [priority]: # (1000)
 
