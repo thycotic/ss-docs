@@ -1,5 +1,5 @@
 [title]: # (Using Connect As Command and SSH Proxy with PuTTY launcher)
-[tags]: # (configure,RDP,launcher,domain,windows,account,template)
+[tags]: # (Connect As Command,PuTTY launcher,SSH proxy,Unix, root account)
 [priority]: # (1000)
 [display]: # (all)
 
