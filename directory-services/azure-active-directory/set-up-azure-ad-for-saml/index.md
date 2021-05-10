@@ -37,4 +37,12 @@ Once a username matches in both systems, the user can log into their desktop com
 
 ## Advanced Certificate Signing Settings
 
-If you apply advanced certificate signing settings to the Secret Server IdP application in Azure AD, use the same settings found in Secret Server for **Require Signed SAML Response**, **Require Signed Assertion**, and **Require Signed Assertion Or Signed SAML Response**. You can find these settings in Secret Server by clicking **Admin \> Configuration \> SAML** tab and clicking **Advanced Settings** next to your identity provider.
+If you apply advanced certificate signing settings to the Secret Server IdP application in Azure AD, use the same settings found in Secret Server for the following:
+
+* **Require Signed SAML Response**
+
+* **Require Signed Assertion**
+
+* **Require Signed Assertion Or Signed SAML Response**.
+
+You can find these settings in Secret Server by clicking **Admin \> Configuration \> SAML** tab and clicking **Advanced Settings** next to your identity provider.
