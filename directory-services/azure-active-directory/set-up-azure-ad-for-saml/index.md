@@ -33,7 +33,7 @@ For users to be authenticated by the SSO workflow you are setting up, Secret Ser
 
 Once a username matches in both systems, the user can log into their desktop computer using their Azure AD credentials and then browse to Secret Server without being prompted again for authentication.
 
- >**Note**: If you have accounts in which the sAMAccountName differs from the UPN name, you can create custom rules to accommodate the differences. See the Directory Services section of the Secret Server documentation.
+>**Note**: If you have accounts in which the sAMAccountName differs from the UPN name, you can create custom rules to accommodate the differences. See the Directory Services section of the Secret Server documentation.
 
 ## Advanced Certificate Signing Settings
 
