@@ -21,9 +21,9 @@ See the [Secret Server Software Development Kit for DevOps](../sdk-cli/index.md)
 
 ### Downloads
 
-- [Windows x64](https://downloads.ss.thycotic.com/secretserversdk/1.3.0/secretserver-sdk-1.5.0-win-x64.zip)
-- [MacOS x64](https://downloads.ss.thycotic.com/secretserversdk/1.3.0/secretserver-sdk-1.5.0-osx-x64.zip)
-- [Linux x64](https://downloads.ss.thycotic.com/secretserversdk/1.3.0/secretserver-sdk-1.5.0-linux-x64.zip) (including RHEL 7+)
+- [Windows x64](https://downloads.ss.thycotic.com/secretserversdk/1.5.0/secretserver-sdk-1.5.0-win-x64.zip)
+- [MacOS x64](https://downloads.ss.thycotic.com/secretserversdk/1.5.0/secretserver-sdk-1.5.0-osx-x64.zip)
+- [Linux x64](https://downloads.ss.thycotic.com/secretserversdk/1.5.0/secretserver-sdk-1.5.0-linux-x64.zip) (including RHEL 7+)
 - [Red Hat Enterprise Linux 6 x64](https://downloads.ss.thycotic.com/secretserversdk/1.5.0/secretserver-sdk-1.5.0-rhel.6-x64.zip)
 
 ### Download File Hashes
