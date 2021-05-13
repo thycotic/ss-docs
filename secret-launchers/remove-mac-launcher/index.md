@@ -10,7 +10,7 @@ To upgrade or apply a fix to the Secret Server Mac Launcher, you must remove the
 
    This step should remove the ThycoticDaemon and prevent the launcher from restarting, but you might need to perform the step more than once.
 1. Open **Activity Monitor**.
-1. Force Quit the **ThycoticLauncher** process and all related processes using the procedure, [Quit an app or process in Activity Monitor on Mac](https://support.apple.com/en-in/guide/activity-monitor/actmntr1002/mac).
+1. Force Quit the **ThycoticLauncher** process and all related processes. See [Quit an app or process in Activity Monitor on Mac](https://support.apple.com/en-in/guide/activity-monitor/actmntr1002/mac).
 1. Open **Finder**.
 1. Navigate to **Application \> Thycotic**.
 1. Right-click **ThycoticLauncher** and select **Move to Trash**.
