@@ -1,15 +1,15 @@
-[title]: # (Managing Compatibility Between Secret Server and Protocol Handler)
+[title]: # (Managing Multiple Secret Server Instances with Protocol Handlers and Launchers)
 [tags]: # (Launcher,protocol handler,auto-update,backward,forward)
 [priority]: # (1000)
 [display]: # (all)
 
-# Managing Compatibility Between Secret Server and Protocol Handler (Launchers)
+# Managing Multiple Secret Server Instances with Protocol Handlers and Launchers
 
-In an organization running multiple instances of Secret Server, some users might find themselves having to repeatedly uninstall and reinstall different versions of Protocol Handler to match the different instances of Secret Server.
+In an organization running multiple instances of Secret Server, some users might find themselves having to repeatedly uninstall and reinstall different versions of the protocol handler to match the different instances of Secret Server.
 
-To enable Secret Server to simultaneously support multiple versions of the Protocol Handler, you just need to disable the Protocol Handler Auto-Update function using the procedure below.
+To enable Secret Server to simultaneously support multiple versions of the protocol handler, you just need to disable the protocol handler auto-update function using the procedure below.
 
->**Note**: Disabling auto-update for forward and backward compatibility is supported on Protocol Handler only. The ClickOnce launcher and the Mac Protocol Handler do not support disabling auto-update.
+>**Note**: Disabling auto-update for forward and backward compatibility is supported on the protocol handler only. The ClickOnce launcher and the Mac protocol handler do not support disabling auto-update.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ To enable Secret Server to simultaneously support multiple versions of the Proto
 
 1. Scroll to the bottom of the page and click  **Edit**.
 
-1. In the **Launcher Settings** section, uncheck the **Enable Protocol Handler Auto-Update** toggle.
+1. In the **Launcher Settings** section, uncheck the box next to  **Enable Protocol Handler Auto-Update**.
 
    ![image-auto-update-disable](images\ss-protocol-handler-auto-update-disable.png "Disable Auto-Update")
 
@@ -33,11 +33,11 @@ To enable Secret Server to simultaneously support multiple versions of the Proto
 
 1. Ensure that the **Enable Protocol Handler Auto-Update** function is now labeled, **No**.
 
-![image-auto-update-enable](images\ss-protocol-handler-auto-update-no.png "Auto-Update Disabled")
+   ![image-auto-update-enable](images\ss-protocol-handler-auto-update-no.png "Auto-Update Disabled")
 
-You can re-enable Protocol Handler Auto-Update at any time by following the steps above and re-checking the **Enable Protocol Handler Auto-Update** toggle. When you re-enable auto-update, users will be required to install the latest instance.
+You can re-enable protocol handler auto-update at any time by following the steps above and re-checking the box next to **Enable Protocol Handler Auto-Update**. When you re-enable auto-update, users will be required to install the latest instance.
 
->**Note**: While Protocol Handler Auto-Update is disabled, each user must manually update their installed Protocol Handler as necessary on a machine-by-machine basis. The MSI can be installed directly or through Group Policy. A reboot may be necessary on certain operating systems.
+>**Note**: While protocol handler auto-update is disabled, each user must manually update their installed protocol handler as necessary on a machine-by-machine basis. The MSI can be installed directly or through Group Policy. A reboot may be necessary on certain operating systems.
 
 ## Manually Updating Protocol Handler
 
