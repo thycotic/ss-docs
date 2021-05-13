@@ -35,4 +35,6 @@ This procedure explains how to set a connect as secret when using SSH Proxy to a
 
 1. Verify that the commands in the **Connect As Command** field are correct.
 
+1. If you change anything, click **Save**.
+
    ![image-connect-as-command3](images/connect-as-command3.png)
