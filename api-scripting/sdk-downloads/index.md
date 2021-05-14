@@ -12,9 +12,47 @@ To download the SDK command line tool, choose a version and OS platform below.
 
 See the [Secret Server Software Development Kit for DevOps](../sdk-cli/index.md) topic for how to use the SDK.
 
-## SDK Client version 1.4.1
+## SDK Client version 1.5.0
 
 ### Release Notes
+
+- Cache improvements
+- Stability improvements
+
+### Downloads
+
+- [Windows x64](https://downloads.ss.thycotic.com/secretserversdk/1.3.0/secretserver-sdk-1.5.0-win-x64.zip)
+- [MacOS x64](https://downloads.ss.thycotic.com/secretserversdk/1.3.0/secretserver-sdk-1.5.0-osx-x64.zip)
+- [Linux x64](https://downloads.ss.thycotic.com/secretserversdk/1.3.0/secretserver-sdk-1.5.0-linux-x64.zip) (including RHEL 7+)
+- [Red Hat Enterprise Linux 6 x64](https://downloads.ss.thycotic.com/secretserversdk/1.5.0/secretserver-sdk-1.5.0-rhel.6-x64.zip)
+
+### Download File Hashes
+
+#### Windows x64
+
+- File: `secretserver-sdk-1.5.0-win-x64.zip`
+- SHA256: 4B3246470E4EA87190CE3B511151E93E04E7363EADBD145BA0EE8AA63BC1378B
+
+#### MacOS x64
+
+- File: `secretserver-sdk-1.5.0-osx-x64.zip`
+- SHA256: 492D177CF86554EC22B947957328D833471E2DECFA7AE95FC0D2B3FFB1B24E37
+
+#### Linux x64
+
+- File: `secretserver-sdk-1.5.0-linux-x64.zip`
+- SHA256: 94672CA26C438301A070C020FFAEE2932250F3358C91B30BC4F9B8F0E0A1210B
+
+#### Red Hat Enterprise Linux 6 x64
+
+- File: `secretserver-sdk-1.5.0-rhel.6-x64.zip`
+- SHA256: BF0BA52C7BA0838E56C4C0C44FC29794223B04336458D342F14872FE3914E30B
+
+## Legacy Releases
+
+### SDK Client version 1.4.1
+
+#### Release Notes
 
 - New option to specify a configuration and cache directory other than the default
 - SDK CLI (`tss`) now has a `--configure-directory` option.
@@ -22,37 +60,12 @@ See the [Secret Server Software Development Kit for DevOps](../sdk-cli/index.md)
 - Updated the Nuget SDK packages to support customizing the key storage directory. They now check for a `SecretServerSdkKeyDirectory AppSetting`.
 - Updated the Nuget SDK packages to have a `SecretServerClient` `GetAccessToken()` and     `GetAccessTokenAsync()` method, to get a REST or SOAP API token. This is equivalent to the existing SDK CLI command `token`.
 
-
-### Downloads
+#### Downloads
 
 - [Windows x64](https://downloads.ss.thycotic.com/secretserversdk/1.4.1/secretserver-sdk-1.4.1-win-x64.zip)
 - [MacOS x64](https://downloads.ss.thycotic.com/secretserversdk/1.4.1/secretserver-sdk-1.4.1-osx-x64.zip)
 - [Linux x64](https://downloads.ss.thycotic.com/secretserversdk/1.4.1/secretserver-sdk-1.4.1-linux-x64.zip) (including RHEL 7+)
 - [Red Hat Enterprise Linux 6 x64](https://downloads.ss.thycotic.com/secretserversdk/1.4.1/secretserver-sdk-1.4.1-rhel.6-x64.zip)
-
-### Download File Hashes
-
-#### Windows x64
-
-- File: `secretserver-sdk-1.4.1-win-x64.zip`
-- SHA256: E43A887B8F1B12A050F690955E656E1F4F354F778C51D29BBAFF976FEC1F8133
-
-#### MacOS x64
-
-- File: `secretserver-sdk-1.4.1-osx-x64.zip`
-- SHA256: 24A3B34065F978F93FC3256324C73E3FD23BEB01B55D4CDEE9EA19EB18DB0D66
-
-#### Linux x64
-
-- File: `secretserver-sdk-1.4.1-linux-x64.zip`
-- SHA256: ABD74DA5EF399FC5F6232FF72DC096938B3B7BE529E0A92D1B9FE28A83E1FC34
-
-#### Red Hat Enterprise Linux 6 x64
-
-- File: `secretserver-sdk-1.4.1-rhel.6-x64.zip`
-- SHA256: 07DEFDB1F9FDB91F8795548B9A547DA68A488CC658D38D5860458E2B8CE1A55B
-
-## Legacy Releases
 
 ### SDK Client version 1.3.0
 
