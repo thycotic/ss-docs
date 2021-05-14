@@ -14,11 +14,11 @@ You can create a custom launcher for TOAD by entering custom command line parame
 
 1. Select a Launcher Type:
 
-* Use **Process** if you would like to use Secret credentials to connect directly to the remote host.
+   * Use **Process** if you would like to use Secret credentials to connect directly to the remote host.
 
-* Use **Proxied SSH Process** if you have SSH Proxy enabled, to prevent passing Secret credentials to the client by connecting to Secret Server's proxy to interact with the remote host.
+   * Use **Proxied SSH Process** if you have SSH Proxy enabled, to prevent passing Secret credentials to the client by connecting to Secret Server's proxy to interact with the remote host.
 
- ![images-toad-launcher](images\toad-launcher.png)
+    ![images-toad-launcher](images\toad-launcher.png)
 
 1. Enter a **Launcher Name** of your choice.
 
