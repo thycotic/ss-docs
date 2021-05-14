@@ -25,7 +25,7 @@ The launcher (protocol handler) can be deployed in two ways—with the ClickOnce
 
 1. Set the **Launcher Deployment Type** to "**Protocol Handler**.
 
-1. Go to Tools \> Launcher Tools to download the launcher application.
+1. Go to **Tools \> Launcher Tools** to download the launcher application.
 
 1. Click the **Download Protocol Handler MSI** link for the operating system you want to install on.
 
