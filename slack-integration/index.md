@@ -16,6 +16,8 @@ To use Slack integration, you must:
 
 ## Setup and Configuration
 
+### Slack Configuration
+
 Setup the Slack app within the Slack API Interface:
 
 1. Log on your [Slack workspace](https://api.slack.com/app). Your Slack Apps page appears.
@@ -30,65 +32,93 @@ Setup the Slack app within the Slack API Interface:
 
 2. Click the **Create App** button. A Basic Information page appears (not shown).
 
-2. Scroll down to the **App Credentials** section.
+6. Scroll down to the **App Credentials** section:
 
-2. Record the **App ID** and **Signing Secret** to add them to the SS configuration.
+   ![image-20210511122742087](images/image-20210511122742087.png)
 
-2. Scroll down to the **Display Information** section.
+7. Record the **App ID** and **Signing Secret**.
 
-2. Type the app name and a short description.
+   > **Note:** You can use the deprecated verification token instead (in the Bot Token text box in SS), but we strongly recommend against it.
 
-2. Right click and save the following image:
+8. Add them to the SS configuration:
 
-   ![image-20201201123850428](images/image-20201201123850428.png)
+   1. Log on your SS instance.
 
-2. Set the icon for the app to the saved image. The completed section looks like this:
+   1. Go to **Admin \> Show All**. An alphabetized menu appears.
 
-   ![image-20201201112633374](images/image-20201201112633374.png)
+   1. Click the **Slack Integration** link. The Slack Integration page appears:
 
-2. Click **OAuth & Permissions** in the left menu.
+      ![image-20210511114044027](images/image-20210511114044027.png)
 
-2. Scroll down to the **Scopes** section.
+   1. Click the **Edit** link.
 
-2. Click the **Add an OAuth Scope** button to add the following scopes to the Bot Token Scopes:
+   1. A check box and buttons appear.
 
-   ![image-20201201124510630](images/image-20201201124510630.png)
+   1. Click to select the **Enabled** check box. Additional controls appear:
 
-2. Click **Bot User** in the left menu.
+      ![image-20210511114524051](images/image-20210511114524051.png)
 
-2. Enable the **Always Show My Bot as Online** toggle.
+   1. Type your App ID in the **App ID** text box.
 
-2. Enable the **Home Tab** toggle.
+   1. Type your Signing Secret in the **Signature Key** text box.
 
-2. Go to the **Incoming Webhooks** section to enable the **Incoming Webhooks** toggle.
+      > **Note:** Leave the Bot Token text box empty unless you chose to the deprecated verification token.
 
-2. Go to the **Interactivity & Shortcuts** section to enable the **Interactivity** toggle.
+9. Scroll down to the **Display Information** section.
 
-2. Type a link to your instance of Secret Server in the **Request URL** text box: `https://<secret server instance>/api/v1/slack/interaction`.
+10. Type the app name and a short description.
 
-2. In the **Shortcuts** section, click the **Create New Shortcut** button to add a global shortcut named "Secret search."
+11. Right click and save the following image:
 
-2. Type `secretsearch` for the **Callback ID**.
+    ![image-20201201123850428](images/image-20201201123850428.png)
 
-   > **Note:** Skip this step to prevent secret searches within Slack.
+12. Set the icon for the app to the saved image. The completed section looks like this:
 
-2. Go to the **Event Subscriptions** section
+    ![image-20201201112633374](images/image-20201201112633374.png)
 
-2. Enable the **Enable Events** toggle.
+13. Click **OAuth & Permissions** in the left menu.
 
-2. Type a link to your instance of Secret Server in the **Request URL** text box: `https://<secret server instance>/api/v1/slack/event`.
+14. Scroll down to the **Scopes** section.
 
-   > **Note:** When adding this URL, Slack confirms connectivity by sending a challenge message to your server. If any firewall or network connectivity issues are present, you cannot proceed past this point until those issues are resolved.
+15. Click the **Add an OAuth Scope** button to add the following scopes to the Bot Token Scopes:
 
-2. Go to the **Subscribe to events on behalf of users** section.
+    ![image-20201201124510630](images/image-20201201124510630.png)
 
-2. Click the **Add Workspace Event** button to add the **app_home_opened** event.
+16. Click **Bot User** in the left menu.
 
-2. Click **Install App** in the left menu.
+17. Enable the **Always Show My Bot as Online** toggle.
 
-2. Install the app into one of your workspace channels. #general is fine as the Secret Server Bot does not send messages to any channels— Slack just needs this association.
+18. Enable the **Home Tab** toggle.
 
-2. Copy the **Bot User OAuth Access Token** into the Secret Server configuration.
+19. Go to the **Incoming Webhooks** section to enable the **Incoming Webhooks** toggle.
+
+20. Go to the **Interactivity & Shortcuts** section to enable the **Interactivity** toggle.
+
+21. Type a link to your instance of Secret Server in the **Request URL** text box: `https://<secret server instance>/api/v1/slack/interaction`.
+
+22. In the **Shortcuts** section, click the **Create New Shortcut** button to add a global shortcut named "Secret search."
+
+23. Type `secretsearch` for the **Callback ID**.
+
+    > **Note:** Skip this step to prevent secret searches within Slack.
+
+24. Go to the **Event Subscriptions** section
+
+25. Enable the **Enable Events** toggle.
+
+26. Type a link to your instance of Secret Server in the **Request URL** text box: `https://<secret server instance>/api/v1/slack/event`.
+
+    > **Note:** When adding this URL, Slack confirms connectivity by sending a challenge message to your server. If any firewall or network connectivity issues are present, you cannot proceed past this point until those issues are resolved.
+
+27. Go to the **Subscribe to events on behalf of users** section.
+
+28. Click the **Add Workspace Event** button to add the **app_home_opened** event.
+
+29. Click **Install App** in the left menu.
+
+30. Install the app into one of your workspace channels. #general is fine as the Secret Server Bot does not send messages to any channels— Slack just needs this association.
+
+31. Copy the **Bot User OAuth Access Token** into the Secret Server configuration.
 
 ## User Setup
 

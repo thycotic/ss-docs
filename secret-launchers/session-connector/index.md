@@ -401,7 +401,7 @@ Session Connector will also log to the file `C:\Program Files\Thycotic Software 
 
 # Uninstalling Session Connector
 
-Secret Server Session Connector can be removed from “Add/Remove Programs” or “Apps & Features.” Once uninstalled, a reboot is required to restore the default Remote Desktop behavior.
+Secret Server Session Connector can be removed from "Add/Remove Programs" or "Apps & Features." Once uninstalled, a reboot is required to restore the default Remote Desktop behavior.
 
 Any related SSSC custom launchers need to be un-associated with any secret templates they were previously tied to.
 
