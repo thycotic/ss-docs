@@ -41,9 +41,7 @@ RabbitMQ requires:
 - The PFX certificate should have:
 
   - A name that matches the RabbitMQ Fully qualified machine name
-
   - If you plan on making a RabbitMQ cluster, add DNS names (SANs) to your certificate
-
   - Your certificate must be an RSA certificate. CNG is not supported and will cause the installation to fail.
 
 - If you do not have an internal PKI and prefer not to use a public certificate, you can use a self-signed certificate.
@@ -92,7 +90,7 @@ In Secret Server UI
 
 1. Click the **OK** button.
 
-###  Task 2: RabbitMQ Host
+### Task 2: RabbitMQ Host
 
 1. Download the [Thycotic RabbitMQ Helper.](https://updates.thycotic.net/links.ashx?RabbitMqInstaller)
 
