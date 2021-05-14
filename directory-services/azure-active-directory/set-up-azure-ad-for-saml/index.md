@@ -1,9 +1,9 @@
-[title]: # (Setting Up ADFS for SAML)
+[title]: # (Setting Up SAML SSO for Azure Active Directory)
 [tags]: # (directory services,active directory,sAMAccountName,UPN)
 [priority]: # (1000)
 [display]: # (all)
 
-# Setting Up SAML for Secret Server in Azure Active Directory
+# Setting Up SAML SSO for Azure Active Directory
 
 ## Azure AD Configuration
 
