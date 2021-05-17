@@ -4,7 +4,7 @@
 
 # Clearing RabbitMQ Message Queues
 
-After upgrading to Secret Server 10.6.x, some users note that older RabbitMQ message queues in Ready state are not clearing as expected, so messages accumulate. To clear the message queues, download and run the utility using the procedure below.
+Some users note that older RabbitMQ message queues in Ready state are not clearing as expected, so messages accumulate. To clear the message queues, use the procedure below.
 
 1. On the machine where RabbitMQ is installed, download the [utility](https://updates.thycotic.net/secretserver/RabbitMQScriptFIX/RMQ_QueueRemoval.zip) for removing old RabbitMQ queues.
 
