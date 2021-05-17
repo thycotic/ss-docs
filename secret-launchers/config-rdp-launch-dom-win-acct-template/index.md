@@ -26,4 +26,4 @@ Add a key to `web-appSettings.config` that will cause the RDP launcher to use th
 
  1. Perform an IIS reset
 
- 1. Test the Launcher.
+ 1. Test the launcher.

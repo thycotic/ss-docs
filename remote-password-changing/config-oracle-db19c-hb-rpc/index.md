@@ -81,6 +81,8 @@ The section should look like this:
 
 ### Task Three: Configuring a Secret Server Distributed Engine
 
+1. Install ODAC on the machine hosting the distributed engine using the same procedure as Task One.
+
 1. Navigate to the ODAC directory on the distributed engine machine, such as `c:\oracle`.
 
 1. Copy the `C:\<ODAC_Directory>\odp.net\bin\4\Oracle.DataAccess.dll` file to the Distributed Engine directory, for instance, `C:\Program Files\Thycotic Software Ltd\Distributed Engine`.

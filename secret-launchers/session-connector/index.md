@@ -42,6 +42,10 @@ Session Connector is downloaded separately from SS. Go to [Session Connector Dow
 
 ## Configuration
 
+> **Note:** To comply with Microsoft licensing requirements, there is an additional constraint on which Microsoft Windows Server version you can use as the RDS server for session connector.
+>
+> If you use Microsoft User Client Access Licenses (CALs), you cannot use Windows Server 2019. You must use Windows Server 2012 or 2016. If you use Microsoft Device CALs, you can use any supported version of Windows Server.
+
 ### Task 1: Reviewing RDS Server Prerequisites
 
 - Each RDS server should be a 64-bit installation of Windows Server 2012, 2016 or 2019.
@@ -397,7 +401,7 @@ Session Connector will also log to the file `C:\Program Files\Thycotic Software 
 
 # Uninstalling Session Connector
 
-Secret Server Session Connector can be removed from “Add/Remove Programs” or “Apps & Features.” Once uninstalled, a reboot is required to restore the default Remote Desktop behavior.
+Secret Server Session Connector can be removed from "Add/Remove Programs" or "Apps & Features." Once uninstalled, a reboot is required to restore the default Remote Desktop behavior.
 
 Any related SSSC custom launchers need to be un-associated with any secret templates they were previously tied to.
 
