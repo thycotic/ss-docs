@@ -40,6 +40,7 @@ Created the following topics from Salesforce articles or PDFs (often including s
 - Configuring SAML OneLogin
 - Configure RDP Launcher Domain for Windows Account Template
 - Creating a Custom TOAD Launcher
+- Creating and Using a SQL Server Privileged Account
 - Creating and Using SQL Scripts
 - Customizing Access Request Emails
 - Discovery Guide
