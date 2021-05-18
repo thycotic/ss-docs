@@ -39,6 +39,8 @@ Created the following topics from Salesforce articles or PDFs (often including s
 - ADFS Custom Rules
 - Configuring SAML OneLogin
 - Configure RDP Launcher Domain for Windows Account Template
+- Creating a Custom TOAD Launcher
+- Creating and Using a SQL Server Privileged Account
 - Creating and Using SQL Scripts
 - Customizing Access Request Emails
 - Discovery Guide
@@ -46,9 +48,13 @@ Created the following topics from Salesforce articles or PDFs (often including s
 - Enabling and Disabling Maintenance Mode
 - Enabling Refresh Tokens for Web Services
 - Mac OS X iTerm Launcher
+- Managing Multiple Secret Server Instances with Protocol Handlers and Launchers
+- Removing the Mac Launcher
 - Remote Password Changing Errors
 - REST API Perl Scripts
 - REST API Python Scripts
+- Setting up SAML SSO for Active Directory
+- Setting up SAML SSO for Azure Active Directory
 
 ## August to  December 2020
 
