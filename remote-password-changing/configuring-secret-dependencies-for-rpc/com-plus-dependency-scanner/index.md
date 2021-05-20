@@ -16,7 +16,7 @@ For all supported versions of Windows and Windows Server, ensure that **Remote P
 
 ### Component Services
 
-For all supported versions of Windows and Windows Server, ensure that **NETWORK** has Remote access permissions to the machine.
+For all supported versions of Windows and Windows Server, ensure that **NETWORK** has remote access permissions to the machine.
 
 1. Open **Component Services** (dcomcnfg.exe). 
 1. Under **Console Root**, expand **Component Services** and the **Computers** folder.
