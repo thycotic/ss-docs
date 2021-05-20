@@ -24,9 +24,7 @@ To assign any type of password changer to a Secret template, use the procedure b
 
     ![image-secret-template-edit-password-changing](images\secret-template-edit-password-changing.png)
 
-1. From the **Password Type to use** drop-down menu, select the password changer you want to assign.
-
-   Just below **Password Type to use**, the names of the fields required for the password changer you've chosen appear.
+1. From the **Password Type to use** drop-down menu, select the password changer you want to assign. Just below **Password Type to use**, the names of the fields required for the password changer you have chosen appear.
 
 1. To the right of each field name, make a selection from the drop-down menu that you wish to map to the field name.
 
