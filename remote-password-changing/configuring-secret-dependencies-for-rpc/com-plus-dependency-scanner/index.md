@@ -4,9 +4,9 @@
 
 # COM+ Dependency Scanner
 
-The COM+ Dependency Scanner allows for an Active Directory Domain Discovery Source to locate COM+ Applications running on machines on the domain that are being run by Domain Accounts.
+The COM+ Dependency Scanner allows for an Active Directory domain discovery source to locate COM+ Applications running on machines on the domain that are being run by Domain Accounts.
 
-Firewall concerns may be addressed by ensuring that Port 135 is open between the target machine being scanned and the machine that Engine is installed on.
+Firewall concerns may be addressed by ensuring that Port 135 is open between the target machine being scanned and the machine that engine is installed on.
 
 ## Requirements for Discovery
 
@@ -28,11 +28,11 @@ For all supported versions of Windows and Windows Server, ensure that **NETWORK*
 
    > **Note:** If the **Edit Limits** button is disabled, open the **Local Security Policy**. Under **Security Settings** expand **Local Policies** and select **Security Options**. There will be two **DCOM: Machine Access/Launch Restrictions**. Edit the one that corresponds to the disabled **Edit Limits** buttons, adding **NETWORK** and giving Remote permissions there.
 
-   > <span style="color:red">**Warning:**</span> Editing/Altering the existing permissions on the machine or editing the **Default Permissions** listed can have a negative impact on the machine.
+   > **Important:** Editing or altering the existing permissions on the machine or editing the **Default Permissions** listed can have a negative impact on the machine.
 
 ### COM+ Network Access
 
-For all supported versions of Windows Server, ensure that COM+ Network Access is enabled by installing the **Application Server Role**. During the installation process, check the box next to **COM+ Network Access** under **Features**.
+For all supported versions of Windows Server, ensure that COM+ Network Access is enabled by installing the Application Server Role. During the installation process, check the box next to **COM+ Network Access** under **Features**.
 
 ## Versions Supported
 
@@ -60,7 +60,7 @@ For all supported versions of Windows Server, ensure that COM+ Network Access is
 
 ## Configuring COM+ Discovery for a New Domain
 
-1. Navigate to **Admin \| Discovery**
+1. Navigate to **Admin \> Discovery**
 
 1. Click **Edit Discovery Sources**.
 
@@ -90,7 +90,7 @@ Your new domain is now configured in Secret Server and Discovery will search for
 
 ## Configuring COM+ Discovery for an Existing Domain
 
-1. Navigate to **Admin \| Discovery**.
+1. Navigate to **Admin \> Discovery**.
 
 1. Click **Edit Discovery Sources**.
 
@@ -104,6 +104,4 @@ Your new domain is now configured in Secret Server and Discovery will search for
 
    You will be unable to make additional changes.
 
-1. Click **OK** to proceed.
-
-Discovery will now search for COM+ dependencies.
+1. Click **OK** to proceed. Discovery will now search for COM+ dependencies.
