@@ -14,5 +14,5 @@ To create a custom password changer for IBM AS/400 on newer systems such as i7, 
 
 * Pause(ms): 2000
 
-See [Securing Communications
-with OpenSSH on IBM i5/OS](https://www.redbooks.ibm.com/redpapers/pdfs/redp4163.pdf) for additional information.
+For additional information, see [Securing Communications
+with OpenSSH on IBM i5/OS](https://www.redbooks.ibm.com/redpapers/pdfs/redp4163.pdf).

@@ -63,10 +63,6 @@ To modify advanced settings, do the following:
 
 ## A Note About Commands
 
-Any term in these commands preceded by `$` will reference a Secret template field.
+Any term in these commands preceded by `$` will reference a Secret template field. Any term preceded by `$[1]$` refers to the Secret template field of a linked Secret. If you need to reference a Secret template field, make sure you are using the exact Secret template field name.
 
-Any term preceded by `$[1]$` refers to the Secret template field of a linked Secret.
-
-If you need to reference a Secret template field, make sure you are using the exact Secret template field name.
-
-To use the password changer, you will need to assign it to a Secret template. See [Assigning a Password Changer to a Secret Template](../../assign-a-pw-changer-to-a-secret-template/index.md).
+To use your new password changer, you will need to assign it to a Secret template. See [Assigning a Password Changer to a Secret Template](../../assign-a-pw-changer-to-a-secret-template/index.md).
