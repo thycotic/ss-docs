@@ -1,6 +1,7 @@
 [title]: # (Ticketing System Integration)
 [tags]: # (Ticketing System)
 [priority]: # (1000)
+[redirect]: # (SecretServerTicketSystemIntegration)
 
 # Ticketing System Integration
 
