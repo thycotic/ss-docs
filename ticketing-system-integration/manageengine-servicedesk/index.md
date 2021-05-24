@@ -1,8 +1,8 @@
-[title]: # (ManageEngine ServiceDesk Plus)
+[title]: # (ManageEngine ServiceDesk Plus Integration)
 [tags]: # (manageengine,servicedesk plus,integration,powershell)
 [priority]: # (1000)
 
-# Ticket System Integration - ManageEngine ServiceDesk Plus (PowerShell)
+# ManageEngine ServiceDesk Plus Integration (PowerShell)
 
 Secret Server can integrate with ManageEngine ServiceDesk Plus via PowerShell. This integration includes validating ticket numbers and  their status, and adding comments (referred to as notes in ServiceDesk Plus).
 
@@ -12,7 +12,7 @@ For more information about integrating Ticket Systems with PowerShell, see [Powe
 
 * PowerShell, see [Creating and Using PowerShell Scripts](../../api-scripting/creating-using-powershell-scripts/index.md)
 * Access to your ManageEngine ServiceDesk Plus instance's REST API
-* Configure CredSSP for use with WinRM/PowerShell, see [Configuring CredSSP for WinRM with PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md)
+* [Configure CredSSP for use with WinRM/PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md)
 
 ## Ticket Number Validation Pattern (Regex)
 
@@ -22,8 +22,7 @@ Before making a call to the ticket validation script, you can have Secret Server
 
 To validate tickets you will need to create a PowerShell script to retrieve and validate the ticket. This integration assumes that the administrator will set the technician key for accessing ServiceDesk Plus in the script. This could easily be extended to pass in the key as an argument so that it can be managed from the Ticket System interface.
 
-~~~~
-
+```powershell
 $ticket = $args[0]
 $user = $args[1]
 $password = $args[2]
@@ -61,9 +60,15 @@ catch
     }
     throw "Manage Engine Service Desk Plus encounderted an error: " + $response.operation.result.message
 }
- 
-Adding Comments (Notes) to Tickets
-To add a comment (note) to tickets you will need to create the following script. Additional considerations are to pass in if the note should be public or not.
+
+```
+
+## Adding Comments (Notes) to Tickets
+
+To add comments (notes) to tickets you will need to create the script below. Other considerations are to pass in whether or not the note should be public.
+
+```powershell
+
 $ticket = $args[0]
 $comment = $args[1]
 $user = $args[2]
@@ -101,4 +106,4 @@ if ($responseContent.API.response.operation.result.status -ne "Success")
     $message = $responseContent.API.response.operation.result.message;
     throw "Unable to add comment to ticket ($ticket). Message: " + $message
 }
-~~~~
+```
