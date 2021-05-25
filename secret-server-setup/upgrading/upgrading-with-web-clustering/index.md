@@ -28,11 +28,11 @@ Secret Server (SS) has a built-in Web installer. The Web installer is a series o
 
 1. Have a recent backup of the application files and database available.
 
-1. If you use clustering, stop the application pools on all of the servers, except the one that is currently the primary.
+1. If you use clustering, stop the application pools on all of the servers.
 
 ## Upgrading a Clustered Environment
 
-1. Follow the instructions in [Upgrading Secret Server](https://thycotic.force.com/support/s/article/Upgrading-Secret-Server) (KBA) or [Upgrading Secret Server Without Outbound Access](../upgrading-without-outbound-access/index.md) as applicable to upgrade your primary server.
+1. Follow the instructions in [Upgrading Secret Server](../upgrading-secret-server/index.md) or [Upgrading Secret Server Without Outbound Access](../upgrading-without-outbound-access/index.md) as applicable to upgrade one server.
 
 1. Once upgraded and working, copy the Web application folder (without the `database.config` or the `encryption.config` files) to all secondary servers, and replace the content of the existing Web application folder with the new.
 
@@ -48,9 +48,9 @@ When upgrading, after the initial cluster configuration, you do not need to copy
 
 ## Upgrading Database Mirroring
 
-1. If there is more than one Web server running SS, ensure all instances are pointing to the primary database.
+1. If there is more than one Web server running SS, ensure all instances are pointing to the same database.
 
-1. Stop all but the Primary web server.
+1. Stop all but one of the web servers.
 
 1. Perform the upgrade on that single instance.
 
@@ -60,21 +60,21 @@ When upgrading, after the initial cluster configuration, you do not need to copy
 
 1. Ensure all instances are properly activated.
 
-1. Ensure that the primary database changes have been replicated to the mirror database.
+1. Ensure that the database changes have been replicated to the mirror database.
 
 1. If the secondary Web server was pointing originally to the secondary database, adjust it to point back to the secondary database.
 
 ## Upgrading Remote DR Instances
 
-1. Perform the upgrade on the primary instance.
+1. Perform the upgrade on one instance.
 
-1. Backup the primary instance.
+1. Backup that instance.
 
 1. Copy the database backup to the remote DR instance.
 
 1. Restore the database.
 
-1. Once the primary instance is upgraded and working, copy the Web application folder (but not the `database.config` or `encryption.config` files) to the remote DR instance (overwriting the existing files).
+1. Once the instance is upgraded and working, copy the Web application folder (but not the `database.config` or `encryption.config` files) to the remote DR instance (overwriting the existing files).
 
 1. Restart IIS or recycle the application pool running SS on the remote DR instance.
 
@@ -85,5 +85,5 @@ When upgrading, after the initial cluster configuration, you do not need to copy
  Two errors that may arise:
 
 - Encryption configs don't match: See [Encryption key doesn't match error](https://thycotic.force.com/support/s/article/Encryption-key-doesnt-match-error?r=3&ui-force-components-controllers-recordGlobalValueProvider.RecordGvp.getRecord=1) (KBA).
-- Version does not match: If a secondary node is not properly updated from the primary node after an upgrade, that node will not run because the application version does not match the database. The solution is to copy the application folder (minus the `database.config` or `encryption.config` files) to replace the files on the secondary server.
+- Version does not match: If a node is not properly updated from the source node after an upgrade, that node will not run because the application version does not match the database. The solution is to copy the application folder (minus the `database.config` or `encryption.config` files) to replace the files on the secondary server.
 

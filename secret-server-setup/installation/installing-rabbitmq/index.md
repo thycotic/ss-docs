@@ -1,6 +1,6 @@
 [title]: # (Installing RabbitMQ)
 [tags]: # (RabbitMQ,Setup,Install)
-[priority]: #
+[priority]: #	(1000)
 
 # Installing RabbitMQ
 
@@ -31,7 +31,7 @@ RabbitMQ requires:
 - Nodes hosting RabbitMQ need a minimum of 2 GB RAM
 - Nodes hosting RabbitMQ should have at least 128 MB of memory available at all times
 - Disk space is not an issue, but it should not go below 50 MB (default value), especially if you host RabbitMQ on the same server as SS
-- Minimum 2 vCPUs
+- Minimum two vCPUs. This is an **absolute minimum** otherwise installation fails without much useful feedback to troubleshoot. We strongly recommend four vCPUs or more.
 - Ports 5672 (non-SSL) or 5671 (SSL) opened on the machine and firewall
 
 ### SSL Certificate
@@ -41,9 +41,7 @@ RabbitMQ requires:
 - The PFX certificate should have:
 
   - A name that matches the RabbitMQ Fully qualified machine name
-
   - If you plan on making a RabbitMQ cluster, add DNS names (SANs) to your certificate
-
   - Your certificate must be an RSA certificate. CNG is not supported and will cause the installation to fail.
 
 - If you do not have an internal PKI and prefer not to use a public certificate, you can use a self-signed certificate.
@@ -92,7 +90,7 @@ In Secret Server UI
 
 1. Click the **OK** button.
 
-###  Task 2: RabbitMQ Host
+### Task 2: RabbitMQ Host
 
 1. Download the [Thycotic RabbitMQ Helper.](https://updates.thycotic.net/links.ashx?RabbitMqInstaller)
 

@@ -14,6 +14,7 @@ Created or made significant changes to these topics:
 - Best Practices
 - Configuring CredSSP for WinRM with PowerShell
 - Create an Azure Application Registration
+- Downloads for Secret Server Software Development Kit for DevOps
 - Enabling Specific OU Domain Discovery
 - Event Pipeline Pre-Checkout Trigger
 - Exporting and Importing Settings
@@ -34,7 +35,26 @@ Created or made significant changes to these topics:
 
 Created the following topics from Salesforce articles or PDFs (often including substantial rewrite):
 
+- Active Directory Credential Caching
+- ADFS Custom Rules
+- Configuring SAML OneLogin
+- Configure RDP Launcher Domain for Windows Account Template
+- Creating a Custom TOAD Launcher
+- Creating and Using a SQL Server Privileged Account
+- Creating and Using SQL Scripts
+- Customizing Access Request Emails
 - Discovery Guide
+- Enable Company Policy Login Banner
+- Enabling and Disabling Maintenance Mode
+- Enabling Refresh Tokens for Web Services
+- Mac OS X iTerm Launcher
+- Managing Multiple Secret Server Instances with Protocol Handlers and Launchers
+- Removing the Mac Launcher
+- Remote Password Changing Errors
+- REST API Perl Scripts
+- REST API Python Scripts
+- Setting up SAML SSO for Active Directory
+- Setting up SAML SSO for Azure Active Directory
 
 ## August to  December 2020
 

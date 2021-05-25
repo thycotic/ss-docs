@@ -14,7 +14,7 @@ The steps below are used for adding an Azure Active Directory configuration to D
 
 1. Click the **Azure Active Directory Domain**.
 
-1. Using the values saved from [creating Azure App Regsitration](../create-azure-app-registration), paste or type in:
+1. Using the values saved from [Creating Azure App Registration](../create-azure-app-registration), paste or type in:
 
    - Friendly domain name
    - Tenant ID
