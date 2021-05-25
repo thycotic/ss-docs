@@ -4,17 +4,19 @@
 
 # Atlassian JIRA Integration (PowerShell)
 
-Secret Server can integrate with Atlassian's JIRA via PowerShell. This integration includes validating ticket numbers and their status, and adding comments.
+Secret Server can integrate with Atlassian JIRA via PowerShell. This integration includes validating ticket numbers and their status, and adding comments.
 
-For more information about integrating Ticket Systems with PowerShell, see [PowerShell Ticketing Integration](../powershell-integration/index.md)
+For more information about integrating ticket systems with PowerShell, see [PowerShell Ticketing Integration](../powershell-integration/index.md)
 
 ## Requirements
 
 * PowerShell, see [Creating and Using PowerShell Scripts](../../api-scripting/creating-using-powershell-scripts/index.md)
-* Access to your ManageEngine ServiceDesk Plus instance's REST API
+
+* Access to the REST API for your ManageEngine ServiceDesk Plus instance.
+
 * [Configuring CredSSP for WinRM with PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md)
 
->**Note**: You may need to enable TLS 1.2 as Atlassian has deprecated TLS 1.0 and 1.1 and will support only TLS 1.2 and 1.3 going forward. See [Deprecating TLSv1 and TLSv1.1 for Atlassian Cloud Products](https://community.atlassian.com/t5/Jira-articles/Deprecating-TLSv1-and-TLSv1-1-for-Atlassian-Cloud-Products/ba-p/857357).
+>**Note**: Atlassian has deprecated TLS 1.0 and 1.1, and will support only TLS 1.2 and 1.3 going forward. See [Deprecating TLSv1 and TLSv1.1 for Atlassian Cloud Products](https://community.atlassian.com/t5/Jira-articles/Deprecating-TLSv1-and-TLSv1-1-for-Atlassian-Cloud-Products/ba-p/857357).
 
 ## Ticket Number Validation Pattern (Regex)
 
@@ -30,7 +32,7 @@ Or perhaps you want to specifically match projects that you know are real follow
 
 ## Validating Ticket Status
 
-To validate tickets you will need to create a PowerShell script to retrieve and validate the ticket. This integration assumes that the user will pass in the full ticket name including the project name. For example: `(PROJ-123)`. This could easily be extended so that multiple JIRA instances could be made for each specific project. In that case, you could have the user only provide the ticket number and pass in an argument to the script that specifies the project. This implementation also assumes that any ticket not in "Closed" status is invalid.
+You need to create a PowerShell script to retrieve and validate tickets. This integration assumes that the user will pass in the full ticket name, including the project name. For example: `(PROJ-123)`. This could easily be extended so that multiple JIRA instances could be made for each project. In that case, you could have the user provide only the ticket number and pass in an argument to the script that specifies the project. This implementation also assumes that any ticket not in "Closed" status is invalid.
 
 ```powershell
 $ticket = $args[0]
