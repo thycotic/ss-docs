@@ -4,11 +4,12 @@
 
 # List of Built-in Secret Server Templates
 
-Secret Server includes many pre-configured Secret Templates out-of-the-box that can be used to quickly create Secrets.
+Secret Server includes many pre-configured secret templates out-of-the-box.
 
 ## Built-in Secret Templates Available Out-of-the-box
 
 * Active Directory Account
+* Amazon IAM Console Password
 * Amazon IAM Key
 * Bank Account
 * Cisco Account (SSH)
@@ -17,19 +18,26 @@ Secret Server includes many pre-configured Secret Templates out-of-the-box that 
 * Cisco Enable Secret (Telnet)
 * Cisco VPN Connection
 * Combination Lock
+* Contact
 * Credit Card
+* DevOps Secrets Vault Client Credentials
 * Generic Discovery Credentials
 * Healthcare
 * HP iLO Account (SSH)
 * IBM iSeries Mainframe
 * MySql Account
 * Office365 Account
+* OpenLDAP Account
 * Oracle Account
 * Password
 * Pin
 * Product License Key
 * SAP Account
+* SAP SNC Account
 * Security Alarm Code
+* Social Security Number
+* SonicWall NSA Admin Account
+* SonicWall NSA Local User Account
 * SonicWall NSA Web Admin Account
 * SonicWall NSA Web Local User Account
 * SQL Server Account
@@ -42,10 +50,13 @@ Secret Server includes many pre-configured Secret Templates out-of-the-box that 
 * Unix Account (SSH)
 * Unix Account (Telnet)
 * Unix Root Account (SSH)
+* Update Secret From Script Template
 * VMware ESX/ESXi
 * WatchGuard
 * Web Password
+* Web Password with TOTP
 * Windows Account
+* Windows LiveAccount
 * z/OS Mainframe
 
 ## Related Articles and Resources
@@ -58,4 +69,4 @@ Open a [support case](https://thycotic.force.com/support/s/contactsupport).
 
 ## Suggestions?
 
-Send email to [Support Knowledge](mailto:km@thycotic.com).
+Send email to [Support Knowledge](<mailto:km@thycotic.com>).
