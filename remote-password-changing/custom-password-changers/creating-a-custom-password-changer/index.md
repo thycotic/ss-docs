@@ -31,9 +31,10 @@ To create a custom password changer, follow the procedure below.
    * Use the Plus button to save a row.
 ![image-save](images\save.png)
 
+
    ![image-edit-commands](images\edit-commands.png)
 
-1. Edit the **Verify Password Changed Commands** to create the command set for checking that the password is valid. These commands are used by Heartbeat and after a password change to verify that the change was successful.
+1. Edit the **Verify Password Changed Commands** to create the command set for checking that the password is valid. These commands are used by heartbeat and after a password change to verify that the change was successful.
 
 1. When you are finished editing the commands, scroll to the bottom and click **Back** to return to the overview screen and access test actions for your new password changer. To edit advanced commands and settings, see the instructions below.
 
@@ -63,6 +64,6 @@ To modify advanced settings, do the following:
 
 ## A Note About Commands
 
-Any term in these commands preceded by `$` will reference a Secret template field. Any term preceded by `$[1]$` refers to the Secret template field of a linked Secret. If you need to reference a Secret template field, make sure you are using the exact Secret template field name.
+Any term in these commands preceded by `$` will reference a secret template field. Any term preceded by `$[1]$` refers to the Secret template field of a linked Secret. If you need to reference a secret template field, make sure you are using the exact secret template field name.
 
-To use your new password changer, you will need to assign it to a Secret template. See [Assigning a Password Changer to a Secret Template](../../assign-a-pw-changer-to-a-secret-template/index.md).
+To use your new password changer, you will need to assign it to a secret template. See [Assigning a Password Changer to a Secret Template](../../assign-a-pw-changer-to-a-secret-template/index.md).
