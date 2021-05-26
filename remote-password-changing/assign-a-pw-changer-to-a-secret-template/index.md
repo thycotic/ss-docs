@@ -16,11 +16,11 @@ To assign any type of password changer to a Secret template, use the procedure b
 
    ![image-configure-password-changing](images\configure-password-changing.png)
 
-1. If **Enable Remote Password Changing** is set to **No**, click **Edit** 
+1. In the **Secret Template Edit Password Changing** dialog, click **Edit**.
 
    ![image-edit-to-enable-remote-password-changing](images\edit-to-enable-remote-password-changing.png)
 
-1. Select the checkbox next to **Enable Remote Password Changing** to enable it.
+1. Make sure the box next to **Enable Remote Password Changing** is checked.
 
     ![image-secret-template-edit-password-changing](images\secret-template-edit-password-changing.png)
 
