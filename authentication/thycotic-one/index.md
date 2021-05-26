@@ -1,6 +1,7 @@
 [title]: # (Thycotic One and Secret Server)
 [tags]: # (Authentication, Thycotic One)
 [priority]: # (1000)
+[redirect]: # "ThycoticOneAndSecretServer"
 
 # Thycotic One and Secret Server
 

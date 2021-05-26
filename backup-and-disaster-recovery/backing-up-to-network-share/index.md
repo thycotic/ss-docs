@@ -1,6 +1,7 @@
 [title]: # (Backing up Secret Server to a Network Share)
 [tags]: # (Backup Settings,network share)
 [priority]: # (1000)
+[redirect]: # "BackupToNetworkShare"
 
 # Backing up Secret Server to a Network Share
 
@@ -29,5 +30,4 @@ To back up:
 1. Type the database backup path in the **Backup Database Path** text box.
 
 1. Click the **Save** button.
-
 

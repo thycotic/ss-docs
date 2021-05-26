@@ -1,6 +1,7 @@
 [title]: # (Enabling FIPS Compliance)
 [tags]: # (Encryption, FIPS compliance)
 [priority]: # (1000)
+[redirect]: # "SecretServerFipsCompliance"
 
 # Enabling FIPS Compliance
 

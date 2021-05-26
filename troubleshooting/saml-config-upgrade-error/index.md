@@ -1,6 +1,7 @@
 [title]: # (Troubleshooting)
 [tags]: # (troubleshooting, workaround, upgrade, saml error)
 [priority]: # (1000)
+[redirect]: # "SSSamlConfigurationErrorKB"
 
 # Troubleshooting SAML Configuration Errors After Upgrading
 

@@ -37,18 +37,30 @@ Created the following topics from Salesforce articles or PDFs (often including s
 
 - Active Directory Credential Caching
 - ADFS Custom Rules
+- Atlassian JIRA Integration (PowerShell)
+- Checking Secret Server Site Status
 - Configuring SAML OneLogin
 - Configure RDP Launcher Domain for Windows Account Template
+- Creating a Custom TOAD Launcher
+- Creating a Custom Password Changer for Cisco ASA
+- Creating a Custom Password Changer for IBM AS/400
+- Creating and Using a SQL Server Privileged Account
 - Creating and Using SQL Scripts
 - Customizing Access Request Emails
 - Discovery Guide
-- Enable Company Policy Login Banner
+- Enabling a Company Policy Login Banner
 - Enabling and Disabling Maintenance Mode
 - Enabling Refresh Tokens for Web Services
 - Mac OS X iTerm Launcher
+- Managing Full SQL Server Transaction Logs
+- Managing Multiple Secret Server Instances with Protocol Handlers and Launchers
+- ManageEngine ServiceDesk Plus Integration (PowerShell)
+- Removing the Mac Launcher
 - Remote Password Changing Errors
 - REST API Perl Scripts
 - REST API Python Scripts
+- Setting up SAML SSO for Active Directory
+- Setting up SAML SSO for Azure Active Directory
 
 ## August to  December 2020
 

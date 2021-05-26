@@ -1,6 +1,7 @@
 [title]: # (Secret Server End User Guide)
 [tags]: # (Getting Started, Help)
 [priority]: # (1000)
+[redirect]: # "SSUserGuide_GettingStarted"
 
 # Secret Server End User Guide
 

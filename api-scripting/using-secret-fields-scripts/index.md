@@ -1,6 +1,7 @@
 [title]: # (Using Secret Fields in Scripts)
 [tags]: # (REST API,API,Scripting,PowerShell,secret fields,dependency tokens)
 [priority]: # (1000)
+[redirect]: # "UsingSecretFieldsInScriptDependencies"
 
 # Using Secret Fields in Scripts
 
@@ -12,3 +13,4 @@ There are two contexts in which script dependencies run:
 - When run manually from the Dependencies tab on the secret.
 
 For a complete list of tokens that are available to script dependencies, see [List of Dependency Tokens](../dependency-tokens/index.md).
+
