@@ -6,7 +6,7 @@
 
 Secret Server can integrate with Atlassian JIRA via PowerShell. This integration includes validating ticket numbers and their status, and adding comments.
 
-For more information about integrating ticket systems with PowerShell, see [PowerShell Ticketing Integration](../powershell-integration/index.md)
+For more information about integrating ticket systems with PowerShell, see [PowerShell Ticketing Integration](../powershell-integration/index.md).
 
 ## Requirements
 

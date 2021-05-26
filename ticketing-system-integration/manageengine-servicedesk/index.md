@@ -6,15 +6,15 @@
 
 Secret Server can integrate with ManageEngine ServiceDesk Plus via PowerShell. This integration includes validating ticket numbers and  their status, and adding comments (referred to as notes in ServiceDesk Plus).
 
-For more information about integrating ticket systems with PowerShell, see [PowerShell Ticketing Integration](../powershell-integration/index.md)
+For more information about integrating ticket systems with PowerShell, see [PowerShell Ticketing Integration](../powershell-integration/index.md).
 
 ## Requirements
 
-* PowerShell, see [Creating and Using PowerShell Scripts](../../api-scripting/creating-using-powershell-scripts/index.md)
+* PowerShell, see [Creating and Using PowerShell Scripts](../../api-scripting/creating-using-powershell-scripts/index.md).
 
 * Access to the REST API for your ManageEngine ServiceDesk Plus instance.
 
-* [Configure CredSSP for use with WinRM/PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md)
+* [Configure CredSSP for use with WinRM/PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md).
 
 ## Ticket Number Validation Pattern (Regex)
 
