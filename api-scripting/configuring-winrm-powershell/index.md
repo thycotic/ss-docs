@@ -1,6 +1,7 @@
 [title]: # (Configuring WinRM for PowerShell)
 [tags]: # (API,Scripting,WinRM)
 [priority]: # (1000)
+[redirect]: # "SetUpPowerShell"
 
 # Configuring WinRM for PowerShell
 

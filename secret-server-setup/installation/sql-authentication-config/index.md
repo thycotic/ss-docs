@@ -1,6 +1,7 @@
 [title]: # (SQL Server Authentication Configuration)
 [tags]: # (Setup,Install,sql,authentication)
 [priority]: # (1000)
+[redirect]: # "SSSQLAuthenticationSetup"
 
 # SQL Server Authentication Configuration
 

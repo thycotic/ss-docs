@@ -2,6 +2,7 @@
 [title]: # (Enabling Launchers)
 [tags]: # (launchers, protocol handlers)
 [priority]: # (1000)
+[redirect]: # "LauncherFailedLoading"
 
 # Enabling Launchers
 

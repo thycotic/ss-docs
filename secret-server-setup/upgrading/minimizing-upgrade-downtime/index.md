@@ -1,7 +1,7 @@
 [title]: # (Minimizing Upgrade Downtime)
 [tags]: # (Setup, Upgrade, downtime)
 [priority]: # (1000)
-
+[redirect]: # "ManualRollingUpgrade"
 # Minimizing Upgrade Downtime
 
 ## Introduction
@@ -154,11 +154,11 @@ In addition, the role:
 ##### Task Two: Verifying SQL Changes (Wizard Step One)
 
 1. Click the **Next** Button. The Verify SQL Deltas tab appears:
- 
+
    ![](images/1567530109680.png)
- 
+
    >  **Note**: Clicking the "Cancel Manual Rolling Upgrade" link, at any time, will take you to the Install Secret Server Upgrade page.
- 
+
 1. Click the **Verify SQL Deltas** button. This tests the prospective changes to see if errors result. If errors result, please contact Thycotic Technical Support. If the verification succeeds:
 
    ![](images/1567530451567.png)
@@ -166,13 +166,13 @@ In addition, the role:
 ##### Task Three: Generating the Upgrade File (Wizard Step Two)
 
 1. Click the **Next** button. The Generate Upgrade File tab appears:
- 
+
    ![image-20191125141217466](images/image-20191125141217466.png)
- 
+
 1. Click the **Download Application Zip File** button. This generates a zip file with only the changed files needed to upgrade the application files on the Web server nodes.
 
    > **Note:** This may take a few minutes to generate and download.
- 
+
    ![image-20191125141601535](images/image-20191125141601535.png)
 
 ##### Task Four: Generating the SQL Script (Wizard Step Three)
@@ -182,9 +182,9 @@ In addition, the role:
    ![1567530833082](images/1567530833082.png)
 
 1. Click the **Generate SQL Script** button. This generates script file with all the database changes needed to upgrade the database. When finished:
- 
+
    ![1567530997742](images/1567530997742.png)
- 
+
    The wizard proceeds to step four:
 
 ##### Task Five: Backing up and Staging (Wizard Step Four)
@@ -223,9 +223,9 @@ In addition, the role:
 1. Log on the upgraded staging SS to verify the upgrade was successful.
 
 1. (Optional) Delete the restored staging location and database.
- 
+
    > **Important:** Keep the backup files till you verify the upgrade was successful. You may need them if an issue develops.
- 
+
 1. Click to select the **Staging Test Successful** check box to confirm your staging upgrade was successful. This is your confirmation that there were no errors before performing the actual upgrade in your production environment. The confirmation is recorded.
 
 ##### Task Six: Starting Upgrade Mode (Wizard Step Five)
@@ -285,13 +285,13 @@ To upgrade Web nodes:
    1. Log onto the node to ensure the site correctly loads and logs on.
 
 1. On the load balancer, enable the group A nodes to return them to the pool, restoring the original configuration and returning traffic to all nodes.
- 
+
 1. Click to select the **Upgrade Successful** check box.
- 
+
 1. Click the **Next** button. The Finish tab appears:
 
    ![image-20191125150852514](images/image-20191125150852514.png)
- 
+
 
 ##### Task Eight: Finishing up (Wizard Step Seven)
 
@@ -300,7 +300,7 @@ To upgrade Web nodes:
 1. Click the **Disable** button. The popup disappears, and a completion message appears:
 
    ![image-20191125151058172](images/image-20191125151058172.png)
- 
+
 
 ## Troubleshooting and Notes
 

@@ -1,6 +1,7 @@
 [title]: # (Custom Launchers)
 [tags]: # (Launcher)
 [priority]: # (1000)
+[redirect]: # "CustomLauncherTypes"
 
 # Custom Launchers
 
@@ -18,5 +19,4 @@ There are three types of custom launchers to choose from:
     > **Note:** See [Configuring SSH Proxies for Launchers](../launcher-configuration-and-support/configuring-ssh-proxies-for-launchers/index.md).
 
 - **Batch File:** Launch a batch file from the client machine that uses SS information.
-
 

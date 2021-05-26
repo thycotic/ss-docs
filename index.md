@@ -1,6 +1,7 @@
 [title]: # (Secret Server Documentation)
 [tags]: #
 [priority]: # (1000)
+[redirect]: # "SecretServerUserGuide,SSKnowledgeBase"
 
 # Secret Server Documentation
 

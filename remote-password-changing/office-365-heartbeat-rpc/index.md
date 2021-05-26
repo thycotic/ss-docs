@@ -1,6 +1,7 @@
 [title]: # (Running Heartbeat and RPC for Office 365 Accounts with a PowerShell Module)
 [tags]: # (Remote Password Changing, PowerShell, office 365)
 [priority]: # (1000)
+[redirect]: # "SSPowerShellModules"
 
 # Running Heartbeat and RPC for Office 365 Accounts with a PowerShell Module
 
@@ -27,4 +28,3 @@ Secret Server supports Office 365 in version 8.8 and later. This does not requir
 1. Ensure the Secret Server application pool setting *Load User Profile* is set to "True".
 
 1. Recycle the application pool.
- 

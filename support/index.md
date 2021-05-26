@@ -1,6 +1,7 @@
 [title]: # (Support)
 [tags]: # (thycotic)
 [priority]: # (1000)
+[redirect]: # "Support"
 
 # Thycotic Support
 

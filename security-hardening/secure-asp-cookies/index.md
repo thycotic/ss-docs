@@ -1,6 +1,7 @@
 [title]: # (Securing ASP Cookies)
 [tags]: # (Best Practice, Security Hardening, asp, cookies)
 [priority]: # (1000)
+[redirect]: # "SecureCookieSessions"
 
 # Securing ASP Cookies
 

@@ -3,7 +3,7 @@
 [priority]: # (1000)
 [display]: # (all)
 
-# Enable Company Policy Login Banner
+# Enabling a Company Policy Login Banner
 
 If your company requires the login banner for usage agreements and conditions to be visible when users log into Secret Server:
 
