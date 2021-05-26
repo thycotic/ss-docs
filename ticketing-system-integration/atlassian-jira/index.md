@@ -10,11 +10,11 @@ For more information about integrating ticket systems with PowerShell, see [Powe
 
 ## Requirements
 
-* PowerShell, see [Creating and Using PowerShell Scripts](../../api-scripting/creating-using-powershell-scripts/index.md)
+* PowerShell, see [Creating and Using PowerShell Scripts](../../api-scripting/creating-using-powershell-scripts/index.md).
 
 * Access to the REST API for your ManageEngine ServiceDesk Plus instance.
 
-* [Configuring CredSSP for WinRM with PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md)
+* [Configuring CredSSP for WinRM with PowerShell](../../authentication/configuring-credssp-for-winrm-with-powershell/index.md).
 
 >**Note**: Atlassian has deprecated TLS 1.0 and 1.1, and will support only TLS 1.2 and 1.3 going forward. See [Deprecating TLSv1 and TLSv1.1 for Atlassian Cloud Products](https://community.atlassian.com/t5/Jira-articles/Deprecating-TLSv1-and-TLSv1-1-for-Atlassian-Cloud-Products/ba-p/857357).
 
