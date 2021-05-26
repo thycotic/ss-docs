@@ -1,6 +1,7 @@
 [title]: # (Secret Server Software Development Kit for DevOps)
 [tags]: # (API,Scripting,DevOps,SDK)
 [priority]: # (1000)
+[redirect]: # "ApplicationAccountKB"
 
 # Secret Server Software Development Kit for DevOps
 
@@ -134,7 +135,7 @@ Configure SS for communication with the SDK:
    1. Click to select the **Require this generated onboarding key** check box. Clients must provide a generated additional key string when authenticating. If not provided, SS allow any client to use the rule if its IP address is within the specified range. We strongly recommend using this feature.
 
    1. Click the **Save** button. The Show Key link appears.
- 
+
    1. Click the **Show Key** link to save the generated onboarding key (something like `TFyORLL1teQmD8OAMstqKGWkJGksFRtaelY0b2NnhsM=`) for future use. It will not be visible again.
 
   > **Note:** If you cannot copy the key text after selecting it, you probably need to add the Secret Server Utilities extension for your browser. For now, just manually copy it.

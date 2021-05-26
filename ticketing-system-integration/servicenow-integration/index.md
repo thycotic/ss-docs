@@ -1,6 +1,7 @@
 [title]: # (ServiceNow Integration)
 [tags]: # (ServiceNow)
 [priority]: # (1000)
+[redirect]: # "ServiceNowFailure"
 
 # ServiceNow Integration
 

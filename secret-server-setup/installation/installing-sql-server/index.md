@@ -1,6 +1,7 @@
 [title]: # (Installing and Configuring SQL Server)
 [tags]: # (Installation, SQL Server)
 [priority]: # (1000)
+[redirect]: # "SSSqlServerHelp"
 
 # Installing and Configuring SQL Server
 

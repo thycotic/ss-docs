@@ -1,6 +1,7 @@
 [title]: # (Hardware Security Modules)
 [tags]: # (HSM,integration)
 [priority]: # (1000)
+[redirect]: # "ConfiguringHSM,HSMIntegrationGuide"
 
 # Hardware Security Modules
 

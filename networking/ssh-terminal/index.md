@@ -1,6 +1,7 @@
 [title]: # (SSH Terminal Administration)
 [tags]: # (SSH Terminal, CLI)
 [priority]: # (1000)
+[redirect]: # "SSH-Key-Integration"
 
 # SSH Terminal Administration
 

@@ -12,10 +12,10 @@ To create a custom password changer using SSH for Cisco ASA 5505, 5515 and other
 1. `$[1]$PASSWORD`
 
 ## Commands
-1. `enable`
-1. `$CURRENTPASSWORD`
-1. `config terminal`
-1. `enable password $NEWPASSWORD`
-1. `end`
-1. `wr mem`
-1. `exit`
+1. Enter `enable` 
+1. Enter `$CURRENTPASSWORD`
+1. Enter `config terminal`
+1. Enter `enable password $NEWPASSWORD`
+1. Enter `end`
+1. Enter `wr mem`
+1. Enter `exit`

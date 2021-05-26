@@ -1,7 +1,7 @@
-
 [title]: # (HTTP Error 404.17 - Not Found After Upgrading .NET Framework Version)
 [tags]: # (troubleshooting, workaround, .NET, HTTP 404)
 [priority]: # (1000)
+[redirect]: # "EnableAspNet"
 
 # HTTP Error 404.17 - Not Found After Upgrading .NET Framework Version
 

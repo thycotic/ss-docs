@@ -1,6 +1,7 @@
 [title]: # (Discovery)
 [tags]: # (Discovery)
 [priority]: # (1000)
+[redirect]: # "SecretServerDiscoveryGuide,SSDiscoveryMainKB,SSLocalAccountDiscoveryMethod"
 
 # Discovery
 
@@ -26,7 +27,7 @@ We suggest reading (in order):
 
 ### Quick Initial and Ongoing Importation of Network Credentials
 
-By using discovery, you SS offsets the burden of keeping track of computers and accounts on your network. This can be especially beneficial when getting started for discovering and importing accounts in bulk, as well as having SS find accounts and create secrets whenever a new machine or account is provisioned.
+By using discovery, your SS offsets the burden of keeping track of computers and accounts on your network. This can be especially beneficial when getting started for discovering and importing accounts in bulk, as well as having SS find accounts and create secrets whenever a new machine or account is provisioned.
 
 ### Protection Against Backdoor Accounts
 

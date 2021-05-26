@@ -1,6 +1,7 @@
 [title]: # (Installation)
 [tags]: # (Setup,Install)
 [priority]: #	(1000)
+[redirect]: # "SSInstallationGuides"
 
 # Installation
 

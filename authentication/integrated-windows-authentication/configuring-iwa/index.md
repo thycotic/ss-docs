@@ -1,6 +1,7 @@
 [title]: # (Configuring Integrated Windows Authentication)
 [tags]: # (Integrated Windows Authentication, IWA, Authentication, Credentials)
-[priority]: #
+[priority]: # (1000)
+[redirect]: # "SSIntegratedWindowsAuthentication"
 
 # Configuring Integrated Windows Authentication
 

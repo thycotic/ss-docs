@@ -1,6 +1,7 @@
 [title]: # (Using Dynamic Parameters in Reports)
 [tags]: # (Reports, Dynamic Parameters, Coloring)
 [priority]: # (1000)
+[redirect]: # "SecretServerReportParameters"
 
 # Using Dynamic Parameters in Reports
 
@@ -178,5 +179,4 @@ SELECT DisplayName
   END AS Color
 FROM tbUser
 ```
-
 
