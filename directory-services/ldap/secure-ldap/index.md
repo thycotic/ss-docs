@@ -1,12 +1,13 @@
 [title]: # (Secure LDAP)
 [tags]: # (LDAP, LDAPS,directory service)
 [priority]: # (1000)
+[redirect]: # "SecretServerLDAPS"
 
 # Secure LDAP
 
 ## Overview
 
-By default, Secret Server (SS) uses normal LDAP on port 389 to communicate with Active Directory. Although passwords are still transmitted using kerberos or NTLM, user and group names are transmitted in clear text. In contrast, secure LDAP (LDAPS) requires that both port 389 and 636 are open.
+By default, Secret Server (SS) uses normal LDAP on port 389 to communicate with Active Directory. Although passwords are still transmitted using Kerberos or NTLM, user and group names are transmitted in clear text. In contrast, secure LDAP (LDAPS) requires that both port 389 and 636 are open.
 
 If you want all information to be encrypted, then you can enable Secure LDAP (LDAPS) in SS via the Advanced link on the Edit Domain page.
 

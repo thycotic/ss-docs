@@ -1,6 +1,7 @@
 [title]: # (Troubleshooting Invalid Domain Errors)
 [tags]: # (troubleshooting, workaround, domain errors)
 [priority]: # (1000)
+[redirect]: # "SSDomainNotValidError"
 
 # Troubleshooting Invalid Domain Errors
 

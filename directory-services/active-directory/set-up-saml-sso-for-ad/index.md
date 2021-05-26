@@ -1,9 +1,9 @@
-[title]: # (Setting Up ADFS for SAML)
+[title]: # (Setting up SAML SSO for Active Directory)
 [tags]: # (directory services,active directory,sAMAccountName,UPN)
 [priority]: # (1000)
 [display]: # (all)
 
-# Setting Up ADFS for SAML
+# Setting up SAML SSO for Active Directory
 
 How to set up Single Sign-On (SSO) for users synced between an Active Directory domain server and a Secret Server user list.
 

@@ -1,7 +1,7 @@
 [title]: # (Remote Password Changing Errors)
 [tags]: # (Remote Password Changing,errors)
 [priority]: # (1000)
-
+[redirect]: # "PasswordChangingErrors"
 # Remote Password Changing Errors
 
 ## Overview

@@ -1,6 +1,7 @@
 [title]: # (Ticketing System Integration)
 [tags]: # (Ticketing System)
 [priority]: # (1000)
+[redirect]: # "SecretServerTicketSystemIntegration,TicketPatternExplanation,ViewTicketUrlExplanation"
 
 # Ticketing System Integration
 
@@ -60,7 +61,15 @@ Secret Server can integrate into third-party ticket systems as well. Those suppo
 
  The third-party integrations:
 
-- [Atlassian JIRA](https://thycotic.force.com/support/s/article/Ticket-System-Integration-Atlassian-JIRA) (KBA)
+- [Atlassian JIRA](./atlassian-jira/index.md)
 - [BMC Remedy](./bmc-remedy-integration/index.md)
-- [ManageEngine](https://thycotic.force.com/support/s/article/Ticket-System-Integration-ManageEngine) (KBA)
+- [ManageEngine](./manageengine-servicedesk/index.md)
 - [ServiceNow](./servicenow-integration/index.md)
+
+## View Ticket URL Template Format
+
+The Ticket URL Format field can be edited on the Ticketing System Integration tab of the configuration  page.
+
+This field specifies the URL used when displaying a link to a ticket in the audit log. In this field, the $TICKETID parameter is replaced by the ticket number that is entered by the user.
+
+For example, if you specify the view ticket URL template as `http://myticketingsystem/ticket.aspx?ticketid=$TICKETID`, and Bob enters 5125-242 as the ticket number, a link will appear in the audit log to `http://myticketingsystem/ticket.aspx?ticketid=5125-242`.

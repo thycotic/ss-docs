@@ -1,6 +1,7 @@
 [title]: # (Configuring CredSSP for WinRM with PowerShell)
 [tags]: # (CredSSP, WinRM, PowerShell)
 [priority]: # (1000)
+[redirect]: # "SetupCredSSP"
 
 # Configuring CredSSP for WinRM with PowerShell
 

@@ -1,6 +1,7 @@
 [title]: # (Secret Server Documentation)
 [tags]: #
 [priority]: # (1000)
+[redirect]: # "SecretServerUserGuide,SSKnowledgeBase"
 
 # Secret Server Documentation
 
@@ -15,6 +16,7 @@ Thycotic Secret Server (SS) is an enterprise-grade, privileged access management
 ### Primary Documentation
 
 - [Thycotic Documentation Portal](https://docs.thycotic.com/ss/): You are at the home page of the current Thycotic Document Portal for Secret Server. It contains:
+
   - Converted knowledge base articles. These are marked as *deprecated* in the legacy knowledge base.
   - Links to legacy knowledge bases article that have yet to be converted or retired
   - Links to legacy PDF documentation

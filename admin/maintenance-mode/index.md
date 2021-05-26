@@ -1,6 +1,7 @@
 [title]: # (Maintenance Mode FAQ)
 [tags]: # (Administration, Maintenance mode)
 [priority]: # (1000)
+[redirect]: # "MaintenanceMode"
 
 # Maintenance Mode FAQ
 

@@ -1,6 +1,7 @@
 [title]: # (AWS Key Management in Secret Server Cloud)
 [tags]: # (secret server cloud, aws)
 [priority]: # (1000)
+[redirect]: # "CloudKeyManagement"
 
 # AWS Key Management in Secret Server Cloud
 
@@ -121,7 +122,7 @@ SSC requires one AWS Key ("CMK"), and the number of requests per month will vary
    1. Click the **Security** tab.
    1. Go to the **Key Rotation** section.
 1. Later you can repeat the process to change the AWS encryption key, or you can select **None** for the **Key Management Type** to disable it completely.
- 
+
 
 ## Secret Server Key Management via the REST API
 
