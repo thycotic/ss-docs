@@ -13,7 +13,7 @@ To use the Privileged Password Security Policy Template, follow the steps below:
 1. Replace the current logo or add your company logo in the upper left corner.
 1. Update all of the company-specific contact information (highlighted in yellow).
 1. Update the effective date.
-1. Revise any policy guideline to meet your organization’s policies.
+1. Revise any policy guidelines to meet your organization’s policies.
 1. Revise the Violations section to meet your organization’s policies.
 1. Save your changes.
 1. Obtain your management and auditors’ approval of the completed policy.
