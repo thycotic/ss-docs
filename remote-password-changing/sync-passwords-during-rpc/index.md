@@ -12,7 +12,7 @@ In most environments, we recommend using a separate password for each account fo
 * a PowerShell implementation enabled and working properly. See [Configuring WinRM for PowerShell](../../api-scripting/configuring-winrm-powershell/index.md)
 * the [WellnessChecker tool](http://updates.thycotic.net/tools/powershell.wellnesschecker.zip)
 
-For this procedure you will need to create the four types of user accounts listed below, and for each account you will need to create a corresponding secret in Secret Server with the account's login credentials and other information. See [link-to-page]() for more information on creating user accounts. See [link-to-page]() for more information on creating secrets.
+For this procedure you will need to create the four types of user accounts listed below, and for each account you will need to create a corresponding secret in Secret Server with the account's login credentials and other information.
 
 Create the user accounts and secrets described below:
 
