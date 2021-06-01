@@ -1,10 +1,12 @@
-[title]: # (Adding, Activating, and Deleting Licenses)
-[tags]: # (license,add,delete,activate,activation)
+[title]: # (Adding, Activating, Converting, and Deleting Licenses)
+[tags]: # (license,add,delete,activate,convert,activation)
 [priority]: # (1000)
 
-# Adding, Activating, and Deleting Licenses
+# Adding, Activating, Converting, and Deleting Licenses
 
-This section explains how to add Secret Server licenses online and offline, how to activate and delete licenses, and how to convert from a trial license
+This section explains how to add and activate Secret Server licenses online and offline, how to delete licenses, and how to convert from a trial license.
+
+>**Note**: For more information on understanding Secret Server licensing, see the [Licensing](../../licensing/index.md) page.
 
 ## Adding Secret Server Licenses
 
@@ -18,35 +20,35 @@ This section explains how to add Secret Server licenses online and offline, how 
 
 1. Click **Save**.
 
-1. If you have another license to add, click **Add Another License**.
-
-1. If you have finished adding your licenses, click **License Activation**.
+1. If you have one or more other licenses to add, click **Add Another License**.
 
 ## Activating Secret Server Licenses
 
-All non-evaluation licenses require activation after install. Activation is per license and Web server combination. Therefore, if you bring up a new Web server, it needs activation, even if your previous Web server was already activated. After installing each license, you are prompted to activate. Follow the on-screen prompts for online or offline activation. The activation process gathers the name, email, and phone number of the individual activating for internal purposes only. No other personal information is be sent to Thycotic.
+After you add one or more non-evaluation licenses, you must activate the license or licenses using the steps below:
 
 1. When you have finished adding your licenses, click **License Activation**.
 
 1. Enter your name, email address, and phone number. This information is sent to Thycotic and is stored for internal Thycotic purposes only.
 
-1. If your server has outbound network access
+1. If your server has outbound network access, click **Activate**.
 
-1. If your server has no outbound network access, click **Activate Offline**. Yes, there is an offline option for activating licenses. (See the Demo movie above for the offline process - also note the *offline=true* option described below if you have trouble activating offline)
+1. If your server has no outbound network access, click **Activate Offline**.
 
-Your activation is complete.  
+Your activation is complete.
+
+>**Note**: For more information on activating Secret Server licenses, see the [License Activation FAQ](../licensing-faq/index.md).
 
 Secret Server may be activated on an Airgap Network for both trials and licensed products. Please let your Account Manager know you will be using Secret Server on an Airgap network for more information.
 
 If you receive an error message, please take note of the error code and call the phone number contained in the message.
 
-If an error message persists after successful activation, remove expired/invalid licenses from Secret Server by following the steps below, under **Deleting Secret Server Licenses**.
+If an error message persists after successful activation, remove expired and invalid licenses from Secret Server by following the steps below, under **Deleting Secret Server Licenses**.
 
-If you need help and your Secret Server has a current support license for each user license, please [contact out technical support team](http://thycotic.com/products/secret-server/support-2/).
+If you need help and your Secret Server has a current support license for each user license, please contact our [technical support team](http://thycotic.com/products/secret-server/support-2/).
 
-> **Note:**  For more information, see the [Licensing](../../licensing/index.md) and [License Activation FAQ](../licensing-faq/index.md) pages
+> **Note:**  For more information on Secret Server licensing and license activation, see [Licensing](../../licensing/index.md) and the [License Activation FAQ](../licensing-faq/index.md).
 
-## Converting from Evaluation Licenses
+## Converting Evaluation Licenses
 
 If you had evaluation licenses initially but you recently purchased Secret Server, you need to remove all evaluation licenses before you install your purchased licenses. Follow the steps below, under **Deleting Secret Server Licenses**.
 
