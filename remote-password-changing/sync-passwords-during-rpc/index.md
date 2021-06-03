@@ -8,18 +8,18 @@ In most environments, we recommend using a separate password for each account fo
 
 ## Requirements
 
-* a Secret Server instance version 10.1.000000 or newer with a premium add-on or Enterprise Plus
-* a PowerShell implementation enabled and working properly. See [Configuring WinRM for PowerShell](../../api-scripting/configuring-winrm-powershell/index.md)
+* A Secret Server instance version 10.1.000000 or newer with a premium add-on or Enterprise Plus
+* A PowerShell implementation enabled and working properly. See [Configuring WinRM for PowerShell](../../api-scripting/configuring-winrm-powershell/index.md)
 * the [WellnessChecker tool](http://updates.thycotic.net/tools/powershell.wellnesschecker.zip)
 
 For this procedure you will need to create the four types of user accounts listed below, and for each account you will need to create a corresponding secret in Secret Server with the account's login credentials and other information.
 
 Create the user accounts and secrets described below:
 
-* an API User account and a corresponding secret. This API User account will NOT take up a user license. Recommended templates for the secret include the Active Directory template and the Web Password template. Credentials may be a local account or an Active Directory service account assigned to the Synchronization group, but must be stored in Secret Server to be passed to the PowerShell script.
-* a primary parent account and a corresponding secret that has RPC set up and the PowerShell dependency script from this page attached. The primary parent account credentials may be either a local account or an Active Directory service account assigned to the Synchronization group.
+* An API User account and a corresponding secret. This API User account will NOT take up a user license. Recommended templates for the secret include the Active Directory template and the Web Password template. Credentials may be a local account or an Active Directory service account assigned to the Synchronization group, but must be stored in Secret Server to be passed to the PowerShell script.
+* A primary parent account and a corresponding secret that has RPC set up and the PowerShell dependency script from this page attached. The primary parent account credentials may be either a local account or an Active Directory service account assigned to the Synchronization group.
 * Child accounts with a corresponding secret for each account containing the child secret ID, with edit permissions granted to the API User account.
-* a privileged Active Directory account and a corresponding secret that can run PowerShell on the Secret Server machine.
+* A privileged Active Directory account and a corresponding secret that can run PowerShell on the Secret Server machine.
 
 To create a new dependency changer for synchronizing passwords during RPC, follow the procedure below.
 
@@ -49,7 +49,7 @@ To create a new dependency changer for synchronizing passwords during RPC, follo
 
 1. In the primary parent account secret, click the **RPC** tab.
 1. Click **Edit**.
-1. In the Secret grid at the bottom, select the API User account secret you created. The API User account secret should be the only secret in the grid. If you have not yet created the PowerShell script, you will see no grid.
+1. In the secret grid at the bottom, select the API User account secret you created. The API User account secret should be the only secret in the grid. If you have not yet created the PowerShell script, you will see no grid.
 
 1. Browse to **Admin \> Discovery** and click the **Configuration** tab.
 1. Click **Discovery Configuration Options** and select **Extensible Discovery** from the drop-down list.
@@ -95,8 +95,6 @@ To create a new dependency changer for synchronizing passwords during RPC, follo
 
     ![image-create-powershell-template.png](images\create-powershell-template.png)
 
-THEN WHAT?
-
 1. Browse to the primary parent account secret and click the **Dependencies** tab.
 1. Click **New Dependency**.
 
@@ -108,11 +106,11 @@ THEN WHAT?
 
 1. In the **Edit Dependency** dialog, enter `default` in the **Machine Name** field.
 
-1. Select a Privileged Account (active directory account secret able to run PowerShell on the Server)
+1. Select a privileged account (active directory account secret able to run PowerShell on the server)
 
 1. In the primary parent account secret's **Notes** field, ensure that the child secret IDs appear in a comma-separated-values list, for example `19,39,81...`
 
-Now the dependency has been added and you can test the full process by running a Remote Password Change on the primary parent account. All of the Secrets listed by ID in the **Notes** field should be updated with the same password.
+Now the dependency has been added and you can test the full process by running a remote password change on the primary parent account. All of the secrets listed by ID in the **Notes** field should be updated with the same password.
 
 ## PowerShell Script
 
