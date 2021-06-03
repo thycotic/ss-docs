@@ -20,6 +20,6 @@ We also recommend the measures described below.
 
 ## Setting Up Remote Password Changing
 
-By default, Secret Server changes passwords on devices and accounts directly from the web server where it is installed. But when Secret Server is installed in a DMZ zone, it does not have direct network connections to these devices and accounts.
+By default, Secret Server changes passwords on devices and accounts directly from the web server where it is installed, but when Secret Server is installed in a DMZ zone, it does not have direct network connections to these devices and accounts.
 
-However, you can enable Secret Server to change passwords throughout your network over a specified port using Distributed Engines. See [Distributed Engines](../../distributed-engines/index.md) for more information on setting up and using Secret Server Distributed Engines.
+However, you can enable Secret Server to change passwords throughout your network over a specified port using distributed engines. See [Distributed Engines](../../distributed-engines/index.md) for more information on setting up and using Secret Server Distributed Engines.
