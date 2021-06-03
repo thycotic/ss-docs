@@ -1,5 +1,5 @@
-[title]: # (full,sql server,transaction log)
-[tags]: # (Managing Full SQL Server Transaction Logs)
+[title]: # (Managing Full SQL Server Transaction Logs)
+[tags]: # (full,sql server,transaction log)
 [priority]: # (1000)
 
 # Managing Full SQL Server Transaction Logs
