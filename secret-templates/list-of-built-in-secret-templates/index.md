@@ -4,7 +4,7 @@
 
 # List of Built-in Secret Server Templates
 
-Secret Server includes many pre-configured secret templates out-of-the-box.
+Secret Server includes many pre-configured secret templates.
 
 ## Built-in Secret Templates Available Out-of-the-box
 
@@ -58,15 +58,3 @@ Secret Server includes many pre-configured secret templates out-of-the-box.
 * Windows Account
 * Windows LiveAccount
 * z/OS Mainframe
-
-## Related Articles and Resources
-
-For basic template configuration, see the [End User Guide](../../secret-server-end-user-guide/index.md).
-
-## Still Need Help?
-
-Open a [support case](https://thycotic.force.com/support/s/contactsupport).
-
-## Suggestions?
-
-Send email to [Support Knowledge](<mailto:km@thycotic.com>).
