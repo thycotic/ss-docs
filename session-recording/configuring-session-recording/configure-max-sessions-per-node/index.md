@@ -1,8 +1,8 @@
-[title]: # (Configuring Max Concurrent Recording Sessions Per Web Node)
+[title]: # (Configuring Max Concurrent Recording Sessions per Web Node)
 [tags]: # (configure,session recording,maximum,sessions,web node)
 [priority]: # (1000)
 
-# Configuring the Maximum Concurrent Recording Sessions Per Web Node
+# Configuring the Maximum Concurrent Recording Sessions per Web Node
 
 To set the maximum number of concurrent recording sessions allowed per web node, follow the procedure below on your Secret Server web server node dedicated to session recording:
 
