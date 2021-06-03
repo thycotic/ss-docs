@@ -15,6 +15,9 @@ Activation of license keys is standard practice in the software industry. We try
 
 Existing customers have 30 days to activate their licenses after upgrading. New licenses have to be activated immediately on adding them to Secret Server. Evaluation licenses do not require activation.
 
+**How is license activation implemented in Secret Server?**
+Activation is per license and Web server (the combination of the two). Therefore, even if a Web server was already activated, if you bring up a new Web server, it also needs activation. The activation process gathers the name, email, and phone number of the individual activating, for internal purposes only. No other personal information is sent to Thycotic.
+
 **What will happen if we don’t activate our licenses?**
 
 Secret Server will go into Limited Mode if you don’t activate your licenses. Limited Mode allows you to view passwords but many other features are disabled such as creating Secrets, editing Secrets, changing permissions and using web services. Simply activate your licenses to get out of Limited Mode.
@@ -48,34 +51,13 @@ This information is one way hashed before it is sent so it does not reveal any i
 
 **Our Secret Server does not have outbound access to the thycotic.com Web site. Can activation be done while offline?**
 
-Yes, there is an offline option for activating licenses. (See the Demo movie above for the offline process - also note the *offline=true* option described below if you have trouble activating offline)
-
-To activate your Secret Server licenses when your server does not have internet access, perform the following steps:
-
-1. Go to **Admin > Licenses**.
-
-1. Click the **Install New License** button.
-
-1. Type the **License Name** and **License Key** for one of the licenses that you received from your account manager.
-
-1. Click the **Save** button.
-
-1. If you have another license to add, click **Add Another License**.
-
-1. When you have added all licenses, click **License Activation**.
-
-1. Enter your name, email address, and phone number, then click the **Activate Offline** button.
-
-Your activation is complete.  If you received an error message, please take note of the error code and call the phone number contained in the message.
-
-Secret Server may be activated on an Airgap Network for both Trials and Licensed products. Please let your Account Manager know you will be using Secret Server on an Airgap network for more information.
+Yes, there is an offline option for activating licenses. See [Adding, Activating, and Deleting Licenses](../adding-activating-deleting-licenses/index.md).
 
 **If we have trouble activating our licenses, what should we do?**
 
-1. If your Secret Server is currently supported, that is, there is a current support license for each user license, our technical support team will be able to help you. Please [contact us](http://thycotic.com/products/secret-server/support-2/).
+1. If your Secret Server is currently supported, with an equal number of current support licenses and user licenses, our technical support team will be able to help you. Please [contact us](http://thycotic.com/products/secret-server/support-2/).
 
 1. If an error message persists after successful activation, remove expired/invalid licenses from Secret Server by clicking the license name and then Delete (the license information will remain available to you from your account at [my.thycotic.com](http://my.thycotic.com)).
-
 
 **My Server is a VM that moves to different hardware often.  Will this cause me to need to reactivate over and over?**
 
