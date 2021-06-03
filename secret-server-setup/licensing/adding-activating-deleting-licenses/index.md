@@ -38,7 +38,7 @@ Your activation is complete.
 
 >**Note**: For more information on activating Secret Server licenses, see the [License Activation FAQ](../licensing-faq/index.md).
 
-Secret Server may be activated on an Airgap Network for both trials and licensed products. Please let your Account Manager know you will be using Secret Server on an Airgap network for more information.
+Secret Server may be activated on an air gap network for both trials and licensed products. Please let your Account Manager know you will be using Secret Server on an air gap network for more information.
 
 If you receive an error message, please take note of the error code and call the phone number contained in the message.
 
