@@ -4,9 +4,7 @@
 
 # Change SQL Service Account Passwords without Restarting the SQL Service
 
-As of SQL Server 2008 R2, Microsoft no longer recommends changing the password of the SQL service via the services console. According to Microsoft Documentation for SQL Server 2008 R2 and above:
-
-*Changing a SQL Server service by using the Windows Service Control Manager (services.msc) application does not always change all of the necessary settings and might prevent the service from functioning properly. However, in a clustered environment, after changing the password on the active node by using SQL Server Configuration Manager, you must change the password on the passive node by using the Service Control Manager.*
+>**Note**: As of SQL Server 2008 R2, Microsoft no longer recommends changing the password of the SQL service via the services console. According to Microsoft Documentation for SQL Server 2008 R2 and above: *Changing a SQL Server service by using the Windows Service Control Manager (services.msc) application does not always change all of the necessary settings and might prevent the service from functioning properly. However, in a clustered environment, after changing the password on the active node by using SQL Server Configuration Manager, you must change the password on the passive node by using the Service Control Manager.*
 
 ## Requirements
 
