@@ -1,7 +1,7 @@
 [title]: # (Restricting IP Addresses)
 [tags]: # (Restricting IP Addresses)
 [priority]: # (1000)
-[redirect]: # "RestrictingIPAddresses"
+[redirect]: # (RestrictingIPAddresses)
 
 # Restricting IP Addresses
 

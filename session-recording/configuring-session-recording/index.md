@@ -1,7 +1,7 @@
 [title]: # (Configuring Session Recording)
 [tags]: # (Session Recording)
 [priority]: # (1000)
-[redirect]: # "ConfiguringSessionRecordingKB"
+[redirect]: # (ConfiguringSessionRecordingKB)
 
 # Configuring Session Recording
 

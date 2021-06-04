@@ -1,7 +1,7 @@
 [title]: # (Backing up Secret Server to a Network Share)
 [tags]: # (Backup Settings,network share)
 [priority]: # (1000)
-[redirect]: # "BackupToNetworkShare"
+[redirect]: # (BackupToNetworkShare)
 
 # Backing up Secret Server to a Network Share
 

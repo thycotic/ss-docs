@@ -1,7 +1,7 @@
 [title]: # (Secret Key Rotation)
 [tags]: # (secret key rotation)
 [priority]: # (1000)
-[redirect]: # "SecretServerSecretKeyRotation"
+[redirect]: # (SecretServerSecretKeyRotation)
 
 # Secret Key Rotation
 

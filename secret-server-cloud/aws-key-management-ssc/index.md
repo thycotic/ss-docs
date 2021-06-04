@@ -1,7 +1,7 @@
 [title]: # (AWS Key Management in Secret Server Cloud)
 [tags]: # (secret server cloud, aws)
 [priority]: # (1000)
-[redirect]: # "CloudKeyManagement"
+[redirect]: # (CloudKeyManagement)
 
 # AWS Key Management in Secret Server Cloud
 

@@ -1,7 +1,7 @@
 [title]: # (Secure LDAP)
 [tags]: # (LDAP, LDAPS,directory service)
 [priority]: # (1000)
-[redirect]: # "SecretServerLDAPS"
+[redirect]: # (SecretServerLDAPS)
 
 # Secure LDAP
 

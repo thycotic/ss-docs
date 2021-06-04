@@ -1,7 +1,7 @@
 [title]: # (Moving the Microsoft SQL Server Database to Another Machine)
 [tags]: # (Setup,Install,sql server)
 [priority]: # (1000)
-[redirect]: # "MigrateSecretServerDB"
+[redirect]: # (MigrateSecretServerDB)
 
 
 
