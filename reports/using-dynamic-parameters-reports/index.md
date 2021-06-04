@@ -1,7 +1,7 @@
 [title]: # (Using Dynamic Parameters in Reports)
 [tags]: # (Reports, Dynamic Parameters, Coloring)
 [priority]: # (1000)
-[redirect]: # "SecretServerReportParameters"
+[redirect]: # (SecretServerReportParameters)
 
 # Using Dynamic Parameters in Reports
 

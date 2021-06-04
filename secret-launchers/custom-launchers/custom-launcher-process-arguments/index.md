@@ -1,7 +1,7 @@
 [title]: # (Custom Launcher Process Arguments)
 [tags]: # (Launcher, Process Arguments)
 [priority]: # (1000)
-[redirect]: # "CustomLauncherProcessArguments,MacCustomLauncherProcessArguments"
+[redirect]: # (CustomLauncherProcessArguments,MacCustomLauncherProcessArguments)
 
 # Custom Launcher Process Arguments
 

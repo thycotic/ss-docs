@@ -1,7 +1,7 @@
 [title]: # (Using Connect As Command and SSH Proxy with PuTTY launcher)
 [tags]: # (Connect As Command,PuTTY launcher,SSH proxy,Unix, root account)
 [priority]: # (1000)
-[redirect]: # "SshProxyWithConnectAs"
+[redirect]: # (SshProxyWithConnectAs)
 
 # Using Connect As Command and SSH Proxy with PuTTY Launcher
 

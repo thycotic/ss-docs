@@ -1,7 +1,7 @@
 [title]: # (Discovery)
 [tags]: # (Discovery)
 [priority]: # (1000)
-[redirect]: # "SecretServerDiscoveryGuide,SSDiscoveryMainKB,SSLocalAccountDiscoveryMethod"
+[redirect]: # (SecretServerDiscoveryGuide,SSDiscoveryMainKB,SSLocalAccountDiscoveryMethod)
 
 # Discovery
 

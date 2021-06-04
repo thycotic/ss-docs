@@ -1,7 +1,7 @@
 [title]: # (Server SSH Key Verification)
 [tags]: # (Authentication, SSH key)
 [priority]: # (1000)
-[redirect]: # "PublicKeyDigest"
+[redirect]: # (PublicKeyDigest)
 
 # Server SSH Key Verification
 

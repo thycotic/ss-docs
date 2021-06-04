@@ -1,7 +1,7 @@
 [title]: # (Internal Site Connector)
 [tags]: # (RabbitMQ, internal site connector, backbone bus)
 [priority]: # (1000)
-[redirect]: # "InternalSiteConnector"
+[redirect]: # (InternalSiteConnector)
 
 # Internal Site Connector
 

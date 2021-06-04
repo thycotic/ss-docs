@@ -44,6 +44,8 @@ Created the following topics from Salesforce articles or PDFs (often including s
 - Creating a Custom TOAD Launcher
 - Creating a Custom Password Changer for Cisco ASA
 - Creating a Custom Password Changer for IBM AS/400
+- Creating a Unix Secret Template with Key Authentication
+- Creating and Customizing an IBM iSystem (AS/400) Template and Password Changer
 - Creating and Using a SQL Server Privileged Account
 - Creating and Using SQL Scripts
 - Customizing Access Request Emails

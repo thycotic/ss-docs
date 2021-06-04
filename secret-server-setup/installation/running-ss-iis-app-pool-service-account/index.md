@@ -1,7 +1,7 @@
 [title]: # (Running the IIS Application Pool As a Service Account)
 [tags]: # (service account, IIS, application pool)
 [priority]: # (1000)
-[redirect]: # "AdvInstallServiceAccount"
+[redirect]: # (AdvInstallServiceAccount)
 
 # Running the IIS Application Pool As a Service Account
 
