@@ -1,7 +1,7 @@
 [title]: # (X.509 Certificate Security Chain Options)
 [tags]: # (Authentication, Certificate, X.509)
 [priority]: # (1000)
-[redirect]: # "TlsCertificateChainPolicyOptions"
+[redirect]: # (TlsCertificateChainPolicyOptions)
 
 # X.509 Certificate Security Chain Options
 

@@ -1,7 +1,7 @@
 [title]: # (Duo Security Authentication)
 [tags]: # (Authentication, Credentials, 2FA)
 [priority]: # (1000)
-[redirect]: # "DuoSecurityIntegration"
+[redirect]: # (DuoSecurityIntegration)
 
 # Duo Security Authentication
 

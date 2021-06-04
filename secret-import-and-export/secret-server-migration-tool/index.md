@@ -1,7 +1,7 @@
 [title]: # (Secret Server Migration Tool)
 [tags]: # (Import,migration,tool)
 [priority]: # (1000)
-[redirect]: # "SecretServerMigrationTool"
+[redirect]: # (SecretServerMigrationTool)
 
 # Secret Server Migration Tool
 

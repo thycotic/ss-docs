@@ -4,4 +4,4 @@
 
 # Security
 
-Please see [Thycotic Secret ServerDistributed Engine Security](https://updates.thycotic.net/secretserver/documents/SS_Sec_DistributedEngine.pdf).
+Please see [Distributed Engine Hardening](../../security-hardening/distributed-engine-hardening/index.md).

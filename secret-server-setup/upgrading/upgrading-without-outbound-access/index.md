@@ -1,7 +1,7 @@
 [title]: # (Upgrading Secret Server Without Outbound Access)
 [tags]: # (Setup, Upgrading)
 [priority]: # (1000)
-[redirect]: # "SSOfflineUpgradeKB"
+[redirect]: # (SSOfflineUpgradeKB)
 
 # Upgrading Secret Server Without Outbound Access
 

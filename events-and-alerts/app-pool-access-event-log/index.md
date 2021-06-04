@@ -1,7 +1,7 @@
 [title]: # (Giving Application Pools Event Log Access)
 [tags]: # (event log, application pool)
 [priority]: # (1000)
-[redirect]: # "SetEventLogPermissions"
+[redirect]: # (SetEventLogPermissions)
 
 # Giving Application Pools Event Log Access
 

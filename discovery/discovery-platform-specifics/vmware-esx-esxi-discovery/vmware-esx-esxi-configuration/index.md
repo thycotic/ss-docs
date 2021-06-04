@@ -1,7 +1,7 @@
 [title]: # (VMware ESX/ESXi Account Discovery and RPC Configuration)
 [tags]: # (Discovery, VMware, ESX/ESXi, rpc)
 [priority]: # (1000)
-[redirect]: # "VMWarePasswordChanging"
+[redirect]: # (VMWarePasswordChanging)
 
 # VMware ESX/ESXi Account Discovery and RPC Configuration
 

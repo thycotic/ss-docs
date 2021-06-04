@@ -1,7 +1,7 @@
 [title]: # (Using Regex with Dependencies)
 [tags]: # (Dependencies,Regex)
 [priority]: # (1000)
-[redirect]: # "DependencyRegex"
+[redirect]: # (DependencyRegex)
 
 # Using Regex with Dependencies
 

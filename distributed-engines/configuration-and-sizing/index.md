@@ -1,7 +1,7 @@
 [title]: # (Configuration and Sizing)
 [tags]: # (Distributed Engine Configuration and Sizing)
 [priority]: # (1000)
-[redirect]: # "WCFAuthentication"
+[redirect]: # (WCFAuthentication)
 
 # Configuration and Sizing
 

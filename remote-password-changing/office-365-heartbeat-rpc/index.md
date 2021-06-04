@@ -1,7 +1,7 @@
 [title]: # (Running Heartbeat and RPC for Office 365 Accounts with a PowerShell Module)
 [tags]: # (Remote Password Changing, PowerShell, office 365)
 [priority]: # (1000)
-[redirect]: # "SSPowerShellModules"
+[redirect]: # (SSPowerShellModules)
 
 # Running Heartbeat and RPC for Office 365 Accounts with a PowerShell Module
 

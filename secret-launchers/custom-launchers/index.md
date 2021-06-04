@@ -1,7 +1,7 @@
 [title]: # (Custom Launchers)
 [tags]: # (Launcher)
 [priority]: # (1000)
-[redirect]: # "CustomLauncherTypes"
+[redirect]: # (CustomLauncherTypes)
 
 # Custom Launchers
 

@@ -1,7 +1,7 @@
 [title]: # (Importing Secrets)
 [tags]: # (Import)
 [priority]: # (1000)
-[redirect]: # "AdvancedImportWithXML"
+[redirect]: # (AdvancedImportWithXML)
 # Importing Secrets
 
 SS's importation feature simplifies integration with legacy systems and allows users to easily add large numbers of secrets from an Excel or comma-separated values (CSV) file. Secrets are batch imported by template, so multiple types of input data need to be imported in several batches. The [Secret Server Migration Tool](../secret-server-migration-tool/index.md) supports easy addition of existing passwords from other third-party password-storing applications.

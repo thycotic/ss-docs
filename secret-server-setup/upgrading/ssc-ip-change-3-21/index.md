@@ -1,7 +1,7 @@
 [title]: # (SSC IP Change for March to May 2021)
 [tags]: # (Upgrade, IP change, secret server cloud)
 [priority]: # (1000)
-[redirect]: # "SSCIPChange"
+[redirect]: # (SSCIPChange)
 
 # Secret Server Cloud IP Address Change for March to May 2021
 
