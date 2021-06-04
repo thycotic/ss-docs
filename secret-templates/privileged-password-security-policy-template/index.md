@@ -4,9 +4,9 @@
 
 # How to Use the Privileged Password Security Policy Template
 
-To use the Privileged Password Security Policy Template, follow the steps below:
+To use the privileged password security policy template, follow the steps below:
 
-1. [Download the Privileged Password Security Policy Template](https://thycotic.com/solutions/free-it-tools/free-privileged-password-security-policy-template/).
+1. Download the privileged password security policy [template](https://thycotic.com/solutions/free-it-tools/free-privileged-password-security-policy-template/).
 1. Open the template as a Microsoft Word document.
 1. Remove the “About this Template” and “Customizing the Template” instructions and other author comments.
 1. Replace the term “Company X” with the name of your organization.
