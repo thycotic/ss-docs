@@ -1,7 +1,7 @@
 [title]: # (Installing RabbitMQ)
 [tags]: # (RabbitMQ,Setup,Install)
 [priority]: #	(1000)
-[redirect]: # "RabbitMQ,RabbitMQSSL"
+[redirect]: # (RabbitMQ,RabbitMQSSL)
 
 # Installing RabbitMQ
 

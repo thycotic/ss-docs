@@ -1,7 +1,7 @@
 [title]: # (Using Secret Fields in Scripts)
 [tags]: # (REST API,API,Scripting,PowerShell,secret fields,dependency tokens)
 [priority]: # (1000)
-[redirect]: # "UsingSecretFieldsInScriptDependencies"
+[redirect]: # (UsingSecretFieldsInScriptDependencies)
 
 # Using Secret Fields in Scripts
 

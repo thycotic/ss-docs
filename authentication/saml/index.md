@@ -1,7 +1,7 @@
 [title]: # (SAML)
 [tags]: # (SAML, Authentication, Credentials)
 [priority]: # (1000)
-[redirect]: # "SAMLWPFauth"
+[redirect]: # (SAMLWPFauth)
 
 # SAML
 

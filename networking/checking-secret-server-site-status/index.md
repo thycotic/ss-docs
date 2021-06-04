@@ -1,3 +1,6 @@
+[title]: # (Checking Secret Server Site Status)
+[tags]: # (check,site,status)
+[priority]: # (1000)
 
 # Checking Secret Server Site Status
 

@@ -1,7 +1,7 @@
 [title]: # (Administration Tabs)
 [tags]: # (Administration Tabs)
 [priority]: # (1000)
-[redirect]: # "EnableFrameBlocking"
+[redirect]: # (EnableFrameBlocking)
 
 # Administration Configuration Tabs
 

@@ -1,7 +1,7 @@
 [title]: # (SQL Server Mirroring)
 [tags]: # (SQL Server, mirroring, database, DR, HA, Disaster Recovery)
 [priority]: # (1000)
-[redirect]: # "SqlReplicationKnowledgeBase"
+[redirect]: # (SqlReplicationKnowledgeBase)
 
 # SQL Server Mirroring
 

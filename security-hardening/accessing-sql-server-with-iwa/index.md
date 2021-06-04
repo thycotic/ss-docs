@@ -1,7 +1,7 @@
 [title]: # (Accessing MS SQL Server with IWA)
 [tags]: # (Integrated Windows Authentication, IWA, Authentication, Credentials. SQL)
 [priority]: # (1000)
-[redirect]: # "SSWindowsAuthentication"
+[redirect]: # (SSWindowsAuthentication)
 
 # Accessing MS SQL Server with IWA
 

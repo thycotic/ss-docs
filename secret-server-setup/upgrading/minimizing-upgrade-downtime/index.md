@@ -1,7 +1,7 @@
 [title]: # (Minimizing Upgrade Downtime)
 [tags]: # (Setup, Upgrade, downtime)
 [priority]: # (1000)
-[redirect]: # "ManualRollingUpgrade"
+[redirect]: # (ManualRollingUpgrade)
 # Minimizing Upgrade Downtime
 
 ## Introduction

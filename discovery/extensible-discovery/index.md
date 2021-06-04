@@ -1,7 +1,7 @@
 [title]: # (Extensible Discovery)
 [tags]: # (Discovery,extensible discovery)
 [priority]: # (1010)
-[redirect]: # "ScriptableDiscoveryMoreInformation"
+[redirect]: # (ScriptableDiscoveryMoreInformation)
 
 # Extensible Discovery
 

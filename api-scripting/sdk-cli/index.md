@@ -1,7 +1,7 @@
 [title]: # (Secret Server Software Development Kit for DevOps)
 [tags]: # (API,Scripting,DevOps,SDK)
 [priority]: # (1000)
-[redirect]: # "ApplicationAccountKB"
+[redirect]: # (ApplicationAccountKB)
 
 # Secret Server Software Development Kit for DevOps
 

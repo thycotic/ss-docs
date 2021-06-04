@@ -1,7 +1,7 @@
 [title]: # (Enabling RADIUS Two-Factor Authentication)
 [tags]: # (Authentication, Credentials, RADIUS, 2FA)
 [priority]: # (1000)
-[redirect]: # "SecretServerRadiusIntegration"
+[redirect]: # (SecretServerRadiusIntegration)
 
 # Enabling RADIUS Two-Factor Authentication
 
