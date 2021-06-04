@@ -1,8 +1,8 @@
-[title]: # (How to Create a Secret Policy)
+[title]: # (Creating Secret Policies)
 [tags]: # (create,security,policy,setting,enforced)
 [priority]: # (1000)
 
-# How to Create a Secret Policy
+# Creating Secret Policies
 
 A secret policy is a set of rules that you can apply all at once to multiple secrets. For example, a secret policy could include rules about remote password changing or security settings, and you could apply all of the rules as a single policy to multiple secrets, whether the secrets reside in the same folder or different folders.
 
