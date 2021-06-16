@@ -6,12 +6,12 @@
 
 ## 10.9.000064 (Current Version)
 
-> **Note:** Calculated on 2021-03-26 17:50:27-04:00.
+> **Note:** Calculated on 2021-06-02 19:32:10-04:00.
 
 ThycoticSetup.exe:
 
-- SHA1 = aa564d9b4a60e76cbdf6c4034c1d356d2be90cb0
-- SHA256 = e92a4408809a3b1cebbe7d5475f76f13e74bb98c08c9110019ce213f72797838
+- SHA1 = 340eae40a405ece446dfde698c469316bba1a331
+- SHA256 = cee3168cfe5c745e79c6d0509385c4d06547acd640e5a5eaa889dc31cc6f73ce
 
 Version_10_9_000064.zip:
 
