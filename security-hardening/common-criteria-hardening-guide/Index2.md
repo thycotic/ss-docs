@@ -21,7 +21,7 @@ The Common Criteria for Information Technology Security Evaluation (ISO/IEC 1540
 
 ## Related Documents and Resources
 -----------------------------------
-Table 1: Guidance Documentation
+**Table 1**: Guidance Documentation
 
 | **Title**                               | **Edition**                   | **URL**                                                                                                                                                                            |
 |-----------------------------------------|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -34,7 +34,7 @@ For more information about Thycotic Secret Server please refer to the Secret Ser
 
 <https://thycotic.force.com/support/s/secretserver> **UPDATE TO RELATIVE LINK**
 
-*\*While many Common Criteria requirements are automatically set as default through the Secret Server – Government Edition Installer, for ensuring that all of Thycotic’s security best practices are in place, the Security Hardening Configuration Settings Report can be found by navigating to the Reports \| Security Hardening tab. After installing Secret Server, follow the checklist on this page to ensure your environment is as secure as possible:*
+While many Common Criteria requirements are automatically set as default through the Secret Server – Government Edition Installer, for ensuring that all of Thycotic’s security best practices are in place, the Security Hardening Configuration Settings Report can be found by navigating to the **Reports \| Security Hardening** tab. After installing Secret Server, follow the checklist on this page to ensure your environment is as secure as possible.
 
 ![A screenshot of a cell phone Description generated with very high confidence](images/38e58b41f06e6ae5db7d921c43899a06.jpg)
 
@@ -56,9 +56,9 @@ These credential types define a broad range of compatible ESM products. Generall
 ## Assumptions and Operational Environment
 -------------------------------------------
 
-There are specific conditions that are assumed to exist in the TOE’s Operational Environment. The following table lists assumptions about the Operational Environment as specified by the Protection Profile:
+There are specific conditions that are assumed to exist in the TOE Operational Environment. The following table lists assumptions about the operational environment as specified by the protection profile:
 
-Table 2: Operational Environment
+**Table 2**: Operational Environment
 
 | **Assumption Name**                 | **Assumption Definition**                                                                                            |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -71,7 +71,7 @@ Table 2: Operational Environment
 
 The following table identifies the organizational security policies applicable to the TOE as specified by the Protection Profile:
 
-Table 3: Organizational Security Policies
+**Table 3**: Organizational Security Policies
 
 | **Policy Name** | **Policy Definition**                                                                                                                                                       |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -120,9 +120,9 @@ Click to see [more detailed System Requirements](https://thycotic.force.com/supp
 ## SQL Installation and Configuration
 --------------------------------------
 
-To maintain Common Criteria Compliance, **SQL must be installed locally** on the Secret Server web application machine before running the **Secret Server—Government Edition** installer. During the install process for SQL, ensure that you use *Windows authentication mode*.
+To maintain Common Criteria Compliance, *SQL must be installed locally* on the Secret Server web application machine before running the Secret Server—Government Edition installer. During the install process for SQL, ensure that you use *Windows authentication mode*.
 
-The following steps walk you through setup and configuration for **SQL Server 2016 Standard Edition**. At the completion of this section you will have:
+The following steps walk you through setup and configuration for SQL Server 2016 Standard Edition. At the completion of this section you will have:
 
 - Installed a basic stand-alone instance of SQL Server 2016 Standard with the minimum features necessary for SQL Server.
 
@@ -142,9 +142,9 @@ The following steps walk you through setup and configuration for **SQL Server 20
 
    ![](images/809a3736800032497e943ad5202b18a3.png)
 
-1. Click **OK** when done to return to the “SQL Server Installation Center” window.
+1. Click **OK** when done.
 
-1. In the “SQL Server Installation Center” window, click **Installation** then **New SQL Server stand-alone installation or add features to an existing installation**
+1. Return to the “SQL Server Installation Center” window, click **Installation** then **New SQL Server stand-alone installation or add features to an existing installation**.
 
    ![](images/b32cbcaf5beeb416c302745af86073ec.png)
 
@@ -156,63 +156,69 @@ The following steps walk you through setup and configuration for **SQL Server 20
 
    ![](images/308610c9a49892e5dce42bb7c99a5f0b.png)
 
-1. Wait for the **Rule Check** to run.
+1. Wait for the Rule Check to run.
 
-1. At the “Microsoft Update” step, check **Use Microsoft Update to check for updates (recommended)** unless your software update process does not utilize automatic updates from Microsoft and click **Next**.
+1. In the “Microsoft Update” window, check **Use Microsoft Update to check for updates (recommended)** unless your software update process does not utilize automatic updates from Microsoft.
+
+1. Click **Next**.
 
    ![](images/6c928084c2ef8dfc468a13e7446d859f.png)
 
 1. At the “Product Updates” step leave all defaults and click **Next**.
 
-1. Wait for the “Install Setup Files” step to complete. Check that all operations pass (with the exception of Windows Firewall, which may return a warning status since the database will not be accessed from outside the firewall). The “Install Rules” screen (below) will appear upon completion. When the installation is successful, click **Next**.
+1. As the setup files are installing, check that all operations pass. You can ignore warnings from Windows Firewall, because the database will not be accessed from outside the firewall. When the setup files are successfully installed, the “Install Rules” screen (below) appears.
+
+1. Click **Next**.
 
    ![](images/762e14535ac0b29b8ee198aac1be2132.png)
 
-   The only feature in “Feature Selection” necessary for Secret Server is “Database Engine Services” (see screenshot below). Unless you are using Geo-Replication (this is not in scope for Common Criteria standards) you can leave everything else unchecked and leave the directory locations unchanged 
+   In the “Feature Selection” window, make sure the box is checked next to “Database Engine Services” (see screenshot below). Unless you are using Geo-Replication (which is outside the scope for Common Criteria standards) you can leave everything else unchecked, and leave the directory locations unchanged.
 
 1. Click **Next**.
 
    ![](images/db97f624542b084461ca6a55092192ec.png)
 
-1. At the “Instance Configuration” step, leave “Default instance” selected and click **Next**.
+1. In the “Instance Configuration” window, leave “Default instance” selected and click **Next**.
 
    ![](images/f0031097cd5c48bdf9de993669d7b9a6.png)
 
-1. At the “Server Configuration” step, (screenshot below) leave the defaults and click **Next**.
+1. In the “Server Configuration” window, (screenshot below) leave the defaults and click **Next**.
 
    ![](images/82a3f2bd56f706439e87335b0246a91a.png)
 
-1. At the “Database Engine Configuration” step, make sure that **Windows authentication mode** is selected in the “Server Configuration” tab. Scroll down and add at least one Local Windows or Active Directory user or group in “Specify SQL Server administrators.” Click the **Add Current User** button to find and then **Add** the Administrator account.
+1. In the “Database Engine Configuration” window on the “Server Configuration” tab, make sure **Windows authentication mode** is selected. In the “Specify SQL Server administrators” section, add at least one Local Windows or Active Directory administrative user or group by clicking the **Add Current User** button, selecting a user, then clicking **Add**.
 
    ![](images/57916221f804192e56930cfed8232515.png)
 
-   You can leave the options in the remaining tabs at their default values or change the file locations in the “Data Directories” and “TempDB” tabs if you wish to store the database and log data in a different drive or directory. Click **Next**.
+   On the remaining tabs you can leave the default settings or if you prefer, you can change the file locations in the “Data Directories” and “TempDB” tabs to store the database and log data in a specific drive or directory.
 
-1. Wait for the setup wizard to progress to the “Ready to Install” step and click **Install**.
+1. Click **Next**.
+
+1. Wait for the setup wizard to progress. When the "Ready to Install” window appears, click **Install**.
 
    ![](images/6b56c86edbcf7e19316cad01d44ef9aa.png)
 
-1. Wait for the installation to complete. This may take several minutes. Click **Close**.
+1. The installation may take several minutes. When it finishes, click **Close**.
 
 >**Note**: you may need to reboot the computer before proceeding.
 
 ### Installing SQL Server Management Studio
 
-1. Back in the “SQL Server Installation Center” window, click **Installation** then **Install SQL Server Management Tools**
+1. Back in the “SQL Server Installation Center” window, click **Installation** on the left and click **Install SQL Server Management Tools** on the right.
 
    ![](images/45eaf3fe53c0f08bb01265dfd889fe18.png)
 
-1. Wait for the web page to load then click the **Download SQL Server Management Studio 17.6** link *(note: actual version \# may be different if a newer version is available).*
+1. When the web page loads, click the **Download SQL Server Management Studio 17.6** link *(note: actual version \# may be different if a newer version is available).*
 
-   >**Note**: You may need to ‘enable downloads’ in your browser security settings to download this file.*
+   >**Note**: You may need to enable downloads in your browser security settings to download this file.
 
-1. After the download is complete, click **Run** (if using Internet Explorer to download the file; if using a different browser, follow the conventions for that browser to run the file or open the download folder and run the file).
+1. After the download is complete, open the download folder and run the setup file. If you are using Internet Explorer, just click **Run**.
 
-1. Click **Install** when the SQL Server Management Studio installer starts.
+1. When the SQL Server Management Studio installer starts, click **Install**.
 
    ![](images/4e8d5d9580c18dba6bd700adbf159f76.png)
 
-1. Wait for the installer to complete. This may take several minutes. When the installation has completed, click **Restart** if prompted. Otherwise, click **Close** and then close “SQL Server Installation Center.”
+1. The installation might take several minutes. When the installation has completed, click **Restart** if prompted. Otherwise, click **Close** and then close “SQL Server Installation Center.”
 
    ![](images/4e7f228e54059609ea59282bb82aa61e.png)
 
@@ -224,54 +230,95 @@ The following steps walk you through setup and configuration for **SQL Server 20
 
    ![](images/e915ca2d04e1e7ed76fe1bdb69e24820.png)
 
-1. Expand the “Local Users and Groups” folder, right-click **Users**, and select
+1. Expand the “Local Users and Groups” folder, right-click the **Users** subfolder, and select
 **New User…**
 
    ![](images/43865cd9355fd4780343babcd2909260.png)
 
-1. Give the user *any desired user name and a very strong password*. This account will be added as a user in **SQL Server Management Studio** in the next step and its credentials will be saved to an encrypted file during Secret Server setup.
+1. Give the user an appropriate name as well as *a very strong password*. 
 
-1. Uncheck the default “**User must change password at next logon**” and check “**Password never expires**.”
+1. Uncheck the box next to **User must change password at next logon**.
 
-1. Click **Create** followed by **Close** when done.
+1. Check the box next to **Password never expires**.
+
+1. Click **Create**.
+
+1. Click **Close**.
 
    ![](images/c779533244a6f23fcbcb9a8499c1794a.png)
 
 #### Add the User Account to SQL Server
 
-1. Start SQL Server Management Studio. This may take several minutes the first time the application is started.
+In the next few steps you will add the new user you just created as a user in **SQL Server Management Studio**. Later during Secret Server setup, your new user's credentials will be saved to an encrypted file.
 
-1. Connect to SQL Server by browsing for the database **Server name** (click the drop down box beside **Server name** then “**Browse for more..**” and select the name of the database installed). Click **Connect** to login using **Windows Authentication** (login as the user that you selected in the “Database Engine Configuration” step of the SQL Server installation).
+1. Start SQL Server Management Studio. This may take several minutes the first time. When the application is up and running, you are ready to connect to the SQL Server database.
 
-1. Open the “Security” folder, right-click on **Logins**, and select **New Login…**
+1. Click the drop-down beside **Server name**.
+
+1. Select **Browse for more**.
+
+1. Select the name of the installed database and click **Connect**.
+
+1. Using **Windows Authentication**, log in as a user that you added in the “Database Engine Configuration” window, under “Specify SQL Server administrators”.
+
+1. Open the “Security” folder
+
+1. Right-click the **Logins** subfolder.
+
+1. Select **New Login…**
 
    ![](images/913d258311bfdfde9eb38490c7a381df.png)
 
-1. In the “Login – New” dialog, click the **Search** button, enter the full name of the Windows account you created in the previous step, and click **Check Names**. If entered correctly, the user name should be underlined. If it is not, correct the name and repeat. When the name is entered correctly, click **OK**.
+1. In the initial “Login – New” window, click the **Search** button.
 
-1. Back in the “Login – New” dialog, click **Server Roles**, check **dbcreator**
-and then click **OK**.
+1. Enter the full name of the Windows account you created in the previous step.
+
+1. Click **Check Names**. If the username has been entered correctly, it should appear underlined.
+
+1. Click **OK**.
+
+1. Back in the “Login – New” window under **Server Roles**, check **dbcreator**
+
+1. Click **OK**.
 
    ![](images/ccdc067b516bac6e6cebc3759e654294.png)
 
 #### Additional Pre-Requisites for Secret Server
 
-Windows Authentication to access the SQL database, it is recommended that you create a service account.
+We recommend creating and using a service account to run the Secret Server IIS Application Pool and to access the SQL database with Windows Authentication. Follow the steps below:
 
 **To run the Secret Server IIS Application Pool with a Service Account:**
 
-1. Open a command prompt window, change the directory to your .NET framework installation directory using the "cd" command (that is, "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319" or "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319")
+1. Open a command prompt window and use the `cd` command to change your .NET framework installation directory to one the folllowing:
 
-1. Type in `.\\aspnet_regiis -ga \< user name\>` and press enter. Replace the field with the relevant value from the SQL Server user account created in “Create the SQL Server user account”.
+   * `C:\Windows\Microsoft.NET\Framework\v4.0.30319`
 
-1. Give your service account "modify" access to C:\\Windows\\TEMP
+   * `C:\Windows\Microsoft.NET\Framework64\v4.0.30319`
 
-1. Next open the Local Security Policy App from your start menu and grant batch logon permissions to your service account...
+1. Type in `.\aspnet_regiis -ga <user name>` and press enter.
+
+1. Replace the field with the relevant value from the SQL Server user account created in “Create the SQL Server user account”.
+
+1. Give your service account "modify" access to `C:\Windows\TEMP`
+
+1. From the Start menu, open the Local Security Policy application and grant batch logon permissions to your service account...
    ![](images/be119e3e6c089abef373b8076459ed4d.png)
 
-1. Open the Local Security Policy Console (Search-\>secpol.msc-\>[Enter]), expand "Local Policies", click on "User Rights Assignment", right click on "**Log on as a batch job**", click "properties", click "Add User or Group", and add your service account, then click "OK".
+1. Open the Local Security Policy Console (Search-\>secpol.msc-\>[Enter]),
 
-   >**Note**: If you utilize Group Policy to enforce the "Log on as a batch job" and
+1. Expand **Local Policies**.
+
+1. Click **User Rights Assignment**.
+
+1. Right-click **Log on as a batch job** and click **Properties**.
+
+1. Click **Add User or Group**.
+
+1. Add your service account.
+
+1. Click **OK**.
+
+   >**Note**: If you use     Group Policy to enforce the "Log on as a batch job" and
 have group managed service accounts, take note that this will overwrite any
 local permissions to the "Log on as a batch job" on all computers that have the
 policy applied. Utilizing the local security policy is a safer option if you are
@@ -1170,19 +1217,17 @@ Each object that is stored within Secret Server is referred to as a **Secret**.
 Usually, a Secret will be a username and password combination. Other examples of
 Secrets can include SSH keys, contact information, or safe combinations.
 
-To create a Secret, use the “Create Secret” widget.
+1. To create a Secret, use the “Create Secret” widget
 
-![](images/150480aea04fcb8ae4152ef30803e5ad.png)
+   ![](images/150480aea04fcb8ae4152ef30803e5ad.png)
 
-Select the type of Secret you want to create.
+1. Select the type of Secret you want to create.
 
-![](images/709d1bdc342c4e7f2f4ac83971401c2f.png)
+   ![](images/709d1bdc342c4e7f2f4ac83971401c2f.png)
 
-Enter the data for the Secret you want to save, and make sure to choose the
-Folder that the Secret will be saved into. Hit Save, and your Secret has been
-created.
+   Enter the data for the Secret you want to save, and make sure to choose the Folder that the Secret will be saved into. Hit Save, and your Secret has been created.
 
-![](images/934848b6159af7949782d391cdeaa158.png)
+   ![](images/934848b6159af7949782d391cdeaa158.png)
 
 ## Configuring Secret Templates
 ---------------------------------
@@ -1219,8 +1264,8 @@ Criteria standards available in the Government edition of Secret Server:
 
 To follow Common Criteria standards, navigate to **Admin \| Secret Templates**
 and click the **Active Templates** button. Ensure that only the templates listed
-above are selected in the Active column. Then **Save**. Users only can create
-Secrets using templates marked as Active.
+above are selected in the Active column, then **Save**. Users can create
+Secrets using only the  templates marked as Active.
 
 To view object attribute data in a template from the dropdown list of Active
 Templates, **select a template** from the dropdown list and then click **Edit**.
