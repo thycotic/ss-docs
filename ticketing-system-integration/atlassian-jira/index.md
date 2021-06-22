@@ -37,14 +37,15 @@ You need to create a PowerShell script to retrieve and validate tickets. This in
 ```powershell
 $ticket = $args[0]
 $user = $args[1]
-$password = $args[2]
+$token = $args[2]
 $url = $args[3]
 $closedStatus = "Closed"
 $fields = "status"
 
-$p = $password | ConvertTo-SecureString -AsPlainText -Force
-
-$credentials = New-Object System.Management.Automation.PsCredential($user,$p)
+$pair = "$($user):$($token)"
+$encodedCreds = [System.Text.Encoding]::UTF8.GetBytes($pair)
+$encodedBase64 = [System.Convert]::ToBase64String($encodedCreds)
+$basicAuthValue = "Basic $encodedBase64"
 $getStatusMethod = "$url/rest/api/latest/issue/$ticket"
 
 function ConvertTo-UnsecureString([System.Security.SecureString][parameter(mandatory=$true)]$SecurePassword)
@@ -111,11 +112,16 @@ To add comments to tickets, you will need to create the script below.
 $ticket = $args[0]
 $comment = $args[1]
 $user = $args[2]
-$password = $args[3]
+$token = $args[3]
 $url = $args[4]
 
-$p = $password | ConvertTo-SecureString -AsPlainText -Force
-$credentials = New-Object System.Management.Automation.PsCredential($user,$p)
+$pair = "$($user):$($token)"
+
+$encodedCreds = [System.Text.Encoding]::UTF8.GetBytes($pair)
+
+$encodedBase64 = [System.Convert]::ToBase64String($encodedCreds)
+
+$basicAuthValue = "Basic $encodedBase64"
 
 function ConvertTo-UnsecureString([System.Security.SecureString][parameter(mandatory=$true)]$SecurePassword)
 {
