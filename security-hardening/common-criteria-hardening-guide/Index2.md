@@ -200,7 +200,7 @@ The following steps walk you through setup and configuration for SQL Server 2016
 
 1. The installation may take several minutes. When it finishes, click **Close**.
 
->**Note**: you may need to reboot the computer before proceeding.
+ \> **Note**: you may need to reboot the computer before proceeding.
 
 ### Installing SQL Server Management Studio
 
@@ -318,104 +318,98 @@ We recommend creating and using a service account to run the Secret Server IIS A
 
 1. Click **OK**.
 
-   >**Note**: If you use     Group Policy to enforce the "Log on as a batch job" and
-have group managed service accounts, take note that this will overwrite any
-local permissions to the "Log on as a batch job" on all computers that have the
-policy applied. Utilizing the local security policy is a safer option if you are
-not sure about your usage across your domain.
+   >**Note**: If you use Group Policy to enforce "Log on as a batch job" and you have have group-managed service accounts, you will overwrite any local permissions to the "Log on as a batch job" on all computers that use the policy. If you are
+   not sure about your usage across your domain, it's safer to use the local security policy.
 
-1. Grant "**Impersonate a client after authentication**" permission to the service account under "User Rights Assignment" the same way "Log on as a batch job" was assigned above.
+1. Grant "**Impersonate a client after authentication**" permission to the service account under "User Rights Assignment" the same way you assigned "Log on as a batch job".
 
 1. If you now get a "Service Unavailable" after applying "Log on as a batch job" permissions, then you need to update your group policy settings (start-\>run-\>cmd, type in gpupdate /force) and restart the Windows Process Activation Service.
 
-For information about configuring a Windows account for database access, see <https://thycotic.force.com/support/s/article/Using-Windows-Authentication-for-Database-Access>. **UPDATED TO** https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB, **WHICH IS DEPRECATED AND POINTS TO** https://docs.thycotic.com/ss/10.9.0/secret-server-setup/installation/running-ss-iis-app-pool-service-account
+For information about configuring a Windows account for database access, see [Running the IIS Application Pool As a Service Account](../../secret-server-setup/installation/running-ss-iis-app-pool-service-account/index.md).
 
 ## Secret Server Installer
 ---------------------------
 
 ### Downloading and Verifying the Installer
 
-The latest version of Secret Server is available for download from the Thycotic Portal Downloads page:
+To download and install the **Government Edition Installer** files, please contact Thycotic Support for assistance.
 
-<https://thycotic.force.com/support/s/article/Download-Secret-Server>-Government-Edition. **BAD LINK POINTS TO** https://thycotic.force.com/support/s/article/Using-Windows-Authentication-for-Database-Access **WHICH WAS UPDATED TO** https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB, **WHICH IS DEPRECATED AND POINTS TO** https://docs.thycotic.com/ss/10.9.0/secret-server-setup/installation/running-ss-iis-app-pool-service-account
+#### Installer Verification
 
-You must login to the Thycotic Support Portal to access this download page. Select the **Government Edition Installer** link and a ThycoticSetup.exe file will be downloaded to your machine. For Common Criteria standards you must run the ThycoticSetup.exe file as an Administrator on a ‘clean’ Secret Server web server, with a full licensed version of SQL on the same database.
+Thycotic generates SHA1 and SHA256 hashes for each software release, and they are available for download from a link in the [Setup](../../secret-server-setup/download-hashes/index.md) chapter of the Secret Server documentation.
 
-#### Installer Verification and Authentication
+To verify that the installer has not been altered from the official release, run the Get-FileHash PowerShell command against your copy of the installer and make sure the hash generated from that process matches the official hash value we publish. Assuming the copy of the installer you are checking is in c:\\temp\\, run the command a follows:
 
-Thycotic generates SHA1 and SHA256 hashes for each software release. These are publicly available on Thycotic’s website:
+`Get-FileHash -path c:\temp\gov\ThycoticSetup.exe -algorithm SHA256`
 
-<https://thycotic.force.com/support/s/article/Secret-Server-Download-Hashes> **DEPRECATED POINTS TO** https://docs.thycotic.com/ss/10.9.0/secret-server-setup/download-hashes
-
-To verify that the installer has not been altered from our official release, run the Get-FileHash PowerShell command against your copy of the installer and check to make sure that the hash generated from that file matches the official hash value we publish. Assuming the copy of the installer you are checking is in the C:\\temp\\ folder, the command you would run is:
-
-Get-FileHash -path `c:\\temp\\gov\\ThycoticSetup.exe -algorithm SHA256`
-
-This will generate the hash and output the results. The output will look something like this:
+The output will look something like this:
 
 Algorithm Hash Path  
 --------- ---- ----
 SHA256 588D130AE766C34E53072DFA4B900A372A99B5E413B3D1667CB17C2738ACD046
+
 C:\\temp\\gov\\ThycoticSetup.exe
 
-The second step to take when checking the authenticity of the installer is to check the code signing certificate to confirm that it is signed by Thycotic and has a valid certificate chain. To do this:
+#### Installer Authentication
 
-1. Right-click ThycoticSetup.exe and select “Properties” from the context menu.
+To authenticate the installer, confirm that the code signing certificate is signed by Thycotic and has a valid certificate chain by following the procedure below:
 
-1. Switch to the “Digital Signatures” tab.
+1. Right-click the ThycoticSetup.exe file and select **Properties** from the context menu.
+
+1. Click the **Digital Signatures** tab.
+
+1. Select the entry in the **Signature list** and click **Details**.
 
    ![](images/0f285f8d483b8a5d5627e6ffa0863bfa.png)
 
-1. Verify that the name of signer is “Thycotic Software” and make note of the date in the Timestamp. Select that entry in the Signature list and click “Details.”
+1. Under **Signer information**, verify that Thycotic Software appears in the **Name:** field.
+
+1. Take note of the date in the **Signing time** field.
+
+1. Click the **View Certificate** button.
 
    ![](images/f43039d1de871b345f113d9cfaea7705.png)
 
-1. Click “View Certificate” to view the signing certificate.
+1. In the **Certificate** window on the **General** tab, verify that the certificate is issued to Thycotic Software and that date range in the **Valid from... to** field covers the signing time you noted in the previous step.
 
    ![](images/8bef4632522c8e29bd38ff27db422cdc.png)
 
-1. Verify that the certificate is issued to “Thycotic Software” and that the signing timestamp from the signature list is within the “Valid from” date range.
+1. Click the **Details** tab.
 
-1. Switch to the “Details” tab.
+1. Find **Enhanced Key Usage** in the **Field** column and ensure that **Code Signing** appears next to it in the **Value** column.
 
    ![](images/1c0b3a35c3375919655fa9ee73cbe99a.png)
 
-1. Verify that the “Enhanced Key Usage” field lists that the key is valid for code signing, as shown above.
-
-1. Select the “Extended Error Information” field.
+1. Find **Extended Error Information** in the **Field** column and ensure that **Revocation Status: OK** appears next to it in the **Value** column.
 
    ![](images/f8c05c670d762052cec4ee873daad64b.png)
 
-1. Verify that the certificate’s revocation status is “OK”
+1. Click the **Certification Path** tab.
 
-1. Switch to the “Certification Path” tab.
+1. In the chain leading down to Thycotic Software, click each certificate and ensure that it is valid.
 
    ![](images/101507a573a993631de845419931d168.png)
 
-1. View each certificate in the chain above “Thycotic Software” and verify that the certificates are all valid.
-
 ### Running the Installer
 
-If the following components are not already installed in your environment the Thycotic Installer will automatically set them up for you:
+If the following components are not already installed in your environment, the Thycotic Installer will automatically set them up for you:
 
 -  Microsoft .NET 4.6.2+ Framework or newer
 
 -  Application and Web Server roles enabled in IIS
 
--  SQL License (Login with **dbcreator** rights needed)
+-  SQL License (Login with **dbcreator** rights required)
 
 -  SSL certificate (Troubleshooting self-signed certificates is not supported by Thycotic, we recommend a Certificate Authority for the certificate)
 
-We strongly recommend that your Web Server is "clean," meaning that you should have no other running applications installed on this server to avoid
-complications between multiple applications.
+To meet Common Criteria standards, you must run the ThycoticSetup.exe file as an Administrator on a clean Secret Server web server, meaning that no other applications should be installed or running on the server. You should also have a full, licensed version of SQL on the same database.
 
-If an existing SQL server does not exist in your environment already, the installer
-will give you the option to install SQL Express, however, *using SQLExpress is ONLY
-intended for trials or sandbox environments and is not acceptable for production use*.
+If an instance of SQL server does not exist in your environment already, the installer
+will give you the option to install SQL Express, however, SQLExpress is intended ONLY for trials or sandbox environments, and is **not acceptable** for production use or for Common Criteria certification.
 
 If your web server does not already have an SSL certificate, the installer will
-create and install a self-signed certificate, however, *self-signed certificates
-are NOT recommended for production environments.*
+create and install a self-signed certificate, however, self-signed certificates
+are **not acceptable** for production use or for Common Criteria certification.
 
 The installer will walk you through the steps required to perform your **Secret
 Server – Government Edition** install. The following steps comprise a shortened

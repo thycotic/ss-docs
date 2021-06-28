@@ -203,13 +203,13 @@ To use Windows authentication to access the SQL database, you should create a se
 
     1. Click the **OK** button.
 
-> **Note:** If you use group policy to enforce "Log on as a batch job" and have group-managed service accounts, that will overwrite any local permissions to "Log on as a batch job" on all computers that have the policy applied. Using the local security policy is a safer option if you are not sure about your usage across your domain.
+ >**Note:** If you use group policy to enforce "Log on as a batch job" and have group-managed service accounts, that will overwrite any local permissions to "Log on as a batch job" on all computers that have the policy applied. Using the local security policy is a safer option if you are not sure about your usage across your domain.
 
 5. Grant "Impersonate a client after authentication" permission to the service account under **User Rights Assignment** the same way "Log on as a batch job" was assigned above.
 6. If you now get a "Service Unavailable" error after applying "Log on as a batch job" permissions:
     1. Update your group policy settings (**Start \> Run \> Cmd** and type `gpupdate /force`) and restart the Windows Process Activation service.
 
-> **Note:** For more information, see [Running the IIS Application Pool As a Service Account](../../secret-server-setup/installation/running-ss-iis-app-pool-service-account/index.md).
+ >**Note:** For more information, see [Running the IIS Application Pool As a Service Account](../../secret-server-setup/installation/running-ss-iis-app-pool-service-account/index.md).
 
 ### Assigning Common Criteria Roles and Permissions
 

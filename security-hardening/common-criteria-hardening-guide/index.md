@@ -403,23 +403,14 @@ For information about configuring a Windows account for database access, see
 
 ### Downloading and Verifying the Installer
 
-The latest version of Secret Server is available for download from the Thycotic
-Portal Downloads page:
+You can download the **Government Edition Installer** files from the Thycotic Portal Downloads page after logging into the Thycotic Support Portal.
 
-<https://thycotic.force.com/support/s/article/Download-Secret-Server>-Government-Edition. **BAD LINK POINTS TO** https://thycotic.force.com/support/s/article/Using-Windows-Authentication-for-Database-Access **WHICH WAS UPDATED TO** https://thycotic.force.com/support/s/article/Best-Adv-Install-Using-a-Service-Account-to-Run-IIS-App-Pool-and-SQL-DB, **WHICH IS DEPRECATED AND POINTS TO** https://docs.thycotic.com/ss/10.9.0/secret-server-setup/installation/running-ss-iis-app-pool-service-account
-
-You must login to the Thycotic Support Portal to access this download page.
-Select the **Government Edition Installer** link and a ThycoticSetup.exe file
-will be downloaded to your machine. For Common Criteria standards you must run
-the ThycoticSetup.exe file as an Administrator on a ‘clean’ Secret Server web
-server, with a full licensed version of SQL on the same database.
+To meet Common Criteria standards, you must run the ThycoticSetup.exe file as an Administrator on a ‘clean’ Secret Server web
+server, with a full, licensed version of SQL on the same database.
 
 #### Installer Verification and Authentication
 
-Thycotic generates SHA1 and SHA256 hashes for each software release. These are
-publicly available on Thycotic’s website:
-
-<https://thycotic.force.com/support/s/article/Secret-Server-Download-Hashes> **DEPRECATED POINTS TO** https://docs.thycotic.com/ss/10.9.0/secret-server-setup/download-hashes
+Thycotic generates SHA1 and SHA256 hashes for each software release, and they are available for download from a link in the [Secret Server Setup](../../secret-server-setup/download-hashes/index.md) chapter of the Secret Server documentation.
 
 To verify that the installer has not been altered from our official release, run
 the Get-FileHash PowerShell command against your copy of the installer and check
