@@ -1,5 +1,5 @@
-[title]: # (Create a New Dependency Changer for Synchronizing Passwords During RPC)
-[tags]: # (synchronize,passwords,rpc,remote password changing, dependency)
+[title]: # (SAP Heartbeat and Password Changing)
+[tags]: # (sap,heartbeat,password,rpc,remote password changing)
 [priority]: # (1000)
 
 # SAP Heartbeat and Password Changing
