@@ -1,6 +1,7 @@
 [title]: # (Common Criteria Hardening Guide)
-[tags]: # (common critreria,security,hardening,cchg)
+[tags]: # (common criteria,security,hardening,cchg)
 [priority]: # (1000)
+[display]: # (none)
 
 # Common Criteria Hardening Guide
 
