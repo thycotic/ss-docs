@@ -1,13 +1,31 @@
-[title]: # (Support)
-[tags]: # (thycotic)
+[title]: # (Technical Support)
+[tags]: # (Technical Support)
 [priority]: # (1000)
 [redirect]: # (Support)
 
-# Thycotic Support
+# Technical Support
 
-> **Important:** Please see our [Support Services Guide](https://docs.thycotic.com/bulletins/current/support/servicesguide.md) for details about our support policy. This page is a high-level summary of portions of that guide.
+To have access to Thycotic Technical Support, you must have an equal number of unexpired user and support licenses. All support licenses expire 365 days after they are issued.
 
-## Step One: Gather Information You May Need
+## Technical Support Coverage
+
+Please see our [Getting Technical Support](#Getting-Technical-Support) section below.
+
+> **Note:** Please see the **Support** link on the menu above for details about our support policies. 
+
+### Accessing Upgrades
+
+Supported customers have access to all new releases (both minor and major). See [Secret Server Installation and Upgrade Guides](../../secret-server-setup/index.md).
+
+### Requesting New Features
+
+We encourage customers with active support licensing to participate on [feedback.thycotic.com](https://feedback.thycotic.com) where you can discuss and vote on new features.
+
+## Getting Technical Support
+
+> **Important:** Please see the **Support** link on the menu above for details about our support policies.
+
+### Step One: Gather Information You May Need
 
 Before you contact Support, gather the following information:
 
@@ -20,9 +38,9 @@ Before you contact Support, gather the following information:
 - Issue symptoms and details
 - Any other relevant details, such as hours the technical contact is present
 
-## Step Two: Get a Mandatory Support PIN
+### Step Two: Get a Mandatory Support PIN
 
-### Secret Server
+#### Secret Server
 
 The support PIN validates that your license includes support, and you must provide the PIN in your email or when you call. The PIN also makes it easier for Thycotic Support to locate your customer records and give you better support.
 
@@ -38,7 +56,7 @@ To get your PIN:
 
 1. If you want to use our ticketing system for support, leave the browser tab open, and return for step four.
 
-### Secret Server Cloud
+#### Secret Server Cloud
 
 The support PIN validates that your license includes support, and you must provide the PIN in your email or when you call. The PIN also makes it easier for Thycotic Support to locate your customer records and give you better support. In addition, there is an additional "privileged PIN" for accessing your cloud instance.
 
@@ -56,40 +74,29 @@ To get your PIN:
 
    > **Important:** Providing us a privileged PIN gives Thycotic Technical Support write access to your cloud database for one day. Secrets and other sensitive data remain encrypted and unreadable.
 
-## Step Three: Choose a Support Method
+### Step Three: Choose a Support Method
 
 Thycotic customers have access to support by phone, email, and our support ticketing system (best for issue tracking). In all cases, **you must first obtain a support PIN**.
 
-> **Important:** For Severity 1 issues you **must** use phone support. Otherwise, use the method you prefer.​
-> Severity 1 means a critical problem that has caused *complete loss of service* and work cannot reasonably continue at your worksite.​
+> **Important:** For Severity 1 issues you **must** use phone support. Otherwise, use the method you prefer.​ Severity 1 means a critical problem that has caused *complete loss of service* and work cannot reasonably continue at your worksite.​
 
-## Step Four: Contact Support
+### Step Four: Contact Support
+
+Click the **Support** link on the menu above for Support email addresses and phone numbers.
 
 Using one of the below methods, contact Thycotic Support.
 
-### Phone Support
+#### Phone Support
 
-Thycotic delivers support by phone worldwide. Select the applicable number from this list:
+Thycotic delivers support by phone worldwide. Select the applicable number from the list on the **Support** link in the menu above.
 
-| Region | Country | Support Number |
-| ----- | ----- | ----- |
-| AMERICAS | all | \+1 202 991 0540 |
-| | | |
-| EMEA | UK | \+44 20 3880 0017 |
-| | Germany     | \+49 69 6677 37597 |
-| | | |
-| APAC | Australia | \+61 3 8595 5827 |
-| | Philippines | \+63 2 231 3885 |
-| | New Zealand | \+64 9-887 4015 |
-| | Singapore | \+65 3157 0602 |
-
-### Email Support
+#### Email Support
 
 Send your email to support@thycotic.com __with the PIN number as part of the subject line__ of your email. For example: PIN 345 Workflow Stopped Unexpectedly. Include all the information listed in step one.
 
 > **Important:** You must send your email using an email address already noted in your account with Thycotic. Otherwise, it might delay our response.​
 
-### Ticketing System Support
+#### Ticketing System Support
 
 Open a support ticket and track your issue to resolution.
 
